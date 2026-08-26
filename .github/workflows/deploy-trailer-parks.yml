@@ -1,4 +1,4 @@
-name: Deploy Trailer Parks to GitHub Pages
+name: Deploy Trailer Parks
 
 on:
   push:
@@ -7,9 +7,6 @@ on:
       - "trailer-parks/**"
       - ".github/workflows/deploy-trailer-parks.yml"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   deploy:
@@ -20,21 +17,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: npm
-          cache-dependency-path: trailer-parks/package-lock.json
 
       - name: Install and build
         working-directory: trailer-parks
-        env:
-          GITHUB_PAGES: "true"
         run: |
           npm ci
           npm run build
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: trailer-parks/out
-          publish_branch: gh-pages
-          force_orphan: true
+      - name: Deploy to Vercel
+        working-directory: trailer-parks
+        run: npx vercel deploy --yes --temporary --prod 2>&1 | tee deploy.log
+
+      - name: Extract deployment URL
+        working-directory: trailer-parks
+        run: |
+          URL=$(grep -oE 'https://temporary-[a-z0-9-]+\.vercel\.app' deploy.log | head -1)
+          echo "DEPLOY_URL=$URL" >> $GITHUB_ENV
+          echo "Deployed to: $URL"
+
+      - name: Summary
+        run: |
+          echo "## Trailer Parks Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "Live URL: ${{ env.DEPLOY_URL }}" >> $GITHUB_STEP_SUMMARY
+          echo "Owner recruitment: ${{ env.DEPLOY_URL }}/list-your-park" >> $GITHUB_STEP_SUMMARY
+          echo "Outreach kit: ${{ env.DEPLOY_URL }}/resources/owners" >> $GITHUB_STEP_SUMMARY

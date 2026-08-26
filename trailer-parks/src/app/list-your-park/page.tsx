@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import {
   Building2,
@@ -13,6 +12,7 @@ import {
 } from "lucide-react";
 import { platformStats } from "@/lib/data";
 import { formatCurrency, formatNumber } from "@/lib/utils";
+import { LeadForm } from "@/components/LeadForm";
 
 const benefits = [
   {
@@ -55,13 +55,6 @@ const steps = [
 ];
 
 export default function ListYourParkPage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero — optimized for owner recruitment */}
@@ -165,135 +158,7 @@ export default function ListYourParkPage() {
 
             {/* Lead capture form */}
             <div className="bg-card rounded-2xl p-8 card-shadow-lg border border-border sticky top-24">
-              {submitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="font-display text-2xl font-bold text-navy mb-2">
-                    You&apos;re on the list!
-                  </h3>
-                  <p className="text-muted text-sm leading-relaxed">
-                    We&apos;ll reach out within 24 hours to get your park listed. No fees, no
-                    obligations — just a conversation about your property.
-                  </p>
-                  <Link
-                    href="/marketplace"
-                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-light"
-                  >
-                    Browse existing listings
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              ) : (
-                <>
-                  <h3 className="font-display text-2xl font-bold text-navy mb-1">
-                    List Your Park Free
-                  </h3>
-                  <p className="text-sm text-muted mb-6">
-                    Takes 2 minutes. We handle the rest.
-                  </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Your Name *
-                      </label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="John Smith"
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Email *
-                      </label>
-                      <input
-                        required
-                        type="email"
-                        placeholder="john@example.com"
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        placeholder="(555) 123-4567"
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Park Name *
-                      </label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Sunset Ridge MHP"
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Location *
-                      </label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Phoenix, AZ"
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                      />
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-medium text-muted mb-1">
-                          Lot Count *
-                        </label>
-                        <input
-                          required
-                          type="number"
-                          min="1"
-                          placeholder="85"
-                          className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-medium text-muted mb-1">
-                          Asking Price
-                        </label>
-                        <input
-                          type="number"
-                          placeholder="4200000"
-                          className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-muted mb-1">
-                        Tell us about your park
-                      </label>
-                      <textarea
-                        rows={3}
-                        placeholder="Occupancy, amenities, reason for selling..."
-                        className="w-full px-4 py-2.5 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full px-6 py-3.5 bg-accent hover:bg-accent-light text-navy font-bold rounded-xl transition-colors text-base"
-                    >
-                      Submit — $0 Cost
-                    </button>
-                    <p className="text-[11px] text-muted text-center">
-                      No fees. No obligation. We never share your info without permission.
-                    </p>
-                  </form>
-                </>
-              )}
+              <LeadForm />
             </div>
           </div>
         </div>
