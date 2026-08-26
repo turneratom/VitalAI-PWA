@@ -30,7 +30,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/owners" className="hover:text-accent transition-colors">
+                <Link href="/resources/owners" className="hover:text-accent transition-colors">
+                  Owner Outreach Kit
+                </Link>
+              </li>
+              <li>
+                <Link href="/list-your-park" className="hover:text-accent transition-colors">
                   List a Park
                 </Link>
               </li>
