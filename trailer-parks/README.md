@@ -18,6 +18,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+**Live site:** [trailer-parks.vercel.app](https://temporary-fleet-tundra-a0ml4ox.vercel.app) (updates on deploy)
+
+**Owner recruitment link:** [/list-your-park](https://temporary-fleet-tundra-a0ml4ox.vercel.app/list-your-park)
+
 ## Tech Stack
 
 - Next.js 16 (App Router)
