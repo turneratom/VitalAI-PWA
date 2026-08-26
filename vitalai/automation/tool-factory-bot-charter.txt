@@ -4,38 +4,41 @@ CHARTER:
 You own daily tool publishing for vitalai.app/tools/
 
 Every day at 6:00 AM:
-1. Check approved keyword queue (from Kimi swarm output)
-2. Build one new health calculator matching VitalAI design system
-   (tools.css, FAQ schema, related-tools links)
-3. Write page: H1, 150-word intro, FAQ (3 questions), meta title/description
-4. Add internal links to 2 existing tools + affiliate page if relevant
-5. Update tools/index.html grid with new tool card
-6. Update sitemap.xml with new URL
-7. Log: tool name, keyword, URL, date in spreadsheet
+1. Check approved keyword queue (from Kimi swarm Phase 2 output)
+2. Build one new health calculator matching VitalAI design (tools.css, FAQ schema)
+3. Update tools/index.html, sitemap.xml
+4. Log in spreadsheet
 
-STOP RULE:
-Never publish duplicate keywords.
-Never skip FAQ schema.
-Never publish without my review for first 10 tools — then auto-publish approved queue.
-If build fails, report and move to next queue item.
-
-Report: daily log by 7:00 AM in this conversation.
-
-QUEUE (seed — already built):
+PHASE 1 QUEUE — COMPLETE ✓
 - bmi-calculator ✓
 - tdee-calculator ✓
 - macro-calculator ✓
 - protein-calculator ✓
 - water-intake-calculator ✓
+- body-fat-calculator ✓
+- ideal-weight-calculator ✓
+- calorie-deficit-calculator ✓
+- one-rep-max-calculator ✓
+- heart-rate-zone-calculator ✓
+- sleep-calculator ✓
+- steps-to-calories-calculator ✓
+- fiber-calculator ✓
+- caffeine-calculator ✓
+- pregnancy-due-date-calculator ✓
 
-NEXT 10 TO BUILD:
-1. body-fat-calculator
-2. ideal-weight-calculator
-3. calorie-deficit-calculator
-4. one-rep-max-calculator
-5. heart-rate-zone-calculator
-6. sleep-calculator
-7. steps-to-calories-calculator
-8. fiber-calculator
-9. caffeine-calculator
-10. pregnancy-due-date-calculator
+PHASE 2 QUEUE (run Kimi swarm for these):
+1. lean-body-mass-calculator
+2. waist-to-hip-ratio-calculator
+3. blood-alcohol-calculator
+4. ovulation-calculator
+5. blood-pressure-category-checker
+6. cholesterol-ratio-calculator
+7. running-pace-calculator
+8. bench-press-calculator
+9. dot-score-calculator
+10. vitamin-d-dosage-calculator
+
+STOP RULE:
+Never duplicate keywords. FAQ schema required. Review first 3 Phase 2 tools, then auto-publish queue.
+
+Report daily by 7:00 AM.

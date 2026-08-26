@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalAI Pricing — Pro & Elite Plans</title>
+  <meta name="description" content="VitalAI Pro $9.99/mo and Elite $29.99/mo. Unlimited AI health coaching, photo analysis, and premium features.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tools/tools.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Pricing</p></div>
+      <nav class="nav-links"><a href="tools/index.html">Free Tools</a><a href="index.html">App</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Choose Your Plan</h2>
+      <div class="tool-grid">
+        <article class="tool-card">
+          <h3>Free</h3>
+          <p><strong>$0</strong>/month</p>
+          <ul>
+            <li>5 photo snaps per day</li>
+            <li>Basic AI responses</li>
+            <li>All 15 free calculators</li>
+          </ul>
+          <a class="btn btn-secondary" href="index.html">Get Started</a>
+        </article>
+        <article class="tool-card" style="border:2px solid var(--primary);">
+          <h3>Pro</h3>
+          <p><strong>$9.99</strong>/month</p>
+          <ul>
+            <li>Unlimited photo analysis</li>
+            <li>Enhanced AI coaching</li>
+            <li>Chat history (coming soon)</li>
+          </ul>
+          <button class="btn" id="buy-pro">Subscribe to Pro</button>
+        </article>
+        <article class="tool-card">
+          <h3>Elite</h3>
+          <p><strong>$29.99</strong>/month</p>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Priority AI models</li>
+            <li>Advanced health insights</li>
+          </ul>
+          <button class="btn" id="buy-elite">Subscribe to Elite</button>
+        </article>
+      </div>
+      <p id="setup-notice" class="affiliate-note" hidden>
+        Stripe checkout requires env vars: STRIPE_SECRET_KEY, STRIPE_PRICE_PRO, STRIPE_PRICE_ELITE.
+        See <code>.env.example</code> in the repo.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Cancel anytime. Secure checkout via Stripe.</footer>
+  <script>
+    async function checkout(tier) {
+      const res = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tier })
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+      else document.getElementById('setup-notice').hidden = false;
+    }
+    document.getElementById('buy-pro').onclick = () => checkout('pro');
+    document.getElementById('buy-elite').onclick = () => checkout('elite');
+    if (new URLSearchParams(location.search).get('setup')) {
+      document.getElementById('setup-notice').hidden = false;
+    }
+  </script>
+</body>
+</html>

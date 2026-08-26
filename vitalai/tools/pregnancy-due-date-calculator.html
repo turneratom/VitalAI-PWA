@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregnancy Due Date Calculator | VitalAI</title>
+  <meta name="description" content="Calculate pregnancy due date from last menstrual period (LMP). Shows current week and day of pregnancy.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/pregnancy-due-date-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Due Date Calculator</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Pregnancy Due Date Calculator</h2>
+      <form id="due-form">
+        <div class="form-row">
+          <div><label for="lmp">First day of last period (LMP)</label><input id="lmp" type="date" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate Due Date</button>
+      </form>
+      <div id="due-result" class="result-box" hidden>
+        <p>Due date: <strong id="due-date"></strong></p>
+        <p>Current: <strong id="gestation"></strong></p>
+      </div>
+    </article>
+    <section class="card faq">
+      <details open><summary>How is due date calculated?</summary><p>Add 280 days (40 weeks) to the first day of your last menstrual period (Naegele's rule).</p></details>
+    </section>
+    <p class="site-footer">Not a substitute for prenatal care. Confirm with your healthcare provider.</p>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('lmp').valueAsDate = new Date(Date.now() - 60 * 86400000);
+    document.getElementById('due-form').onsubmit = (e) => {
+      e.preventDefault();
+      const r = calcDueDate(document.getElementById('lmp').value);
+      document.getElementById('due-date').textContent = r.due.toLocaleDateString('en-US', { dateStyle: 'long' });
+      document.getElementById('gestation').textContent = `Week ${r.week}, Day ${r.day} (${r.gestDays} days)`;
+      document.getElementById('due-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

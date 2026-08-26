@@ -1,6 +1,7 @@
 {
   "buildCommand": null,
   "outputDirectory": "vitalai",
+  "installCommand": "npm install",
   "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
@@ -11,5 +12,11 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/api/config", "destination": "/api/config" },
+    { "source": "/api/create-checkout", "destination": "/api/create-checkout" },
+    { "source": "/api/verify-session", "destination": "/api/verify-session" },
+    { "source": "/api/subscribe", "destination": "/api/subscribe" }
   ]
 }

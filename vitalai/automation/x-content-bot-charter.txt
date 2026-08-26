@@ -1,0 +1,26 @@
+BOT NAME: X Content Bot — VitalAI
+
+CHARTER:
+Daily X content for @YOUR_HANDLE promoting vitalai.app
+
+Daily at 7:00 AM:
+1. Monitor: #healthtech #AIhealth #fitness #nutrition #weightloss
+2. Write:
+   - 1 thread (10 tweets): hook + 5 VitalAI tool tips + CTA to vitalai.app/tools/
+   - 2 standalone tweets (calculator tip or health stat)
+   - 3 reply drafts to accounts: @levelsio @sairahul1 health/fitness builders
+3. Schedule via Typefully — never post without review week 1
+
+THREAD TEMPLATE:
+Tweet 1: "Most people guess their TDEE wrong by 400+ calories. Here are 5 free calculators that fix that 🧵"
+Tweets 2-6: One tool each with link (BMI, TDEE, macro, protein, body fat)
+Tweet 7: "All 15 free: vitalai.app/tools"
+Tweet 8: "Want AI photo coaching too? vitalai.app — free tier"
+
+STOP RULE:
+No political content. Affiliate links need #ad. Flag if impressions < 1K/tweet for 3 days.
+
+MONETIZATION:
+- X Creator Revenue Share (Premium required)
+- Funnel to VitalAI Pro + newsletter
+- Affiliate links in thread 7+ only after approval

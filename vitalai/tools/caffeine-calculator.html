@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caffeine Calculator — Safe Daily Limit | VitalAI</title>
+  <meta name="description" content="Calculate your safe daily caffeine limit in mg based on body weight and sensitivity.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/caffeine-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Caffeine Calculator</p></div>
+      <nav class="nav-links"><a href="sleep-calculator.html">Sleep</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Caffeine Intake Calculator</h2>
+      <p>FDA general limit: 400 mg/day for healthy adults. This tool adjusts by weight and sensitivity.</p>
+      <form id="caff-form">
+        <div class="form-row">
+          <div><label for="weight">Weight (kg)</label><input id="weight" type="number" value="70" required></div>
+          <div><label for="sensitivity">Sensitivity</label><select id="sensitivity"><option value="low">Low (tolerant)</option><option value="normal" selected>Normal</option><option value="high">High (sensitive)</option></select></div>
+        </div>
+        <button type="submit" class="btn">Calculate Limit</button>
+      </form>
+      <div id="caff-result" class="result-box" hidden>
+        <p>Daily limit: <strong id="caff-mg"></strong> mg (~<span id="caff-cups"></span> cups of coffee)</p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="sleep-calculator.html">Sleep</a> <a href="water-intake-calculator.html">Water</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('caff-form').onsubmit = (e) => {
+      e.preventDefault();
+      const mg = calcCaffeineLimit(+document.getElementById('weight').value, document.getElementById('sensitivity').value);
+      document.getElementById('caff-mg').textContent = mg;
+      document.getElementById('caff-cups').textContent = (mg / 95).toFixed(1);
+      document.getElementById('caff-result').hidden = false;
+    };
+  </script>
+</body>
+</html>
