@@ -14,12 +14,16 @@ import {
 } from "lucide-react";
 import { FinancialChart } from "@/components/FinancialChart";
 import { StatCard } from "@/components/StatCard";
-import { getParkById, getLoansByPark } from "@/lib/data";
+import { getParkById, getLoansByPark, parks } from "@/lib/data";
 import { formatCurrency, formatPercent } from "@/lib/utils";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
+
+export function generateStaticParams() {
+  return parks.map((park) => ({ id: park.id }));
+}
 
 export default async function ParkDetailPage({ params }: PageProps) {
   const { id } = await params;

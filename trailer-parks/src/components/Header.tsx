@@ -48,7 +48,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/owners"
+              href="/list-your-park"
               className="px-4 py-2 text-sm font-medium text-primary hover:text-primary-light transition-colors"
             >
               List Your Park
@@ -91,7 +91,7 @@ export function Header() {
           ))}
           <div className="pt-2 space-y-2">
             <Link
-              href="/owners"
+              href="/list-your-park"
               className="block w-full text-center px-4 py-2 text-sm font-medium text-primary border border-primary rounded-lg"
               onClick={() => setMobileOpen(false)}
             >
