@@ -4,6 +4,7 @@ import { useState, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 function LeadFormInner() {
   const searchParams = useSearchParams();
@@ -67,8 +68,8 @@ function LeadFormInner() {
           You&apos;re on the list!
         </h3>
         <p className="text-muted text-sm leading-relaxed">
-          We&apos;ll reach out within 24 hours to get your park listed. No fees, no
-          obligations — just a conversation about your property.
+          We&apos;ll reach out within 24 hours — a {siteConfig.company.name} expert will be in
+          touch. No fees, no obligations.
         </p>
         <Link
           href="/marketplace"

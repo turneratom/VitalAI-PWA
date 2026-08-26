@@ -1,4 +1,5 @@
 import { validateLead, formatLeadForIssue, type OwnerLead } from "@/lib/leads";
+import { notifyLeadReceived } from "@/lib/email";
 
 const GITHUB_REPO = process.env.GITHUB_REPO ?? "turneratom/VitalAI-PWA";
 
@@ -49,15 +50,16 @@ export async function POST(request: Request) {
       return Response.json({ error: "Invalid submission. Please fill all required fields." }, { status: 400 });
     }
 
-    const [issueCreated, webhookSent] = await Promise.all([
+    const [emailSent, issueCreated, webhookSent] = await Promise.all([
+      notifyLeadReceived(lead),
       createGitHubIssue(lead),
       sendWebhook(lead),
     ]);
 
     return Response.json({
       success: true,
-      message: "Lead received. We'll be in touch within 24 hours.",
-      stored: issueCreated || webhookSent,
+      message: "Lead received. A Tread Companies expert will reach out within 24 hours.",
+      stored: emailSent || issueCreated || webhookSent,
     });
   } catch {
     return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });

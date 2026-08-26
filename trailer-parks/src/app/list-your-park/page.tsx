@@ -13,6 +13,8 @@ import {
 import { platformStats } from "@/lib/data";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 import { LeadForm } from "@/components/LeadForm";
+import { TreadCredibilityBar } from "@/components/TreadBranding";
+import { siteConfig } from "@/lib/site";
 
 const benefits = [
   {
@@ -73,9 +75,20 @@ export default function ListYourParkPage() {
             <span className="text-accent">Pay Nothing. Ever.</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
-            List on Trailer Parks and reach {formatNumber(2400)}+ qualified buyers, professional
-            analysts, and active lenders — with zero listing fees and zero success fees.
+            List on Trailer Parks — built by {siteConfig.company.name}, operators of{" "}
+            {siteConfig.credentials.spacesOperated} manufactured housing spaces. Reach{" "}
+            {formatNumber(2400)}+ qualified buyers with zero listing fees and zero success fees.
           </p>
+          <div className="mt-6">
+            <a
+              href={siteConfig.company.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent hover:text-accent-light font-medium"
+            >
+              {siteConfig.company.website.replace("https://www.", "")} →
+            </a>
+          </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/60">
             <span className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-accent" />
@@ -99,6 +112,8 @@ export default function ListYourParkPage() {
           </a>
         </div>
       </section>
+
+      <TreadCredibilityBar />
 
       {/* Benefits */}
       <section className="py-16 bg-white">

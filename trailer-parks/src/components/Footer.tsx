@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Home } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -79,9 +80,20 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Trailer Parks. All rights reserved.
-          </p>
+          <div>
+            <p className="text-xs text-white/40">
+              &copy; {new Date().getFullYear()} Trailer Parks. A{" "}
+              <Link
+                href={siteConfig.company.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-accent"
+              >
+                {siteConfig.company.name}
+              </Link>{" "}
+              platform.
+            </p>
+          </div>
           <p className="text-xs text-accent font-medium">
             No fees. Ever. That&apos;s our guarantee.
           </p>

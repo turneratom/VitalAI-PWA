@@ -22,6 +22,9 @@ import { platformStats } from "@/lib/data";
 import { getOwnerRecruitmentUrl, siteConfig } from "@/lib/site";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 
+const { bradley } = siteConfig.team;
+const { company, credentials } = siteConfig;
+
 const outreachTemplates = [
   {
     id: "cold-email",
@@ -30,22 +33,23 @@ const outreachTemplates = [
     subject: "Sell your mobile home park with $0 fees?",
     body: `Hi [Owner Name],
 
-I'm reaching out because I work with Trailer Parks — a free marketplace where mobile home park owners list their properties with zero listing fees and zero success fees.
+I'm Bradley with Trailer Parks — a free marketplace built by ${company.name}, manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold.
 
-Traditional brokers take 6% on a sale. On a $4M park, that's $240,000 out of your pocket. Trailer Parks charges nothing.
+Traditional brokers take 6% on a sale. On a $4M park, that's $240,000 out of your pocket. Trailer Parks charges nothing — no listing fee, no success fee.
 
 When you list, you get:
 • Exposure to 2,400+ qualified buyers
 • Professional financial presentation tools
 • Direct access to lenders and underwriters
-• Average 47 days on market
+• Backed by a team that's done this hundreds of times
 
 It takes 2 minutes to submit your park: ${getOwnerRecruitmentUrl("email")}
 
 Happy to answer any questions — no pressure, no obligation.
 
 Best,
-[Your Name]`,
+Bradley
+${company.name} | ${bradley.email}`,
   },
   {
     id: "follow-up",
@@ -54,45 +58,46 @@ Best,
     subject: "Quick follow-up — listing your park for free",
     body: `Hi [Owner Name],
 
-Just following up on my note about Trailer Parks. I know selling a park is a big decision, so I wanted to share one thing:
+Following up on Trailer Parks. We're the team behind ${company.name} — we've acquired, operated, and sold manufactured housing communities across the country.
 
-Every listing includes verified financial tools that buyers and lenders expect — T-12 statements, underwriting metrics, and lender-ready packages. We help you look institutional without paying broker fees.
+Every listing includes the financial tools buyers and lenders expect: T-12 statements, underwriting metrics, and lender-ready packages. We help you look institutional without paying broker fees.
 
-If you're even thinking about selling in the next 12 months, it's worth getting on the platform now. Listing is free and there's no obligation.
+If you're thinking about selling in the next 12 months, listing now costs nothing and there's no obligation.
 
 Submit here: ${getOwnerRecruitmentUrl("followup")}
 
-Let me know if you'd like to chat for 10 minutes.
+Happy to jump on a 10-minute call anytime.
 
 Best,
-[Your Name]`,
+Bradley
+${bradley.email}`,
   },
   {
     id: "text-message",
     icon: MessageSquare,
     title: "Text Message",
     subject: null,
-    body: `Hi [Name], this is [Your Name]. I help mobile home park owners list on Trailer Parks — completely free, no broker fees. If you're ever thinking about selling [Park Name], check it out: ${getOwnerRecruitmentUrl("sms")}`,
+    body: `Hi [Name], Bradley here from ${company.name}. We built a free marketplace for park owners — zero broker fees. We've operated ${credentials.spacesOperated} spaces. If you're thinking about selling [Park Name]: ${getOwnerRecruitmentUrl("sms")}`,
   },
   {
     id: "voicemail",
     icon: Phone,
     title: "Voicemail Script",
     subject: null,
-    body: `Hi [Name], this is [Your Name] with Trailer Parks. I work with mobile home park owners who are thinking about selling — and unlike traditional brokers, we charge zero fees. No listing fee, no success fee. If you're curious, I'd love to show you how it works. You can submit your park in 2 minutes at trailer parks dot app slash list-your-park, or call me back at [your number]. Thanks!`,
+    body: `Hi [Name], this is Bradley with ${company.name} and Trailer Parks. We're manufactured housing experts — ${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold — and we built a free marketplace where park owners list with zero fees. No listing fee, no success fee. If you're curious, submit your park in 2 minutes at our website, or call me back at [your number]. My email is ${bradley.email}. Thanks!`,
   },
   {
     id: "facebook",
     icon: Share2,
     title: "Facebook Group Post",
     subject: null,
-    body: `Park owners — if you're thinking about selling, check out Trailer Parks. It's a free marketplace for mobile home parks. No listing fees, no success fees (brokers typically charge 6%!). 
+    body: `Park owners — if you're thinking about selling, check out Trailer Parks. It's a free marketplace built by ${company.name} (${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold).
 
-They handle the financial presentation, connect you with buyers and lenders, and the average time on market is 47 days.
+No listing fees, no success fees. Brokers typically charge 6% — on a $4M park that's $240K.
 
-Listing takes 2 minutes: ${getOwnerRecruitmentUrl("facebook")}
+They handle financial presentation, connect you with buyers and lenders, and the team actually knows MHP inside and out.
 
-Anyone here listed or bought through them?`,
+Listing takes 2 minutes: ${getOwnerRecruitmentUrl("facebook")}`,
   },
 ];
 
@@ -114,8 +119,7 @@ const objectionHandlers = [
   },
   {
     objection: "I've never heard of you.",
-    response:
-      "Fair question — we're newer than the big brokerages, but we've closed 847+ deals and have 24 active lenders on the platform. Happy to walk you through how it works in 10 minutes.",
+    response: `Fair question. Trailer Parks is built by ${company.name} — we've operated ${credentials.spacesOperated} manufactured housing spaces and sold ${credentials.communitiesSold} communities. Visit ${company.website.replace("https://www.", "")} or email me at ${bradley.email}. Happy to walk you through it in 10 minutes.`,
   },
 ];
 
@@ -197,13 +201,16 @@ export default function OwnerOutreachPage() {
         <section className="bg-card rounded-xl p-6 card-shadow border border-border">
           <h2 className="font-display text-xl font-bold text-navy mb-3">30-Second Pitch</h2>
           <blockquote className="text-muted leading-relaxed border-l-4 border-accent pl-4 italic">
-            &ldquo;Trailer Parks is a free marketplace for mobile home parks. You list your park
-            for zero dollars — no listing fee, no success fee. We connect you with buyers,
-            underwriters, and lenders on one platform. Traditional brokers take 6% — on a $4
-            million park, that&apos;s $240,000. We take nothing.&rdquo;
+            &ldquo;Trailer Parks is built by {company.name} — manufactured housing experts with{" "}
+            {credentials.spacesOperated} spaces operated and {credentials.communitiesSold}{" "}
+            communities sold. Owners list for zero dollars — no listing fee, no success fee. We
+            connect you with buyers, underwriters, and lenders on one platform. Traditional brokers
+            take 6% — on a $4 million park, that&apos;s $240,000. We take nothing.&rdquo;
           </blockquote>
           <div className="mt-3">
-            <CopyButton text="Trailer Parks is a free marketplace for mobile home parks. You list your park for zero dollars — no listing fee, no success fee. We connect you with buyers, underwriters, and lenders on one platform. Traditional brokers take 6% — on a $4 million park, that's $240,000. We take nothing." />
+            <CopyButton
+              text={`Trailer Parks is built by ${company.name} — manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold. Owners list for zero dollars — no listing fee, no success fee. Traditional brokers take 6%. We take nothing. ${getOwnerRecruitmentUrl("bradley")}`}
+            />
           </div>
         </section>
 
@@ -271,12 +278,12 @@ export default function OwnerOutreachPage() {
           <h2 className="font-display text-xl font-bold mb-4">Numbers to Cite</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div>
-              <p className="text-2xl font-bold text-accent">{platformStats.dealsClosed}+</p>
-              <p className="text-xs text-white/60 mt-1">Deals closed</p>
+              <p className="text-2xl font-bold text-accent">{credentials.spacesOperated}</p>
+              <p className="text-xs text-white/60 mt-1">Spaces operated</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-accent">2,400+</p>
-              <p className="text-xs text-white/60 mt-1">Active buyers</p>
+              <p className="text-2xl font-bold text-accent">{credentials.communitiesSold}</p>
+              <p className="text-xs text-white/60 mt-1">Communities sold</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-accent">{platformStats.activeLenders}</p>
