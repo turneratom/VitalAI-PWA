@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9fa;
+  --foreground: #0d1b2a;
+  --primary: #1b4332;
+  --primary-light: #2d6a4f;
+  --accent: #d4a853;
+  --accent-light: #e8c97a;
+  --muted: #6c757d;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --navy: #0d1b2a;
+  --success: #2d6a4f;
+  --warning: #e9c46a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-navy: var(--navy);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-playfair);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b4332 50%, #2d6a4f 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #d4a853 0%, #e8c97a 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(13, 27, 42, 0.08), 0 4px 12px rgba(13, 27, 42, 0.04);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 4px 6px rgba(13, 27, 42, 0.06), 0 12px 28px rgba(13, 27, 42, 0.08);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
