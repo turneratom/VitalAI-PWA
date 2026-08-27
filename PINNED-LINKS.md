@@ -1,21 +1,52 @@
-# Trailer Parks — Pinned Links
+# MH Portal — Pinned Links
 
-**Last updated:** 2026-08-27  
+**Production:** https://www.mhportal.com  
 **Contact:** brad@treadcompanies.com  
+**Company:** [Tread Companies](https://www.treadcompanies.com)
 
-## Live website
+---
 
-- Home: https://temporary-quick-marimba-bytc40t.vercel.app
-- Owner recruitment: https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley
-- Outreach: https://temporary-quick-marimba-bytc40t.vercel.app/outreach
-- Upload list: https://temporary-quick-marimba-bytc40t.vercel.app/upload-list
-- Playbook: https://temporary-quick-marimba-bytc40t.vercel.app/resources/owners
-- Marketplace: https://temporary-quick-marimba-bytc40t.vercel.app/marketplace
+## Live site
+
+| What | URL |
+|------|-----|
+| **Home** | https://www.mhportal.com/ |
+| **Marketplace** | https://www.mhportal.com/marketplace/ |
+| **Hollins Estates** | https://www.mhportal.com/parks/tread-hollins/ |
+| **Yellow Mountain** | https://www.mhportal.com/parks/tread-yellow-mountain/ |
+| **Meadowbrook** | https://www.mhportal.com/parks/tread-meadowbrook/ |
+| **Owner portal** | https://www.mhportal.com/owners/ |
+| **List form** | https://www.mhportal.com/list-your-park/ |
+| **Links page** | https://www.mhportal.com/links/ |
+
+---
+
+## DNS (required once)
+
+Point the domain at GitHub Pages:
+
+| Type | Name | Value |
+|------|------|-------|
+| **CNAME** | `www` | `turneratom.github.io` |
+| **A** | `@` (apex) | `185.199.108.153` |
+| **A** | `@` | `185.199.109.153` |
+| **A** | `@` | `185.199.110.153` |
+| **A** | `@` | `185.199.111.153` |
+
+Then in GitHub → [Pages settings](https://github.com/turneratom/VitalAI-PWA/settings/pages):
+1. Custom domain: `www.mhportal.com`
+2. Check **Enforce HTTPS**
+3. Optional: redirect apex `mhportal.com` → `www`
+
+Republish: `bash trailer-parks/scripts/publish-github-pages.sh`
+
+Fallback while DNS propagates: https://turneratom.github.io/VitalAI-PWA/
+
+---
 
 ## CSV downloads
 
-- Full 16,973: /downloads/owner-prospects.csv
-- Wave 1 (9,112): /downloads/campaigns/wave1-sunbelt.csv
-- Wave 2 (1,441): /downloads/campaigns/wave2-southeast.csv
-- Wave 3 (3,089): /downloads/campaigns/wave3-midwest.csv
-- Associations: /downloads/campaigns/association-emails.txt
+| File | Path |
+|------|------|
+| Full prospect CSV | /downloads/owner-prospects.csv |
+| Wave dialers | /downloads/campaigns/ |
