@@ -18,7 +18,7 @@ import { formatCurrency, formatPercent, cn } from "@/lib/utils";
 
 const statusConfig = {
   pending: { label: "Pending Review", icon: Clock, className: "bg-amber-100 text-amber-800" },
-  approved: { label: "Approved", icon: CheckCircle, className: "bg-green-100 text-green-800" },
+  approved: { label: "Approved", icon: CheckCircle, className: "bg-sky-100 text-sky-900" },
   declined: { label: "Declined", icon: XCircle, className: "bg-red-100 text-red-800" },
   funded: { label: "Funded", icon: DollarSign, className: "bg-blue-100 text-blue-800" },
 };
@@ -185,7 +185,7 @@ export default function BanksPage() {
                             className={cn(
                               "px-2 py-0.5 rounded text-[10px] font-semibold uppercase",
                               park.status === "active"
-                                ? "bg-green-100 text-green-800"
+                                ? "bg-sky-100 text-sky-900"
                                 : park.status === "under_contract"
                                   ? "bg-amber-100 text-amber-800"
                                   : "bg-blue-100 text-blue-800"

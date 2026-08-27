@@ -49,11 +49,11 @@ export default function OwnersPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {submitted && (
-          <div className="mb-6 p-4 rounded-lg bg-green-50 border border-green-200 flex items-center gap-3">
-            <CheckCircle className="w-5 h-5 text-green-600" />
+          <div className="mb-6 p-4 rounded-lg bg-sky-50 border border-sky-200 flex items-center gap-3">
+            <CheckCircle className="w-5 h-5 text-sky-600" />
             <div>
-              <p className="text-sm font-semibold text-green-800">Listing submitted!</p>
-              <p className="text-xs text-green-700">
+              <p className="text-sm font-semibold text-sky-900">Listing submitted!</p>
+              <p className="text-xs text-teal-700">
                 Our team will review your submission within 24 hours. No fees apply.
               </p>
             </div>

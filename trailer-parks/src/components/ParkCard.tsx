@@ -5,17 +5,17 @@ import { formatCurrency, formatPercent } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 const parkGradients: Record<string, string> = {
-  sunset: "from-orange-400 via-amber-500 to-yellow-600",
-  oak: "from-green-600 via-emerald-500 to-teal-400",
-  pine: "from-emerald-700 via-green-600 to-lime-500",
-  river: "from-blue-600 via-cyan-500 to-teal-400",
-  meadow: "from-lime-600 via-green-500 to-emerald-400",
+  sunset: "from-sky-400 via-cyan-500 to-teal-500",
+  oak: "from-cyan-700 via-sky-500 to-teal-400",
+  pine: "from-slate-700 via-cyan-600 to-sky-400",
+  river: "from-blue-700 via-cyan-500 to-sky-300",
+  meadow: "from-teal-600 via-cyan-500 to-sky-400",
 };
 
 const statusStyles: Record<string, { label: string; className: string }> = {
-  active: { label: "Active", className: "bg-green-100 text-green-800" },
+  active: { label: "Active", className: "bg-sky-100 text-sky-900" },
   under_contract: { label: "Under Contract", className: "bg-amber-100 text-amber-800" },
-  pending_review: { label: "Pending Review", className: "bg-blue-100 text-blue-800" },
+  pending_review: { label: "Pending Review", className: "bg-cyan-100 text-cyan-900" },
 };
 
 type ParkCardProps = {

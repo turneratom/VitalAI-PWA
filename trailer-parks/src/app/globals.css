@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #0d1b2a;
-  --primary: #1b4332;
-  --primary-light: #2d6a4f;
-  --accent: #d4a853;
-  --accent-light: #e8c97a;
-  --muted: #6c757d;
+  --background: #f0f7fa;
+  --foreground: #0b1f2a;
+  --primary: #0a4d68;
+  --primary-light: #0e7490;
+  --accent: #38bdf8;
+  --accent-light: #7dd3fc;
+  --muted: #64748b;
   --card: #ffffff;
-  --border: #e2e8f0;
-  --navy: #0d1b2a;
-  --success: #2d6a4f;
-  --warning: #e9c46a;
+  --border: #d0e3ec;
+  --navy: #062536;
+  --success: #0d9488;
+  --warning: #f0b429;
 }
 
 @theme inline {
@@ -43,19 +43,19 @@ body {
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #0d1b2a 0%, #1b4332 50%, #2d6a4f 100%);
+  background: linear-gradient(135deg, #062536 0%, #0a4d68 45%, #0e7490 100%);
 }
 
 .gradient-gold {
-  background: linear-gradient(135deg, #d4a853 0%, #e8c97a 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
 }
 
 .card-shadow {
-  box-shadow: 0 1px 3px rgba(13, 27, 42, 0.08), 0 4px 12px rgba(13, 27, 42, 0.04);
+  box-shadow: 0 1px 3px rgba(6, 37, 54, 0.08), 0 4px 12px rgba(6, 37, 54, 0.04);
 }
 
 .card-shadow-lg {
-  box-shadow: 0 4px 6px rgba(13, 27, 42, 0.06), 0 12px 28px rgba(13, 27, 42, 0.08);
+  box-shadow: 0 4px 6px rgba(6, 37, 54, 0.06), 0 12px 28px rgba(6, 37, 54, 0.08);
 }
 
 @keyframes fade-in-up {

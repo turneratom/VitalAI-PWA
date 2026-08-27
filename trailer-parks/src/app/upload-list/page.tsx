@@ -112,8 +112,8 @@ export default function UploadListPage() {
         </div>
 
         {result ? (
-          <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-            <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-3" />
+          <div className="bg-sky-50 border border-sky-200 rounded-2xl p-8 text-center">
+            <CheckCircle className="w-12 h-12 text-sky-600 mx-auto mb-3" />
             <h2 className="font-display text-2xl font-bold text-navy">List received</h2>
             <p className="text-sm text-muted mt-2">
               <strong>{result.filename}</strong>
