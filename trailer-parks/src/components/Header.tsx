@@ -6,6 +6,7 @@ import { Menu, X, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { href: "/partner", label: "Partner" },
   { href: "/links", label: "Links" },
   { href: "/marketplace", label: "Marketplace" },
   { href: "/list-your-park", label: "List Free" },

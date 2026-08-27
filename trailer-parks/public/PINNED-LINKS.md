@@ -5,12 +5,12 @@
 
 ## Live website
 
-- Home: https://temporary-sonic-nova-bmpvqyq.vercel.app
-- Owner recruitment: https://temporary-sonic-nova-bmpvqyq.vercel.app/list-your-park?ref=bradley
-- Outreach: https://temporary-sonic-nova-bmpvqyq.vercel.app/outreach
-- Upload list: https://temporary-sonic-nova-bmpvqyq.vercel.app/upload-list
-- Playbook: https://temporary-sonic-nova-bmpvqyq.vercel.app/resources/owners
-- Marketplace: https://temporary-sonic-nova-bmpvqyq.vercel.app/marketplace
+- Home: https://temporary-turbo-bismuth-gk3jqxz.vercel.app
+- Owner recruitment: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/list-your-park?ref=bradley
+- Outreach: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/outreach
+- Upload list: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/upload-list
+- Playbook: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/resources/owners
+- Marketplace: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/marketplace
 
 ## CSV downloads
 
