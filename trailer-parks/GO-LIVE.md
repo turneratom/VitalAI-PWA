@@ -1,12 +1,25 @@
-# How to make MH Portal permanently live
+# How to keep Trailer Parks links working
 
-## Production domain
+## Live site (use this now)
 
-**https://www.mhportal.com**
+**https://turneratom.github.io/VitalAI-PWA/**
 
-Hosted on GitHub Pages from this repo (`main` / `gh-pages`). Custom domain file: `CNAME` → `www.mhportal.com`.
+Full link list: `PINNED-LINKS.md` or https://turneratom.github.io/VitalAI-PWA/links/
 
-### DNS checklist
+Republish:
+
+```bash
+bash trailer-parks/scripts/publish-github-pages.sh
+```
+
+## Why links broke
+
+1. Temporary Vercel URLs expire.
+2. Setting GitHub Pages custom domain `www.mhportal.com` **before DNS** made github.io **redirect** to a parking lander — every link died.
+
+**Rule:** Do not add a `CNAME` / custom domain until `www` DNS is `turneratom.github.io`.
+
+## www.mhportal.com (when ready)
 
 | Type | Name | Value |
 |------|------|-------|
@@ -16,31 +29,11 @@ Hosted on GitHub Pages from this repo (`main` / `gh-pages`). Custom domain file:
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
 
-GitHub → Settings → Pages → Custom domain = `www.mhportal.com` → Enforce HTTPS.
+Then Pages → Custom domain → Enforce HTTPS → republish with CNAME.
 
-Republish:
+## Test checklist
 
-```bash
-bash trailer-parks/scripts/publish-github-pages.sh
-```
-
-Fallback URL (repo Pages path): https://turneratom.github.io/VitalAI-PWA/
-
----
-
-## Optional — Vercel (full API routes)
-
-1. https://vercel.com/new → import `turneratom/VitalAI-PWA`
-2. Root Directory = `trailer-parks`
-3. Add domain `www.mhportal.com` in Vercel (then point DNS to Vercel instead)
-4. Env: `NEXT_PUBLIC_SITE_URL=https://www.mhportal.com`
-
----
-
-## Test run checklist (before outreach)
-
-- [ ] https://www.mhportal.com homepage
-- [ ] Marketplace shows Hollins, Yellow Mountain, Meadowbrook
-- [ ] Each Tread park loads
-- [ ] `/list-your-park` form submits
-- [ ] `/links` copy buttons show **www.mhportal.com**
+- [ ] Home, marketplace, 3 Tread parks load on github.io
+- [ ] `/links/` copy buttons include `/VitalAI-PWA`
+- [ ] CSV downloads open (not 404)
+- [ ] Only then share with owners

@@ -4,13 +4,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 REPO="$(cd "$ROOT/.." && pwd)"
 cd "$ROOT"
 
-SITE_URL="${SITE_URL:-https://www.mhportal.com}"
-CNAME_HOST="${CNAME_HOST:-www.mhportal.com}"
+# Live working URL (GitHub project Pages). Do NOT set CNAME until www.mhportal.com DNS is ready.
+SITE_URL="${SITE_URL:-https://turneratom.github.io/VitalAI-PWA}"
 
 echo "Building static export for ${SITE_URL}..."
 rm -rf out .next
 
-# API routes cannot be statically exported; stash them for the Pages build only.
 API_STASH=""
 if [ -d "src/app/api" ]; then
   API_STASH=$(mktemp -d)
@@ -38,18 +37,25 @@ if [ ! -d out ]; then
 fi
 
 touch out/.nojekyll
-echo "$CNAME_HOST" > out/CNAME
-# Client-route fallback for GitHub Pages
+# Critical: remove CNAME so GitHub does not redirect github.io → broken custom domain
+rm -f out/CNAME
 cp out/index.html out/404.html 2>/dev/null || true
 
 publish_branch() {
   local BRANCH="$1"
-  local WORK="/tmp/tp-pages-${BRANCH}"
+  local WORK="/tmp/tp-pages-${BRANCH}-$$"
   echo "Publishing to ${BRANCH}..."
   cd "$REPO"
   git fetch origin "$BRANCH" 2>/dev/null || true
   git worktree remove -f "$WORK" 2>/dev/null || true
   rm -rf "$WORK"
+
+  # Clear any stale worktrees holding this branch
+  git worktree list --porcelain | awk '/^worktree /{print $2}' | while read -r wt; do
+    case "$wt" in
+      /tmp/tp-*) git worktree remove -f "$wt" 2>/dev/null || true ;;
+    esac
+  done
 
   if git show-ref --verify --quiet "refs/remotes/origin/${BRANCH}"; then
     git worktree add -B "$BRANCH" "$WORK" "origin/${BRANCH}"
@@ -64,7 +70,6 @@ publish_branch() {
     )
   fi
 
-  # Replace site artifacts; keep source dirs on main
   if [ "$BRANCH" = "main" ]; then
     cd "$WORK"
     for name in index.html index.txt 404.html 404 .nojekyll CNAME _next _not-found \
@@ -76,41 +81,33 @@ publish_branch() {
       rm -rf "$name"
     done
     cp -a "$ROOT/out/." .
-    # Do not overwrite monorepo source with export leftovers that collide
   else
     find "$WORK" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
     cp -a "$ROOT/out/." "$WORK/"
   fi
 
   touch "$WORK/.nojekyll"
-  echo "$CNAME_HOST" > "$WORK/CNAME"
+  rm -f "$WORK/CNAME"
 
   cd "$WORK"
   git add -A
+  # Ensure CNAME deletion is staged if it existed
+  git rm -f --ignore-unmatch CNAME 2>/dev/null || true
   if git diff --cached --quiet; then
     echo "No changes on ${BRANCH}."
   else
     git -c user.email="brad@treadcompanies.com" -c user.name="Trailer Parks Deploy" \
-      commit -m "Publish MH Portal (www.mhportal.com) static site"
+      commit -m "Publish working Trailer Parks site (github.io, no broken CNAME)"
     git push -u origin "$BRANCH"
     echo "Pushed ${BRANCH}."
   fi
+  cd "$REPO"
   git worktree remove -f "$WORK" 2>/dev/null || true
 }
 
 publish_branch gh-pages
 publish_branch main
 
-# Best-effort: set custom domain on GitHub Pages
-gh api repos/turneratom/VitalAI-PWA/pages -X PUT \
-  -f cname="$CNAME_HOST" \
-  -f build_type=legacy \
-  -F source[branch]=main \
-  -F source[path]=/ 2>&1 || true
-
 echo ""
-echo "Published for custom domain: ${SITE_URL}"
-echo "DNS still required (if not already pointing at GitHub Pages):"
-echo "  CNAME  www  →  turneratom.github.io"
-echo "  A      @    →  185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153"
-echo "Then: GitHub → Settings → Pages → Custom domain = www.mhportal.com (Enforce HTTPS)"
+echo "Live URL: ${SITE_URL}/"
+echo "Do not add www.mhportal.com CNAME until DNS points to turneratom.github.io"

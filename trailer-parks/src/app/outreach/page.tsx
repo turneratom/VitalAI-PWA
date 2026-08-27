@@ -141,7 +141,7 @@ export default function OutreachPage() {
   const [state, setState] = useState("ALL");
   const [wave, setWave] = useState("wave1");
   const [contacted, setContacted] = useState<Record<string, boolean>>({});
-  const { recruitmentUrl, ready } = useSiteOrigin();
+  const { recruitmentUrl, ready, asset } = useSiteOrigin();
   const link = ready ? recruitmentUrl("bradley-outreach") : "/list-your-park?ref=bradley-outreach";
   const states = useMemo(() => getUniqueStates(), []);
 
@@ -190,20 +190,20 @@ export default function OutreachPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="/downloads/owner-prospects.csv"
+              href={asset("/downloads/owner-prospects.csv")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-navy font-semibold rounded-lg text-sm"
             >
               <Download className="w-4 h-4" />
               Download full list ({prospectsMeta.totalAvailable.toLocaleString()} parks CSV)
             </a>
             <a
-              href="/downloads/campaigns/wave1-sunbelt.csv"
+              href={asset("/downloads/campaigns/wave1-sunbelt.csv")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 font-semibold rounded-lg text-sm"
             >
               Wave 1 dialer CSV (9,112)
             </a>
             <a
-              href="/downloads/campaigns/association-emails.txt"
+              href={asset("/downloads/campaigns/association-emails.txt")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 font-semibold rounded-lg text-sm"
             >
               Association emails

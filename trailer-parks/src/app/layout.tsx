@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url || "https://www.mhportal.com"),
+  metadataBase: new URL(siteConfig.url || "https://turneratom.github.io/VitalAI-PWA"),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
