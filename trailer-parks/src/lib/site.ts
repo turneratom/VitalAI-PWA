@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "The Leader in Mobile Home Park Transactions",
   description:
     "List your park. View financials. Underwrite deals. Secure capital. No fees. Built by the manufactured housing experts at Tread Companies.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://temporary-speedy-granite-dfetdj3.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://temporary-speedy-scarlet-tte37qu.vercel.app",
   ownerRecruitmentPath: "/list-your-park",
   company: {
     name: "Tread Companies",
