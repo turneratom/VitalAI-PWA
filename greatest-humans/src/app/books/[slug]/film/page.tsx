@@ -50,8 +50,14 @@ export default async function FilmPage({
           </p>
           <div className="mt-8 flex flex-wrap gap-4 font-[family-name:var(--font-ui)] text-sm">
             <a
-              href="#treatment"
+              href="#trailer"
               className="bg-seal px-4 py-2.5 uppercase tracking-[0.16em] hover:bg-seal-deep"
+            >
+              Watch trailer
+            </a>
+            <a
+              href="#treatment"
+              className="border border-bone/30 px-4 py-2.5 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
             >
               Treatment
             </a>
@@ -67,6 +73,30 @@ export default async function FilmPage({
             >
               ← Back to the book
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="trailer" className="border-b border-white/10 bg-ink-soft">
+        <div className="mx-auto max-w-4xl px-5 py-14 md:px-8 md:py-16">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-bone md:text-4xl">
+            Trailer
+          </h2>
+          <p className="mt-3 max-w-2xl text-fog">
+            A short cinematic preview of Firebrand — from Brad Turner’s book to
+            the screen.
+          </p>
+          <div className="mt-8 overflow-hidden rounded-sm bg-black shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+            <video
+              className="aspect-video w-full"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/thomas-paine-hero.png"
+            >
+              <source src="/film/firebrand-trailer.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
