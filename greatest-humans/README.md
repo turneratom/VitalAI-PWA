@@ -16,3 +16,9 @@ npm run dev
 ```
 
 Content lives in `content/books/firebrand/`.
+
+## Amazon KDP package
+
+See `publishing/AMAZON-KDP.md` for blurb, keywords, and upload steps.
+
+Manuscript and covers live in `publishing/kdp/` and `publishing/covers/`.
