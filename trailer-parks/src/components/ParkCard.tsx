@@ -53,11 +53,16 @@ export function ParkCard({ park, showFinancials = true }: ParkCardProps) {
         </div>
 
         <div className="flex items-baseline justify-between mb-4">
-          <span className="text-2xl font-bold text-navy">{formatCurrency(park.askingPrice)}</span>
-          {showFinancials && (
+          <span className="text-2xl font-bold text-navy">
+            {park.askingPrice > 0 ? formatCurrency(park.askingPrice) : "Portfolio listing"}
+          </span>
+          {showFinancials && park.underwriting.capRate > 0 && (
             <span className="text-sm font-semibold text-primary">
               {formatPercent(park.underwriting.capRate)} cap
             </span>
+          )}
+          {park.askingPrice === 0 && (
+            <span className="text-sm font-semibold text-primary">Tread test</span>
           )}
         </div>
 

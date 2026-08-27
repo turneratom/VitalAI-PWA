@@ -66,7 +66,10 @@ const features = [
 ];
 
 export default function HomePage() {
-  const featuredParks = parks.filter((p) => p.status === "active").slice(0, 3);
+  const featuredParks = [
+    ...parks.filter((p) => p.ownerId === "owner-tread"),
+    ...parks.filter((p) => p.status === "active" && p.ownerId !== "owner-tread"),
+  ].slice(0, 3);
 
   return (
     <>

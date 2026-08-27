@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import {
   Building2,
   CheckCircle,
@@ -19,13 +18,15 @@ import {
   Share2,
 } from "lucide-react";
 import { platformStats } from "@/lib/data";
-import { getOwnerRecruitmentUrl, siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
+import { useSiteOrigin } from "@/hooks/useSiteOrigin";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 
 const { bradley } = siteConfig.team;
 const { company, credentials } = siteConfig;
 
-const outreachTemplates = [
+function buildTemplates(linkFn: (ref?: string) => string) {
+  return [
   {
     id: "cold-email",
     icon: Mail,
@@ -43,7 +44,7 @@ When you list, you get:
 • Direct access to lenders and underwriters
 • Backed by a team that's done this hundreds of times
 
-It takes 2 minutes to submit your park: ${getOwnerRecruitmentUrl("email")}
+It takes 2 minutes to submit your park: ${linkFn("email")}
 
 Happy to answer any questions — no pressure, no obligation.
 
@@ -64,7 +65,7 @@ Every listing includes the financial tools buyers and lenders expect: T-12 state
 
 If you're thinking about selling in the next 12 months, listing now costs nothing and there's no obligation.
 
-Submit here: ${getOwnerRecruitmentUrl("followup")}
+Submit here: ${linkFn("followup")}
 
 Happy to jump on a 10-minute call anytime.
 
@@ -76,30 +77,31 @@ ${bradley.email}`,
     id: "text-message",
     icon: MessageSquare,
     title: "Text Message",
-    subject: null,
-    body: `Hi [Name], Bradley here from ${company.name}. We built a free marketplace for park owners — zero broker fees. We've operated ${credentials.spacesOperated} spaces. If you're thinking about selling [Park Name]: ${getOwnerRecruitmentUrl("sms")}`,
+    subject: null as string | null,
+    body: `Hi [Name], Bradley here from ${company.name}. We built a free marketplace for park owners — zero broker fees. We've operated ${credentials.spacesOperated} spaces. If you're thinking about selling [Park Name]: ${linkFn("sms")}`,
   },
   {
     id: "voicemail",
     icon: Phone,
     title: "Voicemail Script",
-    subject: null,
+    subject: null as string | null,
     body: `Hi [Name], this is Bradley with ${company.name} and Trailer Parks. We're manufactured housing experts — ${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold — and we built a free marketplace where park owners list with zero fees. No listing fee, no success fee. If you're curious, submit your park in 2 minutes at our website, or call me back at [your number]. My email is ${bradley.email}. Thanks!`,
   },
   {
     id: "facebook",
     icon: Share2,
     title: "Facebook Group Post",
-    subject: null,
+    subject: null as string | null,
     body: `Park owners — if you're thinking about selling, check out Trailer Parks. It's a free marketplace built by ${company.name} (${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold).
 
 No listing fees, no success fees. Brokers typically charge 6% — on a $4M park that's $240K.
 
 They handle financial presentation, connect you with buyers and lenders, and the team actually knows MHP inside and out.
 
-Listing takes 2 minutes: ${getOwnerRecruitmentUrl("facebook")}`,
+Listing takes 2 minutes: ${linkFn("facebook")}`,
   },
 ];
+}
 
 const objectionHandlers = [
   {
@@ -153,7 +155,13 @@ function CopyButton({ text }: { text: string }) {
 }
 
 export default function OwnerOutreachPage() {
-  const recruitmentLink = getOwnerRecruitmentUrl("bradley");
+  const { recruitmentUrl, ready } = useSiteOrigin();
+  const recruitmentLink = ready
+    ? recruitmentUrl("bradley")
+    : "/list-your-park?ref=bradley";
+  const outreachTemplates = buildTemplates((ref) =>
+    ready ? recruitmentUrl(ref) : `/list-your-park?ref=${ref || "bradley"}`
+  );
 
   return (
     <div className="bg-background min-h-screen">
@@ -209,7 +217,7 @@ export default function OwnerOutreachPage() {
           </blockquote>
           <div className="mt-3">
             <CopyButton
-              text={`Trailer Parks is built by ${company.name} — manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold. Owners list for zero dollars — no listing fee, no success fee. Traditional brokers take 6%. We take nothing. ${getOwnerRecruitmentUrl("bradley")}`}
+              text={`Trailer Parks is built by ${company.name} — manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold. Owners list for zero dollars — no listing fee, no success fee. Traditional brokers take 6%. We take nothing. ${recruitmentLink}`}
             />
           </div>
         </section>

@@ -26,7 +26,8 @@ import {
   phoneDigits,
   type ProspectPark,
 } from "@/lib/prospects";
-import { getOwnerRecruitmentUrl, siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
+import { useSiteOrigin } from "@/hooks/useSiteOrigin";
 import { cn } from "@/lib/utils";
 
 const WAVES: { id: string; label: string; states: string[] }[] = [
@@ -140,7 +141,8 @@ export default function OutreachPage() {
   const [state, setState] = useState("ALL");
   const [wave, setWave] = useState("wave1");
   const [contacted, setContacted] = useState<Record<string, boolean>>({});
-  const link = getOwnerRecruitmentUrl("bradley-outreach");
+  const { recruitmentUrl, ready } = useSiteOrigin();
+  const link = ready ? recruitmentUrl("bradley-outreach") : "/list-your-park?ref=bradley-outreach";
   const states = useMemo(() => getUniqueStates(), []);
 
   const activeWave = WAVES.find((w) => w.id === wave) ?? WAVES[0];

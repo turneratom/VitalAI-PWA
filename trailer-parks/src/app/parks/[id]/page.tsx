@@ -72,13 +72,17 @@ export default async function ParkDetailPage({ params }: PageProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Key metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <StatCard label="Asking Price" value={formatCurrency(park.askingPrice)} icon={DollarSign} />
+          <StatCard
+            label="Asking Price"
+            value={park.askingPrice > 0 ? formatCurrency(park.askingPrice) : "Portfolio"}
+            icon={DollarSign}
+          />
           <StatCard
             label="Cap Rate"
-            value={formatPercent(underwriting.capRate)}
-            subtext="Based on T-12 NOI"
+            value={park.underwriting.capRate > 0 ? formatPercent(park.underwriting.capRate) : "N/A"}
+            subtext={park.askingPrice > 0 ? "Based on T-12 NOI" : "Portfolio — not priced"}
             icon={Percent}
-            trend="up"
+            trend={park.underwriting.capRate > 0 ? "up" : undefined}
           />
           <StatCard
             label="Net Operating Income"
