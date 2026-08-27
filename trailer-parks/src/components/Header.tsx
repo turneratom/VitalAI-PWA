@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/marketplace", label: "Marketplace" },
   { href: "/list-your-park", label: "List Free" },
   { href: "/outreach", label: "Outreach" },
+  { href: "/upload-list", label: "Upload List" },
   { href: "/owners", label: "Owners" },
   { href: "/buyers", label: "Buyers" },
   { href: "/analysts", label: "Analysts" },

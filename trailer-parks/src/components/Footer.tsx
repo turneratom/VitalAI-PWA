@@ -31,8 +31,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/owners" className="hover:text-accent transition-colors">
-                  Owner Outreach Kit
+                <Link href="/upload-list" className="hover:text-accent transition-colors">
+                  Upload Owner List
+                </Link>
+              </li>
+              <li>
+                <Link href="/outreach" className="hover:text-accent transition-colors">
+                  Outreach Engine
                 </Link>
               </li>
               <li>

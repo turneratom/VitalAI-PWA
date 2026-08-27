@@ -29,8 +29,11 @@ export const siteConfig = {
     ownerRecruitment: "/list-your-park",
     outreachKit: "/resources/owners",
     marketplace: "/marketplace",
+    outreach: "/outreach",
+    uploadList: "/upload-list",
     tread: "https://www.treadcompanies.com",
   },
+  intakeEmail: "brad@treadcompanies.com",
 };
 
 export function getOwnerRecruitmentUrl(ref?: string): string {
