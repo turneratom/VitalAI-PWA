@@ -1474,6 +1474,84 @@ To take away this right is to reduce a man to slavery.
 
 The candle dies. His pen scratches once more in darkness.
 
+### INT. NEW YORK PUBLIC HOUSE — EVENING
+
+Mechanics and young reformers crowd around Paine. A broadside advertising his *AGRARIAN JUSTICE* lies beside the ale.
+
+A YOUNG RADICAL raises his glass.
+
+YOUNG RADICAL
+
+To universal liberty.
+
+The table cheers. Paine does not drink.
+
+PAINE
+
+How does the widow buy bread?
+
+YOUNG RADICAL
+
+What?
+
+PAINE
+
+Your universal liberty. Can she spend it at market?
+
+YOUNG RADICAL
+
+Once government is made free, prosperity follows.
+
+PAINE
+
+Government has been free for thirty years. Hunger remains punctual.
+
+He pulls the broadside closer.
+
+PAINE (CONT’D)
+
+The earth was not created with title deeds. Civilization enclosed the common inheritance and made fortunes possible. Very well. Then property owes something to every person it excludes.
+
+AN OLDER MECHANIC squints at the figures.
+
+OLDER MECHANIC
+
+Money at twenty-one. A pension after fifty.
+
+PAINE
+
+Not charity. Compensation.
+
+YOUNG RADICAL
+
+They will call that robbery.
+
+PAINE
+
+Men born to an estate consider every obligation robbery.
+
+A WELL-DRESSED PATRON at the next table snorts.
+
+PATRON
+
+This from a gentleman given a farm by the state.
+
+Paine turns.
+
+PAINE
+
+Precisely. I know what public generosity can do for a man. My objection is to its rarity.
+
+The mechanics laugh. The patron leaves.
+
+Paine finally lifts his glass, hand trembling. The Older Mechanic steadies the bottom without calling attention to it.
+
+PAINE (CONT’D)
+
+To liberty that survives the market.
+
+They drink.
+
 ### INT. NEW YORK PRINT SHOP — DAY
 
 An APPRENTICE, 16, sorts type backward. Paine watches.
