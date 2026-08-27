@@ -10,12 +10,12 @@ See **[PINNED-LINKS.md](./PINNED-LINKS.md)** for the full list.
 
 | What | Link |
 |------|------|
-| **Live site** | https://temporary-speedy-scarlet-tte37qu.vercel.app |
-| **Pinned links page** | https://temporary-speedy-scarlet-tte37qu.vercel.app/links |
-| **Share with owners** | https://temporary-speedy-scarlet-tte37qu.vercel.app/list-your-park?ref=bradley |
-| **Outreach HQ** | https://temporary-speedy-scarlet-tte37qu.vercel.app/outreach |
-| **Full CSV (16,973 parks)** | https://temporary-speedy-scarlet-tte37qu.vercel.app/downloads/owner-prospects.csv |
-| **Upload your list** | https://temporary-speedy-scarlet-tte37qu.vercel.app/upload-list |
+| **Live site** | https://temporary-sonic-nova-bmpvqyq.vercel.app |
+| **Pinned links page** | https://temporary-sonic-nova-bmpvqyq.vercel.app/links |
+| **Share with owners** | https://temporary-sonic-nova-bmpvqyq.vercel.app/list-your-park?ref=bradley |
+| **Outreach HQ** | https://temporary-sonic-nova-bmpvqyq.vercel.app/outreach |
+| **Full CSV (16,973 parks)** | https://temporary-sonic-nova-bmpvqyq.vercel.app/downloads/owner-prospects.csv |
+| **Upload your list** | https://temporary-sonic-nova-bmpvqyq.vercel.app/upload-list |
 
 Repo copies of the CSV (never expire with the deploy URL): `data/owner-prospects.csv` and `public/downloads/owner-prospects.csv`.
 

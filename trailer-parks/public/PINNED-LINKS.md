@@ -5,12 +5,12 @@
 
 ## Live website
 
-- Home: https://temporary-speedy-scarlet-tte37qu.vercel.app
-- Owner recruitment: https://temporary-speedy-scarlet-tte37qu.vercel.app/list-your-park?ref=bradley
-- Outreach: https://temporary-speedy-scarlet-tte37qu.vercel.app/outreach
-- Upload list: https://temporary-speedy-scarlet-tte37qu.vercel.app/upload-list
-- Playbook: https://temporary-speedy-scarlet-tte37qu.vercel.app/resources/owners
-- Marketplace: https://temporary-speedy-scarlet-tte37qu.vercel.app/marketplace
+- Home: https://temporary-sonic-nova-bmpvqyq.vercel.app
+- Owner recruitment: https://temporary-sonic-nova-bmpvqyq.vercel.app/list-your-park?ref=bradley
+- Outreach: https://temporary-sonic-nova-bmpvqyq.vercel.app/outreach
+- Upload list: https://temporary-sonic-nova-bmpvqyq.vercel.app/upload-list
+- Playbook: https://temporary-sonic-nova-bmpvqyq.vercel.app/resources/owners
+- Marketplace: https://temporary-sonic-nova-bmpvqyq.vercel.app/marketplace
 
 ## CSV downloads
 
