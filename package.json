@@ -1,0 +1,11 @@
+{
+  "name": "vitalai-workspace",
+  "private": true,
+  "description": "Root package so Vercel can install from the monorepo root; the app lives in greatest-humans/.",
+  "scripts": {
+    "dev": "npm run dev --prefix greatest-humans",
+    "build": "npm run build --prefix greatest-humans",
+    "start": "npm run start --prefix greatest-humans",
+    "lint": "npm run lint --prefix greatest-humans"
+  }
+}

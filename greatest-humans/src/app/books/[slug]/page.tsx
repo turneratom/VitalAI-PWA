@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBook } from "@/lib/series";
+import { books, getBook } from "@/lib/series";
+
+export function generateStaticParams() {
+  return books.map((book) => ({ slug: book.slug }));
+}
 
 export default async function BookPage({
   params,

@@ -1,8 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "cd greatest-humans && npm install",
+  "framework": null,
+  "installCommand": "cd greatest-humans && npm ci",
   "buildCommand": "cd greatest-humans && npm run build",
-  "devCommand": "cd greatest-humans && npm run dev",
-  "framework": "nextjs",
-  "outputDirectory": "greatest-humans/.next"
+  "outputDirectory": "greatest-humans/out"
 }

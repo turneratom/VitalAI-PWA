@@ -6,7 +6,16 @@ import {
   markdownToParagraphs,
   readChapterMarkdown,
 } from "@/lib/content";
-import { getChapter } from "@/lib/series";
+import { books, getChapter } from "@/lib/series";
+
+export function generateStaticParams() {
+  return books.flatMap((book) =>
+    book.chapters.map((chapter) => ({
+      slug: book.slug,
+      chapter: chapter.slug,
+    })),
+  );
+}
 
 export default async function ChapterPage({
   params,

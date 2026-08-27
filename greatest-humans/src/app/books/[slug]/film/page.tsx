@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { readFilmFile } from "@/lib/content";
-import { getBook } from "@/lib/series";
+import { books, getBook } from "@/lib/series";
+
+export function generateStaticParams() {
+  return books.map((book) => ({ slug: book.slug }));
+}
 
 function renderBlocks(text: string) {
   return text
