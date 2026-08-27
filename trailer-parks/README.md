@@ -2,12 +2,22 @@
 
 The leader in mobile home park transactions. A fee-free, one-stop marketplace connecting owners, buyers, analysts, and lenders.
 
-## Features
+**Built by [Tread Companies](https://www.treadcompanies.com)** · Contact: brad@treadcompanies.com
 
-- **Owners** — List parks for free with verified financial reporting
-- **Buyers** — Browse deals with full T-12 statements and underwriting metrics
-- **Analysts** — Interactive underwriting workbench with DCF, sensitivity analysis, and deal scorecards
-- **Lenders** — Pre-vetted deal flow with standardized financials and loan pipeline management
+## Pinned links (bookmark these)
+
+See **[PINNED-LINKS.md](./PINNED-LINKS.md)** for the full list.
+
+| What | Link |
+|------|------|
+| **Live site** | https://temporary-sonic-nova-bmpvqyq.vercel.app |
+| **Pinned links page** | https://temporary-sonic-nova-bmpvqyq.vercel.app/links |
+| **Share with owners** | https://temporary-sonic-nova-bmpvqyq.vercel.app/list-your-park?ref=bradley |
+| **Outreach HQ** | https://temporary-sonic-nova-bmpvqyq.vercel.app/outreach |
+| **Full CSV (16,973 parks)** | https://temporary-sonic-nova-bmpvqyq.vercel.app/downloads/owner-prospects.csv |
+| **Upload your list** | https://temporary-sonic-nova-bmpvqyq.vercel.app/upload-list |
+
+Repo copies of the CSV (never expire with the deploy URL): `data/owner-prospects.csv` and `public/downloads/owner-prospects.csv`.
 
 ## Getting Started
 
@@ -17,10 +27,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-**Live site:** [trailer-parks.vercel.app](https://temporary-fleet-tundra-a0ml4ox.vercel.app) (updates on deploy)
-
-**Owner recruitment link:** [/list-your-park](https://temporary-fleet-tundra-a0ml4ox.vercel.app/list-your-park)
 
 ## Tech Stack
 
@@ -34,9 +40,14 @@ Open [http://localhost:3000](http://localhost:3000).
 | Route | Description |
 |-------|-------------|
 | `/` | Landing page |
+| `/links` | Pinned key URLs & downloads |
+| `/list-your-park` | Owner recruitment |
+| `/outreach` | Owner notification engine |
+| `/upload-list` | Private list intake |
 | `/marketplace` | Browse all listings |
 | `/parks/[id]` | Park detail with full financials |
-| `/owners` | Owner dashboard & listing form |
-| `/buyers` | Buyer portal & deal comparison |
+| `/owners` | Owner dashboard |
+| `/buyers` | Buyer portal |
 | `/analysts` | Underwriting workbench |
-| `/banks` | Lender portal & loan pipeline |
+| `/banks` | Lender portal |
+| `/resources/owners` | Outreach playbook |
