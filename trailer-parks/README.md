@@ -10,12 +10,12 @@ See **[PINNED-LINKS.md](./PINNED-LINKS.md)** for the full list.
 
 | What | Link |
 |------|------|
-| **Live site** | https://temporary-sonic-nova-bmpvqyq.vercel.app |
-| **Pinned links page** | https://temporary-sonic-nova-bmpvqyq.vercel.app/links |
-| **Share with owners** | https://temporary-sonic-nova-bmpvqyq.vercel.app/list-your-park?ref=bradley |
-| **Outreach HQ** | https://temporary-sonic-nova-bmpvqyq.vercel.app/outreach |
-| **Full CSV (16,973 parks)** | https://temporary-sonic-nova-bmpvqyq.vercel.app/downloads/owner-prospects.csv |
-| **Upload your list** | https://temporary-sonic-nova-bmpvqyq.vercel.app/upload-list |
+| **Live site** | https://temporary-quick-marimba-bytc40t.vercel.app |
+| **Pinned links page** | https://temporary-quick-marimba-bytc40t.vercel.app/links |
+| **Share with owners** | https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley |
+| **Outreach HQ** | https://temporary-quick-marimba-bytc40t.vercel.app/outreach |
+| **Full CSV (16,973 parks)** | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.csv |
+| **Upload your list** | https://temporary-quick-marimba-bytc40t.vercel.app/upload-list |
 
 Repo copies of the CSV (never expire with the deploy URL): `data/owner-prospects.csv` and `public/downloads/owner-prospects.csv`.
 
