@@ -48,7 +48,7 @@ function CopyBtn({ text, label = "Copy" }: { text: string; label?: string }) {
       }}
       className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold border border-border rounded-md hover:bg-primary/5"
     >
-      {copied ? <CheckCircle className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+      {copied ? <CheckCircle className="w-3 h-3 text-sky-600" /> : <Copy className="w-3 h-3" />}
       {copied ? "Copied" : label}
     </button>
   );
@@ -76,7 +76,7 @@ function ProspectRow({
     <div
       className={cn(
         "p-4 rounded-xl border bg-card",
-        contacted ? "border-green-200 bg-green-50/40" : "border-border"
+        contacted ? "border-sky-200 bg-sky-50/40" : "border-border"
       )}
     >
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
@@ -84,7 +84,7 @@ function ProspectRow({
           <div className="flex items-center gap-2">
             <h3 className="font-semibold text-navy">{park.name}</h3>
             {contacted && (
-              <span className="text-[10px] uppercase font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">
+              <span className="text-[10px] uppercase font-bold text-teal-700 bg-sky-100 px-2 py-0.5 rounded-full">
                 Contacted
               </span>
             )}

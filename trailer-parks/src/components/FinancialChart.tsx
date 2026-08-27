@@ -44,8 +44,8 @@ export function FinancialChart({ data, type = "noi" }: FinancialChartProps) {
             }}
           />
           <Legend />
-          <Bar dataKey="revenue" name="Revenue" fill="#2d6a4f" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="expenses" name="Expenses" fill="#d4a853" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="revenue" name="Revenue" fill="#0e7490" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="expenses" name="Expenses" fill="#38bdf8" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     );
@@ -56,8 +56,8 @@ export function FinancialChart({ data, type = "noi" }: FinancialChartProps) {
       <AreaChart data={data} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
         <defs>
           <linearGradient id="noiGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#2d6a4f" stopOpacity={0.3} />
-            <stop offset="95%" stopColor="#2d6a4f" stopOpacity={0} />
+            <stop offset="5%" stopColor="#0e7490" stopOpacity={0.3} />
+            <stop offset="95%" stopColor="#0e7490" stopOpacity={0} />
           </linearGradient>
         </defs>
         <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
@@ -85,7 +85,7 @@ export function FinancialChart({ data, type = "noi" }: FinancialChartProps) {
           type="monotone"
           dataKey="noi"
           name="noi"
-          stroke="#2d6a4f"
+          stroke="#0e7490"
           strokeWidth={2}
           fill="url(#noiGradient)"
         />

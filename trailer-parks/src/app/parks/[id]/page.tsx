@@ -186,9 +186,9 @@ export default async function ParkDetailPage({ params }: PageProps) {
                         ({formatCurrency(financials.totalOpEx)})
                       </td>
                     </tr>
-                    <tr className="bg-green-50">
+                    <tr className="bg-sky-50">
                       <td className="py-3 font-bold text-navy text-base">Net Operating Income</td>
-                      <td className="py-3 text-right font-bold text-green-700 text-base">
+                      <td className="py-3 text-right font-bold text-teal-700 text-base">
                         {formatCurrency(financials.netOperatingIncome)}
                       </td>
                     </tr>
@@ -255,7 +255,7 @@ export default async function ParkDetailPage({ params }: PageProps) {
                       <span
                         className={`inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold uppercase ${
                           loan.status === "approved"
-                            ? "bg-green-100 text-green-800"
+                            ? "bg-sky-100 text-sky-900"
                             : loan.status === "funded"
                               ? "bg-blue-100 text-blue-800"
                               : "bg-amber-100 text-amber-800"

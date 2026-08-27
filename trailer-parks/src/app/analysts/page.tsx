@@ -193,7 +193,7 @@ export default function AnalystsPage() {
                           <td
                             className={cn(
                               "py-2.5 text-right font-semibold",
-                              roe > 0 ? "text-green-700" : "text-red-600"
+                              roe > 0 ? "text-teal-700" : "text-red-600"
                             )}
                           >
                             {formatPercent(roe)}
