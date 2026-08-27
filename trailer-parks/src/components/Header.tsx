@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/marketplace", label: "Marketplace" },
+  { href: "/list-your-park", label: "List Free" },
+  { href: "/outreach", label: "Outreach" },
   { href: "/owners", label: "Owners" },
   { href: "/buyers", label: "Buyers" },
   { href: "/analysts", label: "Analysts" },
