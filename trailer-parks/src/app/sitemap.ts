@@ -5,7 +5,7 @@ import { parks } from "@/lib/data";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = siteConfig.url || "https://trailer-parks.vercel.app";
+  const base = siteConfig.url || "https://www.mhportal.com";
 
   const staticPages = [
     "",

@@ -3,8 +3,8 @@ export const siteConfig = {
   tagline: "The Leader in Mobile Home Park Transactions",
   description:
     "List your park. View financials. Underwrite deals. Secure capital. No fees. Built by the manufactured housing experts at Tread Companies.",
-  /** Prefer relative paths. Absolute URL only when NEXT_PUBLIC_SITE_URL is set in production. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "",
+  /** Prefer NEXT_PUBLIC_SITE_URL in production. Empty = use current browser origin for share links. */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mhportal.com",
   ownerRecruitmentPath: "/list-your-park",
   company: {
     name: "Tread Companies",

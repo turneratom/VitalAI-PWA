@@ -1,38 +1,46 @@
-# How to make Trailer Parks permanently live
+# How to make MH Portal permanently live
 
-Temporary Vercel URLs expire. Do **not** share those for outreach.
-Use one of the options below for a stable production URL.
+## Production domain
 
-## Option A — Claim this deploy (fastest, ~2 minutes)
+**https://www.mhportal.com**
 
-1. Open the **claim URL** printed after the latest deploy (also in PINNED-LINKS.md).
-2. Sign in / create a free Vercel account with `brad@treadcompanies.com`.
-3. Claim the project. You get a stable URL like `trailer-parks.vercel.app`.
-4. Optional: add a custom domain (`app.treadcompanies.com` or `trailerparks.com`).
+Hosted on GitHub Pages from this repo (`main` / `gh-pages`). Custom domain file: `CNAME` → `www.mhportal.com`.
 
-## Option B — Connect the GitHub repo in Vercel (best long-term)
+### DNS checklist
 
-1. Go to https://vercel.com/new
-2. Import `turneratom/VitalAI-PWA`
-3. Set **Root Directory** to `trailer-parks`
-4. Framework: Next.js (auto-detected)
-5. Deploy → production URL stays fixed on every push to `main`
-6. Set env var `NEXT_PUBLIC_SITE_URL` to that production URL
+| Type | Name | Value |
+|------|------|-------|
+| CNAME | www | turneratom.github.io |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
 
-## Option C — Custom domain under Tread
+GitHub → Settings → Pages → Custom domain = `www.mhportal.com` → Enforce HTTPS.
 
-Point DNS for e.g. `parks.treadcompanies.com` to the Vercel project (Vercel → Domains).
+Republish:
 
-## Test run checklist (before any outreach)
+```bash
+bash trailer-parks/scripts/publish-github-pages.sh
+```
 
-- [ ] Open production URL homepage
-- [ ] Marketplace shows Hollins Estates, Yellow Mountain, Meadowbrook
-- [ ] Click each Tread park → financials load
-- [ ] Owner portal (`/owners`) shows your 3 parks
+Fallback URL (repo Pages path): https://turneratom.github.io/VitalAI-PWA/
+
+---
+
+## Optional — Vercel (full API routes)
+
+1. https://vercel.com/new → import `turneratom/VitalAI-PWA`
+2. Root Directory = `trailer-parks`
+3. Add domain `www.mhportal.com` in Vercel (then point DNS to Vercel instead)
+4. Env: `NEXT_PUBLIC_SITE_URL=https://www.mhportal.com`
+
+---
+
+## Test run checklist (before outreach)
+
+- [ ] https://www.mhportal.com homepage
+- [ ] Marketplace shows Hollins, Yellow Mountain, Meadowbrook
+- [ ] Each Tread park loads
 - [ ] `/list-your-park` form submits
-- [ ] `/links` copy buttons show the **current** host (not an old temporary URL)
-- [ ] Only then start owner outreach
-
-## Why links broke before
-
-Copy/share links were hardcoded to temporary `*.vercel.app` hosts that expire in ~60 minutes. The site now builds share links from `window.location.origin` so they always match the site you’re on.
+- [ ] `/links` copy buttons show **www.mhportal.com**

@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url || "https://trailer-parks.vercel.app"),
+  metadataBase: new URL(siteConfig.url || "https://www.mhportal.com"),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,

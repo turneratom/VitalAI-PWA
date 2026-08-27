@@ -1,62 +1,52 @@
-# Trailer Parks — Pinned Links
+# MH Portal — Pinned Links
 
-**Last updated:** 2026-08-27  
+**Production:** https://www.mhportal.com  
 **Contact:** brad@treadcompanies.com  
 **Company:** [Tread Companies](https://www.treadcompanies.com)
 
-> Temporary Vercel URLs expire (~60 min) unless claimed. When a link dies, redeploy and update this file.
-
 ---
 
-## Live website (current deploy)
+## Live site
 
 | What | URL |
 |------|-----|
-| **Partner page (Auto)** | https://temporary-quick-marimba-bytc40t.vercel.app/partner |
-| **Home** | https://temporary-quick-marimba-bytc40t.vercel.app |
-| **Owner recruitment (share this)** | https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley |
-| **Outreach command center** | https://temporary-quick-marimba-bytc40t.vercel.app/outreach |
-| **Upload your private list** | https://temporary-quick-marimba-bytc40t.vercel.app/upload-list |
-| **Owner outreach playbook** | https://temporary-quick-marimba-bytc40t.vercel.app/resources/owners |
-| **Marketplace** | https://temporary-quick-marimba-bytc40t.vercel.app/marketplace |
+| **Home** | https://www.mhportal.com/ |
+| **Marketplace** | https://www.mhportal.com/marketplace/ |
+| **Hollins Estates** | https://www.mhportal.com/parks/tread-hollins/ |
+| **Yellow Mountain** | https://www.mhportal.com/parks/tread-yellow-mountain/ |
+| **Meadowbrook** | https://www.mhportal.com/parks/tread-meadowbrook/ |
+| **Owner portal** | https://www.mhportal.com/owners/ |
+| **List form** | https://www.mhportal.com/list-your-park/ |
+| **Links page** | https://www.mhportal.com/links/ |
 
 ---
 
-## CSV / data downloads (on the live site)
+## DNS (required once)
 
-| File | URL | Rows |
-|------|-----|------|
-| **Full owner prospect list** | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.csv | 16,973 |
-| Full list (JSON) | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.json | 16,973 |
-| Wave 1 — Sun Belt dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave1-sunbelt.csv | 9,112 |
-| Wave 2 — Southeast dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave2-southeast.csv | 1,441 |
-| Wave 3 — Midwest dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave3-midwest.csv | 3,089 |
-| Association email templates | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/association-emails.txt | — |
+Point the domain at GitHub Pages:
+
+| Type | Name | Value |
+|------|------|-------|
+| **CNAME** | `www` | `turneratom.github.io` |
+| **A** | `@` (apex) | `185.199.108.153` |
+| **A** | `@` | `185.199.109.153` |
+| **A** | `@` | `185.199.110.153` |
+| **A** | `@` | `185.199.111.153` |
+
+Then in GitHub → [Pages settings](https://github.com/turneratom/VitalAI-PWA/settings/pages):
+1. Custom domain: `www.mhportal.com`
+2. Check **Enforce HTTPS**
+3. Optional: redirect apex `mhportal.com` → `www`
+
+Republish: `bash trailer-parks/scripts/publish-github-pages.sh`
+
+Fallback while DNS propagates: https://turneratom.github.io/VitalAI-PWA/
 
 ---
 
-## In this repo (always available)
+## CSV downloads
 
 | File | Path |
 |------|------|
-| Full CSV | `trailer-parks/data/owner-prospects.csv` |
-| Full JSON | `trailer-parks/data/owner-prospects.json` |
-| Wave CSVs | `trailer-parks/data/campaigns/` |
-| Public copies | `trailer-parks/public/downloads/` |
-
----
-
-## GitHub
-
-| What | URL |
-|------|-----|
-| Repo | https://github.com/turneratom/VitalAI-PWA |
-| App folder | `/trailer-parks` |
-
----
-
-## How to send your private owner list
-
-1. **Best:** drag the file into the Cursor chat  
-2. Upload: https://temporary-quick-marimba-bytc40t.vercel.app/upload-list  
-3. Email: **brad@treadcompanies.com** — subject `Owner list for Trailer Parks`
+| Full prospect CSV | /downloads/owner-prospects.csv |
+| Wave dialers | /downloads/campaigns/ |
