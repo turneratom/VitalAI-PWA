@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Traditional brokers charge 6%. We charge nothing. List your park free and reach qualified buyers today.",
     type: "website",
     siteName: siteConfig.name,
-    url: `${siteConfig.url}/list-your-park`,
+    url: "/list-your-park",
   },
   twitter: {
     card: "summary_large_image",

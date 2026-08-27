@@ -5,7 +5,7 @@ import { parks } from "@/lib/data";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = siteConfig.url;
+  const base = siteConfig.url || "https://trailer-parks.vercel.app";
 
   const staticPages = [
     "",
@@ -16,6 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/analysts",
     "/banks",
     "/resources/owners",
+    "/partner",
+    "/links",
+    "/outreach",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
