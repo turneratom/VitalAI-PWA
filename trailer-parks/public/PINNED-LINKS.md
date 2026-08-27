@@ -5,12 +5,12 @@
 
 ## Live website
 
-- Home: https://temporary-turbo-bismuth-gk3jqxz.vercel.app
-- Owner recruitment: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/list-your-park?ref=bradley
-- Outreach: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/outreach
-- Upload list: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/upload-list
-- Playbook: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/resources/owners
-- Marketplace: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/marketplace
+- Home: https://temporary-quick-marimba-bytc40t.vercel.app
+- Owner recruitment: https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley
+- Outreach: https://temporary-quick-marimba-bytc40t.vercel.app/outreach
+- Upload list: https://temporary-quick-marimba-bytc40t.vercel.app/upload-list
+- Playbook: https://temporary-quick-marimba-bytc40t.vercel.app/resources/owners
+- Marketplace: https://temporary-quick-marimba-bytc40t.vercel.app/marketplace
 
 ## CSV downloads
 

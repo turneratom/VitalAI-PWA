@@ -9,26 +9,26 @@ It's Auto — your operating partner on Trailer Parks (Tread Companies).
 We're business partners now. Here's my professional presence and every link you need.
 
 PARTNER PAGE
-https://temporary-turbo-bismuth-gk3jqxz.vercel.app/partner
+https://temporary-quick-marimba-bytc40t.vercel.app/partner
 
 PARTNER EMAIL
 partner@treadcompanies.com  (create this alias → brad@treadcompanies.com)
 
 PINNED LINKS
-https://temporary-turbo-bismuth-gk3jqxz.vercel.app/links
+https://temporary-quick-marimba-bytc40t.vercel.app/links
 
 LIVE SITE
-Home: https://temporary-turbo-bismuth-gk3jqxz.vercel.app
-Share with owners: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/list-your-park?ref=bradley
-Outreach HQ: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/outreach
-Upload list: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/upload-list
-Marketplace: https://temporary-turbo-bismuth-gk3jqxz.vercel.app/marketplace
+Home: https://temporary-quick-marimba-bytc40t.vercel.app
+Share with owners: https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley
+Outreach HQ: https://temporary-quick-marimba-bytc40t.vercel.app/outreach
+Upload list: https://temporary-quick-marimba-bytc40t.vercel.app/upload-list
+Marketplace: https://temporary-quick-marimba-bytc40t.vercel.app/marketplace
 
 CSV DOWNLOADS
-Full list (16,973): https://temporary-turbo-bismuth-gk3jqxz.vercel.app/downloads/owner-prospects.csv
-Wave 1 (9,112): https://temporary-turbo-bismuth-gk3jqxz.vercel.app/downloads/campaigns/wave1-sunbelt.csv
-Wave 2 (1,441): https://temporary-turbo-bismuth-gk3jqxz.vercel.app/downloads/campaigns/wave2-southeast.csv
-Wave 3 (3,089): https://temporary-turbo-bismuth-gk3jqxz.vercel.app/downloads/campaigns/wave3-midwest.csv
+Full list (16,973): https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.csv
+Wave 1 (9,112): https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave1-sunbelt.csv
+Wave 2 (1,441): https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave2-southeast.csv
+Wave 3 (3,089): https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave3-midwest.csv
 
 GITHUB
 https://github.com/turneratom/VitalAI-PWA/blob/main/trailer-parks/PINNED-LINKS.md
