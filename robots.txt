@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://www.mhportal.com/sitemap.xml
+Sitemap: https://turneratom.github.io/VitalAI-PWA/sitemap.xml
