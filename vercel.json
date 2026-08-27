@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "cd trailer-parks && npm install",
-  "buildCommand": "cd trailer-parks && npm run build",
-  "devCommand": "cd trailer-parks && npm run dev",
+  "installCommand": "cd greatest-humans && npm install",
+  "buildCommand": "cd greatest-humans && npm run build",
+  "devCommand": "cd greatest-humans && npm run dev",
   "framework": "nextjs",
-  "outputDirectory": "trailer-parks/.next"
+  "outputDirectory": "greatest-humans/.next"
 }
