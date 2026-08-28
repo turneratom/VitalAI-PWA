@@ -1,38 +1,55 @@
 # How to make Trailer Parks permanently live
 
-Temporary Vercel URLs expire. Do **not** share those for outreach.
-Use one of the options below for a stable production URL.
+## Current permanent host — GitHub Pages
 
-## Option A — Claim this deploy (fastest, ~2 minutes)
+**URL:** https://turneratom.github.io/VitalAI-PWA/
 
-1. Open the **claim URL** printed after the latest deploy (also in PINNED-LINKS.md).
-2. Sign in / create a free Vercel account with `brad@treadcompanies.com`.
-3. Claim the project. You get a stable URL like `trailer-parks.vercel.app`.
-4. Optional: add a custom domain (`app.treadcompanies.com` or `trailerparks.com`).
+Site files are published on the `gh-pages` branch and also mirrored at the repo root for the existing Pages “main /” source.
+
+### If you see a 404
+
+1. Open https://github.com/turneratom/VitalAI-PWA/settings/pages  
+2. Source: **Deploy from a branch**  
+3. Branch: **gh-pages** (preferred) or **main**  
+4. Folder: **/ (root)** → Save  
+
+Republish anytime from `trailer-parks/`:
+
+```bash
+bash scripts/publish-github-pages.sh
+```
+
+---
+
+## Option A — Claim a Vercel deploy (full Next.js + APIs)
+
+1. Open the **claim URL** in `PINNED-LINKS.md`.
+2. Sign in with `brad@treadcompanies.com`.
+3. Claim the project → stable `*.vercel.app` URL with API routes.
 
 ## Option B — Connect the GitHub repo in Vercel (best long-term)
 
-1. Go to https://vercel.com/new
-2. Import `turneratom/VitalAI-PWA`
-3. Set **Root Directory** to `trailer-parks`
-4. Framework: Next.js (auto-detected)
-5. Deploy → production URL stays fixed on every push to `main`
-6. Set env var `NEXT_PUBLIC_SITE_URL` to that production URL
+1. Go to https://vercel.com/new  
+2. Import `turneratom/VitalAI-PWA`  
+3. Set **Root Directory** to `trailer-parks`  
+4. Deploy → set `NEXT_PUBLIC_SITE_URL` to the production URL  
 
 ## Option C — Custom domain under Tread
 
-Point DNS for e.g. `parks.treadcompanies.com` to the Vercel project (Vercel → Domains).
+Point DNS (e.g. `parks.treadcompanies.com`) at the Vercel project.
+
+---
 
 ## Test run checklist (before any outreach)
 
-- [ ] Open production URL homepage
-- [ ] Marketplace shows Hollins Estates, Yellow Mountain, Meadowbrook
-- [ ] Click each Tread park → financials load
-- [ ] Owner portal (`/owners`) shows your 3 parks
-- [ ] `/list-your-park` form submits
-- [ ] `/links` copy buttons show the **current** host (not an old temporary URL)
-- [ ] Only then start owner outreach
+- [ ] Open production URL homepage  
+- [ ] Marketplace shows Hollins Estates, Yellow Mountain, Meadowbrook  
+- [ ] Click each Tread park → financials load  
+- [ ] Owner portal (`/owners`) shows your 3 parks  
+- [ ] `/list-your-park` form submits (FormSubmit fallback on Pages)  
+- [ ] `/links` copy buttons show the **current** host  
+- [ ] Only then start owner outreach  
 
 ## Why links broke before
 
-Copy/share links were hardcoded to temporary `*.vercel.app` hosts that expire in ~60 minutes. The site now builds share links from `window.location.origin` so they always match the site you’re on.
+Share links were hardcoded to temporary `*.vercel.app` hosts that expire. The site now builds share links from `window.location.origin`.

@@ -4,59 +4,45 @@
 **Contact:** brad@treadcompanies.com  
 **Company:** [Tread Companies](https://www.treadcompanies.com)
 
-> Temporary Vercel URLs expire (~60 min) unless claimed. When a link dies, redeploy and update this file.
-
 ---
 
-## Live website (current deploy)
+## Permanent site (GitHub Pages)
+
+**Production URL:** https://turneratom.github.io/VitalAI-PWA/
 
 | What | URL |
 |------|-----|
-| **Partner page (Auto)** | https://temporary-quick-marimba-bytc40t.vercel.app/partner |
-| **Home** | https://temporary-quick-marimba-bytc40t.vercel.app |
-| **Owner recruitment (share this)** | https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley |
-| **Outreach command center** | https://temporary-quick-marimba-bytc40t.vercel.app/outreach |
-| **Upload your private list** | https://temporary-quick-marimba-bytc40t.vercel.app/upload-list |
-| **Owner outreach playbook** | https://temporary-quick-marimba-bytc40t.vercel.app/resources/owners |
-| **Marketplace** | https://temporary-quick-marimba-bytc40t.vercel.app/marketplace |
+| **Home** | https://turneratom.github.io/VitalAI-PWA/ |
+| **Marketplace (your parks)** | https://turneratom.github.io/VitalAI-PWA/marketplace/ |
+| **Hollins Estates** | https://turneratom.github.io/VitalAI-PWA/parks/tread-hollins/ |
+| **Yellow Mountain** | https://turneratom.github.io/VitalAI-PWA/parks/tread-yellow-mountain/ |
+| **Meadowbrook** | https://turneratom.github.io/VitalAI-PWA/parks/tread-meadowbrook/ |
+| **Owner portal** | https://turneratom.github.io/VitalAI-PWA/owners/ |
+| **List form** | https://turneratom.github.io/VitalAI-PWA/list-your-park/ |
+| **Links page** | https://turneratom.github.io/VitalAI-PWA/links/ |
+
+### One-time switch (if the URL 404s)
+
+GitHub → [Pages settings](https://github.com/turneratom/VitalAI-PWA/settings/pages) → Source: **Deploy from a branch** → Branch **gh-pages** → Folder **/ (root)** → Save.
+
+Site files are already on the `gh-pages` branch.
 
 ---
 
-## CSV / data downloads (on the live site)
+## Optional: Vercel (full API routes)
 
-| File | URL | Rows |
-|------|-----|------|
-| **Full owner prospect list** | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.csv | 16,973 |
-| Full list (JSON) | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.json | 16,973 |
-| Wave 1 — Sun Belt dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave1-sunbelt.csv | 9,112 |
-| Wave 2 — Southeast dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave2-southeast.csv | 1,441 |
-| Wave 3 — Midwest dialer | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/wave3-midwest.csv | 3,089 |
-| Association email templates | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/campaigns/association-emails.txt | — |
+Claim keeps a Vercel project permanently (leads API, uploads):  
+https://vercel.com/claim-deployment?code=4600dc74-69a1-414e-b2d1-01e68623752a
+
+Or follow `GO-LIVE.md` (Root Directory = `trailer-parks`).
 
 ---
 
-## In this repo (always available)
+## CSV downloads
 
 | File | Path |
 |------|------|
-| Full CSV | `trailer-parks/data/owner-prospects.csv` |
-| Full JSON | `trailer-parks/data/owner-prospects.json` |
-| Wave CSVs | `trailer-parks/data/campaigns/` |
-| Public copies | `trailer-parks/public/downloads/` |
+| Full prospect CSV | /downloads/owner-prospects.csv |
+| Wave dialers | /downloads/campaigns/ |
 
----
-
-## GitHub
-
-| What | URL |
-|------|-----|
-| Repo | https://github.com/turneratom/VitalAI-PWA |
-| App folder | `/trailer-parks` |
-
----
-
-## How to send your private owner list
-
-1. **Best:** drag the file into the Cursor chat  
-2. Upload: https://temporary-quick-marimba-bytc40t.vercel.app/upload-list  
-3. Email: **brad@treadcompanies.com** — subject `Owner list for Trailer Parks`
+Repo copies: `trailer-parks/data/owner-prospects.csv`
