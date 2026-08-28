@@ -1,8 +1,8 @@
-# Trailer Parks — Pinned Links (WORKING)
+# Mobile Home Parks — Pinned Links (WORKING)
 
 **Live site:** https://turneratom.github.io/VitalAI-PWA/  
 **Contact:** brad@treadcompanies.com  
-**Company:** [Tread Companies](https://www.treadcompanies.com)
+**Platform:** Mobile Home Parks
 
 Use these links — they work now. (`www.mhportal.com` is not live until DNS is pointed at GitHub Pages.)
 
@@ -14,9 +14,9 @@ Use these links — they work now. (`www.mhportal.com` is not live until DNS is 
 |------|-----|
 | **Home** | https://turneratom.github.io/VitalAI-PWA/ |
 | **Marketplace** | https://turneratom.github.io/VitalAI-PWA/marketplace/ |
-| **Hollins Estates** | https://turneratom.github.io/VitalAI-PWA/parks/tread-hollins/ |
-| **Yellow Mountain** | https://turneratom.github.io/VitalAI-PWA/parks/tread-yellow-mountain/ |
-| **Meadowbrook** | https://turneratom.github.io/VitalAI-PWA/parks/tread-meadowbrook/ |
+| **Hollins Estates** | https://turneratom.github.io/VitalAI-PWA/parks/hollins/ |
+| **Yellow Mountain** | https://turneratom.github.io/VitalAI-PWA/parks/yellow-mountain/ |
+| **Meadowbrook** | https://turneratom.github.io/VitalAI-PWA/parks/meadowbrook/ |
 | **Owner portal** | https://turneratom.github.io/VitalAI-PWA/owners/ |
 | **List your park** | https://turneratom.github.io/VitalAI-PWA/list-your-park/?ref=bradley |
 | **Outreach** | https://turneratom.github.io/VitalAI-PWA/outreach/ |
