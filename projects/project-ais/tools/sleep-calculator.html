@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Calculator — Best Bedtime for Wake Time | VitalAI</title>
+  <meta name="description" content="Sleep calculator based on 90-minute cycles. Find the best bedtime to wake up refreshed at your target time.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/sleep-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Sleep Calculator</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Sleep Cycle Calculator</h2>
+      <p>Enter when you need to wake up. We'll show optimal bedtimes for 3–6 complete 90-minute cycles (+ 15 min to fall asleep).</p>
+      <form id="sleep-form">
+        <div class="form-row">
+          <div><label for="wake">Wake-up time</label><input id="wake" type="time" value="07:00" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate Bedtimes</button>
+      </form>
+      <div id="sleep-result" class="result-box" hidden><ul id="sleep-list"></ul></div>
+    </article>
+    <div class="related-tools"><a href="caffeine-calculator.html">Caffeine</a> <a href="water-intake-calculator.html">Water</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('sleep-form').onsubmit = (e) => {
+      e.preventDefault();
+      const cycles = calcSleepCycles(document.getElementById('wake').value);
+      document.getElementById('sleep-list').innerHTML = cycles.map(c =>
+        `<li><strong>${c.bedTime}</strong> — ${c.cycles} cycles (${c.hours} hrs sleep)</li>`
+      ).join('');
+      document.getElementById('sleep-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

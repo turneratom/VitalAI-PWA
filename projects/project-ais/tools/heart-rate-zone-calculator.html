@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Rate Zone Calculator — Karvonen Method | VitalAI</title>
+  <meta name="description" content="Calculate heart rate training zones 1–5 using the Karvonen method. Enter age and resting heart rate.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/heart-rate-zone-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Heart Rate Zones</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Heart Rate Zone Calculator</h2>
+      <form id="hr-form">
+        <div class="form-row">
+          <div><label for="age">Age</label><input id="age" type="number" value="30" required></div>
+          <div><label for="rhr">Resting HR (bpm)</label><input id="rhr" type="number" value="60" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate Zones</button>
+      </form>
+      <div id="hr-result" class="result-box" hidden>
+        <p>Max HR: <strong id="maxhr"></strong> bpm</p>
+        <p>Zone 1 (warm-up): <strong id="z1"></strong></p>
+        <p>Zone 2 (fat burn): <strong id="z2"></strong></p>
+        <p>Zone 3 (aerobic): <strong id="z3"></strong></p>
+        <p>Zone 4 (threshold): <strong id="z4"></strong></p>
+        <p>Zone 5 (max): <strong id="z5"></strong></p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="one-rep-max-calculator.html">1RM</a> <a href="steps-to-calories-calculator.html">Steps Calories</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('hr-form').onsubmit = (e) => {
+      e.preventDefault();
+      const z = calcHeartRateZones(+document.getElementById('age').value, +document.getElementById('rhr').value);
+      document.getElementById('maxhr').textContent = z.maxHr;
+      document.getElementById('z1').textContent = `${z.z1[0]}–${z.z1[1]} bpm`;
+      document.getElementById('z2').textContent = `${z.z2[0]}–${z.z2[1]} bpm`;
+      document.getElementById('z3').textContent = `${z.z3[0]}–${z.z3[1]} bpm`;
+      document.getElementById('z4').textContent = `${z.z4[0]}–${z.z4[1]} bpm`;
+      document.getElementById('z5').textContent = `${z.z5[0]}–${z.z5[1]} bpm`;
+      document.getElementById('hr-result').hidden = false;
+    };
+  </script>
+</body>
+</html>
