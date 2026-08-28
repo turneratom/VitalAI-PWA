@@ -1,3 +1,7 @@
+# Project AIS — VitalAI (first Automated Income Stream)
+
+This folder is **Project AIS**, not Mobile Home Parks. One Stripe account for all AIS revenue.
+
 # VitalAI PWA Proto
 MVP: Camera snap + chat → agent stub.
 Backend: OpenClaw image/chat (gateway fix first).

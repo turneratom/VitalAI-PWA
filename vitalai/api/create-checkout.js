@@ -1,5 +1,7 @@
 import Stripe from 'stripe';
 
+// Project AIS: all income streams use this single Stripe account.
+
 const PRICE_MAP = {
   pro: process.env.STRIPE_PRICE_PRO,
   elite: process.env.STRIPE_PRICE_ELITE
