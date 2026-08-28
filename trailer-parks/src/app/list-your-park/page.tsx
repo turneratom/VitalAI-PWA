@@ -13,7 +13,7 @@ import {
 import { platformStats } from "@/lib/data";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 import { LeadForm } from "@/components/LeadForm";
-import { TreadCredibilityBar } from "@/components/TreadBranding";
+import { CredibilityBar } from "@/components/CredibilityBar";
 import { siteConfig } from "@/lib/site";
 
 const benefits = [
@@ -75,20 +75,10 @@ export default function ListYourParkPage() {
             <span className="text-accent">Pay Nothing. Ever.</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
-            List on Trailer Parks — built by {siteConfig.company.name}, operators of{" "}
+            List on Mobile Home Parks — operators of{" "}
             {siteConfig.credentials.spacesOperated} manufactured housing spaces. Reach{" "}
             {formatNumber(2400)}+ qualified buyers with zero listing fees and zero success fees.
           </p>
-          <div className="mt-6">
-            <a
-              href={siteConfig.company.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-accent hover:text-accent-light font-medium"
-            >
-              {siteConfig.company.website.replace("https://www.", "")} →
-            </a>
-          </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/60">
             <span className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-accent" />
@@ -113,13 +103,13 @@ export default function ListYourParkPage() {
         </div>
       </section>
 
-      <TreadCredibilityBar />
+      <CredibilityBar />
 
       {/* Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-navy text-center mb-10">
-            Why Owners Choose Trailer Parks
+            Why Owners Choose Mobile Home Parks
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b) => (
@@ -164,7 +154,7 @@ export default function ListYourParkPage() {
                     <span className="font-semibold text-red-600">-$240,000</span>
                   </div>
                   <div className="flex justify-between text-muted">
-                    <span>Trailer Parks</span>
+                    <span>Mobile Home Parks</span>
                     <span className="font-bold text-primary">$0</span>
                   </div>
                 </div>
@@ -183,7 +173,7 @@ export default function ListYourParkPage() {
       <section className="py-16 bg-navy text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl font-bold mb-8">
-            Join {platformStats.dealsClosed}+ Deals Closed on Trailer Parks
+            Join {platformStats.dealsClosed}+ Deals Closed on Mobile Home Parks
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>

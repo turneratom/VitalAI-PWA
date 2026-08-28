@@ -1,8 +1,8 @@
-# Trailer Parks
+# Mobile Home Parks
 
 The leader in mobile home park transactions. A fee-free, one-stop marketplace connecting owners, buyers, analysts, and lenders.
 
-**Built by [Tread Companies](https://www.treadcompanies.com)** · Contact: brad@treadcompanies.com
+**Contact:** brad@treadcompanies.com
 
 ## Pinned links (bookmark these)
 
@@ -10,12 +10,12 @@ See **[PINNED-LINKS.md](./PINNED-LINKS.md)** for the full list.
 
 | What | Link |
 |------|------|
-| **Live site** | https://temporary-quick-marimba-bytc40t.vercel.app |
-| **Pinned links page** | https://temporary-quick-marimba-bytc40t.vercel.app/links |
-| **Share with owners** | https://temporary-quick-marimba-bytc40t.vercel.app/list-your-park?ref=bradley |
-| **Outreach HQ** | https://temporary-quick-marimba-bytc40t.vercel.app/outreach |
-| **Full CSV (16,973 parks)** | https://temporary-quick-marimba-bytc40t.vercel.app/downloads/owner-prospects.csv |
-| **Upload your list** | https://temporary-quick-marimba-bytc40t.vercel.app/upload-list |
+| **Live site** | https://turneratom.github.io/VitalAI-PWA/ |
+| **Pinned links page** | https://turneratom.github.io/VitalAI-PWA/links/ |
+| **Share with owners** | https://turneratom.github.io/VitalAI-PWA/list-your-park/?ref=bradley |
+| **Outreach HQ** | https://turneratom.github.io/VitalAI-PWA/outreach/ |
+| **Full CSV (16,973 parks)** | https://turneratom.github.io/VitalAI-PWA/downloads/owner-prospects.csv |
+| **Upload your list** | https://turneratom.github.io/VitalAI-PWA/upload-list/ |
 
 Repo copies of the CSV (never expire with the deploy URL): `data/owner-prospects.csv` and `public/downloads/owner-prospects.csv`.
 

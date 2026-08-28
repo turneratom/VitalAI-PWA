@@ -81,7 +81,7 @@ export type LoanOffer = {
 
 export const parks: ParkListing[] = [
   {
-    id: "tread-hollins",
+    id: "hollins",
     name: "Hollins Estates",
     location: "Blacksburg, VA",
     state: "VA",
@@ -95,9 +95,9 @@ export const parks: ParkListing[] = [
     acres: 18.5,
     amenities: ["On-Site Management", "Laundry", "Paved Roads", "Family Community"],
     description:
-      "Tread Companies portfolio community in Blacksburg, Virginia. Listed as a live test run on Trailer Parks — quality homes, active management, and a proven operator behind the asset.",
-    ownerId: "owner-tread",
-    ownerName: "Tread Companies",
+      "Portfolio community in Blacksburg, Virginia. Listed as a live test run on Mobile Home Parks — quality homes, active management, and a proven operator behind the asset.",
+    ownerId: "owner-demo",
+    ownerName: "Demo Operator",
     image: "pine",
     financials: {
       grossPotentialRent: 612000,
@@ -147,7 +147,7 @@ export const parks: ParkListing[] = [
     },
   },
   {
-    id: "tread-yellow-mountain",
+    id: "yellow-mountain",
     name: "Yellow Mountain",
     location: "Roanoke, VA",
     state: "VA",
@@ -161,9 +161,9 @@ export const parks: ParkListing[] = [
     acres: 14.2,
     amenities: ["Mountain Views", "On-Site Manager", "Storage", "Pet Friendly"],
     description:
-      "Tread Companies community in Roanoke, Virginia. Live test listing on Trailer Parks to validate the full owner → financials → underwriting workflow.",
-    ownerId: "owner-tread",
-    ownerName: "Tread Companies",
+      "Community in Roanoke, Virginia. Live test listing on Mobile Home Parks to validate the full owner → financials → underwriting workflow.",
+    ownerId: "owner-demo",
+    ownerName: "Demo Operator",
     image: "oak",
     financials: {
       grossPotentialRent: 450300,
@@ -213,7 +213,7 @@ export const parks: ParkListing[] = [
     },
   },
   {
-    id: "tread-meadowbrook",
+    id: "meadowbrook",
     name: "Meadowbrook",
     location: "Blacksburg, VA",
     state: "VA",
@@ -227,9 +227,9 @@ export const parks: ParkListing[] = [
     acres: 11.0,
     amenities: ["Quiet Community", "Laundry", "Playground", "City Utilities"],
     description:
-      "Tread Companies community in Blacksburg, Virginia. Part of the live test run — owners list for free, buyers see financials, analysts underwrite, lenders review capital.",
-    ownerId: "owner-tread",
-    ownerName: "Tread Companies",
+      "Community in Blacksburg, Virginia. Part of the live test run — owners list for free, buyers see financials, analysts underwrite, lenders review capital.",
+    ownerId: "owner-demo",
+    ownerName: "Demo Operator",
     image: "meadow",
     financials: {
       grossPotentialRent: 383760,

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "List Your Mobile Home Park Free — No Fees Ever | Trailer Parks",
+  title: "List Your Mobile Home Park Free — No Fees Ever | Mobile Home Parks",
   description:
-    "Sell your mobile home park with zero listing fees and zero success fees. Reach 2,400+ qualified buyers, analysts, and lenders on Trailer Parks.",
+    "Sell your mobile home park with zero listing fees and zero success fees. Reach 2,400+ qualified buyers, analysts, and lenders on Mobile Home Parks.",
   openGraph: {
     title: "List Your Mobile Home Park — $0 Fees",
     description:

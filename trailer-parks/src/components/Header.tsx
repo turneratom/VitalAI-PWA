@@ -31,7 +31,7 @@ export function Header() {
             </div>
             <div>
               <span className="font-display text-xl font-bold text-navy tracking-tight">
-                Trailer Parks
+                Mobile Home Parks
               </span>
               <span className="hidden sm:block text-[10px] text-muted uppercase tracking-widest -mt-0.5">
                 Mobile Home Park Exchange

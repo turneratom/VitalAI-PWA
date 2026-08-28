@@ -141,7 +141,7 @@ export default function OutreachPage() {
   const [state, setState] = useState("ALL");
   const [wave, setWave] = useState("wave1");
   const [contacted, setContacted] = useState<Record<string, boolean>>({});
-  const { recruitmentUrl, ready } = useSiteOrigin();
+  const { recruitmentUrl, ready, asset } = useSiteOrigin();
   const link = ready ? recruitmentUrl("bradley-outreach") : "/list-your-park?ref=bradley-outreach";
   const states = useMemo(() => getUniqueStates(), []);
 
@@ -186,24 +186,24 @@ export default function OutreachPage() {
           <p className="mt-3 text-white/70 max-w-3xl">
             {prospectsMeta.totalAvailable.toLocaleString()} open mobile home parks with public phone
             numbers from federal HIFLD open data. {prospectsMeta.count.toLocaleString()} loaded in
-            this command center for Wave outreach. Built by {siteConfig.company.name}.
+            this command center for Wave outreach.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="/downloads/owner-prospects.csv"
+              href={asset("/downloads/owner-prospects.csv")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-navy font-semibold rounded-lg text-sm"
             >
               <Download className="w-4 h-4" />
               Download full list ({prospectsMeta.totalAvailable.toLocaleString()} parks CSV)
             </a>
             <a
-              href="/downloads/campaigns/wave1-sunbelt.csv"
+              href={asset("/downloads/campaigns/wave1-sunbelt.csv")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 font-semibold rounded-lg text-sm"
             >
               Wave 1 dialer CSV (9,112)
             </a>
             <a
-              href="/downloads/campaigns/association-emails.txt"
+              href={asset("/downloads/campaigns/association-emails.txt")}
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 font-semibold rounded-lg text-sm"
             >
               Association emails
@@ -261,15 +261,15 @@ export default function OutreachPage() {
             {[
               {
                 title: "Facebook groups",
-                body: "Search: Mobile Home Park Owners, MHP Investing, Trailer Park Investors, Manufactured Housing Association groups. Paste the Wave post below.",
+                body: "Search: Mobile Home Park Owners, MHP Investing, Mobile Home Park Investors, Manufactured Housing Association groups. Paste the Wave post below.",
               },
               {
                 title: "LinkedIn",
-                body: `Post from your ${siteConfig.company.name} profile + company page. Tag manufactured housing keywords.`,
+                body: "Post from your LinkedIn profile. Tag manufactured housing keywords and share the owner recruitment link.",
               },
               {
                 title: "State associations",
-                body: "Email Florida MH Association, Texas MH Association, WMA, MHI state affiliates — introduce Trailer Parks as free owner tool.",
+                body: "Email Florida MH Association, Texas MH Association, WMA, MHI state affiliates — introduce Mobile Home Parks as free owner tool.",
               },
               {
                 title: "County assessor outreach",
@@ -286,12 +286,12 @@ export default function OutreachPage() {
             <div className="flex items-center justify-between gap-2 mb-2">
               <p className="text-sm font-semibold">Ready-to-post announcement</p>
               <CopyBtn
-                text={`Park owners: Trailer Parks is a FREE marketplace built by Tread Companies (4,000+ MH spaces operated, 24 communities sold).\n\n$0 listing fee. $0 success fee. Brokers often take 6%.\n\nList your park in 2 minutes:\n${link}\n\nBuyers, analysts, and lenders — one stop shop.`}
+                text={`Park owners: Mobile Home Parks is a FREE marketplace built for park owners (4,000+ MH spaces operated, 24 communities sold).\n\n$0 listing fee. $0 success fee. Brokers often take 6%.\n\nList your park in 2 minutes:\n${link}\n\nBuyers, analysts, and lenders — one stop shop.`}
                 label="Copy post"
               />
             </div>
             <pre className="text-xs text-white/80 whitespace-pre-wrap font-sans leading-relaxed">
-              {`Park owners: Trailer Parks is a FREE marketplace built by Tread Companies (4,000+ MH spaces operated, 24 communities sold).
+              {`Park owners: Mobile Home Parks is a FREE marketplace built for park owners (4,000+ MH spaces operated, 24 communities sold).
 
 $0 listing fee. $0 success fee. Brokers often take 6%.
 

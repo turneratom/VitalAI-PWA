@@ -1,14 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getOwnerRecruitmentPath, absoluteUrl } from "@/lib/site";
+import {
+  getOwnerRecruitmentPath,
+  absoluteUrl,
+  publicOrigin,
+  withBasePath,
+} from "@/lib/site";
 
-/** Same-origin absolute URLs that never point at an expired temporary deploy. */
+/** Same-origin absolute URLs that include GitHub Pages basePath when needed. */
 export function useSiteOrigin() {
   const [origin, setOrigin] = useState("");
 
   useEffect(() => {
-    setOrigin(window.location.origin);
+    setOrigin(publicOrigin(window.location.origin));
   }, []);
 
   function recruitmentUrl(ref?: string) {
@@ -19,5 +24,9 @@ export function useSiteOrigin() {
     return absoluteUrl(path, origin || undefined);
   }
 
-  return { origin, recruitmentUrl, url, ready: Boolean(origin) };
+  function asset(path: string) {
+    return withBasePath(path);
+  }
+
+  return { origin, recruitmentUrl, url, asset, ready: Boolean(origin) };
 }

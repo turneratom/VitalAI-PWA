@@ -283,7 +283,7 @@ export default async function ParkDetailPage({ params }: PageProps) {
             <div className="bg-accent/10 rounded-xl p-6 border border-accent/30">
               <p className="text-sm font-semibold text-navy mb-1">No fees on this deal</p>
               <p className="text-xs text-muted mb-4">
-                Trailer Parks charges zero listing, buyer, or success fees.
+                Mobile Home Parks charges zero listing, buyer, or success fees.
               </p>
               <Link
                 href="/buyers"

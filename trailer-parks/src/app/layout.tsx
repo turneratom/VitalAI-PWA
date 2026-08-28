@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url || "https://trailer-parks.vercel.app"),
+  metadataBase: new URL(siteConfig.url || "https://turneratom.github.io/VitalAI-PWA"),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "mobile home parks",
-    "trailer parks",
+    "mobile home park marketplace",
     "MHP investing",
     "park underwriting",
     "manufactured housing",

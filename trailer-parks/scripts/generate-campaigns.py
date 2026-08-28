@@ -5,12 +5,14 @@ from __future__ import annotations
 
 import csv
 import json
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "owner-prospects.json"
 OUT = ROOT / "data" / "campaigns"
-LINK = "https://temporary-swift-birch-ok4jypg.vercel.app/list-your-park?ref=bradley-outreach"
+PUBLIC = ROOT / "public" / "downloads" / "campaigns"
+LINK = "https://turneratom.github.io/VitalAI-PWA/list-your-park/?ref=bradley-outreach"
 
 ASSOCIATIONS = [
     ("Florida Manufactured Housing Association", "info@fmha.org", "FL"),
@@ -23,6 +25,7 @@ ASSOCIATIONS = [
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    PUBLIC.mkdir(parents=True, exist_ok=True)
     payload = json.loads(DATA.read_text())
     parks = payload["parks"]
 
@@ -63,18 +66,19 @@ def main() -> None:
                         "zip": p["zip"],
                         "county": p["county"],
                         "call_script": (
-                            f"Hi, Bradley with Tread Companies / Trailer Parks calling about "
+                            f"Hi, Bradley with Mobile Home Parks calling about "
                             f"{p['name']} in {p['city']}. Free marketplace for park owners — "
                             f"$0 listing fee, $0 success fee. Brokers take ~6%. We've operated "
                             f"4,000+ spaces. Can I text the link?"
                         ),
                         "sms_script": (
-                            f"Bradley @ Tread Companies / Trailer Parks re {p['name']} ({p['city']}). "
+                            f"Bradley @ Mobile Home Parks re {p['name']} ({p['city']}). "
                             f"Free owner marketplace — $0 fees. List in 2 min: {LINK}"
                         ),
                         "list_link": LINK,
                     }
                 )
+        shutil.copy2(path, PUBLIC / path.name)
         print(f"Wrote {path.name}: {len(rows)} parks")
 
     # Association outreach letters
@@ -86,15 +90,16 @@ def main() -> None:
             f.write("SUBJECT: Free listing platform for your member park owners\n\n")
             f.write(
                 f"Hello {name} team,\n\n"
-                "I'm Bradley with Tread Companies (4,000+ manufactured housing spaces operated; "
-                "24 communities sold). We built Trailer Parks — a fee-free marketplace where "
+                "I'm Bradley with Mobile Home Parks (4,000+ manufactured housing spaces operated; "
+                "24 communities sold). We built a fee-free marketplace where "
                 "mobile home park owners can list with $0 listing fees and $0 success fees.\n\n"
                 f"Member owners can list here: {LINK}\n\n"
                 "We'd welcome sharing this as a no-cost resource for your members. Happy to "
                 "provide a short blurb, webinar, or one-pager.\n\n"
-                "Best,\nBradley\nbrad@treadcompanies.com\nhttps://www.treadcompanies.com\n"
+                "Best,\nBradley\nbrad@treadcompanies.com\n"
             )
             f.write("\n" + ("-" * 60) + "\n\n")
+    shutil.copy2(assoc_path, PUBLIC / assoc_path.name)
     print(f"Wrote {assoc_path.name}")
 
     summary = {

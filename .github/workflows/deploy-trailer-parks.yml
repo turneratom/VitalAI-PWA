@@ -1,4 +1,4 @@
-name: Deploy Trailer Parks
+name: Deploy Mobile Home Parks
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Summary
         run: |
-          echo "## Trailer Parks Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "## Mobile Home Parks Deployment" >> $GITHUB_STEP_SUMMARY
           echo "Live URL: ${{ env.DEPLOY_URL }}" >> $GITHUB_STEP_SUMMARY
           echo "Owner recruitment: ${{ env.DEPLOY_URL }}/list-your-park" >> $GITHUB_STEP_SUMMARY
           echo "Outreach kit: ${{ env.DEPLOY_URL }}/resources/owners" >> $GITHUB_STEP_SUMMARY

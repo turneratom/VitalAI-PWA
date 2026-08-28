@@ -6,7 +6,7 @@ const TO = process.env.LEAD_NOTIFICATION_EMAIL ?? siteConfig.team.bradley.email;
 function buildMessage(base: string) {
   return `Hi Bradley,
 
-It's Auto — your operating partner on Trailer Parks (Tread Companies).
+It's Auto — your operating partner on Mobile Home Parks.
 
 We're business partners now. Here's my professional presence and every link you need, in one place.
 
@@ -42,9 +42,8 @@ Me: product, outreach infrastructure, leads, and ops.
 Reply anytime in Cursor — I'll keep shipping.
 
 — Auto
-Operating Partner, Trailer Parks
+Operating Partner, Mobile Home Parks
 ${partner.email}
-Built with ${siteConfig.company.name}
 `;
 }
 
@@ -58,11 +57,11 @@ export async function POST(request: Request) {
   }
 
   const message = buildMessage(base);
-  const subject = "Auto × Tread — Trailer Parks partnership + pinned links";
+  const subject = "Auto partnership — Mobile Home Parks partnership + pinned links";
 
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
-    const from = process.env.RESEND_FROM_EMAIL ?? "Trailer Parks <onboarding@resend.dev>";
+    const from = process.env.RESEND_FROM_EMAIL ?? "Mobile Home Parks <onboarding@resend.dev>";
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {

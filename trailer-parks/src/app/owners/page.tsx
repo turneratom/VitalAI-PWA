@@ -17,7 +17,7 @@ import { StatCard } from "@/components/StatCard";
 import { getParksByOwner } from "@/lib/data";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 
-const ownerParks = getParksByOwner("owner-tread");
+const ownerParks = getParksByOwner("owner-demo");
 
 export default function OwnersPage() {
   const [showForm, setShowForm] = useState(false);

@@ -4,7 +4,7 @@ const TO = process.env.LEAD_NOTIFICATION_EMAIL ?? siteConfig.team.bradley.email;
 
 const PINNED_MESSAGE = `Hi Bradley,
 
-Here are your pinned Trailer Parks website links and CSV downloads.
+Here are your pinned Mobile Home Parks website links and CSV downloads.
 
 === BOOKMARK THIS ===
 Pinned links page: ${siteConfig.url}/links
@@ -30,7 +30,7 @@ Repo CSV path: trailer-parks/data/owner-prospects.csv
 
 Note: Temporary Vercel URLs can expire. Bookmark /links and the GitHub PINNED-LINKS.md file.
 
-— Trailer Parks / Tread Companies
+— Mobile Home Parks
 brad@treadcompanies.com
 `;
 
@@ -48,9 +48,9 @@ export async function POST(request: Request) {
   const message = PINNED_MESSAGE.replaceAll(siteConfig.url, base);
 
   const form = new FormData();
-  form.append("name", "Trailer Parks Agent");
-  form.append("email", "noreply@treadcompanies.com");
-  form.append("_subject", "Trailer Parks — pinned website links & CSV downloads");
+  form.append("name", "Mobile Home Parks Agent");
+  form.append("email", siteConfig.team.bradley.email);
+  form.append("_subject", "Mobile Home Parks — pinned website links & CSV downloads");
   form.append("_template", "box");
   form.append("_captcha", "false");
   form.append("_honey", "");
@@ -67,7 +67,7 @@ export async function POST(request: Request) {
       headers: {
         Accept: "application/json",
         "User-Agent":
-          "Mozilla/5.0 (compatible; TrailerParksBot/1.0; +https://treadcompanies.com)",
+          "Mozilla/5.0 (compatible; MobileHomeParksBot/1.0; +https://turneratom.github.io/VitalAI-PWA)",
       },
       redirect: "follow",
     });

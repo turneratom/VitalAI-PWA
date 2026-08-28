@@ -4,14 +4,23 @@ import Link from "next/link";
 import { ExternalLink, Download, Pin, Copy, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
+import { useSiteOrigin } from "@/hooks/useSiteOrigin";
 
 const siteLinks = [
   { label: "Home", href: "/" },
-  { label: "Owner recruitment (share)", href: "/list-your-park?ref=bradley" },
-  { label: "Outreach command center", href: "/outreach" },
-  { label: "Upload private list", href: "/upload-list" },
-  { label: "Outreach playbook", href: "/resources/owners" },
-  { label: "Marketplace", href: "/marketplace" },
+  { label: "Marketplace", href: "/marketplace/" },
+  { label: "Hollins Estates ", href: "/parks/hollins/" },
+  { label: "Yellow Mountain ", href: "/parks/yellow-mountain/" },
+  { label: "Meadowbrook ", href: "/parks/meadowbrook/" },
+  { label: "Owner portal", href: "/owners/" },
+  { label: "List your park (share)", href: "/list-your-park/?ref=bradley" },
+  { label: "Outreach command center", href: "/outreach/" },
+  { label: "Upload private list", href: "/upload-list/" },
+  { label: "Outreach playbook", href: "/resources/owners/" },
+  { label: "Buyers", href: "/buyers/" },
+  { label: "Analysts / underwriting", href: "/analysts/" },
+  { label: "Lenders", href: "/banks/" },
+  { label: "Partner", href: "/partner/" },
 ];
 
 const downloads = [
@@ -42,7 +51,8 @@ function CopyLink({ url }: { url: string }) {
 }
 
 export default function LinksPage() {
-  const origin = typeof window !== "undefined" ? window.location.origin : siteConfig.url;
+  const { url, asset, ready, origin } = useSiteOrigin();
+  const displayOrigin = ready ? origin : siteConfig.url;
 
   return (
     <div className="bg-background min-h-screen">
@@ -54,7 +64,9 @@ export default function LinksPage() {
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold">Key links & downloads</h1>
           <p className="mt-3 text-white/70">
-            Everything you need in one place. Contact: {siteConfig.team.bradley.email}
+            Live site: <span className="text-white font-medium">{displayOrigin}</span>
+            <br />
+            Contact: {siteConfig.team.bradley.email}
           </p>
         </div>
       </div>
@@ -64,13 +76,17 @@ export default function LinksPage() {
           <h2 className="font-display text-xl font-bold text-navy mb-4">Website pages</h2>
           <ul className="space-y-3">
             {siteLinks.map((item) => {
-              const full = `${origin}${item.href}`;
+              const full = url(item.href);
+              const linkHref = item.href.replace(/\/$/, "") || "/";
               return (
                 <li
                   key={item.href}
                   className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-2 border-b border-border last:border-0"
                 >
-                  <Link href={item.href} className="font-medium text-navy hover:text-primary inline-flex items-center gap-1">
+                  <Link
+                    href={linkHref}
+                    className="font-medium text-navy hover:text-primary inline-flex items-center gap-1"
+                  >
                     {item.label}
                     <ExternalLink className="w-3.5 h-3.5" />
                   </Link>
@@ -91,13 +107,16 @@ export default function LinksPage() {
           </h2>
           <ul className="space-y-3">
             {downloads.map((item) => {
-              const full = `${origin}${item.href}`;
+              const full = url(item.href);
               return (
                 <li
                   key={item.href}
                   className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-2 border-b border-border last:border-0"
                 >
-                  <a href={item.href} className="font-medium text-navy hover:text-primary inline-flex items-center gap-1">
+                  <a
+                    href={asset(item.href)}
+                    className="font-medium text-navy hover:text-primary inline-flex items-center gap-1"
+                  >
                     {item.label}
                     <Download className="w-3.5 h-3.5" />
                   </a>
@@ -113,11 +132,14 @@ export default function LinksPage() {
           <p className="text-muted">
             <code className="text-xs bg-white px-1 py-0.5 rounded">trailer-parks/PINNED-LINKS.md</code>
             {" · "}
-            <a href="/PINNED-LINKS.md" className="text-primary font-medium">
-              /PINNED-LINKS.md
+            <a href={asset("/PINNED-LINKS.md")} className="text-primary font-medium">
+              PINNED-LINKS.md
             </a>
             {" · "}
             GitHub: turneratom/VitalAI-PWA
+          </p>
+          <p className="text-muted mt-2 text-xs">
+            Custom domain later: www.mhportal.com (DNS must point to GitHub Pages first).
           </p>
         </section>
       </div>

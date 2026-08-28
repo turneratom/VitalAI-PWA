@@ -62,7 +62,7 @@ export function ParkCard({ park, showFinancials = true }: ParkCardProps) {
             </span>
           )}
           {park.askingPrice === 0 && (
-            <span className="text-sm font-semibold text-primary">Tread test</span>
+            <span className="text-sm font-semibold text-primary">Demo listing</span>
           )}
         </div>
 

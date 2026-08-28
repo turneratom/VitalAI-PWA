@@ -78,7 +78,7 @@ export default function UploadListPage() {
           <p className="mt-3 text-white/70">
             Upload CSV/Excel or paste contacts. A copy goes to{" "}
             <strong className="text-white">{siteConfig.team.bradley.email}</strong> and into the
-            Trailer Parks intake queue for merging with the 16,973 public parks.
+            Mobile Home Parks intake queue for merging with the 16,973 public parks.
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function UploadListPage() {
               <a className="text-primary font-medium" href={`mailto:${siteConfig.team.bradley.email}?subject=Owner%20list%20for%20Trailer%20Parks`}>
                 {siteConfig.team.bradley.email}
               </a>{" "}
-              subject: &quot;Owner list for Trailer Parks&quot;
+              subject: &quot;Owner list for Mobile Home Parks&quot;
             </p>
           </div>
         </div>
@@ -220,7 +220,7 @@ export default function UploadListPage() {
               ) : (
                 <>
                   <Upload className="w-4 h-4" />
-                  Send list to Trailer Parks
+                  Send list to Mobile Home Parks
                 </>
               )}
             </button>
@@ -231,10 +231,9 @@ export default function UploadListPage() {
           <p className="font-semibold text-navy mb-2">About creating a new email address</p>
           <p className="leading-relaxed">
             I can&apos;t spin up a real inbox from here without email hosting. Fastest setup on your
-            side: in Google Workspace / Microsoft 365, add an alias{" "}
-            <code className="text-xs bg-background px-1 py-0.5 rounded">list@treadcompanies.com</code>{" "}
-            that forwards to {siteConfig.team.bradley.email}. Until then, use this upload page, Cursor
-            chat, or email {siteConfig.team.bradley.email} directly.
+            side: in Google Workspace / Microsoft 365, add a list alias that forwards to{" "}
+            {siteConfig.team.bradley.email}. Until then, use this upload page, Cursor chat, or email{" "}
+            {siteConfig.team.bradley.email} directly.
           </p>
         </div>
       </div>

@@ -27,7 +27,7 @@ export async function sendLeadEmail(lead: OwnerLead): Promise<boolean> {
         notes: lead.notes ?? "None",
         source: lead.source ?? "direct",
         referrer: lead.referrer ?? "None",
-        platform: "Trailer Parks by Tread Companies",
+        platform: "Mobile Home Parks by ",
       }),
     });
 
@@ -49,7 +49,7 @@ export async function sendLeadViaResend(lead: OwnerLead): Promise<boolean> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Trailer Parks <onboarding@resend.dev>",
+        from: "Mobile Home Parks <onboarding@resend.dev>",
         to: [NOTIFY_EMAIL],
         subject: `New Owner Lead: ${lead.parkName} — ${lead.location}`,
         text: formatLeadForIssue(lead),
