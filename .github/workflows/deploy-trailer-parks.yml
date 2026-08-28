@@ -5,6 +5,12 @@ on:
     branches: [main]
     paths:
       - "trailer-parks/**"
+      - "src/**"
+      - "public/**"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.ts"
+      - "vercel.json"
       - ".github/workflows/deploy-trailer-parks.yml"
   workflow_dispatch:
 
@@ -19,17 +25,14 @@ jobs:
           node-version: "22"
 
       - name: Install and build
-        working-directory: trailer-parks
         run: |
           npm ci
           npm run build
 
       - name: Deploy to Vercel
-        working-directory: trailer-parks
         run: npx vercel deploy --yes --temporary --prod 2>&1 | tee deploy.log
 
       - name: Extract deployment URL
-        working-directory: trailer-parks
         run: |
           URL=$(grep -oE 'https://temporary-[a-z0-9-]+\.vercel\.app' deploy.log | head -1)
           echo "DEPLOY_URL=$URL" >> $GITHUB_ENV
