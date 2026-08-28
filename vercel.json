@@ -1,7 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "installCommand": "npm install --prefix trailer-parks",
-  "buildCommand": "npm run build --prefix trailer-parks",
-  "outputDirectory": "trailer-parks/.next"
+  "rootDirectory": "trailer-parks",
+  "framework": "nextjs"
 }

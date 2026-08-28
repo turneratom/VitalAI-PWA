@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/turner-capital", "destination": "/turner-capital/index.html" },
+    { "source": "/turner-capital/", "destination": "/turner-capital/index.html" }
+  ]
+}

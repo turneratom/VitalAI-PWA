@@ -1,0 +1,12 @@
+{
+  "name": "vital-ai-pwa",
+  "private": true,
+  "workspaces": [
+    "trailer-parks"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w trailer-parks",
+    "build": "npm run build -w trailer-parks",
+    "lint": "npm run lint -w trailer-parks"
+  }
+}
