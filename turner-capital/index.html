@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turner Capital — Crypto & Equities Trading Floor</title>
+  <meta name="description" content="Turner Capital: twelve agents, two markets, one floor. Crypto and equities. Simulation desk — watch the agents work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #070b10;
+      --floor: #0d141c;
+      --desk: #121b26;
+      --panel: #162231;
+      --line: #243447;
+      --muted: #7a8fa3;
+      --text: #e8eef4;
+      --gold: #d4a84b;
+      --gold-dim: #8a6b2e;
+      --gain: #3ecf8e;
+      --gain-dim: #1a5c3f;
+      --loss: #e85d5d;
+      --loss-dim: #5c1f1f;
+      --crypto: #3aa0c8;
+      --equity: #c87a3a;
+      --ops: #9b8cff;
+      --glow: rgba(212, 168, 75, 0.35);
+      --font-display: "Instrument Serif", Georgia, serif;
+      --font-ui: "Syne", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: var(--font-ui);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(58, 160, 200, 0.12), transparent 55%),
+        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(200, 122, 58, 0.1), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(212, 168, 75, 0.08), transparent 55%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(255, 255, 255, 0.012) 2px,
+          rgba(255, 255, 255, 0.012) 3px
+        );
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+
+    /* ——— Top bar ——— */
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem 1.5rem;
+      padding: 1rem 0 0.75rem;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(7, 11, 16, 0.82);
+      z-index: 50;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+    }
+    .brand-mark .name {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .brand-mark .tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .book-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+    .book-strip .k { color: var(--muted); margin-right: 0.35rem; }
+    .book-strip .v { font-weight: 600; }
+    .book-strip .up { color: var(--gain); }
+    .book-strip .dn { color: var(--loss); }
+
+    .controls {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    button.ctl {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    }
+    button.ctl:hover { border-color: var(--gold-dim); }
+    button.ctl.primary {
+      background: linear-gradient(135deg, #b8892e, #d4a84b);
+      color: #0a0e14;
+      border-color: transparent;
+    }
+    button.ctl.primary:hover { transform: translateY(-1px); }
+    button.ctl:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+    /* ——— Hero ——— */
+    .hero {
+      padding: 2.75rem 0 2rem;
+      display: grid;
+      gap: 1.25rem;
+      animation: fadeRise 0.9s ease both;
+    }
+    @keyframes fadeRise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero .lede {
+      max-width: 38rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .hero .lede strong { color: var(--text); font-weight: 600; }
+
+    .math-note {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      border-left: 2px solid var(--gold-dim);
+      padding-left: 0.85rem;
+      max-width: 36rem;
+      line-height: 1.55;
+    }
+
+    /* ——— Floor grid ——— */
+    .floors {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    @media (min-width: 900px) {
+      .floors { grid-template-columns: 1fr 1fr 0.85fr; }
+    }
+
+    .floor {
+      background: linear-gradient(165deg, var(--floor) 0%, #0a121a 100%);
+      border: 1px solid var(--line);
+      min-height: 320px;
+      position: relative;
+      overflow: hidden;
+      animation: floorIn 0.7s ease both;
+    }
+    .floor:nth-child(1) { animation-delay: 0.1s; }
+    .floor:nth-child(2) { animation-delay: 0.2s; }
+    .floor:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes floorIn {
+      from { opacity: 0; transform: translateY(24px) scale(0.98); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .floor::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+
+    .floor-hd {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.85rem 1rem 0.5rem;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,0.25);
+    }
+    .floor-hd h2 {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    .floor.crypto .floor-hd h2 { color: var(--crypto); }
+    .floor.equity .floor-hd h2 { color: var(--equity); }
+    .floor.ops .floor-hd h2 { color: #b8aefc; }
+    .floor-hd .tickers {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.4;
+    }
+    .floor-hd .boss {
+      font-size: 0.62rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-top: 0.2rem;
+    }
+
+    .desks {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      padding: 0.85rem;
+    }
+    .floor.ops .desks { grid-template-columns: 1fr 1fr; }
+
+    .agent {
+      background: var(--desk);
+      border: 1px solid var(--line);
+      padding: 0.65rem 0.7rem;
+      position: relative;
+      min-height: 88px;
+      transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+    }
+    .agent.active {
+      border-color: var(--gold-dim);
+      box-shadow: 0 0 0 1px var(--gold-dim), 0 0 28px var(--glow);
+      background: #1a2636;
+    }
+    .agent.working .monitor {
+      background: linear-gradient(180deg, #1e3a2a, #122018);
+      box-shadow: inset 0 0 12px rgba(62, 207, 142, 0.35);
+    }
+    .agent.working .monitor::after {
+      opacity: 1;
+      animation: scan 1.2s linear infinite;
+    }
+    .agent.loss {
+      border-color: var(--loss-dim);
+      box-shadow: 0 0 20px rgba(232, 93, 93, 0.2);
+    }
+    .agent.bonked {
+      animation: bonk 0.45s ease;
+    }
+    @keyframes bonk {
+      0%, 100% { transform: none; }
+      30% { transform: translateX(-4px) rotate(-1deg); }
+      60% { transform: translateX(4px) rotate(1deg); }
+    }
+
+    .agent-row {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+    }
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .avatar::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--muted);
+      border: 1.5px solid var(--desk);
+    }
+    .agent.active .avatar::before,
+    .agent.working .avatar::before { background: var(--gain); }
+    .agent.idle .avatar::before { background: #556; }
+
+    .agent.crypto .avatar { background: rgba(58, 160, 200, 0.2); color: var(--crypto); }
+    .agent.equity .avatar { background: rgba(200, 122, 58, 0.2); color: var(--equity); }
+    .agent.ops .avatar { background: rgba(155, 140, 255, 0.18); color: #c4bcff; }
+    .agent.chief .avatar {
+      background: linear-gradient(135deg, #b8892e, #d4a84b);
+      color: #0a0e14;
+    }
+
+    .agent-meta { flex: 1; min-width: 0; }
+    .agent-meta .role {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .agent-meta .job {
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+      line-height: 1.35;
+    }
+    .agent-meta .status {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      margin-top: 0.35rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .agent.working .status { color: var(--gain); }
+
+    .monitor {
+      margin-top: 0.45rem;
+      height: 6px;
+      background: #0a1018;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+    .monitor::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(62, 207, 142, 0.7), transparent);
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    @keyframes scan {
+      to { transform: translateX(100%); }
+    }
+
+    .pnl-pop {
+      position: absolute;
+      top: 0.35rem;
+      right: 0.45rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      animation: popUp 1.4s ease forwards;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .pnl-pop.gain { color: var(--gain); }
+    .pnl-pop.loss { color: var(--loss); }
+    @keyframes popUp {
+      0% { opacity: 0; transform: translateY(8px) scale(0.9); }
+      20% { opacity: 1; transform: translateY(0) scale(1.05); }
+      100% { opacity: 0; transform: translateY(-22px); }
+    }
+
+    /* ——— Bottom panels ——— */
+    .panels {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    @media (min-width: 800px) {
+      .panels { grid-template-columns: 1.4fr 1fr 0.9fr; }
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 0.9rem 1rem;
+      animation: fadeRise 0.8s ease both;
+      animation-delay: 0.35s;
+    }
+    .panel h3 {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+
+    .tape {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      height: 160px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .tape-line {
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      gap: 0.5rem;
+      padding: 0.2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      animation: tapeIn 0.35s ease;
+    }
+    @keyframes tapeIn {
+      from { opacity: 0; transform: translateX(-8px); }
+      to { opacity: 1; transform: none; }
+    }
+    .tape-line .t { color: var(--muted); }
+    .tape-line .m { color: var(--text); }
+    .tape-line .buy { color: var(--gain); }
+    .tape-line .sell { color: var(--loss); }
+
+    .vault {
+      text-align: center;
+      padding: 0.5rem 0 0.25rem;
+    }
+    .vault-door {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 0.75rem;
+      border-radius: 50%;
+      border: 3px solid var(--gold-dim);
+      background:
+        radial-gradient(circle at 50% 50%, #2a2214 0%, #121018 70%),
+        repeating-conic-gradient(from 0deg, var(--gold-dim) 0deg 8deg, transparent 8deg 16deg);
+      box-shadow: inset 0 0 24px rgba(0,0,0,0.8), 0 0 30px rgba(212, 168, 75, 0.15);
+      position: relative;
+      display: grid;
+      place-items: center;
+      transition: transform 0.4s ease, box-shadow 0.4s;
+    }
+    .vault-door.deposit {
+      animation: vaultPulse 0.8s ease;
+    }
+    @keyframes vaultPulse {
+      0%, 100% { transform: scale(1); box-shadow: inset 0 0 24px rgba(0,0,0,0.8), 0 0 30px rgba(212, 168, 75, 0.15); }
+      40% { transform: scale(1.08); box-shadow: inset 0 0 24px rgba(0,0,0,0.8), 0 0 48px rgba(212, 168, 75, 0.45); }
+    }
+    .vault-door .coin {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+    .vault .amt {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .vault .sub {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+    .coin-fly {
+      position: fixed;
+      z-index: 100;
+      font-size: 1rem;
+      pointer-events: none;
+      animation: flyCoin 0.9s ease forwards;
+    }
+    @keyframes flyCoin {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.4); }
+    }
+
+    .ledger {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      max-height: 160px;
+      overflow-y: auto;
+    }
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 0.4rem;
+      padding: 0.28rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .ledger-row .agent-n { color: var(--muted); }
+    .ledger-row .sym { color: var(--text); }
+    .ledger-row .pos { color: var(--gain); }
+    .ledger-row .neg { color: var(--loss); }
+
+    /* ——— Org / strategy ——— */
+    .strategy {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 800px) {
+      .strategy { grid-template-columns: 1.2fr 1fr; }
+    }
+    .strategy article {
+      border: 1px solid var(--line);
+      background: rgba(13, 20, 28, 0.8);
+      padding: 1.25rem 1.35rem;
+    }
+    .strategy h3 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      margin-bottom: 0.65rem;
+      font-weight: 400;
+    }
+    .strategy p, .strategy li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    .strategy ul {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+    .strategy li::before {
+      content: "›";
+      color: var(--gold);
+      margin-right: 0.45rem;
+      font-weight: 700;
+    }
+
+    .disclaimer {
+      margin-top: 1.5rem;
+      padding: 0.85rem 1rem;
+      border: 1px dashed var(--line);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ——— Overlays ——— */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: grid;
+      place-items: center;
+      background: rgba(7, 11, 16, 0.72);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .overlay-card {
+      text-align: center;
+      padding: 2rem 2.5rem;
+      border: 1px solid var(--gold-dim);
+      background: var(--floor);
+      box-shadow: 0 0 80px rgba(212, 168, 75, 0.25);
+      max-width: 90vw;
+    }
+    .overlay-card h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--gold);
+    }
+    .overlay-card p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .confetti-piece {
+      position: fixed;
+      width: 8px;
+      height: 10px;
+      z-index: 180;
+      pointer-events: none;
+      animation: confettiFall 1.6s ease-out forwards;
+    }
+    @keyframes confettiFall {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+
+    .callout {
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+    }
+    .callout span b { color: var(--text); font-weight: 600; }
+
+    a.back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    a.back:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand-mark">
+        <div>
+          <div class="name">Turner Capital</div>
+          <div class="tag">Crypto · Equities · Agent Desk</div>
+        </div>
+      </div>
+      <div class="book-strip" id="bookStrip">
+        <div><span class="k">BOOK</span><span class="v" id="bookVal">$50.00</span></div>
+        <div><span class="k">P&amp;L</span><span class="v" id="pnlVal">$0.00</span></div>
+        <div><span class="k">TRADES</span><span class="v" id="tradeCount">0</span></div>
+        <div><span class="k">WIN%</span><span class="v" id="winRate">—</span></div>
+        <div><span class="k">DAY</span><span class="v" id="dayVal">1</span></div>
+      </div>
+      <div class="controls">
+        <a class="back" href="../">← Site</a>
+        <button class="ctl" id="btnReset" type="button">Reset</button>
+        <button class="ctl primary" id="btnToggle" type="button">Open Floor</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Turner Capital.<br /><em>Twelve agents.</em><br />One floor.</h1>
+      <p class="lede">
+        Same discipline as a multi-pod desk: <strong>TAPE</strong> calls size,
+        <strong>VERIFY</strong> kills bad numbers, <strong>QUANT</strong> refits drift,
+        <strong>RISK</strong> opens every report with the worst fact.
+        The <strong>CHIEF</strong> never trades — he routes, checks handoffs, and bonks losses.
+      </p>
+      <p class="math-note">
+        $50 → $2,000 is 40×. At +0.5% compounded you need ~740 disciplined trades.
+        Humans tilt. Agents don’t revenge-trade. This floor is a live simulation of that rule set.
+      </p>
+    </section>
+
+    <div class="floors">
+      <!-- CRYPTO -->
+      <section class="floor crypto" id="floorCrypto">
+        <div class="floor-hd">
+          <div>
+            <h2>Crypto Floor</h2>
+            <div class="boss">Desk lead · live prints</div>
+          </div>
+          <div class="tickers">
+            $BTC · $ETH · $SOL<br />
+            Binance tape
+          </div>
+        </div>
+        <div class="desks" id="desksCrypto"></div>
+      </section>
+
+      <!-- EQUITIES -->
+      <section class="floor equity" id="floorEquity">
+        <div class="floor-hd">
+          <div>
+            <h2>Equities Floor</h2>
+            <div class="boss">Quiet floor · no rumors</div>
+          </div>
+          <div class="tickers">
+            $TSLA · $NVDA · $SPX<br />
+            Index &amp; names
+          </div>
+        </div>
+        <div class="desks" id="desksEquity"></div>
+      </section>
+
+      <!-- OPS -->
+      <section class="floor ops" id="floorOps">
+        <div class="floor-hd">
+          <div>
+            <h2>Ops · Risk · Chief</h2>
+            <div class="boss">Handoffs · stops · truth</div>
+          </div>
+          <div class="tickers">
+            Never softens red<br />
+            Morning call 04:00
+          </div>
+        </div>
+        <div class="desks" id="desksOps"></div>
+      </section>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Live tape</h3>
+        <div class="tape" id="tape"></div>
+      </div>
+      <div class="panel">
+        <h3>Vault</h3>
+        <div class="vault">
+          <div class="vault-door" id="vaultDoor"><span class="coin">₮</span></div>
+          <div class="amt" id="vaultAmt">$50.00</div>
+          <div class="sub">Settled book</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Fill ledger</h3>
+        <div class="ledger" id="ledger"></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span><b id="statActive">0</b> agents working</span>
+      <span><b id="statEdge">+0.50%</b> target edge / fill</span>
+      <span><b id="statMilestone">0%</b> to 40×</span>
+    </div>
+
+    <div class="strategy">
+      <article>
+        <h3>The org chart is the edge</h3>
+        <p>
+          Turner Capital runs crypto and equities with the same pod logic:
+          specialists who never sleep, never feel it, and never skip a verify step.
+        </p>
+        <ul>
+          <li><b style="color:var(--text)">TAPE</b> watches prints and calls size hitting the offer</li>
+          <li><b style="color:var(--text)">VERIFY</b> re-checks every number and kills the ones that lie</li>
+          <li><b style="color:var(--text)">QUANT</b> sits on models and refits the moment they drift</li>
+          <li><b style="color:var(--text)">MACRO</b> takes the Asia handover before the open</li>
+          <li><b style="color:var(--text)">RISK</b> holds stops — every report opens with the worst fact</li>
+          <li><b style="color:var(--text)">FLOW</b> reads sweeps and funding flips</li>
+          <li><b style="color:var(--text)">CHIEF</b> routes work, checks handoffs, bonks booked losses</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Two markets. Boring trades.</h3>
+        <p>
+          Crypto desks print on BTC, ETH, and SOL. Equities stay on TSLA, NVDA, and SPX —
+          no rumor desk. You supply the capital and the rules. The agents supply the volume.
+        </p>
+        <p style="margin-top:0.85rem">
+          Book hits +25% and the floor freezes to crown the top earner.
+          Double fills land confetti. Red days stay on the screen at breakfast.
+        </p>
+      </article>
+    </div>
+
+    <p class="disclaimer">
+      Simulation only. Turner Capital on this page does not place live orders, custody funds, or offer investment advice.
+      Markets shown are illustrative. Past simulated performance is not indicative of future results.
+      Built for Turner Capital — crypto &amp; equities desk strategy demo.
+    </p>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="overlay-card">
+      <h2 id="overlayTitle">DOUBLE WIN</h2>
+      <p id="overlaySub">Two agents hit at once</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const START = 50;
+      const TARGET_MULT = 40;
+      const TARGET_EDGE = 0.005;
+
+      const FLOOR_AGENTS = [
+        { id: "tape", role: "TAPE", job: "Watches prints · size on the offer", floor: "crypto", cls: "crypto", initials: "TP" },
+        { id: "flow", role: "FLOW", job: "Sweeps · funding flips", floor: "crypto", cls: "crypto", initials: "FL" },
+        { id: "atlas", role: "ATLAS", job: "BTC / ETH / SOL execution", floor: "crypto", cls: "crypto", initials: "AT" },
+        { id: "macro", role: "MACRO", job: "Asia handover · overnight", floor: "crypto", cls: "crypto", initials: "MA" },
+        { id: "index", role: "INDEX", job: "SPX · no rumors", floor: "equity", cls: "equity", initials: "IX" },
+        { id: "volt", role: "VOLT", job: "NVDA · semis tape", floor: "equity", cls: "equity", initials: "VT" },
+        { id: "drive", role: "DRIVE", job: "TSLA · equity flow", floor: "equity", cls: "equity", initials: "DR" },
+        { id: "scan", role: "SCAN", job: "Equity sweeps · breadth", floor: "equity", cls: "equity", initials: "SC" },
+        { id: "chief", role: "CHIEF", job: "Routes · handoffs · never trades", floor: "ops", cls: "ops chief", initials: "CH", neverTrades: true },
+        { id: "verify", role: "VERIFY", job: "Re-checks numbers · kills lies", floor: "ops", cls: "ops", initials: "VR" },
+        { id: "quant", role: "QUANT", job: "Models · refit on drift", floor: "ops", cls: "ops", initials: "QT" },
+        { id: "risk", role: "RISK", job: "Stops · worst fact first", floor: "ops", cls: "ops", initials: "RK" },
+      ];
+
+      const CRYPTO_SYMS = ["BTC", "ETH", "SOL"];
+      const EQUITY_SYMS = ["TSLA", "NVDA", "SPX"];
+      const STATUS_LINES = [
+        "sitting down…",
+        "watching the offer",
+        "size just hit",
+        "funding flip noted",
+        "model drift — refitting",
+        "stop placed",
+        "handoff checked",
+        "verify pass",
+        "sweep detected",
+        "Asia book reconciled",
+        "routing ticket",
+        "waiting for confirm",
+      ];
+
+      const state = {
+        book: START,
+        trades: 0,
+        wins: 0,
+        running: false,
+        day: 1,
+        timer: null,
+        earnings: Object.fromEntries(FLOOR_AGENTS.map((a) => [a.id, 0])),
+        lastWinIds: [],
+        crowned: false,
+        startBook: START,
+      };
+
+      const el = {
+        bookVal: document.getElementById("bookVal"),
+        pnlVal: document.getElementById("pnlVal"),
+        tradeCount: document.getElementById("tradeCount"),
+        winRate: document.getElementById("winRate"),
+        dayVal: document.getElementById("dayVal"),
+        btnToggle: document.getElementById("btnToggle"),
+        btnReset: document.getElementById("btnReset"),
+        tape: document.getElementById("tape"),
+        ledger: document.getElementById("ledger"),
+        vaultDoor: document.getElementById("vaultDoor"),
+        vaultAmt: document.getElementById("vaultAmt"),
+        overlay: document.getElementById("overlay"),
+        overlayTitle: document.getElementById("overlayTitle"),
+        overlaySub: document.getElementById("overlaySub"),
+        statActive: document.getElementById("statActive"),
+        statMilestone: document.getElementById("statMilestone"),
+        desksCrypto: document.getElementById("desksCrypto"),
+        desksEquity: document.getElementById("desksEquity"),
+        desksOps: document.getElementById("desksOps"),
+      };
+
+      function money(n) {
+        const sign = n < 0 ? "-" : "";
+        return sign + "$" + Math.abs(n).toFixed(2);
+      }
+
+      function renderAgents() {
+        const buckets = { crypto: el.desksCrypto, equity: el.desksEquity, ops: el.desksOps };
+        Object.values(buckets).forEach((n) => (n.innerHTML = ""));
+        FLOOR_AGENTS.forEach((a) => {
+          const card = document.createElement("div");
+          card.className = "agent idle " + a.cls;
+          card.id = "agent-" + a.id;
+          card.innerHTML =
+            '<div class="agent-row">' +
+            '<div class="avatar">' + a.initials + "</div>" +
+            '<div class="agent-meta">' +
+            '<div class="role">' + a.role + "</div>" +
+            '<div class="job">' + a.job + "</div>" +
+            '<div class="status" data-status>idle</div>' +
+            "</div></div><div class=\"monitor\"></div>";
+          buckets[a.floor].appendChild(card);
+        });
+      }
+
+      function setAgentState(id, mode, statusText) {
+        const card = document.getElementById("agent-" + id);
+        if (!card) return;
+        card.classList.remove("idle", "active", "working", "loss");
+        card.classList.add(mode);
+        const st = card.querySelector("[data-status]");
+        if (st && statusText) st.textContent = statusText;
+      }
+
+      function updateBookUI() {
+        const pnl = state.book - START;
+        el.bookVal.textContent = money(state.book);
+        el.pnlVal.textContent = (pnl >= 0 ? "+" : "") + money(pnl);
+        el.pnlVal.className = "v " + (pnl >= 0 ? "up" : "dn");
+        el.tradeCount.textContent = String(state.trades);
+        el.winRate.textContent = state.trades
+          ? ((100 * state.wins) / state.trades).toFixed(0) + "%"
+          : "—";
+        el.dayVal.textContent = String(state.day);
+        el.vaultAmt.textContent = money(state.book);
+        const progress = Math.min(100, ((state.book / START - 1) / (TARGET_MULT - 1)) * 100);
+        el.statMilestone.textContent = progress.toFixed(1) + "%";
+      }
+
+      function pushTape(side, sym, detail) {
+        const line = document.createElement("div");
+        line.className = "tape-line";
+        const t = new Date();
+        const hh = String(t.getHours()).padStart(2, "0");
+        const mm = String(t.getMinutes()).padStart(2, "0");
+        const ss = String(t.getSeconds()).padStart(2, "0");
+        line.innerHTML =
+          '<span class="t">' + hh + ":" + mm + ":" + ss + "</span>" +
+          '<span class="m">' + sym + " · " + detail + "</span>" +
+          '<span class="' + (side === "buy" ? "buy" : "sell") + '">' + side.toUpperCase() + "</span>";
+        el.tape.prepend(line);
+        while (el.tape.children.length > 14) el.tape.removeChild(el.tape.lastChild);
+      }
+
+      function pushLedger(agentRole, sym, pnl) {
+        const row = document.createElement("div");
+        row.className = "ledger-row";
+        row.innerHTML =
+          '<span class="agent-n">' + agentRole + "</span>" +
+          '<span class="sym">' + sym + "</span>" +
+          '<span class="' + (pnl >= 0 ? "pos" : "neg") + '">' +
+          (pnl >= 0 ? "+" : "") + money(pnl) + "</span>";
+        el.ledger.prepend(row);
+        while (el.ledger.children.length > 20) el.ledger.removeChild(el.ledger.lastChild);
+      }
+
+      function showPnlPop(agentId, pnl) {
+        const card = document.getElementById("agent-" + agentId);
+        if (!card) return;
+        const pop = document.createElement("div");
+        pop.className = "pnl-pop " + (pnl >= 0 ? "gain" : "loss");
+        pop.textContent = (pnl >= 0 ? "+" : "") + money(pnl);
+        card.appendChild(pop);
+        setTimeout(() => pop.remove(), 1400);
+      }
+
+      function flyCoin(fromEl) {
+        if (!fromEl) return;
+        const r = fromEl.getBoundingClientRect();
+        const v = el.vaultDoor.getBoundingClientRect();
+        const coin = document.createElement("div");
+        coin.className = "coin-fly";
+        coin.textContent = "●";
+        coin.style.color = "var(--gold)";
+        coin.style.left = r.left + r.width / 2 + "px";
+        coin.style.top = r.top + "px";
+        const dx = v.left + v.width / 2 - (r.left + r.width / 2);
+        const dy = v.top + v.height / 2 - r.top;
+        coin.style.setProperty("--dx", dx + "px");
+        coin.style.setProperty("--dy", dy + "px");
+        document.body.appendChild(coin);
+        setTimeout(() => coin.remove(), 900);
+        el.vaultDoor.classList.remove("deposit");
+        void el.vaultDoor.offsetWidth;
+        el.vaultDoor.classList.add("deposit");
+      }
+
+      function confetti() {
+        const colors = ["#d4a84b", "#3ecf8e", "#3aa0c8", "#c87a3a", "#e8eef4"];
+        for (let i = 0; i < 36; i++) {
+          const p = document.createElement("div");
+          p.className = "confetti-piece";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.top = "-12px";
+          p.style.background = colors[i % colors.length];
+          p.style.animationDelay = Math.random() * 0.4 + "s";
+          document.body.appendChild(p);
+          setTimeout(() => p.remove(), 2000);
+        }
+      }
+
+      function showOverlay(title, sub, ms) {
+        el.overlayTitle.textContent = title;
+        el.overlaySub.textContent = sub;
+        el.overlay.classList.add("show");
+        setTimeout(() => el.overlay.classList.remove("show"), ms || 2200);
+      }
+
+      function traders() {
+        return FLOOR_AGENTS.filter((a) => !a.neverTrades);
+      }
+
+      function pickSym(agent) {
+        if (agent.floor === "crypto") return CRYPTO_SYMS[Math.floor(Math.random() * CRYPTO_SYMS.length)];
+        if (agent.floor === "equity") return EQUITY_SYMS[Math.floor(Math.random() * EQUITY_SYMS.length)];
+        return Math.random() > 0.5
+          ? CRYPTO_SYMS[Math.floor(Math.random() * CRYPTO_SYMS.length)]
+          : EQUITY_SYMS[Math.floor(Math.random() * EQUITY_SYMS.length)];
+      }
+
+      function simulateTick() {
+        // Ambient: agents sit / work
+        const pool = traders();
+        const activeCount = 2 + Math.floor(Math.random() * 4);
+        const chosen = [];
+        const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+        for (let i = 0; i < activeCount && i < shuffled.length; i++) chosen.push(shuffled[i]);
+
+        FLOOR_AGENTS.forEach((a) => {
+          if (a.neverTrades) {
+            setAgentState(a.id, Math.random() > 0.4 ? "active" : "idle",
+              Math.random() > 0.5 ? "routing handoff" : "watching the floor");
+            return;
+          }
+          if (!chosen.find((c) => c.id === a.id)) {
+            setAgentState(a.id, "idle", "idle");
+          }
+        });
+
+        el.statActive.textContent = String(chosen.length);
+
+        // Collect fills then check double-win
+        const tickFills = [];
+        chosen.forEach((agent, idx) => {
+          setTimeout(() => {
+            setAgentState(agent.id, "working", STATUS_LINES[Math.floor(Math.random() * STATUS_LINES.length)]);
+            if (agent.id !== "verify" && Math.random() < 0.08) {
+              setAgentState("verify", "working", "killed bad print");
+              pushTape("sell", pickSym(agent), "VERIFY rejected · " + agent.role);
+              return;
+            }
+
+            const sym = pickSym(agent);
+            const side = Math.random() > 0.48 ? "buy" : "sell";
+            const win = Math.random() < 0.62;
+            const edge = win
+              ? TARGET_EDGE * (0.6 + Math.random() * 1.1)
+              : -TARGET_EDGE * (0.5 + Math.random() * 1.4);
+            const notional = Math.max(2, state.book * (0.04 + Math.random() * 0.08));
+            const pnl = notional * edge;
+
+            state.book = Math.max(1, state.book + pnl);
+            state.trades += 1;
+            if (pnl >= 0) state.wins += 1;
+            state.earnings[agent.id] = (state.earnings[agent.id] || 0) + pnl;
+
+            if (pnl < 0) {
+              const card = document.getElementById("agent-" + agent.id);
+              if (card) {
+                card.classList.add("loss", "bonked");
+                setAgentState("chief", "active", "bonked " + agent.role);
+                setTimeout(() => card.classList.remove("bonked", "loss"), 600);
+              }
+            }
+
+            pushTape(side, "$" + sym, agent.role + " · size " + notional.toFixed(0));
+            pushLedger(agent.role, "$" + sym, pnl);
+            showPnlPop(agent.id, pnl);
+            if (pnl > 0) flyCoin(document.getElementById("agent-" + agent.id));
+            updateBookUI();
+            tickFills.push({ agent, pnl });
+
+            state.day = 1 + Math.floor(state.trades / 28);
+
+            const ret = (state.book - START) / START;
+            if (ret >= 0.25 && !state.crowned) {
+              state.crowned = true;
+              const top = Object.entries(state.earnings).sort((a, b) => b[1] - a[1])[0];
+              const topAgent = FLOOR_AGENTS.find((a) => a.id === top[0]);
+              showOverlay("TOP EARNER", (topAgent ? topAgent.role : "—") + " · book +" + (ret * 100).toFixed(0) + "%", 2800);
+            }
+
+            if (idx === chosen.length - 1) {
+              const winners = tickFills.filter((f) => f.pnl > 0);
+              if (winners.length >= 2) {
+                confetti();
+                showOverlay(
+                  "DOUBLE WIN",
+                  winners[0].agent.role + " + " + winners[1].agent.role + " · cash to vault",
+                  2000
+                );
+              }
+            }
+          }, idx * 180);
+        });
+
+        if (Math.random() < 0.15) {
+          setAgentState("macro", "working", "Asia handover logged");
+          pushTape("buy", "$BTC", "MACRO · overnight handoff");
+        }
+        if (Math.random() < 0.12) {
+          setAgentState("quant", "working", "refit complete");
+        }
+        if (Math.random() < 0.12) {
+          setAgentState("risk", "working", "worst fact: vol elevated");
+        }
+      }
+
+      function start() {
+        if (state.running) return;
+        state.running = true;
+        el.btnToggle.textContent = "Halt Floor";
+        simulateTick();
+        state.timer = setInterval(simulateTick, 2200);
+      }
+
+      function stop() {
+        state.running = false;
+        el.btnToggle.textContent = "Open Floor";
+        if (state.timer) clearInterval(state.timer);
+        state.timer = null;
+        FLOOR_AGENTS.forEach((a) => setAgentState(a.id, "idle", "idle"));
+        el.statActive.textContent = "0";
+      }
+
+      function reset() {
+        stop();
+        state.book = START;
+        state.trades = 0;
+        state.wins = 0;
+        state.day = 1;
+        state.crowned = false;
+        state.earnings = Object.fromEntries(FLOOR_AGENTS.map((a) => [a.id, 0]));
+        el.tape.innerHTML = "";
+        el.ledger.innerHTML = "";
+        updateBookUI();
+        pushTape("buy", "BOOK", "seeded · $" + START.toFixed(2));
+      }
+
+      el.btnToggle.addEventListener("click", () => {
+        if (state.running) stop();
+        else start();
+      });
+      el.btnReset.addEventListener("click", reset);
+
+      renderAgents();
+      updateBookUI();
+      pushTape("buy", "BOOK", "Turner Capital · waiting for open");
+    })();
+  </script>
+</body>
+</html>
