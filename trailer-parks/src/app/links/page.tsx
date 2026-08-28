@@ -7,6 +7,7 @@ import { siteConfig } from "@/lib/site";
 
 const siteLinks = [
   { label: "Home", href: "/" },
+  { label: "Turner Capital — trading floor", href: "/turner-capital/" },
   { label: "Owner recruitment (share)", href: "/list-your-park?ref=bradley" },
   { label: "Outreach command center", href: "/outreach" },
   { label: "Upload private list", href: "/upload-list" },
