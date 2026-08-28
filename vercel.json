@@ -1,22 +1,7 @@
 {
-  "buildCommand": null,
-  "outputDirectory": "vitalai",
-  "installCommand": "npm install",
-  "cleanUrls": false,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    }
-  ],
-  "rewrites": [
-    { "source": "/api/config", "destination": "/api/config" },
-    { "source": "/api/create-checkout", "destination": "/api/create-checkout" },
-    { "source": "/api/verify-session", "destination": "/api/verify-session" },
-    { "source": "/api/subscribe", "destination": "/api/subscribe" }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "npm install --prefix trailer-parks",
+  "buildCommand": "npm run build --prefix trailer-parks",
+  "outputDirectory": "trailer-parks/.next"
 }

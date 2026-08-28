@@ -3,10 +3,13 @@
 Everything in code is done. These steps require your accounts (15 min each).
 
 ## 1. Deploy to Vercel (5 min)
+
+This repo also contains Trailer Parks. VitalAI must use a **separate** Vercel project with **Root Directory = `vitalai`**. See `/TWO-DEPLOYS.md`.
+
 ```bash
+cd vitalai
 npm install
-npx vercel link
-npx vercel env pull
+npx vercel link   # Root Directory: vitalai
 npx vercel --prod
 ```
 Set custom domain: `vitalai.app`
