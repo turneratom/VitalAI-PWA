@@ -1,38 +1,39 @@
-# How to make Trailer Parks permanently live
+# How to keep Trailer Parks links working
 
-Temporary Vercel URLs expire. Do **not** share those for outreach.
-Use one of the options below for a stable production URL.
+## Live site (use this now)
 
-## Option A — Claim this deploy (fastest, ~2 minutes)
+**https://turneratom.github.io/VitalAI-PWA/**
 
-1. Open the **claim URL** printed after the latest deploy (also in PINNED-LINKS.md).
-2. Sign in / create a free Vercel account with `brad@treadcompanies.com`.
-3. Claim the project. You get a stable URL like `trailer-parks.vercel.app`.
-4. Optional: add a custom domain (`app.treadcompanies.com` or `trailerparks.com`).
+Full link list: `PINNED-LINKS.md` or https://turneratom.github.io/VitalAI-PWA/links/
 
-## Option B — Connect the GitHub repo in Vercel (best long-term)
+Republish:
 
-1. Go to https://vercel.com/new
-2. Import `turneratom/VitalAI-PWA`
-3. Set **Root Directory** to `trailer-parks`
-4. Framework: Next.js (auto-detected)
-5. Deploy → production URL stays fixed on every push to `main`
-6. Set env var `NEXT_PUBLIC_SITE_URL` to that production URL
+```bash
+bash trailer-parks/scripts/publish-github-pages.sh
+```
 
-## Option C — Custom domain under Tread
+## Why links broke
 
-Point DNS for e.g. `parks.treadcompanies.com` to the Vercel project (Vercel → Domains).
+1. Temporary Vercel URLs expire.
+2. Setting GitHub Pages custom domain `www.mhportal.com` **before DNS** made github.io **redirect** to a parking lander — every link died.
 
-## Test run checklist (before any outreach)
+**Rule:** Do not add a `CNAME` / custom domain until `www` DNS is `turneratom.github.io`.
 
-- [ ] Open production URL homepage
-- [ ] Marketplace shows Hollins Estates, Yellow Mountain, Meadowbrook
-- [ ] Click each Tread park → financials load
-- [ ] Owner portal (`/owners`) shows your 3 parks
-- [ ] `/list-your-park` form submits
-- [ ] `/links` copy buttons show the **current** host (not an old temporary URL)
-- [ ] Only then start owner outreach
+## www.mhportal.com (when ready)
 
-## Why links broke before
+| Type | Name | Value |
+|------|------|-------|
+| CNAME | www | turneratom.github.io |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
 
-Copy/share links were hardcoded to temporary `*.vercel.app` hosts that expire in ~60 minutes. The site now builds share links from `window.location.origin` so they always match the site you’re on.
+Then Pages → Custom domain → Enforce HTTPS → republish with CNAME.
+
+## Test checklist
+
+- [ ] Home, marketplace, 3 Tread parks load on github.io
+- [ ] `/links/` copy buttons include `/VitalAI-PWA`
+- [ ] CSV downloads open (not 404)
+- [ ] Only then share with owners

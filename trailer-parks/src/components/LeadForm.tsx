@@ -37,17 +37,47 @@ function LeadFormInner() {
     };
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      let ok = false;
+      try {
+        const res = await fetch("/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (res.ok) ok = true;
+      } catch {
+        /* static host — no API */
+      }
 
-      const data = await res.json();
+      if (!ok) {
+        // Browser FormSubmit fallback (works on GitHub Pages)
+        const formData = new FormData();
+        formData.append("name", String(payload.name));
+        formData.append("email", String(payload.email));
+        formData.append("phone", String(payload.phone || ""));
+        formData.append("park_name", String(payload.parkName));
+        formData.append("location", String(payload.location));
+        formData.append("lot_count", String(payload.lotCount));
+        formData.append("asking_price", String(payload.askingPrice || ""));
+        formData.append("notes", String(payload.notes || ""));
+        formData.append("source", String(payload.source || ""));
+        formData.append("referrer", String(payload.referrer || ""));
+        formData.append("_subject", `Owner Lead: ${payload.parkName} — ${payload.location}`);
+        formData.append("_captcha", "false");
+        formData.append("_template", "table");
 
-      if (!res.ok) {
-        setError(data.error ?? "Submission failed. Please try again.");
-        return;
+        const fsRes = await fetch(
+          `https://formsubmit.co/ajax/${encodeURIComponent(siteConfig.team.bradley.email)}`,
+          {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+          }
+        );
+        if (!fsRes.ok) {
+          setError("Submission failed. Email brad@treadcompanies.com directly.");
+          return;
+        }
       }
 
       setSubmitted(true);

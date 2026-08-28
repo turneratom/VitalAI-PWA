@@ -10,7 +10,7 @@ import {
   Handshake,
 } from "lucide-react";
 import { partner } from "@/lib/partner";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, withBasePath } from "@/lib/site";
 
 export const metadata = {
   title: `${partner.name} — ${partner.title} | Trailer Parks`,
@@ -149,7 +149,7 @@ export default function PartnerPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="/downloads/owner-prospects.csv"
+                href={withBasePath("/downloads/owner-prospects.csv")}
                 className="inline-flex items-center justify-center gap-1 px-4 py-2.5 border border-primary text-primary text-sm font-semibold rounded-lg"
               >
                 <Download className="w-4 h-4" />
