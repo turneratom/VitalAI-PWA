@@ -12,6 +12,7 @@ Use these links — they work now. (`www.mhportal.com` is not live until DNS is 
 
 | What | URL |
 |------|-----|
+| **Turner Capital** | https://turneratom.github.io/VitalAI-PWA/turner-capital/ |
 | **Home** | https://turneratom.github.io/VitalAI-PWA/ |
 | **Marketplace** | https://turneratom.github.io/VitalAI-PWA/marketplace/ |
 | **Hollins Estates** | https://turneratom.github.io/VitalAI-PWA/parks/hollins/ |
