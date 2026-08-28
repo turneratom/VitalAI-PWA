@@ -1,0 +1,164 @@
+# Pinterest Pin Pack — VitalAI (25 pins ready to schedule)
+
+Brand: Green #4CAF50, white background, bold question or stat on image.
+Schedule: 5 pins/day via Tailwind. Destination URLs included.
+
+---
+
+## PIN 1 — BMI
+**Title:** Free BMI Calculator — Know Your Number in 10 Seconds
+**Description:** Calculate your Body Mass Index instantly with our free online BMI calculator. Enter height and weight in metric or imperial. See your category: underweight, normal, overweight, or obese. No signup required. Part of 15 free VitalAI health tools. #BMI #healthcalculator #weightloss
+**URL:** https://vitalai.app/tools/bmi-calculator.html
+**Image text:** "What's Your BMI?"
+
+## PIN 2 — TDEE
+**Title:** TDEE Calculator — How Many Calories Do You Burn?
+**Description:** Find your Total Daily Energy Expenditure with our free TDEE calculator. Enter age, weight, height, and activity level. Get maintenance calories plus fat loss and muscle gain targets. Essential for any diet plan. #TDEE #calories #fitness
+**URL:** https://vitalai.app/tools/tdee-calculator.html
+**Image text:** "Calories to Maintain?"
+
+## PIN 3 — Macros
+**Title:** Macro Calculator — Protein, Carbs & Fat Split
+**Description:** Split your daily calories into protein, carbohydrates, and fat grams. Choose balanced, high-protein, low-carb, or fat loss presets. Free macro calculator from VitalAI. #macros #IIFYM #nutrition
+**URL:** https://vitalai.app/tools/macro-calculator.html
+**Image text:** "Hit Your Macros Daily"
+
+## PIN 4 — Protein
+**Title:** How Much Protein Do You Need? Free Calculator
+**Description:** Calculate daily protein based on body weight, fitness goal, and training intensity. Build muscle, lose fat, or maintain — get your gram target in seconds. #protein #muscle #gym
+**URL:** https://vitalai.app/tools/protein-calculator.html
+**Image text:** "Are You Eating Enough Protein?"
+
+## PIN 5 — Water
+**Title:** Water Intake Calculator — Daily Hydration Goal
+**Description:** How much water should you drink? Our free calculator uses body weight, exercise level, and climate to estimate liters and cups per day. Stay hydrated! #hydration #water #health
+**URL:** https://vitalai.app/tools/water-intake-calculator.html
+**Image text:** "8 Glasses Isn't Enough For Everyone"
+
+## PIN 6 — Body Fat
+**Title:** Body Fat Calculator — Navy Method (No Calipers Needed)
+**Description:** Estimate body fat percentage using neck, waist, and hip measurements. US Navy formula — free and instant. Track trends over time. #bodyfat #fitness #bodycomposition
+**URL:** https://vitalai.app/tools/body-fat-calculator.html
+**Image text:** "What's Your Body Fat %?"
+
+## PIN 7 — 1RM
+**Title:** One Rep Max Calculator — Epley Formula
+**Description:** Estimate your 1RM from any weight and rep combo. Get training percentages at 85%, 75%, and 65%. Free for powerlifters and gym-goers. #1RM #strength #powerlifting
+**URL:** https://vitalai.app/tools/one-rep-max-calculator.html
+**Image text:** "What's Your Max?"
+
+## PIN 8 — Sleep
+**Title:** Sleep Calculator — Wake Up Refreshed
+**Description:** Enter your wake-up time and get optimal bedtimes based on 90-minute sleep cycles. Stop waking up groggy. Free sleep cycle calculator. #sleep #sleepcycles #wellness
+**URL:** https://vitalai.app/tools/sleep-calculator.html
+**Image text:** "Stop Waking Up Tired"
+
+## PIN 9 — Calorie Deficit
+**Title:** Calorie Deficit Calculator — Weeks to Goal Weight
+**Description:** How long until you hit your goal? Calculate daily deficit and timeline based on safe weekly weight loss. Pair with our free TDEE calculator. #weightloss #caloriedeficit #diet
+**URL:** https://vitalai.app/tools/calorie-deficit-calculator.html
+**Image text:** "When Will You Hit Goal Weight?"
+
+## PIN 10 — Heart Rate
+**Title:** Heart Rate Zone Calculator — Train Smarter
+**Description:** Karvonen method zones 1–5 from age and resting heart rate. Fat burn, aerobic, threshold, and max zones — free. #heartrate #cardio #running
+**URL:** https://vitalai.app/tools/heart-rate-zone-calculator.html
+**Image text:** "Are You in the Right Zone?"
+
+## PIN 11 — Tools Hub
+**Title:** 15 Free Health Calculators — No Signup
+**Description:** BMI, TDEE, macros, body fat, sleep, pregnancy due date, and more. All free from VitalAI. Bookmark this page for your fitness journey. #healthtools #free #calculator
+**URL:** https://vitalai.app/tools/
+**Image text:** "15 Free Health Tools"
+
+## PIN 12 — VitalAI App
+**Title:** AI Health Coach — Snap a Photo, Get Answers
+**Description:** VitalAI analyzes health photos and answers your questions with AI. Free tier available. Pro unlocks unlimited snaps. Privacy-first PWA. #AIhealth #healthtech #VitalAI
+**URL:** https://vitalai.app/
+**Image text:** "Snap. Ask. Track."
+
+## PIN 13 — MFP vs Noom
+**Title:** MyFitnessPal vs Noom — Which Is Better in 2026?
+**Description:** Honest comparison of MyFitnessPal and Noom for weight loss. Features, pricing, and who each app is best for. Plus free VitalAI calculators. #MyFitnessPal #Noom #weightloss
+**URL:** https://vitalai.app/affiliate/myfitnesspal-vs-noom.html
+**Image text:** "MFP vs Noom — Honest Comparison"
+
+## PIN 14 — Best Calorie App
+**Title:** Best Calorie Tracking App 2026 — Compared
+**Description:** We compared the top calorie tracking apps: MyFitnessPal, Cronometer, Lose It, and more. Find the best fit for your goals. #calorietracking #nutrition #apps
+**URL:** https://vitalai.app/affiliate/best-calorie-tracking-app.html
+**Image text:** "Best Calorie App 2026"
+
+## PIN 15 — Newsletter
+**Title:** Free Weekly Health Tips — VitalAI Newsletter
+**Description:** One actionable health tip every Tuesday. New calculator launches, curated stories, zero spam. Subscribe free. #newsletter #healthtips #wellness
+**URL:** https://vitalai.app/newsletter.html
+**Image text:** "1 Tip. Every Tuesday. Free."
+
+## PIN 16 — Ideal Weight
+**Title:** Ideal Weight Calculator — 3 Medical Formulas
+**Description:** Robinson, Devine, and Miller ideal weight formulas compared. Enter height and sex for instant results. Free from VitalAI. #idealweight #BMI #health
+**URL:** https://vitalai.app/tools/ideal-weight-calculator.html
+**Image text:** "What's Your Ideal Weight?"
+
+## PIN 17 — Caffeine
+**Title:** How Much Caffeine Is Safe? Free Calculator
+**Description:** Daily caffeine limit based on body weight and sensitivity. Know your mg limit and cup equivalent. Pair with our sleep calculator. #caffeine #coffee #sleep
+**URL:** https://vitalai.app/tools/caffeine-calculator.html
+**Image text:** "Are You Over-Caffeinated?"
+
+## PIN 18 — Steps
+**Title:** Steps to Calories Calculator — 10K Steps = How Many Calories?
+**Description:** Convert daily steps to calories burned by weight and walking pace. Free calculator for Apple Watch and Fitbit users. #10000steps #walking #fitness
+**URL:** https://vitalai.app/tools/steps-to-calories-calculator.html
+**Image text:** "10,000 Steps = ? Calories"
+
+## PIN 19 — Pregnancy
+**Title:** Pregnancy Due Date Calculator — Free LMP Tool
+**Description:** Calculate your due date from last menstrual period. See current week and day of pregnancy. Naegele's rule — instant and free. #pregnancy #duedate #baby
+**URL:** https://vitalai.app/tools/pregnancy-due-date-calculator.html
+**Image text:** "When Is Your Due Date?"
+
+## PIN 20 — Pro Upgrade
+**Title:** VitalAI Pro — Unlimited AI Health Coaching $9.99/mo
+**Description:** Upgrade from 5 free snaps to unlimited AI photo analysis and enhanced coaching. Cancel anytime. #VitalAI #healthAI #subscription
+**URL:** https://vitalai.app/pricing.html
+**Image text:** "Unlimited AI Health Coaching"
+
+## PIN 21 — Fiber
+**Title:** Fiber Calculator — Are You Getting Enough?
+**Description:** Daily fiber target by sex and calories. Most adults need 25–38g. Calculate yours free. #fiber #guthealth #nutrition
+**URL:** https://vitalai.app/tools/fiber-calculator.html
+**Image text:** "Most People Need More Fiber"
+
+## PIN 22 — Fitness Tracker
+**Title:** Best Fitness Tracker 2026 — Whoop vs Apple Watch vs Garmin
+**Description:** Compared the top fitness trackers for accuracy, battery, and coaching. Find your match. #fitnesstracker #whoop #applewatch
+**URL:** https://vitalai.app/affiliate/best-fitness-tracker-2026.html
+**Image text:** "Best Fitness Tracker 2026"
+
+## PIN 23 — Cronometer
+**Title:** Cronometer vs MyFitnessPal — Micronutrients Matter
+**Description:** Which app tracks vitamins and minerals better? Full 2026 comparison with pricing. #Cronometer #MyFitnessPal #nutrition
+**URL:** https://vitalai.app/affiliate/cronometer-vs-myfitnesspal.html
+**Image text:** "Cronometer vs MFP"
+
+## PIN 24 — AI Health Apps
+**Title:** Best AI Health Apps 2026 — Ranked
+**Description:** VitalAI, MyFitnessPal, Noom, Flo, and Whoop compared. Features, AI capabilities, and pricing. #AIhealth #healthapps #2026
+**URL:** https://vitalai.app/affiliate/best-ai-health-apps.html
+**Image text:** "Best AI Health Apps"
+
+## PIN 25 — Deficit + TDEE Combo
+**Title:** Weight Loss Math — TDEE + Deficit Calculators (Free)
+**Description:** Step 1: Calculate TDEE. Step 2: Set deficit. Step 3: Track protein. All free VitalAI tools linked. #weightloss #TDEE #calories
+**URL:** https://vitalai.app/tools/tdee-calculator.html
+**Image text:** "The 3-Step Weight Loss Formula"
+
+---
+
+## Tailwind upload checklist
+1. Create boards: Health Calculators | AI Health Tips | Weight Loss Tools
+2. Upload 5 pins/day from this list
+3. Enable Tailwind SmartSchedule (evenings US time)
+4. Review outbound clicks weekly — double down on top 3 URLs

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalAI - Free AI Health Coach | Snap, Ask, Track</title>
+  <meta name="description" content="VitalAI is a free AI health coach. Snap a photo, ask health questions, and use 15 free BMI, TDEE, and macro calculators.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tools/tools.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;max-width:960px;margin:0 auto;">
+      <div>
+        <h1 style="margin:0;">VitalAI</h1>
+        <p style="margin:0.25rem 0 0;">AI Health Coach — Snap, Ask, Track</p>
+      </div>
+      <nav class="nav-links" style="margin:0;">
+        <a href="tools/index.html">15 Free Tools</a>
+        <a href="pricing.html">Pro</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="affiliate/best-ai-health-apps.html">Reviews</a>
+      </nav>
+    </div>
+    <div class="tiers">
+      <button class="tier free active">Free</button>
+      <button class="tier pro">Pro $9.99/mo</button>
+      <button class="tier elite">Elite $29.99/mo</button>
+    </div>
+  </header>
+  <main>
+    <div id="camera" class="hidden">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <button id="snap">Snap Photo</button>
+    </div>
+    <div id="chat">
+      <div id="messages"></div>
+      <div class="input-group">
+        <input id="query" placeholder="Ask about your photo or health...">
+        <button id="send">Send</button>
+      </div>
+    </div>
+    <section class="card" style="max-width:600px;margin:1rem auto;">
+      <h2 style="margin-top:0;font-size:1.1rem;">15 Free Health Calculators</h2>
+      <p style="margin:0 0 0.75rem;font-size:0.95rem;">BMI, TDEE, body fat, macros, sleep, pregnancy due date, and more.</p>
+      <a class="btn" href="tools/index.html">Browse All Tools</a>
+    </section>
+  </main>
+  <footer>Powered by OpenClaw Agent | <a href="tools/index.html" style="color:#666;">Tools</a> · <a href="pricing.html" style="color:#666;">Pro</a> · <a href="newsletter.html" style="color:#666;">Newsletter</a></footer>
+</body>
+</html>

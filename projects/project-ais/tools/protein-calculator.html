@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Calculator — Daily Protein Needs | VitalAI</title>
+  <meta name="description" content="Free protein calculator. Find how many grams of protein you need per day based on body weight, fitness goal, and activity level.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/protein-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Protein Calculator</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">All Tools</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card">
+      <h2>Daily Protein Calculator</h2>
+      <p>Protein supports muscle repair, satiety, and recovery. This tool uses evidence-based ranges by goal.</p>
+
+      <form id="protein-form">
+        <div class="form-row">
+          <div>
+            <label for="weight">Weight (kg)</label>
+            <input id="weight" type="number" min="30" step="0.1" value="70" required>
+          </div>
+          <div>
+            <label for="goal">Goal</label>
+            <select id="goal">
+              <option value="maintain">Maintain weight</option>
+              <option value="lose">Lose fat</option>
+              <option value="gain">Build muscle</option>
+            </select>
+          </div>
+          <div>
+            <label for="activity">Training Intensity</label>
+            <select id="activity">
+              <option value="low">Low (0–2 sessions/week)</option>
+              <option value="moderate" selected>Moderate (3–4 sessions/week)</option>
+              <option value="high">High (5+ sessions/week)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Calculate Protein</button>
+      </form>
+
+      <div id="protein-result" class="result-box" hidden>
+        <p>Daily protein target: <strong id="protein-g"></strong> g/day</p>
+        <p id="protein-per-meal"></p>
+      </div>
+    </article>
+
+    <section class="card faq">
+      <h2>Protein Calculator FAQ</h2>
+      <details open>
+        <summary>How much protein do I need to build muscle?</summary>
+        <p>Research suggests 1.6–2.2 g per kg body weight for muscle gain, with higher end for lean bulking and heavy training.</p>
+      </details>
+      <details>
+        <summary>Can you eat too much protein?</summary>
+        <p>Healthy kidneys generally handle high protein. Very high intakes (&gt;3 g/kg) rarely add benefit for most people.</p>
+      </details>
+      <details>
+        <summary>Best protein sources?</summary>
+        <p>Chicken, fish, eggs, Greek yogurt, legumes, and whey isolate. Spread intake across 3–4 meals for best absorption.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <div class="related-tools">
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="../affiliate/best-ai-health-apps.html">Best Health Apps</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Individual needs vary. Athletes and medical conditions may require different targets.</p>
+  </footer>
+
+  <script src="tools.js"></script>
+  <script>
+    injectFaqSchema([
+      { q: 'How much protein to build muscle?', a: 'Research suggests 1.6 to 2.2 g per kg body weight for muscle gain.' },
+      { q: 'Can you eat too much protein?', a: 'Healthy kidneys generally handle high protein; very high intakes rarely add benefit.' },
+      { q: 'Best protein sources?', a: 'Chicken, fish, eggs, Greek yogurt, legumes, and whey isolate.' }
+    ]);
+
+    document.getElementById('protein-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const grams = calcProtein(
+        parseFloat(document.getElementById('weight').value),
+        document.getElementById('goal').value,
+        document.getElementById('activity').value
+      );
+      document.getElementById('protein-g').textContent = grams;
+      document.getElementById('protein-per-meal').textContent =
+        `Approx. ${Math.round(grams / 3)} g per meal (3 meals)`;
+      document.getElementById('protein-result').hidden = false;
+    });
+  </script>
+</body>
+</html>
