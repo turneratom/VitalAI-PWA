@@ -12,7 +12,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center">
                 <Home className="w-4 h-4 text-white" />
               </div>
-              <span className="font-display text-lg font-bold text-white">Trailer Parks</span>
+              <span className="font-display text-lg font-bold text-white">Mobile Home Parks</span>
             </div>
             <p className="text-sm text-white/60 leading-relaxed">
               The leader in mobile home park transactions. No fees. One stop shop for the entire
@@ -87,16 +87,8 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div>
             <p className="text-xs text-white/40">
-              &copy; {new Date().getFullYear()} Trailer Parks. A{" "}
-              <Link
-                href={siteConfig.company.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-accent"
-              >
-                {siteConfig.company.name}
-              </Link>{" "}
-              platform.
+              &copy; {new Date().getFullYear()} {siteConfig.name}. Fee-free manufactured housing
+              marketplace.
             </p>
           </div>
           <p className="text-xs text-accent font-medium">

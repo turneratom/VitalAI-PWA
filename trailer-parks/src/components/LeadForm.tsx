@@ -75,7 +75,7 @@ function LeadFormInner() {
           }
         );
         if (!fsRes.ok) {
-          setError("Submission failed. Email brad@treadcompanies.com directly.");
+          setError(`Submission failed. Email ${siteConfig.team.bradley.email} directly.`);
           return;
         }
       }
@@ -98,7 +98,7 @@ function LeadFormInner() {
           You&apos;re on the list!
         </h3>
         <p className="text-muted text-sm leading-relaxed">
-          We&apos;ll reach out within 24 hours — a {siteConfig.company.name} expert will be in
+          We&apos;ll reach out within 24 hours — a {siteConfig.name} expert will be in
           touch. No fees, no obligations.
         </p>
         <Link

@@ -34,21 +34,21 @@ export function getUniqueStates(): string[] {
 }
 
 export function buildCallScript(park: ProspectPark): string {
-  return `Hi, this is Bradley with Tread Companies and Trailer Parks. I'm calling about ${park.name} in ${park.city}. We built a free marketplace for mobile home park owners — zero listing fees, zero success fees. Traditional brokers take 6%. We've operated 4,000+ spaces and sold 24 communities. If you're ever thinking about selling, I'd love to get you listed in about 2 minutes. Can I text or email you the link?`;
+  return `Hi, this is Bradley with Mobile Home Parks. I'm calling about ${park.name} in ${park.city}. We built a free marketplace for mobile home park owners — zero listing fees, zero success fees. Traditional brokers take 6%. We've operated 4,000+ spaces and sold 24 communities. If you're ever thinking about selling, I'd love to get you listed in about 2 minutes. Can I text or email you the link?`;
 }
 
 export function buildSmsScript(park: ProspectPark, link: string): string {
-  return `Hi, Bradley with Tread Companies / Trailer Parks. Re: ${park.name} in ${park.city}. Free marketplace for park owners — $0 listing fee, $0 success fee (brokers take ~6%). We've operated 4,000+ MH spaces. List in 2 min: ${link}`;
+  return `Hi, Bradley with Mobile Home Parks. Re: ${park.name} in ${park.city}. Free marketplace for park owners — $0 listing fee, $0 success fee (brokers take ~6%). We've operated 4,000+ MH spaces. List in 2 min: ${link}`;
 }
 
 export function buildEmailSubject(park: ProspectPark): string {
-  return `${park.name} — list free on Trailer Parks (no broker fees)`;
+  return `${park.name} — list free on Mobile Home Parks (no broker fees)`;
 }
 
 export function buildEmailBody(park: ProspectPark, link: string): string {
   return `Hi,
 
-I'm Bradley with Tread Companies. We operate manufactured housing communities (${"4,000+"} spaces; 24 communities sold) and built Trailer Parks — a fee-free marketplace for park owners.
+I'm Bradley with Mobile Home Parks. We operate manufactured housing communities (${"4,000+"} spaces; 24 communities sold) and built a fee-free marketplace for park owners.
 
 I'm reaching out about ${park.name} at ${park.address}, ${park.city}, ${park.state} ${park.zip}.
 
@@ -65,9 +65,7 @@ No obligation. Happy to answer questions — reply to this email or call me.
 
 Best,
 Bradley
-Tread Companies
 brad@treadcompanies.com
-https://www.treadcompanies.com
 `;
 }
 

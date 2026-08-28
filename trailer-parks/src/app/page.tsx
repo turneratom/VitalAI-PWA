@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { ParkCard } from "@/components/ParkCard";
 import { StatCard } from "@/components/StatCard";
-import { TreadCredibilityBar } from "@/components/TreadBranding";
+import { CredibilityBar } from "@/components/CredibilityBar";
 import { parks, platformStats } from "@/lib/data";
 import { siteConfig } from "@/lib/site";
 import { formatCurrency, formatPercent } from "@/lib/utils";
@@ -67,8 +67,8 @@ const features = [
 
 export default function HomePage() {
   const featuredParks = [
-    ...parks.filter((p) => p.ownerId === "owner-tread"),
-    ...parks.filter((p) => p.status === "active" && p.ownerId !== "owner-tread"),
+    ...parks.filter((p) => p.ownerId === "owner-demo"),
+    ...parks.filter((p) => p.status === "active" && p.ownerId !== "owner-demo"),
   ].slice(0, 3);
 
   return (
@@ -83,7 +83,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 animate-fade-in-up">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              By {siteConfig.company.name} — The Experts
+              {siteConfig.name} — The Experts
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up animate-delay-100">
               List. Analyze.{" "}
@@ -92,9 +92,9 @@ export default function HomePage() {
               No Fees. Ever.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl animate-fade-in-up animate-delay-200">
-              The one stop shop for mobile home park transactions — built by{" "}
-              {siteConfig.company.name}, operators of {siteConfig.credentials.spacesOperated} spaces
-              with {siteConfig.credentials.communitiesSold} communities sold. Owners list for free.
+              The one stop shop for mobile home park transactions — operators of{" "}
+              {siteConfig.credentials.spacesOperated} spaces with{" "}
+              {siteConfig.credentials.communitiesSold} communities sold. Owners list for free.
               Buyers access full financials. Banks deploy capital.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
@@ -138,7 +138,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <TreadCredibilityBar />
+      <CredibilityBar />
 
       {/* Role cards */}
       <section className="py-16 sm:py-20 bg-white">
@@ -148,7 +148,7 @@ export default function HomePage() {
               Built for Every Stakeholder
             </h2>
             <p className="mt-3 text-muted max-w-2xl mx-auto">
-              Whether you own, buy, analyze, or finance — Trailer Parks connects the entire MHP
+              Whether you own, buy, analyze, or finance — Mobile Home Parks connects the entire MHP
               ecosystem with zero friction.
             </p>
           </div>

@@ -96,8 +96,8 @@ publish_branch() {
   if git diff --cached --quiet; then
     echo "No changes on ${BRANCH}."
   else
-    git -c user.email="brad@treadcompanies.com" -c user.name="Trailer Parks Deploy" \
-      commit -m "Publish working Trailer Parks site (github.io, no broken CNAME)"
+    git -c user.email="brad@treadcompanies.com" -c user.name="Mobile Home Parks Deploy" \
+      commit -m "Publish working Mobile Home Parks site (github.io, no broken CNAME)"
     git push -u origin "$BRANCH"
     echo "Pushed ${BRANCH}."
   fi

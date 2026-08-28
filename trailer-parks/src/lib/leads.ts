@@ -57,7 +57,7 @@ export function formatLeadForIssue(lead: OwnerLead): string {
     lead.referrer ? `**Referrer:** ${lead.referrer}` : null,
     "",
     `---`,
-    `_Submitted via Trailer Parks /list-your-park_`,
+    `_Submitted via Mobile Home Parks /list-your-park_`,
   ];
   return lines.filter(Boolean).join("\n");
 }

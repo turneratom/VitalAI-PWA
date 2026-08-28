@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "mobile home parks",
-    "trailer parks",
+    "mobile home park marketplace",
     "MHP investing",
     "park underwriting",
     "manufactured housing",

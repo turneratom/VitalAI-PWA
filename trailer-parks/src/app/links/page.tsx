@@ -9,9 +9,9 @@ import { useSiteOrigin } from "@/hooks/useSiteOrigin";
 const siteLinks = [
   { label: "Home", href: "/" },
   { label: "Marketplace", href: "/marketplace/" },
-  { label: "Hollins Estates (Tread)", href: "/parks/tread-hollins/" },
-  { label: "Yellow Mountain (Tread)", href: "/parks/tread-yellow-mountain/" },
-  { label: "Meadowbrook (Tread)", href: "/parks/tread-meadowbrook/" },
+  { label: "Hollins Estates ", href: "/parks/hollins/" },
+  { label: "Yellow Mountain ", href: "/parks/yellow-mountain/" },
+  { label: "Meadowbrook ", href: "/parks/meadowbrook/" },
   { label: "Owner portal", href: "/owners/" },
   { label: "List your park (share)", href: "/list-your-park/?ref=bradley" },
   { label: "Outreach command center", href: "/outreach/" },

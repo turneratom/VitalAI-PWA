@@ -5,22 +5,15 @@ export const LIVE_SITE_URL = "https://turneratom.github.io/VitalAI-PWA";
 export const CUSTOM_DOMAIN_URL = "https://www.mhportal.com";
 
 export const siteConfig = {
-  name: "Trailer Parks",
+  name: "Mobile Home Parks",
   tagline: "The Leader in Mobile Home Park Transactions",
   description:
-    "List your park. View financials. Underwrite deals. Secure capital. No fees. Built by the manufactured housing experts at Tread Companies.",
+    "List your park. View financials. Underwrite deals. Secure capital. No fees. Built for manufactured housing owners, buyers, analysts, and lenders.",
   /** Prefer NEXT_PUBLIC_SITE_URL; otherwise the live GitHub Pages URL. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? LIVE_SITE_URL,
   /** Next.js basePath for GitHub project pages (empty on root/custom-domain hosts). */
   basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
   ownerRecruitmentPath: "/list-your-park",
-  company: {
-    name: "Tread Companies",
-    tagline: "Quality Homes, Smarter Investments",
-    website: "https://www.treadcompanies.com",
-    email: "info@treadcompanies.com",
-    linkedin: "https://www.linkedin.com/company/tread-companies/",
-  },
   team: {
     bradley: {
       name: "Bradley",
@@ -42,7 +35,6 @@ export const siteConfig = {
     uploadList: "/upload-list",
     partner: "/partner",
     links: "/links",
-    tread: "https://www.treadcompanies.com",
   },
   intakeEmail: "brad@treadcompanies.com",
 };

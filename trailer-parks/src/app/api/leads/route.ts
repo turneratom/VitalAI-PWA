@@ -58,7 +58,7 @@ export async function POST(request: Request) {
 
     return Response.json({
       success: true,
-      message: "Lead received. A Tread Companies expert will reach out within 24 hours.",
+      message: "Lead received. A  expert will reach out within 24 hours.",
       stored: emailSent || issueCreated || webhookSent,
     });
   } catch {

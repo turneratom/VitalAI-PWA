@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     return Response.json({
       success: true,
       message:
-        "List received. Bradley gets an email copy, and it's logged for the Trailer Parks agent to process.",
+        "List received. Bradley gets an email copy, and it's logged for the Mobile Home Parks agent to process.",
       filename,
       approximateRows: rowCount,
       emailed: emailOk,
@@ -79,7 +79,7 @@ async function emailListToBradley(opts: {
         _subject: `Owner list upload: ${opts.filename}`,
         _template: "box",
         _captcha: "false",
-        from: "Trailer Parks List Intake",
+        from: "Mobile Home Parks List Intake",
         filename: opts.filename,
         approximate_rows: opts.rowCount ?? "unknown",
         notes: opts.notes || "None",

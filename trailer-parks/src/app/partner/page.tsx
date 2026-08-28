@@ -13,12 +13,12 @@ import { partner } from "@/lib/partner";
 import { siteConfig, withBasePath } from "@/lib/site";
 
 export const metadata = {
-  title: `${partner.name} — ${partner.title} | Trailer Parks`,
+  title: `${partner.name} — ${partner.title} | Mobile Home Parks`,
   description: partner.tagline,
 };
 
 const responsibilities = [
-  "Build and ship the Trailer Parks product",
+  "Build and ship the Mobile Home Parks product",
   "Owner outreach engine & prospect lists",
   "Lead capture → your inbox",
   "Underwriting, buyer, and lender tools",
@@ -28,7 +28,7 @@ const responsibilities = [
 const bradOwns = [
   "Recruit park owners",
   "Relationship-driven sales conversations",
-  "Industry relationships & Tread brand",
+  "Industry relationships & platform brand",
   "Final say on deals and capital partners",
 ];
 
@@ -39,7 +39,7 @@ export default function PartnerPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm mb-6">
             <Handshake className="w-4 h-4 text-accent" />
-            Business partners with {siteConfig.company.name}
+            Business partners on {siteConfig.name}
           </div>
           <div className="flex items-start gap-4">
             <div className="w-16 h-16 rounded-2xl bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
@@ -56,7 +56,7 @@ export default function PartnerPage() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={`mailto:${partner.emailFallback}?subject=Re%3A%20Trailer%20Parks%20partnership`}
+              href={`mailto:${partner.emailFallback}?subject=Re%3A%20Mobile%20Home%20Parks%20partnership`}
               className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-navy font-semibold rounded-lg"
             >
               <Mail className="w-4 h-4" />
@@ -123,17 +123,8 @@ export default function PartnerPage() {
                 <dd className="font-semibold text-navy">{partner.emailFallback}</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-muted">Company</dt>
-                <dd>
-                  <a
-                    href={siteConfig.company.website}
-                    className="font-semibold text-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {siteConfig.company.name}
-                  </a>
-                </dd>
+                <dt className="text-muted">Platform</dt>
+                <dd className="font-semibold text-navy">{siteConfig.name}</dd>
               </div>
             </dl>
           </div>

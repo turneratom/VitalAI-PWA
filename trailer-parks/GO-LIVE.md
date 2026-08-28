@@ -1,4 +1,4 @@
-# How to keep Trailer Parks links working
+# How to keep Mobile Home Parks links working
 
 ## Live site (use this now)
 
@@ -33,7 +33,7 @@ Then Pages → Custom domain → Enforce HTTPS → republish with CNAME.
 
 ## Test checklist
 
-- [ ] Home, marketplace, 3 Tread parks load on github.io
+- [ ] Home, marketplace, 3 demo parks load on github.io
 - [ ] `/links/` copy buttons include `/VitalAI-PWA`
 - [ ] CSV downloads open (not 404)
 - [ ] Only then share with owners

@@ -4,11 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Building2,
-  CheckCircle,
-  DollarSign,
   Users,
-  TrendingUp,
-  Shield,
   ArrowRight,
   Copy,
   Mail,
@@ -23,7 +19,7 @@ import { useSiteOrigin } from "@/hooks/useSiteOrigin";
 import { formatCurrency, formatNumber } from "@/lib/utils";
 
 const { bradley } = siteConfig.team;
-const { company, credentials } = siteConfig;
+const { credentials } = siteConfig;
 
 function buildTemplates(linkFn: (ref?: string) => string) {
   return [
@@ -34,9 +30,9 @@ function buildTemplates(linkFn: (ref?: string) => string) {
     subject: "Sell your mobile home park with $0 fees?",
     body: `Hi [Owner Name],
 
-I'm Bradley with Trailer Parks — a free marketplace built by ${company.name}, manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold.
+I'm Bradley with Mobile Home Parks — a free marketplace for manufactured housing with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold.
 
-Traditional brokers take 6% on a sale. On a $4M park, that's $240,000 out of your pocket. Trailer Parks charges nothing — no listing fee, no success fee.
+Traditional brokers take 6% on a sale. On a $4M park, that's $240,000 out of your pocket. Mobile Home Parks charges nothing — no listing fee, no success fee.
 
 When you list, you get:
 • Exposure to 2,400+ qualified buyers
@@ -50,7 +46,7 @@ Happy to answer any questions — no pressure, no obligation.
 
 Best,
 Bradley
-${company.name} | ${bradley.email}`,
+Mobile Home Parks | ${bradley.email}`,
   },
   {
     id: "follow-up",
@@ -59,7 +55,7 @@ ${company.name} | ${bradley.email}`,
     subject: "Quick follow-up — listing your park for free",
     body: `Hi [Owner Name],
 
-Following up on Trailer Parks. We're the team behind ${company.name} — we've acquired, operated, and sold manufactured housing communities across the country.
+Following up on Mobile Home Parks. We've acquired, operated, and sold manufactured housing communities across the country.
 
 Every listing includes the financial tools buyers and lenders expect: T-12 statements, underwriting metrics, and lender-ready packages. We help you look institutional without paying broker fees.
 
@@ -78,21 +74,21 @@ ${bradley.email}`,
     icon: MessageSquare,
     title: "Text Message",
     subject: null as string | null,
-    body: `Hi [Name], Bradley here from ${company.name}. We built a free marketplace for park owners — zero broker fees. We've operated ${credentials.spacesOperated} spaces. If you're thinking about selling [Park Name]: ${linkFn("sms")}`,
+    body: `Hi [Name], Bradley here from Mobile Home Parks. We built a free marketplace for park owners — zero broker fees. We've operated ${credentials.spacesOperated} spaces. If you're thinking about selling [Park Name]: ${linkFn("sms")}`,
   },
   {
     id: "voicemail",
     icon: Phone,
     title: "Voicemail Script",
     subject: null as string | null,
-    body: `Hi [Name], this is Bradley with ${company.name} and Trailer Parks. We're manufactured housing experts — ${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold — and we built a free marketplace where park owners list with zero fees. No listing fee, no success fee. If you're curious, submit your park in 2 minutes at our website, or call me back at [your number]. My email is ${bradley.email}. Thanks!`,
+    body: `Hi [Name], this is Bradley with Mobile Home Parks. We're manufactured housing experts — ${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold — and we built a free marketplace where park owners list with zero fees. No listing fee, no success fee. If you're curious, submit your park in 2 minutes at our website, or call me back at [your number]. My email is ${bradley.email}. Thanks!`,
   },
   {
     id: "facebook",
     icon: Share2,
     title: "Facebook Group Post",
     subject: null as string | null,
-    body: `Park owners — if you're thinking about selling, check out Trailer Parks. It's a free marketplace built by ${company.name} (${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold).
+    body: `Park owners — if you're thinking about selling, check out Mobile Home Parks. It's a free marketplace (${credentials.spacesOperated} spaces operated, ${credentials.communitiesSold} communities sold).
 
 No listing fees, no success fees. Brokers typically charge 6% — on a $4M park that's $240K.
 
@@ -107,7 +103,7 @@ const objectionHandlers = [
   {
     objection: "I already have a broker.",
     response:
-      "Totally understand. Many owners list on Trailer Parks alongside a broker to maximize exposure — and since we're free, there's no conflict. You only pay the broker if they close the deal.",
+      "Totally understand. Many owners list on Mobile Home Parks alongside a broker to maximize exposure — and since we're free, there's no conflict. You only pay the broker if they close the deal.",
   },
   {
     objection: "I'm not ready to sell yet.",
@@ -121,13 +117,13 @@ const objectionHandlers = [
   },
   {
     objection: "I've never heard of you.",
-    response: `Fair question. Trailer Parks is built by ${company.name} — we've operated ${credentials.spacesOperated} manufactured housing spaces and sold ${credentials.communitiesSold} communities. Visit ${company.website.replace("https://www.", "")} or email me at ${bradley.email}. Happy to walk you through it in 10 minutes.`,
+    response: `Fair question. Mobile Home Parks is a manufactured housing marketplace — we've operated ${credentials.spacesOperated} spaces and sold ${credentials.communitiesSold} communities. Email me at ${bradley.email}. Happy to walk you through it in 10 minutes.`,
   },
 ];
 
 const targetChannels = [
   { icon: MapPin, title: "Drive the park", detail: "Stop by local parks and leave a card or talk to the manager." },
-  { icon: Users, title: "Facebook groups", detail: "Search 'mobile home park owners', 'MHP investing', 'trailer park owners'." },
+  { icon: Users, title: "Facebook groups", detail: "Search 'mobile home park owners', 'MHP investing', 'mobile home park owners'." },
   { icon: Mail, title: "County records", detail: "Pull park ownership records from county assessor databases." },
   { icon: Building2, title: "Industry events", detail: "MHI Congress, state manufactured housing association meetings." },
   { icon: Phone, title: "Warm introductions", detail: "Ask buyers and lenders on the platform for owner referrals." },
@@ -209,7 +205,7 @@ export default function OwnerOutreachPage() {
         <section className="bg-card rounded-xl p-6 card-shadow border border-border">
           <h2 className="font-display text-xl font-bold text-navy mb-3">30-Second Pitch</h2>
           <blockquote className="text-muted leading-relaxed border-l-4 border-accent pl-4 italic">
-            &ldquo;Trailer Parks is built by {company.name} — manufactured housing experts with{" "}
+            &ldquo;Mobile Home Parks is a manufactured housing marketplace with{" "}
             {credentials.spacesOperated} spaces operated and {credentials.communitiesSold}{" "}
             communities sold. Owners list for zero dollars — no listing fee, no success fee. We
             connect you with buyers, underwriters, and lenders on one platform. Traditional brokers
@@ -217,7 +213,7 @@ export default function OwnerOutreachPage() {
           </blockquote>
           <div className="mt-3">
             <CopyButton
-              text={`Trailer Parks is built by ${company.name} — manufactured housing experts with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold. Owners list for zero dollars — no listing fee, no success fee. Traditional brokers take 6%. We take nothing. ${recruitmentLink}`}
+              text={`Mobile Home Parks is a manufactured housing marketplace with ${credentials.spacesOperated} spaces operated and ${credentials.communitiesSold} communities sold. Owners list for zero dollars — no listing fee, no success fee. Traditional brokers take 6%. We take nothing. ${recruitmentLink}`}
             />
           </div>
         </section>
@@ -237,10 +233,10 @@ export default function OwnerOutreachPage() {
                 </div>
                 {template.subject && (
                   <p className="text-xs text-muted mb-2">
-                    <strong>Subject:</strong> {template.subject}
+                    <span className="font-medium text-navy">Subject:</span> {template.subject}
                   </p>
                 )}
-                <pre className="text-sm text-muted whitespace-pre-wrap font-sans leading-relaxed">
+                <pre className="text-sm text-muted whitespace-pre-wrap font-sans leading-relaxed bg-background rounded-lg p-4 border border-border">
                   {template.body}
                 </pre>
               </div>
@@ -248,58 +244,58 @@ export default function OwnerOutreachPage() {
           </div>
         </section>
 
-        {/* Objection handlers */}
+        {/* Objections */}
         <section>
           <h2 className="font-display text-xl font-bold text-navy mb-4">Objection Handlers</h2>
           <div className="space-y-3">
             {objectionHandlers.map((item) => (
               <div key={item.objection} className="bg-card rounded-xl p-5 card-shadow border border-border">
-                <p className="text-sm font-semibold text-navy mb-1">
-                  &ldquo;{item.objection}&rdquo;
-                </p>
+                <p className="font-semibold text-navy mb-2">&ldquo;{item.objection}&rdquo;</p>
                 <p className="text-sm text-muted leading-relaxed">{item.response}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Where to find owners */}
+        {/* Channels */}
         <section>
           <h2 className="font-display text-xl font-bold text-navy mb-4">Where to Find Owners</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {targetChannels.map((channel) => (
-              <div key={channel.title} className="flex gap-3 p-4 bg-card rounded-xl border border-border">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <channel.icon className="w-4 h-4 text-primary" />
-                </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {targetChannels.map((ch) => (
+              <div key={ch.title} className="bg-card rounded-xl p-5 card-shadow border border-border flex gap-3">
+                <ch.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-navy text-sm">{channel.title}</p>
-                  <p className="text-xs text-muted mt-0.5">{channel.detail}</p>
+                  <h3 className="font-semibold text-navy">{ch.title}</h3>
+                  <p className="text-sm text-muted mt-1">{ch.detail}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Stats to cite */}
+        {/* Stats reminder */}
         <section className="bg-navy text-white rounded-2xl p-6">
-          <h2 className="font-display text-xl font-bold mb-4">Numbers to Cite</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="flex flex-wrap gap-6 justify-between items-center">
             <div>
-              <p className="text-2xl font-bold text-accent">{credentials.spacesOperated}</p>
-              <p className="text-xs text-white/60 mt-1">Spaces operated</p>
+              <h2 className="font-display text-xl font-bold mb-1">Remember the numbers</h2>
+              <p className="text-white/70 text-sm">
+                Lead with platform credibility — {credentials.spacesOperated} spaces,{" "}
+                {credentials.communitiesSold} sold, {formatNumber(platformStats.dealsClosed)}+ deals.
+              </p>
             </div>
-            <div>
-              <p className="text-2xl font-bold text-accent">{credentials.communitiesSold}</p>
-              <p className="text-xs text-white/60 mt-1">Communities sold</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-accent">{platformStats.activeLenders}</p>
-              <p className="text-xs text-white/60 mt-1">Active lenders</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-accent">$0</p>
-              <p className="text-xs text-white/60 mt-1">Owner fees</p>
+            <div className="flex gap-4 text-center">
+              <div>
+                <p className="text-2xl font-bold text-accent">{credentials.spacesOperated}</p>
+                <p className="text-xs text-white/50">Spaces</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-accent">{credentials.communitiesSold}</p>
+                <p className="text-xs text-white/50">Sold</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-accent">{formatCurrency(240000)}</p>
+                <p className="text-xs text-white/50">6% on $4M</p>
+              </div>
             </div>
           </div>
         </section>
