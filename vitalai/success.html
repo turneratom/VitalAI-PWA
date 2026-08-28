@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to VitalAI Pro!</title>
+  <link rel="stylesheet" href="tools/tools.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1>VitalAI</h1><p>Payment successful</p></div>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>You're upgraded!</h2>
+      <p id="msg">Activating your subscription...</p>
+      <a class="btn" href="index.html">Open VitalAI App</a>
+      <a class="btn btn-secondary" href="tools/index.html" style="margin-left:0.5rem;">Browse Tools</a>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const sessionId = params.get('session_id');
+    const tier = params.get('tier') || 'pro';
+    async function activate() {
+      if (sessionId) {
+        try {
+          const res = await fetch(`/api/verify-session?session_id=${encodeURIComponent(sessionId)}`);
+          const data = await res.json();
+          if (data.verified) {
+            localStorage.setItem('vitalai_tier', data.tier || tier);
+            document.getElementById('msg').textContent = `VitalAI ${data.tier || tier} is active. Unlimited snaps unlocked.`;
+            return;
+          }
+        } catch { /* fall through */ }
+      }
+      localStorage.setItem('vitalai_tier', tier);
+      document.getElementById('msg').textContent = `VitalAI ${tier} activated locally.`;
+    }
+    activate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+BOT NAME: Pinterest Bot — VitalAI Traffic Funnel
+
+CHARTER:
+You own daily Pinterest pin production funneling to vitalai.app
+
+Daily at 9:00 AM:
+Create 5 pins:
+1. BMI calculator pin → vitalai.app/tools/bmi-calculator.html
+2. TDEE calculator pin → vitalai.app/tools/tdee-calculator.html
+3. Macro calculator pin → vitalai.app/tools/macro-calculator.html
+4. Health tips pin → vitalai.app/tools/ (newsletter signup)
+5. AI health app pin → vitalai.app/affiliate/best-ai-health-apps.html
+
+For each pin:
+- Title: keyword-rich, under 100 chars
+- Description: 150–200 words, natural keywords
+- Image brief: green/white VitalAI brand, bold stat or question
+- Board: "Health Calculators" or "AI Health Tips"
+
+Weekly Monday:
+1. Pull top 10 pins by impressions and outbound clicks
+2. Recommend 5 new keywords from Kimi swarm
+
+STOP RULE:
+Only pin to vitalai.app URLs.
+No copyrighted images — use Canva templates or brand assets.
+Schedule via Tailwind — never post without review first week.
+
+MATH TARGET:
+500 pins × 200 impressions × 3% CTR = 3,000 visits/mo
+→ tool pages (AdSense) + VitalAI Pro signups
