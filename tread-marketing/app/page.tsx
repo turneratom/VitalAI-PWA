@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { HeroShell, SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { links } from "@/lib/links";
+
+export const metadata: Metadata = {
+  title: "Master Traffic Generation",
+  description:
+    "How to become a master at generating traffic, monetise it with affiliate offers, and escape the 9–5. Skills, vehicles, and monetisation.",
+};
 
 const wins = [
   "Generate 6 figures from affiliate marketing organically",
@@ -81,40 +90,17 @@ const desires = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
-      <header className="absolute inset-x-0 top-0 z-20">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 md:px-8">
-          <a href="#top" className="font-display text-lg font-extrabold tracking-tight text-white md:text-xl">
-            TREAD <span className="text-signal">Marketing</span>
-          </a>
-          <nav className="hidden items-center gap-6 text-sm text-white/70 sm:flex">
-            <a href="#skills" className="transition hover:text-signal">
-              Skills
-            </a>
-            <a href="#vehicle" className="transition hover:text-signal">
-              Vehicle
-            </a>
-            <a href="#monetisation" className="transition hover:text-signal">
-              Monetisation
-            </a>
-            <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
-            >
-              Join Glitchy
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader
+        links={[
+          { href: "#skills", label: "Skills" },
+          { href: "#vehicle", label: "Vehicle" },
+          { href: "#monetisation", label: "Monetisation" },
+          { href: "/hands-off", label: "Hands-off" },
+        ]}
+      />
 
-      {/* HERO — one composition: brand, headline, support, CTAs, full-bleed plane */}
-      <section id="top" className="hero-plane hero-grain relative min-h-[100svh] overflow-hidden text-white">
-        <div className="hero-lanes lane-sweep pointer-events-none absolute inset-0 opacity-60" />
-        <div className="pointer-events-none absolute -right-20 top-24 h-72 w-72 rounded-full bg-cone/20 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-10 left-10 h-56 w-56 rounded-full bg-signal/15 blur-3xl" />
-
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
+      <div id="top">
+        <HeroShell>
           <div className="animate-rise mb-5 flex items-center gap-3">
             <span className="pulse-dot inline-block h-2.5 w-2.5 rounded-full bg-signal" />
             <p className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -148,8 +134,8 @@ export default function HomePage() {
               Start with Glitchy
             </a>
           </div>
-        </div>
-      </section>
+        </HeroShell>
+      </div>
 
       {/* Credibility strip — not in hero */}
       <section className="border-b border-line bg-ink text-white">
@@ -530,52 +516,29 @@ export default function HomePage() {
               Questions? Drop a comment and I’ll help to the best of my ability.
             </p>
           </div>
+
+          <div className="mt-10 border-t border-line pt-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cone">
+              Next
+            </p>
+            <h3 className="mt-3 font-display text-2xl font-extrabold">
+              Ready to build the operation?
+            </h3>
+            <p className="mt-3 max-w-xl text-muted">
+              After traffic skills: the 6-month path from doing everything
+              yourself to a hands-off affiliate system.
+            </p>
+            <Link
+              href="/hands-off"
+              className="mt-6 inline-flex bg-ink px-5 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-cone"
+            >
+              Hands-off roadmap →
+            </Link>
+          </div>
         </section>
       </article>
 
-      <footer className="bg-ink text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-14 md:flex-row md:items-end md:justify-between md:px-8">
-          <div>
-            <p className="font-display text-2xl font-extrabold">
-              TREAD <span className="text-signal">Marketing</span>
-            </p>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60">
-              Traffic skills. Platform vehicles. Affiliate monetisation. Built
-              for people who are done waiting for permission to earn.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-signal transition hover:text-white"
-            >
-              Glitchy
-            </a>
-            <a
-              href={links.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/70 transition hover:text-signal"
-            >
-              Telegram
-            </a>
-            <a href="#skills" className="text-white/70 transition hover:text-signal">
-              Skills
-            </a>
-            <a href="#vehicle" className="text-white/70 transition hover:text-signal">
-              Vehicle
-            </a>
-            <a
-              href="#monetisation"
-              className="text-white/70 transition hover:text-signal"
-            >
-              Monetisation
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

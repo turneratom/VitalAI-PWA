@@ -1,6 +1,13 @@
 # TREAD Marketing
 
-Long-form traffic generation guide for **TREAD Marketing** — Skills → Vehicle → Monetisation.
+Long-form affiliate marketing guides for **TREAD Marketing**.
+
+## Pages
+
+| Path | Content |
+|------|---------|
+| `/` | Traffic generation — Skills → Vehicle → Monetisation |
+| `/hands-off` | 6-month roadmap from zero to a hands-off operation |
 
 ## Run locally
 

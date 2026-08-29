@@ -15,15 +15,12 @@ const body = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "TREAD Marketing — Master Traffic Generation",
-  description:
-    "How to become a master at generating traffic, monetise it with affiliate offers, and escape the 9–5. Skills, vehicles, and monetisation — broken into three steps.",
-  openGraph: {
-    title: "TREAD Marketing — Master Traffic Generation",
-    description:
-      "From 9–5 to $30k/month by learning the most valuable skill of this era: generating traffic.",
-    type: "article",
+  title: {
+    default: "TREAD Marketing",
+    template: "%s | TREAD Marketing",
   },
+  description:
+    "Traffic generation skills, platform vehicles, and hands-off affiliate systems — from first dollars to an operation that runs without you.",
 };
 
 export default function RootLayout({
