@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything Films — Wedding &amp; Life Movies</title>
+  <meta name="description" content="Send your pictures, videos, and everything. We craft a cinematic wedding movie or life movie. 30 minutes $10,000. 60 minutes $15,000." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #142028;
+      --ink-soft: #3a4a54;
+      --fog: #dfe7ec;
+      --mist: #f2f6f8;
+      --paper: #fafbfc;
+      --teal: #1f5c5c;
+      --teal-deep: #154646;
+      --gold: #b08d57;
+      --line: rgba(20, 32, 40, 0.12);
+      --shadow: 0 24px 60px rgba(20, 32, 40, 0.18);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Outfit", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .serif {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-optical-sizing: auto;
+    }
+
+    /* —— Atmosphere —— */
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* —— Nav —— */
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 6vw;
+      color: #fff;
+    }
+
+    .nav-brand {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    .nav-cta {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      padding-bottom: 0.15rem;
+      transition: border-color 0.3s var(--ease);
+    }
+
+    .nav-cta:hover { border-color: #fff; }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transform: scale(1.06);
+      animation: heroDrift 18s var(--ease) infinite alternate;
+    }
+
+    @keyframes heroDrift {
+      from { transform: scale(1.06) translate3d(0, 0, 0); }
+      to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+    }
+
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10, 18, 24, 0.35) 0%, rgba(10, 18, 24, 0.15) 35%, rgba(10, 18, 24, 0.72) 100%),
+        radial-gradient(ellipse at 20% 10%, rgba(176, 141, 87, 0.22), transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 0 6vw 12vh;
+      max-width: 42rem;
+      animation: riseIn 1.1s var(--ease) both;
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-brand {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(3.4rem, 9vw, 6.5rem);
+      line-height: 0.92;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-line {
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+      font-weight: 300;
+      max-width: 28rem;
+      margin-bottom: 0.85rem;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.78);
+      max-width: 26rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.55rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--mist);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* —— Sections —— */
+    section {
+      padding: 6.5rem 6vw;
+    }
+
+    .section-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-title {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      max-width: 36rem;
+    }
+
+    /* —— Offer —— */
+    .offer {
+      background:
+        linear-gradient(135deg, #e8f0f2 0%, #f7f9fa 45%, #ebe4d8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer::before {
+      content: "";
+      position: absolute;
+      width: 55vmax;
+      height: 55vmax;
+      right: -18vmax;
+      top: -20vmax;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 92, 92, 0.12), transparent 65%);
+      animation: floatOrb 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatOrb {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-4%, 6%); }
+    }
+
+    .offer-grid {
+      position: relative;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+      align-items: end;
+    }
+
+    @media (min-width: 860px) {
+      .offer-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 5rem;
+      }
+    }
+
+    .offer-list {
+      list-style: none;
+      display: grid;
+      gap: 1.35rem;
+      margin-top: 2.2rem;
+    }
+
+    .offer-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .offer-list li.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .offer-num {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .offer-list strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .offer-list span {
+      font-weight: 300;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .offer-visual {
+      position: relative;
+      min-height: 22rem;
+      overflow: hidden;
+    }
+
+    .offer-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 22rem;
+      object-fit: cover;
+      filter: saturate(0.92) contrast(1.05);
+    }
+
+    .offer-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(20,32,40,0.25), transparent 50%);
+    }
+
+    /* —— Packages —— */
+    .packages {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .packages .section-kicker { color: var(--gold); }
+    .packages .section-lead { color: rgba(255,255,255,0.7); }
+
+    .price-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .price-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .price {
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 2.2rem 2rem 2rem;
+      background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 60%);
+      transition: border-color 0.35s var(--ease), transform 0.45s var(--ease);
+    }
+
+    .price:hover {
+      border-color: rgba(176, 141, 87, 0.55);
+      transform: translateY(-4px);
+    }
+
+    .price-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .price-runtime {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      line-height: 1;
+      margin-bottom: 0.55rem;
+    }
+
+    .price-amount {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.4rem;
+    }
+
+    .price-amount em {
+      font-style: normal;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .price ul {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 1.75rem;
+    }
+
+    .price ul li::before {
+      content: "—";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    .btn-on-dark {
+      background: var(--gold);
+      color: var(--ink);
+      width: 100%;
+    }
+
+    .btn-on-dark:hover {
+      background: #c4a36d;
+      transform: translateY(-2px);
+    }
+
+    .price-note {
+      margin-top: 1.75rem;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      max-width: 36rem;
+    }
+
+    /* —— How —— */
+    .how {
+      background: var(--mist);
+    }
+
+    .steps {
+      display: grid;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      counter-reset: step;
+    }
+
+    @media (min-width: 800px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .step {
+      counter-increment: step;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--teal);
+      margin-bottom: 0.85rem;
+    }
+
+    .step h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+    }
+
+    .step p {
+      font-weight: 300;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    /* —— Partners / monitor —— */
+    .channels {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .channel-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 800px) {
+      .channel-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    .channel h3 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      margin-bottom: 0.55rem;
+    }
+
+    .channel p {
+      font-weight: 300;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+      max-width: 28rem;
+    }
+
+    .channel ul {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    .channel ul li::before {
+      content: "—";
+      margin-right: 0.5rem;
+      color: var(--gold);
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .btn-teal:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
+    /* —— Inquiry —— */
+    .inquiry {
+      background:
+        linear-gradient(180deg, #f7f4ef 0%, #eef3f5 100%);
+    }
+
+    .inquiry-wrap {
+      display: grid;
+      gap: 2.5rem;
+      max-width: 44rem;
+    }
+
+    .form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    label {
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+
+    input, select, textarea {
+      font: inherit;
+      font-size: 1rem;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 400;
+      color: var(--ink);
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--line);
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.25s var(--ease);
+      width: 100%;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--teal);
+    }
+
+    textarea { min-height: 7.5rem; resize: vertical; }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .btn-submit {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .btn-submit:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .form-hint {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+    }
+
+    .form-status {
+      font-size: 0.95rem;
+      color: var(--teal);
+      min-height: 1.4em;
+    }
+
+    /* —— Footer —— */
+    footer {
+      padding: 2.5rem 6vw 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      background: var(--paper);
+    }
+
+    footer .serif {
+      color: var(--ink);
+      font-size: 1.1rem;
+    }
+
+    footer a:hover { color: var(--teal); }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav-brand" href="#top">Everything Films</a>
+    <div class="nav-links">
+      <a href="./outreach/">Outreach</a>
+      <a class="nav-cta" href="#inquire">Begin</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=2400&amp;q=80"
+          alt="Couple walking outdoors at golden hour"
+          width="2400"
+          height="1600"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 class="hero-brand">Everything Films</h1>
+        <p class="hero-line">Wedding movies. Life movies.</p>
+        <p class="hero-sub">Send pictures. Send videos. Send everything. We cut it into a film you will keep forever.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#packages">See packages</a>
+          <a class="btn btn-ghost" href="#inquire">Start a film</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="offer" aria-labelledby="offer-title">
+      <div class="offer-grid">
+        <div>
+          <p class="section-kicker">What we make</p>
+          <h2 class="section-title" id="offer-title">Your archive, told as cinema.</h2>
+          <p class="section-lead">
+            No crew at your wedding. No studio day. You already have the footage of a lifetime —
+            we shape it into a finished movie with music, pacing, and a story arc.
+          </p>
+          <ul class="offer-list">
+            <li>
+              <span class="offer-num">01</span>
+              <div>
+                <strong>Wedding movies</strong>
+                <span>From engagement through reception — guests, vows, the quiet in-between.</span>
+              </div>
+            </li>
+            <li>
+              <span class="offer-num">02</span>
+              <div>
+                <strong>Life movies</strong>
+                <span>Childhood to now. Anniversaries, family histories, a year you want remembered.</span>
+              </div>
+            </li>
+            <li>
+              <span class="offer-num">03</span>
+              <div>
+                <strong>Send everything</strong>
+                <span>Phone clips, albums, old DVDs, voice notes. We sort, restore, and build the cut.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="offer-visual">
+          <img
+            src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+            alt="Scattered family photographs ready to become a film"
+            width="1400"
+            height="1600"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages" aria-labelledby="packages-title">
+      <p class="section-kicker">Packages</p>
+      <h2 class="section-title" id="packages-title">Two runtimes. One standard.</h2>
+      <p class="section-lead">Finished HD film, licensed music, private review link, and two revision rounds.</p>
+
+      <div class="price-grid">
+        <article class="price">
+          <p class="price-label">Featurette</p>
+          <h3 class="price-runtime">30 minutes</h3>
+          <p class="price-amount"><em>$10,000</em></p>
+          <ul>
+            <li>Wedding film or focused life chapter</li>
+            <li>Up to ~2,000 photos &amp; clips curated</li>
+            <li>Custom titles &amp; score</li>
+            <li>Private stream + download masters</li>
+          </ul>
+          <a class="btn btn-on-dark" href="#inquire" data-package="30">Choose 30 min</a>
+        </article>
+
+        <article class="price">
+          <p class="price-label">Feature</p>
+          <h3 class="price-runtime">60 minutes</h3>
+          <p class="price-amount"><em>$15,000</em></p>
+          <ul>
+            <li>Full wedding weekend or life story</li>
+            <li>Up to ~5,000 photos &amp; clips curated</li>
+            <li>Chaptered narrative &amp; score</li>
+            <li>Private stream + download masters</li>
+          </ul>
+          <a class="btn btn-on-dark" href="#inquire" data-package="60">Choose 60 min</a>
+        </article>
+      </div>
+      <p class="price-note">Travel and on-site filming are not included — this is a send-everything production. Need both a wedding cut and a life cut? Ask when you inquire.</p>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="how-title">
+      <p class="section-kicker">How it works</p>
+      <h2 class="section-title" id="how-title">Send it. We make the movie.</h2>
+      <p class="section-lead">A private, guided process from first drop to final cut.</p>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Send everything</h3>
+          <p>After we book, you get a secure upload link. Dump phones, hard drives, scanned albums — we take it all.</p>
+        </article>
+        <article class="step">
+          <h3>We shape the story</h3>
+          <p>Editors build a narrative arc, sync music, and restore what needs restoring. You review a private cut.</p>
+        </article>
+        <article class="step">
+          <h3>You keep the film</h3>
+          <p>Two revision rounds, then masters for streaming, TV, and sharing with family.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="channels" id="channels" aria-labelledby="channels-title">
+      <p class="section-kicker">Growth engine</p>
+      <h2 class="section-title" id="channels-title">Find the moment. Offer the film.</h2>
+      <p class="section-lead">Partners refer. Announcements surface. We auto-draft a journey email — wedding, birth, or life remembered.</p>
+
+      <div class="channel-grid">
+        <article class="channel">
+          <h3>Wedding planners &amp; funeral homes</h3>
+          <p>Preferred-partner outreach so planners and funeral directors can offer a film without running a production company.</p>
+          <ul>
+            <li>Planner referrals for wedding movies</li>
+            <li>Funeral-home referrals for life movies</li>
+            <li>One-click partner emails from the outreach desk</li>
+          </ul>
+          <a class="btn btn-teal" href="./outreach/">Open partner outreach</a>
+        </article>
+        <article class="channel">
+          <h3>Announcements → auto email</h3>
+          <p>Watch wedding announcements, birth announcements, and obituaries. When the cooling window clears, queue a respectful “document your journey” email.</p>
+          <ul>
+            <li>Weddings: ready same day</li>
+            <li>Births: wait 14 days</li>
+            <li>Obituaries: wait 7 days · soft tone</li>
+          </ul>
+          <a class="btn btn-teal" href="./outreach/#announcements">Open announcement monitor</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="inquiry" id="inquire" aria-labelledby="inquire-title">
+      <div class="inquiry-wrap">
+        <div>
+          <p class="section-kicker">Begin</p>
+          <h2 class="section-title" id="inquire-title">Tell us what you have.</h2>
+          <p class="section-lead">Share a little about the wedding or the life. We’ll reply with next steps and an upload plan.</p>
+        </div>
+
+        <form class="form" id="inquiry-form" action="mailto:brad@treadcompanies.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" name="name" id="name" required autocomplete="name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" id="email" required autocomplete="email" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Package
+              <select name="package" id="package" required>
+                <option value="">Select…</option>
+                <option value="30 min — $10,000">30 minutes — $10,000</option>
+                <option value="60 min — $15,000">60 minutes — $15,000</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </label>
+            <label>
+              Film type
+              <select name="type" id="type" required>
+                <option value="">Select…</option>
+                <option value="Wedding movie">Wedding movie</option>
+                <option value="Life movie">Life movie</option>
+                <option value="Both">Both</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            What can you send?
+            <textarea name="materials" id="materials" placeholder="Photos, iPhone videos, old camcorder tapes, scanned albums…" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-submit" type="submit">Send inquiry</button>
+            <p class="form-hint">Or email <a href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20inquiry">brad@treadcompanies.com</a></p>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="serif">Everything Films</p>
+    <p>A Tread Companies studio · <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll(".offer-list li");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+        items.forEach(function (el, i) {
+          el.style.transitionDelay = i * 120 + "ms";
+          io.observe(el);
+        });
+      } else {
+        items.forEach(function (el) {
+          el.classList.add("in");
+        });
+      }
+
+      document.querySelectorAll("[data-package]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var pkg = btn.getAttribute("data-package");
+          var select = document.getElementById("package");
+          if (!select) return;
+          if (pkg === "30") select.value = "30 min — $10,000";
+          if (pkg === "60") select.value = "60 min — $15,000";
+        });
+      });
+
+      var form = document.getElementById("inquiry-form");
+      var status = document.getElementById("form-status");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = document.getElementById("name").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var pkg = document.getElementById("package").value;
+          var type = document.getElementById("type").value;
+          var materials = document.getElementById("materials").value.trim();
+          var subject = encodeURIComponent("Everything Films — " + type + " (" + pkg + ")");
+          var body = encodeURIComponent(
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Package: " + pkg + "\n" +
+            "Film type: " + type + "\n\n" +
+            "What I can send:\n" + materials
+          );
+          status.textContent = "Opening your email…";
+          window.location.href = "mailto:brad@treadcompanies.com?subject=" + subject + "&body=" + body;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

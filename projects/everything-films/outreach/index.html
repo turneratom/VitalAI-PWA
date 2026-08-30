@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outreach — Everything Films</title>
+  <meta name="description" content="Partner and announcement outreach for Everything Films: wedding planners, funeral homes, weddings, births, obituaries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #142028;
+      --ink-soft: #3a4a54;
+      --mist: #f2f6f8;
+      --paper: #fafbfc;
+      --teal: #1f5c5c;
+      --teal-deep: #154646;
+      --gold: #b08d57;
+      --line: rgba(20, 32, 40, 0.12);
+      --warn: #8a5a2b;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Outfit", sans-serif;
+      color: var(--ink);
+      background: var(--mist);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 4vw;
+      background: var(--ink);
+      color: #fff;
+    }
+    header .brand {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.35rem;
+    }
+    header nav { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; }
+    header nav a { opacity: 0.8; border-bottom: 1px solid transparent; }
+    header nav a:hover { opacity: 1; border-color: rgba(255,255,255,0.5); }
+    .wrap { padding: 1.75rem 4vw 3rem; max-width: 1100px; margin: 0 auto; }
+    h1 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .lede { color: var(--ink-soft); font-weight: 300; max-width: 40rem; margin-bottom: 1.5rem; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (min-width: 720px) {
+      .stats { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 1rem 1.1rem;
+    }
+    .stat strong {
+      display: block;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat span { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .tabs button, #filters button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      padding: 0.55rem 0.9rem;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .tabs button.on, #filters button.on {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+    #search {
+      flex: 1;
+      min-width: 180px;
+      border: 1px solid var(--line);
+      padding: 0.6rem 0.85rem;
+      font: inherit;
+      background: #fff;
+    }
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1rem;
+      font: inherit;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .btn:hover { background: var(--teal-deep); }
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .btn.ghost:hover { border-color: var(--teal); color: var(--teal); }
+    .btn.disabled, .btn[disabled] {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .file-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .file-btn input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    #filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      min-height: 2.2rem;
+    }
+    #filters .sep { width: 1px; height: 1.2rem; background: var(--line); margin: 0 0.25rem; }
+    #filters .hint { font-size: 0.88rem; color: var(--ink-soft); font-weight: 300; }
+    .panel-title {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.85rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 1.15rem 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+    .card.sent { opacity: 0.72; }
+    .card.waiting { border-left: 3px solid var(--gold); }
+    .card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    @media (min-width: 800px) {
+      .card-top { flex-direction: row; justify-content: space-between; }
+    }
+    .tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .tag.obituary { color: var(--warn); }
+    .tag.wedding { color: var(--teal); }
+    .tag.birth { color: #2f6b4f; }
+    h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .meta { font-size: 0.88rem; color: var(--ink-soft); font-weight: 300; }
+    .notes { font-size: 0.9rem; margin-top: 0.45rem; font-weight: 300; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: flex-start; }
+    details { margin-top: 0.85rem; }
+    summary {
+      cursor: pointer;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    pre {
+      margin-top: 0.6rem;
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.78rem;
+      background: var(--mist);
+      padding: 0.85rem;
+      border: 1px solid var(--line);
+      max-height: 220px;
+      overflow: auto;
+    }
+    .empty { color: var(--ink-soft); padding: 2rem 0; }
+    .queue-bar {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rules {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+    }
+    .rules strong { color: var(--ink); font-weight: 500; }
+    .rules ul { margin: 0.6rem 0 0 1.1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="../">Everything Films</a>
+    <nav>
+      <a href="../">Site</a>
+      <a href="./">Outreach</a>
+      <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <h1>Journey outreach</h1>
+    <p class="lede">
+      Wedding planners and funeral homes as partners. Monitor wedding announcements, birth announcements, and obituaries —
+      then auto-draft emails inviting families to document their journey.
+    </p>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="toolbar">
+      <div class="tabs">
+        <button type="button" data-tab="partners" class="on">Partners</button>
+        <button type="button" data-tab="announcements">Announcements</button>
+        <button type="button" data-tab="queue">Auto-send queue</button>
+      </div>
+      <input id="search" type="search" placeholder="Search name, city, email…" />
+    </div>
+
+    <div class="tools">
+      <button type="button" class="btn" id="email-all-partners">Start auto-send</button>
+      <label class="btn ghost file-btn">
+        Import announcements CSV
+        <input id="import-csv" type="file" accept=".csv,text/csv" />
+      </label>
+      <a class="btn ghost" href="../data/announcements.sample.csv" download>Sample CSV</a>
+    </div>
+
+    <div id="filters"></div>
+    <h2 class="panel-title" id="panel-title">Partner outreach</h2>
+    <div id="list"></div>
+
+    <div class="rules">
+      <strong>Send rules</strong>
+      <ul>
+        <li>Wedding announcements: ready immediately.</li>
+        <li>Birth announcements: wait 14 days after publish date.</li>
+        <li>Obituaries: wait 7 days; soft tone; funeral-home partners preferred first.</li>
+        <li>Import CSV columns: kind, headline, subjectName, contactName, email, city, state, publishedOn, source, snippet, funeralHome.</li>
+        <li>Sample partner emails use <code>.example</code> addresses — replace with real lists before sending.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
