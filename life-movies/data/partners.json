@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "product": "Everything Films",
+    "contact": "brad@treadcompanies.com",
+    "company": "Tread Companies",
+    "sitePath": "/life-movies/",
+    "updated": "2026-08-30"
+  },
+  "partners": [
+    {
+      "id": "wp-001",
+      "type": "wedding_planner",
+      "name": "Harper & Vine Events",
+      "contact": "Maya Harper",
+      "email": "maya@harpervine.example",
+      "phone": "(704) 555-0142",
+      "city": "Charlotte",
+      "state": "NC",
+      "notes": "Full-service planners · 40+ weddings/year"
+    },
+    {
+      "id": "wp-002",
+      "type": "wedding_planner",
+      "name": "Southern Light Planning",
+      "contact": "Elena Brooks",
+      "email": "elena@southernlight.example",
+      "phone": "(919) 555-0188",
+      "city": "Raleigh",
+      "state": "NC",
+      "notes": "Luxury destination + local"
+    },
+    {
+      "id": "wp-003",
+      "type": "wedding_planner",
+      "name": "Goldfinch Weddings",
+      "contact": "Jordan Lee",
+      "email": "jordan@goldfinchweddings.example",
+      "phone": "(843) 555-0110",
+      "city": "Charleston",
+      "state": "SC",
+      "notes": "Boutique · strong photo/video vendor list"
+    },
+    {
+      "id": "wp-004",
+      "type": "wedding_planner",
+      "name": "Atlas & Oak Co.",
+      "contact": "Priya Shah",
+      "email": "priya@atlasoak.example",
+      "phone": "(404) 555-0167",
+      "city": "Atlanta",
+      "state": "GA",
+      "notes": "Multi-cultural celebrations"
+    },
+    {
+      "id": "wp-005",
+      "type": "wedding_planner",
+      "name": "Coastal Vow Studio",
+      "contact": "Sam Rivera",
+      "email": "sam@coastalvow.example",
+      "phone": "(757) 555-0193",
+      "city": "Virginia Beach",
+      "state": "VA",
+      "notes": "Beach + venue partnerships"
+    },
+    {
+      "id": "fh-001",
+      "type": "funeral_home",
+      "name": "Whitmore Family Funeral Home",
+      "contact": "Daniel Whitmore",
+      "email": "daniel@whitmorefamily.example",
+      "phone": "(704) 555-0201",
+      "city": "Charlotte",
+      "state": "NC",
+      "notes": "Independent · 2 chapels"
+    },
+    {
+      "id": "fh-002",
+      "type": "funeral_home",
+      "name": "Riverbend Memorial Chapel",
+      "contact": "Grace Nguyen",
+      "email": "grace@riverbendmemorial.example",
+      "phone": "(919) 555-0224",
+      "city": "Durham",
+      "state": "NC",
+      "notes": "Offers tribute video kiosk today"
+    },
+    {
+      "id": "fh-003",
+      "type": "funeral_home",
+      "name": "Oak & Stone Funeral Care",
+      "contact": "Marcus Cole",
+      "email": "marcus@oakandstone.example",
+      "phone": "(803) 555-0239",
+      "city": "Columbia",
+      "state": "SC",
+      "notes": "Multi-location · legacy packages"
+    },
+    {
+      "id": "fh-004",
+      "type": "funeral_home",
+      "name": "Heritage Grove Mortuary",
+      "contact": "Lila Bennett",
+      "email": "lila@heritagegrove.example",
+      "phone": "(678) 555-0255",
+      "city": "Marietta",
+      "state": "GA",
+      "notes": "Strong family-owned brand"
+    },
+    {
+      "id": "fh-005",
+      "type": "funeral_home",
+      "name": "Seaside Remembrance Center",
+      "contact": "Owen Park",
+      "email": "owen@seasideremembrance.example",
+      "phone": "(757) 555-0270",
+      "city": "Norfolk",
+      "state": "VA",
+      "notes": "Celebration-of-life focus"
+    }
+  ]
+}

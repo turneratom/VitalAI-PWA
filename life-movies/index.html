@@ -481,6 +481,78 @@
       font-size: 0.98rem;
     }
 
+    /* —— Partners / monitor —— */
+    .channels {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .channel-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 800px) {
+      .channel-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    .channel h3 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      margin-bottom: 0.55rem;
+    }
+
+    .channel p {
+      font-weight: 300;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+      max-width: 28rem;
+    }
+
+    .channel ul {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    .channel ul li::before {
+      content: "—";
+      margin-right: 0.5rem;
+      color: var(--gold);
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .btn-teal:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
     /* —— Inquiry —— */
     .inquiry {
       background:
@@ -595,7 +667,10 @@
 
   <header class="nav">
     <a class="nav-brand" href="#top">Everything Films</a>
-    <a class="nav-cta" href="#inquire">Begin</a>
+    <div class="nav-links">
+      <a href="./outreach/">Outreach</a>
+      <a class="nav-cta" href="#inquire">Begin</a>
+    </div>
   </header>
 
   <main id="top">
@@ -718,6 +793,35 @@
         <article class="step">
           <h3>You keep the film</h3>
           <p>Two revision rounds, then masters for streaming, TV, and sharing with family.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="channels" id="channels" aria-labelledby="channels-title">
+      <p class="section-kicker">Growth engine</p>
+      <h2 class="section-title" id="channels-title">Find the moment. Offer the film.</h2>
+      <p class="section-lead">Partners refer. Announcements surface. We auto-draft a journey email — wedding, birth, or life remembered.</p>
+
+      <div class="channel-grid">
+        <article class="channel">
+          <h3>Wedding planners &amp; funeral homes</h3>
+          <p>Preferred-partner outreach so planners and funeral directors can offer a film without running a production company.</p>
+          <ul>
+            <li>Planner referrals for wedding movies</li>
+            <li>Funeral-home referrals for life movies</li>
+            <li>One-click partner emails from the outreach desk</li>
+          </ul>
+          <a class="btn btn-teal" href="./outreach/">Open partner outreach</a>
+        </article>
+        <article class="channel">
+          <h3>Announcements → auto email</h3>
+          <p>Watch wedding announcements, birth announcements, and obituaries. When the cooling window clears, queue a respectful “document your journey” email.</p>
+          <ul>
+            <li>Weddings: ready same day</li>
+            <li>Births: wait 14 days</li>
+            <li>Obituaries: wait 7 days · soft tone</li>
+          </ul>
+          <a class="btn btn-teal" href="./outreach/#announcements">Open announcement monitor</a>
         </article>
       </div>
     </section>
