@@ -8,7 +8,7 @@
 
   const CONTACT = "brad@treadcompanies.com";
   const BRAND = "Everything Films";
-  const SITE = "https://turneratom.github.io/VitalAI-PWA/life-movies/";
+  const SITE = "https://turneratom.github.io/everything-films/";
   const STORAGE_KEY = "ef-outreach-sent-v1";
 
   const RULES = {
