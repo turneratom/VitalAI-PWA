@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo — AI Through a Hat</title>
+  <meta name="description" content="Halo sees everything, hears everything, and talks to you through a hat. Smart glasses reimagined." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#" class="logo">Halo</a>
+    <nav>
+      <a href="#vision">Vision</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#demo">Demo</a>
+      <a href="docs/DESIGN.md">Docs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Concept · 2026</p>
+        <h1>AI communication<br /><em>through a hat</em></h1>
+        <p class="lead">
+          Halo sits above your eyes — sees your world in 360°, hears what matters,
+          and whispers back through bone conduction. Works with your glasses. Looks like a hat.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" id="btn-demo">Try the demo</button>
+          <a class="btn ghost" href="README.md">Read the spec</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hat-scene">
+          <div class="hat">
+            <div class="hat-crown">
+              <span class="crown-dot"></span>
+              <span class="crown-label">Crown · AI · Battery</span>
+            </div>
+            <div class="hat-brim">
+              <span class="cam cam-f" title="Forward POV"></span>
+              <span class="cam cam-l" title="Left peripheral"></span>
+              <span class="cam cam-r" title="Right peripheral"></span>
+              <span class="cam cam-b" title="Rear awareness"></span>
+              <span class="led-ring"></span>
+            </div>
+            <div class="sweatband">
+              <span class="mic mic-1"></span>
+              <span class="mic mic-2"></span>
+              <span class="mic mic-3"></span>
+              <span class="haptic"></span>
+            </div>
+          </div>
+          <div class="scan-lines">
+            <div class="scan scan-f"></div>
+            <div class="scan scan-l"></div>
+            <div class="scan scan-r"></div>
+            <div class="scan scan-b"></div>
+          </div>
+          <div class="field field-f">POV</div>
+          <div class="field field-l">Peripheral</div>
+          <div class="field field-r">Peripheral</div>
+          <div class="field field-b">Behind</div>
+        </div>
+        <p class="visual-caption">Brim ring · Sweatband mic array · Crown compute</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-num">360°</span>
+        <span class="stat-label">Awareness via brim cameras</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8–12h</span>
+        <span class="stat-label">All-day battery in crown</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Screens on your face</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Works with any glasses</span>
+      </div>
+    </section>
+
+    <section id="vision" class="section vision">
+      <div class="section-header">
+        <h2>See everything.<br />Hear everything.<br />Stay present.</h2>
+        <p>Smart glasses put a camera on your nose. Halo uses the hat — higher, wider, and invisible to everyone else.</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar-icon">👁</div>
+          <h3>See</h3>
+          <p>Forward POV plus peripheral and rear cameras under the brim. Scene understanding, OCR, people approaching from behind.</p>
+        </article>
+        <article class="pillar">
+          <div class="pillar-icon">👂</div>
+          <h3>Hear</h3>
+          <p>Beamforming mic array in the sweatband isolates your voice. Knows who's speaking and from which direction.</p>
+        </article>
+        <article class="pillar">
+          <div class="pillar-icon">💬</div>
+          <h3>Interface</h3>
+          <p>Bone conduction replies, brim LED in your periphery, haptic taps. No earbuds. No screen. Just conversation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="hardware" class="section hardware">
+      <h2>Inside the brim</h2>
+      <div class="hw-grid">
+        <div class="hw-card">
+          <h4>Crown module</h4>
+          <ul>
+            <li>On-device NPU + SLM</li>
+            <li>3,000 mAh battery</li>
+            <li>WiFi · Bluetooth · optional LTE</li>
+            <li>IMU for head pose</li>
+          </ul>
+        </div>
+        <div class="hw-card">
+          <h4>Brim ring</h4>
+          <ul>
+            <li>Forward 1080p POV cam</li>
+            <li>Left / right peripheral</li>
+            <li>Optional rear cam (Pro)</li>
+            <li>Status LED strip</li>
+          </ul>
+        </div>
+        <div class="hw-card">
+          <h4>Sweatband</h4>
+          <ul>
+            <li>4–6 MEMS mic array</li>
+            <li>Bone conduction audio</li>
+            <li>Haptic feedback</li>
+            <li>Hardware privacy mute</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="compare">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Smart glasses</th>
+              <th>Halo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Peripheral vision</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Behind-you alerts</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Works with Rx glasses</td><td class="maybe">Clip / Rx lenses</td><td class="yes">✓ Under hat</td></tr>
+            <tr><td>All-day battery</td><td class="no">3–4 hr</td><td class="yes">8–12 hr</td></tr>
+            <tr><td>Private audio</td><td class="maybe">Open ear</td><td class="yes">Bone conduction</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo">
+      <h2>Live scenario demo</h2>
+      <p class="demo-intro">Pick a moment. Watch Halo fuse vision, audio, and memory into a response.</p>
+
+      <div class="demo-layout">
+        <div class="scenario-list" role="tablist">
+          <button class="scenario active" data-scenario="coffee" role="tab" aria-selected="true">Coffee shop</button>
+          <button class="scenario" data-scenario="walk" role="tab">Walking</button>
+          <button class="scenario" data-scenario="meeting" role="tab">Meeting</button>
+          <button class="scenario" data-scenario="travel" role="tab">Travel</button>
+        </div>
+
+        <div class="demo-panel">
+          <div class="world-snapshot">
+            <h4>World Snapshot</h4>
+            <pre id="snapshot-json">{}</pre>
+          </div>
+          <div class="conversation">
+            <div id="conv-messages" class="messages"></div>
+            <div class="input-row">
+              <input type="text" id="user-input" placeholder="Say something to Halo…" autocomplete="off" />
+              <button id="send-btn" class="btn primary small">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lineup">
+      <h2>Product line</h2>
+      <div class="lineup-grid">
+        <div class="product">
+          <div class="product-shape brim"></div>
+          <h4>Halo Brim</h4>
+          <p>Baseball / trucker · everyday</p>
+        </div>
+        <div class="product">
+          <div class="product-shape wide"></div>
+          <h4>Halo Wide</h4>
+          <p>Sun hat · travel & events</p>
+        </div>
+        <div class="product">
+          <div class="product-shape pro"></div>
+          <h4>Halo Pro</h4>
+          <p>Fedora / bucket · discreet pro</p>
+        </div>
+        <div class="product">
+          <div class="product-shape clip"></div>
+          <h4>Halo Clip</h4>
+          <p>Your hat · clip-on module</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>The hat sees what you can't.<br />Remembers what you forgot.</h2>
+      <p>Concept design & architecture — ready for prototype.</p>
+      <a class="btn primary" href="docs/ARCHITECTURE.md">Explore architecture</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>Halo · Concept 2026</span>
+    <span>Design by Bradley</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
