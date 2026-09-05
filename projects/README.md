@@ -1,23 +1,16 @@
-# Staged companies
+# Staged companies (Chief of Staff desk)
 
-Each folder is one **company**. Bradley invents; agents execute inside the matching folder (or its own GitHub repo after split).
+Bradley invents. Agents operate each folder as its own company.
+See root `COMPANIES.md` and `OPS.md`.
 
-| Folder | Company |
-|--------|---------|
-| `meridian-travel/` | Meridian — boutique travel |
-| `everything-films/` | Everything Films — wedding & life movies |
-| `mobile-home-parks/` | Mobile Home Parks / Tread parks |
-| `turner-capital/` | Turner Capital — trading floor |
-| `turner-biographies/` | Turner Biographies / Firebrand |
-| `project-ais/` | Project AIS / VitalAI health tools |
-| `tread-affiliates/` | Tread Affiliates |
+| Company | Path | Live money surface |
+|---------|------|--------------------|
+| Mobile Home Parks | `mobile-home-parks/` | List Your Park Free + owner outreach kit |
+| Meridian | `meridian-travel/` | Escapes / Crossing / Expedition + inquiry form |
+| Everything Films | `everything-films/` | $10k/$15k packages + **partners/** referral payouts |
+| Turner Capital | `turner-capital/` | Floor + **pricing.html** ($2,500/mo pilot) |
+| Turner Biographies | `turner-biographies/` | `/shop` Firebrand buy |
+| Project AIS | `project-ais/` | Pricing + Pro upsell on free tools |
+| Tread Affiliates | `tread-affiliates/` | `/comparisons` hub + rails |
 
-## New company (agent does this when Bradley says “New company: …”)
-
-```bash
-./scripts/new-company.sh "Company Name" "one-line idea"
-```
-
-That creates `projects/<slug>/` with `CURSOR-PROJECT.md`, `README.md`, and a starter `index.html`.
-
-Then Bradley creates the empty GitHub repo; agent (or `./scripts/push-separated-projects.sh`) pushes it.
+Rule: one company per job/PR when possible. Never publish other companies into the MHP Pages root.
