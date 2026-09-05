@@ -8,7 +8,14 @@ Open this folder (or the `everything-films` GitHub repo) as its **own** Cursor p
 - Outreach: wedding planners, funeral homes, wedding/birth/obituary announcements
 - **Not** Mobile Home Parks, not Project AIS, not Turner Biographies, not Turner Capital
 
+## Roles
+
+- Bradley: human ideas, priorities, approvals
+- Agents: execute jobs inside Everything Films only
+
 Name threads after the job, e.g. `Funeral partner wave 1`, `Obituary CSV import`, `Sample reel page`.
+
+See root `OPS.md`.
 
 ## Do not continue this product inside VitalAI-PWA
 
