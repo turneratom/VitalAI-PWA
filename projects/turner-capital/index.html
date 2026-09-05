@@ -74,6 +74,23 @@
       letter-spacing: 0.04em;
       color: var(--gold-bright);
     }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-text:hover { color: var(--text); }
     .nav-cta {
       font-size: 0.72rem;
       font-weight: 700;
@@ -870,7 +887,10 @@
 
   <nav class="nav">
     <div class="nav-mark">Turner Capital</div>
-    <a class="nav-cta" href="mailto:brad@treadcompanies.com?subject=Turner%20Capital%20access">Request access</a>
+    <div class="nav-links">
+      <a class="nav-text" href="pricing.html">See desk pricing</a>
+      <a class="nav-cta" href="mailto:brad@treadcompanies.com?subject=Turner%20Capital%20access">Request access</a>
+    </div>
   </nav>
 
   <header class="hero">
@@ -899,7 +919,7 @@
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:brad@treadcompanies.com?subject=Turner%20Capital%20access&amp;body=Name%3A%0AFirm%20%2F%20interest%3A%0ANotes%3A%0A">Request Turner Capital access</a>
-        <a class="btn btn-ghost" href="#floor">Watch the floor</a>
+        <a class="btn btn-ghost" href="pricing.html">See desk pricing</a>
       </div>
     </div>
   </header>
