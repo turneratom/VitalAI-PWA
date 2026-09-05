@@ -102,6 +102,12 @@ export default function HomePage() {
             >
               Compare tools that pay
             </a>
+            <a
+              href="/comparisons/best-calorie-tracker-apps"
+              className="transition hover:text-signal"
+            >
+              Calorie trackers
+            </a>
           </nav>
         </div>
       </header>
@@ -142,6 +148,12 @@ export default function HomePage() {
               className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
             >
               Compare tools that pay
+            </a>
+            <a
+              href="/comparisons/best-calorie-tracker-apps"
+              className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
+            >
+              Best calorie trackers
             </a>
           </div>
         </div>
@@ -490,12 +502,18 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <a
               href="/comparisons/best-ai-health-apps"
               className="inline-flex items-center justify-center bg-signal px-5 py-3 text-center text-sm font-bold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-signal"
             >
               Compare tools that pay
+            </a>
+            <a
+              href="/comparisons/best-calorie-tracker-apps"
+              className="inline-flex items-center justify-center border border-ink px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-white"
+            >
+              Best calorie trackers
             </a>
             <a
               href={links.glitchy}
@@ -544,6 +562,12 @@ export default function HomePage() {
               className="text-signal transition hover:text-white"
             >
               Compare tools that pay
+            </a>
+            <a
+              href="/comparisons/best-calorie-tracker-apps"
+              className="text-white/70 transition hover:text-signal"
+            >
+              Calorie trackers
             </a>
             <a
               href={links.glitchy}

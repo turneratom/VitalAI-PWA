@@ -553,7 +553,43 @@
 
     .contact .section-kicker { color: rgba(255,255,255,0.7); }
     .contact .section-title { color: #fff; max-width: 14ch; }
-    .contact .section-lead { color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+    .contact .section-lead { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+
+    .inquiry {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      max-width: 28rem;
+    }
+    .inquiry label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+    }
+    .inquiry input,
+    .inquiry select,
+    .inquiry textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      padding: 0.85rem 1rem;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 300;
+      letter-spacing: normal;
+      text-transform: none;
+      border-radius: 0;
+    }
+    .inquiry input::placeholder,
+    .inquiry textarea::placeholder { color: rgba(255,255,255,0.45); }
+    .inquiry select option { color: var(--ink); }
+    .inquiry textarea { min-height: 5.5rem; resize: vertical; }
+    .inquiry .cta-row { margin-top: 0.35rem; }
 
     .btn-sea {
       background: var(--sea);
@@ -772,11 +808,34 @@
       <div class="contact-copy">
         <p class="section-kicker">Plan a journey</p>
         <h2 class="section-title" id="plan-title">Where should the next meridian fall?</h2>
-        <p class="section-lead">Send a note with dates, people, and a place that keeps returning to mind. We reply with a first sketch.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:brad@treadcompanies.com?subject=Meridian%20journey%20inquiry">Send an inquiry</a>
-          <a class="btn btn-ghost" href="mailto:brad@treadcompanies.com?subject=Andes%20Expedition">Ask about Expedition</a>
-        </div>
+        <p class="section-lead">Share dates, people, and a place that keeps returning. We reply with a first sketch.</p>
+        <form class="inquiry" id="inquiry-form">
+          <label>
+            Your name
+            <input name="name" type="text" required autocomplete="name" placeholder="Name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+          </label>
+          <label>
+            Journey shape
+            <select name="shape">
+              <option value="Escape">Escape</option>
+              <option value="Crossing">Crossing</option>
+              <option value="Expedition" selected>Expedition</option>
+              <option value="Not sure">Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            Place &amp; timing
+            <textarea name="brief" required placeholder="Where, when, who is traveling, budget band…"></textarea>
+          </label>
+          <div class="cta-row">
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+            <a class="btn btn-ghost" href="mailto:brad@treadcompanies.com?subject=Andes%20Expedition">Ask about Andes</a>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -796,6 +855,23 @@
       { threshold: 0.2 }
     );
     document.querySelectorAll(".promise-list li").forEach((el) => observer.observe(el));
+
+    const form = document.getElementById("inquiry-form");
+    if (form) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const email = String(data.get("email") || "").trim();
+        const shape = String(data.get("shape") || "").trim();
+        const brief = String(data.get("brief") || "").trim();
+        const subject = encodeURIComponent(`Meridian ${shape} inquiry — ${name}`);
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nJourney: ${shape}\n\nBrief:\n${brief}\n`
+        );
+        window.location.href = `mailto:brad@treadcompanies.com?subject=${subject}&body=${body}`;
+      });
+    }
   </script>
 </body>
 </html>

@@ -10,6 +10,9 @@ export const links = {
     vitalai: "https://example.com/aff/vitalai",
     competitor: "https://example.com/aff/competitor",
     pulsekit: "https://example.com/aff/pulsekit",
+    macros: "https://example.com/aff/macros",
+    cronometer: "https://example.com/aff/cronometer",
+    myfitnesspal: "https://example.com/aff/myfitnesspal",
   },
   youtube: [
     {
