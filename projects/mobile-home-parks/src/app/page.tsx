@@ -21,8 +21,8 @@ const roles = [
     icon: Building2,
     title: "Park Owners",
     description: "List your mobile home park for free. Reach qualified buyers, analysts, and lenders instantly.",
-    href: "/owners",
-    cta: "List Your Park",
+    href: "/list-your-park",
+    cta: "List Your Park — Free",
   },
   {
     icon: Users,
@@ -99,17 +99,17 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
               <Link
-                href="/marketplace"
+                href="/list-your-park"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent-light text-navy font-semibold rounded-lg transition-colors"
               >
-                Browse Marketplace
+                List Your Park — Free
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/owners"
+                href="/marketplace"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/30 font-semibold rounded-lg transition-colors"
               >
-                List Your Park Free
+                Browse Marketplace
               </Link>
             </div>
           </div>

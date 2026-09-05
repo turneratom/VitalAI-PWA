@@ -212,6 +212,15 @@ export default function ListYourParkPage() {
             List My Park Now
             <ArrowRight className="w-5 h-5" />
           </a>
+          <p className="mt-4 text-sm text-white/55">
+            Prefer email?{" "}
+            <a
+              className="text-accent hover:text-accent-light font-medium underline underline-offset-2"
+              href={`mailto:${siteConfig.intakeEmail}?subject=List%20my%20mobile%20home%20park&body=Park%20name%3A%0ACity%20%2F%20State%3A%0ALots%3A%0AAsking%20price%20(optional)%3A%0AMy%20name%3A%0APhone%3A%0A`}
+            >
+              Email {siteConfig.intakeEmail}
+            </a>
+          </p>
         </div>
       </section>
     </div>

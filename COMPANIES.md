@@ -9,14 +9,14 @@ Chats forget. **This file remembers.**
 
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Listings, buyer leads, partner fees | Live + package staged |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Landing + Amalfi + Japan Escapes + Iberia Crossing |
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → buyer/lender deals | Live + package; hero CTA = List Your Park Free; mailto backup on list page |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Amalfi + Japan Escapes, Iberia Crossing, **Andes Expedition** |
 | 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k / $15k films + referrals | Money CTAs + outreach |
 | 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / early access | Product landing shipped |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy ebook $4.99 / paperback $15.99 CTAs live |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI Pro $9.99 / Elite $29.99 | Pricing + Stripe-or-mailto subscribe path |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy ebook $4.99 / paperback $15.99 CTAs |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI Pro $9.99 / Elite $29.99 | Pricing + Stripe-or-mailto subscribe |
 
-Also: Tread Affiliates — `projects/tread-affiliates/` — comparison rail live at `/comparisons/best-ai-health-apps` (affiliate CTAs).
+Also: Tread Affiliates — `projects/tread-affiliates/` — `/comparisons/best-ai-health-apps` affiliate rail.
 
 ## Hands-off contract
 
@@ -26,19 +26,20 @@ Also: Tread Affiliates — `projects/tread-affiliates/` — comparison rail live
 
 ## Latest agent actions (2026-09-05)
 
-- Removed GitHub-repo creation as a blocker; companies run in `projects/` (+ `company/*` branches).
-- Meridian: Amalfi + Japan Escapes; **Iberia Crossing** (12-day Portugal→Spain) product page wired.
+- Companies run in `projects/` without waiting on new GitHub repos.
+- Meridian: Amalfi + Japan Escapes; Iberia Crossing; **Andes Expedition** ($18.5k) wired.
 - Everything Films: package book CTAs + referral outreach.
 - Turner Capital: trading desk landing + access mailto.
-- Project AIS: pricing page with Stripe checkout + mailto fallback so subscribe works without env.
-- Turner Biographies: Firebrand buy ebook/paperback CTAs on home + book page.
-- Tread Affiliates: **Best AI health apps** comparison page with affiliate CTAs + home “Compare tools that pay”.
-- Memory answer for Bradley: in-thread recall yes; cross-thread via this file.
+- Project AIS: Stripe checkout + mailto fallback.
+- Turner Biographies: Firebrand buy CTAs.
+- Tread Affiliates: AI health apps comparison rail.
+- **MHP package:** primary hero CTA flipped to List Your Park Free → `/list-your-park`; owner role card + bottom mailto lead backup.
+- Memory: in-thread recall yes; cross-thread via this file.
 
-## Next money pushes (agents pick up)
+## Next money pushes
 
-1. MHP: sharpen paid lead / list-your-park conversion in package (don’t break live root).
-2. Project AIS: wire real Stripe price IDs when secrets exist; until then mailto captures demand.
-3. Biographies: swap mailto for Amazon URLs the moment KDP goes live.
-4. Affiliates: replace example.com aff URLs with live network links; add 2 more comparison verticals.
-5. Meridian: Expedition sample + inquiry form capture.
+1. Affiliates: replace example.com aff URLs with live network links; add calorie-tracker + fitness-watch verticals.
+2. Project AIS: real Stripe price IDs when secrets exist.
+3. Biographies: Amazon URLs when KDP live.
+4. Meridian: simple inquiry form that still mailto-submits (capture structure).
+5. MHP: keep live root stable; promote package list-your-park conversion when publishing next Pages build.
