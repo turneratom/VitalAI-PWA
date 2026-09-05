@@ -108,6 +108,12 @@ export default function HomePage() {
             >
               Calorie trackers
             </a>
+            <a
+              href="/comparisons/best-fitness-wearables"
+              className="transition hover:text-signal"
+            >
+              Fitness wearables
+            </a>
           </nav>
         </div>
       </header>
@@ -154,6 +160,12 @@ export default function HomePage() {
               className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
             >
               Best calorie trackers
+            </a>
+            <a
+              href="/comparisons/best-fitness-wearables"
+              className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
+            >
+              Best fitness wearables
             </a>
           </div>
         </div>
@@ -516,6 +528,12 @@ export default function HomePage() {
               Best calorie trackers
             </a>
             <a
+              href="/comparisons/best-fitness-wearables"
+              className="inline-flex items-center justify-center border border-ink px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-white"
+            >
+              Best fitness wearables
+            </a>
+            <a
               href={links.glitchy}
               target="_blank"
               rel="noopener noreferrer"
@@ -568,6 +586,12 @@ export default function HomePage() {
               className="text-white/70 transition hover:text-signal"
             >
               Calorie trackers
+            </a>
+            <a
+              href="/comparisons/best-fitness-wearables"
+              className="text-white/70 transition hover:text-signal"
+            >
+              Fitness wearables
             </a>
             <a
               href={links.glitchy}

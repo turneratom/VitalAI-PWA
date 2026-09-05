@@ -13,6 +13,9 @@ export const links = {
     macros: "https://example.com/aff/macros",
     cronometer: "https://example.com/aff/cronometer",
     myfitnesspal: "https://example.com/aff/myfitnesspal",
+    whoop: "https://example.com/aff/whoop",
+    ultrahuman: "https://example.com/aff/ultrahuman",
+    fitbit: "https://example.com/aff/fitbit",
   },
   youtube: [
     {
