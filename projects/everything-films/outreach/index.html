@@ -240,6 +240,36 @@
     }
     .rules strong { color: var(--ink); font-weight: 500; }
     .rules ul { margin: 0.6rem 0 0 1.1rem; }
+    .revenue-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--ink);
+      color: #fff;
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .revenue-bar p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      max-width: 36rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .revenue-bar strong {
+      display: block;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .btn.gold {
+      background: var(--gold);
+      color: var(--ink);
+    }
+    .btn.gold:hover { background: #c4a36d; }
   </style>
 </head>
 <body>
@@ -247,17 +277,29 @@
     <a class="brand" href="../">Everything Films</a>
     <nav>
       <a href="../">Site</a>
+      <a href="../#packages">Packages</a>
       <a href="./">Outreach</a>
-      <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+      <a href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%20paying%20client%20referral">Refer a client</a>
     </nav>
   </header>
 
   <div class="wrap">
     <h1>Journey outreach</h1>
     <p class="lede">
-      Wedding planners and funeral homes as partners. Monitor wedding announcements, birth announcements, and obituaries —
-      then auto-draft emails inviting families to document their journey.
+      Wedding planners and funeral homes refer <strong>paying clients</strong> into $10,000 (30 min) and $15,000 (60 min) packages.
+      Monitor announcements, then draft the ask that closes the film.
     </p>
+
+    <div class="revenue-bar">
+      <p>
+        <strong>Revenue path</strong>
+        Partners introduce couples and families who book. You earn on completed $10k / $15k films — not tire-kickers.
+      </p>
+      <a
+        class="btn gold"
+        href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%20paying%20client%20referral&amp;body=Hi%20Bradley%2C%0A%0AI%20have%20a%20paying%20client%20referral%20for%20Everything%20Films.%0A%0AClient%20name%3A%0APackage%20interest%20(30%20min%20%2F%20%2410%2C000%20or%2060%20min%20%2F%20%2415%2C000)%3A%0AWedding%20or%20life%20movie%3A%0AContact%20email%20%2F%20phone%3A%0APartner%20name%3A%0A%0AThanks."
+      >Refer a paying client</a>
+    </div>
 
     <div class="stats" id="stats"></div>
 

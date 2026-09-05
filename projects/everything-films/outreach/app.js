@@ -76,13 +76,13 @@ I'm Bradley with ${BRAND} (Tread Companies). We turn the photos and videos coupl
 Couples send everything (phones, albums, guest clips). We cut the film. No day-of crew required unless they want one later.
 
 I'd love to make ${p.name} a preferred partner in ${p.city}:
-• You refer couples who want a cinematic keep-forever film
-• We handle intake, editing, and delivery
+• You refer couples ready to book a cinematic keep-forever film ($10k / $15k)
+• We handle intake, editing, and delivery — you earn on completed bookings
 • You stay the hero planner — we stay invisible in the chaos of the weekend
 
 Partner one-pager: ${SITE}
 
-If useful, I can send a short sample reel and a referral link for your couples.
+If useful, I can send a short sample reel and a referral link for paying couples.
 
 Best,
 Bradley
@@ -104,9 +104,9 @@ Packages: 30-minute film $10,000 · 60-minute film $15,000.
 Families send everything securely after the service week. We restore, score, and deliver a private film they can share for generations.
 
 For ${p.name} in ${p.city}, a simple partnership:
-• You offer families an optional life-film referral (never pushy)
+• You refer families ready to commission a life film (never pushy)
 • We wait through the first week, then handle outreach gently
-• You receive a quiet partner fee on completed films
+• You receive a quiet partner fee on completed $10k / $15k film bookings
 
 Details: ${SITE}
 
@@ -276,7 +276,7 @@ ${CONTACT}
               ${p.notes ? `<p class="notes">${escapeHtml(p.notes)}</p>` : ""}
             </div>
             <div class="actions">
-              <a class="btn" href="${mailto(mail)}" data-send="${p.id}">Email partner</a>
+              <a class="btn" href="${mailto(mail)}" data-send="${p.id}">Email partner · refer clients</a>
               <button type="button" class="btn ghost" data-copy='${encodeURIComponent(JSON.stringify(mail))}'>Copy email</button>
               <button type="button" class="btn ghost" data-mark="${p.id}">${sent ? "Sent ✓" : "Mark sent"}</button>
             </div>
