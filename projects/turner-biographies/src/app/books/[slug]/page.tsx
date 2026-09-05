@@ -42,15 +42,27 @@ export default async function BookPage({
             {book.tagline}
           </p>
           <div className="mt-10 flex flex-wrap gap-4 font-[family-name:var(--font-ui)]">
+            <a
+              href="mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20ebook%20%244.99&body=I%20want%20to%20buy%20Firebrand%20(ebook)%20for%20%244.99.%0A%0APreferred%20format%3A%20Kindle%20%2F%20EPUB%0AEmail%20for%20delivery%3A%0A"
+              className="bg-seal px-5 py-3 text-sm uppercase tracking-[0.16em] text-bone hover:bg-seal-deep"
+            >
+              Buy ebook · $4.99
+            </a>
+            <a
+              href="mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20paperback%20%2415.99&body=I%20want%20to%20buy%20Firebrand%20(paperback)%20for%20%2415.99.%0A%0AShip%20to%3A%0A"
+              className="border border-brass/60 px-5 py-3 text-sm uppercase tracking-[0.16em] text-brass hover:border-brass hover:bg-brass/10"
+            >
+              Buy paperback · $15.99
+            </a>
             <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
-              className="bg-seal px-5 py-3 text-sm uppercase tracking-[0.16em] text-bone hover:bg-seal-deep"
+              className="border border-bone/35 px-5 py-3 text-sm uppercase tracking-[0.16em] text-bone hover:border-brass hover:text-brass"
             >
               Start the book
             </Link>
             <Link
               href={`/books/${book.slug}/film`}
-              className="border border-bone/35 px-5 py-3 text-sm uppercase tracking-[0.16em] text-bone hover:border-brass hover:text-brass"
+              className="border border-bone/20 px-5 py-3 text-sm uppercase tracking-[0.16em] text-bone/80 hover:border-brass hover:text-brass"
             >
               Film adaptation
             </Link>

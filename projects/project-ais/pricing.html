@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VitalAI Pricing — Pro & Elite Plans</title>
+  <title>VitalAI Pricing — Pro & Elite</title>
   <meta name="description" content="VitalAI Pro $9.99/mo and Elite $29.99/mo. Unlimited AI health coaching, photo analysis, and premium features.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="tools/tools.css">
+  <style>
+    .price-hero {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      padding: 2rem 1rem 0.5rem;
+    }
+    .price-hero h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin: 0 0 0.5rem;
+    }
+    .price-hero p { color: #444; max-width: 36rem; }
+    .fallback-note {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: #f4f7f8;
+      border-left: 3px solid #1a6b7a;
+      font-size: 0.92rem;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header-inner">
-      <div><h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Pricing</p></div>
-      <nav class="nav-links"><a href="tools/index.html">Free Tools</a><a href="index.html">App</a></nav>
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Pricing</p>
+      </div>
+      <nav class="nav-links">
+        <a href="tools/index.html">Free Tools</a>
+        <a href="index.html">App</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
     </div>
   </header>
+
   <main>
+    <div class="price-hero">
+      <h2>Pay for unlimited coaching. Keep the free tools forever.</h2>
+      <p>Stripe checkout when live. If checkout isn’t configured yet, one tap emails a subscribe request so revenue never stalls.</p>
+    </div>
+
     <section class="card">
       <h2>Choose Your Plan</h2>
       <div class="tool-grid">
@@ -25,9 +57,9 @@
           <ul>
             <li>5 photo snaps per day</li>
             <li>Basic AI responses</li>
-            <li>All 15 free calculators</li>
+            <li>All free calculators</li>
           </ul>
-          <a class="btn btn-secondary" href="index.html">Get Started</a>
+          <a class="btn btn-secondary" href="index.html">Start free</a>
         </article>
         <article class="tool-card" style="border:2px solid var(--primary);">
           <h3>Pro</h3>
@@ -35,9 +67,12 @@
           <ul>
             <li>Unlimited photo analysis</li>
             <li>Enhanced AI coaching</li>
-            <li>Chat history (coming soon)</li>
+            <li>Chat history (rolling out)</li>
           </ul>
-          <button class="btn" id="buy-pro">Subscribe to Pro</button>
+          <button class="btn" id="buy-pro" type="button">Subscribe to Pro — $9.99</button>
+          <p style="margin:0.75rem 0 0;font-size:0.85rem;">
+            <a id="mailto-pro" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20%249.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Pro%20(%249.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Or email Pro subscribe</a>
+          </p>
         </article>
         <article class="tool-card">
           <h3>Elite</h3>
@@ -47,32 +82,40 @@
             <li>Priority AI models</li>
             <li>Advanced health insights</li>
           </ul>
-          <button class="btn" id="buy-elite">Subscribe to Elite</button>
+          <button class="btn" id="buy-elite" type="button">Subscribe to Elite — $29.99</button>
+          <p style="margin:0.75rem 0 0;font-size:0.85rem;">
+            <a id="mailto-elite" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20%2429.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Elite%20(%2429.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Or email Elite subscribe</a>
+          </p>
         </article>
       </div>
-      <p id="setup-notice" class="affiliate-note" hidden>
-        Stripe checkout requires env vars: STRIPE_SECRET_KEY, STRIPE_PRICE_PRO, STRIPE_PRICE_ELITE.
-        See <code>.env.example</code> in the repo.
+      <p id="setup-notice" class="fallback-note" hidden>
+        Stripe isn’t connected in this environment yet — your mail client opened a subscribe request to brad@treadcompanies.com so the sale still lands.
       </p>
     </section>
   </main>
-  <footer class="site-footer">Cancel anytime. Secure checkout via Stripe.</footer>
+
+  <footer class="site-footer">Cancel anytime. Checkout via Stripe when configured; mailto backup always on.</footer>
+
   <script>
     async function checkout(tier) {
-      const res = await fetch('/api/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tier })
-      });
-      const data = await res.json();
-      if (data.url) window.location.href = data.url;
-      else document.getElementById('setup-notice').hidden = false;
+      const mailto = document.getElementById(tier === 'pro' ? 'mailto-pro' : 'mailto-elite');
+      try {
+        const res = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tier })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (data.url) {
+          window.location.href = data.url;
+          return;
+        }
+      } catch (_) { /* fall through */ }
+      document.getElementById('setup-notice').hidden = false;
+      if (mailto) window.location.href = mailto.href;
     }
     document.getElementById('buy-pro').onclick = () => checkout('pro');
     document.getElementById('buy-elite').onclick = () => checkout('elite');
-    if (new URLSearchParams(location.search).get('setup')) {
-      document.getElementById('setup-notice').hidden = false;
-    }
   </script>
 </body>
 </html>

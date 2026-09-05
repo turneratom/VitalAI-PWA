@@ -28,17 +28,23 @@ export default function HomePage() {
             {SERIES.promise}
           </p>
           <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-4 font-[family-name:var(--font-ui)]">
-            <Link
-              href={`/books/${featured.slug}`}
+            <a
+              href="mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20ebook%20%244.99&body=I%20want%20to%20buy%20Firebrand%20(ebook)%20for%20%244.99.%0A%0APreferred%20format%3A%20Kindle%20%2F%20EPUB%0AEmail%20for%20delivery%3A%0A"
               className="bg-seal px-5 py-3 text-sm uppercase tracking-[0.18em] text-bone transition hover:bg-seal-deep"
             >
-              Enter Firebrand
-            </Link>
-            <Link
-              href={`/books/${featured.slug}/film`}
+              Buy ebook · $4.99
+            </a>
+            <a
+              href="mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20paperback%20%2415.99&body=I%20want%20to%20buy%20Firebrand%20(paperback)%20for%20%2415.99.%0A%0AShip%20to%3A%0A"
               className="border border-bone/35 px-5 py-3 text-sm uppercase tracking-[0.18em] text-bone transition hover:border-brass hover:text-brass"
             >
-              Watch the film pages
+              Buy paperback · $15.99
+            </a>
+            <Link
+              href={`/books/${featured.slug}`}
+              className="border border-bone/20 px-5 py-3 text-sm uppercase tracking-[0.18em] text-bone/80 transition hover:border-brass hover:text-brass"
+            >
+              Enter Firebrand
             </Link>
           </div>
         </div>
