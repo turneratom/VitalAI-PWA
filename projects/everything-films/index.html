@@ -348,6 +348,7 @@
 
     .packages .section-kicker { color: var(--gold); }
     .packages .section-lead { color: rgba(255,255,255,0.7); }
+    .packages .section-title { max-width: 22ch; }
 
     .price-grid {
       display: grid;
@@ -365,6 +366,8 @@
       padding: 2.2rem 2rem 2rem;
       background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 60%);
       transition: border-color 0.35s var(--ease), transform 0.45s var(--ease);
+      display: flex;
+      flex-direction: column;
     }
 
     .price:hover {
@@ -384,20 +387,24 @@
       font-family: "Bodoni Moda", Georgia, serif;
       font-size: clamp(2.4rem, 5vw, 3.2rem);
       line-height: 1;
-      margin-bottom: 0.55rem;
+      margin-bottom: 0.35rem;
     }
 
     .price-amount {
-      font-size: 1.15rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 1.4rem;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2.6rem, 5.5vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
     }
 
-    .price-amount em {
-      font-style: normal;
-      font-weight: 500;
-      color: #fff;
+    .price-pair {
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1.4rem;
     }
 
     .price ul {
@@ -420,11 +427,20 @@
       background: var(--gold);
       color: var(--ink);
       width: 100%;
+      margin-top: auto;
     }
 
     .btn-on-dark:hover {
       background: #c4a36d;
       transform: translateY(-2px);
+    }
+
+    .price-cta-hint {
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
     }
 
     .price-note {
@@ -669,7 +685,7 @@
     <a class="nav-brand" href="#top">Everything Films</a>
     <div class="nav-links">
       <a href="./outreach/">Outreach</a>
-      <a class="nav-cta" href="#inquire">Begin</a>
+      <a class="nav-cta" href="#packages">Packages</a>
     </div>
   </header>
 
@@ -690,8 +706,8 @@
         <p class="hero-line">Wedding movies. Life movies.</p>
         <p class="hero-sub">Send pictures. Send videos. Send everything. We cut it into a film you will keep forever.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#packages">See packages</a>
-          <a class="btn btn-ghost" href="#inquire">Start a film</a>
+          <a class="btn btn-primary" href="#packages">Book a package</a>
+          <a class="btn btn-ghost" href="#inquire">Ask a question</a>
         </div>
       </div>
     </section>
@@ -743,34 +759,44 @@
 
     <section class="packages" id="packages" aria-labelledby="packages-title">
       <p class="section-kicker">Packages</p>
-      <h2 class="section-title" id="packages-title">Two runtimes. One standard.</h2>
-      <p class="section-lead">Finished HD film, licensed music, private review link, and two revision rounds.</p>
+      <h2 class="section-title" id="packages-title">$10,000 or $15,000. Pick your runtime.</h2>
+      <p class="section-lead">Finished HD film, licensed music, private review link, and two revision rounds. Email to book — package is already in the subject line.</p>
 
       <div class="price-grid">
         <article class="price">
           <p class="price-label">Featurette</p>
           <h3 class="price-runtime">30 minutes</h3>
-          <p class="price-amount"><em>$10,000</em></p>
+          <p class="price-amount">$10,000</p>
+          <p class="price-pair">30-minute film · $10,000</p>
           <ul>
             <li>Wedding film or focused life chapter</li>
             <li>Up to ~2,000 photos &amp; clips curated</li>
             <li>Custom titles &amp; score</li>
             <li>Private stream + download masters</li>
           </ul>
-          <a class="btn btn-on-dark" href="#inquire" data-package="30">Choose 30 min</a>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%2030-minute%20film%20(%2410%2C000)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20book%20the%2030-minute%20Everything%20Films%20package%20(%2410%2C000).%0A%0AFilm%20type%20(wedding%20%2F%20life%20%2F%20both)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Book 30 min — $10,000</a>
+          <p class="price-cta-hint">Opens email to brad@treadcompanies.com</p>
         </article>
 
         <article class="price">
           <p class="price-label">Feature</p>
           <h3 class="price-runtime">60 minutes</h3>
-          <p class="price-amount"><em>$15,000</em></p>
+          <p class="price-amount">$15,000</p>
+          <p class="price-pair">60-minute film · $15,000</p>
           <ul>
             <li>Full wedding weekend or life story</li>
             <li>Up to ~5,000 photos &amp; clips curated</li>
             <li>Chaptered narrative &amp; score</li>
             <li>Private stream + download masters</li>
           </ul>
-          <a class="btn btn-on-dark" href="#inquire" data-package="60">Choose 60 min</a>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%2060-minute%20film%20(%2415%2C000)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20book%20the%2060-minute%20Everything%20Films%20package%20(%2415%2C000).%0A%0AFilm%20type%20(wedding%20%2F%20life%20%2F%20both)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Book 60 min — $15,000</a>
+          <p class="price-cta-hint">Opens email to brad@treadcompanies.com</p>
         </article>
       </div>
       <p class="price-note">Travel and on-site filming are not included — this is a send-everything production. Need both a wedding cut and a life cut? Ask when you inquire.</p>
@@ -800,22 +826,22 @@
     <section class="channels" id="channels" aria-labelledby="channels-title">
       <p class="section-kicker">Growth engine</p>
       <h2 class="section-title" id="channels-title">Find the moment. Offer the film.</h2>
-      <p class="section-lead">Partners refer. Announcements surface. We auto-draft a journey email — wedding, birth, or life remembered.</p>
+      <p class="section-lead">Partners refer paying clients into $10,000 / $15,000 packages. Announcements surface. We auto-draft the ask.</p>
 
       <div class="channel-grid">
         <article class="channel">
           <h3>Wedding planners &amp; funeral homes</h3>
-          <p>Preferred-partner outreach so planners and funeral directors can offer a film without running a production company.</p>
+          <p>Preferred partners refer couples and families who book a finished film — $10,000 for 30 minutes, $15,000 for 60.</p>
           <ul>
-            <li>Planner referrals for wedding movies</li>
-            <li>Funeral-home referrals for life movies</li>
-            <li>One-click partner emails from the outreach desk</li>
+            <li>Planner referrals → paying wedding-movie clients</li>
+            <li>Funeral-home referrals → paying life-movie clients</li>
+            <li>Partner fee on completed film bookings</li>
           </ul>
-          <a class="btn btn-teal" href="./outreach/">Open partner outreach</a>
+          <a class="btn btn-teal" href="./outreach/">Refer paying clients</a>
         </article>
         <article class="channel">
-          <h3>Announcements → auto email</h3>
-          <p>Watch wedding announcements, birth announcements, and obituaries. When the cooling window clears, queue a respectful “document your journey” email.</p>
+          <h3>Announcements → package email</h3>
+          <p>Watch wedding announcements, birth announcements, and obituaries. When the cooling window clears, queue a respectful email that leads to a $10k / $15k package.</p>
           <ul>
             <li>Weddings: ready same day</li>
             <li>Births: wait 14 days</li>
@@ -870,8 +896,12 @@
             <textarea name="materials" id="materials" placeholder="Photos, iPhone videos, old camcorder tapes, scanned albums…" required></textarea>
           </label>
           <div class="form-actions">
-            <button class="btn btn-submit" type="submit">Send inquiry</button>
-            <p class="form-hint">Or email <a href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20inquiry">brad@treadcompanies.com</a></p>
+            <button class="btn btn-submit" type="submit">Email to book</button>
+            <p class="form-hint">Or book direct:
+              <a href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%2030-minute%20film%20(%2410%2C000)">30 min · $10,000</a>
+              ·
+              <a href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20%E2%80%94%2060-minute%20film%20(%2415%2C000)">60 min · $15,000</a>
+            </p>
           </div>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -909,16 +939,6 @@
         });
       }
 
-      document.querySelectorAll("[data-package]").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var pkg = btn.getAttribute("data-package");
-          var select = document.getElementById("package");
-          if (!select) return;
-          if (pkg === "30") select.value = "30 min — $10,000";
-          if (pkg === "60") select.value = "60 min — $15,000";
-        });
-      });
-
       var form = document.getElementById("inquiry-form");
       var status = document.getElementById("form-status");
       if (form) {
@@ -929,7 +949,7 @@
           var pkg = document.getElementById("package").value;
           var type = document.getElementById("type").value;
           var materials = document.getElementById("materials").value.trim();
-          var subject = encodeURIComponent("Everything Films — " + type + " (" + pkg + ")");
+          var subject = encodeURIComponent("Everything Films — " + pkg + " · " + type);
           var body = encodeURIComponent(
             "Name: " + name + "\n" +
             "Email: " + email + "\n" +
