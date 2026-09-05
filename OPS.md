@@ -1,83 +1,102 @@
-# OPS — Bradley invents. Agents execute.
+# OPS — Chief of Staff
+
+**Bradley invents. The Chief of Staff executes and fans out work.**
+
+You should never wait on GitHub, Cursor project setup, or “which folder?”  
+Drop the idea. CoS starts work the same minute.
+
+---
+
+## Your only habit
+
+Send ideas to the **Chief of Staff** chat (this kind of thread), in plain language:
+
+```
+Meridian — Japan Escape package, 7 days, ~$6k
+```
+
+```
+New company: Halo Hats. AI-designed custom hats. Sell online.
+```
+
+```
+Everything Films — funeral home partner email wave
+```
+
+That is enough. Do not create repos first. Do not open a second project first.
+
+---
+
+## What CoS does immediately (no waiting)
+
+1. **Name the company** (or create one if you said “New company”).
+2. **Name the job** (one discussion = one job).
+3. **Start work now** under `projects/<company-slug>/` (or that company’s own repo once it exists).
+4. **Ship a PR** for that job.
+5. **Queue your 1-click leftovers** (create empty GitHub repo, merge, add secrets) in a short “Needs Bradley” list — never block the build on those.
+
+### Separation without slowing you down
+
+| Layer | How it stays separate | What you do |
+|-------|----------------------|-------------|
+| Company | Own folder/repo + own PRs | Say the company name in the idea |
+| Job / discussion | One agent run / one PR | Send one idea; send the next as a new message or new CoS thread |
+| Holding | CoS chat only routes | Dump ideas here; don’t manage structure |
+
+Until tomorrow’s GitHub setup: companies live as `projects/<slug>/` inside this repo, **isolated from the MHP site root**. After you create empty repos, CoS (or the push script) splits them. Work does not pause for that.
+
+---
 
 ## Roles
 
 | Role | Who | Does |
 |------|-----|------|
-| **Inventor** | Bradley | Company ideas, offers, priorities, approvals (merge, spend, credentials) |
-| **Operator** | Cursor / Grok Cloud Agents | Scaffold, build, ship PRs, drafts, playbooks — inside the right company |
-
-Bradley does **not** need to manage folders, branches, or architecture. Say the company and the job. The agent does the rest.
-
----
-
-## Easy separation (the only rules)
-
-1. **Company** = its own GitHub repo + Cursor project + Cloud Agent environment  
-2. **Discussion / agent run** = one **job** inside one company  
-3. **Never** mix two companies in one thread
-
-### Naming
-
-| Layer | Name like | Example |
-|-------|-----------|---------|
-| Company / repo / Cursor project | Product brand | `meridian-travel`, `everything-films` |
-| Agent discussion (thread) | The job | `Amalfi itinerary draft`, `Owner wave 4 CSV` |
-| Holding note (optional) | Tread | Your idea list only — no product code |
-
-### What Bradley does on mobile
-
-1. Open the **company’s** Cursor project (not VitalAI-PWA, once split).  
-2. Start a **new** Cloud Agent.  
-3. Type the job in plain language, e.g. `Draft Escape package page for Japan`.  
-4. Approve the PR when it looks right.
-
-If the company repo does not exist yet, say:  
-`New company: <name>. <one-line idea>.`  
-The agent stages `projects/<slug>/` here and tells you the one GitHub click left (create empty repo).
+| Inventor | Bradley | Ideas, priorities, “yes/no” on spend & merges |
+| Chief of Staff | This agent | Route, scaffold, start jobs, chase blockers, report what’s live |
+| Company operators | Job agents / subagents | Build only inside their company |
 
 ---
 
-## Company list (operating)
+## Needs Bradley (only human clicks)
 
-| Company | Repo | Staged path |
-|---------|------|-------------|
-| Mobile Home Parks | `turneratom/mobile-home-parks` | `projects/mobile-home-parks/` (also live in this repo today) |
-| Meridian | `turneratom/meridian-travel` | `projects/meridian-travel/` |
-| Everything Films | `turneratom/everything-films` | `projects/everything-films/` |
-| Turner Capital | `turneratom/turner-capital` | `projects/turner-capital/` |
-| Turner Biographies | `turneratom/turner-biographies` | `projects/turner-biographies/` |
-| Project AIS | `turneratom/project-ais` | `projects/project-ais/` |
-| Tread Affiliates | `turneratom/tread-affiliates` | `projects/tread-affiliates/` |
-
-Until a company has its own repo: agents work **only** under `projects/<slug>/` and do not publish into the MHP GitHub Pages root.
-
----
-
-## Agent execution checklist (every job)
-
-1. Identify the **company** from the message (or ask once if impossible).  
-2. Work only in that company’s folder/repo.  
-3. Name the git branch `cursor/<job-slug>-****`.  
-4. Ship a PR.  
-5. Do not touch other companies in the same run.
-
-## Bradley approval checklist (only human gates)
-
-- Merge / don’t merge  
-- Create empty GitHub repo when an agent asks (one click)  
-- Add secrets to that company’s Cloud Agent environment  
-- Point domains / pay vendors  
+- Create empty GitHub repo when CoS asks (batch these on computer days)
+- Merge PRs you like
+- Paste API keys into that company’s Cloud Agent environment
+- Pay vendors / buy domains
 
 Everything else is agent work.
 
 ---
 
-## Split status
+## Company map
 
-1. Create empty repos for staged companies (start: `meridian-travel`, `everything-films`).  
-2. Run `./scripts/push-separated-projects.sh`.  
-3. In Cursor → Open Project on each new repo → create its Cloud Agent environment.  
-4. Start job threads **from those projects**.
+| Company | Slug / staged path | Own repo (when ready) |
+|---------|--------------------|------------------------|
+| Mobile Home Parks | `projects/mobile-home-parks/` (+ live site today) | `turneratom/mobile-home-parks` |
+| Meridian | `projects/meridian-travel/` | `turneratom/meridian-travel` |
+| Everything Films | `projects/everything-films/` | `turneratom/everything-films` |
+| Turner Capital | `projects/turner-capital/` | `turneratom/turner-capital` |
+| Turner Biographies | `projects/turner-biographies/` | `turneratom/turner-biographies` |
+| Project AIS | `projects/project-ais/` | `turneratom/project-ais` |
+| Tread Affiliates | `projects/tread-affiliates/` | `turneratom/tread-affiliates` |
 
-See `PROJECTS.md` and each `projects/*/CURSOR-PROJECT.md`.
+New company → `./scripts/new-company.sh "Name" "idea"` (CoS runs this).
+
+---
+
+## Speed rules for agents
+
+1. Never ask Bradley to set up structure before starting.
+2. Never mix two companies in one job PR.
+3. Prefer shipping a thin first version in <1 cycle over a perfect plan.
+4. If an idea spans companies, split into parallel jobs and say so in one line.
+5. Keep a running **Needs Bradley** list; keep building meanwhile.
+
+## Computer-day batch (tomorrow)
+
+1. Create empty repos for staged companies (start: `meridian-travel`, `everything-films`).
+2. Run `./scripts/push-separated-projects.sh`.
+3. Open each as a Cursor project + Cloud Agent environment.
+4. Optional: Automations per company for recurring jobs.
+
+Until then, **CoS chat = the accelerator**. Ideas in → work out.
