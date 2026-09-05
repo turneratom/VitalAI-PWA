@@ -16,7 +16,7 @@ Chats forget. **This file remembers.**
 | 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy ebook $4.99 / paperback $15.99 CTAs live |
 | 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI Pro $9.99 / Elite $29.99 | Pricing + Stripe-or-mailto subscribe path |
 
-Also: Tread Affiliates — `projects/tread-affiliates/`.
+Also: Tread Affiliates — `projects/tread-affiliates/` — comparison rail live at `/comparisons/best-ai-health-apps` (affiliate CTAs).
 
 ## Hands-off contract
 
@@ -27,11 +27,12 @@ Also: Tread Affiliates — `projects/tread-affiliates/`.
 ## Latest agent actions (2026-09-05)
 
 - Removed GitHub-repo creation as a blocker; companies run in `projects/` (+ `company/*` branches).
-- Meridian: Amalfi + Japan Escape product pages.
+- Meridian: Amalfi + Japan Escapes; **Iberia Crossing** (12-day Portugal→Spain) product page wired.
 - Everything Films: package book CTAs + referral outreach.
 - Turner Capital: trading desk landing + access mailto.
 - Project AIS: pricing page with Stripe checkout + mailto fallback so subscribe works without env.
 - Turner Biographies: Firebrand buy ebook/paperback CTAs on home + book page.
+- Tread Affiliates: **Best AI health apps** comparison page with affiliate CTAs + home “Compare tools that pay”.
 - Memory answer for Bradley: in-thread recall yes; cross-thread via this file.
 
 ## Next money pushes (agents pick up)
@@ -39,5 +40,5 @@ Also: Tread Affiliates — `projects/tread-affiliates/`.
 1. MHP: sharpen paid lead / list-your-park conversion in package (don’t break live root).
 2. Project AIS: wire real Stripe price IDs when secrets exist; until then mailto captures demand.
 3. Biographies: swap mailto for Amazon URLs the moment KDP goes live.
-4. Affiliates: ship comparison pages that monetize clicks.
-5. Meridian: add Crossing product page (multi-country).
+4. Affiliates: replace example.com aff URLs with live network links; add 2 more comparison verticals.
+5. Meridian: Expedition sample + inquiry form capture.
