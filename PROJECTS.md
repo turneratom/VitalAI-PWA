@@ -1,5 +1,7 @@
 # Separate projects (from VitalAI-PWA threads)
 
+**Bradley invents. Agents execute.** See `OPS.md`.
+
 Cloud Agent **threads** were getting merged into one GitHub repo. Each **product** is its own business: own Cursor project, own GitHub repo, own Cloud Agent environment.
 
 **Rule:** name the project / repo / environment after the **product**. Name each chat **thread** after the **job** inside that product.

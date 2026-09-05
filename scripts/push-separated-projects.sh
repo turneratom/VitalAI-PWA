@@ -6,13 +6,14 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OWNER="${GITHUB_OWNER:-turneratom}"
 
-# dir:repo
+# dir:repo — prefer newest staged companies first
 PAIRS=(
   "meridian-travel:meridian-travel"
+  "everything-films:everything-films"
 )
 
 # Optionally include other staged products when those folders exist:
-for extra in everything-films mobile-home-parks turner-capital tread-affiliates turner-biographies project-ais; do
+for extra in mobile-home-parks turner-capital tread-affiliates turner-biographies project-ais; do
   if [[ -d "$ROOT/projects/$extra" ]]; then
     PAIRS+=("$extra:$extra")
   fi

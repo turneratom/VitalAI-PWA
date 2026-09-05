@@ -7,7 +7,14 @@ Open this folder (or the `meridian-travel` GitHub repo) as its **own** Cursor pr
 - Offer: custom itineraries, local hosts, small-group departures
 - **Not** Mobile Home Parks, not Everything Films, not Turner Capital, not Project AIS
 
+## Roles
+
+- Bradley: human ideas, priorities, approvals
+- Agents: execute jobs inside Meridian only
+
 Name threads after the job, e.g. `Amalfi sample itinerary`, `Inquiry form`, `Partner hotel list`.
+
+See root `OPS.md`.
 
 ## Do not continue this product inside VitalAI-PWA
 
