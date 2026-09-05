@@ -97,12 +97,10 @@ export default function HomePage() {
               Monetisation
             </a>
             <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/comparisons/best-ai-health-apps"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
-              Join Glitchy
+              Compare tools that pay
             </a>
           </nav>
         </div>
@@ -140,12 +138,10 @@ export default function HomePage() {
               Read the guide
             </a>
             <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/comparisons/best-ai-health-apps"
               className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
             >
-              Start with Glitchy
+              Compare tools that pay
             </a>
           </div>
         </div>
@@ -496,20 +492,18 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/comparisons/best-ai-health-apps"
               className="inline-flex items-center justify-center bg-signal px-5 py-3 text-center text-sm font-bold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-signal"
             >
-              Join Glitchy — free bootcamp
+              Compare tools that pay
             </a>
             <a
-              href={links.telegram}
+              href={links.glitchy}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center border border-ink px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-white"
             >
-              Telegram — AI UGC + Claude skill
+              Join Glitchy — free bootcamp
             </a>
           </div>
         </section>
@@ -546,20 +540,18 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap gap-4 text-sm">
             <a
-              href={links.glitchy}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/comparisons/best-ai-health-apps"
               className="text-signal transition hover:text-white"
             >
-              Glitchy
+              Compare tools that pay
             </a>
             <a
-              href={links.telegram}
+              href={links.glitchy}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 transition hover:text-signal"
             >
-              Telegram
+              Glitchy
             </a>
             <a href="#skills" className="text-white/70 transition hover:text-signal">
               Skills

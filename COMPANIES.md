@@ -10,7 +10,7 @@ Chats forget. **This file remembers.**
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
 | 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Listings, buyer leads, partner fees | Live + package staged |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Landing + Amalfi + Japan Escapes |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Landing + Amalfi + Japan Escapes + Iberia Crossing |
 | 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k / $15k films + referrals | Money CTAs + outreach |
 | 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / early access | Product landing shipped |
 | 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy ebook $4.99 / paperback $15.99 CTAs live |

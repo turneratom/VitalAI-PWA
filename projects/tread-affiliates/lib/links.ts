@@ -5,6 +5,12 @@ export const links = {
   /** Replace with your full Telegram invite URL before publishing. */
   telegram: "https://t.me/",
   swipeFiles: "https://swiped.co/",
+  /** Monetization rail — comparison / review affiliate destinations. */
+  affiliates: {
+    vitalai: "https://example.com/aff/vitalai",
+    competitor: "https://example.com/aff/competitor",
+    pulsekit: "https://example.com/aff/pulsekit",
+  },
   youtube: [
     {
       title: "Copywriting for beginners (fundamentals)",
