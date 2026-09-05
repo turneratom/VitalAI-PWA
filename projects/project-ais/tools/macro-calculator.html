@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Calculator — Protein, Carbs & Fat Split | VitalAI</title>
+  <meta name="description" content="Free macro calculator. Split daily calories into protein, carbohydrates, and fat grams for balanced, low-carb, or high-protein diets.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/macro-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Macro Calculator</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">All Tools</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card">
+      <h2>Macro Calculator</h2>
+      <p>Enter your daily calorie target and goal to get protein, carb, and fat grams per day.</p>
+
+      <form id="macro-form">
+        <div class="form-row">
+          <div>
+            <label for="calories">Daily Calories</label>
+            <input id="calories" type="number" min="1000" max="6000" value="2000" required>
+          </div>
+          <div>
+            <label for="goal">Diet Style</label>
+            <select id="goal">
+              <option value="balanced">Balanced (30/40/30)</option>
+              <option value="high_protein">High Protein (40/35/25)</option>
+              <option value="low_carb">Low Carb (35/25/40)</option>
+              <option value="cut">Fat Loss (40/30/30)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Calculate Macros</button>
+      </form>
+
+      <div id="macro-result" class="result-box" hidden>
+        <p>Protein: <strong id="protein-g"></strong> g/day</p>
+        <p>Carbs: <strong id="carbs-g"></strong> g/day</p>
+        <p>Fat: <strong id="fat-g"></strong> g/day</p>
+      </div>
+    </article>
+
+    <section class="card faq">
+      <h2>Macro Calculator FAQ</h2>
+      <details open>
+        <summary>What are macros?</summary>
+        <p>Macronutrients are protein, carbohydrates, and fat — the three main sources of calories in food.</p>
+      </details>
+      <details>
+        <summary>How much protein should I eat?</summary>
+        <p>Most active adults benefit from 1.6–2.2 g per kg of body weight. Our high-protein preset targets the upper range.</p>
+      </details>
+      <details>
+        <summary>Do I need to hit macros exactly?</summary>
+        <p>No — aim within ±10 g per macro. Consistency over weeks matters more than daily perfection.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <div class="related-tools">
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="protein-calculator.html">Protein Calculator</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Macro splits are starting points. Adjust based on energy, hunger, and progress.</p>
+  </footer>
+
+  <script src="tools.js"></script>
+  <script>
+    injectFaqSchema([
+      { q: 'What are macros?', a: 'Macronutrients are protein, carbohydrates, and fat.' },
+      { q: 'How much protein should I eat?', a: 'Most active adults benefit from 1.6 to 2.2 g per kg body weight.' },
+      { q: 'Do I need to hit macros exactly?', a: 'Aim within about 10 g per macro; weekly consistency matters most.' }
+    ]);
+
+    document.getElementById('macro-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const calories = parseInt(document.getElementById('calories').value, 10);
+      const macros = macroSplit(calories, document.getElementById('goal').value);
+      document.getElementById('protein-g').textContent = macros.proteinG;
+      document.getElementById('carbs-g').textContent = macros.carbsG;
+      document.getElementById('fat-g').textContent = macros.fatG;
+      document.getElementById('macro-result').hidden = false;
+    });
+  </script>
+</body>
+</html>

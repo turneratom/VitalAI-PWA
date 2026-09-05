@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steps to Calories Calculator | VitalAI</title>
+  <meta name="description" content="Convert daily steps to calories burned based on body weight and walking pace.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/steps-to-calories-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Steps → Calories</p></div>
+      <nav class="nav-links"><a href="tdee-calculator.html">TDEE</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Steps to Calories Calculator</h2>
+      <form id="steps-form">
+        <div class="form-row">
+          <div><label for="steps">Steps</label><input id="steps" type="number" value="10000" required></div>
+          <div><label for="weight">Weight (kg)</label><input id="weight" type="number" value="70" required></div>
+          <div><label for="pace">Pace</label><select id="pace"><option value="slow">Slow</option><option value="moderate" selected>Moderate</option><option value="brisk">Brisk</option><option value="fast">Fast</option></select></div>
+        </div>
+        <button type="submit" class="btn">Calculate Calories</button>
+      </form>
+      <div id="steps-result" class="result-box" hidden>
+        <p>Calories burned: <strong id="cal"></strong> kcal</p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="calorie-deficit-calculator.html">Deficit</a> <a href="heart-rate-zone-calculator.html">HR Zones</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('steps-form').onsubmit = (e) => {
+      e.preventDefault();
+      document.getElementById('cal').textContent = calcStepsCalories(+document.getElementById('steps').value, +document.getElementById('weight').value, document.getElementById('pace').value);
+      document.getElementById('steps-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

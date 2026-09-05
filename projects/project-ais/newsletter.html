@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalAI Health Tips — Free Weekly Newsletter</title>
+  <meta name="description" content="Subscribe to VitalAI Health Tips. One actionable health tip per week, new calculator launches, and AI health news.">
+  <link rel="stylesheet" href="tools/tools.css">
+  <link rel="canonical" href="https://vitalai.app/newsletter.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Health Tips Newsletter</p></div>
+      <nav class="nav-links"><a href="tools/index.html">Tools</a><a href="pricing.html">Pro</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>VitalAI Health Tips</h2>
+      <p>Every Tuesday: top health stories, one free tool spotlight, and one product we actually use. No spam.</p>
+      <ul>
+        <li>5 curated health & AI stories</li>
+        <li>Links to new calculators on vitalai.app</li>
+        <li>Affiliate picks we vet first (disclosed)</li>
+      </ul>
+
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="you@email.com" required aria-label="Email">
+        <button type="submit" class="btn">Subscribe Free</button>
+      </form>
+
+      <div id="beehiiv-embed" style="margin-top:2rem;"></div>
+    </section>
+
+    <section class="card">
+      <h3>Sample issue outline (Bot-generated weekly)</h3>
+      <ol>
+        <li><strong>Hook:</strong> "Most people miscalculate protein by 40g/day."</li>
+        <li><strong>Story 1:</strong> New sleep study + link</li>
+        <li><strong>Story 2:</strong> AI in dermatology update</li>
+        <li><strong>Tool spotlight:</strong> TDEE Calculator</li>
+        <li><strong>Affiliate:</strong> Approved protein powder (FTC disclosed)</li>
+        <li><strong>CTA:</strong> Try VitalAI Pro</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer">Unsubscribe anytime. We never sell your email.</footer>
+  <script src="tools/tools.js"></script>
+  <script>
+    bindNewsletter('newsletter-form', 'newsletter-page');
+    fetch('/api/config').then(r => r.json()).then(cfg => {
+      if (cfg.beehiivEmbedId) {
+        document.getElementById('beehiiv-embed').innerHTML =
+          `<iframe src="https://embeds.beehiiv.com/${cfg.beehiivEmbedId}" width="100%" height="320" frameborder="0" scrolling="no"></iframe>`;
+      }
+    });
+  </script>
+</body>
+</html>

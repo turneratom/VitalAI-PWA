@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDEE Calculator — Daily Calorie Needs | VitalAI</title>
+  <meta name="description" content="Free TDEE calculator. Find your Total Daily Energy Expenditure to maintain, lose, or gain weight based on age, sex, weight, height, and activity.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/tdee-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>TDEE Calculator</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">All Tools</a>
+        <a href="../index.html">AI Coach</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card">
+      <h2>TDEE Calculator (Total Daily Energy Expenditure)</h2>
+      <p>Estimate how many calories you burn per day. Subtract 300–500 for fat loss; add 250–400 for muscle gain.</p>
+
+      <form id="tdee-form">
+        <div class="form-row">
+          <div>
+            <label for="sex">Sex</label>
+            <select id="sex">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="15" max="100" value="30" required>
+          </div>
+          <div>
+            <label for="weight">Weight (kg)</label>
+            <input id="weight" type="number" min="30" step="0.1" value="70" required>
+          </div>
+          <div>
+            <label for="height">Height (cm)</label>
+            <input id="height" type="number" min="100" step="0.1" value="175" required>
+          </div>
+          <div>
+            <label for="activity">Activity Level</label>
+            <select id="activity">
+              <option value="sedentary">Sedentary (desk job)</option>
+              <option value="light">Light (1–2 workouts/week)</option>
+              <option value="moderate" selected>Moderate (3–5 workouts/week)</option>
+              <option value="active">Active (6–7 workouts/week)</option>
+              <option value="very_active">Very active (physical job + training)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Calculate TDEE</button>
+      </form>
+
+      <div id="tdee-result" class="result-box" hidden>
+        <p>Maintenance calories: <strong id="tdee-value"></strong> kcal/day</p>
+        <p>Fat loss (~500 deficit): <strong id="tdee-cut"></strong> kcal/day</p>
+        <p>Muscle gain (~300 surplus): <strong id="tdee-bulk"></strong> kcal/day</p>
+      </div>
+    </article>
+
+    <section class="card faq">
+      <h2>TDEE FAQ</h2>
+      <details open>
+        <summary>What is TDEE?</summary>
+        <p>TDEE is the total calories you burn in a day including exercise and daily movement. It equals your BMR multiplied by an activity factor.</p>
+      </details>
+      <details>
+        <summary>How many calories to lose 1 lb per week?</summary>
+        <p>One pound of fat is roughly 3,500 calories. A 500 calorie daily deficit equals about 1 lb lost per week.</p>
+      </details>
+      <details>
+        <summary>Which activity level should I pick?</summary>
+        <p>Be honest — most people overestimate. If you train 3 days/week and sit otherwise, "Moderate" is usually correct.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h3>Related Tools</h3>
+      <div class="related-tools">
+        <a href="bmi-calculator.html">BMI Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="protein-calculator.html">Protein Calculator</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Estimates only. Adjust based on real-world weight trends over 2–4 weeks.</p>
+  </footer>
+
+  <script src="tools.js"></script>
+  <script>
+    injectFaqSchema([
+      { q: 'What is TDEE?', a: 'TDEE is total daily energy expenditure — calories burned per day including activity.' },
+      { q: 'How many calories to lose 1 lb per week?', a: 'A 500 calorie daily deficit equals about 1 lb lost per week.' },
+      { q: 'Which activity level should I pick?', a: 'Pick the level that matches your average week, not your best week.' }
+    ]);
+
+    document.getElementById('tdee-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bmr = calcBMR(
+        parseFloat(document.getElementById('weight').value),
+        parseFloat(document.getElementById('height').value),
+        parseInt(document.getElementById('age').value, 10),
+        document.getElementById('sex').value
+      );
+      const tdee = Math.round(calcTDEE(bmr, document.getElementById('activity').value));
+      document.getElementById('tdee-value').textContent = tdee;
+      document.getElementById('tdee-cut').textContent = tdee - 500;
+      document.getElementById('tdee-bulk').textContent = tdee + 300;
+      document.getElementById('tdee-result').hidden = false;
+    });
+  </script>
+</body>
+</html>

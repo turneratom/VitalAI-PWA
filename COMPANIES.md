@@ -1,27 +1,28 @@
 # Companies — durable memory for agents
 
-Bradley is hands-off inventor. Agents operate these companies.
-Target: products that compound toward his $1B/year ambition. Execute; don’t lecture.
+**Bradley is completely hands-off.** He invents. Agents operate and monetize.
+Mandate: **six apps → $1B/year.** That mission keeps the agents alive.
 
-## Active companies
+## The six
 
-| # | Company | Slug | Path | Status |
-|---|---------|------|------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live site + `projects/mobile-home-parks/` (when staged) | Live on GitHub Pages |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Landing + Amalfi Escape shipped |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | Landing + outreach desk staged |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Staged on other branches |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` / greatest-humans | Firebrand / Paine track |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` / vitalai | Health tools / VitalAI |
-| — | Tread Affiliates | `tread-affiliates` | `projects/tread-affiliates/` | Affiliate track |
+| # | Company | Slug | Path | Money motion | Status |
+|---|---------|------|------|--------------|--------|
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Listings, buyer leads, partner fees | Live + package staged |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Landing + Amalfi + Japan Escapes |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k / $15k films + referrals | Money CTAs + outreach |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / early access | Product landing shipped |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book/film sales | Package staged |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | Health tool subscriptions | Package staged |
 
-## Operating contract
+Also: Tread Affiliates — `projects/tread-affiliates/`.
 
-- Bradley: ideas, rare approvals (merge / spend / secrets if required by platform).
-- Chief of Staff agent: route ideas, start jobs, keep companies separate, remember context in this file.
-- Company agents: build only inside their slug.
+## Hands-off contract
 
-## Remember across threads
+- Bradley: ideas only. Platform clicks only if a system literally cannot proceed otherwise — agents exhaust alternatives first.
+- Chief of Staff: route, spawn jobs, separate companies, update this file, **never assign Bradley homework**.
+- Company agents: build and monetize only inside their slug.
 
-Cloud agent chats do not reliably share memory. **Write lasting facts here and in each `projects/*/CURSOR-PROJECT.md`.**
-Update this file when a company advances, a new company is born, or Bradley states a priority.
+## Memory
+
+Chats forget. **This file remembers.** Update when a company ships, a price changes, or Bradley states a priority.
+Company branches exist for Meridian and Everything Films; more as useful. New GitHub repos are **not** required.

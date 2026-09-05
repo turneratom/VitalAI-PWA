@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Deficit Calculator — Weight Loss Timeline | VitalAI</title>
+  <meta name="description" content="Calculate daily calorie deficit and weeks to reach your goal weight. Based on 7700 calories per kg of fat.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/calorie-deficit-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Calorie Deficit Calculator</p></div>
+      <nav class="nav-links"><a href="tdee-calculator.html">TDEE</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Calorie Deficit Calculator</h2>
+      <form id="cd-form">
+        <div class="form-row">
+          <div><label for="current">Current weight (kg)</label><input id="current" type="number" value="80" required></div>
+          <div><label for="target">Goal weight (kg)</label><input id="target" type="number" value="70" required></div>
+          <div><label for="weekly">Weekly loss (kg)</label><select id="weekly"><option value="0.25">0.25 (slow)</option><option value="0.5" selected>0.5 (recommended)</option><option value="0.75">0.75 (aggressive)</option></select></div>
+        </div>
+        <button type="submit" class="btn">Calculate Deficit</button>
+      </form>
+      <div id="cd-result" class="result-box" hidden>
+        <p>Daily deficit: <strong id="deficit"></strong> kcal</p>
+        <p>Time to goal: <strong id="weeks"></strong> weeks</p>
+        <p>Total to lose: <strong id="loss"></strong> kg</p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="tdee-calculator.html">TDEE</a> <a href="macro-calculator.html">Macros</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('cd-form').onsubmit = (e) => {
+      e.preventDefault();
+      const r = calcCalorieDeficit(+document.getElementById('current').value, +document.getElementById('target').value, +document.getElementById('weekly').value);
+      document.getElementById('deficit').textContent = r.dailyDeficit;
+      document.getElementById('weeks').textContent = r.weeks;
+      document.getElementById('loss').textContent = r.totalLossKg;
+      document.getElementById('cd-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

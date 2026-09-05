@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideal Weight Calculator — Robinson, Devine, Miller | VitalAI</title>
+  <meta name="description" content="Free ideal weight calculator. Compare Robinson, Devine, and Miller formulas based on your height and sex.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/ideal-weight-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Ideal Weight Calculator</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Ideal Weight Calculator</h2>
+      <form id="iw-form">
+        <div class="form-row">
+          <div><label for="sex">Sex</label><select id="sex"><option value="male">Male</option><option value="female">Female</option></select></div>
+          <div><label for="height">Height (cm)</label><input id="height" type="number" value="175" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate Ideal Weight</button>
+      </form>
+      <div id="iw-result" class="result-box" hidden>
+        <p>Robinson: <strong id="robinson"></strong> kg</p>
+        <p>Devine: <strong id="devine"></strong> kg</p>
+        <p>Miller: <strong id="miller"></strong> kg</p>
+      </div>
+    </article>
+    <section class="card faq">
+      <details open><summary>Which formula is best?</summary><p>Robinson (1983) is widely used clinically. Compare all three and use BMI + body composition for context.</p></details>
+    </section>
+    <div class="related-tools"><a href="bmi-calculator.html">BMI</a> <a href="body-fat-calculator.html">Body Fat</a></div>
+  </main>
+  <footer class="site-footer">Estimates for adults only.</footer>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('iw-form').onsubmit = (e) => {
+      e.preventDefault();
+      const w = calcIdealWeight(+document.getElementById('height').value, document.getElementById('sex').value);
+      document.getElementById('robinson').textContent = w.robinson;
+      document.getElementById('devine').textContent = w.devine;
+      document.getElementById('miller').textContent = w.miller;
+      document.getElementById('iw-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

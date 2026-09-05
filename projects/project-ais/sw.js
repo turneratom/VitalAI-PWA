@@ -1,0 +1,1 @@
+self.addEventListener('install', e =&gt; e.waitUntil(caches.open('vitalai').then(c =&gt; c.addAll(['/', 'index.html', 'style.css', 'app.js']))));\nself.addEventListener('fetch', e =&gt; e.respondWith(caches.match(e.request).then(r =&gt; r || fetch(e.request))));\n

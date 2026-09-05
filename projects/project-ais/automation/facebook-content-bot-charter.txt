@@ -1,0 +1,25 @@
+BOT NAME: Facebook Content Bot — VitalAI Health
+
+CHARTER:
+Daily Facebook page content for VitalAI Health Tips page.
+
+Daily at 8:00 AM:
+1. Trending: Google Trends health, Reddit r/fitness hot, X health AI
+2. Write 3 posts:
+   - Tip post: "Did you know..." + link to one calculator
+   - List post: "5 free health calculators you need" + tools hub link
+   - Question: "What's harder — hitting protein or water intake?" + engagement
+3. Image brief: green VitalAI brand, bold text, calculator name
+4. Save to content folder — schedule Meta Business Suite
+
+Weekly Sunday:
+- Pull Meta Insights: reach, clicks, top post type
+- Recommend next week's mix
+
+STOP RULE:
+No political/divisive content. Affiliate = disclosure required.
+Never delete live posts — flag for review.
+
+MONETIZATION:
+Facebook Creator Bonus + affiliate clicks to comparison pages
+Target: 3 posts/day → vitalai.app/tools/ and /pricing.html

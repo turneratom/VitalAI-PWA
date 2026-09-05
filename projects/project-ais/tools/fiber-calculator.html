@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiber Calculator — Daily Fiber Needs | VitalAI</title>
+  <meta name="description" content="Calculate recommended daily fiber intake by sex, age, and calorie intake.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/fiber-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Fiber Calculator</p></div>
+      <nav class="nav-links"><a href="macro-calculator.html">Macros</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Daily Fiber Calculator</h2>
+      <form id="fiber-form">
+        <div class="form-row">
+          <div><label for="sex">Sex</label><select id="sex"><option value="male">Male</option><option value="female">Female</option></select></div>
+          <div><label for="calories">Daily calories</label><input id="calories" type="number" value="2000" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate Fiber</button>
+      </form>
+      <div id="fiber-result" class="result-box" hidden>
+        <p>Recommended fiber: <strong id="fiber-g"></strong> g/day</p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="macro-calculator.html">Macros</a> <a href="protein-calculator.html">Protein</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('fiber-form').onsubmit = (e) => {
+      e.preventDefault();
+      document.getElementById('fiber-g').textContent = calcFiber(document.getElementById('sex').value, 30, +document.getElementById('calories').value);
+      document.getElementById('fiber-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

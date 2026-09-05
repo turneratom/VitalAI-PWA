@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator — Free Online Body Mass Index Tool | VitalAI</title>
+  <meta name="description" content="Free BMI calculator. Enter height and weight to get your Body Mass Index and category (underweight, normal, overweight, obese).">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/bmi-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>BMI Calculator</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">All Tools</a>
+        <a href="../index.html">AI Coach</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card">
+      <h2>Free BMI Calculator</h2>
+      <p>Body Mass Index (BMI) estimates body fat from height and weight. Use metric or imperial units below.</p>
+
+      <form id="bmi-form">
+        <div class="form-row">
+          <div>
+            <label for="units">Units</label>
+            <select id="units">
+              <option value="metric">Metric (kg, cm)</option>
+              <option value="imperial">Imperial (lb, in)</option>
+            </select>
+          </div>
+          <div>
+            <label for="weight">Weight</label>
+            <input id="weight" type="number" min="1" step="0.1" placeholder="70" required>
+          </div>
+          <div>
+            <label for="height">Height</label>
+            <input id="height" type="number" min="1" step="0.1" placeholder="175" required>
+          </div>
+        </div>
+        <button type="submit" class="btn">Calculate BMI</button>
+      </form>
+
+      <div id="bmi-result" class="result-box" hidden>
+        <p>Your BMI: <strong id="bmi-value"></strong></p>
+        <p>Category: <strong id="bmi-category"></strong></p>
+      </div>
+    </article>
+
+    <section class="card faq">
+      <h2>BMI Calculator FAQ</h2>
+      <details open>
+        <summary>What is a healthy BMI?</summary>
+        <p>A BMI between 18.5 and 24.9 is generally considered normal for adults. Below 18.5 is underweight; 25–29.9 is overweight; 30+ is obese.</p>
+      </details>
+      <details>
+        <summary>How is BMI calculated?</summary>
+        <p>BMI = weight (kg) ÷ height (m)². For imperial: multiply by 703 after using pounds and inches.</p>
+      </details>
+      <details>
+        <summary>Is BMI accurate for athletes?</summary>
+        <p>BMI does not distinguish muscle from fat. Very muscular people may show "overweight" despite low body fat. Consider body composition tests for athletes.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h3>Related Tools</h3>
+      <div class="related-tools">
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="protein-calculator.html">Protein Calculator</a>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <h3>Go beyond BMI</h3>
+      <p>VitalAI analyzes photos and answers health questions with AI — free tier available.</p>
+      <a class="btn" href="../index.html">Try VitalAI</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Not medical advice. Consult a healthcare provider for personalized guidance.</p>
+  </footer>
+
+  <script src="tools.js"></script>
+  <script>
+    injectFaqSchema([
+      { q: 'What is a healthy BMI?', a: 'A BMI between 18.5 and 24.9 is generally considered normal for adults.' },
+      { q: 'How is BMI calculated?', a: 'BMI equals weight in kilograms divided by height in meters squared.' },
+      { q: 'Is BMI accurate for athletes?', a: 'BMI does not distinguish muscle from fat; athletes may need other metrics.' }
+    ]);
+
+    document.getElementById('bmi-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const units = document.getElementById('units').value;
+      let weight = parseFloat(document.getElementById('weight').value);
+      let height = parseFloat(document.getElementById('height').value);
+      if (units === 'imperial') {
+        weight = weight * 0.453592;
+        height = height * 2.54;
+      }
+      const bmi = calcBMI(weight, height);
+      document.getElementById('bmi-value').textContent = bmi.toFixed(1);
+      document.getElementById('bmi-category').textContent = bmiCategory(bmi);
+      document.getElementById('bmi-result').hidden = false;
+    });
+  </script>
+</body>
+</html>

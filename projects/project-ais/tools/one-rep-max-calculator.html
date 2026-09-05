@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Rep Max Calculator — Epley Formula | VitalAI</title>
+  <meta name="description" content="Free 1RM calculator. Estimate your one-rep max from weight and reps using the Epley formula.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/one-rep-max-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>1RM Calculator</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>One Rep Max (1RM) Calculator</h2>
+      <form id="orm-form">
+        <div class="form-row">
+          <div><label for="weight">Weight lifted (kg)</label><input id="weight" type="number" value="100" required></div>
+          <div><label for="reps">Reps completed</label><input id="reps" type="number" min="1" max="12" value="5" required></div>
+        </div>
+        <button type="submit" class="btn">Calculate 1RM</button>
+      </form>
+      <div id="orm-result" class="result-box" hidden>
+        <p>Estimated 1RM: <strong id="orm"></strong> kg</p>
+        <p id="percentages"></p>
+      </div>
+    </article>
+    <div class="related-tools"><a href="heart-rate-zone-calculator.html">HR Zones</a> <a href="protein-calculator.html">Protein</a></div>
+  </main>
+  <script src="tools.js"></script>
+  <script>
+    document.getElementById('orm-form').onsubmit = (e) => {
+      e.preventDefault();
+      const orm = calcOneRepMax(+document.getElementById('weight').value, +document.getElementById('reps').value);
+      document.getElementById('orm').textContent = Math.round(orm);
+      document.getElementById('percentages').textContent = `Training: 85% = ${Math.round(orm*0.85)}kg | 75% = ${Math.round(orm*0.75)}kg | 65% = ${Math.round(orm*0.65)}kg`;
+      document.getElementById('orm-result').hidden = false;
+    };
+  </script>
+</body>
+</html>

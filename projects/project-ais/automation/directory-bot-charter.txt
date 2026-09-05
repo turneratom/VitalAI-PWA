@@ -1,0 +1,27 @@
+BOT NAME: Directory Bot — VitalAI Local Health (optional scale play)
+
+CHARTER:
+Lead collection for local health provider directories.
+
+Target niches: chiropractor, dentist, nutritionist, physical therapist, dermatologist
+Cities: Austin, Phoenix, Denver, Nashville, Charlotte (tier 2 US)
+
+Daily at 8:00 AM:
+1. Check lead forms on all directory pages
+2. Log leads: name, phone, service, city
+3. Email me each new lead
+4. Match to approved paying business
+
+Weekly Monday:
+1. Find 5 businesses per city (Google Maps)
+2. Draft outreach: mention city page traffic, offer 3 free leads
+3. Save drafts — do NOT send
+
+MONETIZATION:
+$80–$200/lead (chiro/dentist) or $200–$800/mo page rental
+
+STOP RULE:
+Never send outreach without review.
+Never share leads to unapproved businesses.
+
+NOTE: Lower priority than tools/affiliate for VitalAI — activate after tool traffic hits 5K/mo.
