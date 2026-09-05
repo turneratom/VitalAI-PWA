@@ -390,6 +390,15 @@
       font-weight: 500;
     }
 
+    .journey-price a {
+      color: #fff;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+      transition: border-color 0.3s var(--ease);
+    }
+
+    .journey-price a:hover { border-color: #fff; }
+
     /* —— Places —— */
     .places {
       background: var(--mist);
@@ -656,11 +665,11 @@
       <h2 class="section-title" id="journeys-title">Three shapes. Infinite routes.</h2>
       <p class="section-lead">Pick a frame. We fill it with the places and people that fit you.</p>
       <div class="journey-list">
-        <a class="journey" href="journeys/amalfi-escape.html">
+        <article class="journey">
           <h3 class="journey-name">Escape</h3>
           <p class="journey-desc">5–8 days in one place. A reset: one coast, one city, or one valley with nothing to prove.</p>
-          <p class="journey-price">From <em>$4,800</em> · sample: Amalfi</p>
-        </a>
+          <p class="journey-price">From <em>$4,800</em> · <a href="journeys/amalfi-escape.html">Amalfi</a> · <a href="journeys/japan-escape.html">Japan</a></p>
+        </article>
         <article class="journey">
           <h3 class="journey-name">Crossing</h3>
           <p class="journey-desc">10–14 days across two regions. Trains, ferries, and the slow change of landscape.</p>
@@ -703,18 +712,18 @@
             <span>Escape · cooler months</span>
           </figcaption>
         </figure>
-        <figure class="place">
+        <a class="place" href="journeys/japan-escape.html">
           <img
             src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=80"
             alt="Traditional street with wooden buildings in Japan"
             width="1400"
             height="1800"
           />
-          <figcaption class="place-caption">
-            <strong>Kyoto &amp; the coast</strong>
-            <span>Expedition · autumn color</span>
-          </figcaption>
-        </figure>
+          <span class="place-caption">
+            <strong>Kyoto &amp; Tokyo</strong>
+            <span>Escape · sample itinerary</span>
+          </span>
+        </a>
       </div>
     </section>
 
