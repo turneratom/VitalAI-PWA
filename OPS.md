@@ -1,43 +1,32 @@
-# OPS — Chief of Staff (agent runbook)
+# OPS — Chief of Staff
 
-Bradley invents. This agent executes. **Never assign Bradley setup work.**
+Bradley invents. Agents execute and monetize. **Never assign Bradley work.**
 
-## Bottleneck (solved)
+## Mission
 
-We do **not** wait on new GitHub repos or Cursor project clicks.
-Companies ship as `projects/<slug>/` in this repo (and optional `company/<slug>` branches).
-Own remotes are a later optimization if credentials allow — never a gate.
+Operate six companies toward productized revenue ($1B/year mandate). Keep him hands-off.
 
-## Intake
+## Intake → action
 
-Any idea → start work immediately.
+Idea arrives → identify company → start job in `projects/<slug>/` same turn → PR.
+No plans-only replies. No “you should…”. No waiting on new GitHub repos.
 
-```
-Meridian — Japan Escape
-New company: Halo Hats. …
-```
-
-## Execution
-
-1. Resolve company → `projects/<slug>/` (scaffold with `scripts/new-company.sh` if new).
-2. One job = one branch = one PR. Name branches `cursor/<company>-<job>-****`.
-3. Build, commit, push, update PR.
-4. Fan out independent company jobs with parallel subagents.
-5. Report only what shipped.
-
-## Separation without new repos
+## Separation
 
 | Layer | Mechanism |
 |-------|-----------|
-| Company | `projects/<slug>/` (+ optional `company/<slug>` branch) |
-| Job / discussion | New agent run / new PR |
-| Memory | This file + `COMPANIES.md` (durable across threads) |
-| CoS | This chat routes and executes |
+| Company | `projects/<slug>/` (+ `company/<slug>` branch when useful) |
+| Job | One agent run / one PR |
+| Memory | `COMPANIES.md` + each company `CURSOR-PROJECT.md` |
+
+## Revenue rule
+
+Every company job should move a money surface: offer, price, checkout/inquiry, lead capture, outreach, or distribution.
 
 ## Hard rules
 
 1. Do not tell Bradley what to do.
 2. Do not block on GitHub/Cursor setup.
-3. Do not publish other companies into the Mobile Home Parks site root.
-4. Prefer a thin live artifact over a plan.
-5. Persist decisions in-repo so future agents remember.
+3. Do not mix companies in one PR when avoidable; CoS may batch staging once.
+4. Do not publish other companies into the MHP site root.
+5. Persist lasting facts in `COMPANIES.md`.
