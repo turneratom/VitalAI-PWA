@@ -230,7 +230,27 @@ function injectAdSlot(containerId) {
   if (window.adsbygoogle) window.adsbygoogle.push({});
 }
 
+function ensureProUpsell() {
+  if (document.querySelector('[data-pro-upsell]')) return;
+  const main = document.querySelector('main') || document.body;
+  const banner = document.createElement('section');
+  banner.className = 'cta-banner';
+  banner.setAttribute('data-pro-upsell', '1');
+  banner.innerHTML =
+    '<h3>Unlock VitalAI Pro — $9.99/mo</h3>' +
+    '<p>Unlimited AI photo analysis, coaching chat history, and priority models. Free tools stay free.</p>' +
+    '<a class="btn" href="../pricing.html">Subscribe to Pro</a>' +
+    ' <a class="btn" style="margin-left:0.5rem;background:transparent;border:1px solid rgba(255,255,255,0.55);color:#fff" href="../pricing.html#elite">See Elite $29.99</a>';
+  const footer = document.querySelector('.site-footer, footer');
+  if (footer && footer.parentNode === main.parentNode) {
+    footer.parentNode.insertBefore(banner, footer);
+  } else {
+    main.appendChild(banner);
+  }
+}
+
 function loadMonetization() {
+  ensureProUpsell();
   fetch('/api/config')
     .then((r) => r.json())
     .then((cfg) => {

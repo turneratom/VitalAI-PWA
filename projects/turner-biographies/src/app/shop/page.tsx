@@ -1,0 +1,131 @@
+import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { books } from "@/lib/series";
+
+export const metadata: Metadata = {
+  title: "Shop",
+  description:
+    "Buy Firebrand by Brad Turner — ebook $4.99, paperback $15.99. Book One of The Greatest Humans.",
+};
+
+const EBOOK_MAIL =
+  "mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20ebook%20%244.99&body=I%20want%20to%20buy%20Firebrand%20(ebook)%20for%20%244.99.%0A%0APreferred%20format%3A%20Kindle%20%2F%20EPUB%0AEmail%20for%20delivery%3A%0A";
+
+const PAPERBACK_MAIL =
+  "mailto:brad@treadcompanies.com?subject=Buy%20Firebrand%20paperback%20%2415.99&body=I%20want%20to%20buy%20Firebrand%20(paperback)%20for%20%2415.99.%0A%0AShip%20to%3A%0A";
+
+export default function ShopPage() {
+  const book = books[0];
+
+  return (
+    <div>
+      <section className="grain relative min-h-[100svh] overflow-hidden">
+        <Image
+          src={book.heroImage}
+          alt="Candlelit printing shop evocative of Thomas Paine’s world"
+          fill
+          priority
+          className="object-cover object-[68%_center] animate-ember"
+          sizes="100vw"
+        />
+        <div className="hero-veil absolute inset-0 z-[1]" />
+        <div className="relative z-[2] mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
+          <p className="animate-rise font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.35em] text-brass">
+            The Greatest Humans · Shop
+          </p>
+          <h1 className="animate-rise-delay-1 mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] tracking-tight text-bone md:text-7xl lg:text-8xl">
+            Firebrand
+          </h1>
+          <p className="animate-rise-delay-2 mt-3 font-[family-name:var(--font-display)] text-2xl text-brass md:text-3xl">
+            {book.subtitle}
+          </p>
+          <p className="animate-rise-delay-3 mt-6 max-w-xl text-lg text-bone/85 md:text-xl">
+            Own Book One of Brad Turner’s series—ebook or paperback—while Amazon
+            listings are still coming online.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-paper text-ink">
+        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+          <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.3em] text-seal">
+            Choose a format
+          </p>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-4xl leading-tight md:text-5xl">
+            Clear prices. Direct purchase.
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink/80">
+            {book.synopsis}
+          </p>
+
+          <div className="mt-14 grid gap-10 md:grid-cols-2">
+            <div className="border-t border-ink/15 pt-8">
+              <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-seal">
+                Ebook
+              </p>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-5xl text-ink">
+                $4.99
+              </p>
+              <p className="mt-3 text-ink/70">
+                Kindle or EPUB delivered by email after you write.
+              </p>
+              <a
+                href={EBOOK_MAIL}
+                className="mt-8 inline-block bg-seal px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.18em] text-bone transition hover:bg-seal-deep"
+              >
+                Buy ebook · $4.99
+              </a>
+            </div>
+
+            <div className="border-t border-ink/15 pt-8">
+              <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-seal">
+                Paperback
+              </p>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-5xl text-ink">
+                $15.99
+              </p>
+              <p className="mt-3 text-ink/70">
+                Print edition shipped to the address you include.
+              </p>
+              <a
+                href={PAPERBACK_MAIL}
+                className="mt-8 inline-block border border-ink/25 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.18em] text-ink transition hover:border-seal hover:text-seal"
+              >
+                Buy paperback · $15.99
+              </a>
+            </div>
+          </div>
+
+          <p className="mt-10 max-w-2xl font-[family-name:var(--font-ui)] text-sm text-ink/55">
+            Email opens to{" "}
+            <span className="text-ink">brad@treadcompanies.com</span> with the
+            package in the subject line. Amazon store links will replace these
+            when available.
+          </p>
+
+          <div className="mt-14 flex flex-wrap gap-4 border-t border-ink/15 pt-10 font-[family-name:var(--font-ui)] text-sm">
+            <Link
+              href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
+              className="bg-ink px-4 py-2.5 text-bone transition hover:bg-seal"
+            >
+              Read sample chapter
+            </Link>
+            <Link
+              href={`/books/${book.slug}/film`}
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Film adaptation
+            </Link>
+            <Link
+              href={`/books/${book.slug}`}
+              className="px-4 py-2.5 text-ink/60 transition hover:text-seal"
+            >
+              Book overview →
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

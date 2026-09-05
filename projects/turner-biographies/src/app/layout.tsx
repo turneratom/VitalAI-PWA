@@ -52,10 +52,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 Firebrand
               </Link>
               <Link
-                className="rounded-sm bg-seal px-3 py-1.5 text-bone transition hover:bg-seal-deep"
+                className="transition hover:text-bone"
                 href="/books/firebrand/read/the-cordwainers-son"
               >
                 Begin reading
+              </Link>
+              <Link
+                className="rounded-sm bg-seal px-3 py-1.5 text-bone transition hover:bg-seal-deep"
+                href="/shop"
+              >
+                Shop
               </Link>
             </nav>
           </div>

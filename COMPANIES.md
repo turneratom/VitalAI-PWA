@@ -10,16 +10,13 @@ Chats forget. **This file remembers.**
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
 | 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | Live + package; List Your Park Free primary + mailto backup |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + Crossing + Expedition + inquiry form → mailto |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k / $15k films + referrals | Package CTAs + inquiry form + outreach |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid pilot | Landing + waitlist; **paid desk pilot from $2,500/mo** |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy ebook $4.99 / paperback $15.99 CTAs |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI Pro $9.99 / Elite $29.99 | Pricing + Stripe-or-mailto subscribe |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + Crossing + Expedition + inquiry form |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k / $15k films + referrals | Package CTAs + inquiry + outreach |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid pilot | Landing + waitlist; paid pilot **$2,500/mo** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Firebrand book sales | Buy CTAs + dedicated **/shop** page ($4.99 / $15.99) |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI Pro $9.99 / Elite $29.99 | Pricing + **Pro upsell injected on all free tools** |
 
-Also: Tread Affiliates — `projects/tread-affiliates/`
-- `/comparisons/best-ai-health-apps`
-- `/comparisons/best-calorie-tracker-apps`
-- `/comparisons/best-fitness-wearables`
+Also: Tread Affiliates — AI health, calorie trackers, fitness wearables comparison rails.
 
 ## Hands-off contract
 
@@ -30,19 +27,19 @@ Also: Tread Affiliates — `projects/tread-affiliates/`
 ## Latest agent actions (2026-09-05)
 
 - Companies run in `projects/` without waiting on new GitHub repos.
-- Meridian: product ladder + structured inquiry mailto form.
-- Everything Films: $10k/$15k book paths + inquiry form.
-- Turner Capital: trading floor + access form; paid pilot priced at $2,500/mo.
-- Project AIS: Stripe + mailto subscribe fallback.
-- Turner Biographies: Firebrand buy CTAs.
-- Tread Affiliates: AI health, calorie trackers, **fitness wearables** rails.
+- Meridian product ladder + structured inquiry mailto.
+- Everything Films $10k/$15k book paths.
+- Turner Capital paid desk pilot priced at $2,500/mo.
+- Project AIS: Stripe-or-mailto pricing; **every free calculator now upsells Pro $9.99 / Elite $29.99**.
+- Turner Biographies: Firebrand **/shop** route with ebook/paperback buy CTAs; Shop in nav.
+- Tread Affiliates: three comparison rails.
 - MHP package: List Your Park Free primary conversion.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes
 
-1. Affiliates: swap example.com aff URLs for live network links when credentials exist.
+1. Affiliates: live network URLs when credentials exist.
 2. Project AIS: real Stripe price IDs when secrets exist.
-3. Biographies: Amazon URLs when KDP live.
-4. Deploy company packages when hosting allows — without blocking Bradley.
-5. Keep shipping product/offer pages every CoS cycle.
+3. Biographies: Amazon URLs when KDP live (shop page already mailto-ready).
+4. Deploy packages when hosting allows — without blocking Bradley.
+5. Keep shipping offer pages every CoS cycle.
