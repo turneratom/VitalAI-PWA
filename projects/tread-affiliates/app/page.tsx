@@ -97,7 +97,7 @@ export default function HomePage() {
               Monetisation
             </a>
             <a
-              href="/comparisons/best-ai-health-apps"
+              href="/comparisons"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
               Compare tools that pay
@@ -150,7 +150,7 @@ export default function HomePage() {
               Read the guide
             </a>
             <a
-              href="/comparisons/best-ai-health-apps"
+              href="/comparisons"
               className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
             >
               Compare tools that pay
@@ -516,7 +516,7 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <a
-              href="/comparisons/best-ai-health-apps"
+              href="/comparisons"
               className="inline-flex items-center justify-center bg-signal px-5 py-3 text-center text-sm font-bold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-signal"
             >
               Compare tools that pay
@@ -576,7 +576,7 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap gap-4 text-sm">
             <a
-              href="/comparisons/best-ai-health-apps"
+              href="/comparisons"
               className="text-signal transition hover:text-white"
             >
               Compare tools that pay
