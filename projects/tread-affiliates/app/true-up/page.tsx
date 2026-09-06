@@ -95,6 +95,7 @@ export default function TrueUpPage() {
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/true-up" className="transition hover:text-signal">True-up kit</Link>
             <Link href="/clearing" className="transition hover:text-signal">Clearing</Link>
+            <Link href="/netting" className="transition hover:text-signal">Netting</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">True-up kit</a>
           </nav>
         </div>

@@ -97,6 +97,7 @@ export default function EscrowPage() {
             <Link href="/reconciliation" className="transition hover:text-signal">Reconciliation</Link>
             <Link href="/true-up" className="transition hover:text-signal">True-up</Link>
             <Link href="/clearing" className="transition hover:text-signal">Clearing</Link>
+            <Link href="/netting" className="transition hover:text-signal">Netting</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Escrow kit</a>
           </nav>
         </div>

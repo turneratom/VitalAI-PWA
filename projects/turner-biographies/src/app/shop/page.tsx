@@ -431,6 +431,12 @@ export default function ShopPage() {
               Pamphlet · from $50
             </Link>
             <Link
+              href="/handbill"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Handbill · from $40
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

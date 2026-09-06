@@ -252,6 +252,9 @@ export default function HomePage() {
             <a href="/clearing" className="transition hover:text-signal">
               Clearing
             </a>
+            <a href="/netting" className="transition hover:text-signal">
+              Netting
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
