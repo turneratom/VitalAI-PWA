@@ -383,4 +383,9 @@ jobs:
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html
           test -f trailer-parks/src/app/deck/page.tsx
+          test -f projects/meridian-travel/surfing.html
+          test -f projects/everything-films/storyboard.html
+          test -f projects/project-ais/calf.html
+          test -f trailer-parks/src/app/porch/page.tsx
+          test -f projects/mobile-home-parks/src/app/porch/page.tsx
           echo "Offer page presence checks passed."
