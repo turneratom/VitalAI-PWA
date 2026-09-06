@@ -63,28 +63,36 @@
         </article>
         <article class="tool-card" style="border:2px solid var(--primary);">
           <h3>Pro</h3>
-          <p><strong>$9.99</strong>/month</p>
+          <p><strong>$9.99</strong>/month · or <strong>$99</strong>/year</p>
           <ul>
             <li>Unlimited photo analysis</li>
             <li>Enhanced AI coaching</li>
             <li>Chat history (rolling out)</li>
+            <li>Annual saves ~2 months</li>
           </ul>
-          <button class="btn" id="buy-pro" type="button">Subscribe to Pro — $9.99</button>
+          <button class="btn" id="buy-pro" type="button">Pro monthly — $9.99</button>
+          <button class="btn btn-secondary" id="buy-pro-annual" type="button" style="margin-top:0.5rem;width:100%;">Pro annual — $99</button>
           <p style="margin:0.75rem 0 0;font-size:0.85rem;">
-            <a id="mailto-pro" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20%249.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Pro%20(%249.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Or email Pro subscribe</a>
+            <a id="mailto-pro" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20%249.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Pro%20(%249.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Email Pro monthly</a>
+            ·
+            <a id="mailto-pro-annual" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20annual%20%2499%20subscribe&body=I%20want%20VitalAI%20Pro%20annual%20(%2499%2Fyr).%0A%0AEmail%20for%20receipt%3A%0A">Email Pro annual</a>
           </p>
         </article>
         <article class="tool-card">
           <h3>Elite</h3>
-          <p><strong>$29.99</strong>/month</p>
+          <p><strong>$29.99</strong>/month · or <strong>$299</strong>/year</p>
           <ul>
             <li>Everything in Pro</li>
             <li>Priority AI models</li>
             <li>Advanced health insights</li>
+            <li>Annual saves ~2 months</li>
           </ul>
-          <button class="btn" id="buy-elite" type="button">Subscribe to Elite — $29.99</button>
+          <button class="btn" id="buy-elite" type="button">Elite monthly — $29.99</button>
+          <button class="btn btn-secondary" id="buy-elite-annual" type="button" style="margin-top:0.5rem;width:100%;">Elite annual — $299</button>
           <p style="margin:0.75rem 0 0;font-size:0.85rem;">
-            <a id="mailto-elite" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20%2429.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Elite%20(%2429.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Or email Elite subscribe</a>
+            <a id="mailto-elite" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20%2429.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Elite%20(%2429.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Email Elite monthly</a>
+            ·
+            <a id="mailto-elite-annual" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20annual%20%24299%20subscribe&body=I%20want%20VitalAI%20Elite%20annual%20(%24299%2Fyr).%0A%0AEmail%20for%20receipt%3A%0A">Email Elite annual</a>
           </p>
         </article>
       </div>
@@ -98,7 +106,15 @@
 
   <script>
     async function checkout(tier) {
-      const mailto = document.getElementById(tier === 'pro' ? 'mailto-pro' : 'mailto-elite');
+      const mailto = document.getElementById('mailto-' + tier.replace('_', '-')) ||
+        document.getElementById('mailto-' + tier);
+      const mailtoMap = {
+        pro: 'mailto-pro',
+        elite: 'mailto-elite',
+        pro_annual: 'mailto-pro-annual',
+        elite_annual: 'mailto-elite-annual'
+      };
+      const mailtoEl = document.getElementById(mailtoMap[tier] || 'mailto-pro');
       try {
         const res = await fetch('/api/create-checkout', {
           method: 'POST',
@@ -112,10 +128,12 @@
         }
       } catch (_) { /* fall through */ }
       document.getElementById('setup-notice').hidden = false;
-      if (mailto) window.location.href = mailto.href;
+      if (mailtoEl) window.location.href = mailtoEl.href;
     }
     document.getElementById('buy-pro').onclick = () => checkout('pro');
     document.getElementById('buy-elite').onclick = () => checkout('elite');
+    document.getElementById('buy-pro-annual').onclick = () => checkout('pro_annual');
+    document.getElementById('buy-elite-annual').onclick = () => checkout('elite_annual');
   </script>
 </body>
 </html>

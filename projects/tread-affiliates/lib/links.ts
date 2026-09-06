@@ -16,6 +16,9 @@ export const links = {
     whoop: "https://example.com/aff/whoop",
     ultrahuman: "https://example.com/aff/ultrahuman",
     fitbit: "https://example.com/aff/fitbit",
+    oura: "https://example.com/aff/oura",
+    eight_sleep: "https://example.com/aff/eight_sleep",
+    sleep_cycle: "https://example.com/aff/sleep_cycle",
   },
   youtube: [
     {

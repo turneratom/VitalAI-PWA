@@ -114,6 +114,12 @@ export default function HomePage() {
             >
               Fitness wearables
             </a>
+            <a
+              href="/comparisons/best-sleep-trackers"
+              className="transition hover:text-signal"
+            >
+              Sleep trackers
+            </a>
           </nav>
         </div>
       </header>
@@ -166,6 +172,12 @@ export default function HomePage() {
               className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
             >
               Best fitness wearables
+            </a>
+            <a
+              href="/comparisons/best-sleep-trackers"
+              className="border border-white/35 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-signal hover:text-signal"
+            >
+              Best sleep trackers
             </a>
           </div>
         </div>
@@ -534,6 +546,12 @@ export default function HomePage() {
               Best fitness wearables
             </a>
             <a
+              href="/comparisons/best-sleep-trackers"
+              className="inline-flex items-center justify-center border border-ink px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-white"
+            >
+              Best sleep trackers
+            </a>
+            <a
               href={links.glitchy}
               target="_blank"
               rel="noopener noreferrer"
@@ -592,6 +610,12 @@ export default function HomePage() {
               className="text-white/70 transition hover:text-signal"
             >
               Fitness wearables
+            </a>
+            <a
+              href="/comparisons/best-sleep-trackers"
+              className="text-white/70 transition hover:text-signal"
+            >
+              Sleep trackers
             </a>
             <a
               href={links.glitchy}

@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Comparison Rails — Tread Affiliates",
   description:
-    "All Tread Affiliates monetization rails in one place. Ranked tool comparisons with affiliate CTAs — AI health, calorie trackers, and fitness wearables.",
+    "All Tread Affiliates monetization rails in one place. Ranked tool comparisons with affiliate CTAs — AI health, calorie trackers, fitness wearables, and sleep trackers.",
   openGraph: {
     title: "Tread Affiliates — Comparison Rails",
     description:
-      "Open the rails that pay: ranked AI health apps, calorie trackers, and fitness wearables.",
+      "Open the rails that pay: ranked AI health apps, calorie trackers, fitness wearables, and sleep trackers.",
     type: "website",
   },
 };
@@ -31,6 +31,12 @@ const rails = [
     title: "Best fitness wearables",
     angle: "Recovery and band buyers with recurring payout stories worth pitching.",
     accent: "ink" as const,
+  },
+  {
+    href: "/comparisons/best-sleep-trackers",
+    title: "Best sleep trackers",
+    angle: "Oura rings, Eight Sleep pods, budget apps — sleep traffic with affiliate CTAs.",
+    accent: "signal" as const,
   },
 ];
 

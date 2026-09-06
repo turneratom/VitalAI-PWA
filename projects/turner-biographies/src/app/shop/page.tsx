@@ -104,6 +104,25 @@ export default function ShopPage() {
             when available.
           </p>
 
+          <div className="mt-16 border border-ink/15 bg-ink px-6 py-10 text-bone md:px-10">
+            <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">
+              Rights &amp; screen
+            </p>
+            <h3 className="mt-3 font-[family-name:var(--font-display)] text-3xl md:text-4xl">
+              Film &amp; adaptation rights
+            </h3>
+            <p className="mt-4 max-w-2xl text-bone/80">
+              Firebrand includes a feature treatment and sample pages. Producers,
+              studios, and partners can inquire about option / purchase terms.
+            </p>
+            <a
+              href="mailto:brad@treadcompanies.com?subject=Firebrand%20film%20rights%20inquiry&body=Company%3A%0AContact%3A%0AInterest%20(option%20%2F%20purchase%20%2F%20partnership)%3A%0ANotes%3A%0A"
+              className="mt-8 inline-block bg-seal px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.18em] text-bone transition hover:bg-seal-deep"
+            >
+              Inquire about film rights
+            </a>
+          </div>
+
           <div className="mt-14 flex flex-wrap gap-4 border-t border-ink/15 pt-10 font-[family-name:var(--font-ui)] text-sm">
             <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}

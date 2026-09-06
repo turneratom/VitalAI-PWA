@@ -4,7 +4,9 @@ import Stripe from 'stripe';
 
 const PRICE_MAP = {
   pro: process.env.STRIPE_PRICE_PRO,
-  elite: process.env.STRIPE_PRICE_ELITE
+  elite: process.env.STRIPE_PRICE_ELITE,
+  pro_annual: process.env.STRIPE_PRICE_PRO_ANNUAL,
+  elite_annual: process.env.STRIPE_PRICE_ELITE_ANNUAL,
 };
 
 export async function POST(request) {
@@ -23,11 +25,13 @@ export async function POST(request) {
     return Response.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
-  const tier = body.tier === 'elite' ? 'elite' : 'pro';
+  const allowed = new Set(['pro', 'elite', 'pro_annual', 'elite_annual']);
+  const tier = allowed.has(body.tier) ? body.tier : 'pro';
   const priceId = PRICE_MAP[tier];
   if (!priceId) {
+    const envName = `STRIPE_PRICE_${tier.toUpperCase()}`;
     return Response.json(
-      { error: `Missing STRIPE_PRICE_${tier.toUpperCase()} env var` },
+      { error: `Missing ${envName} env var` },
       { status: 503 }
     );
   }
