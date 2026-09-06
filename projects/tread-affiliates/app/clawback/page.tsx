@@ -96,6 +96,7 @@ export default function ClawbackPage() {
             <Link href="/settlement" className="transition hover:text-signal">Settlement</Link>
             <Link href="/reconciliation" className="transition hover:text-signal">Reconciliation</Link>
             <Link href="/true-up" className="transition hover:text-signal">True-up</Link>
+            <Link href="/clearing" className="transition hover:text-signal">Clearing</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clawback kit</a>
           </nav>
         </div>

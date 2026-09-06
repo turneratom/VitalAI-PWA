@@ -382,6 +382,9 @@ jobs:
           test -f projects/turner-capital/treynor.html
           test -f projects/turner-biographies/src/app/leaflet/page.tsx
           test -f projects/tread-affiliates/app/true-up/page.tsx
+          test -f projects/turner-capital/information.html
+          test -f projects/turner-biographies/src/app/pamphlet/page.tsx
+          test -f projects/tread-affiliates/app/clearing/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html

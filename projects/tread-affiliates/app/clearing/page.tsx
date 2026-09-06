@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Recoup Kit — Tread Affiliates",
+  title: "Affiliate Clearing Kit — Tread Affiliates",
   description:
-    "Affiliate Recoup Kit — one-time sprint $105 or monthly Recoup kit $55/mo. Recoup plan, Recoup mix, Recoup pairing. Invoice by email.",
+    "Affiliate Clearing Kit — one-time sprint $65 or monthly Clearing kit $35/mo. Clearing plan, Clearing mix, Clearing pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Recoup Kit — Tread Affiliates",
-    description: "Sprint $105 · Monthly desk $55/mo. Recoup plan, Recoup mix, Recoup pairing.",
+    title: "Affiliate Clearing Kit — Tread Affiliates",
+    description: "Sprint $65 · Monthly desk $35/mo. Clearing plan, Clearing mix, Clearing pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Recoup kit",
-    price: "$105",
+    title: "Clearing kit",
+    price: "$65",
     period: " one-time",
     points: [
-      "Recoup plan across your primary rails",
+      "Clearing plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Recoup kit execution checklist",
+      "30-day Clearing kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Recoup kit — $105",
-      "I want an Affiliate Recoup kit ($105).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Clearing kit — $65",
+      "I want an Affiliate Clearing kit ($65).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $105",
+    cta: "Request sprint — $65",
   },
   {
     tag: "Desk",
-    title: "Monthly Recoup kit",
-    price: "$55",
+    title: "Monthly Clearing kit",
+    price: "$35",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Recoup kit and ROAS review",
+      "Monthly Clearing kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Recoup kit — $55/mo",
-      "I want a Monthly Recoup kit ($55/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Clearing kit — $35/mo",
+      "I want a Monthly Clearing kit ($35/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $55/mo",
+    cta: "Request desk — $35/mo",
   },
 ];
 
-export default function RecoupPage() {
+export default function ClearingPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -92,12 +92,9 @@ export default function RecoupPage() {
             <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
-            <Link href="/recoup" className="transition hover:text-signal">Recoup kit</Link>
-            <Link href="/settlement" className="transition hover:text-signal">Settlement</Link>
-            <Link href="/reconciliation" className="transition hover:text-signal">Reconciliation</Link>
-            <Link href="/true-up" className="transition hover:text-signal">True-up</Link>
-            <Link href="/clearing" className="transition hover:text-signal">Clearing</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Recoup kit</a>
+            <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
+            <Link href="/clearing" className="transition hover:text-signal">Clearing kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clearing kit</a>
           </nav>
         </div>
       </header>
@@ -105,17 +102,17 @@ export default function RecoupPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Recoup kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Clearing kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Recoup kit packages that convert comparison-rail traffic — not vanity posts.
+            Clearing kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Recoup plan, Recoup mix, and Recoup pairing.
+            One-time sprint or monthly desk: Clearing plan, Clearing mix, and Clearing pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Recoup kit packages
+              See Clearing kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -127,7 +124,7 @@ export default function RecoupPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Recoup kit.
+          Sprint once, or keep a monthly Clearing kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
