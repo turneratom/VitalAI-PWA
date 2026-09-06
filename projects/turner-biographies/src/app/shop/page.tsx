@@ -491,6 +491,12 @@ export default function ShopPage() {
               Chaplet · from $4
             </Link>
             <Link
+              href="/broadside"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Broadside · from $3
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

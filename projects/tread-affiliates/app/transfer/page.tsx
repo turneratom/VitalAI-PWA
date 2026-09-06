@@ -94,6 +94,7 @@ export default function TransferPage() {
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/transfer" className="transition hover:text-signal">Transfer kit</Link>
+<Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Transfer kit</a>
           </nav>
         </div>

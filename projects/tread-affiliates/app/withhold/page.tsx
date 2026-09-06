@@ -100,6 +100,7 @@ export default function WithholdPage() {
 <Link href="/disbursement" className="transition hover:text-signal">Disbursement kit</Link>
 <Link href="/remittal" className="transition hover:text-signal">Remittal kit</Link>
 <Link href="/transfer" className="transition hover:text-signal">Transfer kit</Link>
+<Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Withhold kit</a>
           </nav>
         </div>

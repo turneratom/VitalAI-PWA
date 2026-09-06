@@ -282,6 +282,9 @@ export default function HomePage() {
             <a href="/transfer" className="transition hover:text-signal">
               Transfer
             </a>
+            <a href="/wire" className="transition hover:text-signal">
+              Wire
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
