@@ -60,6 +60,7 @@ const navLinks = [
   { href: "/office", label: "Office Diligence $209" },
   { href: "/parking", label: "Parking Diligence $199" },
   { href: "/mailroom", label: "Mailroom Diligence $189" },
+  { href: "/storage", label: "Storage Diligence $179" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
