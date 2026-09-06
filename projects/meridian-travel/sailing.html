@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Tennis Day — Meridian</title>
-  <meta name="description" content="Meridian Private Tennis Day — $3,900 flat for up to 4 players. Pro-led itinerary, court brief, club plan. Court fees and transport billed separately when required." />
+  <title>Private Sailing Day — Meridian</title>
+  <meta name="description" content="Meridian Private Sailing Day — $4,200 flat for up to 6 guests. Skipper-led itinerary, harbor brief, yacht-club plan. Slip fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..143,900;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,200;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -146,8 +146,7 @@
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
       <a class="nav-link" href="equestrian.html">Equestrian</a>
-      <a class="nav-link" href="tennis.html">Tennis</a>
-      <a href="sailing.html">Sailing</a>
+      <a class="nav-link" href="sailing.html">Sailing</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
@@ -157,14 +156,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Tennis Day.</p>
-    <p class="price">$3,900 flat · one day · up to 4 players</p>
-    <p class="hero-sub">Pro-led tennis day: court brief, set rhythm, and club plan. Court fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Sailing Day.</p>
+    <p class="price">$4,200 flat · one day · up to 6 guests</p>
+    <p class="hero-sub">Pro-led sailing day: harbor brief, set rhythm, and club plan. Slip fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request tennis day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $3,900 for Private Tennis Day, then lock club, court, and player count with your first brief.</p>
-      <form id="tennis-form" novalidate>
+      <h2 id="form-title">Request sailing day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $4,200 for Private Sailing Day, then lock club, harbor, and guest count with your first brief.</p>
+      <form id="sailing-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -196,19 +195,19 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $3,900 tennis invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Tennis Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $4,200 sailing invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Sailing Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led tennis day</strong>
-        A Meridian host for court pacing, set decisions, and day briefings.
+        <strong>Pro-led sailing day</strong>
+        A Meridian host for harbor pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Court brief</strong>
+        <strong>Harbor brief</strong>
         Sets and lunch sequenced for the club and day you choose.
       </div>
       <div class="rule">
@@ -217,19 +216,19 @@
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $3,900 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $4,200 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Tennis Day</p>
+    <p><strong>Meridian</strong> · Private Sailing Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("tennis-form");
+      var form = document.getElementById("sailing-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Tennis Day — $3,900";
+        var subject = "Meridian Private Sailing Day — $4,200";
         var body =
-          "Meridian Private Tennis Day request ($3,900 flat, one day, up to 4 players)\n\n" +
+          "Meridian Private Sailing Day request ($4,200 flat, one day, up to 6 guests)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $3,900 Private Tennis Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Court fees and transport billed separately when required.";
+          "Please send the $4,200 Private Sailing Day invoice.\n" +
+          "Includes: instructor-led day, stand brief, range plan. Slip fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
