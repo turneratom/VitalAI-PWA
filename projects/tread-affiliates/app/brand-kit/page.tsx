@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Shorts Desk — Tread Affiliates",
+  title: "Affiliate Brand Kit — Tread Affiliates",
   description:
-    "Affiliate Shorts Desk — one-time sprint $1,800 or monthly Shorts desk $700/mo. Shorts plan, hook mix, creative pairing. Invoice by email.",
+    "Affiliate Brand Kit — one-time sprint $1,700 or monthly Brand kit $650/mo. Brand plan, brand mix, brand pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Shorts Desk — Tread Affiliates",
-    description: "Sprint $1,800 · Monthly desk $700/mo. Shorts plan, hook mix, creative pairing.",
+    title: "Affiliate Brand Kit — Tread Affiliates",
+    description: "Sprint $1,700 · Monthly desk $650/mo. Brand plan, brand mix, brand pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Shorts desk",
-    price: "$1,800",
+    title: "Brand kit",
+    price: "$1,700",
     cadence: " one-time",
     points: [
-      "Shorts plan across your primary rails",
-      "Hook mix and post bands for primary funnels",
-      "Creative-to-hook pairing notes",
-      "30-day shorts execution checklist",
+      "Brand plan across your primary rails",
+      "Creator mix and post bands for primary funnels",
+      "Creative-to-creator pairing notes",
+      "30-day Brand kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Shorts desk — $1,800",
-      "I want an Affiliate Shorts desk ($1,800).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Brand kit — $1,700",
+      "I want an Affiliate Brand kit ($1,700).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $1,800",
+    cta: "Request sprint — $1,700",
   },
   {
     tag: "Desk",
-    title: "Monthly Shorts desk",
-    price: "$700",
+    title: "Monthly Brand kit",
+    price: "$650",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly shorts and ROAS review",
-      "Two new hook or creative swaps per month",
+      "Monthly Brand kit and ROAS review",
+      "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Shorts desk — $700/mo",
-      "I want a Monthly Shorts desk ($700/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Brand kit — $650/mo",
+      "I want a Monthly Brand kit ($650/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $700/mo",
+    cta: "Request desk — $650/mo",
   },
 ];
 
-export default function ShortsPage() {
+export default function BrandKitPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -75,14 +75,14 @@ export default function ShortsPage() {
             <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
             <Link href="/newsletter" className="transition hover:text-signal">Newsletter</Link>
             <Link href="/podcast-ads" className="transition hover:text-signal">Podcast ads</Link>
-            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/shorts" className="transition hover:text-signal">Shorts</Link>
             <Link href="/ugc" className="transition hover:text-signal">UGC</Link>
             <Link href="/influencer" className="transition hover:text-signal">Influencer</Link>
             <Link href="/seeding" className="transition hover:text-signal">Seeding</Link>
             <Link href="/creator-kit" className="transition hover:text-signal">Creator kit</Link>
+            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/brand-kit" className="transition hover:text-signal">Brand kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Shorts</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Brand kit</a>
           </nav>
         </div>
       </header>
@@ -90,17 +90,17 @@ export default function ShortsPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Shorts</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Brand kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Shorts packages that convert comparison-rail traffic — not vanity views.
+            Brand kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: shorts plan, hook mix, and creative pairing.
+            One-time sprint or monthly desk: brand-kit plan, brand mix, and brand pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See shorts packages
+              See Brand kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -112,7 +112,7 @@ export default function ShortsPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Shorts desk.
+          Sprint once, or keep a monthly Brand kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
