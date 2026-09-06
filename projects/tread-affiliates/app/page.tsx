@@ -294,6 +294,9 @@ export default function HomePage() {
             <a href="/fednow" className="transition hover:text-signal">
               FedNow
             </a>
+            <a href="/same-day-ach" className="transition hover:text-signal">
+              Same-Day ACH
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

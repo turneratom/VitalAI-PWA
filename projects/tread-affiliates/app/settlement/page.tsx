@@ -111,6 +111,7 @@ export default function SettlementPage() {
             <Link href="/ach" className="transition hover:text-signal">ACH</Link>
             <Link href="/rtp" className="transition hover:text-signal">RTP</Link>
             <Link href="/fednow" className="transition hover:text-signal">FedNow</Link>
+            <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Settlement kit</a>
           </nav>
         </div>

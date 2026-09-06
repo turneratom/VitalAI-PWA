@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Allocation Kit — Tread Affiliates",
+  title: "Affiliate Same-Day ACH Kit — Tread Affiliates",
   description:
-    "Affiliate Allocation Kit — one-time sprint $30 or monthly Allocation kit $10/mo. Allocation plan, Allocation mix, Allocation pairing. Invoice by email.",
+    "Affiliate Same-Day ACH Kit — one-time sprint $1 or monthly Same-Day ACH kit $1/mo. Same-Day ACH plan, Same-Day ACH mix, Same-Day ACH pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Allocation Kit — Tread Affiliates",
-    description: "Sprint $30 · Monthly desk $10/mo. Allocation plan, Allocation mix, Allocation pairing.",
+    title: "Affiliate Same-Day ACH Kit — Tread Affiliates",
+    description: "Sprint $1 · Monthly desk $1/mo. Same-Day ACH plan, Same-Day ACH mix, Same-Day ACH pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Allocation kit",
-    price: "$30",
+    title: "Same-Day ACH kit",
+    price: "$1",
     period: " one-time",
     points: [
-      "Allocation plan across your primary rails",
+      "Same-Day ACH plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Allocation kit execution checklist",
+      "30-day Same-Day ACH kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Allocation kit — $30",
-      "I want an Affiliate Allocation kit ($30).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Same-Day ACH kit — $1",
+      "I want an Affiliate Same-Day ACH kit ($1).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $30",
+    cta: "Request sprint — $1",
   },
   {
     tag: "Desk",
-    title: "Monthly Allocation kit",
-    price: "$10",
+    title: "Monthly Same-Day ACH kit",
+    price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Allocation kit and ROAS review",
+      "Monthly Same-Day ACH kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Allocation kit — $10/mo",
-      "I want a Monthly Allocation kit ($10/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Same-Day ACH kit — $1/mo",
+      "I want a Monthly Same-Day ACH kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $10/mo",
+    cta: "Request desk — $1/mo",
   },
 ];
 
-export default function AllocationPage() {
+export default function SameDayAchPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -93,18 +93,12 @@ export default function AllocationPage() {
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
-            <Link href="/allocation" className="transition hover:text-signal">Allocation kit</Link>
-<Link href="/apportionment" className="transition hover:text-signal">Apportionment kit</Link>
-<Link href="/distribution" className="transition hover:text-signal">Distribution kit</Link>
-<Link href="/disbursement" className="transition hover:text-signal">Disbursement kit</Link>
-<Link href="/remittal" className="transition hover:text-signal">Remittal kit</Link>
-<Link href="/transfer" className="transition hover:text-signal">Transfer kit</Link>
-<Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
+            <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
             <Link href="/rtp" className="transition hover:text-signal">RTP kit</Link>
             <Link href="/fednow" className="transition hover:text-signal">FedNow kit</Link>
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Allocation kit</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Same-Day ACH kit</a>
           </nav>
         </div>
       </header>
@@ -112,17 +106,17 @@ export default function AllocationPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Allocation kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Same-Day ACH kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Allocation kit packages that convert comparison-rail traffic — not vanity posts.
+            Same-Day ACH kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Allocation plan, Allocation mix, and Allocation pairing.
+            One-time sprint or monthly desk: Same-Day ACH plan, Same-Day ACH mix, and Same-Day ACH pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Allocation kit packages
+              See Same-Day ACH kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -134,7 +128,7 @@ export default function AllocationPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Allocation kit.
+          Sprint once, or keep a monthly Same-Day ACH kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -163,7 +157,7 @@ export default function AllocationPage() {
 
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
-          <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
+          <p className="max-w-xl text-white/70">Prefer featured placement or operator cosame-day-aching? Same inbox.</p>
           <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Media" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>
