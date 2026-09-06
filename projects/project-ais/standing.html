@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Fasting Protocol</title>
-  <meta name="description" content="VitalAI Fasting Protocol — Protocol setup $59 or Fasting desk $17/mo. Fasting targets, feeding-window rhythm, weekly fasting map. Invoice via email until Stripe is live." />
+  <title>VitalAI Standing Protocol</title>
+  <meta name="description" content="VitalAI Standing Protocol — Protocol setup $45 or Standing desk $14/mo. Standing targets, sit-stand rhythm, weekly standing map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Fasting Protocol</p>
+        <p>Standing Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,8 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="fasting.html">Fasting</a>
-        <a href="steps.html">Steps</a>
         <a href="standing.html">Standing</a>
         <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
@@ -84,36 +82,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Fasting Protocol</h2>
+    <h2>VitalAI Standing Protocol</h2>
     <p class="lede">
-      Fasting markers, fasting targets, and a weekly checklist — one setup, or a monthly fasting desk. Stripe when live — until then this form emails an invoice request.
+      Standing markers, standing targets, and a weekly checklist — one setup, or a monthly standing desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Fasting pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly fasting desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Standing pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly standing desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$59</strong></div>
-        <div class="plan-row"><span>Fasting desk</span><strong>$17 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$45</strong></div>
+        <div class="plan-row"><span>Standing desk</span><strong>$14 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Fasting markers and schedule for your goals</li>
-        <li>Load / feeding-window rhythm for your week</li>
-        <li>Fasting checklist for the first two weeks</li>
-        <li>Optional monthly fasting desk</li>
+        <li>Standing markers and schedule for your goals</li>
+        <li>Load / sit-stand rhythm for your week</li>
+        <li>Standing checklist for the first two weeks</li>
+        <li>Optional monthly standing desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request fasting invoice</h3>
+      <h3 id="form-title">Request standing invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="fasting-form" novalidate>
+      <form id="standing-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $59" selected>Protocol setup — $59</option>
-              <option value="Fasting desk — $17/mo">Fasting desk — $17/mo</option>
+              <option value="Protocol setup — $45" selected>Protocol setup — $45</option>
+              <option value="Standing desk — $14/mo">Standing desk — $14/mo</option>
             </select>
           </label>
           <label>
@@ -138,7 +136,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email fasting invoice request</button>
+          <button class="btn" type="submit">Email standing invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -146,13 +144,13 @@
   </main>
 
   <footer class="site-footer">
-    Fasting Protocol · setup / desk ·
+    Standing Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("fasting-form");
+      var form = document.getElementById("standing-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -166,17 +164,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Fasting Protocol — " + plan;
+        var subject = "VitalAI Standing Protocol — " + plan;
         var body =
-          "VitalAI Fasting Protocol invoice request\n\n" +
+          "VitalAI Standing Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Fasting Protocol checkout or invoice.\n" +
-          "Includes: fasting map, fasting blocks, weekly checklist.";
+          "Please send Standing Protocol checkout or invoice.\n" +
+          "Includes: standing map, standing blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
