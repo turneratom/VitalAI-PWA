@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Caffeine Protocol</title>
-  <meta name="description" content="VitalAI Caffeine Protocol — Protocol setup $69 or Caffeine desk $19/mo. Caffeine targets, stim timing rhythm, weekly stim map. Invoice via email until Stripe is live." />
+  <title>VitalAI Steps Protocol</title>
+  <meta name="description" content="VitalAI Steps Protocol — Protocol setup $49 or Steps desk $15/mo. Steps targets, daily step rhythm, weekly steps map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Caffeine Protocol</p>
+        <p>Steps Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,8 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="caffeine.html">Caffeine</a>
-        <a href="fasting.html">Fasting</a>
         <a href="steps.html">Steps</a>
         <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
@@ -84,36 +82,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Caffeine Protocol</h2>
+    <h2>VitalAI Steps Protocol</h2>
     <p class="lede">
-      Caffeine markers, caffeine targets, and a weekly checklist — one setup, or a monthly caffeine desk. Stripe when live — until then this form emails an invoice request.
+      Steps markers, steps targets, and a weekly checklist — one setup, or a monthly steps desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Caffeine pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly caffeine desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Steps pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly steps desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$69</strong></div>
-        <div class="plan-row"><span>Caffeine desk</span><strong>$19 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$49</strong></div>
+        <div class="plan-row"><span>Steps desk</span><strong>$15 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Caffeine markers and schedule for your goals</li>
-        <li>Load / stim timing rhythm for your week</li>
-        <li>Caffeine checklist for the first two weeks</li>
-        <li>Optional monthly caffeine desk</li>
+        <li>Steps markers and schedule for your goals</li>
+        <li>Load / daily step rhythm for your week</li>
+        <li>Steps checklist for the first two weeks</li>
+        <li>Optional monthly steps desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request caffeine invoice</h3>
+      <h3 id="form-title">Request steps invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="caffeine-form" novalidate>
+      <form id="steps-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $69" selected>Protocol setup — $69</option>
-              <option value="Caffeine desk — $19/mo">Caffeine desk — $19/mo</option>
+              <option value="Protocol setup — $49" selected>Protocol setup — $49</option>
+              <option value="Steps desk — $15/mo">Steps desk — $15/mo</option>
             </select>
           </label>
           <label>
@@ -138,7 +136,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email caffeine invoice request</button>
+          <button class="btn" type="submit">Email steps invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -146,13 +144,13 @@
   </main>
 
   <footer class="site-footer">
-    Caffeine Protocol · setup / desk ·
+    Steps Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("caffeine-form");
+      var form = document.getElementById("steps-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -166,17 +164,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Caffeine Protocol — " + plan;
+        var subject = "VitalAI Steps Protocol — " + plan;
         var body =
-          "VitalAI Caffeine Protocol invoice request\n\n" +
+          "VitalAI Steps Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Caffeine Protocol checkout or invoice.\n" +
-          "Includes: caffeine map, caffeine blocks, weekly checklist.";
+          "Please send Steps Protocol checkout or invoice.\n" +
+          "Includes: steps map, steps blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

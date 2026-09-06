@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/lighting",
     "/signage",
     "/mailboxes",
+    "/wifi",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
