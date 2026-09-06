@@ -9,14 +9,14 @@ Chats forget. **This file remembers.**
 
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + underwriting + comps |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + weekend + dinner |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + teaser + stills |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + **`signals.html` ($1,200 · $900/mo)** |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + **`/stage` ($35k/$85k)** |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + enterprise + coach |
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + underwriting + comps + **`/loi` ($599 · $1,499)** |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + weekend + dinner + **`yacht.html` ($22k)** |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + teaser + stills + **`documentary.html` ($22k)** |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + signals |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + `/stage` |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + enterprise + coach + **`family.html` ($39/mo · $349/yr)** |
 
-Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + **`/partners` ($2,000/mo · $3,500 setup)**.
+Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + `/partners`.
 
 ## Hands-off contract
 
@@ -26,10 +26,11 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + laun
 
 ## Latest agent actions (2026-09-06)
 
-- Turner Capital: `signals.html` — Catalyst Signal Pack $1,200 one-shot · $900/mo desk; wired from floor/pricing + siblings.
-- Turner Biographies: `/stage` — adaptation license $35k · workshop+premiere $85k; layout + shop CTAs.
-- Tread Affiliates: `/partners` — Partner Desk $2,000/mo · setup sprint $3,500; advertise/launch/creative/audit/sponsor/comparisons nav.
-- Prior: Meridian dinner; Films stills; AIS coach; MHP comps; Capital risk-desk; Biographies foreign-rights; Affiliates launch.
+- Meridian: `yacht.html` — Yacht Charter Weekend $22,000 · 3 nights · up to 6 guests; host aboard, route design, provisioning; vessel separate when needed.
+- Everything Films: `documentary.html` — Branded Short Documentary $22,000 · 8–12 min; interview day, B-roll, color, score cues, masters.
+- Project AIS: `family.html` — Family Plan $39/mo · Annual household $349; up to 5 profiles, shared goals, parent overview.
+- Mobile Home Parks: `/loi` — LOI Review Pack $599 single · $1,499 three-deal; term redlines, ask vs market, walk-away notes.
+- Prior: Capital signals; Biographies stage; Affiliates partners; Meridian dinner; Films stills; AIS coach; MHP comps.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes

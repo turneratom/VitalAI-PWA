@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/partner",
     "/links",
     "/outreach",
+    "/valuation",
+    "/deal-room",
+    "/lender-intro",
+    "/underwriting",
+    "/comps",
+    "/loi",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

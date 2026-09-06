@@ -91,6 +91,9 @@ export default function UnderwritingPage() {
             <Link href="/valuation" className="underline-offset-4 hover:text-white hover:underline">
               Valuation
             </Link>
+            <Link href="/loi" className="underline-offset-4 hover:text-white hover:underline">
+              LOI Review
+            </Link>
             <Link href="/lender-intro" className="underline-offset-4 hover:text-white hover:underline">
               Lender Intro
             </Link>

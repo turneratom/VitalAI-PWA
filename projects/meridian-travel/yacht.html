@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weekend Escape — Meridian</title>
-  <meta name="description" content="Meridian Weekend Escape — $8,500 flat for 2 travelers, 3–4 days. Host booking, route sketch, and ground ops. Flights separate." />
+  <title>Yacht Charter Weekend — Meridian</title>
+  <meta name="description" content="Meridian Yacht Charter Weekend — $22,000 flat for 3 nights, up to 6 guests. Host aboard, route design, provisioning list. Vessel charter billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -135,8 +135,8 @@
     <div class="nav-links">
       <a class="nav-link" href="index.html">Journeys</a>
       <a class="nav-link" href="hold.html">Hold</a>
+      <a class="nav-link" href="weekend.html">Weekend</a>
       <a class="nav-link" href="dinner.html">Dinner</a>
-      <a class="nav-link" href="yacht.html">Yacht</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
@@ -146,21 +146,18 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Weekend Escape.</p>
-    <p class="price">$8,500 flat · 2 travelers · 3–4 days</p>
-    <p class="hero-sub">A short Meridian escape for two: host booking, route sketch, and ground ops. Flights are booked separately.</p>
+    <p class="hero-line">Yacht Charter Weekend.</p>
+    <p class="price">$22,000 flat · 3 nights · up to 6 guests</p>
+    <p class="hero-sub">Three nights with a Meridian host aboard: route design, provisioning list, and pacing for the water. Vessel charter is billed separately when a boat must be reserved.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request weekend invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $8,500 for the Weekend Escape, then open host booking and the route sketch with your first brief.</p>
-      <form id="weekend-form" novalidate>
+      <h2 id="form-title">Request yacht weekend invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $22,000 for Yacht Charter Weekend, then lock waters, dates, and guest count with your first brief.</p>
+      <form id="yacht-form" novalidate>
         <div class="fields">
           <label class="full">
-            Trip length
-            <select id="length" name="length">
-              <option value="3 days" selected>3 days</option>
-              <option value="4 days">4 days</option>
-            </select>
+            Preferred waters
+            <input type="text" id="waters" name="waters" placeholder="e.g. Amalfi / British Virgin Islands / open" />
           </label>
           <label>
             Your name
@@ -171,83 +168,83 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Travelers
-            <input type="text" id="travelers" name="travelers" value="2 travelers" />
+            Guests
+            <input type="text" id="guests" name="guests" value="Up to 6" />
           </label>
           <label>
             Target window
-            <input type="text" id="window" name="window" placeholder="e.g. next long weekend" />
+            <input type="text" id="window" name="window" placeholder="e.g. late October or open" />
           </label>
           <label class="full">
-            Region / route idea
-            <input type="text" id="region" name="region" placeholder="Coast / mountains / city / open" />
+            Tone
+            <input type="text" id="tone" name="tone" placeholder="Quiet / celebration / island hopping" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Pace, hosts, dietary, constraints"></textarea>
+            <textarea id="notes" name="notes" placeholder="Dietary, crew preferences, vessel class, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $8,500 weekend invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with weekend escape details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $22,000 yacht invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Yacht Charter Weekend details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Host booking</strong>
-        Meridian books preferred hosts and stays for two travelers on a 3–4 day window.
+        <strong>Host aboard</strong>
+        A Meridian host on the boat for three nights — pacing, briefings, and on-water decisions.
       </div>
       <div class="rule">
-        <strong>Route sketch</strong>
-        A focused itinerary sketched around your region, pace, and weekend constraints.
+        <strong>Route design</strong>
+        Anchorage sequence and day plan written for the waters you choose.
       </div>
       <div class="rule">
-        <strong>Ground ops</strong>
-        Transfers, timing, and on-ground contacts briefed before you go.
+        <strong>Provisioning list</strong>
+        Galley and beverage list handed to the crew or charter house before departure.
       </div>
       <div class="rule">
-        <strong>Flights separate</strong>
-        The $8,500 flat covers host booking, route sketch, and ground ops — flights are booked on your own.
+        <strong>Vessel separate when needed</strong>
+        The $22,000 flat covers Meridian host and design. Boat charter fees are invoiced separately if we must reserve the vessel.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Weekend Escape</p>
+    <p><strong>Meridian</strong> · Yacht Charter Weekend</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("weekend-form");
+      var form = document.getElementById("yacht-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var length = document.getElementById("length").value;
+        var waters = (document.getElementById("waters").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var travelers = (document.getElementById("travelers").value || "").trim();
+        var guests = (document.getElementById("guests").value || "").trim();
         var windowVal = (document.getElementById("window").value || "").trim();
-        var region = (document.getElementById("region").value || "").trim();
+        var tone = (document.getElementById("tone").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Weekend Escape — $8,500";
+        var subject = "Meridian Yacht Charter Weekend — $22,000";
         var body =
-          "Meridian Weekend Escape request ($8,500 flat, 2 travelers, 3–4 days)\n\n" +
-          "Trip length: " + length + "\n" +
+          "Meridian Yacht Charter Weekend request ($22,000 flat, 3 nights, up to 6 guests)\n\n" +
+          "Waters: " + (waters || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Travelers: " + (travelers || "2 travelers") + "\n" +
+          "Guests: " + (guests || "Up to 6") + "\n" +
           "Target window: " + (windowVal || "—") + "\n" +
-          "Region / route: " + (region || "—") + "\n" +
+          "Tone: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $8,500 Weekend Escape invoice.\n" +
-          "Includes: host booking, route sketch, ground ops. Flights separate.";
+          "Please send the $22,000 Yacht Charter Weekend invoice.\n" +
+          "Includes: host aboard, route design, provisioning list. Vessel charter billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
