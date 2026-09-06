@@ -395,6 +395,12 @@ export default function ShopPage() {
               Volume · from $125
             </Link>
             <Link
+              href="/archive"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Archive · from $100
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

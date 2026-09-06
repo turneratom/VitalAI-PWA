@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Holdback Kit — Tread Affiliates",
+  title: "Affiliate Escrow Kit — Tread Affiliates",
   description:
-    "Affiliate Holdback Kit — one-time sprint $155 or monthly Holdback kit $80/mo. Holdback plan, Holdback mix, Holdback pairing. Invoice by email.",
+    "Affiliate Escrow Kit — one-time sprint $115 or monthly Escrow kit $60/mo. Escrow plan, Escrow mix, Escrow pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Holdback Kit — Tread Affiliates",
-    description: "Sprint $155 · Monthly desk $80/mo. Holdback plan, Holdback mix, Holdback pairing.",
+    title: "Affiliate Escrow Kit — Tread Affiliates",
+    description: "Sprint $115 · Monthly desk $60/mo. Escrow plan, Escrow mix, Escrow pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Holdback kit",
-    price: "$155",
+    title: "Escrow kit",
+    price: "$115",
     period: " one-time",
     points: [
-      "Holdback plan across your primary rails",
+      "Escrow plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Holdback kit execution checklist",
+      "30-day Escrow kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Holdback kit — $155",
-      "I want an Affiliate Holdback kit ($155).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Escrow kit — $115",
+      "I want an Affiliate Escrow kit ($115).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $155",
+    cta: "Request sprint — $115",
   },
   {
     tag: "Desk",
-    title: "Monthly Holdback kit",
-    price: "$80",
+    title: "Monthly Escrow kit",
+    price: "$60",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Holdback kit and ROAS review",
+      "Monthly Escrow kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Holdback kit — $80/mo",
-      "I want a Monthly Holdback kit ($80/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Escrow kit — $60/mo",
+      "I want a Monthly Escrow kit ($60/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $80/mo",
+    cta: "Request desk — $60/mo",
   },
 ];
 
-export default function HoldbackPage() {
+export default function EscrowPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -87,12 +87,12 @@ export default function HoldbackPage() {
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
-            <Link href="/holdback" className="transition hover:text-signal">Holdback kit</Link>
+            <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
             <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
             <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
-            <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Holdback kit</a>
+            <Link href="/escrow" className="transition hover:text-signal">Escrow kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Escrow kit</a>
           </nav>
         </div>
       </header>
@@ -100,17 +100,17 @@ export default function HoldbackPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Holdback kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Escrow kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Holdback kit packages that convert comparison-rail traffic — not vanity posts.
+            Escrow kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Holdback plan, Holdback mix, and Holdback pairing.
+            One-time sprint or monthly desk: Escrow plan, Escrow mix, and Escrow pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Holdback kit packages
+              See Escrow kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -122,7 +122,7 @@ export default function HoldbackPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Holdback kit.
+          Sprint once, or keep a monthly Escrow kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
