@@ -95,6 +95,9 @@ export default function LaunchPage() {
             <Link href="/tracking" className="transition hover:text-signal">
               Tracking
             </Link>
+            <Link href="/media" className="transition hover:text-signal">
+              Media
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>

@@ -161,6 +161,12 @@ export default function ShopPage() {
               Reprint rights · from $6,000
             </Link>
             <Link
+              href="/serial-print"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Serial print · from $9,000
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

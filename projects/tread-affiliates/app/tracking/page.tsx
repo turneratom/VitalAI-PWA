@@ -70,6 +70,7 @@ export default function TrackingPage() {
             <Link href="/creative-kit" className="transition hover:text-signal">Creative</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/tracking" className="transition hover:text-signal">Tracking</Link>
+            <Link href="/media" className="transition hover:text-signal">Media</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Tracking</a>
           </nav>
         </div>

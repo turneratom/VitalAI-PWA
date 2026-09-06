@@ -117,6 +117,9 @@ export default function HomePage() {
             <a href="/tracking" className="transition hover:text-signal">
               Tracking
             </a>
+            <a href="/media" className="transition hover:text-signal">
+              Media
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
