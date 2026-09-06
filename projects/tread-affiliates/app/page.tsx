@@ -126,6 +126,9 @@ export default function HomePage() {
             <a href="/catalog" className="transition hover:text-signal">
               Catalog
             </a>
+            <a href="/bundling" className="transition hover:text-signal">
+              Bundling
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

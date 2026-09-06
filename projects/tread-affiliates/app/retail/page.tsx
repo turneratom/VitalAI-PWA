@@ -73,6 +73,7 @@ export default function RetailPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/retail" className="transition hover:text-signal">Retail</Link>
             <Link href="/catalog" className="transition hover:text-signal">Catalog</Link>
+            <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Retail</a>
           </nav>
         </div>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Creative Kit — Tread Affiliates",
+  title: "Affiliate Bundle Desk — Tread Affiliates",
   description:
-    "Affiliate Creative Kit — one-time sprint $1,900 or monthly Creative desk $750/mo. Funnel audit, page tests, CTA rewrite plan. Invoice by email.",
+    "Affiliate Bundle Desk — one-time sprint $2,600 or monthly Bundle desk $1,000/mo. Bundle plan, offer mix, creative pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Creative Kit — Tread Affiliates",
-    description: "Sprint $1,900 · Monthly desk $750/mo. Funnel audit, page tests, CTA rewrite plan.",
+    title: "Affiliate Bundle Desk — Tread Affiliates",
+    description: "Sprint $2,600 · Monthly desk $1,000/mo. Bundle plan, offer mix, creative pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Creative kit",
-    price: "$1,900",
+    title: "Bundle desk",
+    price: "$2,600",
     cadence: " one-time",
     points: [
-      "Hook kit across your primary rails",
-      "10 ad creatives sized for primary placements",
-      "Hook variants and CTA lines",
-      "30-day creative execution checklist",
+      "Bundle plan across your primary rails",
+      "Offer mix and stack bands for primary funnels",
+      "Creative-to-offer pairing notes",
+      "30-day bundle execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Creative kit — $1,900",
-      "I want an Affiliate Creative kit ($1,900).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Bundle desk — $2,600",
+      "I want an Affiliate Bundle desk ($2,600).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $1,900",
+    cta: "Request sprint — $2,600",
   },
   {
     tag: "Desk",
-    title: "Monthly Creative desk",
-    price: "$750",
+    title: "Monthly Bundle desk",
+    price: "$1,000",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly creative refresh review",
-      "Two new creative packs per month",
+      "Monthly bundle and ROAS review",
+      "Two new stack or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Creative desk — $750/mo",
-      "I want a Monthly Creative desk ($750/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Bundle desk — $1,000/mo",
+      "I want a Monthly Bundle desk ($1,000/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $750/mo",
+    cta: "Request desk — $1,000/mo",
   },
 ];
 
-export default function CreativeKitPage() {
+export default function BundlingPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -67,14 +67,14 @@ export default function CreativeKitPage() {
             <Link href="/partners" className="transition hover:text-signal">Partners</Link>
             <Link href="/seo" className="transition hover:text-signal">SEO</Link>
             <Link href="/email" className="transition hover:text-signal">Email</Link>
-            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/creative-kit" className="transition hover:text-signal">Creative</Link>
             <Link href="/tracking" className="transition hover:text-signal">Tracking</Link>
             <Link href="/media" className="transition hover:text-signal">Media</Link>
             <Link href="/retail" className="transition hover:text-signal">Retail</Link>
             <Link href="/catalog" className="transition hover:text-signal">Catalog</Link>
+            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Creative</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Bundling</a>
           </nav>
         </div>
       </header>
@@ -82,17 +82,17 @@ export default function CreativeKitPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Creative</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Bundling</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Creative that lifts comparison-rail conversions — not vanity clicks.
+            Bundle builds that convert comparison-rail traffic — not random stacks.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time kit or monthly desk: hook kit, 10 creatives, and CTA lines.
+            One-time sprint or monthly desk: bundle plan, offer mix, and creative pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See creative packages
+              See bundle packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -104,7 +104,7 @@ export default function CreativeKitPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Creative desk.
+          Sprint once, or keep a monthly Bundle desk.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -134,7 +134,7 @@ export default function CreativeKitPage() {
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
           <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
-          <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Creative%20Kit" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
+          <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Media" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>
         </div>
