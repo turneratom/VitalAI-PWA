@@ -8,7 +8,8 @@
 |---------|-------|-------------|
 | Escape | 5–8 days, one place | $4,800 |
 | Crossing | 10–14 days, two regions | $9,200 |
-| Expedition | 16+ days, open brief | On request |
+| Expedition | 16+ days, open brief | $18,500 |
+| Gift & corporate | Certificate or team retreat | $5,800 / $28,000 |
 
 ## This is its own Cursor project / GitHub repo
 
@@ -22,6 +23,8 @@ Suggested Pages URL after split: `https://turneratom.github.io/meridian-travel/`
 | Page | Path |
 |------|------|
 | Site | `/` (`index.html`) |
+| Gift & corporate | `/gift.html` |
+| Sample journeys | `/journeys/` |
 
 ## Contact
 

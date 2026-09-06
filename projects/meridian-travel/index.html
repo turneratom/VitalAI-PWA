@@ -79,6 +79,14 @@
 
     .nav-cta:hover { border-color: #fff; }
 
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     /* —— Hero —— */
     .hero {
       position: relative;
@@ -630,7 +638,10 @@
 
   <header class="nav">
     <a class="nav-brand" href="#">Meridian</a>
-    <a class="nav-cta" href="#plan">Plan a journey</a>
+    <div class="nav-links">
+      <a class="nav-cta" href="gift.html">Gift &amp; corporate</a>
+      <a class="nav-cta" href="#plan">Plan a journey</a>
+    </div>
   </header>
 
   <main>
@@ -698,7 +709,7 @@
 
     <section class="journeys" id="journeys" aria-labelledby="journeys-title">
       <p class="section-kicker">Journeys</p>
-      <h2 class="section-title" id="journeys-title">Three shapes. Infinite routes.</h2>
+      <h2 class="section-title" id="journeys-title">Four ways onto the map.</h2>
       <p class="section-lead">Pick a frame. We fill it with the places and people that fit you.</p>
       <div class="journey-list">
         <article class="journey">
@@ -715,6 +726,11 @@
           <h3 class="journey-name">Expedition</h3>
           <p class="journey-desc">16+ days on an open brief. We design from scratch when the map is still blank.</p>
           <p class="journey-price">From <em>$18,500</em> · <a href="journeys/andes-expedition.html">Andes</a></p>
+        </article>
+        <article class="journey">
+          <h3 class="journey-name">Gift &amp; corporate</h3>
+          <p class="journey-desc">Escape certificates for someone you love, or a team retreat with hosts and logistics already drawn.</p>
+          <p class="journey-price">From <em>$5,800</em> gift · <em>$28,000</em> retreat · <a href="gift.html">See offers</a></p>
         </article>
       </div>
     </section>

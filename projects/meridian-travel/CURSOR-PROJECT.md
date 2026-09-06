@@ -4,7 +4,8 @@ Open this folder (or the `meridian-travel` GitHub repo) as its **own** Cursor pr
 
 - Product name: **Meridian**
 - Business: boutique travel agency — private journeys, not packaged tours
-- Offer: custom itineraries, local hosts, small-group departures
+- Offer: custom itineraries, local hosts, Escapes / Crossing / Expedition
+- Money: journey bookings + **gift certificates** + **corporate retreats** (`gift.html`)
 - **Not** Mobile Home Parks, not Everything Films, not Turner Capital, not Project AIS
 
 ## Roles

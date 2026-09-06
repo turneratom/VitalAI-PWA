@@ -451,6 +451,56 @@
       max-width: 36rem;
     }
 
+    /* —— Add-ons —— */
+    .addons {
+      background: #101820;
+      color: #fff;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .addons .section-kicker { color: var(--gold); }
+    .addons .section-lead { color: rgba(255,255,255,0.7); }
+    .addons .section-title { max-width: 22ch; }
+    .addon-list {
+      margin-top: 2.75rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .addon {
+      display: grid;
+      gap: 0.75rem 2rem;
+      padding: 1.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      align-items: baseline;
+    }
+    @media (min-width: 800px) {
+      .addon {
+        grid-template-columns: 1fr auto auto;
+      }
+    }
+    .addon h3 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+    .addon p {
+      font-weight: 300;
+      color: rgba(255,255,255,0.68);
+      max-width: 36rem;
+      font-size: 0.95rem;
+    }
+    .addon-price {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.55rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .addon .btn-on-dark {
+      width: auto;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.72rem;
+      margin-top: 0;
+    }
+
     /* —— How —— */
     .how {
       background: var(--mist);
@@ -686,6 +736,7 @@
     <div class="nav-links">
       <a href="./outreach/">Outreach</a>
       <a href="./partners/">Partners</a>
+      <a href="#addons">Add-ons</a>
       <a class="nav-cta" href="#packages">Packages</a>
     </div>
   </header>
@@ -800,7 +851,71 @@
           <p class="price-cta-hint">Opens email to brad@treadcompanies.com</p>
         </article>
       </div>
-      <p class="price-note">Travel and on-site filming are not included — this is a send-everything production. Need both a wedding cut and a life cut? Ask when you inquire.</p>
+      <p class="price-note">Travel and on-site filming are not included — this is a send-everything production. Need both a wedding cut and a life cut? Add Dual cut below, or ask when you inquire.</p>
+    </section>
+
+    <section class="addons" id="addons" aria-labelledby="addons-title">
+      <p class="section-kicker">Add-ons</p>
+      <h2 class="section-title" id="addons-title">Stack paid upgrades on any package.</h2>
+      <p class="section-lead">Book a package first, then email the add-on — or ask for both in one message. Subject lines are prefilled.</p>
+
+      <div class="addon-list">
+        <article class="addon">
+          <div>
+            <h3>Rush delivery</h3>
+            <p>Finished film in 21 days instead of standard 6–8 weeks. Limited slots per month.</p>
+          </div>
+          <p class="addon-price">+$2,500</p>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20add-on%20%E2%80%94%20Rush%20(%2B%242%2C500)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20the%20Rush%20delivery%20add-on%20(%2B%242%2C500).%0A%0APackage%20(30%20or%2060%20min)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Add rush</a>
+        </article>
+        <article class="addon">
+          <div>
+            <h3>Extra revision round</h3>
+            <p>One more full review pass after the two included rounds.</p>
+          </div>
+          <p class="addon-price">+$750</p>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20add-on%20%E2%80%94%20Extra%20revision%20(%2B%24750)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20an%20extra%20revision%20round%20(%2B%24750).%0A%0APackage%20(30%20or%2060%20min)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Add revision</a>
+        </article>
+        <article class="addon">
+          <div>
+            <h3>Dual cut</h3>
+            <p>Wedding film and life film as separate masters from one media dump.</p>
+          </div>
+          <p class="addon-price">+$4,000</p>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20add-on%20%E2%80%94%20Dual%20cut%20(%2B%244%2C000)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20the%20Dual%20cut%20add-on%20(%2B%244%2C000).%0A%0ABase%20package%20(30%20or%2060%20min)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Add dual cut</a>
+        </article>
+        <article class="addon">
+          <div>
+            <h3>Custom score</h3>
+            <p>Original underscore composed for your film instead of licensed library cues.</p>
+          </div>
+          <p class="addon-price">+$1,200</p>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20add-on%20%E2%80%94%20Custom%20score%20(%2B%241%2C200)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20the%20Custom%20score%20add-on%20(%2B%241%2C200).%0A%0APackage%20(30%20or%2060%20min)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Add score</a>
+        </article>
+        <article class="addon">
+          <div>
+            <h3>+15 minutes runtime</h3>
+            <p>Extend the finished runtime by fifteen minutes on either package.</p>
+          </div>
+          <p class="addon-price">+$2,500</p>
+          <a
+            class="btn btn-on-dark"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20add-on%20%E2%80%94%20%2B15%20min%20(%2B%242%2C500)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20%2B15%20minutes%20runtime%20(%2B%242%2C500).%0A%0ABase%20package%20(30%20or%2060%20min)%3A%0AName%3A%0ABest%20email%3A%0A%0AThanks."
+          >Add runtime</a>
+        </article>
+      </div>
     </section>
 
     <section class="how" id="how" aria-labelledby="how-title">
