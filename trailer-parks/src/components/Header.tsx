@@ -50,6 +50,7 @@ const navLinks = [
   { href: "/meters", label: "Meters Diligence $309" },
   { href: "/lighting", label: "Lighting Diligence $299" },
   { href: "/signage", label: "Signage Diligence $289" },
+  { href: "/mailboxes", label: "Mailboxes Diligence $279" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
