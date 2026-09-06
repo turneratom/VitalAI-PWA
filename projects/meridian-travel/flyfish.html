@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Rail Day — Meridian</title>
-  <meta name="description" content="Meridian Private Rail Day — $6,400 flat for up to 4 travelers. Host-led itinerary, carriage brief, station plan. Rail fares and transport billed separately when required." />
+  <title>Private Fly-Fish Day — Meridian</title>
+  <meta name="description" content="Meridian Private Fly-Fish Day — $4,800 flat for up to 2 anglers. Guide-led itinerary, beat brief, river plan. Beat fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..146,400;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,800;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -145,7 +145,6 @@
       <a class="nav-link" href="dive.html">Dive</a>
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
-      <a class="nav-link" href="hunt.html">Hunt</a>
       <a class="nav-link" href="rail.html">Rail</a>
       <a class="nav-link" href="flyfish.html">Fly-fish</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -157,17 +156,17 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Rail Day.</p>
-    <p class="price">$6,400 flat · one day · up to 4 travelers</p>
-    <p class="hero-sub">Host-led rail day: carriage brief, route rhythm, and station plan. Rail fares and private transport billed separately when the operator requires them.</p>
+    <p class="hero-line">Private Fly-Fish Day.</p>
+    <p class="price">$4,800 flat · one day · up to 2 anglers</p>
+    <p class="hero-sub">Guide-led fly-fish day: beat brief, cast rhythm, and river plan. Beat fees and private transport billed separately when the lodge requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request rail day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $6,400 for Private Rail Day, then lock route, carriage, and traveler count with your first brief.</p>
-      <form id="rail-form" novalidate>
+      <h2 id="form-title">Request fly-fish day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $4,800 for Private Fly-Fish Day, then lock beat, river, and angler count with your first brief.</p>
+      <form id="flyfish-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred route / region
+            Preferred river / region
             <input type="text" id="city" name="region" placeholder="e.g. Bordeaux / Tuscany / Sonoma / open" />
           </label>
           <label>
@@ -196,40 +195,40 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $6,400 rail invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Rail Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $4,800 fly-fish invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Fly-Fish Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Host-led rail day</strong>
-        A Meridian host for carriage pacing, seating decisions, and day briefings.
+        <strong>Guide-led fly-fish day</strong>
+        A Meridian host for beat pacing, cast decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Carriage brief</strong>
-        Legs and lunch sequenced for the route and day you choose.
+        <strong>Beat brief</strong>
+        Sessions and lunch sequenced for the river and day you choose.
       </div>
       <div class="rule">
         <strong>Day plan</strong>
-        Leg timing, station access, and transfer notes for the day.
+        Session timing, lodge access, and transfer notes for the day.
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $6,400 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $4,800 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Rail Day</p>
+    <p><strong>Meridian</strong> · Private Fly-Fish Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("rail-form");
+      var form = document.getElementById("flyfish-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Rail Day — $6,400";
+        var subject = "Meridian Private Fly-Fish Day — $4,800";
         var body =
-          "Meridian Private Rail Day request ($6,400 flat, one day, up to 4 travelers)\n\n" +
+          "Meridian Private Fly-Fish Day request ($4,800 flat, one day, up to 2 anglers)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $6,400 Private Rail Day invoice.\n" +
-          "Includes: host-led day, carriage brief, station plan. Rail fares and transport billed separately when required.";
+          "Please send the $4,800 Private Fly-Fish Day invoice.\n" +
+          "Includes: guide-led day, beat brief, river plan. Beat fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

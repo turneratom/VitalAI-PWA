@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Endurance Protocol</title>
-  <meta name="description" content="VitalAI Endurance Protocol — Protocol setup $179 or Endurance desk $52/mo. Endurance targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Flexibility Protocol</title>
+  <meta name="description" content="VitalAI Flexibility Protocol — Protocol setup $169 or Flexibility desk $48/mo. Flexibility targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Endurance Protocol</p>
+        <p>Flexibility Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -77,36 +77,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Endurance Protocol</h2>
+    <h2>VitalAI Flexibility Protocol</h2>
     <p class="lede">
-      Endurance markers, pace targets, and a weekly checklist — one setup, or a monthly endurance desk. Stripe when live — until then this form emails an invoice request.
+      Flexibility markers, range targets, and a weekly checklist — one setup, or a monthly flexibility desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Endurance pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly endurance desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Flexibility pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly flexibility desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$179</strong></div>
-        <div class="plan-row"><span>Endurance desk</span><strong>$52 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$169</strong></div>
+        <div class="plan-row"><span>Flexibility desk</span><strong>$48 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Endurance markers and schedule for your goals</li>
+        <li>Flexibility markers and schedule for your goals</li>
         <li>Load / recovery rhythm for your week</li>
-        <li>Endurance checklist for the first two weeks</li>
-        <li>Optional monthly endurance desk</li>
+        <li>Flexibility checklist for the first two weeks</li>
+        <li>Optional monthly flexibility desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request endurance invoice</h3>
+      <h3 id="form-title">Request flexibility invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="endurance-form" novalidate>
+      <form id="flexibility-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $179" selected>Protocol setup — $179</option>
-              <option value="Endurance desk — $52/mo">Endurance desk — $52/mo</option>
+              <option value="Protocol setup — $169" selected>Protocol setup — $169</option>
+              <option value="Flexibility desk — $48/mo">Flexibility desk — $48/mo</option>
             </select>
           </label>
           <label>
@@ -131,7 +131,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email endurance invoice request</button>
+          <button class="btn" type="submit">Email flexibility invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -139,13 +139,13 @@
   </main>
 
   <footer class="site-footer">
-    Endurance Protocol · setup / desk ·
+    Flexibility Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("endurance-form");
+      var form = document.getElementById("flexibility-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -159,17 +159,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Endurance Protocol — " + plan;
+        var subject = "VitalAI Flexibility Protocol — " + plan;
         var body =
-          "VitalAI Endurance Protocol invoice request\n\n" +
+          "VitalAI Flexibility Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Endurance Protocol checkout or invoice.\n" +
-          "Includes: endurance map, pace blocks, weekly checklist.";
+          "Please send Flexibility Protocol checkout or invoice.\n" +
+          "Includes: flexibility map, range blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
