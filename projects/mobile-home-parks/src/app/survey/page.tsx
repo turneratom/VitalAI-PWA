@@ -3,53 +3,53 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Insurance Intro Pack — $499 | Trailer Parks",
+  title: "Site Survey Pack — $599 | Trailer Parks",
   description:
-    "Insurance Intro Pack: single park $499, or three-park pack $1,299. Coverage gap notes, carrier fit flags, broker-ready summary. Invoice by email.",
+    "Site Survey Pack: single park $599, or three-park pack $1,499. Site condition notes, capex flag list, buyer-ready summary. Invoice by email.",
   openGraph: {
-    title: "Insurance Intro Pack — $499",
+    title: "Site Survey Pack — $599",
     description:
-      "Single park $499 · Three-park pack $1,299. Coverage gap notes, carrier fit flags, broker-ready summary.",
+      "Single park $599 · Three-park pack $1,499. Site condition notes, capex flag list, buyer-ready summary.",
     type: "website",
     siteName: siteConfig.name,
-    url: "/insurance",
+    url: "/survey",
   },
 };
 
 const email = siteConfig.team.bradley.email;
 
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
-  "Insurance Intro Pack — $499 single park"
+  "Site Survey Pack — $599 single park"
 )}&body=${encodeURIComponent(
-  `I want a Insurance Intro Pack ($499 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a Site Survey Pack ($599 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
-  "Insurance Intro Pack Three-Park Pack — $1,299"
+  "Site Survey Pack Three-Park Pack — $1,499"
 )}&body=${encodeURIComponent(
-  `I want a Insurance Intro Pack Three-Park Pack ($1,299).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a Site Survey Pack Three-Park Pack ($1,499).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
   {
-    title: "Coverage gap notes",
-    body: "A stated coverage gap notes after cleaning one-time noise and owner-specific add-backs.",
+    title: "Site condition notes",
+    body: "A stated site condition notes after cleaning one-time noise and owner-specific add-backs.",
   },
   {
-    title: "Carrier fit flags",
+    title: "Capex flag list",
     body: "Clear flags on what was added back — and what a lender may push back on.",
   },
   {
-    title: "Coverage hygiene",
+    title: "Site hygiene",
     body: "Line-item notes where expenses look soft, padded, or missing for IC review.",
   },
   {
     title: "PDF delivery",
-    body: "One memo PDF per park — single park at $499, or three parks in a pack at $1,299.",
+    body: "One memo PDF per park — single park at $599, or three parks in a pack at $1,499.",
   },
 ];
 
-export default function InsurancePage() {
+export default function SurveyPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
@@ -66,33 +66,30 @@ export default function InsurancePage() {
             Trailer Parks · Capital
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Insurance Intro Pack.
-            <span className="mt-2 block text-accent">$499 · or $1,299.</span>
+            Site Survey Pack.
+            <span className="mt-2 block text-accent">$599 · or $1,499.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $499, or three-park pack at $1,299 — coverage gap notes,
-            carrier fit flags, broker-ready summary.
+            Single park at $599, or three-park pack at $1,499 — site condition notes,
+            capex flag list, buyer-ready summary.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex items-center justify-center bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-accent-light"
             >
-              Invoice memo — $499
+              Invoice memo — $599
             </a>
             <a
               href={PACK}
               className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
             >
-              Three-park — $1,299
+              Three-park — $1,499
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
-            <Link href="/tax" className="underline-offset-4 hover:text-white hover:underline">
+            <Link href="/insurance" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
-            </Link>
-            <Link href="/survey" className="underline-offset-4 hover:text-white hover:underline">
-              Site Survey
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
@@ -139,7 +136,7 @@ export default function InsurancePage() {
             Two ways into the memo.
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            Single park $499 · Three-park pack $1,299. Pair with{" "}
+            Single park $599 · Three-park pack $1,499. Pair with{" "}
             <Link href="/cap-rate" className="font-medium text-primary hover:underline">
               Cap Rate
             </Link>
@@ -166,13 +163,13 @@ export default function InsurancePage() {
               href={SINGLE}
               className="inline-flex bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-primary-light"
             >
-              Request $499 invoice
+              Request $599 invoice
             </a>
             <a
               href={PACK}
               className="inline-flex border border-border px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-background"
             >
-              Three-park $1,299
+              Three-park $1,499
             </a>
           </div>
         </div>

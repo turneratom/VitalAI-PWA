@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balloon Dawn Flight — Meridian</title>
-  <meta name="description" content="Meridian Balloon Dawn Flight — $4,800 flat for up to 4 guests. Host-led itinerary, camp brief, transfer plan. Park fees and charter billed separately when required." />
+  <title>Private Chef Table — Meridian</title>
+  <meta name="description" content="Meridian Private Chef Table — $3,600 flat for up to 8 guests. Host-led itinerary, camp brief, transfer plan. Park fees and charter billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -148,18 +148,18 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Balloon Dawn Flight.</p>
-    <p class="price">$4,800 flat · one dawn · up to 4 guests</p>
-    <p class="hero-sub">Host-led balloon dawn: lodge brief, mountain day rhythm, and transfer plan. Park fees and light aircraft charter billed separately when the route requires them.</p>
+    <p class="hero-line">Private Chef Table.</p>
+    <p class="price">$3,600 flat · one evening · up to 8 guests</p>
+    <p class="hero-sub">Host-led chef table: lodge brief, mountain day rhythm, and transfer plan. Park fees and light aircraft charter billed separately when the route requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request balloon dawn invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $4,800 for Balloon Dawn Flight, then lock region, season, and guest count with your first brief.</p>
-      <form id="balloon-form" novalidate>
+      <h2 id="form-title">Request chef table invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $3,600 for Private Chef Table, then lock region, season, and guest count with your first brief.</p>
+      <form id="chef-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred region
-            <input type="text" id="region" name="region" placeholder="e.g. Cappadocia / Napa / Serengeti / open" />
+            Preferred city
+            <input type="text" id="city" name="region" placeholder="e.g. NYC / Miami / LA / open" />
           </label>
           <label>
             Your name
@@ -174,57 +174,57 @@
             <input type="text" id="guests" name="guests" value="Up to 4" />
           </label>
           <label>
-            Target dawn
-            <input type="text" id="window" name="window" placeholder="e.g. next clear dawn / open" />
+            Target evening
+            <input type="text" id="window" name="window" placeholder="e.g. next Saturday / open" />
           </label>
           <label class="full">
             Tone
-            <input type="text" id="tone" name="tone" placeholder="Quiet couple / family / photo-forward" />
+            <input type="text" id="tone" name="tone" placeholder="Intimate dinner / celebration / tasting" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Dietary, mobility, photo priorities, constraints"></textarea>
+            <textarea id="notes" name="notes" placeholder="Dietary, allergies, wine preferences, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $4,800 safari invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Balloon Dawn Flight details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $3,600 safari invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Chef Table details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Host-led balloon dawn</strong>
-        A Meridian host for launch pacing, chase decisions, and landing briefings.
+        <strong>Host-led chef table</strong>
+        A Meridian host for menu pacing, service decisions, and evening briefings.
       </div>
       <div class="rule">
-        <strong>Launch brief</strong>
-        Launch site and landing zone sequenced for the region and dawn you choose.
+        <strong>Menu brief</strong>
+        Courses and pairings sequenced for the city and evening you choose.
       </div>
       <div class="rule">
-        <strong>Chase plan</strong>
-        Chase vehicle and recovery notes for launch through landing.
+        <strong>Service plan</strong>
+        Service timing, staffing, and table flow notes for the evening.
       </div>
       <div class="rule">
-        <strong>Aircraft & permits separate</strong>
-        The $4,800 flat covers Meridian host and design. Balloon aircraft and permits are invoiced separately when required.
+        <strong>Venue & produce separate</strong>
+        The $3,600 flat covers Meridian host and design. Chef aircraft and permits are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Balloon Dawn Flight</p>
+    <p><strong>Meridian</strong> · Private Chef Table</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("balloon-form");
+      var form = document.getElementById("chef-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var region = (document.getElementById("region").value || "").trim();
+        var region = (document.getElementById("city").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var guests = (document.getElementById("guests").value || "").trim();
@@ -235,17 +235,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Balloon Dawn Flight — $4,800";
+        var subject = "Meridian Private Chef Table — $3,600";
         var body =
-          "Meridian Balloon Dawn Flight request ($4,800 flat, one week, up to 4 guests)\n\n" +
-          "Region: " + (region || "—") + "\n" +
+          "Meridian Private Chef Table request ($3,600 flat, one week, up to 8 guests)\n\n" +
+          "City: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Guests: " + (guests || "Up to 4") + "\n" +
-          "Target dawn: " + (windowVal || "—") + "\n" +
+          "Target evening: " + (windowVal || "—") + "\n" +
           "Tone: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $4,800 Balloon Dawn Flight invoice.\n" +
+          "Please send the $3,600 Private Chef Table invoice.\n" +
           "Includes: host-led week, camp brief, transfer plan. Park fees and charter billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +

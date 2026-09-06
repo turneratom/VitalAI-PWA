@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Recovery Protocol</title>
-  <meta name="description" content="VitalAI Recovery Protocol — Protocol setup $229 or Recovery desk $69/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
+  <title>VitalAI Focus Protocol</title>
+  <meta name="description" content="VitalAI Focus Protocol — Protocol setup $179 or Focus desk $49/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Recovery Protocol</p>
+        <p>Focus Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -58,7 +58,6 @@
         <a href="coach.html">Coach</a>
         <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
-        <a href="recovery.html">Recovery</a>
         <a href="focus.html">Focus</a>
         <a href="clinic.html">Subscribe</a>
       </nav>
@@ -66,41 +65,41 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Recovery Protocol</h2>
+    <h2>VitalAI Focus Protocol</h2>
     <p class="lede">
-      Recovery window, wind-down rhythm, and a recovery checklist — one setup, or a monthly sleep desk. Stripe when live — until then this form emails an invoice request.
+      Focus window, wind-down rhythm, and a recovery checklist — one setup, or a monthly sleep desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Recovery pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly recovery desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Focus pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly focus desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$229</strong></div>
-        <div class="plan-row"><span>Recovery desk</span><strong>$69 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$179</strong></div>
+        <div class="plan-row"><span>Focus desk</span><strong>$49 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Recovery window and schedule for your goals</li>
-        <li>Hard / easy day rhythm for training weeks</li>
-        <li>Readiness checklist for the first two weeks</li>
-        <li>Optional monthly recovery desk</li>
+        <li>Focus window and schedule for your goals</li>
+        <li>Deep / shallow work rhythm for your week</li>
+        <li>Focus checklist for the first two weeks</li>
+        <li>Optional monthly focus desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
       <h3 id="form-title">Request nutrition invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="recovery-form" novalidate>
+      <form id="focus-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $229" selected>Protocol setup — $229</option>
-              <option value="Recovery desk — $69/mo">Recovery desk — $69/mo</option>
+              <option value="Protocol setup — $179" selected>Protocol setup — $179</option>
+              <option value="Focus desk — $49/mo">Focus desk — $49/mo</option>
             </select>
           </label>
           <label>
             Goal focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. training load / travel weeks" />
+            <input type="text" id="focus" name="focus" placeholder="e.g. deep work / meeting-heavy weeks" />
           </label>
           <label>
             Preferred kickoff
@@ -116,25 +115,25 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Training days, travel, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Meeting load, tools, constraints" />
           </label>
         </div>
         <div class="actions">
           <button class="btn" type="submit">Email nutrition invoice request</button>
-          <a class="btn btn-secondary" href="sleep.html">Sleep protocol</a>
+          <a class="btn btn-secondary" href="recovery.html">Recovery protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Recovery Protocol · setup / desk ·
+    Focus Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("recovery-form");
+      var form = document.getElementById("focus-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -148,17 +147,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Recovery Protocol — " + plan;
+        var subject = "VitalAI Focus Protocol — " + plan;
         var body =
-          "VitalAI Recovery Protocol invoice request\n\n" +
+          "VitalAI Focus Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Recovery Protocol checkout or invoice.\n" +
-          "Includes: load map, recovery blocks, readiness checklist.";
+          "Please send Focus Protocol checkout or invoice.\n" +
+          "Includes: deep-work map, focus blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

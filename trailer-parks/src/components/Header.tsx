@@ -27,6 +27,7 @@ const navLinks = [
   { href: "/noi", label: "NOI $349" },
   { href: "/tax", label: "Tax Basis $399" },
   { href: "/insurance", label: "Insurance $499" },
+  { href: "/survey", label: "Site Survey $599" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
