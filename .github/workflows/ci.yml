@@ -480,4 +480,9 @@ jobs:
           test -f projects/project-ais/ring-finger.html
           test -f trailer-parks/src/app/wintergarden/page.tsx
           test -f projects/mobile-home-parks/src/app/wintergarden/page.tsx
+          test -f projects/meridian-travel/pontoon.html
+          test -f projects/everything-films/archive-master.html
+          test -f projects/project-ais/middle-finger.html
+          test -f trailer-parks/src/app/glasshouse/page.tsx
+          test -f projects/mobile-home-parks/src/app/glasshouse/page.tsx
  
