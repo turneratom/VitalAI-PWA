@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI White-Label — Clinics</title>
-  <meta name="description" content="VitalAI white-label coaching portal for clinics. Custom brand, 10 seats starter pack, priority support. $499/mo or $4,999/yr." />
+  <title>VitalAI Concierge Onboarding</title>
+  <meta name="description" content="VitalAI Concierge Onboarding — Setup sprint $499 or Concierge desk $99/mo. Account setup, goal import, 1:1 walkthrough. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,115 +47,114 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>White-Label</p>
+        <p>Concierge Onboarding</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
         <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
         <a href="api.html">API</a>
         <a href="enterprise.html">Enterprise</a>
         <a href="coach.html">Coach</a>
-        <a href="family.html">Family</a>
-        <a href="clinic.html">Clinic</a>
-        <a href="concierge.html">Concierge</a>
-        <a href="subscribe.html">Subscribe</a>
+        <a href="clinic.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI White-Label for clinics</h2>
+    <h2>VitalAI Concierge Onboarding</h2>
     <p class="lede">
-      Your brand on the coaching portal. Starter pack includes 10 seats, custom clinic branding, and priority support. Stripe when live — until then this form emails a white-label invoice request.
+      White-glove onboarding for households and clinics: setup sprint or ongoing concierge desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">White-label pricing</h3>
-      <p class="hint">Clinic portal under your brand. 10 seats included in the starter pack.</p>
+      <h3 id="plans-title">Concierge pricing</h3>
+      <p class="hint">One-time setup sprint, or keep a monthly concierge desk for ongoing help.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>White-label monthly</span><strong>$499 / mo</strong></div>
-        <div class="plan-row"><span>White-label annual</span><strong>$4,999 / yr</strong></div>
+        <div class="plan-row"><span>Setup sprint</span><strong>$499</strong></div>
+        <div class="plan-row"><span>Concierge desk</span><strong>$99 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Custom brand (logo, colors, clinic name)</li>
-        <li>10 coaching seats starter pack</li>
-        <li>Priority support</li>
-        <li>Annual saves vs twelve monthly invoices</li>
+        <li>Account setup and profile configuration</li>
+        <li>Goal and history import assistance</li>
+        <li>1:1 walkthrough session</li>
+        <li>Optional monthly concierge desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request white-label invoice</h3>
-      <p class="hint">Tell us cadence and clinic details. We reply with checkout or invoice within one business day.</p>
-      <form id="whitelabel-form" novalidate>
+      <h3 id="form-title">Request concierge invoice</h3>
+      <p class="hint">Tell us sprint vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="concierge-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="White-label monthly — $499/mo" selected>White-label monthly — $499/mo</option>
-              <option value="White-label annual — $4,999/yr">White-label annual — $4,999/yr</option>
+              <option value="Setup sprint — $499" selected>Setup sprint — $499</option>
+              <option value="Concierge desk — $99/mo">Concierge desk — $99/mo</option>
             </select>
           </label>
           <label>
-            Clinic / brand name
-            <input type="text" id="org" name="org" required autocomplete="organization" />
+            Account type
+            <input type="text" id="clinicName" name="clinicName" placeholder="e.g. household / clinic" />
           </label>
           <label>
-            Extra seats (beyond 10)
-            <input type="number" id="seats" name="seats" min="0" value="0" />
+            Preferred kickoff
+            <input type="text" id="seats" name="seats" placeholder="e.g. this week / next open" />
           </label>
           <label>
             Your name
             <input type="text" id="name" name="name" required autocomplete="name" />
           </label>
           <label>
-            Work email
+            Email
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Brand assets, rollout date, domain, etc." />
+            <input type="text" id="notes" name="notes" placeholder="Tools to import, questions, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email white-label invoice request</button>
-          <a class="btn btn-secondary" href="teams.html">Team seats</a>
+          <button class="btn" type="submit">Email concierge invoice request</button>
+          <a class="btn btn-secondary" href="clinic.html">Clinic seats</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    White-label clinics · 10 seats included ·
+    Concierge Onboarding · sprint / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("whitelabel-form");
+      var form = document.getElementById("concierge-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
-        var org = (document.getElementById("org").value || "").trim();
-        var seats = (document.getElementById("seats").value || "0").trim();
+        var profiles = (document.getElementById("clinicName").value || "").trim();
+        var household = (document.getElementById("seats").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
-        if (!name || !email || !org) {
-          document.getElementById(!org ? "org" : !name ? "name" : "email").focus();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI White-Label — " + plan;
+        var subject = "VitalAI Concierge Onboarding — " + plan;
         var body =
-          "VitalAI White-Label clinic invoice request\n\n" +
+          "VitalAI Concierge Onboarding invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Clinic / brand: " + org + "\n" +
-          "Extra seats beyond starter 10: " + seats + "\n" +
+          "Account type: " + (profiles || "—") + "\n" +
+          "Preferred kickoff: " + (household || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send white-label checkout or invoice.";
+          "Please send Concierge Onboarding checkout or invoice.\n" +
+          "Includes: account setup, goal import help, 1:1 walkthrough.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

@@ -23,6 +23,7 @@ const navLinks = [
   { href: "/comps", label: "Comps $349" },
   { href: "/loi", label: "LOI Review $599" },
   { href: "/rent-roll", label: "Rent Roll $449" },
+  { href: "/cap-rate", label: "Cap Rate $299" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

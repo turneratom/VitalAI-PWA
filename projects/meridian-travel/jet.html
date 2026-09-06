@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Annual Journey Retainer — Meridian</title>
-  <meta name="description" content="Meridian Annual Journey Retainer — $12,000/year. Year-round planning, two Escapes or one Crossing sketched, priority host holds, quarterly route reviews. Fees apply toward journey invoices." />
+  <title>Private Jet Day — Meridian</title>
+  <meta name="description" content="Meridian Private Jet Day — $12,000 flat for one day, up to 6 guests. Host aboard, route brief, ground transfer plan. Aircraft charter billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -137,9 +137,9 @@
       <a class="nav-link" href="hold.html">Hold</a>
       <a class="nav-link" href="weekend.html">Weekend</a>
       <a class="nav-link" href="dinner.html">Dinner</a>
-      <a class="nav-link" href="yacht.html">Yacht</a>
       <a class="nav-link" href="villa.html">Villa</a>
-      <a class="nav-link" href="jet.html">Jet</a>
+      <a class="nav-link" href="yacht.html">Yacht</a>
+      <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
       <a class="nav-link" href="invoice.html">Invoice</a>
@@ -148,22 +148,18 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Annual Journey Retainer.</p>
-    <p class="price">$12,000 / year</p>
-    <p class="hero-sub">Year-round planning: two Escapes (or one Crossing) sketched, priority host holds, and quarterly route reviews. Retainer fees apply toward journey invoices for the year.</p>
+    <p class="hero-line">Private Jet Day.</p>
+    <p class="price">$12,000 flat · one day · up to 6 guests</p>
+    <p class="hero-sub">One day with a Meridian host aboard: route brief, timing, and ground transfer plan. Aircraft charter is billed separately when the jet must be reserved.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request retainer invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $12,000 for the annual retainer, then open the planning year with your first route brief.</p>
-      <form id="retainer-form" novalidate>
+      <h2 id="form-title">Request villa weekend invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $12,000 for Private Jet Day, then lock region, dates, and guest count with your first brief.</p>
+      <form id="jet-form" novalidate>
         <div class="fields">
           <label class="full">
-            Year sketch preference
-            <select id="sketch" name="sketch">
-              <option value="Two Escapes (5–8 days each)">Two Escapes (5–8 days each)</option>
-              <option value="One Crossing (10–14 days)">One Crossing (10–14 days)</option>
-              <option value="Open — decide after first review">Open — decide after first review</option>
-            </select>
+            Preferred city pair
+            <input type="text" id="pair" name="pair" placeholder="e.g. NYC–MIA / LAX–ASE / open" />
           </label>
           <label>
             Your name
@@ -174,83 +170,83 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Household / travelers
-            <input type="text" id="travelers" name="travelers" placeholder="e.g. 2 adults" />
+            Guests
+            <input type="text" id="guests" name="guests" value="Up to 6" />
           </label>
           <label>
-            Start month
-            <input type="text" id="start" name="start" placeholder="e.g. January 2027" />
+            Target window
+            <input type="text" id="window" name="window" placeholder="e.g. late October or open" />
           </label>
           <label class="full">
-            Regions of interest
-            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / Andes" />
+            Tone
+            <input type="text" id="tone" name="tone" placeholder="Business day / celebration / open" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Pace, hosts, constraints, gift timing"></textarea>
+            <textarea id="notes" name="notes" placeholder="Dietary, baggage, FBO prefs, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $12,000 retainer invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with retainer details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $12,000 jet day invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Jet Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Applied to journeys</strong>
-        The $12,000 retainer credits Escape / Crossing / Expedition invoices for the retainer year.
+        <strong>Host aboard</strong>
+        A Meridian host for the day — pacing, briefings, and cabin decisions.
       </div>
       <div class="rule">
-        <strong>Two Escapes or one Crossing</strong>
-        We sketch two Escapes (or one Crossing) as part of the year — routes, hosts, and pacing drafts included.
+        <strong>Route brief</strong>
+        Anchorage sequence and day plan written for the region you choose.
       </div>
       <div class="rule">
-        <strong>Priority host holds</strong>
-        Retainer clients get first look at preferred hosts and stays before open inventory.
+        <strong>Ground transfer plan</strong>
+        FBO-to-destination transfer notes for arrival and return.
       </div>
       <div class="rule">
-        <strong>Quarterly route reviews</strong>
-        Four planning check-ins across the year to recalibrate dates, regions, and pace.
+        <strong>Aircraft separate when needed</strong>
+        The $12,000 flat covers Meridian host and design. Aircraft charter fees are invoiced separately if we must reserve the jet.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Annual Journey Retainer</p>
+    <p><strong>Meridian</strong> · Private Jet Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("retainer-form");
+      var form = document.getElementById("jet-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var sketch = document.getElementById("sketch").value;
+        var region = (document.getElementById("pair").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var travelers = (document.getElementById("travelers").value || "").trim();
-        var start = (document.getElementById("start").value || "").trim();
-        var region = (document.getElementById("region").value || "").trim();
+        var guests = (document.getElementById("guests").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
+        var tone = (document.getElementById("tone").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Annual Retainer — $12,000";
+        var subject = "Meridian Private Jet Day — $12,000";
         var body =
-          "Meridian Annual Journey Retainer request ($12,000/year)\n\n" +
-          "Sketch preference: " + sketch + "\n" +
+          "Meridian Private Jet Day request ($12,000 flat, 3 nights, up to 8 guests)\n\n" +
+          "City pair: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Travelers: " + (travelers || "—") + "\n" +
-          "Start month: " + (start || "—") + "\n" +
-          "Regions: " + (region || "—") + "\n" +
+          "Guests: " + (guests || "Up to 6") + "\n" +
+          "Target window: " + (windowVal || "—") + "\n" +
+          "Tone: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $12,000 annual retainer invoice.\n" +
-          "Reminder: retainer fees apply toward journey invoices for the year.";
+          "Please send the $12,000 Private Jet Day invoice.\n" +
+          "Includes: host aboard, route brief, ground transfer plan. Aircraft charter billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

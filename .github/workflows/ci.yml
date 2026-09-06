@@ -47,4 +47,8 @@ jobs:
           test -f projects/tread-affiliates/app/placement/page.tsx
           test -f trailer-parks/src/app/loi/page.tsx
           test -f trailer-parks/src/app/rent-roll/page.tsx
+          test -f trailer-parks/src/app/cap-rate/page.tsx
+          test -f projects/project-ais/concierge.html
+          test -f projects/everything-films/drone.html
+          test -f projects/meridian-travel/jet.html
           echo "Offer page presence checks passed."
