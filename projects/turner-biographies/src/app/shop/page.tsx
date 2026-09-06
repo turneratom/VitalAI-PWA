@@ -455,6 +455,12 @@ export default function ShopPage() {
               Broadsheet · from $25
             </Link>
             <Link
+              href="/playbill"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Playbill · from $20
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

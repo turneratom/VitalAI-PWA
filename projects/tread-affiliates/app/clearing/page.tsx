@@ -98,6 +98,7 @@ export default function ClearingPage() {
             <Link href="/offset" className="transition hover:text-signal">Offset</Link>
             <Link href="/remittance" className="transition hover:text-signal">Remittance</Link>
             <Link href="/withhold" className="transition hover:text-signal">Withhold</Link>
+<Link href="/allocation" className="transition hover:text-signal">Allocation</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clearing kit</a>
           </nav>
         </div>

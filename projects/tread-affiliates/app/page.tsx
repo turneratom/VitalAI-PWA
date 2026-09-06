@@ -264,6 +264,9 @@ export default function HomePage() {
             <a href="/withhold" className="transition hover:text-signal">
               Withhold
             </a>
+            <a href="/allocation" className="transition hover:text-signal">
+              Allocation
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

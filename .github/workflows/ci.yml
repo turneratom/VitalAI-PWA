@@ -397,6 +397,9 @@ jobs:
           test -f projects/turner-capital/burke.html
           test -f projects/turner-biographies/src/app/broadsheet/page.tsx
           test -f projects/tread-affiliates/app/withhold/page.tsx
+          test -f projects/turner-capital/appraisal.html
+          test -f projects/turner-biographies/src/app/playbill/page.tsx
+          test -f projects/tread-affiliates/app/allocation/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html
