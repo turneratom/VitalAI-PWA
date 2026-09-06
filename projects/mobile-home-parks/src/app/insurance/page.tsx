@@ -94,6 +94,9 @@ export default function InsurancePage() {
             <Link href="/survey" className="underline-offset-4 hover:text-white hover:underline">
               Site Survey
             </Link>
+            <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">
+              EPA Diligence
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>
