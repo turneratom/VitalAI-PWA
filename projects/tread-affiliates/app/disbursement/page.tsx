@@ -103,6 +103,7 @@ export default function DisbursementPage() {
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
+            <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Disbursement kit</a>
           </nav>
         </div>

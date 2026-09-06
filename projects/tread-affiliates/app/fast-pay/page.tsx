@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Remittal Kit — Tread Affiliates",
+  title: "Affiliate Fast-Pay Kit — Tread Affiliates",
   description:
-    "Affiliate Remittal Kit — one-time sprint $10 or monthly Remittal kit $1/mo. Remittal plan, Remittal mix, Remittal pairing. Invoice by email.",
+    "Affiliate Fast-Pay Kit — one-time sprint $1 or monthly Fast-Pay kit $1/mo. Fast-Pay plan, Fast-Pay mix, Fast-Pay pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Remittal Kit — Tread Affiliates",
-    description: "Sprint $10 · Monthly desk $1/mo. Remittal plan, Remittal mix, Remittal pairing.",
+    title: "Affiliate Fast-Pay Kit — Tread Affiliates",
+    description: "Sprint $1 · Monthly desk $1/mo. Fast-Pay plan, Fast-Pay mix, Fast-Pay pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Remittal kit",
-    price: "$10",
+    title: "Fast-Pay kit",
+    price: "$1",
     period: " one-time",
     points: [
-      "Remittal plan across your primary rails",
+      "Fast-Pay plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Remittal kit execution checklist",
+      "30-day Fast-Pay kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Remittal kit — $10",
-      "I want an Affiliate Remittal kit ($10).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Fast-Pay kit — $1",
+      "I want an Affiliate Fast-Pay kit ($1).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $10",
+    cta: "Request sprint — $1",
   },
   {
     tag: "Desk",
-    title: "Monthly Remittal kit",
+    title: "Monthly Fast-Pay kit",
     price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Remittal kit and ROAS review",
+      "Monthly Fast-Pay kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Remittal kit — $1/mo",
-      "I want a Monthly Remittal kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Fast-Pay kit — $1/mo",
+      "I want a Monthly Fast-Pay kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
     cta: "Request desk — $1/mo",
   },
 ];
 
-export default function RemittalPage() {
+export default function FastPayPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -93,17 +93,14 @@ export default function RemittalPage() {
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
-            <Link href="/remittal" className="transition hover:text-signal">Remittal kit</Link>
-<Link href="/transfer" className="transition hover:text-signal">Transfer kit</Link>
-<Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
+            <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
             <Link href="/rtp" className="transition hover:text-signal">RTP kit</Link>
-            <Link href="/fednow" className="transition hover:text-signal">FedNow kit</Link>
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
             <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Remittal kit</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Fast-Pay kit</a>
           </nav>
         </div>
       </header>
@@ -111,17 +108,17 @@ export default function RemittalPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Remittal kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Fast-Pay kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Remittal kit packages that convert comparison-rail traffic — not vanity posts.
+            Fast-Pay kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Remittal plan, Remittal mix, and Remittal pairing.
+            One-time sprint or monthly desk: Fast-Pay plan, Fast-Pay mix, and Fast-Pay pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Remittal kit packages
+              See Fast-Pay kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -133,7 +130,7 @@ export default function RemittalPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Remittal kit.
+          Sprint once, or keep a monthly Fast-Pay kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (

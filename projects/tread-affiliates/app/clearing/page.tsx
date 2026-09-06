@@ -111,6 +111,7 @@ export default function ClearingPage() {
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay</Link>
+            <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clearing kit</a>
           </nav>
         </div>

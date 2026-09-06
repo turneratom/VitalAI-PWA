@@ -100,6 +100,7 @@ export default function InstantPayPage() {
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
+            <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Instant-Pay kit</a>
           </nav>
         </div>
