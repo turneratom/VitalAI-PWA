@@ -92,6 +92,7 @@ export default function EscrowPage() {
             <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow kit</Link>
+            <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Escrow kit</a>
           </nav>
         </div>

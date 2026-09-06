@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Omnibus Rights",
+  title: "Miscellany Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for omnibus — Single-title omnibus $225 or Catalog omnibus slate $750. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for miscellany — Single-title miscellany $90 or Multi-title miscellany slate $450. Direct inquiry by email.",
   openGraph: {
-    title: "Omnibus Rights — Turner Biographies",
-    description: "Single-title omnibus $225 · Catalog omnibus slate $750.",
+    title: "Miscellany Rights — Turner Biographies",
+    description: "Single-title miscellany $90 · Multi-title miscellany slate $450.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title omnibus",
-    price: "$225",
+    title: "Single-title miscellany",
+    price: "$90",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a omnibus — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Omnibus%20rights%20single-title%20%24225&body=I%20want%20Single-title%20omnibus%20rights%20(%24225).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $225",
+      "Rights to license one Firebrand / Greatest Humans title as a miscellany — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Miscellany%20rights%20single-title%20%2490&body=I%20want%20Single-title%20miscellany%20rights%20(%2490).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $90",
   },
   {
     tag: "Slate",
-    title: "Catalog omnibus slate",
-    price: "$750",
+    title: "Multi-title miscellany slate",
+    price: "$450",
     detail:
-      "Multi-title or multi-issue omnibus slate across Firebrand / Greatest Humans — one agreement for a broader omnibus slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Omnibus%20rights%20catalog%20slate%20%24750&body=I%20want%20Catalog%20omnibus%20slate%20rights%20(%24750).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $750",
+      "Multi-title or multi-issue miscellany slate across Firebrand / Greatest Humans — one agreement for a broader miscellany slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Miscellany%20rights%20catalog%20slate%20%24450&body=I%20want%20Catalog%20miscellany%20slate%20rights%20(%24450).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $450",
   },
 ];
 
-export default function OmnibusPage() {
+export default function MiscellanyPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,35 +42,17 @@ export default function OmnibusPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Omnibus Rights
+            Miscellany Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate omnibus licensing for Firebrand and The Greatest Humans —
+            Run and slate miscellany licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/codex" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Codex
-            </Link>
-            <Link href="/compendium" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Compendium
-            </Link>
-            <Link href="/catalogue" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Catalogue
-            </Link>
-            <Link href="/volume" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Volume
-            </Link>
             <Link href="/archive" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Archive
-            </Link>
-            <Link href="/miscellany" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Miscellany
-            </Link>
-            <Link href="/chapbook" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Gazette
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -90,7 +72,7 @@ export default function OmnibusPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two omnibus tracks.
+            Two miscellany tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -115,10 +97,10 @@ export default function OmnibusPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need chapbook instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Omnibus covers classroom omnibus packs. Anthology covers multi-title collections.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need codex instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Miscellany covers reference miscellany packs. Codex covers classroom codex packs.</p>
           </div>
-          <Link href="/chapbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Chapbook
+          <Link href="/codex" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Archive
           </Link>
         </div>
       </section>

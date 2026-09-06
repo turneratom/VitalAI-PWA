@@ -401,6 +401,12 @@ export default function ShopPage() {
               Archive · from $100
             </Link>
             <Link
+              href="/miscellany"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Miscellany · from $90
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

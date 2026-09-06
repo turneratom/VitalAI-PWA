@@ -237,6 +237,9 @@ export default function HomePage() {
             <a href="/escrow" className="transition hover:text-signal">
               Escrow
             </a>
+            <a href="/recoup" className="transition hover:text-signal">
+              Recoup
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
