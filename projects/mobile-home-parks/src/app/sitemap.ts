@@ -72,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/frost-cloth",
     "/low-tunnel",
     "/mulch",
+    "/landscape-fabric",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

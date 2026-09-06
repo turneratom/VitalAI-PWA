@@ -540,16 +540,21 @@ jobs:
           test -f projects/meridian-travel/tender.html
           test -f projects/meridian-travel/cutter.html
           test -f projects/meridian-travel/yawl.html
+          test -f projects/meridian-travel/ketch.html
           test -f projects/everything-films/xdcam.html
           test -f projects/everything-films/avchd.html
           test -f projects/everything-films/h264.html
+          test -f projects/everything-films/h265.html
           test -f projects/project-ais/matrix.html
           test -f projects/project-ais/hyponychium.html
           test -f projects/project-ais/eponychium.html
+          test -f projects/project-ais/paronychia.html
           test -f trailer-parks/src/app/frost-cloth/page.tsx
           test -f trailer-parks/src/app/low-tunnel/page.tsx
           test -f trailer-parks/src/app/mulch/page.tsx
+          test -f trailer-parks/src/app/landscape-fabric/page.tsx
           test -f projects/mobile-home-parks/src/app/frost-cloth/page.tsx
           test -f projects/mobile-home-parks/src/app/low-tunnel/page.tsx
           test -f projects/mobile-home-parks/src/app/mulch/page.tsx
+          test -f projects/mobile-home-parks/src/app/landscape-fabric/page.tsx
  
