@@ -80,6 +80,7 @@ const navLinks = [
   { href: "/lanai", label: "Lanai Diligence $15" },
   { href: "/cabana", label: "Cabana Diligence $10" },
   { href: "/solarium", label: "Solarium Diligence $5" },
+  { href: "/conservatory", label: "Conservatory Diligence $3" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

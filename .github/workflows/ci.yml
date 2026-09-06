@@ -456,4 +456,9 @@ jobs:
           test -f projects/project-ais/fist.html
           test -f trailer-parks/src/app/solarium/page.tsx
           test -f projects/mobile-home-parks/src/app/solarium/page.tsx
+          test -f projects/meridian-travel/dinghy.html
+          test -f projects/everything-films/locked-cut.html
+          test -f projects/project-ais/hand.html
+          test -f trailer-parks/src/app/conservatory/page.tsx
+          test -f projects/mobile-home-parks/src/app/conservatory/page.tsx
  
