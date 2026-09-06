@@ -156,6 +156,9 @@ export default function HomePage() {
             <a href="/landing-kit" className="transition hover:text-signal">
               Landing kit
             </a>
+            <a href="/funnel-kit" className="transition hover:text-signal">
+              Funnel kit
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

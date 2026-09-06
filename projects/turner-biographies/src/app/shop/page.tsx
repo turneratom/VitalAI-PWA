@@ -239,6 +239,12 @@ export default function ShopPage() {
               Quiz bank · from $4,500
             </Link>
             <Link
+              href="/answer-key"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Answer key · from $3,500
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
