@@ -43,6 +43,9 @@ jobs:
           test -f projects/project-ais/family.html
           test -f projects/turner-capital/diligence.html
           test -f projects/turner-capital/portfolio.html
+          test -f projects/tread-affiliates/app/seo/page.tsx
+          test -f projects/turner-biographies/src/app/podcast/page.tsx
+          test -f projects/turner-capital/hedge.html
           test -f projects/turner-biographies/src/app/estate/page.tsx
           test -f projects/tread-affiliates/app/placement/page.tsx
           test -f trailer-parks/src/app/loi/page.tsx

@@ -80,6 +80,9 @@ export default function LaunchPage() {
             <Link href="/placement" className="transition hover:text-signal">
               Placement
             </Link>
+            <Link href="/seo" className="transition hover:text-signal">
+              SEO
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>

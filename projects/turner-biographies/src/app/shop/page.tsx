@@ -161,6 +161,12 @@ export default function ShopPage() {
               Estate oral history · from $12,000
             </Link>
             <Link
+              href="/podcast"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Podcast rights · from $8,000
+            </Link>
+            <Link
               href="/foreign-rights"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

@@ -77,6 +77,9 @@ export default function PlacementPage() {
             <Link href="/placement" className="transition hover:text-signal">
               Placement
             </Link>
+            <Link href="/seo" className="transition hover:text-signal">
+              SEO
+            </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>

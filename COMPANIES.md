@@ -12,11 +12,11 @@ Chats forget. **This file remembers.**
 | 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` + deployable `trailer-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + underwriting + comps + `/loi` + `/rent-roll` + **`/cap-rate` ($299 · $799)** |
 | 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + weekend + dinner + yacht + villa + **`jet.html` ($12k)** |
 | 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + teaser + stills + documentary + reel + **`drone.html` ($3.2k)** |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + signals + diligence + **`portfolio.html` ($2,500 · $1,500/mo)** |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + `/stage` + translation + **`/estate` ($12k · $28k)** |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + signals + diligence + portfolio + **`hedge.html` ($4,500 · $2,200/mo)** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + `/stage` + translation + estate + **`/podcast` ($8k · $22k)** |
 | 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + enterprise + coach + family + clinic + **`concierge.html` ($499 · $99/mo)** |
 
-Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + `/partners` + `/operator` + **`/placement` ($1,800 · $5,400/qtr)**.
+Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + `/partners` + `/operator` + `/placement` + **`/seo` ($3,500 · $1,200/mo)**.
 
 ## Hands-off contract
 
@@ -26,11 +26,10 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + laun
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `jet.html` — Private Jet Day **$12,000** · one day · up to 6 guests.
-- Everything Films: `drone.html` — Aerial Drone Pack **$3,200** add-on.
-- Project AIS: `concierge.html` — Concierge Onboarding sprint **$499** · desk **$99/mo**.
-- Mobile Home Parks: `/cap-rate` — Cap Rate Brief **$299** · three-park **$799** (synced to `trailer-parks/`).
-- Prior: Capital portfolio; Biographies estate; Affiliates placement; villa/reel/clinic/rent-roll.
+- Turner Capital: `hedge.html` — Hedge Overlay Memo **$4,500** one-shot · **$2,200/mo**.
+- Turner Biographies: `/podcast` — Podcast Rights season **$8,000** · slate **$22,000**.
+- Tread Affiliates: `/seo` — SEO Sprint **$3,500** · monthly desk **$1,200/mo**.
+- Prior: jet/drone/concierge/cap-rate; portfolio/estate/placement; villa/reel/clinic/rent-roll.
 - Deploy: Vercel hobby still rate-limited; GHA CI is the green gate.
 - Memory: in-thread yes; cross-thread via this file.
 

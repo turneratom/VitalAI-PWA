@@ -102,6 +102,12 @@ export default function HomePage() {
             >
               Compare tools that pay
             </a>
+            <a href="/seo" className="transition hover:text-signal">
+              SEO
+            </a>
+            <a href="/placement" className="transition hover:text-signal">
+              Placement
+            </a>
             <a
               href="/comparisons/best-calorie-tracker-apps"
               className="transition hover:text-signal"
