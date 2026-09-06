@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Payout Kit — Tread Affiliates",
+  title: "Affiliate Rebate Kit — Tread Affiliates",
   description:
-    "Affiliate Payout Kit — one-time sprint $175 or monthly Payout kit $90/mo. Payout plan, Payout mix, Payout pairing. Invoice by email.",
+    "Affiliate Rebate Kit — one-time sprint $165 or monthly Rebate kit $85/mo. Rebate plan, Rebate mix, Rebate pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Payout Kit — Tread Affiliates",
-    description: "Sprint $175 · Monthly desk $90/mo. Payout plan, Payout mix, Payout pairing.",
+    title: "Affiliate Rebate Kit — Tread Affiliates",
+    description: "Sprint $165 · Monthly desk $85/mo. Rebate plan, Rebate mix, Rebate pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Payout kit",
-    price: "$175",
-    payout: " one-time",
+    title: "Rebate kit",
+    price: "$165",
+    rebate: " one-time",
     points: [
-      "Payout plan across your primary rails",
+      "Rebate plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Payout kit execution checklist",
+      "30-day Rebate kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Payout kit — $175",
-      "I want an Affiliate Payout kit ($175).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Rebate kit — $165",
+      "I want an Affiliate Rebate kit ($165).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $175",
+    cta: "Request sprint — $165",
   },
   {
     tag: "Desk",
-    title: "Monthly Payout kit",
-    price: "$90",
-    payout: "/mo",
+    title: "Monthly Rebate kit",
+    price: "$85",
+    rebate: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Payout kit and ROAS review",
+      "Monthly Rebate kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Payout kit — $90/mo",
-      "I want a Monthly Payout kit ($90/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Rebate kit — $85/mo",
+      "I want a Monthly Rebate kit ($85/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $90/mo",
+    cta: "Request desk — $85/mo",
   },
 ];
 
-export default function PayoutPage() {
+export default function RebatePage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,9 +86,8 @@ export default function PayoutPage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/payout" className="transition hover:text-signal">Payout kit</Link>
-            <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Payout kit</a>
+            <Link href="/rebate" className="transition hover:text-signal">Rebate kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Rebate kit</a>
           </nav>
         </div>
       </header>
@@ -96,17 +95,17 @@ export default function PayoutPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Payout kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Rebate kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Payout kit packages that convert comparison-rail traffic — not vanity posts.
+            Rebate kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Payout plan, Payout mix, and Payout pairing.
+            One-time sprint or monthly desk: Rebate plan, Rebate mix, and Rebate pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Payout kit packages
+              See Rebate kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -118,7 +117,7 @@ export default function PayoutPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Payout kit.
+          Sprint once, or keep a monthly Rebate kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -127,7 +126,7 @@ export default function PayoutPage() {
               <h3 className="mt-3 font-display text-2xl font-extrabold">{pkg.title}</h3>
               <p className="mt-2 text-3xl font-extrabold text-ink">
                 {pkg.price}
-                <span className="text-base font-semibold text-ink/50">{pkg.payout}</span>
+                <span className="text-base font-semibold text-ink/50">{pkg.rebate}</span>
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-ink/75">
                 {pkg.points.map((point) => (

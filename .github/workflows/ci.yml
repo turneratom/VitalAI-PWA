@@ -324,4 +324,7 @@ jobs:
           test -f projects/everything-films/logo-lock.html
           test -f projects/project-ais/neck.html
           test -f trailer-parks/src/app/dog-park/page.tsx
+          test -f projects/turner-capital/omega.html
+          test -f projects/turner-biographies/src/app/omnibus/page.tsx
+          test -f projects/tread-affiliates/app/rebate/page.tsx
           echo "Offer page presence checks passed."

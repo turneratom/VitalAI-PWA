@@ -365,6 +365,12 @@ export default function ShopPage() {
               Chapbook · from $250
             </Link>
             <Link
+              href="/omnibus"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Omnibus · from $225
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
