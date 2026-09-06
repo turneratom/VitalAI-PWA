@@ -35,6 +35,7 @@ const navLinks = [
   { href: "/utility", label: "Utility Diligence $479" },
   { href: "/traffic", label: "Traffic Diligence $429" },
   { href: "/septic", label: "Septic Diligence $389" },
+  { href: "/wells", label: "Wells Diligence $459" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

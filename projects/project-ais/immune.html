@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Family Plan</title>
-  <meta name="description" content="VitalAI Family Plan — Household $39/mo or Annual household $349. Up to 5 profiles, shared goals, parent overview. Invoice via email until Stripe is live." />
+  <title>VitalAI Immune Protocol</title>
+  <meta name="description" content="VitalAI Immune Protocol — Protocol setup $209 or Immune desk $62/mo. Immune targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Family Plan</p>
+        <p>Immune Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -56,12 +56,8 @@
         <a href="api.html">API</a>
         <a href="enterprise.html">Enterprise</a>
         <a href="coach.html">Coach</a>
-        <a href="family.html">Family</a>
-        <a href="clinic.html">Clinic</a>
         <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
-        <a href="sleep.html">Sleep</a>
-        <a href="recovery.html">Recovery</a>
         <a href="focus.html">Focus</a>
         <a href="stress.html">Stress</a>
         <a href="longevity.html">Longevity</a>
@@ -71,51 +67,51 @@
         <a href="gut.html">Gut</a>
         <a href="hormone.html">Hormone</a>
         <a href="immune.html">Immune</a>
-        <a href="subscribe.html">Subscribe</a>
+        <a href="clinic.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Family Plan</h2>
+    <h2>VitalAI Immune Protocol</h2>
     <p class="lede">
-      Household access for up to five profiles, shared goals, and a parent overview. Stripe when live — until then this form emails an invoice request.
+      Immune markers, recovery rhythm, and a weekly checklist — one setup, or a monthly immune desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Family pricing</h3>
-      <p class="hint">Monthly household or pay the year once. Same feature set either way.</p>
+      <h3 id="plans-title">Immune pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly immune desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Household</span><strong>$39 / mo</strong></div>
-        <div class="plan-row"><span>Annual household</span><strong>$349 / yr</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$209</strong></div>
+        <div class="plan-row"><span>Immune desk</span><strong>$62 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Up to 5 profiles under one household</li>
-        <li>Shared goals across the family</li>
-        <li>Parent overview dashboard</li>
-        <li>Same VitalAI coaching tools as Pro seats</li>
+        <li>Immune markers and schedule for your goals</li>
+        <li>Load / recovery rhythm for your week</li>
+        <li>Immune checklist for the first two weeks</li>
+        <li>Optional monthly immune desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request family invoice</h3>
-      <p class="hint">Tell us monthly vs annual. We reply with checkout or invoice within one business day.</p>
-      <form id="family-form" novalidate>
+      <h3 id="form-title">Request immune invoice</h3>
+      <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="immune-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Household — $39/mo" selected>Household — $39/mo</option>
-              <option value="Annual household — $349/yr">Annual household — $349/yr</option>
+              <option value="Protocol setup — $209" selected>Protocol setup — $209</option>
+              <option value="Immune desk — $62/mo">Immune desk — $62/mo</option>
             </select>
           </label>
           <label>
-            Profiles needed
-            <input type="text" id="profiles" name="profiles" placeholder="e.g. 3 of 5" />
+            Goal focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / cold season / rebuild" />
           </label>
           <label>
-            Household name
-            <input type="text" id="household" name="household" placeholder="e.g. Turner household" />
+            Preferred kickoff
+            <input type="text" id="kickoff" name="kickoff" placeholder="e.g. this week / next open" />
           </label>
           <label>
             Your name
@@ -127,31 +123,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Ages, goals, coach referral" />
+            <input type="text" id="notes" name="notes" placeholder="Exposure, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email family invoice request</button>
-          <a class="btn btn-secondary" href="subscribe.html">Individual subscribe</a>
+          <button class="btn" type="submit">Email immune invoice request</button>
+          <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Family Plan · household + annual ·
+    Immune Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("family-form");
+      var form = document.getElementById("immune-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
-        var profiles = (document.getElementById("profiles").value || "").trim();
-        var household = (document.getElementById("household").value || "").trim();
+        var focus = (document.getElementById("focus").value || "").trim();
+        var kickoff = (document.getElementById("kickoff").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -159,17 +155,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Family Plan — " + plan;
+        var subject = "VitalAI Immune Protocol — " + plan;
         var body =
-          "VitalAI Family Plan invoice request\n\n" +
+          "VitalAI Immune Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Profiles needed: " + (profiles || "—") + "\n" +
-          "Household name: " + (household || "—") + "\n" +
+          "Goal focus: " + (focus || "—") + "\n" +
+          "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Family Plan checkout or invoice.\n" +
-          "Includes: up to 5 profiles, shared goals, parent overview.";
+          "Please send Immune Protocol checkout or invoice.\n" +
+          "Includes: immune map, recovery blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
