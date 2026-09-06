@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desk Pilot Enrollment — Turner Capital</title>
-  <meta name="description" content="Enroll in the Turner Capital Desk Pilot — $2,500/mo. Invoice request with seat details, markets, and start month." />
+  <title>Deal Memo — Turner Capital</title>
+  <meta name="description" content="Commission a Turner Capital deal memo — $5,000 flat. One opportunity, underwritten for your desk. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -21,6 +21,10 @@
       --font-ui: "Syne", system-ui, sans-serif;
       --font-mono: "JetBrains Mono", ui-monospace, monospace;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    /* aliases used by form / footer rules */
+    :root {
+      --gold-bright: #e0b84a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -58,16 +62,14 @@
       padding: 0.55rem 0.95rem;
     }
     .nav-cta:hover { background: rgba(201, 162, 39, 0.12); border-color: var(--gold); }
-
     .hero {
-      position: relative; min-height: 70svh; display: grid; align-items: end;
-      overflow: hidden;
+      position: relative; min-height: 70svh; display: grid; align-items: end; overflow: hidden;
     }
     .hero-stage {
       position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201, 162, 39, 0.16), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 70%, rgba(47, 143, 176, 0.1), transparent 50%),
+        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201, 162, 39, 0.18), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 15% 75%, rgba(47, 143, 176, 0.1), transparent 50%),
         linear-gradient(180deg, #070b10 0%, #0a121c 50%, #05080c 100%);
     }
     .hero-stage::before {
@@ -78,21 +80,11 @@
         linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
       background-size: 48px 48px;
       mask-image: linear-gradient(180deg, rgba(0,0,0,0.5), transparent 75%);
-      opacity: 0.65;
-    }
-    .hero-scan {
-      position: absolute; inset: 0;
-      background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.08) 3px, rgba(0,0,0,0.08) 4px);
-      animation: scanDrift 12s linear infinite; opacity: 0.35; pointer-events: none;
-    }
-    @keyframes scanDrift {
-      from { transform: translateY(0); }
-      to { transform: translateY(4px); }
     }
     .hero-copy {
       position: relative; z-index: 2;
       padding: clamp(5.5rem, 12vh, 8rem) clamp(1rem, 4vw, 3rem) clamp(2.25rem, 5vh, 3.5rem);
-      max-width: 40rem;
+      max-width: 42rem;
       animation: fadeRise 1s var(--ease) both;
     }
     @keyframes fadeRise {
@@ -101,10 +93,9 @@
     }
     .brand-lockup {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 8vw, 5.4rem);
+      font-size: clamp(3rem, 8vw, 5rem);
       line-height: 0.92; letter-spacing: -0.02em;
       color: var(--gold-bright); margin-bottom: 0.85rem;
-      text-shadow: 0 0 60px rgba(201, 162, 39, 0.25);
     }
     .brand-lockup span {
       display: block; color: var(--text); font-size: 0.38em;
@@ -121,17 +112,17 @@
     }
     .hero-lede {
       color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.12rem);
-      line-height: 1.55; font-weight: 500; margin-bottom: 1.5rem; max-width: 32rem;
+      line-height: 1.55; font-weight: 500; margin-bottom: 1.5rem; max-width: 34rem;
     }
     .hero-lede strong { color: var(--text); font-weight: 600; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      font-family: var(--font-ui); font-weight: 700; font-size: 0.78rem;
+      font-weight: 700; font-size: 0.78rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       padding: 0.9rem 1.25rem; border: 1px solid transparent; cursor: pointer;
       transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s;
-      background: transparent; color: var(--text);
+      background: transparent; color: var(--text); font-family: inherit;
     }
     .btn-primary {
       background: linear-gradient(135deg, #a8861f, #d4b03a);
@@ -140,14 +131,12 @@
     .btn-primary:hover { transform: translateY(-1px); }
     .btn-ghost { border-color: var(--line); }
     .btn-ghost:hover { border-color: rgba(201, 162, 39, 0.55); }
-
     .wrap {
       max-width: 1100px; margin: 0 auto;
       padding: 0 clamp(1rem, 4vw, 3rem) 3.5rem;
     }
     .section-hd {
       padding: 2.75rem 0 1.5rem; max-width: 36rem;
-      animation: fadeRise 1s var(--ease) 0.12s both;
     }
     .section-hd h2 {
       font-family: var(--font-display);
@@ -155,11 +144,9 @@
       font-weight: 400; line-height: 1.1; margin-bottom: 0.65rem;
     }
     .section-hd p { color: var(--muted); font-size: 0.98rem; line-height: 1.55; font-weight: 500; }
-
     .includes {
       display: grid; gap: 0; border-top: 1px solid var(--line);
       margin-bottom: 2.5rem;
-      animation: fadeRise 1s var(--ease) 0.2s both;
     }
     .include {
       display: grid; gap: 0.35rem; padding: 1.35rem 0;
@@ -177,22 +164,11 @@
       font-weight: 400; margin-bottom: 0.35rem;
     }
     .include p { color: var(--muted); font-size: 0.92rem; line-height: 1.5; font-weight: 500; max-width: 36rem; }
-
     .enroll {
       background: var(--desk);
       border: 1px solid rgba(201, 162, 39, 0.35);
       padding: clamp(1.5rem, 4vw, 2.25rem);
-      position: relative; overflow: hidden;
-      animation: fadeRise 1s var(--ease) 0.28s both;
     }
-    .enroll::before {
-      content: "";
-      position: absolute; width: 40vmax; height: 40vmax;
-      right: -18vmax; top: -20vmax; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 162, 39, 0.12), transparent 65%);
-      pointer-events: none;
-    }
-    .enroll > * { position: relative; z-index: 1; }
     .enroll h2 {
       font-family: var(--font-display);
       font-size: clamp(1.7rem, 3.5vw, 2.2rem);
@@ -222,11 +198,10 @@
       outline: none; border-color: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
-    select option { color: #0a0e14; }
-    .form-actions {
+    .form-actions, .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
-    .form-hint {
+    .form-hint, .form-hint {
       font-size: 0.78rem; color: var(--muted); font-weight: 500; max-width: 28rem;
     }
     .disclaimer {
@@ -250,71 +225,68 @@
     <a class="nav-mark" href="index.html">Turner Capital</a>
     <div class="nav-links">
       <a class="nav-text" href="pricing.html">Pricing</a>
-      <a class="nav-text" href="memo.html">Deal memo</a>
-      <a class="nav-cta" href="#enroll">Request invoice</a>
+      <a class="nav-text" href="pilot.html">Desk pilot</a>
+      <a class="nav-cta" href="#enroll">Request memo invoice</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-stage" aria-hidden="true">
-      <div class="hero-scan"></div>
-    </div>
+    <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Desk Pilot enrollment</span></h1>
-      <p class="price-chip">$2,500<span>/mo · invoiced</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Deal memo</span></h1>
+      <p class="price-chip">$5,000<span>flat · one opportunity</span></p>
       <p class="hero-lede">
-        Paid seat on the agent floor — crypto and equity desks under your capital and rules.
-        <strong>No card form here.</strong> Submit details; we invoice and open the seat.
+        One thesis. One packet. Agents underwrite a single crypto or equity opportunity for your desk —
+        <strong>no ongoing seat required.</strong>
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Start enrollment</a>
-        <a class="btn btn-ghost" href="pricing.html">All offers</a>
+        <a class="btn btn-primary" href="#enroll">Commission a memo</a>
+        <a class="btn btn-ghost" href="pilot.html">Prefer monthly desk · $2,500</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="section-hd">
-      <h2>What the pilot includes</h2>
-      <p>One monthly invoice. Clear scope. Built for operators who want desk discipline without building an internal team first.</p>
+      <h2>What you receive</h2>
+      <p>A written deal memo you can circulate — not a chat thread, not a newsletter clip.</p>
     </div>
 
     <div class="includes">
       <article class="include">
-        <p class="include-num">01 · Floor</p>
+        <p class="include-num">01 · Scope</p>
         <div>
-          <h3>Twelve-agent desk access</h3>
-          <p>Specialist seats across crypto and equities, running under your mandate and risk envelope.</p>
+          <h3>Single-opportunity brief</h3>
+          <p>Thesis, catalysts, risks, position sizing notes, and kill criteria — scoped to one ticker, protocol, or round.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">02 · Rhythm</p>
+        <p class="include-num">02 · Turn</p>
         <div>
-          <h3>Weekly floor brief</h3>
-          <p>Written desk summary, open risk notes, and next-week focus — sent to your inbox.</p>
+          <h3>Five business days</h3>
+          <p>Clock starts when invoice clears and source materials land. Rush (+$1,500) available on request.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">03 · Ops</p>
+        <p class="include-num">03 · Format</p>
         <div>
-          <h3>Rules + kill switches</h3>
-          <p>You set capital bands and stop conditions. We operate inside them. Simulation-first until you say otherwise.</p>
+          <h3>PDF + editable sheet</h3>
+          <p>Board-ready PDF plus a numbers tab you can drop into your model.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">04 · Term</p>
+        <p class="include-num">04 · Boundary</p>
         <div>
-          <h3>Month-to-month after 30 days</h3>
-          <p>First invoice covers the pilot month. Cancel before renewal with five business days’ notice.</p>
+          <h3>Research product, not advice</h3>
+          <p>Simulation and research desk output. Not a solicitation to invest or place live orders.</p>
         </div>
       </article>
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request Desk Pilot invoice</h2>
-      <p class="enroll-lead">Fill the seat brief. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
-
-      <form id="pilot-form" novalidate>
+      <h2 id="enroll-title">Request memo invoice — $5,000</h2>
+      <p class="enroll-lead">Fill the brief. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
+      <form id="memo-form" novalidate>
         <div class="fields">
           <label>
             Full name
@@ -329,72 +301,65 @@
             <input type="text" id="firm" name="firm" autocomplete="organization" />
           </label>
           <label>
-            Start month
-            <input type="text" id="start" name="start" placeholder="e.g. October 2026" />
-          </label>
-          <label>
-            Primary market
-            <select id="market" name="market">
+            Asset class
+            <select id="asset" name="asset">
+              <option value="Crypto">Crypto</option>
+              <option value="Equities">Equities</option>
               <option value="Crypto + equities">Crypto + equities</option>
-              <option value="Crypto focus">Crypto focus</option>
-              <option value="Equities focus">Equities focus</option>
             </select>
           </label>
-          <label>
-            Capital band (optional)
-            <input type="text" id="capital" name="capital" placeholder="e.g. $250k–$1M simulation" />
+          <label class="full">
+            Opportunity (ticker / protocol / round)
+            <input type="text" id="opportunity" name="opportunity" required placeholder="e.g. SOL thesis / Series B name" />
           </label>
           <label class="full">
-            Notes
-            <textarea id="notes" name="notes" placeholder="Mandate, constraints, or questions"></textarea>
+            Notes / constraints
+            <textarea id="notes" name="notes" placeholder="Time horizon, risk band, materials you will send"></textarea>
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Email invoice request — $2,500/mo</button>
-          <p class="form-hint">Opens mailto with subject and body filled. Stripe wires in when payment secrets exist.</p>
+          <button class="btn btn-primary" type="submit">Email memo invoice — $5,000</button>
+          <p class="form-hint">Opens mailto with subject and body filled. Stripe when secrets exist.</p>
         </div>
       </form>
     </section>
 
     <p class="disclaimer">
-      Simulation only unless separately contracted. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
-      Desk Pilot pricing is for desk access and services — not a solicitation to invest. Past simulated performance is not indicative of future results.
+      Deal memos are research and simulation products. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Desk Pilot</span>
-      <a href="mailto:brad@treadcompanies.com?subject=Desk%20Pilot">brad@treadcompanies.com</a>
+      <span>Turner Capital · Deal memo</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Deal%20Memo">brad@treadcompanies.com</a>
     </footer>
   </main>
 
   <script>
     (function () {
-      var form = document.getElementById("pilot-form");
+      var form = document.getElementById("memo-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var firm = (document.getElementById("firm").value || "").trim();
-        var start = (document.getElementById("start").value || "").trim();
-        var market = document.getElementById("market").value;
-        var capital = (document.getElementById("capital").value || "").trim();
+        var asset = document.getElementById("asset").value;
+        var opportunity = (document.getElementById("opportunity").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
-        if (!name || !email) {
-          document.getElementById(!name ? "name" : "email").focus();
+        if (!name || !email || !opportunity) {
+          document.getElementById(!name ? "name" : !email ? "email" : "opportunity").focus();
           return;
         }
-        var subject = "Turner Capital Desk Pilot invoice — $2,500/mo";
+        var subject = "Turner Capital Deal Memo — $5,000 — " + opportunity;
         var body =
-          "Desk Pilot enrollment / invoice request ($2,500/mo)\n\n" +
+          "Deal memo invoice request ($5,000 flat)\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Firm / desk: " + (firm || "—") + "\n" +
-          "Start month: " + (start || "—") + "\n" +
-          "Primary market: " + market + "\n" +
-          "Capital band: " + (capital || "—") + "\n" +
-          "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send invoice and seat confirmation.";
+          "Firm: " + (firm || "—") + "\n" +
+          "Asset class: " + asset + "\n" +
+          "Opportunity: " + opportunity + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send invoice for one deal memo.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

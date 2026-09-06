@@ -57,6 +57,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               >
                 Begin reading
               </Link>
+              <Link className="transition hover:text-bone" href="/speaking">
+                Speaking
+              </Link>
+              <Link className="transition hover:text-bone" href="/commission">
+                Commission
+              </Link>
               <Link
                 className="rounded-sm bg-seal px-3 py-1.5 text-bone transition hover:bg-seal-deep"
                 href="/shop"

@@ -131,8 +131,14 @@ export default function ShopPage() {
               Speaking · from $15,000
             </Link>
             <Link
-              href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
+              href="/commission"
               className="bg-ink px-4 py-2.5 text-bone transition hover:bg-seal"
+            >
+              Commission · from $45,000
+            </Link>
+            <Link
+              href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
               Read sample chapter
             </Link>

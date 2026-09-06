@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Advertise on Tread Affiliates",
+  title: "Newsletter Sponsor — Tread Affiliates",
   description:
-    "Buy sponsored placements on Tread Affiliates comparison rails — AI health, calorie trackers, fitness wearables, sleep trackers. Featured $1,500/mo · Rail sponsor $4,000/mo.",
+    "Sponsor the Tread Affiliates weekly — $750 per issue or $2,400 for a 4-issue flight. Invoice by email.",
   openGraph: {
-    title: "Advertise on Tread Affiliates",
+    title: "Newsletter Sponsor — Tread Affiliates",
     description:
-      "Sponsored placements on high-intent comparison rails. Featured listing or full rail sponsorship.",
+      "Single-issue $750 · 4-issue flight $2,400. High-intent health & fitness affiliate audience.",
     type: "website",
   },
 };
@@ -18,40 +18,40 @@ const MAIL = (subject: string, body: string) =>
 
 const packages = [
   {
-    tag: "Featured slot",
-    title: "Featured listing",
-    price: "$1,500",
-    cadence: "/mo",
+    tag: "Single issue",
+    title: "One newsletter slot",
+    price: "$750",
+    cadence: "/issue",
     points: [
-      "Top placement on one comparison rail",
-      "Sponsored badge on the card",
-      "Monthly performance snapshot",
+      "Primary sponsor block in one weekly send",
+      "Your offer + CTA above the fold",
+      "Issue performance snapshot",
     ],
     href: MAIL(
-      "Tread Affiliates Featured listing — $1,500/mo",
-      "I want a Featured listing on Tread Affiliates ($1,500/mo).\n\nProduct / brand:\nPreferred rail (AI health / calorie / wearables / sleep):\nURL:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Newsletter sponsor — $750/issue",
+      "I want a newsletter sponsor slot ($750/issue).\n\nBrand / offer:\nPreferred send week:\nURL:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request Featured — $1,500/mo",
+    cta: "Request issue — $750",
   },
   {
-    tag: "Rail sponsor",
-    title: "Own a rail",
-    price: "$4,000",
-    cadence: "/mo",
+    tag: "Flight",
+    title: "Four-issue flight",
+    price: "$2,400",
+    cadence: "/4 issues",
     points: [
-      "Category sponsor across one full rail",
-      "Hero mention + mid-rail module",
-      "Priority for new comparison updates",
+      "Four consecutive or paced issues",
+      "Save $600 vs four singles",
+      "Priority creative review each send",
     ],
     href: MAIL(
-      "Tread Affiliates Rail sponsor — $4,000/mo",
-      "I want to sponsor a Tread Affiliates rail ($4,000/mo).\n\nProduct / brand:\nRail (AI health / calorie / wearables / sleep):\nURL:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Newsletter flight — $2,400",
+      "I want a 4-issue newsletter flight ($2,400).\n\nBrand / offer:\nStart week preference:\nURL:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request rail sponsor — $4,000/mo",
+    cta: "Request flight — $2,400",
   },
 ];
 
-export default function AdvertisePage() {
+export default function SponsorPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -63,32 +63,31 @@ export default function AdvertisePage() {
             <Link href="/comparisons" className="transition hover:text-signal">
               Rails
             </Link>
-            <Link href="/sponsor" className="transition hover:text-signal">
-              Newsletter
+            <Link href="/advertise" className="transition hover:text-signal">
+              Advertise
             </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
-              Buy placement
+              Sponsor
             </a>
           </nav>
         </div>
       </header>
 
       <section className="relative overflow-hidden bg-ink text-white">
-        <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-cone/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-cone/20 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">
-            Tread Affiliates · Paid media
+            Tread Affiliates · Newsletter
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Advertise on the rails that convert.
+            Sponsor the weekly that already converts.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/80">
-            Sponsored placements on AI health, calorie, wearables, and sleep comparison pages —
-            month-to-month, invoiced, no network credentials required from you.
+            One primary slot per issue — health, fitness, and AI coaching readers who click comparison rails.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
@@ -98,10 +97,10 @@ export default function AdvertisePage() {
               See packages
             </a>
             <Link
-              href="/comparisons"
+              href="/advertise"
               className="rounded-sm border border-white/30 px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white"
             >
-              View rails
+              Prefer rail ads
             </Link>
           </div>
         </div>
@@ -109,13 +108,13 @@ export default function AdvertisePage() {
 
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cone">
-          Sponsorship packages
+          Sponsor packages
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Two ways to buy attention.
+          Issue or flight.
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Email to request invoice. We confirm rail, creative, and start date within one business day.
+          Email for invoice. We confirm creative and send date within one business day.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -146,24 +145,6 @@ export default function AdvertisePage() {
               </a>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="border-t border-line bg-paper-deep">
-        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8">
-          <h2 className="font-display text-2xl font-extrabold md:text-3xl">Ready to place?</h2>
-          <p className="mt-3 max-w-xl text-muted">
-            Same inbox as the rails. Tell us brand, rail, and budget band.
-          </p>
-          <a
-            href={MAIL(
-              "Tread Affiliates advertising inquiry",
-              "I want to advertise on Tread Affiliates.\n\nBrand:\nRail interest:\nBudget band:\nName:\nEmail:\n"
-            )}
-            className="mt-8 inline-flex bg-cone px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-ink"
-          >
-            Email advertising desk
-          </a>
         </div>
       </section>
     </div>

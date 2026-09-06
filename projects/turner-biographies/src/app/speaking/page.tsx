@@ -71,6 +71,12 @@ export default function SpeakingPage() {
             >
               Shop Firebrand
             </Link>
+            <Link
+              href="/commission"
+              className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+            >
+              Commission a life
+            </Link>
           </div>
         </div>
       </section>
