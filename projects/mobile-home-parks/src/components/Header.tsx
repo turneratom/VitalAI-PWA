@@ -73,6 +73,7 @@ const navLinks = [
   { href: "/deck", label: "Deck Diligence $79" },
   { href: "/porch", label: "Porch Diligence $69" },
   { href: "/stoop", label: "Stoop Diligence $59" },
+  { href: "/veranda", label: "Veranda Diligence $49" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

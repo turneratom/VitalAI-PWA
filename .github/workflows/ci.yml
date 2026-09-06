@@ -399,4 +399,9 @@ jobs:
           test -f projects/project-ais/foot.html
           test -f trailer-parks/src/app/stoop/page.tsx
           test -f projects/mobile-home-parks/src/app/stoop/page.tsx
+          test -f projects/meridian-travel/snorkeling.html
+          test -f projects/everything-films/previs.html
+          test -f projects/project-ais/toe.html
+          test -f trailer-parks/src/app/veranda/page.tsx
+          test -f projects/mobile-home-parks/src/app/veranda/page.tsx
           echo "Offer page presence checks passed."
