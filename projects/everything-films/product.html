@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Teaser — Everything Films</title>
-  <meta name="description" content="Everything Films Social Teaser Cut — $1,800 add-on for 60–90 sec vertical and square cuts for ads and social. Invoice via email." />
+  <title>Product Film Day — Everything Films</title>
+  <meta name="description" content="Everything Films Product Film Day — $7,200 add-on: hero cut + stills pass, look LUT, web + delivery masters. Invoice via email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..97,200;6..96,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #142028;
@@ -53,7 +53,7 @@
     }
     .hero-media { position: absolute; inset: 0; }
     .hero-media img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
+      width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
       transform: scale(1.04); animation: drift 22s var(--ease) infinite alternate;
     }
     @keyframes drift {
@@ -81,22 +81,18 @@
     }
     .hero-line {
       font-family: "Bodoni Moda", Georgia, serif;
-      font-size: clamp(1.25rem, 3vw, 1.7rem); margin-bottom: 0.75rem;
+      font-size: clamp(1.35rem, 3vw, 1.85rem); margin-bottom: 0.5rem;
     }
     .hero-price {
       font-family: "Bodoni Moda", Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem); color: var(--gold); margin-bottom: 0.85rem;
+      font-size: 1.45rem; color: var(--gold); margin-bottom: 0.85rem;
     }
-    .hero-sub {
-      font-weight: 300; color: rgba(255,255,255,0.78); max-width: 30rem; margin-bottom: 1.75rem;
-    }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .hero-sub { font-weight: 300; color: rgba(255,255,255,0.78); max-width: 32rem; margin-bottom: 1.75rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
-      text-transform: uppercase; font-weight: 500; border: none;
-      transition: transform 0.35s var(--ease), background 0.35s var(--ease);
-      font-family: inherit; cursor: pointer;
+      padding: 0.9rem 1.35rem; font-size: 0.78rem; letter-spacing: 0.1em;
+      text-transform: uppercase; font-weight: 600; transition: transform 0.2s var(--ease), background 0.2s var(--ease);
     }
     .btn-primary { background: #fff; color: var(--ink); }
     .btn-primary:hover { transform: translateY(-2px); background: var(--mist); }
@@ -119,20 +115,20 @@
       letter-spacing: -0.02em; max-width: 22ch; margin-bottom: 1rem;
     }
     .section-lead { font-weight: 300; color: var(--ink-soft); max-width: 36rem; }
-    .teaser { background: var(--ink); color: #fff; }
-    .teaser .section-kicker { color: var(--gold); }
-    .teaser .section-lead { color: rgba(255,255,255,0.7); }
-    .teaser-panel {
+    .doc { background: var(--ink); color: #fff; }
+    .doc .section-kicker { color: var(--gold); }
+    .doc .section-lead { color: rgba(255,255,255,0.7); }
+    .doc-panel {
       margin-top: 2.5rem; max-width: 36rem;
       border: 1px solid rgba(255,255,255,0.14);
       padding: 2.2rem 2rem 2rem;
       background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 60%);
     }
-    .teaser-panel .amount {
+    .doc-panel .amount {
       font-family: "Bodoni Moda", Georgia, serif;
       font-size: clamp(2.4rem, 5vw, 3.2rem); margin-bottom: 0.75rem;
     }
-    .teaser-panel p { font-weight: 300; color: rgba(255,255,255,0.72); margin-bottom: 1.5rem; }
+    .doc-panel p { font-weight: 300; color: rgba(255,255,255,0.72); margin-bottom: 1.5rem; }
     .how { background: var(--mist); }
     .steps { margin-top: 2.75rem; display: grid; gap: 2rem; }
     @media (min-width: 760px) {
@@ -165,28 +161,24 @@
       <a href="index.html#packages">Wedding &amp; life</a>
       <a href="deposit.html">Deposit</a>
       <a href="rush.html">Rush</a>
-      <a href="stills.html">Stills</a>
-      <a href="documentary.html">Documentary</a>
-      <a href="reel.html">Reel</a>
-      <a href="drone.html">Drone</a>
-      <a href="color.html">Color</a>
-      <a href="same-day.html">Same-day</a>
-      <a href="music-video.html">Music video</a>
-      <a href="brand-spot.html">Brand spot</a>
+      <a href="teaser.html">Teaser</a>
+      <a href="brand-spot.html">Stills</a>
+      <a href="brand-spot.html">Drone</a>
+      <a href="product.html">Product film</a>
       <a href="event.html">Event</a>
       <a href="product.html">Product</a>
       <a href="corporate.html">Corporate</a>
       <a href="legacy.html">Legacy</a>
-      <a class="nav-cta" href="#teaser">Social teaser</a>
+      <a class="nav-cta" href="#product">Product film</a>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-label="Social teaser hero">
+    <section class="hero" aria-label="Product Film Day hero">
       <div class="hero-media">
         <img
-          src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=2400&q=80"
-          alt="Film editing bay with timeline on screen"
+          src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=2400&q=80"
+          alt="Product film grading suite with film monitors"
           width="2400"
           height="1600"
         />
@@ -194,69 +186,69 @@
       <div class="hero-veil" aria-hidden="true"></div>
       <div class="hero-copy">
         <h1 class="hero-brand">Everything Films</h1>
-        <p class="hero-line">Social Teaser Cut.</p>
-        <p class="hero-price">$1,800 add-on</p>
-        <p class="hero-sub">Sixty to ninety seconds — vertical and square cuts shaped for ads and social. Applied as an add-on on your package invoice.</p>
+        <p class="hero-line">Product Film Day.</p>
+        <p class="hero-price">$7,200 add-on · hero cut + stills</p>
+        <p class="hero-sub">A hero cut + stills pass, a reusable look LUT, and web + delivery masters — an add-on for any package.</p>
         <div class="cta-row">
           <a
             class="btn btn-primary"
-            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Social%20Teaser%20%E2%80%94%20%241%2C800&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20add%20Social%20Teaser%20Cut%20(%241%2C800)%20for%2060%E2%80%9390%20sec%20vertical%20%2B%20square%20cuts.%0A%0APackage%20(wedding%20%2F%20life%20%2F%20corporate)%3A%0AEvent%20date%3A%0ALocation%3A%0APlatforms%20(ads%20%2F%20social)%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20social%20teaser%20add-on%20invoice.%0A%0AThanks."
-          >Request teaser invoice</a>
-          <a class="btn btn-ghost" href="index.html#packages">See packages</a>
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Product%20Film%20Day%20%E2%80%94%20%247%2C200&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20Product%20Film%20Day%20(%247%2C200).%0A%0AProject%20%2F%20product%3A%0APreferred%20look%20direction%3A%0ADelivery%20deadline%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20product%20film%20invoice.%0A%0AThanks."
+          >Request product invoice</a>
+          <a class="btn btn-ghost" href="brand-spot.html">Brand spot</a>
         </div>
       </div>
     </section>
 
-    <section class="teaser" id="teaser" aria-labelledby="teaser-title">
-      <p class="section-kicker">Social add-on</p>
-      <h2 class="section-title" id="teaser-title">$1,800. Vertical and square, ready for ads.</h2>
-      <p class="section-lead">Add a Social Teaser Cut to any Everything Films package. The fee sits on the same invoice — same inbox, cuts shaped for the feeds you need.</p>
-      <div class="teaser-panel">
-        <p class="amount">$1,800</p>
-        <p>60–90 second vertical and square cuts for ads and social, cut from your package footage and delivered as an add-on line.</p>
+    <section class="doc" id="color" aria-labelledby="doc-title">
+      <p class="section-kicker">Product film package</p>
+      <h2 class="section-title" id="doc-title">$7,200. One product film. Shot and finished.</h2>
+      <p class="section-lead">Built for products that need a finished spot — not a phone-video dump. Same brad@treadcompanies.com inbox as packages and deposits.</p>
+      <div class="doc-panel">
+        <p class="amount">$7,200</p>
+        <p>Product hero cut, detail stills set, music bed, and web master — delivered in one package.</p>
         <a
           class="btn btn-gold"
-          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Social%20Teaser%20%E2%80%94%20%241%2C800&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20add%20Social%20Teaser%20Cut%20(%241%2C800)%20for%2060%E2%80%9390%20sec%20vertical%20%2B%20square%20cuts.%0A%0APackage%20(wedding%20%2F%20life%20%2F%20corporate)%3A%0AEvent%20date%3A%0ALocation%3A%0APlatforms%20(ads%20%2F%20social)%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20social%20teaser%20add-on%20invoice.%0A%0AThanks."
-        >Email teaser invoice — $1,800</a>
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Product%20Film%20Day%20%E2%80%94%20%247%2C200&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20Product%20Film%20Day%20(%247%2C200).%0A%0AProject%20%2F%20product%3A%0APreferred%20look%20direction%3A%0ADelivery%20deadline%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20product%20film%20invoice.%0A%0AThanks."
+        >Email product invoice — $7,200</a>
       </div>
     </section>
 
     <section class="how" aria-labelledby="how-title">
       <p class="section-kicker">How it works</p>
-      <h2 class="section-title" id="how-title">Book the package. Add the teaser.</h2>
-      <p class="section-lead">Same brad@treadcompanies.com inbox as deposits and packages. Subject line carries the social teaser add-on so we can invoice correctly.</p>
+      <h2 class="section-title" id="how-title">Lock the SKU story. Invoice the film.</h2>
+      <p class="section-lead">Subject line carries Product Film Day so we can invoice and schedule correctly.</p>
       <div class="steps">
         <article class="step">
-          <h3>Choose a package</h3>
-          <p>Wedding, life, or corporate — the teaser works as an add-on on any of them.</p>
+          <h3>SKU brief</h3>
+          <p>We pull stills and references so the look is agreed before the hero cut + stills.</p>
         </article>
         <article class="step">
-          <h3>Invoice the add-on</h3>
-          <p>Email for the $1,800 Social Teaser line. We confirm aspect ratios and platforms.</p>
+          <h3>Shoot day</h3>
+          <p>One shoot day with director and camera — hero product, detail, and lifestyle coverage.</p>
         </article>
         <article class="step">
-          <h3>Cuts land for the feed</h3>
-          <p>60–90 second vertical and square versions, ready for ads and social.</p>
+          <h3>Finish lands</h3>
+          <p>Finished product film ready for PDP, ads, or retail screens.</p>
         </article>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <p class="section-kicker">Begin</p>
-      <h2 class="section-title" id="cta-title">Need the short cut for social.</h2>
-      <p class="section-lead">Social teaser add-on on any package. Same brad@treadcompanies.com inbox.</p>
+      <h2 class="section-title" id="cta-title">Need the product film shot and finished, not a weekend hobby cut.</h2>
+      <p class="section-lead">Product Film Day at $7,200. Same brad@treadcompanies.com inbox.</p>
       <div class="cta-row">
         <a
           class="btn btn-teal"
-          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Social%20Teaser%20%E2%80%94%20%241%2C800"
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Product%20Film%20Day%20%E2%80%94%20%247%2C200&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20Product%20Film%20Day%20(%247%2C200).%0A%0AProject%20%2F%20product%3A%0APreferred%20look%20direction%3A%0ADelivery%20deadline%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20product%20film%20invoice.%0A%0AThanks."
         >Email Everything Films</a>
-        <a class="btn btn-ghost" href="deposit.html">Production deposit</a>
+        <a class="btn btn-ghost" href="brand-spot.html">Brand spot</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>Everything Films</strong> · Social Teaser</p>
+    <p><strong>Everything Films</strong> · Product Film Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 </body>

@@ -88,8 +88,11 @@ export default function EpaPage() {
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
+            <Link href="/zoning" className="underline-offset-4 hover:text-white hover:underline">
+              Zoning
+            </Link>
             <Link href="/survey" className="underline-offset-4 hover:text-white hover:underline">
-              Cap Rate
+              Survey
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll

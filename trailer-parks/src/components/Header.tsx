@@ -29,6 +29,7 @@ const navLinks = [
   { href: "/insurance", label: "Insurance $499" },
   { href: "/survey", label: "Site Survey $599" },
   { href: "/epa", label: "EPA Diligence $449" },
+  { href: "/zoning", label: "Zoning Diligence $549" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
