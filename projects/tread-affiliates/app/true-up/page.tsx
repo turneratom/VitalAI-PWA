@@ -110,6 +110,7 @@ export default function TrueUpPage() {
             <Link href="/rtp" className="transition hover:text-signal">RTP</Link>
             <Link href="/fednow" className="transition hover:text-signal">FedNow</Link>
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH</Link>
+            <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">True-up kit</a>
           </nav>
         </div>

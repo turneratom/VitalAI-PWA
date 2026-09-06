@@ -297,6 +297,9 @@ export default function HomePage() {
             <a href="/same-day-ach" className="transition hover:text-signal">
               Same-Day ACH
             </a>
+            <a href="/instant-pay" className="transition hover:text-signal">
+              Instant-Pay
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

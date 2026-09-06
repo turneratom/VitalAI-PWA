@@ -430,6 +430,9 @@ jobs:
           test -f projects/turner-capital/centile.html
           test -f projects/turner-biographies/src/app/billet/page.tsx
           test -f projects/tread-affiliates/app/same-day-ach/page.tsx
+          test -f projects/turner-capital/rank.html
+          test -f projects/turner-biographies/src/app/card/page.tsx
+          test -f projects/tread-affiliates/app/instant-pay/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html
