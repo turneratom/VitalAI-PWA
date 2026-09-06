@@ -110,4 +110,8 @@ jobs:
           test -f projects/turner-capital/equity.html
           test -f projects/turner-biographies/src/app/annotated/page.tsx
           test -f projects/tread-affiliates/app/bundling/page.tsx
+          test -f projects/meridian-travel/opera.html
+          test -f projects/everything-films/wedding.html
+          test -f projects/project-ais/hydration.html
+          test -f trailer-parks/src/app/utility/page.tsx
           echo "Offer page presence checks passed."

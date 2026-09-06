@@ -89,6 +89,7 @@ export default function FloodPage() {
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
             <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">EPA</Link>
+            <Link href="/utility" className="underline-offset-4 hover:text-white hover:underline">Utility</Link>
             <Link href="/title" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>

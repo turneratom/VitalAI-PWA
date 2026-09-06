@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Mobility Protocol</title>
-  <meta name="description" content="VitalAI Mobility Protocol — Protocol setup $189 or Mobility desk $55/mo. Joint targets, movement rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Hydration Protocol</title>
+  <meta name="description" content="VitalAI Hydration Protocol — Protocol setup $169 or Hydration desk $45/mo. Fluid targets, intake rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Mobility Protocol</p>
+        <p>Hydration Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -70,41 +70,41 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Mobility Protocol</h2>
+    <h2>VitalAI Hydration Protocol</h2>
     <p class="lede">
-      Mobility markers, movement rhythm, and a weekly checklist — one setup, or a monthly mobility desk. Stripe when live — until then this form emails an invoice request.
+      Hydration markers, intake rhythm, and a weekly checklist — one setup, or a monthly hydration desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Mobility pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly mobility desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Hydration pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly hydration desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$189</strong></div>
-        <div class="plan-row"><span>Mobility desk</span><strong>$55 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$169</strong></div>
+        <div class="plan-row"><span>Hydration desk</span><strong>$45 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Mobility markers and schedule for your goals</li>
-        <li>Movement / load rhythm for your week</li>
-        <li>Mobility checklist for the first two weeks</li>
-        <li>Optional monthly mobility desk</li>
+        <li>Hydration markers and schedule for your goals</li>
+        <li>Fluid / intake rhythm for your week</li>
+        <li>Hydration checklist for the first two weeks</li>
+        <li>Optional monthly hydration desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request mobility invoice</h3>
+      <h3 id="form-title">Request hydration invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="mobility-form" novalidate>
+      <form id="hydration-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $189" selected>Protocol setup — $189</option>
-              <option value="Mobility desk — $55/mo">Mobility desk — $55/mo</option>
+              <option value="Protocol setup — $169" selected>Protocol setup — $169</option>
+              <option value="Hydration desk — $45/mo">Hydration desk — $45/mo</option>
             </select>
           </label>
           <label>
             Goal focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. desk stiffness / travel / training block" />
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / heat / training" />
           </label>
           <label>
             Preferred kickoff
@@ -120,11 +120,11 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Joints, travel, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Climate, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email mobility invoice request</button>
+          <button class="btn" type="submit">Email hydration invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -132,13 +132,13 @@
   </main>
 
   <footer class="site-footer">
-    Mobility Protocol · setup / desk ·
+    Hydration Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("mobility-form");
+      var form = document.getElementById("hydration-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -152,17 +152,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Mobility Protocol — " + plan;
+        var subject = "VitalAI Hydration Protocol — " + plan;
         var body =
-          "VitalAI Mobility Protocol invoice request\n\n" +
+          "VitalAI Hydration Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Mobility Protocol checkout or invoice.\n" +
-          "Includes: joint map, movement blocks, weekly checklist.";
+          "Please send Hydration Protocol checkout or invoice.\n" +
+          "Includes: fluid map, intake blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
