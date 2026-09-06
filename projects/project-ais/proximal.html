@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Matrix Protocol</title>
-  <meta name="description" content="VitalAI Matrix Protocol — Protocol setup $1 or Matrix desk $1/mo. Matrix targets, daily matrix rhythm, weekly matrix map. Invoice via email until Stripe is live." />
+  <title>VitalAI Proximal Protocol</title>
+  <meta name="description" content="VitalAI Proximal Protocol — Protocol setup $1 or Proximal desk $1/mo. Proximal targets, daily proximal rhythm, weekly proximal map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Matrix Protocol</p>
+        <p>Proximal Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -98,36 +98,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Matrix Protocol</h2>
+    <h2>VitalAI Proximal Protocol</h2>
     <p class="lede">
-      Matrix markers, matrix targets, and a weekly checklist — one setup, or a monthly matrix desk. Stripe when live — until then this form emails an invoice request.
+      Proximal markers, proximal targets, and a weekly checklist — one setup, or a monthly proximal desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Matrix pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly matrix desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Proximal pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly proximal desk for ongoing adjustments.</p>
       <div class="plan-grid">
         <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
-        <div class="plan-row"><span>Matrix desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Proximal desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Matrix markers and schedule for your goals</li>
-        <li>Load / daily matrix rhythm for your week</li>
-        <li>Matrix checklist for the first two weeks</li>
-        <li>Optional monthly matrix desk</li>
+        <li>Proximal markers and schedule for your goals</li>
+        <li>Load / daily proximal rhythm for your week</li>
+        <li>Proximal checklist for the first two weeks</li>
+        <li>Optional monthly proximal desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request matrix invoice</h3>
+      <h3 id="form-title">Request proximal invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="matrix-form" novalidate>
+      <form id="proximal-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
               <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
-              <option value="Matrix desk — $1/mo">Matrix desk — $1/mo</option>
+              <option value="Proximal desk — $1/mo">Proximal desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -152,7 +152,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email matrix invoice request</button>
+          <button class="btn" type="submit">Email proximal invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -160,13 +160,13 @@
   </main>
 
   <footer class="site-footer">
-    Matrix Protocol · setup / desk ·
+    Proximal Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("matrix-form");
+      var form = document.getElementById("proximal-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -180,17 +180,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Matrix Protocol — " + plan;
+        var subject = "VitalAI Proximal Protocol — " + plan;
         var body =
-          "VitalAI Matrix Protocol invoice request\n\n" +
+          "VitalAI Proximal Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Matrix Protocol checkout or invoice.\n" +
-          "Includes: matrix map, matrix blocks, weekly checklist.";
+          "Please send Proximal Protocol checkout or invoice.\n" +
+          "Includes: proximal map, proximal blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
