@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalAI Pricing — Pro & Elite</title>
+  <meta name="description" content="VitalAI Pro $9.99/mo and Elite $29.99/mo. Unlimited AI health coaching, photo analysis, and premium features.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tools/tools.css">
+  <style>
+    .price-hero {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      padding: 2rem 1rem 0.5rem;
+    }
+    .price-hero h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin: 0 0 0.5rem;
+    }
+    .price-hero p { color: #444; max-width: 36rem; }
+    .fallback-note {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: #f4f7f8;
+      border-left: 3px solid #1a6b7a;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Pricing</p>
+      </div>
+      <nav class="nav-links">
+        <a href="subscribe.html">Subscribe</a>
+        <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
+        <a href="api.html">API</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="coach.html">Coach</a>
+        <a href="family.html">Family</a>
+        <a href="clinic.html">Clinic</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="sleep.html">Sleep</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="immune.html">Immune</a>
+        <a href="tools/index.html">Free Tools</a>
+        <a href="index.html">App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="price-hero">
+      <h2>Pay for unlimited coaching. Keep the free tools forever.</h2>
+      <p>Stripe checkout when live. If checkout isn’t configured yet, one tap emails a subscribe request so revenue never stalls.</p>
+      <p style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.65rem;">
+        <a class="btn" href="subscribe.html">Open subscribe form</a>
+        <a class="btn btn-secondary" href="teams.html">Teams from $49/seat</a>
+        <a class="btn btn-secondary" href="whitelabel.html">White-label $499/mo</a>
+        <a class="btn btn-secondary" href="api.html">API from $99/mo</a>
+        <a class="btn btn-secondary" href="enterprise.html">Enterprise $2,499/mo</a>
+      </p>
+    </div>
+
+    <section class="card">
+      <h2>Choose Your Plan</h2>
+      <div class="tool-grid">
+        <article class="tool-card">
+          <h3>Free</h3>
+          <p><strong>$0</strong>/month</p>
+          <ul>
+            <li>5 photo snaps per day</li>
+            <li>Basic AI responses</li>
+            <li>All free calculators</li>
+          </ul>
+          <a class="btn btn-secondary" href="index.html">Start free</a>
+        </article>
+        <article class="tool-card" style="border:2px solid var(--primary);">
+          <h3>Pro</h3>
+          <p><strong>$9.99</strong>/month · or <strong>$99</strong>/year</p>
+          <ul>
+            <li>Unlimited photo analysis</li>
+            <li>Enhanced AI coaching</li>
+            <li>Chat history (rolling out)</li>
+            <li>Annual saves ~2 months</li>
+          </ul>
+          <button class="btn" id="buy-pro" type="button">Pro monthly — $9.99</button>
+          <button class="btn btn-secondary" id="buy-pro-annual" type="button" style="margin-top:0.5rem;width:100%;">Pro annual — $99</button>
+          <p style="margin:0.75rem 0 0;font-size:0.85rem;">
+            <a id="mailto-pro" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20%249.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Pro%20(%249.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Email Pro monthly</a>
+            ·
+            <a id="mailto-pro-annual" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Pro%20annual%20%2499%20subscribe&body=I%20want%20VitalAI%20Pro%20annual%20(%2499%2Fyr).%0A%0AEmail%20for%20receipt%3A%0A">Email Pro annual</a>
+          </p>
+        </article>
+        <article class="tool-card">
+          <h3>Elite</h3>
+          <p><strong>$29.99</strong>/month · or <strong>$299</strong>/year</p>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Priority AI models</li>
+            <li>Advanced health insights</li>
+            <li>Annual saves ~2 months</li>
+          </ul>
+          <button class="btn" id="buy-elite" type="button">Elite monthly — $29.99</button>
+          <button class="btn btn-secondary" id="buy-elite-annual" type="button" style="margin-top:0.5rem;width:100%;">Elite annual — $299</button>
+          <p style="margin:0.75rem 0 0;font-size:0.85rem;">
+            <a id="mailto-elite" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20%2429.99%2Fmo%20subscribe&body=I%20want%20VitalAI%20Elite%20(%2429.99%2Fmo).%0A%0AEmail%20for%20receipt%3A%0A">Email Elite monthly</a>
+            ·
+            <a id="mailto-elite-annual" href="mailto:brad@treadcompanies.com?subject=VitalAI%20Elite%20annual%20%24299%20subscribe&body=I%20want%20VitalAI%20Elite%20annual%20(%24299%2Fyr).%0A%0AEmail%20for%20receipt%3A%0A">Email Elite annual</a>
+          </p>
+        </article>
+      </div>
+      <p id="setup-notice" class="fallback-note" hidden>
+        Stripe isn’t connected in this environment yet — your mail client opened a subscribe request to brad@treadcompanies.com so the sale still lands.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Cancel anytime. Checkout via Stripe when configured; mailto backup always on.</footer>
+
+  <script>
+    async function checkout(tier) {
+      const mailto = document.getElementById('mailto-' + tier.replace('_', '-')) ||
+        document.getElementById('mailto-' + tier);
+      const mailtoMap = {
+        pro: 'mailto-pro',
+        elite: 'mailto-elite',
+        pro_annual: 'mailto-pro-annual',
+        elite_annual: 'mailto-elite-annual'
+      };
+      const mailtoEl = document.getElementById(mailtoMap[tier] || 'mailto-pro');
+      try {
+        const res = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tier })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (data.url) {
+          window.location.href = data.url;
+          return;
+        }
+      } catch (_) { /* fall through */ }
+      document.getElementById('setup-notice').hidden = false;
+      if (mailtoEl) window.location.href = mailtoEl.href;
+    }
+    document.getElementById('buy-pro').onclick = () => checkout('pro');
+    document.getElementById('buy-elite').onclick = () => checkout('elite');
+    document.getElementById('buy-pro-annual').onclick = () => checkout('pro_annual');
+    document.getElementById('buy-elite-annual').onclick = () => checkout('elite_annual');
+  </script>
+</body>
+</html>

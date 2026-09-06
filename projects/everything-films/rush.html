@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rush Delivery — Everything Films</title>
+  <meta name="description" content="Everything Films Rush Delivery — +$3,500 add-on on any package for a 10-business-day first cut. Invoice via email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #142028;
+      --ink-soft: #3a4a54;
+      --mist: #f2f6f8;
+      --paper: #fafbfc;
+      --teal: #1f5c5c;
+      --teal-deep: #154646;
+      --gold: #b08d57;
+      --line: rgba(20, 32, 40, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Outfit", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 6vw; color: #fff;
+    }
+    .nav-brand {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.3rem; letter-spacing: 0.04em; font-weight: 500;
+    }
+    .nav-links { display: flex; gap: 1.1rem; flex-wrap: wrap; align-items: center; }
+    .nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.75); font-weight: 500;
+    }
+    .nav-cta {
+      border-bottom: 1px solid rgba(255,255,255,0.45); padding-bottom: 0.15rem; color: #fff !important;
+    }
+    .hero {
+      position: relative; min-height: 88svh; display: grid; align-items: end;
+      color: #fff; overflow: hidden;
+    }
+    .hero-media { position: absolute; inset: 0; }
+    .hero-media img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
+      transform: scale(1.04); animation: drift 22s var(--ease) infinite alternate;
+    }
+    @keyframes drift {
+      from { transform: scale(1.04); }
+      to { transform: scale(1.1) translate3d(-1%, -0.5%, 0); }
+    }
+    .hero-veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(20,32,40,0.4) 0%, rgba(20,32,40,0.2) 40%, rgba(20,32,40,0.9) 100%),
+        radial-gradient(ellipse at 30% 20%, rgba(176,141,87,0.2), transparent 50%);
+    }
+    .hero-copy {
+      position: relative; z-index: 2; padding: 0 6vw 10vh; max-width: 40rem;
+      animation: rise 1s var(--ease) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero-brand {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95;
+      font-weight: 500; margin-bottom: 0.75rem;
+    }
+    .hero-line {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(1.25rem, 3vw, 1.7rem); margin-bottom: 0.75rem;
+    }
+    .hero-price {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); color: var(--gold); margin-bottom: 0.85rem;
+    }
+    .hero-sub {
+      font-weight: 300; color: rgba(255,255,255,0.78); max-width: 30rem; margin-bottom: 1.75rem;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border: none;
+      transition: transform 0.35s var(--ease), background 0.35s var(--ease);
+      font-family: inherit; cursor: pointer;
+    }
+    .btn-primary { background: #fff; color: var(--ink); }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--mist); }
+    .btn-ghost {
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.45);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--ink); }
+    .btn-gold:hover { background: #c4a36d; transform: translateY(-2px); }
+    .btn-teal { background: var(--teal); color: #fff; }
+    .btn-teal:hover { background: var(--teal-deep); transform: translateY(-2px); }
+    section { padding: 5.5rem 6vw; }
+    .section-kicker {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--teal); font-weight: 500; margin-bottom: 0.85rem;
+    }
+    .section-title {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; font-weight: 500;
+      letter-spacing: -0.02em; max-width: 22ch; margin-bottom: 1rem;
+    }
+    .section-lead { font-weight: 300; color: var(--ink-soft); max-width: 36rem; }
+    .rush { background: var(--ink); color: #fff; }
+    .rush .section-kicker { color: var(--gold); }
+    .rush .section-lead { color: rgba(255,255,255,0.7); }
+    .rush-panel {
+      margin-top: 2.5rem; max-width: 36rem;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 2.2rem 2rem 2rem;
+      background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 60%);
+    }
+    .rush-panel .amount {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.2rem); margin-bottom: 0.75rem;
+    }
+    .rush-panel p { font-weight: 300; color: rgba(255,255,255,0.72); margin-bottom: 1.5rem; }
+    .how { background: var(--mist); }
+    .steps { margin-top: 2.75rem; display: grid; gap: 2rem; }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    }
+    .step h3 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.35rem; font-weight: 500; margin-bottom: 0.5rem;
+    }
+    .step p { font-weight: 300; color: var(--ink-soft); }
+    .cta-band { background: var(--ink); color: #fff; }
+    .cta-band .section-kicker { color: rgba(255,255,255,0.65); }
+    .cta-band .section-title { color: #fff; }
+    .cta-band .section-lead { color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
+    footer {
+      background: var(--ink); color: rgba(255,255,255,0.55);
+      padding: 1.5rem 6vw; display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem;
+      justify-content: space-between; font-size: 0.85rem; font-weight: 300;
+    }
+    footer strong {
+      font-family: "Bodoni Moda", Georgia, serif; font-weight: 500; color: #fff;
+    }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href="index.html">Everything Films</a>
+    <div class="nav-links">
+      <a href="index.html#packages">Wedding &amp; life</a>
+      <a href="deposit.html">Deposit</a>
+      <a href="teaser.html">Teaser</a>
+      <a href="stills.html">Stills</a>
+      <a href="documentary.html">Documentary</a>
+      <a href="reel.html">Reel</a>
+      <a href="drone.html">Drone</a>
+      <a href="color.html">Color</a>
+      <a href="same-day.html">Same-day</a>
+      <a href="music-video.html">Music video</a>
+      <a href="brand-spot.html">Brand spot</a>
+      <a href="event.html">Event</a>
+      <a href="product.html">Product</a>
+      <a href="interview.html">Interview</a>
+      <a href="portrait.html">Portrait</a>
+      <a href="wedding.html">Wedding</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="testimonial.html">Testimonial</a>
+      <a href="launch.html">Launch</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="legacy.html">Legacy</a>
+      <a class="nav-cta" href="#rush">Rush delivery</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Rush delivery hero">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=2400&q=80"
+          alt="Film editing bay with timeline on screen"
+          width="2400"
+          height="1600"
+        />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 class="hero-brand">Everything Films</h1>
+        <p class="hero-line">Rush Delivery.</p>
+        <p class="hero-price">+$3,500 add-on</p>
+        <p class="hero-sub">Ten business days to first cut on any wedding, life, or corporate package. Applied as an add-on on your package invoice.</p>
+        <div class="cta-row">
+          <a
+            class="btn btn-primary"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Rush%20Delivery%20%E2%80%94%20%2B%243%2C500&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20add%20Rush%20Delivery%20(%2B%243%2C500)%20for%20a%2010-business-day%20first%20cut.%0A%0APackage%20(wedding%20%2F%20life%20%2F%20corporate)%3A%0AEvent%20date%3A%0ALocation%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20rush%20add-on%20invoice.%0A%0AThanks."
+          >Request rush invoice</a>
+          <a class="btn btn-ghost" href="index.html#packages">See packages</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="rush" id="rush" aria-labelledby="rush-title">
+      <p class="section-kicker">Rush add-on</p>
+      <h2 class="section-title" id="rush-title">+$3,500. First cut in 10 business days.</h2>
+      <p class="section-lead">Add Rush Delivery to any Everything Films package. The fee sits on the same invoice as your package — same inbox, clearer turnaround.</p>
+      <div class="rush-panel">
+        <p class="amount">+$3,500</p>
+        <p>Applied as an add-on on wedding, life, or corporate packages. Guarantees a first cut within 10 business days of footage handoff.</p>
+        <a
+          class="btn btn-gold"
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Rush%20Delivery%20%E2%80%94%20%2B%243%2C500&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20add%20Rush%20Delivery%20(%2B%243%2C500)%20for%20a%2010-business-day%20first%20cut.%0A%0APackage%20(wedding%20%2F%20life%20%2F%20corporate)%3A%0AEvent%20date%3A%0ALocation%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20rush%20add-on%20invoice.%0A%0AThanks."
+        >Email rush invoice — +$3,500</a>
+      </div>
+    </section>
+
+    <section class="how" aria-labelledby="how-title">
+      <p class="section-kicker">How it works</p>
+      <h2 class="section-title" id="how-title">Book the package. Add the rush.</h2>
+      <p class="section-lead">Same brad@treadcompanies.com inbox as deposits and packages. Subject line carries the rush add-on so we can invoice correctly.</p>
+      <div class="steps">
+        <article class="step">
+          <h3>Choose a package</h3>
+          <p>Wedding, life, or corporate — rush works as an add-on on any of them.</p>
+        </article>
+        <article class="step">
+          <h3>Invoice the add-on</h3>
+          <p>Email for the +$3,500 Rush Delivery line. We confirm the 10-business-day clock.</p>
+        </article>
+        <article class="step">
+          <h3>First cut lands fast</h3>
+          <p>Within 10 business days of footage handoff, your first cut is ready for review.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <p class="section-kicker">Begin</p>
+      <h2 class="section-title" id="cta-title">Need the cut sooner.</h2>
+      <p class="section-lead">Rush add-on on any package. Same brad@treadcompanies.com inbox.</p>
+      <div class="cta-row">
+        <a
+          class="btn btn-teal"
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Rush%20Delivery%20%E2%80%94%20%2B%243%2C500"
+        >Email Everything Films</a>
+        <a class="btn btn-ghost" href="deposit.html">Production deposit</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Everything Films</strong> · Rush Delivery</p>
+    <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
+  </footer>
+</body>
+</html>

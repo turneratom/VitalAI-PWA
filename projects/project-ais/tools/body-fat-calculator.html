@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Fat Calculator — Navy Method | VitalAI</title>
+  <meta name="description" content="Free body fat calculator using the US Navy method. Enter neck, waist, and hip measurements for an instant body fat percentage estimate.">
+  <link rel="stylesheet" href="tools.css">
+  <link rel="canonical" href="https://vitalai.app/tools/body-fat-calculator.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div><h1><a href="../index.html" style="color:white;text-decoration:none;">VitalAI</a></h1><p>Body Fat Calculator</p></div>
+      <nav class="nav-links"><a href="index.html">All Tools</a></nav>
+    </div>
+  </header>
+  <main>
+    <article class="card">
+      <h2>Body Fat Percentage Calculator (Navy Method)</h2>
+      <p>Uses neck, waist, and height measurements. For women, hip measurement is also required.</p>
+      <form id="bf-form">
+        <div class="form-row">
+          <div><label for="sex">Sex</label><select id="sex"><option value="male">Male</option><option value="female">Female</option></select></div>
+          <div><label for="height">Height (cm)</label><input id="height" type="number" value="175" required></div>
+          <div><label for="neck">Neck (cm)</label><input id="neck" type="number" step="0.1" value="38" required></div>
+          <div><label for="waist">Waist (cm)</label><input id="waist" type="number" step="0.1" value="85" required></div>
+          <div id="hip-row"><label for="hip">Hip (cm)</label><input id="hip" type="number" step="0.1" value="95"></div>
+        </div>
+        <button type="submit" class="btn">Calculate Body Fat</button>
+      </form>
+      <div id="bf-result" class="result-box" hidden>
+        <p>Body fat: <strong id="bf-pct"></strong>%</p>
+        <p>Category: <strong id="bf-cat"></strong></p>
+      </div>
+    </article>
+    <section class="card faq">
+      <h2>FAQ</h2>
+      <details open><summary>What is a healthy body fat percentage?</summary><p>Men: 10–20% fitness range. Women: 18–28% fitness range. Athletes often lower.</p></details>
+      <details><summary>How accurate is the Navy method?</summary><p>±3–4% vs DEXA for most people. Best used for tracking trends over time.</p></details>
+    </section>
+    <div class="ad-slot card" id="ad-bottom"></div>
+    <div class="related-tools"><a href="bmi-calculator.html">BMI</a> <a href="ideal-weight-calculator.html">Ideal Weight</a></div>
+  </main>
+  <footer class="site-footer">Not medical advice.</footer>
+  <script src="tools.js"></script>
+  <script>
+    injectFaqSchema([{ q: 'Healthy body fat?', a: 'Men 10-20% fitness; women 18-28% fitness.' }, { q: 'Navy method accuracy?', a: 'Within about 3-4% of DEXA for most people.' }]);
+    document.getElementById('sex').onchange = () => { document.getElementById('hip-row').style.display = document.getElementById('sex').value === 'female' ? 'block' : 'none'; };
+    document.getElementById('bf-form').onsubmit = (e) => {
+      e.preventDefault();
+      const sex = document.getElementById('sex').value;
+      const pct = calcBodyFatNavy(sex, +document.getElementById('height').value, +document.getElementById('neck').value, +document.getElementById('waist').value, +(document.getElementById('hip').value || 0));
+      document.getElementById('bf-pct').textContent = pct.toFixed(1);
+      document.getElementById('bf-cat').textContent = bodyFatCategory(pct, sex);
+      document.getElementById('bf-result').hidden = false;
+    };
+    loadMonetization(); injectAdSlot('ad-bottom');
+  </script>
+</body>
+</html>

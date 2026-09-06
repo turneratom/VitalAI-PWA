@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridian — Private Journeys</title>
+  <meta name="description" content="Meridian is a boutique travel agency for private journeys. We plan the route, the hosts, and the pace — you cross the map." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2430;
+      --ink-soft: #3d5a68;
+      --fog: #e4eef2;
+      --mist: #f3f7f9;
+      --paper: #f8fbfc;
+      --sea: #1a6b7a;
+      --sea-deep: #0f4f5c;
+      --copper: #b56a3c;
+      --line: rgba(12, 36, 48, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* —— Nav —— */
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 6vw;
+      color: #fff;
+    }
+
+    .nav-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    .nav-cta {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      padding-bottom: 0.15rem;
+      transition: border-color 0.3s var(--ease);
+    }
+
+    .nav-cta:hover { border-color: #fff; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      transform: scale(1.05);
+      animation: heroDrift 22s var(--ease) infinite alternate;
+    }
+
+    @keyframes heroDrift {
+      from { transform: scale(1.05) translate3d(0, 0, 0); }
+      to { transform: scale(1.12) translate3d(-1.2%, -0.8%, 0); }
+    }
+
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(8, 22, 30, 0.28) 0%, rgba(8, 22, 30, 0.12) 38%, rgba(8, 22, 30, 0.78) 100%),
+        radial-gradient(ellipse at 75% 20%, rgba(26, 107, 122, 0.28), transparent 55%);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 0 6vw 11vh;
+      max-width: 40rem;
+      animation: riseIn 1.15s var(--ease) both;
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(3.6rem, 10vw, 7rem);
+      line-height: 0.9;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-line {
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      max-width: 26rem;
+      margin-bottom: 0.85rem;
+      color: rgba(255,255,255,0.96);
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.76);
+      max-width: 26rem;
+      margin-bottom: 2rem;
+      line-height: 1.55;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.55rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--fog);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* —— Sections —— */
+    section { padding: 6.5rem 6vw; }
+
+    .section-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sea);
+      font-weight: 500;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-title {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.15rem, 4.6vw, 3.5rem);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      max-width: 34rem;
+    }
+
+    /* —— Promise —— */
+    .promise {
+      background:
+        linear-gradient(145deg, #dfecef 0%, #f5f8fa 48%, #e8e4dc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .promise::before {
+      content: "";
+      position: absolute;
+      width: 50vmax;
+      height: 50vmax;
+      right: -16vmax;
+      top: -18vmax;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26, 107, 122, 0.14), transparent 65%);
+      animation: floatOrb 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatOrb {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-5%, 7%); }
+    }
+
+    .promise-grid {
+      position: relative;
+      display: grid;
+      gap: 3rem;
+      align-items: end;
+    }
+
+    @media (min-width: 860px) {
+      .promise-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 5rem;
+      }
+    }
+
+    .promise-list {
+      list-style: none;
+      display: grid;
+      gap: 1.4rem;
+      margin-top: 2.2rem;
+    }
+
+    .promise-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .promise-list li.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .promise-num {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--copper);
+      line-height: 1.2;
+    }
+
+    .promise-list strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .promise-list span {
+      font-weight: 300;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .promise-visual {
+      position: relative;
+      min-height: 24rem;
+      overflow: hidden;
+    }
+
+    .promise-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 24rem;
+      object-fit: cover;
+      filter: saturate(0.94) contrast(1.04);
+    }
+
+    .promise-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(12,36,48,0.22), transparent 45%);
+    }
+
+    /* —— Journeys —— */
+    .journeys {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .journeys .section-kicker { color: var(--copper); }
+    .journeys .section-lead { color: rgba(255,255,255,0.68); }
+
+    .journey-list {
+      display: grid;
+      gap: 0;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.14);
+    }
+
+    a.journey { color: inherit; }
+    .journey {
+      display: grid;
+      gap: 0.75rem 2rem;
+      padding: 1.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      transition: padding 0.4s var(--ease);
+    }
+
+    @media (min-width: 760px) {
+      .journey {
+        grid-template-columns: 8rem 1fr auto;
+        align-items: baseline;
+      }
+    }
+
+    .journey:hover { padding-left: 0.35rem; }
+
+    .journey-name {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .journey-desc {
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.98rem;
+      max-width: 32rem;
+    }
+
+    .journey-price {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      white-space: nowrap;
+    }
+
+    .journey-price em {
+      font-style: normal;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .journey-price a {
+      color: #fff;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+      transition: border-color 0.3s var(--ease);
+    }
+
+    .journey-price a:hover { border-color: #fff; }
+
+    /* —— Places —— */
+    .places {
+      background: var(--mist);
+      overflow: hidden;
+    }
+
+    .places-rail {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(72vw, 28rem);
+      gap: 1.25rem;
+      margin-top: 2.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 0.5rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @media (min-width: 900px) {
+      .places-rail {
+        grid-auto-columns: minmax(16rem, 1fr);
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(5, 1fr);
+        overflow: visible;
+      }
+    }
+
+    a.place { color: inherit; display: block; }
+    .place {
+      scroll-snap-align: start;
+      position: relative;
+      min-height: 22rem;
+      overflow: hidden;
+    }
+
+    .place img {
+      width: 100%;
+      height: 100%;
+      min-height: 22rem;
+      object-fit: cover;
+      transition: transform 1.2s var(--ease);
+    }
+
+    .place:hover img { transform: scale(1.06); }
+
+    .place-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.4rem 1.35rem;
+      color: #fff;
+      background: linear-gradient(0deg, rgba(8,22,30,0.75), transparent);
+    }
+
+    .place-caption strong {
+      display: block;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .place-caption span {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* —— How —— */
+    .how { background: var(--paper); }
+
+    .steps {
+      display: grid;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      counter-reset: step;
+    }
+
+    @media (min-width: 800px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .step {
+      counter-increment: step;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--sea);
+      margin-bottom: 0.85rem;
+    }
+
+    .step h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+    }
+
+    .step p {
+      font-weight: 300;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    /* —— Contact —— */
+    .contact {
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      min-height: 70vh;
+      display: grid;
+      align-items: end;
+    }
+
+    .contact-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .contact-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      animation: heroDrift 26s var(--ease) infinite alternate;
+    }
+
+    .contact-veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(8,22,30,0.35) 0%, rgba(8,22,30,0.55) 45%, rgba(8,22,30,0.88) 100%);
+    }
+
+    .contact-copy {
+      position: relative;
+      z-index: 2;
+      padding: 6.5rem 6vw;
+      max-width: 36rem;
+    }
+
+    .contact .section-kicker { color: rgba(255,255,255,0.7); }
+    .contact .section-title { color: #fff; max-width: 14ch; }
+    .contact .section-lead { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+
+    .inquiry {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      max-width: 28rem;
+    }
+    .inquiry label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+    }
+    .inquiry input,
+    .inquiry select,
+    .inquiry textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      padding: 0.85rem 1rem;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 300;
+      letter-spacing: normal;
+      text-transform: none;
+      border-radius: 0;
+    }
+    .inquiry input::placeholder,
+    .inquiry textarea::placeholder { color: rgba(255,255,255,0.45); }
+    .inquiry select option { color: var(--ink); }
+    .inquiry textarea { min-height: 5.5rem; resize: vertical; }
+    .inquiry .cta-row { margin-top: 0.35rem; }
+
+    .btn-sea {
+      background: var(--sea);
+      color: #fff;
+    }
+
+    .btn-sea:hover {
+      background: var(--sea-deep);
+      transform: translateY(-2px);
+    }
+
+    /* —— Footer —— */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.55);
+      padding: 1.75rem 6vw;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 300;
+    }
+
+    footer strong {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav-brand" href="#">Meridian</a>
+    <div class="nav-links">
+      <a class="nav-cta" href="gift.html">Gift &amp; corporate</a>
+      <a class="nav-cta" href="hold.html">Hold $2,500</a>
+      <a class="nav-cta" href="retainer.html">Retainer $12k</a>
+      <a class="nav-cta" href="weekend.html">Weekend $8.5k</a>
+      <a class="nav-cta" href="dinner.html">Dinner $2.2k</a>
+      <a class="nav-cta" href="yacht.html">Yacht $22k</a>
+      <a class="nav-cta" href="villa.html">Villa $15k</a>
+      <a class="nav-cta" href="jet.html">Jet $12k</a>
+      <a class="nav-cta" href="safari.html">Safari $18k</a>
+      <a class="nav-cta" href="ski.html">Ski $14k</a>
+      <a class="nav-cta" href="balloon.html">Balloon $4.8k</a>
+      <a class="nav-cta" href="chef.html">Chef $3.6k</a>
+      <a class="nav-cta" href="helicopter.html">Helicopter $7.5k</a>
+      <a class="nav-cta" href="vineyard.html">Vineyard $4.2k</a>
+      <a class="nav-cta" href="spa.html">Spa $5.4k</a>
+      <a class="nav-cta" href="dive.html">Dive $6.2k</a>
+      <a class="nav-cta" href="opera.html">Opera $4.9k</a>
+      <a class="nav-cta" href="polo.html">Polo $5.8k</a>
+      <a class="nav-cta" href="regatta.html">Regatta $6.8k</a>
+      <a class="nav-cta" href="tasting.html">Tasting $3.9k</a>
+      <a class="nav-cta" href="golf.html">Golf $4.5k</a>
+      <a class="nav-cta" href="hunt.html">Hunt $5.2k</a>
+      <a class="nav-cta" href="rail.html">Rail $6.4k</a>
+      <a class="nav-cta" href="flyfish.html">Fly-fish $4.8k</a>
+      <a class="nav-cta" href="falconry.html">Falconry $5.5k</a>
+      <a class="nav-cta" href="clay.html">Clay $4.9k</a>
+      <a class="nav-cta" href="archery.html">Archery $4.2k</a>
+      <a class="nav-cta" href="equestrian.html">Equestrian $5.8k</a>
+      <a class="nav-cta" href="tennis.html">Tennis $3.9k</a>
+      <a class="nav-cta" href="sailing.html">Sailing $4.2k</a>
+      <a class="nav-cta" href="squash.html">Squash $3.6k</a>
+      <a class="nav-cta" href="cricket.html">Cricket $4.8k</a>
+      <a class="nav-cta" href="croquet.html">Croquet $3.4k</a>
+      <a class="nav-cta" href="bocce.html">Bocce $2.9k</a>
+      <a class="nav-cta" href="petanque.html">Pétanque $2.7k</a>
+      <a class="nav-cta" href="curling.html">Curling $5.2k</a>
+      <a class="nav-cta" href="billiards.html">Billiards $2.4k</a>
+      <a class="nav-cta" href="darts.html">Darts $1.8k</a>
+      <a class="nav-cta" href="shuffleboard.html">Shuffleboard $2.1k</a>
+      <a class="nav-cta" href="bowls.html">Bowls $1.95k</a>
+      <a class="nav-cta" href="badminton.html">Badminton $1.85k</a>
+      <a class="nav-cta" href="pickleball.html">Pickleball $1.75k</a>
+      <a class="nav-cta" href="table-tennis.html">Table-Tennis $1.65k</a>
+      <a class="nav-cta" href="volleyball.html">Volleyball $1.55k</a>
+      <a class="nav-cta" href="basketball.html">Basketball $1.45k</a>
+      <a class="nav-cta" href="soccer.html">Soccer $1.35k</a>
+      <a class="nav-cta" href="hockey.html">Hockey $1.25k</a>
+      <a class="nav-cta" href="baseball.html">Baseball $1.15k</a>
+      <a class="nav-cta" href="lacrosse.html">Lacrosse $1.05k</a>
+      <a class="nav-cta" href="rugby.html">Rugby $0.95k</a>
+      <a class="nav-cta" href="softball.html">Softball $0.85k</a>
+      <a class="nav-cta" href="fencing.html">Fencing $0.75k</a>
+      <a class="nav-cta" href="rowing.html">Rowing $0.65k</a>
+      <a class="nav-cta" href="climbing.html">Climbing $0.55k</a>
+      <a class="nav-cta" href="kayaking.html">Kayaking $0.45k</a>
+      <a class="nav-cta" href="surfing.html">Surfing $0.35k</a>
+      <a class="nav-cta" href="paddleboarding.html">Paddleboarding $0.25k</a>
+      <a class="nav-cta" href="snorkeling.html">Snorkeling $0.15k</a>
+      <a class="nav-cta" href="windsurfing.html">Windsurfing $0.10k</a>
+      <a class="nav-cta" href="kiteboarding.html">Kiteboarding $0.08k</a>
+      <a class="nav-cta" href="tender.html">Tender $0.001k</a>
+      <a class="nav-cta" href="cutter.html">Cutter $0.001k</a>
+      <a class="nav-cta" href="yawl.html">Yawl $0.001k</a>
+      <a class="nav-cta" href="ketch.html">Ketch $0.001k</a>
+      <a class="nav-cta" href="schooner.html">Schooner $0.001k</a>
+      <a class="nav-cta" href="tug.html">Tug $0.001k</a>
+      <a class="nav-cta" href="gig.html">Gig $0.001k</a>
+      <a class="nav-cta" href="expedition.html">Expedition $45k</a>
+      <a class="nav-cta" href="invoice.html">Invoice</a>
+      <a class="nav-cta" href="#plan">Plan a journey</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Meridian hero">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=80"
+          alt="Open coastal horizon at golden hour"
+          width="2400"
+          height="1600"
+        />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 class="hero-brand">Meridian</h1>
+        <p class="hero-line">Private journeys, drawn to the edge of the map.</p>
+        <p class="hero-sub">A boutique travel agency for people who want place, pace, and people — not a packaged tour.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#plan">Start planning</a>
+          <a class="btn btn-ghost" href="#journeys">See journeys</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise" id="promise" aria-labelledby="promise-title">
+      <div class="promise-grid">
+        <div>
+          <p class="section-kicker">The Meridian way</p>
+          <h2 class="section-title" id="promise-title">We draw the map. You cross it.</h2>
+          <p class="section-lead">Every trip is built from a brief: where you want to feel, how you like to move, and who should open the doors.</p>
+          <ul class="promise-list">
+            <li>
+              <span class="promise-num">01</span>
+              <div>
+                <strong>Itineraries with room to breathe</strong>
+                <span>Days with shape — not a checklist. Long lunches, late trains, and one unhurried morning.</span>
+              </div>
+            </li>
+            <li>
+              <span class="promise-num">02</span>
+              <div>
+                <strong>Hosts who know the side streets</strong>
+                <span>Guides, chefs, drivers, and makers we actually trust — introduced by name, not brochure.</span>
+              </div>
+            </li>
+            <li>
+              <span class="promise-num">03</span>
+              <div>
+                <strong>Logistics that stay invisible</strong>
+                <span>Transfers, stays, and timing handled so the trip feels inevitable, not arranged.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="promise-visual">
+          <img
+            src="https://images.unsplash.com/photo-1498307833015-e7b400441eb8?auto=format&fit=crop&w=1600&q=80"
+            alt="Narrow street in a sunlit Mediterranean town"
+            width="1600"
+            height="2000"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="journeys" id="journeys" aria-labelledby="journeys-title">
+      <p class="section-kicker">Journeys</p>
+      <h2 class="section-title" id="journeys-title">Four ways onto the map.</h2>
+      <p class="section-lead">Pick a frame. We fill it with the places and people that fit you.</p>
+      <div class="journey-list">
+        <article class="journey">
+          <h3 class="journey-name">Escape</h3>
+          <p class="journey-desc">5–8 days in one place. A reset: one coast, one city, or one valley with nothing to prove.</p>
+          <p class="journey-price">From <em>$4,800</em> · <a href="journeys/amalfi-escape.html">Amalfi</a> · <a href="journeys/japan-escape.html">Japan</a> · <a href="journeys/marrakech-escape.html">Marrakech</a></p>
+        </article>
+        <article class="journey">
+          <h3 class="journey-name">Crossing</h3>
+          <p class="journey-desc">10–14 days across two regions. Trains, ferries, and the slow change of landscape.</p>
+          <p class="journey-price">From <em>$9,200</em> · <a href="journeys/iberia-crossing.html">Iberia</a></p>
+        </article>
+        <article class="journey">
+          <h3 class="journey-name">Expedition</h3>
+          <p class="journey-desc">16+ days on an open brief. We design from scratch when the map is still blank.</p>
+          <p class="journey-price">From <em>$18,500</em> · <a href="journeys/andes-expedition.html">Andes</a></p>
+        </article>
+        <article class="journey">
+          <h3 class="journey-name">Gift &amp; corporate</h3>
+          <p class="journey-desc">Escape certificates for someone you love, or a team retreat with hosts and logistics already drawn.</p>
+          <p class="journey-price">From <em>$5,800</em> gift · <em>$28,000</em> retreat · <a href="gift.html">See offers</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="places" id="places" aria-labelledby="places-title">
+      <p class="section-kicker">Recent routes</p>
+      <h2 class="section-title" id="places-title">Where the map is currently open.</h2>
+      <p class="section-lead">A sample of places we are planning now — ask for something else and we will draw that instead.</p>
+      <div class="places-rail">
+        <a class="place" href="journeys/amalfi-escape.html">
+          <img
+            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80"
+            alt="Coastal cliffs and sea in southern Italy"
+            width="1400"
+            height="1800"
+          />
+          <span class="place-caption">
+            <strong>Amalfi &amp; Capri</strong>
+            <span>Escape · sample itinerary</span>
+          </span>
+        </a>
+        <a class="place" href="journeys/iberia-crossing.html">
+          <img
+            src="https://images.unsplash.com/photo-1555881403-64992de360f0?auto=format&fit=crop&w=1400&q=80"
+            alt="Yellow tram on a steep street in Lisbon"
+            width="1400"
+            height="1800"
+          />
+          <span class="place-caption">
+            <strong>Lisbon &amp; Seville</strong>
+            <span>Crossing · sample itinerary</span>
+          </span>
+        </a>
+        <a class="place" href="journeys/japan-escape.html">
+          <img
+            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=80"
+            alt="Traditional street with wooden buildings in Japan"
+            width="1400"
+            height="1800"
+          />
+          <span class="place-caption">
+            <strong>Kyoto &amp; Tokyo</strong>
+            <span>Escape · sample itinerary</span>
+          </span>
+        </a>
+        <a class="place" href="journeys/marrakech-escape.html">
+          <img
+            src="https://images.unsplash.com/photo-1539020140150-d470b06eeade?auto=format&fit=crop&w=1400&q=80"
+            alt="Warm terracotta alleys in the Marrakech medina"
+            width="1400"
+            height="1800"
+          />
+          <span class="place-caption">
+            <strong>Marrakech &amp; dunes</strong>
+            <span>Escape · sample itinerary</span>
+          </span>
+        </a>
+        <a class="place" href="journeys/andes-expedition.html">
+          <img
+            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1400&q=80"
+            alt="Machu Picchu terraces under Andean sky"
+            width="1400"
+            height="1800"
+          />
+          <span class="place-caption">
+            <strong>Cusco &amp; Uyuni</strong>
+            <span>Expedition · sample itinerary</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="how-title">
+      <p class="section-kicker">How it works</p>
+      <h2 class="section-title" id="how-title">A short path from brief to boarding.</h2>
+      <p class="section-lead">No questionnaires with forty fields. A conversation, a draft, a departure.</p>
+      <div class="steps">
+        <article class="step">
+          <h3>Tell us the feeling</h3>
+          <p>Season, company, budget band, and what you want the trip to leave behind.</p>
+        </article>
+        <article class="step">
+          <h3>Receive a sketched route</h3>
+          <p>A written itinerary with stays, hosts, and pacing — revised until it fits.</p>
+        </article>
+        <article class="step">
+          <h3>Travel with a line open</h3>
+          <p>We stay reachable while you are away. Changes happen without drama.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="plan" aria-labelledby="plan-title">
+      <div class="contact-media">
+        <img
+          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2400&q=80"
+          alt="Open road through mountains at dusk"
+          width="2400"
+          height="1600"
+        />
+      </div>
+      <div class="contact-veil" aria-hidden="true"></div>
+      <div class="contact-copy">
+        <p class="section-kicker">Plan a journey</p>
+        <h2 class="section-title" id="plan-title">Where should the next meridian fall?</h2>
+        <p class="section-lead">Share dates, people, and a place that keeps returning. We reply with a first sketch.</p>
+        <form class="inquiry" id="inquiry-form">
+          <label>
+            Your name
+            <input name="name" type="text" required autocomplete="name" placeholder="Name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+          </label>
+          <label>
+            Journey shape
+            <select name="shape">
+              <option value="Escape">Escape</option>
+              <option value="Crossing">Crossing</option>
+              <option value="Expedition" selected>Expedition</option>
+              <option value="Not sure">Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            Place &amp; timing
+            <textarea name="brief" required placeholder="Where, when, who is traveling, budget band…"></textarea>
+          </label>
+          <div class="cta-row">
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+            <a class="btn btn-ghost" href="mailto:brad@treadcompanies.com?subject=Andes%20Expedition">Ask about Andes</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Meridian</strong> · boutique travel</p>
+    <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("in");
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document.querySelectorAll(".promise-list li").forEach((el) => observer.observe(el));
+
+    const form = document.getElementById("inquiry-form");
+    if (form) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const email = String(data.get("email") || "").trim();
+        const shape = String(data.get("shape") || "").trim();
+        const brief = String(data.get("brief") || "").trim();
+        const subject = encodeURIComponent(`Meridian ${shape} inquiry — ${name}`);
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nJourney: ${shape}\n\nBrief:\n${brief}\n`
+        );
+        window.location.href = `mailto:brad@treadcompanies.com?subject=${subject}&body=${body}`;
+      });
+    }
+  </script>
+</body>
+</html>

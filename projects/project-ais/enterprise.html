@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitalAI Enterprise</title>
+  <meta name="description" content="VitalAI Enterprise Clinic — $2,499/mo or $24,990/yr. SSO, admin roles, BAAs on request, dedicated success, 50 seats base." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tools/tools.css" />
+  <style>
+    .team-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3.5rem; }
+    .team-wrap h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 0.5rem; }
+    .team-wrap .lede { color: #444; margin-bottom: 1.5rem; max-width: 38rem; }
+    .team-card {
+      background: #fff; border: 1px solid #d7e2e6; padding: 1.5rem;
+      box-shadow: 0 8px 28px rgba(20, 40, 48, 0.06); margin-bottom: 1.5rem;
+    }
+    .team-card h3 { margin: 0 0 0.35rem; }
+    .team-card .hint { color: #555; font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.3rem; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: #3a5560;
+    }
+    input, select {
+      width: 100%; border: 1px solid #c5d4da; padding: 0.75rem 0.85rem;
+      font: inherit; font-size: 0.95rem; text-transform: none; letter-spacing: normal; font-weight: 400;
+    }
+    input:focus, select:focus { outline: 2px solid #1a6b7a; outline-offset: 1px; }
+    .actions { margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .plan-grid { display: grid; gap: 0.65rem; margin-top: 1.5rem; font-size: 0.92rem; }
+    .plan-row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding: 0.65rem 0; border-bottom: 1px solid #e2ebef;
+    }
+    .plan-row strong { color: #1a6b7a; }
+    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.45rem; color: #444; }
+    .perk-list li::before { content: "— "; color: #1a6b7a; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Enterprise Clinic</p>
+      </div>
+      <nav class="nav-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
+        <a href="api.html">API</a>
+        <a href="coach.html">Coach</a>
+        <a href="family.html">Family</a>
+        <a href="clinic.html">Clinic</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="sleep.html">Sleep</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="immune.html">Immune</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="team-wrap">
+    <h2>VitalAI Enterprise</h2>
+    <p class="lede">
+      Clinic-scale VitalAI with SSO, admin roles, BAAs on request, and dedicated success. Fifty seats base. Stripe when live — until then this form emails an Enterprise invoice request.
+    </p>
+
+    <section class="team-card" aria-labelledby="plans-title">
+      <h3 id="plans-title">Enterprise pricing</h3>
+      <p class="hint">One clinic plan; annual saves vs twelve monthly invoices.</p>
+      <div class="plan-grid">
+        <div class="plan-row"><span>Enterprise monthly</span><strong>$2,499 / mo</strong></div>
+        <div class="plan-row"><span>Enterprise annual</span><strong>$24,990 / yr</strong></div>
+      </div>
+      <ul class="perk-list">
+        <li>SSO for your clinic domain</li>
+        <li>Admin roles and seat controls</li>
+        <li>BAAs on request</li>
+        <li>Dedicated success contact</li>
+        <li>50 seats base</li>
+      </ul>
+    </section>
+
+    <section class="team-card" aria-labelledby="form-title">
+      <h3 id="form-title">Request Enterprise invoice</h3>
+      <p class="hint">Tell us cadence and clinic size. We reply with checkout or invoice within one business day.</p>
+      <form id="enterprise-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Plan
+            <select id="plan" name="plan">
+              <option value="Enterprise monthly — $2,499/mo" selected>Enterprise monthly — $2,499/mo</option>
+              <option value="Enterprise annual — $24,990/yr">Enterprise annual — $24,990/yr</option>
+            </select>
+          </label>
+          <label>
+            Clinic / organization
+            <input type="text" id="org" name="org" required autocomplete="organization" />
+          </label>
+          <label>
+            Seats needed
+            <input type="text" id="seats" name="seats" placeholder="e.g. 50 base + extras" />
+          </label>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Work email
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            Notes (optional)
+            <input type="text" id="notes" name="notes" placeholder="SSO IdP, BAA needed, launch date" />
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Email Enterprise invoice request</button>
+          <a class="btn btn-secondary" href="pricing.html">Consumer pricing</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Enterprise Clinic · SSO + admin + 50 seats ·
+    <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("enterprise-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var plan = document.getElementById("plan").value;
+        var org = (document.getElementById("org").value || "").trim();
+        var seats = (document.getElementById("seats").value || "").trim();
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email || !org) {
+          document.getElementById(!org ? "org" : !name ? "name" : "email").focus();
+          return;
+        }
+        var subject = "VitalAI Enterprise — " + plan;
+        var body =
+          "VitalAI Enterprise Clinic invoice request\n\n" +
+          "Plan: " + plan + "\n" +
+          "Clinic / organization: " + org + "\n" +
+          "Seats needed: " + (seats || "50 base") + "\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send Enterprise checkout or invoice.\n" +
+          "Includes: SSO, admin roles, BAAs on request, dedicated success, 50 seats base.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

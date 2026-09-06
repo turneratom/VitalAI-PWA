@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villa Takeover Weekend — Meridian</title>
+  <meta name="description" content="Meridian Villa Takeover Weekend — $15,000 flat for 3 nights, up to 8 guests. Host on site, house rhythm, chef shortlist. Villa rental billed separately when required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2430;
+      --ink-soft: #3d5a68;
+      --mist: #f3f7f9;
+      --paper: #f8fbfc;
+      --sea: #1a6b7a;
+      --sea-deep: #0f4f5c;
+      --copper: #b56a3c;
+      --line: rgba(12, 36, 48, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(155deg, #dfecef 0%, #f6f9fb 50%, #ebe5da 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 6vw; flex-wrap: wrap; gap: 0.75rem;
+    }
+    .nav-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.2rem; letter-spacing: 0.06em; font-weight: 500;
+    }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-link {
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;
+      border-bottom: 1px solid rgba(12,36,48,0.25); padding-bottom: 0.1rem;
+    }
+    .wrap { padding: 0.5rem 6vw 3.5rem; max-width: 44rem; }
+    .hero-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 0.95;
+      font-weight: 500; letter-spacing: -0.03em; margin-bottom: 0.75rem;
+      animation: rise 0.9s var(--ease) both;
+    }
+    .hero-line {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem); margin-bottom: 0.5rem;
+      animation: rise 0.9s var(--ease) 0.08s both;
+    }
+    .price {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.6rem; color: var(--sea); margin-bottom: 0.85rem;
+      animation: rise 0.9s var(--ease) 0.1s both;
+    }
+    .hero-sub {
+      font-weight: 300; color: var(--ink-soft); max-width: 34rem; margin-bottom: 2rem;
+      animation: rise 0.9s var(--ease) 0.14s both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    .panel {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      padding: clamp(1.35rem, 3vw, 2rem);
+      animation: rise 0.9s var(--ease) 0.2s both;
+    }
+    .panel h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.55rem; font-weight: 500; margin-bottom: 0.4rem;
+    }
+    .panel-lead {
+      font-weight: 300; color: var(--ink-soft); margin-bottom: 1.35rem; font-size: 0.95rem;
+    }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 640px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.35rem;
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 500; color: var(--ink-soft);
+    }
+    input, select, textarea {
+      width: 100%; border: 1px solid var(--line); background: #fff;
+      padding: 0.75rem 0.9rem; font: inherit; font-size: 0.95rem;
+      font-weight: 300; color: var(--ink); letter-spacing: normal; text-transform: none;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sea); }
+    textarea { min-height: 4.5rem; resize: vertical; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border: none; cursor: pointer;
+      font-family: inherit; transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .btn-sea { background: var(--sea); color: #fff; }
+    .btn-sea:hover { background: var(--sea-deep); transform: translateY(-1px); }
+    .actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .hint { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); max-width: 28rem; }
+    .rules {
+      margin-top: 1.75rem; display: grid; gap: 0.85rem;
+      animation: rise 0.9s var(--ease) 0.28s both;
+    }
+    .rule {
+      padding: 0.85rem 0; border-bottom: 1px solid var(--line);
+      font-weight: 300; color: var(--ink-soft); font-size: 0.95rem;
+    }
+    .rule strong {
+      display: block; font-family: "Fraunces", Georgia, serif;
+      font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 1.05rem;
+    }
+    footer {
+      padding: 1.25rem 6vw; font-size: 0.85rem; font-weight: 300; color: var(--ink-soft);
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; justify-content: space-between;
+    }
+    footer strong {
+      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href="index.html">Meridian</a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Journeys</a>
+      <a class="nav-link" href="hold.html">Hold</a>
+      <a class="nav-link" href="weekend.html">Weekend</a>
+      <a class="nav-link" href="dinner.html">Dinner</a>
+      <a class="nav-link" href="yacht.html">Yacht</a>
+      <a class="nav-link" href="jet.html">Jet</a>
+      <a class="nav-link" href="safari.html">Safari</a>
+      <a class="nav-link" href="ski.html">Ski</a>
+      <a class="nav-link" href="balloon.html">Balloon</a>
+      <a class="nav-link" href="chef.html">Chef</a>
+      <a class="nav-link" href="helicopter.html">Helicopter</a>
+      <a class="nav-link" href="vineyard.html">Vineyard</a>
+      <a class="nav-link" href="spa.html">Spa</a>
+      <a class="nav-link" href="dive.html">Dive</a>
+      <a class="nav-link" href="opera.html">Opera</a>
+      <a class="nav-link" href="polo.html">Polo</a>
+      <a class="nav-link" href="regatta.html">Regatta</a>
+      <a class="nav-link" href="tasting.html">Tasting</a>
+      <a class="nav-link" href="retainer.html">Retainer</a>
+      <a class="nav-link" href="expedition.html">Expedition</a>
+      <a class="nav-link" href="gift.html">Gift</a>
+      <a class="nav-link" href="invoice.html">Invoice</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="hero-brand">Meridian</h1>
+    <p class="hero-line">Villa Takeover Weekend.</p>
+    <p class="price">$15,000 flat · 3 nights · up to 8 guests</p>
+    <p class="hero-sub">Three nights with a Meridian host on site: house rhythm, guest pacing, and a chef shortlist. Villa rental is billed separately when the house must be reserved.</p>
+
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Request villa weekend invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $15,000 for Villa Takeover Weekend, then lock region, dates, and guest count with your first brief.</p>
+      <form id="villa-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Preferred region
+            <input type="text" id="region" name="region" placeholder="e.g. Tuscany / Bali / open" />
+          </label>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            Guests
+            <input type="text" id="guests" name="guests" value="Up to 8" />
+          </label>
+          <label>
+            Target window
+            <input type="text" id="window" name="window" placeholder="e.g. late October or open" />
+          </label>
+          <label class="full">
+            Tone
+            <input type="text" id="tone" name="tone" placeholder="Quiet / celebration / multi-gen" />
+          </label>
+          <label class="full">
+            Notes
+            <textarea id="notes" name="notes" placeholder="Dietary, bedrooms needed, pool/staff prefs, constraints"></textarea>
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn btn-sea" type="submit">Email $15,000 villa invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Villa Takeover Weekend details filled.</p>
+        </div>
+      </form>
+    </section>
+
+    <div class="rules">
+      <div class="rule">
+        <strong>Host on site</strong>
+        A Meridian host at the house for three nights — pacing, briefings, and on-ground decisions.
+      </div>
+      <div class="rule">
+        <strong>House rhythm</strong>
+        Anchorage sequence and day plan written for the region you choose.
+      </div>
+      <div class="rule">
+        <strong>Chef shortlist</strong>
+        Two to three chef options with menus sized to your guest count and dietary notes.
+      </div>
+      <div class="rule">
+        <strong>Villa separate when needed</strong>
+        The $15,000 flat covers Meridian host and design. Villa rental fees are invoiced separately if we must reserve the house.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Meridian</strong> · Villa Takeover Weekend</p>
+    <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("villa-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var region = (document.getElementById("region").value || "").trim();
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var guests = (document.getElementById("guests").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
+        var tone = (document.getElementById("tone").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
+          return;
+        }
+        var subject = "Meridian Villa Takeover Weekend — $15,000";
+        var body =
+          "Meridian Villa Takeover Weekend request ($15,000 flat, 3 nights, up to 8 guests)\n\n" +
+          "Region: " + (region || "—") + "\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Guests: " + (guests || "Up to 8") + "\n" +
+          "Target window: " + (windowVal || "—") + "\n" +
+          "Tone: " + (tone || "—") + "\n" +
+          "Notes:\n" + (notes || "—") + "\n\n" +
+          "Please send the $15,000 Villa Takeover Weekend invoice.\n" +
+          "Includes: host on site, house rhythm, chef shortlist. Villa rental billed separately when required.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

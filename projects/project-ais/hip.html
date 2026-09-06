@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitalAI Hip Protocol</title>
+  <meta name="description" content="VitalAI Hip Protocol — Protocol setup $5 or Hip desk $1/mo. Hip targets, daily hip rhythm, weekly hip map. Invoice via email until Stripe is live." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tools/tools.css" />
+  <style>
+    .team-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3.5rem; }
+    .team-wrap h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 0.5rem; }
+    .team-wrap .lede { color: #444; margin-bottom: 1.5rem; max-width: 38rem; }
+    .team-card {
+      background: #fff; border: 1px solid #d7e2e6; padding: 1.5rem;
+      box-shadow: 0 8px 28px rgba(20, 40, 48, 0.06); margin-bottom: 1.5rem;
+    }
+    .team-card h3 { margin: 0 0 0.35rem; }
+    .team-card .hint { color: #555; font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.3rem; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: #3a5560;
+    }
+    input, select {
+      width: 100%; border: 1px solid #c5d4da; padding: 0.75rem 0.85rem;
+      font: inherit; font-size: 0.95rem; text-transform: none; letter-spacing: normal; font-weight: 400;
+    }
+    input:focus, select:focus { outline: 2px solid #1a6b7a; outline-offset: 1px; }
+    .actions { margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .plan-grid { display: grid; gap: 0.65rem; margin-top: 1.5rem; font-size: 0.92rem; }
+    .plan-row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding: 0.65rem 0; border-bottom: 1px solid #e2ebef;
+    }
+    .plan-row strong { color: #1a6b7a; }
+    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.39rem; color: #444; }
+    .perk-list li::before { content: "— "; color: #1a6b7a; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Hip Protocol</p>
+      </div>
+      <nav class="nav-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
+        <a href="api.html">API</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="coach.html">Coach</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="cardio.html">Cardio</a>
+        <a href="strength.html">Strength</a>
+        <a href="endurance.html">Endurance</a>
+        <a href="flexibility.html">Flexibility</a>
+        <a href="breath.html">Breath</a>
+        <a href="posture.html">Posture</a>
+        <a href="balance.html">Balance</a>
+        <a href="resilience.html">Resilience</a>
+        <a href="hip.html">Hip</a>
+        <a href="knee.html">Knee</a>
+        <a href="calf.html">Calf</a>
+        <a href="foot.html">Foot</a>
+        <a href="toe.html">Toe</a>
+        <a href="nail.html">Nail</a>
+        <a href="thumb.html">Thumb</a>
+        <a href="finger.html">Finger</a>
+        <a href="knuckle.html">Knuckle</a>
+        <a href="palm.html">Palm</a>
+        <a href="fist.html">Fist</a>
+        <a href="hand.html">Hand</a>
+        <a href="pinky.html">Pinky</a>
+        <a href="ring-finger.html">Ring-Finger</a>
+        <a href="middle-finger.html">Middle-Finger</a>
+        <a href="index-finger.html">Index-Finger</a>
+        <a href="thumb-tip.html">Thumb-Tip</a>
+        <a href="nail-bed.html">Nail-Bed</a>
+        <a href="cuticle.html">Cuticle</a>
+        <a href="lunula.html">Lunula</a>
+        <a href="matrix.html">Matrix</a>
+        <a href="hyponychium.html">Hyponychium</a>
+        <a href="eponychium.html">Eponychium</a>
+        <a href="paronychia.html">Paronychia</a>
+        <a href="nail-fold.html">Nail-Fold</a>
+        <a href="proximal.html">Proximal</a>
+        <a href="distal.html">Distal</a>
+        <a href="immune.html">Immune</a>
+        <a href="clinic.html">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="team-wrap">
+    <h2>VitalAI Hip Protocol</h2>
+    <p class="lede">
+      Hip markers, hip targets, and a weekly checklist — one setup, or a monthly hip desk. Stripe when live — until then this form emails an invoice request.
+    </p>
+
+    <section class="team-card" aria-labelledby="plans-title">
+      <h3 id="plans-title">Hip pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly hip desk for ongoing adjustments.</p>
+      <div class="plan-grid">
+        <div class="plan-row"><span>Protocol setup</span><strong>$5</strong></div>
+        <div class="plan-row"><span>Hip desk</span><strong>$1 / mo</strong></div>
+      </div>
+      <ul class="perk-list">
+        <li>Hip markers and schedule for your goals</li>
+        <li>Load / daily hip rhythm for your week</li>
+        <li>Hip checklist for the first two weeks</li>
+        <li>Optional monthly hip desk</li>
+      </ul>
+    </section>
+
+    <section class="team-card" aria-labelledby="form-title">
+      <h3 id="form-title">Request hip invoice</h3>
+      <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="hip-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Plan
+            <select id="plan" name="plan">
+              <option value="Protocol setup — $5" selected>Protocol setup — $5</option>
+              <option value="Hip desk — $1/mo">Hip desk — $1/mo</option>
+            </select>
+          </label>
+          <label>
+            Goal focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / cold season / rebuild" />
+          </label>
+          <label>
+            Preferred kickoff
+            <input type="text" id="kickoff" name="kickoff" placeholder="e.g. this week / next open" />
+          </label>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            Notes (optional)
+            <input type="text" id="notes" name="notes" placeholder="Exposure, travel, constraints" />
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Email hip invoice request</button>
+          <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Hip Protocol · setup / desk ·
+    <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("hip-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
+        var kickoff = (document.getElementById("kickoff").value || "").trim();
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
+          return;
+        }
+        var subject = "VitalAI Hip Protocol — " + plan;
+        var body =
+          "VitalAI Hip Protocol invoice request\n\n" +
+          "Plan: " + plan + "\n" +
+          "Goal focus: " + (focus || "—") + "\n" +
+          "Preferred kickoff: " + (kickoff || "—") + "\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send Hip Protocol checkout or invoice.\n" +
+          "Includes: hip map, hip blocks, weekly checklist.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

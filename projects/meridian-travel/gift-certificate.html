@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Escape Certificate — Meridian</title>
+  <meta name="description" content="Printable Meridian Gift Escape certificate. Fill recipient details after purchase, then print or save as PDF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2430;
+      --ink-soft: #3d5a68;
+      --mist: #f3f7f9;
+      --paper: #f8fbfc;
+      --sea: #1a6b7a;
+      --copper: #b56a3c;
+      --line: rgba(12, 36, 48, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(160deg, #dfecef 0%, #f5f8fa 45%, #ebe4d8 100%);
+      min-height: 100vh;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .screen-bar {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem;
+      align-items: center; justify-content: space-between;
+      padding: 1.1rem 5vw;
+    }
+    .screen-bar .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.2rem; letter-spacing: 0.06em; font-weight: 500;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.75rem 1.2rem; font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border: none; cursor: pointer;
+      font-family: inherit; transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .btn-sea { background: var(--sea); color: #fff; }
+    .btn-sea:hover { transform: translateY(-1px); background: #0f4f5c; }
+    .btn-ghost {
+      background: transparent; border: 1px solid var(--line); color: var(--ink);
+    }
+    .btn-ghost:hover { border-color: var(--sea); color: var(--sea); }
+    .wrap {
+      padding: 0.5rem 5vw 3rem;
+      display: grid; gap: 1.75rem;
+      justify-items: center;
+    }
+    .form-panel {
+      width: min(100%, 42rem);
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--line);
+      padding: 1.35rem 1.5rem;
+      animation: rise 0.8s var(--ease) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .form-panel h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem; font-weight: 500; margin-bottom: 0.35rem;
+    }
+    .form-panel p {
+      font-size: 0.88rem; font-weight: 300; color: var(--ink-soft); margin-bottom: 1rem;
+    }
+    .fields {
+      display: grid; gap: 0.75rem;
+    }
+    @media (min-width: 640px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.3rem;
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      font-weight: 500; color: var(--ink-soft);
+    }
+    input, select {
+      width: 100%; border: 1px solid var(--line); background: #fff;
+      padding: 0.7rem 0.85rem; font: inherit; font-size: 0.95rem;
+      font-weight: 300; color: var(--ink); text-transform: none; letter-spacing: normal;
+    }
+    .certificate {
+      width: min(100%, 48rem);
+      aspect-ratio: 11 / 8.5;
+      background:
+        radial-gradient(ellipse at 85% 15%, rgba(26,107,122,0.12), transparent 45%),
+        radial-gradient(ellipse at 10% 90%, rgba(181,106,60,0.1), transparent 40%),
+        linear-gradient(165deg, #f7fafb 0%, #eef4f6 55%, #f4efe8 100%);
+      border: 1px solid rgba(12, 36, 48, 0.18);
+      box-shadow: 0 28px 60px rgba(12, 36, 48, 0.12);
+      padding: clamp(1.5rem, 4vw, 3rem);
+      display: grid;
+      align-content: space-between;
+      position: relative;
+      overflow: hidden;
+      animation: rise 1s var(--ease) 0.1s both;
+    }
+    .certificate::before {
+      content: "";
+      position: absolute; inset: 0.7rem;
+      border: 1px solid rgba(26, 107, 122, 0.28);
+      pointer-events: none;
+    }
+    .cert-top {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 1rem; flex-wrap: wrap;
+      position: relative; z-index: 1;
+    }
+    .cert-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      letter-spacing: 0.08em; font-weight: 500;
+    }
+    .cert-kicker {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--copper); font-weight: 500;
+    }
+    .cert-body {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 1rem 0 0.5rem;
+    }
+    .cert-body h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 0.85rem;
+    }
+    .cert-body .to {
+      font-size: clamp(1.15rem, 3vw, 1.55rem);
+      font-family: "Fraunces", Georgia, serif;
+      margin-bottom: 0.65rem;
+    }
+    .cert-body .to span {
+      border-bottom: 1px solid rgba(12, 36, 48, 0.25);
+      padding: 0 0.35rem 0.1rem;
+      min-width: 8ch;
+      display: inline-block;
+    }
+    .cert-body .desc {
+      font-weight: 300; color: var(--ink-soft);
+      max-width: 34rem; margin: 0 auto 1.1rem;
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+    }
+    .cert-meta {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.75rem 1.75rem;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--sea); font-weight: 500;
+    }
+    .cert-foot {
+      position: relative; z-index: 1;
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      gap: 0.75rem 1.5rem;
+      align-items: end;
+      font-size: 0.78rem; font-weight: 300; color: var(--ink-soft);
+      border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 0.5rem;
+    }
+    .cert-foot strong {
+      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: var(--ink);
+      display: block; font-size: 0.95rem; margin-bottom: 0.15rem;
+    }
+    @media print {
+      body { background: #fff; }
+      .screen-bar, .form-panel { display: none !important; }
+      .wrap { padding: 0; }
+      .certificate {
+        width: 100%; max-width: none; aspect-ratio: auto; min-height: 95vh;
+        box-shadow: none; border: 1px solid #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-bar">
+    <a class="brand" href="index.html">Meridian</a>
+    <div class="actions">
+      <a class="btn btn-ghost" href="gift.html">Back to offers</a>
+      <button class="btn btn-sea" type="button" id="print-btn">Print / save PDF</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <form class="form-panel" id="cert-form" aria-labelledby="fill-title">
+      <h2 id="fill-title">Fill after purchase</h2>
+      <p>Agents complete this after a Gift Escape is paid. Then print or save as PDF for the buyer.</p>
+      <div class="fields">
+        <label class="full">
+          Recipient name
+          <input type="text" id="recipient" name="recipient" placeholder="Alex Rivera" autocomplete="off" />
+        </label>
+        <label>
+          From
+          <input type="text" id="giver" name="giver" placeholder="Jordan Lee" autocomplete="name" />
+        </label>
+        <label>
+          Occasion
+          <input type="text" id="occasion" name="occasion" placeholder="Anniversary" autocomplete="off" />
+        </label>
+        <label>
+          Code
+          <input type="text" id="code" name="code" placeholder="ME-2026-XXXX" autocomplete="off" />
+        </label>
+        <label>
+          Valid through
+          <input type="text" id="expires" name="expires" placeholder="18 months from issue" autocomplete="off" />
+        </label>
+      </div>
+    </form>
+
+    <article class="certificate" aria-label="Meridian Gift Escape certificate">
+      <div class="cert-top">
+        <p class="cert-brand">Meridian</p>
+        <p class="cert-kicker">Gift Escape certificate</p>
+      </div>
+      <div class="cert-body">
+        <h1>A private journey is waiting.</h1>
+        <p class="to">Presented to <span id="out-recipient">________________</span></p>
+        <p class="desc">One Meridian Escape for two — five to eight days in a place we draw together. Hosts, stays, and transfers included. You choose the month; we open the map.</p>
+        <p class="cert-meta">
+          <span>From $5,800</span>
+          <span id="out-occasion">Private Escape</span>
+          <span id="out-expires">Valid 18 months</span>
+        </p>
+      </div>
+      <div class="cert-foot">
+        <div>
+          <strong id="out-giver">With love</strong>
+          <span>brad@treadcompanies.com</span>
+        </div>
+        <div style="text-align:right">
+          <strong id="out-code">Pending code</strong>
+          <span>Redeem by emailing Meridian</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    (function () {
+      var map = [
+        ["recipient", "out-recipient", "________________"],
+        ["giver", "out-giver", "With love"],
+        ["occasion", "out-occasion", "Private Escape"],
+        ["code", "out-code", "Pending code"],
+        ["expires", "out-expires", "Valid 18 months"]
+      ];
+      function sync() {
+        map.forEach(function (row) {
+          var input = document.getElementById(row[0]);
+          var out = document.getElementById(row[1]);
+          if (!input || !out) return;
+          var v = (input.value || "").trim();
+          out.textContent = v || row[2];
+        });
+      }
+      map.forEach(function (row) {
+        var input = document.getElementById(row[0]);
+        if (input) input.addEventListener("input", sync);
+      });
+      var printBtn = document.getElementById("print-btn");
+      if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
+      sync();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitalAI Coach Certification</title>
+  <meta name="description" content="VitalAI Coach Certification — Cohort seat $1,200 or Alumni toolkit $299/mo. 4-week cohort, practice clients in sandbox, certificate, and coach directory listing." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tools/tools.css" />
+  <style>
+    .team-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3.5rem; }
+    .team-wrap h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 0.5rem; }
+    .team-wrap .lede { color: #444; margin-bottom: 1.5rem; max-width: 38rem; }
+    .team-card {
+      background: #fff; border: 1px solid #d7e2e6; padding: 1.5rem;
+      box-shadow: 0 8px 28px rgba(20, 40, 48, 0.06); margin-bottom: 1.5rem;
+    }
+    .team-card h3 { margin: 0 0 0.35rem; }
+    .team-card .hint { color: #555; font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.3rem; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: #3a5560;
+    }
+    input, select {
+      width: 100%; border: 1px solid #c5d4da; padding: 0.75rem 0.85rem;
+      font: inherit; font-size: 0.95rem; text-transform: none; letter-spacing: normal; font-weight: 400;
+    }
+    input:focus, select:focus { outline: 2px solid #1a6b7a; outline-offset: 1px; }
+    .actions { margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .plan-grid { display: grid; gap: 0.65rem; margin-top: 1.5rem; font-size: 0.92rem; }
+    .plan-row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding: 0.65rem 0; border-bottom: 1px solid #e2ebef;
+    }
+    .plan-row strong { color: #1a6b7a; }
+    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.45rem; color: #444; }
+    .perk-list li::before { content: "— "; color: #1a6b7a; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Coach Certification</p>
+      </div>
+      <nav class="nav-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
+        <a href="api.html">API</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="family.html">Family</a>
+        <a href="clinic.html">Clinic</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="sleep.html">Sleep</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="immune.html">Immune</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="team-wrap">
+    <h2>VitalAI Coach Certification</h2>
+    <p class="lede">
+      A 4-week cohort to certify on VitalAI coaching workflows, plus an optional alumni toolkit. Practice clients in the sandbox, earn a certificate, and list in the coach directory. Stripe when live — until then this form emails an invoice request.
+    </p>
+
+    <section class="team-card" aria-labelledby="plans-title">
+      <h3 id="plans-title">Certification pricing</h3>
+      <p class="hint">Start with a cohort seat; keep the alumni toolkit if you want ongoing tools and directory placement.</p>
+      <div class="plan-grid">
+        <div class="plan-row"><span>Cohort seat</span><strong>$1,200</strong></div>
+        <div class="plan-row"><span>Alumni toolkit</span><strong>$299 / mo</strong></div>
+      </div>
+      <ul class="perk-list">
+        <li>4-week cohort</li>
+        <li>Practice clients in sandbox</li>
+        <li>Certificate on completion</li>
+        <li>Listing in coach directory</li>
+      </ul>
+    </section>
+
+    <section class="team-card" aria-labelledby="form-title">
+      <h3 id="form-title">Request certification invoice</h3>
+      <p class="hint">Tell us seat vs toolkit. We reply with checkout or invoice within one business day.</p>
+      <form id="coach-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Plan
+            <select id="plan" name="plan">
+              <option value="Cohort seat — $1,200" selected>Cohort seat — $1,200</option>
+              <option value="Alumni toolkit — $299/mo">Alumni toolkit — $299/mo</option>
+              <option value="Cohort + Alumni toolkit — $1,200 + $299/mo">Cohort + Alumni toolkit — $1,200 + $299/mo</option>
+            </select>
+          </label>
+          <label>
+            Practice focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. nutrition / strength / habits" />
+          </label>
+          <label>
+            Preferred cohort window
+            <input type="text" id="window" name="window" placeholder="e.g. next open cohort" />
+          </label>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            Notes (optional)
+            <input type="text" id="notes" name="notes" placeholder="Credentials, client load, directory bio" />
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Email certification invoice request</button>
+          <a class="btn btn-secondary" href="teams.html">Teams for clinics</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Coach Certification · cohort + alumni toolkit ·
+    <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("coach-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
+          return;
+        }
+        var subject = "VitalAI Coach Certification — " + plan;
+        var body =
+          "VitalAI Coach Certification invoice request\n\n" +
+          "Plan: " + plan + "\n" +
+          "Practice focus: " + (focus || "—") + "\n" +
+          "Preferred cohort window: " + (windowVal || "—") + "\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send Coach Certification checkout or invoice.\n" +
+          "Includes: 4-week cohort, practice clients in sandbox, certificate, listing in coach directory.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

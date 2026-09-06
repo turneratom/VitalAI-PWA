@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turner Capital — Desk Pricing</title>
+  <meta name="description" content="Turner Capital desk pricing — early access waitlist, Desk Pilot at $2,500/mo, and capital partnerships." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #05080c;
+      --floor: #0a1018;
+      --desk: #101820;
+      --panel: #131c28;
+      --line: #1e2d3d;
+      --muted: #7a8fa3;
+      --text: #e6eef6;
+      --gold: #c9a227;
+      --gold-bright: #e0b84a;
+      --gold-dim: #7a6420;
+      --gain: #2fbf7a;
+      --crypto: #2f8fb0;
+      --equity: #c2783a;
+      --glow: rgba(201, 162, 39, 0.28);
+      --font-display: "Instrument Serif", Georgia, serif;
+      --font-ui: "Syne", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem clamp(1rem, 4vw, 3rem);
+    }
+    .nav-mark {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      color: var(--gold-bright);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-text:hover { color: var(--text); }
+    .nav-cta {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid rgba(201, 162, 39, 0.45);
+      padding: 0.55rem 0.95rem;
+      transition: background 0.25s var(--ease), border-color 0.25s;
+    }
+    .nav-cta:hover {
+      background: rgba(201, 162, 39, 0.12);
+      border-color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 72svh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-stage {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% 120%, rgba(201, 162, 39, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 12% 30%, rgba(47, 143, 176, 0.12), transparent 50%),
+        radial-gradient(ellipse 45% 35% at 88% 25%, rgba(194, 120, 58, 0.1), transparent 48%),
+        linear-gradient(180deg, #070b10 0%, #0a121c 45%, #05080c 100%);
+    }
+    .hero-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.55), transparent 78%);
+      opacity: 0.7;
+    }
+
+    .hero-chart {
+      position: absolute;
+      left: 0; right: 0; bottom: 12%;
+      height: 42%;
+      opacity: 0.5;
+      animation: chartDraw 2.4s var(--ease) both;
+    }
+    .hero-chart svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    @keyframes chartDraw {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 0.5; transform: none; }
+    }
+
+    .hero-scan {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.08) 3px,
+        rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+      animation: scanDrift 12s linear infinite;
+      opacity: 0.35;
+    }
+    @keyframes scanDrift {
+      from { transform: translateY(0); }
+      to { transform: translateY(4px); }
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 42vw;
+      max-width: 520px;
+      height: 42vw;
+      max-height: 520px;
+      border-radius: 50%;
+      right: -8%;
+      top: 8%;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.18), transparent 68%);
+      filter: blur(8px);
+      animation: pulseGlow 5.5s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.06); }
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: clamp(5.5rem, 12vh, 8rem) clamp(1rem, 4vw, 3rem) clamp(2.25rem, 5vh, 3.5rem);
+      max-width: 920px;
+      animation: fadeRise 1s var(--ease) both;
+    }
+    @keyframes fadeRise {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .brand-lockup {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 9vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--gold-bright);
+      margin-bottom: 1.1rem;
+      text-shadow: 0 0 60px rgba(201, 162, 39, 0.25);
+    }
+    .brand-lockup span {
+      display: block;
+      color: var(--text);
+      font-size: 0.42em;
+      letter-spacing: 0.02em;
+      margin-top: 0.35em;
+      font-style: italic;
+      opacity: 0.92;
+    }
+
+    .hero-lede {
+      max-width: 34rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      line-height: 1.55;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+    .hero-lede strong { color: var(--text); font-weight: 600; }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 1.25rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #a8861f, #d4b03a);
+      color: #0a0e14;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text);
+    }
+    .btn-ghost:hover { border-color: var(--gold-dim); }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 3vw, 1.5rem) 3.5rem;
+    }
+
+    .section-hd {
+      padding: 2.5rem 0 1.5rem;
+      max-width: 40rem;
+      animation: fadeRise 1s var(--ease) 0.15s both;
+    }
+    .section-hd h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+    }
+    .section-hd p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .offers {
+      display: grid;
+      gap: 1rem;
+      animation: fadeRise 1s var(--ease) 0.28s both;
+    }
+    @media (min-width: 800px) {
+      .offers { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+    }
+
+    .offer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding: 1.35rem 1.25rem 1.25rem;
+      background:
+        linear-gradient(165deg, var(--floor) 0%, #080e14 100%);
+      border: 1px solid var(--line);
+      min-height: 100%;
+      overflow: hidden;
+      transition: border-color 0.25s var(--ease), box-shadow 0.3s var(--ease), transform 0.25s var(--ease);
+    }
+    .offer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+    .offer > * { position: relative; z-index: 1; }
+
+    .offer:hover {
+      border-color: var(--gold-dim);
+      transform: translateY(-2px);
+    }
+
+    .offer.featured {
+      border-color: rgba(201, 162, 39, 0.55);
+      box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.2), 0 0 36px var(--glow);
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 162, 39, 0.14), transparent 55%),
+        linear-gradient(165deg, #121a24 0%, #080e14 100%);
+    }
+    .offer.featured:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.35), 0 0 48px var(--glow);
+    }
+
+    .offer-tag {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .offer.featured .offer-tag { color: var(--gold); }
+
+    .offer h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 3vw, 1.85rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .offer-price {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      letter-spacing: -0.02em;
+    }
+    .offer-price span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-left: 0.25rem;
+    }
+
+    .offer p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      font-weight: 500;
+      flex: 1;
+    }
+
+    .offer .btn { width: 100%; margin-top: 0.35rem; }
+
+    .disclaimer {
+      margin-top: 2rem;
+      padding: 0.85rem 1rem;
+      border: 1px dashed var(--line);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--gold-bright);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      .hero { min-height: 62svh; }
+      .hero-copy { padding-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="nav-mark" href="index.html">Turner Capital</a>
+    <div class="nav-links">
+      <a class="nav-text" href="index.html">Floor</a>
+      <a class="nav-text" href="brief.html">Brief $750</a>
+      <a class="nav-text" href="office-hours.html">Office hours</a>
+      <a class="nav-text" href="risk-desk.html">Risk desk</a>
+      <a class="nav-text" href="signals.html">Signals</a>
+      <a class="nav-text" href="diligence.html">Diligence</a>
+      <a class="nav-text" href="portfolio.html">Portfolio</a>
+      <a class="nav-text" href="hedge.html">Hedge</a>
+      <a class="nav-text" href="macro.html">Macro</a>
+      <a class="nav-text" href="liquidity.html">Liquidity</a>
+      <a class="nav-text" href="options.html">Options</a>
+      <a class="nav-text" href="credit.html">Credit</a>
+      <a class="nav-text" href="fx.html">FX</a>
+      <a class="nav-text" href="treasury.html">Treasury</a>
+      <a class="nav-text" href="vol.html">Vol</a>
+      <a class="nav-text" href="equity.html">Equity</a>
+      <a class="nav-text" href="commodities.html">Commodities</a>
+      <a class="nav-text" href="crypto.html">Crypto</a>
+      <a class="nav-text" href="alts.html">Alts</a>
+      <a class="nav-text" href="rates.html">Rates</a>
+      <a class="nav-text" href="curve.html">Curve</a>
+      <a class="nav-text" href="carry.html">Carry</a>
+      <a class="nav-text" href="basis.html">Basis</a>
+      <a class="nav-text" href="repo.html">Repo</a>
+      <a class="nav-text" href="swap.html">Swap</a>
+      <a class="nav-text" href="futures.html">Futures</a>
+      <a class="nav-text" href="skew.html">Skew</a>
+      <a class="nav-text" href="gamma.html">Gamma</a>
+      <a class="nav-text" href="vanna.html">Vanna</a>
+      <a class="nav-text" href="charm.html">Charm</a>
+      <a class="nav-text" href="vomma.html">Vomma</a>
+      <a class="nav-text" href="rho.html">Rho</a>
+      <a class="nav-text" href="color.html">Color</a>
+      <a class="nav-text" href="speed.html">Speed</a>
+      <a class="nav-text" href="ultima.html">Ultima</a>
+      <a class="nav-text" href="zomma.html">Zomma</a>
+      <a class="nav-text" href="vera.html">Vera</a>
+      <a class="nav-text" href="lambda.html">Lambda</a>
+      <a class="nav-text" href="kappa.html">Kappa</a>
+      <a class="nav-text" href="theta.html">Theta</a>
+      <a class="nav-text" href="eta.html">Eta</a>
+      <a class="nav-text" href="iota.html">Iota</a>
+      <a class="nav-text" href="epsilon.html">Epsilon</a>
+      <a class="nav-text" href="delta.html">Delta</a>
+      <a class="nav-text" href="phi.html">Phi</a>
+      <a class="nav-text" href="psi.html">Psi</a>
+      <a class="nav-text" href="omega.html">Omega</a>
+      <a class="nav-text" href="correlation.html">Correlation</a>
+      <a class="nav-text" href="dispersion.html">Dispersion</a>
+      <a class="nav-text" href="beta.html">Beta</a>
+      <a class="nav-text" href="alpha.html">Alpha</a>
+      <a class="nav-text" href="drawdown.html">Drawdown</a>
+      <a class="nav-text" href="sharpe.html">Sharpe</a>
+      <a class="nav-text" href="sortino.html">Sortino</a>
+      <a class="nav-text" href="calmar.html">Calmar</a>
+      <a class="nav-text" href="treynor.html">Treynor</a>
+      <a class="nav-text" href="information.html">Information</a>
+      <a class="nav-text" href="jensen.html">Jensen</a>
+      <a class="nav-text" href="ulcer.html">Ulcer</a>
+      <a class="nav-text" href="sterling.html">Sterling</a>
+      <a class="nav-text" href="burke.html">Burke</a>
+      <a class="nav-text" href="appraisal.html">Appraisal</a>
+      <a class="nav-text" href="valuation.html">Valuation</a>
+      <a class="nav-text" href="assessment.html">Assessment</a>
+      <a class="nav-text" href="scorecard.html">Scorecard</a>
+      <a class="nav-text" href="dashboard.html">Dashboard</a>
+      <a class="nav-text" href="benchmark.html">Benchmark</a>
+      <a class="nav-text" href="rating.html">Rating</a>
+      <a class="nav-text" href="quartile.html">Quartile</a>
+      <a class="nav-text" href="decile.html">Decile</a>
+      <a class="nav-text" href="percentile.html">Percentile</a>
+      <a class="nav-text" href="centile.html">Centile</a>
+      <a class="nav-text" href="rank.html">Rank</a>
+      <a class="nav-text" href="grade.html">Grade</a>
+      <a class="nav-text" href="tier.html">Tier</a>
+      <a class="nav-text" href="band.html">Band</a>
+      <a class="nav-text" href="stratum.html">Stratum</a>
+      <a class="nav-text" href="echelon.html">Echelon</a>
+      <a class="nav-text" href="standing.html">Standing</a>
+      <a class="nav-text" href="memo.html">Deal memo $5k</a>
+      <a class="nav-text" href="annual.html">Annual $25k</a>
+      <a class="nav-cta" href="pilot.html">Start Desk Pilot</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-glow"></div>
+      <div class="hero-chart">
+        <svg viewBox="0 0 1200 280" preserveAspectRatio="none" role="presentation">
+          <defs>
+            <linearGradient id="tapeFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(201,162,39,0.28)" />
+              <stop offset="100%" stop-color="rgba(201,162,39,0)" />
+            </linearGradient>
+          </defs>
+          <path d="M0,210 C80,205 120,180 180,188 C260,200 300,140 380,148 C460,156 500,100 580,110 C660,120 700,70 780,82 C860,94 920,48 1000,60 C1080,72 1140,40 1200,52 L1200,280 L0,280 Z" fill="url(#tapeFill)" />
+          <path d="M0,210 C80,205 120,180 180,188 C260,200 300,140 380,148 C460,156 500,100 580,110 C660,120 700,70 780,82 C860,94 920,48 1000,60 C1080,72 1140,40 1200,52" fill="none" stroke="#c9a227" stroke-width="2.5" opacity="0.85" />
+          <path d="M0,230 C100,224 160,210 240,214 C340,220 380,190 460,196 C560,204 600,168 700,174 C820,182 880,150 980,156 C1080,162 1140,140 1200,146" fill="none" stroke="#2f8fb0" stroke-width="1.5" opacity="0.45" />
+        </svg>
+      </div>
+      <div class="hero-scan"></div>
+    </div>
+    <div class="hero-copy">
+      <h1 class="brand-lockup">Turner Capital<span>Desk pricing for the agent floor.</span></h1>
+      <p class="hero-lede">
+        Three ways onto the desk — from a free waitlist to a paid pilot to a
+        <strong>capital partnership</strong> built around your book.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#offers">View offers</a>
+        <a class="btn btn-ghost" href="index.html">Back to the floor</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-hd">
+      <h2 id="offers-title">Choose your seat</h2>
+      <p>
+        Every path opens mail to the Tread Companies desk. Desk Pilot is the paid starting point —
+        twelve agents, two markets, one floor under your rules.
+      </p>
+    </div>
+
+    <section class="offers" id="offers" aria-labelledby="offers-title">
+      <article class="offer">
+        <div class="offer-tag">Entry</div>
+        <h3>Early Access Waitlist</h3>
+        <p class="offer-price">$0<span>invite list</span></p>
+        <p>
+          Join the queue for Turner Capital early access. No charge — we’ll reach out when a seat opens.
+        </p>
+        <a
+          class="btn btn-ghost"
+          href="mailto:brad@treadcompanies.com?subject=Early%20Access%20Waitlist&amp;body=Name%3A%0AFirm%20%2F%20interest%3A%0ANotes%3A%0A"
+        >Join waitlist</a>
+      </article>
+
+      <article class="offer featured">
+        <div class="offer-tag">Primary · Paid</div>
+        <h3>Desk Pilot</h3>
+        <p class="offer-price">$2,500<span>/mo</span></p>
+        <p>
+          Run the agent trading floor as a paid pilot — crypto and equity specialists on your capital and rules.
+          The desk that pays for itself in discipline.
+        </p>
+        <a class="btn btn-primary" href="pilot.html">Start Desk Pilot</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Prepaid · Best value</div>
+        <h3>Annual Desk</h3>
+        <p class="offer-price">$25,000<span>/yr</span></p>
+        <p>
+          Twelve months of Desk Pilot prepaid — save $5,000 vs monthly. One invoice, seat held for the year.
+        </p>
+        <a class="btn btn-primary" href="annual.html">Enroll annual — $25,000</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Research · Light</div>
+        <h3>Weekly Desk Brief</h3>
+        <p class="offer-price">$750<span>/mo</span></p>
+        <p>
+          Crypto + equity catalysts, risk flags, and position hygiene — weekly PDF. Prepaid year $7,500.
+        </p>
+        <a class="btn btn-primary" href="brief.html">Subscribe brief — $750/mo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Live · Sessions</div>
+        <h3>Desk Office Hours</h3>
+        <p class="offer-price">$1,500<span>/session</span></p>
+        <p>
+          60-min live desk with a crypto/equity specialist — prep note + follow-up memo. Monthly block (4) $5,000.
+        </p>
+        <a class="btn btn-primary" href="office-hours.html">Book office hours</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Ongoing · Risk</div>
+        <h3>Risk Overlay Desk</h3>
+        <p class="offer-price">$3,500<span>/mo</span></p>
+        <p>
+          Drawdown guards, correlation flags, and a weekly risk note for your crypto+equity book. Prepaid year $35,000.
+        </p>
+        <a class="btn btn-primary" href="risk-desk.html">Start risk desk</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Research · Signals</div>
+        <h3>Catalyst Signal Pack</h3>
+        <p class="offer-price">$1,200<span> / one-shot</span></p>
+        <p>
+          Curated catalyst calendar + ranked watchlist notes. Monthly signal desk $900/mo.
+        </p>
+        <a class="btn btn-primary" href="signals.html">Get signals</a>
+        <a class="btn btn-primary" href="diligence.html">Diligence memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">One-shot · Research</div>
+        <h3>Deal Memo</h3>
+        <p class="offer-price">$5,000<span>flat</span></p>
+        <p>
+          One opportunity underwritten for your desk — thesis, risks, sizing notes, kill criteria. No ongoing seat required.
+        </p>
+        <a class="btn btn-primary" href="memo.html">Commission memo — $5,000</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Review</div>
+        <h3>Portfolio Review</h3>
+        <p class="offer-price">$2,500<span> · $1,500/mo</span></p>
+        <p>
+          Holdings map, concentration flags, and rebalance notes for your crypto+equity book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="portfolio.html">Order portfolio review</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Hedge</div>
+        <h3>Hedge Overlay Memo</h3>
+        <p class="offer-price">$4,500<span> · $2,200/mo</span></p>
+        <p>
+          Hedge map, basis risk flags, and overlay sizing notes — one hedge pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="hedge.html">Order hedge memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Desk · Macro</div>
+        <h3>Macro Week Brief</h3>
+        <p class="offer-price">$1,800<span> · $900/mo</span></p>
+        <p>
+          Catalyst calendar, regime notes, and desk positioning flags — one macro pass for the week. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="macro.html">Order macro brief</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Liquidity</div>
+        <h3>Liquidity Stress Memo</h3>
+        <p class="offer-price">$3,200<span> · $1,600/mo</span></p>
+        <p>
+          Cash runway map, redemption stress flags, and liquidity ladder notes — one liquidity pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="liquidity.html">Order liquidity memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Options</div>
+        <h3>Options Overlay Memo</h3>
+        <p class="offer-price">$2,800<span> · $1,400/mo</span></p>
+        <p>
+          Options map, Greeks risk flags, and overlay sizing notes — one options pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="options.html">Order options memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Credit</div>
+        <h3>Credit Desk Memo</h3>
+        <p class="offer-price">$2,400<span> · $1,200/mo</span></p>
+        <p>
+          Facility map, covenant stress flags, and refinance path notes — one credit pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="credit.html">Order credit memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · FX</div>
+        <h3>FX Overlay Memo</h3>
+        <p class="offer-price">$2,100<span> · $1,050/mo</span></p>
+        <p>
+          Currency map, basis stress flags, and hedge ladder notes — one FX pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="fx.html">Order FX memo</a>
+      </article>
+
+      
+      <article class="offer">
+        <div class="offer-tag">Book · Treasury</div>
+        <h3>Treasury Overlay Memo</h3>
+        <p class="offer-price">$1,900<span> · $950/mo</span></p>
+        <p>
+          Curve map, duration stress flags, and roll ladder notes — one treasury pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="treasury.html">Order treasury memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Vol</div>
+        <h3>Volatility Overlay Memo</h3>
+        <p class="offer-price">$2,300<span> · $1,150/mo</span></p>
+        <p>
+          Vol surface map, regime flags, and hedge ladder notes — one volatility pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="vol.html">Order vol memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Equity</div>
+        <h3>Equity Overlay Memo</h3>
+        <p class="offer-price">$2,000<span> · $1,000/mo</span></p>
+        <p>
+          Factor map, stress flags, and sizing ladder notes — one equity pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="equity.html">Order equity memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Commodities</div>
+        <h3>Commodities Overlay Memo</h3>
+        <p class="offer-price">$1,700<span> · $850/mo</span></p>
+        <p>
+          Curve map, roll stress flags, and ladder notes — one commodities pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="commodities.html">Order commodities memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Crypto</div>
+        <h3>Crypto Overlay Memo</h3>
+        <p class="offer-price">$2,400<span> · $1,200/mo</span></p>
+        <p>
+          Funding map, basis stress flags, and perp ladder notes — one crypto pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="crypto.html">Order crypto memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Alts</div>
+        <h3>Alternatives Overlay Memo</h3>
+        <p class="offer-price">$2,600<span> · $1,300/mo</span></p>
+        <p>
+          Allocation map, liquidity stress flags, and sleeve ladder notes — one alts pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="alts.html">Order alts memo</a>
+      </article>
+
+
+      <article class="offer">
+        <div class="offer-tag">Book · Rates</div>
+        <h3>Rates Overlay Memo</h3>
+        <p class="offer-price">$1,850<span> · $925/mo</span></p>
+        <p>
+          Curve map, duration stress flags, and roll ladder notes — one rates pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="rates.html">Order rates memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Curve</div>
+        <h3>Yield Curve Memo</h3>
+        <p class="offer-price">$1,750<span> · $875/mo</span></p>
+        <p>
+          Curve map, butterfly stress flags, and fly ladder notes — one curve pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="curve.html">Order curve memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Carry</div>
+        <h3>Carry Trade Memo</h3>
+        <p class="offer-price">$1,650<span> · $825/mo</span></p>
+        <p>
+          Carry map, funding stress flags, and roll ladder notes — one carry pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="carry.html">Order carry memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Basis</div>
+        <h3>Basis Trade Memo</h3>
+        <p class="offer-price">$1,550<span> · $775/mo</span></p>
+        <p>
+          Basis map, cash-futures stress flags, and convergence ladder notes — one basis pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="basis.html">Order basis memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Repo</div>
+        <h3>Repo Desk Memo</h3>
+        <p class="offer-price">$1,450<span> · $725/mo</span></p>
+        <p>
+          Repo map, collateral stress flags, and term ladder notes — one repo pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="repo.html">Order repo memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Swap</div>
+        <h3>Swap Desk Memo</h3>
+        <p class="offer-price">$1,350<span> · $675/mo</span></p>
+        <p>
+          Swap map, spread stress flags, and tenor ladder notes — one swap pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="swap.html">Order swap memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Futures</div>
+        <h3>Futures Desk Memo</h3>
+        <p class="offer-price">$1,250<span> · $625/mo</span></p>
+        <p>
+          Futures map, roll stress flags, and contract ladder notes — one futures pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="futures.html">Order futures memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Skew</div>
+        <h3>Skew Desk Memo</h3>
+        <p class="offer-price">$1,150<span> · $575/mo</span></p>
+        <p>
+          Skew map, smile stress flags, and wing ladder notes — one skew pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="skew.html">Order skew memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Gamma</div>
+        <h3>Gamma Desk Memo</h3>
+        <p class="offer-price">$1,050<span> · $525/mo</span></p>
+        <p>
+          Gamma map, convexity stress flags, and hedge ladder notes — one gamma pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="gamma.html">Order gamma memo</a>
+      </article>
+
+      <article class="offer">
+        <div class="offer-tag">Book · Vanna</div>
+        <h3>Vanna Desk Memo</h3>
+        <p class="offer-price">$950<span> · $475/mo</span></p>
+        <p>
+          Vanna map, spot-vol stress flags, and surface ladder notes — one vanna pass for the book. PDF delivery.
+        </p>
+        <a class="btn btn-primary" href="vanna.html">Order vanna memo</a>
+      </article>
+
+<article class="offer">
+        <div class="offer-tag">Custom</div>
+        <h3>Capital Partnership</h3>
+        <p class="offer-price">Custom<span>on brief</span></p>
+        <p>
+          Structure a capital partnership around your book, mandate, and risk envelope.
+          Priced after a short desk conversation.
+        </p>
+        <a
+          class="btn btn-ghost"
+          href="mailto:brad@treadcompanies.com?subject=Capital%20Partnership&amp;body=Name%3A%0AFirm%20%2F%20interest%3A%0ANotes%3A%0A"
+        >Discuss partnership</a>
+      </article>
+    </section>
+
+    <p class="disclaimer">
+      Simulation only. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
+      Markets and performance shown elsewhere are illustrative. Past simulated performance is not indicative of future results.
+      Pricing reflects desk access and services — not a solicitation to invest.
+    </p>
+
+    <footer>
+      <span>Turner Capital · Desk pricing</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Desk%20Pilot">brad@treadcompanies.com</a>
+    </footer>
+  </main>
+</body>
+</html>

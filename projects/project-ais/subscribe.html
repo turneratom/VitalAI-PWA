@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe — VitalAI</title>
+  <meta name="description" content="Request VitalAI Pro or Elite — monthly or annual. Stripe when live; invoice/email subscribe always available." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tools/tools.css" />
+  <style>
+    .sub-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3.5rem;
+    }
+    .sub-wrap h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin: 0 0 0.5rem;
+    }
+    .sub-wrap .lede {
+      color: #444;
+      margin-bottom: 1.5rem;
+      max-width: 36rem;
+    }
+    .sub-card {
+      background: #fff;
+      border: 1px solid #d7e2e6;
+      padding: 1.5rem;
+      box-shadow: 0 8px 28px rgba(20, 40, 48, 0.06);
+    }
+    .sub-card h3 { margin: 0 0 0.35rem; }
+    .sub-card .hint {
+      color: #555;
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+    }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #3a5560;
+    }
+    input, select {
+      width: 100%;
+      border: 1px solid #c5d4da;
+      padding: 0.75rem 0.85rem;
+      font: inherit;
+      font-size: 0.95rem;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+    }
+    input:focus, select:focus {
+      outline: 2px solid #1a6b7a;
+      outline-offset: 1px;
+    }
+    .actions {
+      margin-top: 1.15rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .plan-grid {
+      display: grid;
+      gap: 0.65rem;
+      margin: 1.5rem 0 0;
+      font-size: 0.92rem;
+    }
+    .plan-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #e2ebef;
+    }
+    .plan-row strong { color: #1a6b7a; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Subscribe</p>
+      </div>
+      <nav class="nav-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="teams.html">Teams</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="coach.html">Coach</a>
+        <a href="family.html">Family</a>
+        <a href="clinic.html">Clinic</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="sleep.html">Sleep</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="immune.html">Immune</a>
+        <a href="tools/index.html">Free Tools</a>
+        <a href="index.html">App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sub-wrap">
+    <h2>Request your VitalAI plan</h2>
+    <p class="lede">
+      Stripe checkout when configured. Until then, this form opens a subscribe request so the sale still lands.
+    </p>
+
+    <section class="sub-card" aria-labelledby="form-title">
+      <h3 id="form-title">Subscribe request</h3>
+      <p class="hint">Pick a plan. We reply with checkout or invoice within one business day.</p>
+      <form id="sub-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Plan
+            <select id="plan" name="plan">
+              <option value="Pro monthly — $9.99/mo">Pro monthly — $9.99/mo</option>
+              <option value="Pro annual — $99/yr" selected>Pro annual — $99/yr</option>
+              <option value="Elite monthly — $29.99/mo">Elite monthly — $29.99/mo</option>
+              <option value="Elite annual — $299/yr">Elite annual — $299/yr</option>
+            </select>
+          </label>
+          <label>
+            Name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email for account
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            Notes (optional)
+            <input type="text" id="notes" name="notes" placeholder="Team size, current tool, etc." />
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Email subscribe request</button>
+          <a class="btn btn-secondary" href="pricing.html">Back to pricing</a>
+        </div>
+      </form>
+    </section>
+
+    <div class="plan-grid" aria-label="Plan prices">
+      <div class="plan-row"><span>Pro monthly</span><strong>$9.99/mo</strong></div>
+      <div class="plan-row"><span>Pro annual</span><strong>$99/yr</strong></div>
+      <div class="plan-row"><span>Elite monthly</span><strong>$29.99/mo</strong></div>
+      <div class="plan-row"><span>Elite annual</span><strong>$299/yr</strong></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Cancel anytime. Checkout via Stripe when configured; mailto backup always on ·
+    <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("sub-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var plan = document.getElementById("plan").value;
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
+          return;
+        }
+        var subject = "VitalAI subscribe — " + plan;
+        var body =
+          "VitalAI subscribe request\n\n" +
+          "Plan: " + plan + "\n" +
+          "Name: " + name + "\n" +
+          "Email for account: " + email + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send checkout link or invoice.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

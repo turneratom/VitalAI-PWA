@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andes Expedition — Meridian</title>
+  <meta name="description" content="An 18-day Meridian Expedition through Peru and Bolivia: Cusco, Machu Picchu, Lake Titicaca, La Paz, and the Uyuni salt flats." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2430;
+      --ink-soft: #3d5a68;
+      --mist: #f3f7f9;
+      --paper: #f8fbfc;
+      --sea: #1a6b7a;
+      --sea-deep: #0f4f5c;
+      --copper: #b56a3c;
+      --line: rgba(12, 36, 48, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 6vw; color: #fff;
+    }
+    .nav-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem; letter-spacing: 0.06em; font-weight: 500;
+    }
+    .nav-cta {
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.45); padding-bottom: 0.15rem;
+    }
+    .hero {
+      position: relative; min-height: 88svh; display: grid; align-items: end;
+      color: #fff; overflow: hidden;
+    }
+    .hero-media { position: absolute; inset: 0; }
+    .hero-media img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 45%;
+      transform: scale(1.05); animation: drift 22s var(--ease) infinite alternate;
+    }
+    @keyframes drift {
+      from { transform: scale(1.05); }
+      to { transform: scale(1.12) translate3d(-1%, -0.6%, 0); }
+    }
+    .hero-veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,22,30,0.28) 0%, rgba(8,22,30,0.12) 40%, rgba(8,22,30,0.82) 100%),
+        radial-gradient(ellipse at 70% 15%, rgba(26,107,122,0.28), transparent 55%);
+    }
+    .hero-copy {
+      position: relative; z-index: 2; padding: 0 6vw 10vh; max-width: 40rem;
+      animation: rise 1.1s var(--ease) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .kicker {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 500; margin-bottom: 0.85rem; color: rgba(255,255,255,0.75);
+    }
+    .hero-brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem); letter-spacing: 0.06em;
+      font-weight: 500; margin-bottom: 0.55rem; color: rgba(255,255,255,0.92);
+    }
+    .hero h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.8rem, 8vw, 5.2rem); line-height: 0.95;
+      font-weight: 500; letter-spacing: -0.03em; margin-bottom: 1rem;
+    }
+    .hero-sub {
+      font-weight: 300; color: rgba(255,255,255,0.8); max-width: 28rem; margin-bottom: 1.25rem;
+    }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 2rem;
+      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.95rem 1.55rem; font-size: 0.8rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border: none;
+      transition: transform 0.35s var(--ease), background 0.35s var(--ease);
+    }
+    .btn-primary { background: #fff; color: var(--ink); }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--mist); }
+    .btn-ghost {
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.45);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .btn-sea { background: var(--sea); color: #fff; }
+    .btn-sea:hover { background: var(--sea-deep); transform: translateY(-2px); }
+    section { padding: 5.5rem 6vw; }
+    .section-kicker {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sea); font-weight: 500; margin-bottom: 0.85rem;
+    }
+    .section-title {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; font-weight: 500;
+      letter-spacing: -0.02em; max-width: 16ch; margin-bottom: 1rem;
+    }
+    .section-lead { font-weight: 300; color: var(--ink-soft); max-width: 34rem; }
+    .days { background: var(--mist); }
+    .day-list { margin-top: 2.75rem; border-top: 1px solid var(--line); }
+    .day {
+      display: grid; gap: 0.5rem 2rem; padding: 1.6rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    @media (min-width: 760px) {
+      .day { grid-template-columns: 6.5rem 1fr; align-items: baseline; }
+    }
+    .day-num {
+      font-family: "Fraunces", Georgia, serif; font-size: 1.35rem; color: var(--copper);
+    }
+    .day h3 { font-size: 1.15rem; font-weight: 500; margin-bottom: 0.35rem; }
+    .day p { font-weight: 300; color: var(--ink-soft); max-width: 40rem; }
+    .includes {
+      background: linear-gradient(145deg, #dfecef 0%, #f5f8fa 48%, #e8e4dc 100%);
+    }
+    .includes ul {
+      list-style: none; margin-top: 2rem; display: grid; gap: 0.85rem; max-width: 36rem;
+    }
+    .includes li {
+      font-weight: 300; color: var(--ink-soft); padding-left: 1.25rem; position: relative;
+    }
+    .includes li::before {
+      content: "—"; position: absolute; left: 0; color: var(--copper);
+    }
+    .cta-band { background: var(--ink); color: #fff; }
+    .cta-band .section-kicker { color: rgba(255,255,255,0.65); }
+    .cta-band .section-title { color: #fff; }
+    .cta-band .section-lead { color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
+    footer {
+      background: var(--ink); color: rgba(255,255,255,0.55);
+      padding: 1.5rem 6vw; display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem;
+      justify-content: space-between; font-size: 0.85rem; font-weight: 300;
+    }
+    footer strong {
+      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: #fff;
+    }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href="../index.html">Meridian</a>
+    <a class="nav-cta" href="../hold.html">Hold dates</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Andes Expedition">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=2400&q=80"
+          alt="Machu Picchu terraces under Andean sky"
+          width="2400"
+          height="1600"
+        />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="kicker">Expedition · sample itinerary</p>
+        <p class="hero-brand">Meridian</p>
+        <h1>Andes Expedition</h1>
+        <p class="hero-sub">Eighteen days from Lima’s Pacific edge through Cusco and Machu Picchu, across Lake Titicaca into Bolivia, and out onto the Uyuni salt flats — altitude paced so the map stays kind.</p>
+        <p class="meta"><span>18 days</span><span>2 adults</span><span>From $18,500</span></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:brad@treadcompanies.com?subject=Andes%20Expedition">Request this Expedition</a>
+          <a class="btn btn-ghost" href="../index.html#journeys">All journeys</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="days" aria-labelledby="days-title">
+      <p class="section-kicker">The route</p>
+      <h2 class="section-title" id="days-title">Two countries. One high arc.</h2>
+      <p class="section-lead">Flights, border timing, and altitude days are arranged. You keep the hours that don’t need a plan.</p>
+      <div class="day-list">
+        <article class="day">
+          <span class="day-num">Day 01</span>
+          <div>
+            <h3>Arrive Lima</h3>
+            <p>Private transfer from the airport. Settle into a Miraflores or Barranco stay. Soft evening — ocean air, a reserved dinner, early night before the climb inland.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 02</span>
+          <div>
+            <h3>Lima at walking pace</h3>
+            <p>Host morning through Barranco or the historic center. Long lunch by the Pacific. Afternoon free for a gallery, a market, or rest before the Andes.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 03</span>
+          <div>
+            <h3>Fly to Cusco · acclimatize</h3>
+            <p>Morning flight into the highlands. Check into a quiet stay near the Plaza. Coca tea, a short walk if you feel ready — nothing forced on day one at altitude.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 04</span>
+          <div>
+            <h3>Cusco lanes &amp; plazas</h3>
+            <p>Gentle host morning through San Blas and the cathedral quarter. Long lunch. Afternoon free to nap, wander, or sit with the light on the stones.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 05</span>
+          <div>
+            <h3>Sacred Valley</h3>
+            <p>Private drive down to Pisac or Chinchero — markets, terraces, and a valley lunch that doesn’t rush. Overnight in the Sacred Valley at a lower, kinder altitude.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 06</span>
+          <div>
+            <h3>Valley ruins &amp; Ollantaytambo</h3>
+            <p>Morning at a quieter site timed to miss the crush. Afternoon in Ollantaytambo’s living Inca streets. Early dinner before the next day’s train.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 07</span>
+          <div>
+            <h3>Machu Picchu</h3>
+            <p>Train into Aguas Calientes. Guided visit of Machu Picchu with timed entry and room to pause. Overnight below the citadel — or return to the valley if you prefer.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 08</span>
+          <div>
+            <h3>Second light or return to Cusco</h3>
+            <p>Optional dawn return to the site if tickets allow — or a slow train back to Cusco with the afternoon free. Your call by the night before.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 09</span>
+          <div>
+            <h3>Open day in Cusco</h3>
+            <p>Left blank on purpose — a weaving workshop, Sacsayhuamán if you have the legs, shopping, or nothing at all in a courtyard café.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 10</span>
+          <div>
+            <h3>Overland to Lake Titicaca</h3>
+            <p>Scenic drive or rail toward Puno. Arrive to lake light and a waterfront stay. Soft evening — altitude again, so dinner stays early.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 11</span>
+          <div>
+            <h3>Titicaca islands</h3>
+            <p>Private boat day on the lake — Uros and Taquile or a quieter island route with a home lunch. Return by late afternoon with the water still silver.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 12</span>
+          <div>
+            <h3>Cross into Bolivia</h3>
+            <p>Border formalities handled. Continue to Copacabana or onward to La Paz. Settle into a high-city stay with views over the bowl of lights.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 13</span>
+          <div>
+            <h3>La Paz at walking pace</h3>
+            <p>Host morning through the historic center and a market that fits your brief. Cable car if you want the long view. Afternoon free for rest or a quiet café.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 14</span>
+          <div>
+            <h3>South to the salt flats</h3>
+            <p>Flight or private transfer toward Uyuni. Check into a desert or salt-edge stay. Briefing for the flats — early night under a hard, clear sky.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 15</span>
+          <div>
+            <h3>Salar de Uyuni</h3>
+            <p>Full day on the salt with a private driver-guide — Isla Incahuasi, endless horizon, and lunch out on the white. Light and silence do most of the talking.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 16</span>
+          <div>
+            <h3>Lagunas or open desert day</h3>
+            <p>South toward the colored lagoons and volcano rim if the season and roads allow — or a second, slower pass on the salar. We hold both options until you choose.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 17</span>
+          <div>
+            <h3>Return to La Paz</h3>
+            <p>Morning transfer or flight north. One last reserved dinner in the city. Pack without haste; the hard miles are behind you.</p>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-num">Day 18</span>
+          <div>
+            <h3>Departure</h3>
+            <p>Late checkout where possible. Private transfer to El Alto — timed without drama for your international flight.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="includes" aria-labelledby="includes-title">
+      <p class="section-kicker">Included</p>
+      <h2 class="section-title" id="includes-title">What Meridian handles.</h2>
+      <ul>
+        <li>Seventeen nights in vetted stays across Lima, Cusco, the Sacred Valley, Puno, La Paz, and Uyuni</li>
+        <li>Domestic flights (Lima–Cusco and La Paz–Uyuni legs as routed) and private airport transfers</li>
+        <li>Sacred Valley driver days, Machu Picchu train and timed entry, and Titicaca private boat day</li>
+        <li>Peru–Bolivia border support and private Uyuni salt-flat expedition days</li>
+        <li>Host mornings in Lima, Cusco, and La Paz on key days</li>
+        <li>Eight reserved lunches or dinners with local hosts</li>
+        <li>On-trip line to Meridian for altitude pacing and changes</li>
+      </ul>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <p class="section-kicker">Hold it</p>
+      <h2 class="section-title" id="cta-title">Tell us your season. We’ll lock the Andes.</h2>
+      <p class="section-lead">Send dates and who you’re traveling with. We reply with availability, altitude pacing, and a tailored quote.</p>
+      <a class="btn btn-sea" href="mailto:brad@treadcompanies.com?subject=Andes%20Expedition">Email Meridian</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Meridian</strong> · Andes Expedition</p>
+    <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
+  </footer>
+</body>
+</html>

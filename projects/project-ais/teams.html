@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitalAI Teams — Clinic &amp; Coach Plans</title>
+  <meta name="description" content="VitalAI for clinics and coaching teams. Team plan from $49/seat/mo or $499/seat/yr. Shared coaching seats, admin, and priority support." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tools/tools.css" />
+  <style>
+    .team-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3.5rem; }
+    .team-wrap h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 0.5rem; }
+    .team-wrap .lede { color: #444; margin-bottom: 1.5rem; max-width: 38rem; }
+    .team-card {
+      background: #fff; border: 1px solid #d7e2e6; padding: 1.5rem;
+      box-shadow: 0 8px 28px rgba(20, 40, 48, 0.06); margin-bottom: 1.5rem;
+    }
+    .team-card h3 { margin: 0 0 0.35rem; }
+    .team-card .hint { color: #555; font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .fields { display: grid; gap: 0.85rem; }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full { grid-column: 1 / -1; }
+    }
+    label {
+      display: grid; gap: 0.3rem; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: #3a5560;
+    }
+    input, select {
+      width: 100%; border: 1px solid #c5d4da; padding: 0.75rem 0.85rem;
+      font: inherit; font-size: 0.95rem; text-transform: none; letter-spacing: normal; font-weight: 400;
+    }
+    input:focus, select:focus { outline: 2px solid #1a6b7a; outline-offset: 1px; }
+    .actions { margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .plan-grid { display: grid; gap: 0.65rem; margin-top: 1.5rem; font-size: 0.92rem; }
+    .plan-row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding: 0.65rem 0; border-bottom: 1px solid #e2ebef;
+    }
+    .plan-row strong { color: #1a6b7a; }
+    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.45rem; color: #444; }
+    .perk-list li::before { content: "— "; color: #1a6b7a; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
+        <p>Teams</p>
+      </div>
+      <nav class="nav-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="subscribe.html">Subscribe</a>
+        <a href="whitelabel.html">White-label</a>
+        <a href="api.html">API</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="coach.html">Coach</a>
+        <a href="family.html">Family</a>
+        <a href="clinic.html">Clinic</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="sleep.html">Sleep</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="focus.html">Focus</a>
+        <a href="stress.html">Stress</a>
+        <a href="longevity.html">Longevity</a>
+        <a href="mobility.html">Mobility</a>
+        <a href="metabolic.html">Metabolic</a>
+        <a href="hydration.html">Hydration</a>
+        <a href="gut.html">Gut</a>
+        <a href="hormone.html">Hormone</a>
+        <a href="immune.html">Immune</a>
+        <a href="tools/index.html">Free Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="team-wrap">
+    <h2>VitalAI for clinics &amp; coaching teams</h2>
+    <p class="lede">
+      Shared seats for coaches, clinicians, and staff. Stripe when live — until then this form emails a team invoice request so the deal still closes.
+    </p>
+
+    <section class="team-card" aria-labelledby="plans-title">
+      <h3 id="plans-title">Team pricing</h3>
+      <p class="hint">Minimum 3 seats. Admin dashboard + shared coaching workspace included.</p>
+      <div class="plan-grid">
+        <div class="plan-row"><span>Team monthly</span><strong>$49 / seat / mo</strong></div>
+        <div class="plan-row"><span>Team annual</span><strong>$499 / seat / yr</strong></div>
+      </div>
+      <ul class="perk-list">
+        <li>Shared client notes &amp; photo analysis seats</li>
+        <li>Admin invite / revoke</li>
+        <li>Priority email support</li>
+        <li>Annual saves ~2 months per seat</li>
+      </ul>
+    </section>
+
+    <section class="team-card" aria-labelledby="form-title">
+      <h3 id="form-title">Request team invoice</h3>
+      <p class="hint">Tell us seats and cadence. We reply with checkout or invoice within one business day.</p>
+      <form id="team-form" novalidate>
+        <div class="fields">
+          <label class="full">
+            Plan
+            <select id="plan" name="plan">
+              <option value="Team monthly — $49/seat/mo" selected>Team monthly — $49/seat/mo</option>
+              <option value="Team annual — $499/seat/yr">Team annual — $499/seat/yr</option>
+            </select>
+          </label>
+          <label>
+            Seats (min 3)
+            <input type="number" id="seats" name="seats" min="3" value="5" required />
+          </label>
+          <label>
+            Organization
+            <input type="text" id="org" name="org" autocomplete="organization" />
+          </label>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Work email
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            Notes (optional)
+            <input type="text" id="notes" name="notes" placeholder="Clinic type, rollout date, etc." />
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Email team invoice request</button>
+          <a class="btn btn-secondary" href="pricing.html">Individual pricing</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Teams · cancel seats anytime ·
+    <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("team-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var plan = document.getElementById("plan").value;
+        var seats = (document.getElementById("seats").value || "").trim();
+        var org = (document.getElementById("org").value || "").trim();
+        var name = (document.getElementById("name").value || "").trim();
+        var email = (document.getElementById("email").value || "").trim();
+        var notes = (document.getElementById("notes").value || "").trim();
+        if (!name || !email || !seats || Number(seats) < 3) {
+          document.getElementById(!name ? "name" : !email ? "email" : "seats").focus();
+          return;
+        }
+        var subject = "VitalAI Teams — " + plan + " × " + seats + " seats";
+        var body =
+          "VitalAI Teams invoice request\n\n" +
+          "Plan: " + plan + "\n" +
+          "Seats: " + seats + "\n" +
+          "Organization: " + (org || "—") + "\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send team checkout or invoice.";
+        window.location.href =
+          "mailto:brad@treadcompanies.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
