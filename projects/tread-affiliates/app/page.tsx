@@ -291,6 +291,9 @@ export default function HomePage() {
             <a href="/rtp" className="transition hover:text-signal">
               RTP
             </a>
+            <a href="/fednow" className="transition hover:text-signal">
+              FedNow
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

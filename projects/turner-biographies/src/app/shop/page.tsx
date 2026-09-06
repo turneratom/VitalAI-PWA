@@ -509,6 +509,12 @@ export default function ShopPage() {
               Folio-Slip · from $1
             </Link>
             <Link
+              href="/leaf"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Leaf · from $1
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

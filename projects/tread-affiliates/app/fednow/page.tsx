@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Apportionment Kit — Tread Affiliates",
+  title: "Affiliate FedNow Kit — Tread Affiliates",
   description:
-    "Affiliate Apportionment Kit — one-time sprint $25 or monthly Apportionment kit $5/mo. Apportionment plan, Apportionment mix, Apportionment pairing. Invoice by email.",
+    "Affiliate FedNow Kit — one-time sprint $2 or monthly FedNow kit $1/mo. FedNow plan, FedNow mix, FedNow pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Apportionment Kit — Tread Affiliates",
-    description: "Sprint $25 · Monthly desk $5/mo. Apportionment plan, Apportionment mix, Apportionment pairing.",
+    title: "Affiliate FedNow Kit — Tread Affiliates",
+    description: "Sprint $2 · Monthly desk $1/mo. FedNow plan, FedNow mix, FedNow pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Apportionment kit",
-    price: "$25",
+    title: "FedNow kit",
+    price: "$2",
     period: " one-time",
     points: [
-      "Apportionment plan across your primary rails",
+      "FedNow plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Apportionment kit execution checklist",
+      "30-day FedNow kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Apportionment kit — $25",
-      "I want an Affiliate Apportionment kit ($25).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates FedNow kit — $2",
+      "I want an Affiliate FedNow kit ($2).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $25",
+    cta: "Request sprint — $2",
   },
   {
     tag: "Desk",
-    title: "Monthly Apportionment kit",
-    price: "$5",
+    title: "Monthly FedNow kit",
+    price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Apportionment kit and ROAS review",
+      "Monthly FedNow kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Apportionment kit — $5/mo",
-      "I want a Monthly Apportionment kit ($5/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates FedNow kit — $1/mo",
+      "I want a Monthly FedNow kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $5/mo",
+    cta: "Request desk — $1/mo",
   },
 ];
 
-export default function ApportionmentPage() {
+export default function FednowPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -93,16 +93,11 @@ export default function ApportionmentPage() {
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
-            <Link href="/apportionment" className="transition hover:text-signal">Apportionment kit</Link>
-<Link href="/distribution" className="transition hover:text-signal">Distribution kit</Link>
-<Link href="/disbursement" className="transition hover:text-signal">Disbursement kit</Link>
-<Link href="/remittal" className="transition hover:text-signal">Remittal kit</Link>
-<Link href="/transfer" className="transition hover:text-signal">Transfer kit</Link>
-<Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
+            <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
             <Link href="/rtp" className="transition hover:text-signal">RTP kit</Link>
             <Link href="/fednow" className="transition hover:text-signal">FedNow kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Apportionment kit</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">FedNow kit</a>
           </nav>
         </div>
       </header>
@@ -110,17 +105,17 @@ export default function ApportionmentPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Apportionment kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · FedNow kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Apportionment kit packages that convert comparison-rail traffic — not vanity posts.
+            FedNow kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Apportionment plan, Apportionment mix, and Apportionment pairing.
+            One-time sprint or monthly desk: FedNow plan, FedNow mix, and FedNow pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Apportionment kit packages
+              See FedNow kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -132,7 +127,7 @@ export default function ApportionmentPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Apportionment kit.
+          Sprint once, or keep a monthly FedNow kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -161,7 +156,7 @@ export default function ApportionmentPage() {
 
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
-          <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
+          <p className="max-w-xl text-white/70">Prefer featured placement or operator cofednowing? Same inbox.</p>
           <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Media" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>
