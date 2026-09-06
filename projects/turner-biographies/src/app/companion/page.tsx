@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Large Print Rights",
+  title: "Companion Edition Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for large print — Single-title large print $7,500 or Catalog large print slate $19,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for companion edition — Single-title companion edition $8,500 or Catalog companion edition slate $22,000. Direct inquiry by email.",
   openGraph: {
-    title: "Large Print Rights — Turner Biographies",
-    description: "Single-title large print $7,500 · Catalog large print slate $19,000.",
+    title: "Companion Edition Rights — Turner Biographies",
+    description: "Single-title companion edition $8,500 · Catalog companion edition slate $22,000.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Run",
-    title: "Single-title large print",
-    price: "$7,500",
+    title: "Single-title companion edition",
+    price: "$8,500",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title in large-print format — territory, term, and exclusivity set in the agreement.",
+      "Rights to license one Firebrand / Greatest Humans title as a companion edition — territory, term, and exclusivity set in the agreement.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20single-run%20%249%2C000&body=I%20want%20Single-run%20serial%20print%20rights%20(%249%2C000).%0A%0ATitle%3A%0AIssues%20%2F%20format%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License run — $7,500",
+    cta: "License run — $8,500",
   },
   {
     tag: "Slate",
-    title: "Catalog large print slate",
-    price: "$19,000",
+    title: "Catalog companion edition slate",
+    price: "$22,000",
     detail:
-      "Multi-title or multi-issue large print slate across Firebrand / Greatest Humans — one agreement for a broader catalog run.",
+      "Multi-title or multi-issue companion edition slate across Firebrand / Greatest Humans — one agreement for a broader companion slate.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20slate%20%2424%2C000&body=I%20want%20Multi-issue%20serial%20print%20slate%20rights%20(%2424%2C000).%0A%0ATitles%20%2F%20slate%3A%0AIssues%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $19,000",
+    cta: "License slate — $22,000",
   },
 ];
 
-export default function LargePrintPage() {
+export default function CompanionPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,20 +42,19 @@ export default function LargePrintPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Large Print Rights
+            Companion Edition Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate large print licensing for Firebrand and The Greatest Humans —
+            Run and slate companion edition licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/serial-print" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/large-print" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Serialization
             </Link>
-            <Link href="/companion" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Companion</Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
             </Link>
@@ -73,7 +72,7 @@ export default function LargePrintPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two large-print tracks.
+            Two companion tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -98,11 +97,11 @@ export default function LargePrintPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need serial print instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Large print covers large-print editions. Serialization covers digital chapter drops.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need large print instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Companion edition covers companion editions with extras. Serialization covers digital chapter drops.</p>
           </div>
-          <Link href="/serial-print" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-            Serial print
+          <Link href="/large-print" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Large print
           </Link>
         </div>
       </section>

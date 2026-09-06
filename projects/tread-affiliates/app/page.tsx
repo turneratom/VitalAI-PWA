@@ -123,6 +123,9 @@ export default function HomePage() {
             <a href="/retail" className="transition hover:text-signal">
               Retail
             </a>
+            <a href="/catalog" className="transition hover:text-signal">
+              Catalog
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

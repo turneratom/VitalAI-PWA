@@ -84,6 +84,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link className="transition hover:text-bone" href="/large-print">
                 Large print
               </Link>
+              <Link className="transition hover:text-bone" href="/companion">
+                Companion
+              </Link>
               <Link className="transition hover:text-bone" href="/translation">
                 Translation
               </Link>

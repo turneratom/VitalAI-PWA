@@ -105,6 +105,9 @@ export default function AuditPage() {
             <Link href="/retail" className="transition hover:text-signal">
               Retail
             </Link>
+            <Link href="/catalog" className="transition hover:text-signal">
+              Catalog
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
