@@ -20,7 +20,7 @@ const packages = [
     tag: "Sprint",
     title: "Holdback kit",
     price: "$155",
-    holdback: " one-time",
+    period: " one-time",
     points: [
       "Holdback plan across your primary rails",
       "Creator mix and post bands for primary funnels",
@@ -37,7 +37,7 @@ const packages = [
     tag: "Desk",
     title: "Monthly Holdback kit",
     price: "$80",
-    holdback: "/mo",
+    period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
       "Monthly Holdback kit and ROAS review",
@@ -88,6 +88,7 @@ export default function HoldbackPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
             <Link href="/holdback" className="transition hover:text-signal">Holdback kit</Link>
+            <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Holdback kit</a>
           </nav>
         </div>
@@ -127,7 +128,7 @@ export default function HoldbackPage() {
               <h3 className="mt-3 font-display text-2xl font-extrabold">{pkg.title}</h3>
               <p className="mt-2 text-3xl font-extrabold text-ink">
                 {pkg.price}
-                <span className="text-base font-semibold text-ink/50">{pkg.holdback}</span>
+                <span className="text-base font-semibold text-ink/50">{pkg.period}</span>
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-ink/75">
                 {pkg.points.map((point) => (

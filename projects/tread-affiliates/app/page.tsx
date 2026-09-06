@@ -225,6 +225,9 @@ export default function HomePage() {
             <a href="/holdback" className="transition hover:text-signal">
               Holdback
             </a>
+            <a href="/clawback" className="transition hover:text-signal">
+              Clawback
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
