@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Invoice — Meridian Gift &amp; Corporate</title>
-  <meta name="description" content="Request a Meridian invoice for a Gift Escape certificate (from $5,800) or corporate retreat (from $28,000)." />
+  <title>Journey Hold Deposit — Meridian</title>
+  <meta name="description" content="Lock Meridian journey dates with a $2,500 refundable hold deposit. Applied to your Escape, Crossing, or Expedition." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -24,8 +24,7 @@
     body {
       font-family: "Sora", sans-serif;
       color: var(--ink);
-      background:
-        linear-gradient(160deg, #dfecef 0%, #f5f8fa 48%, #ebe4d8 100%);
+      background: linear-gradient(155deg, #dfecef 0%, #f6f9fb 50%, #ebe5da 100%);
       min-height: 100vh;
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
@@ -53,8 +52,13 @@
     }
     .hero-line {
       font-family: "Fraunces", Georgia, serif;
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem); margin-bottom: 0.75rem;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem); margin-bottom: 0.5rem;
       animation: rise 0.9s var(--ease) 0.08s both;
+    }
+    .price {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.6rem; color: var(--sea); margin-bottom: 0.85rem;
+      animation: rise 0.9s var(--ease) 0.1s both;
     }
     .hero-sub {
       font-weight: 300; color: var(--ink-soft); max-width: 34rem; margin-bottom: 2rem;
@@ -92,10 +96,8 @@
       padding: 0.75rem 0.9rem; font: inherit; font-size: 0.95rem;
       font-weight: 300; color: var(--ink); letter-spacing: normal; text-transform: none;
     }
-    input:focus, select:focus, textarea:focus {
-      outline: none; border-color: var(--sea);
-    }
-    textarea { min-height: 5rem; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sea); }
+    textarea { min-height: 4.5rem; resize: vertical; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
@@ -106,17 +108,17 @@
     .btn-sea:hover { background: var(--sea-deep); transform: translateY(-1px); }
     .actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .hint { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); max-width: 28rem; }
-    .prices {
-      margin-top: 1.75rem; display: grid; gap: 0.75rem;
+    .rules {
+      margin-top: 1.75rem; display: grid; gap: 0.85rem;
       animation: rise 0.9s var(--ease) 0.28s both;
     }
-    .price-row {
-      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    .rule {
       padding: 0.85rem 0; border-bottom: 1px solid var(--line);
-      font-size: 0.95rem;
+      font-weight: 300; color: var(--ink-soft); font-size: 0.95rem;
     }
-    .price-row strong {
-      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: var(--sea);
+    .rule strong {
+      display: block; font-family: "Fraunces", Georgia, serif;
+      font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 1.05rem;
     }
     footer {
       padding: 1.25rem 6vw; font-size: 0.85rem; font-weight: 300; color: var(--ink-soft);
@@ -131,27 +133,29 @@
   <header class="nav">
     <a class="nav-brand" href="index.html">Meridian</a>
     <div class="nav-links">
-      <a class="nav-link" href="gift.html">Offers</a>
-      <a class="nav-link" href="hold.html">Hold</a>
-      <a class="nav-link" href="gift-certificate.html">Certificate</a>
+      <a class="nav-link" href="index.html#journeys">Journeys</a>
+      <a class="nav-link" href="gift.html">Gift</a>
+      <a class="nav-link" href="invoice.html">Invoice</a>
     </div>
   </header>
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Request an invoice. Travel when ready.</p>
-    <p class="hero-sub">Gift Escape from $5,800 or corporate retreat from $28,000. Fill the brief — your mail client opens with a prefilled invoice request.</p>
+    <p class="hero-line">Hold the dates. Draw the map later.</p>
+    <p class="price">$2,500 refundable hold</p>
+    <p class="hero-sub">A deposit that locks your window while we sketch the Escape, Crossing, or Expedition. Applied in full to the journey invoice — refundable if you cancel before planning begins.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Invoice request</h2>
-      <p class="panel-lead">No card form yet. We invoice, then lock dates and hosts.</p>
-      <form id="invoice-form" novalidate>
+      <h2 id="form-title">Request hold invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $2,500, then hold hosts and dates for 14 days while the brief is written.</p>
+      <form id="hold-form" novalidate>
         <div class="fields">
           <label class="full">
-            Offer
-            <select id="offer" name="offer">
-              <option value="Gift Escape certificate — from $5,800">Gift Escape certificate — from $5,800</option>
-              <option value="Corporate retreat — from $28,000">Corporate retreat — from $28,000</option>
+            Journey shape
+            <select id="shape" name="shape">
+              <option value="Escape (5–8 days)">Escape (5–8 days)</option>
+              <option value="Crossing (10–14 days)">Crossing (10–14 days)</option>
+              <option value="Expedition (16+ days)">Expedition (16+ days)</option>
             </select>
           </label>
           <label>
@@ -163,74 +167,78 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Recipient / company
-            <input type="text" id="forWhom" name="forWhom" placeholder="Who it’s for" />
+            Preferred month
+            <input type="text" id="month" name="month" placeholder="e.g. May 2027" />
           </label>
           <label>
-            Season / month
-            <input type="text" id="when" name="when" placeholder="e.g. Spring 2027" />
+            Travelers
+            <input type="text" id="travelers" name="travelers" placeholder="e.g. 2 adults" />
           </label>
           <label class="full">
             Region preference
-            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / other" />
+            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / Andes" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Occasion, headcount, constraints"></textarea>
+            <textarea id="notes" name="notes" placeholder="Pace, hosts, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email invoice request</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with offer and details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $2,500 hold invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with hold details filled.</p>
         </div>
       </form>
     </section>
 
-    <div class="prices">
-      <div class="price-row">
-        <span>Gift Escape certificate</span>
-        <strong>From $5,800</strong>
+    <div class="rules">
+      <div class="rule">
+        <strong>Applied to the journey</strong>
+        The $2,500 hold credits your Escape / Crossing / Expedition invoice in full.
       </div>
-      <div class="price-row">
-        <span>Corporate retreat · 8–14 people</span>
-        <strong>From $28,000</strong>
+      <div class="rule">
+        <strong>Refundable before planning</strong>
+        Cancel before we send the first route draft and the hold is refunded.
+      </div>
+      <div class="rule">
+        <strong>14-day date lock</strong>
+        After payment we hold preferred hosts and stays for two weeks while the brief locks.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Invoice</p>
+    <p><strong>Meridian</strong> · Journey hold</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("invoice-form");
+      var form = document.getElementById("hold-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var offer = document.getElementById("offer").value;
+        var shape = document.getElementById("shape").value;
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var forWhom = (document.getElementById("forWhom").value || "").trim();
-        var when = (document.getElementById("when").value || "").trim();
+        var month = (document.getElementById("month").value || "").trim();
+        var travelers = (document.getElementById("travelers").value || "").trim();
         var region = (document.getElementById("region").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian invoice — " + offer;
+        var subject = "Meridian journey hold — $2,500";
         var body =
-          "Meridian invoice request\n\n" +
-          "Offer: " + offer + "\n" +
+          "Meridian journey hold deposit request ($2,500)\n\n" +
+          "Shape: " + shape + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Recipient / company: " + (forWhom || "—") + "\n" +
-          "Season / month: " + (when || "—") + "\n" +
+          "Preferred month: " + (month || "—") + "\n" +
+          "Travelers: " + (travelers || "—") + "\n" +
           "Region: " + (region || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send invoice and next steps.";
+          "Please send the $2,500 hold invoice.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
