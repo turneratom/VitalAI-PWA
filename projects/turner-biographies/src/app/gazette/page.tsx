@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Chronology Rights",
+  title: "Gazette Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for chronology — Single-title chronology $700 or Catalog chronology slate $2,100. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for gazette — Single-title gazette $600 or Catalog gazette slate $1,800. Direct inquiry by email.",
   openGraph: {
-    title: "Chronology Rights — Turner Biographies",
-    description: "Single-title chronology $700 · Catalog chronology slate $2,100.",
+    title: "Gazette Rights — Turner Biographies",
+    description: "Single-title gazette $600 · Catalog gazette slate $1,800.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title chronology",
-    price: "$700",
+    title: "Single-title gazette",
+    price: "$600",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a chronology — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Chronology%20rights%20single-title%20%24700&body=I%20want%20Single-title%20chronology%20rights%20(%24700).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $700",
+      "Rights to license one Firebrand / Greatest Humans title as a gazette — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Gazette%20rights%20single-title%20%24600&body=I%20want%20Single-title%20gazette%20rights%20(%24600).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $600",
   },
   {
     tag: "Slate",
-    title: "Catalog chronology slate",
-    price: "$2,100",
+    title: "Catalog gazette slate",
+    price: "$1,800",
     detail:
-      "Multi-title or multi-issue chronology slate across Firebrand / Greatest Humans — one agreement for a broader chronology slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Chronology%20rights%20catalog%20slate%20%242%2C100&body=I%20want%20Catalog%20chronology%20slate%20rights%20(%242%2C100).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $2,100",
+      "Multi-title or multi-issue gazette slate across Firebrand / Greatest Humans — one agreement for a broader gazette slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Gazette%20rights%20catalog%20slate%20%241%2C800&body=I%20want%20Catalog%20gazette%20slate%20rights%20(%241%2C800).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $1,800",
   },
 ];
 
-export default function ChronologyPage() {
+export default function GazettePage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,10 +42,10 @@ export default function ChronologyPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Chronology Rights
+            Gazette Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate chronology licensing for Firebrand and The Greatest Humans —
+            Run and slate gazette licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
@@ -54,12 +54,6 @@ export default function ChronologyPage() {
             </a>
             <Link href="/worksheet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Worksheet
-            </Link>
-            <Link href="/concordance" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Concordance
-            </Link>
-            <Link href="/gazette" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Gazette
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
@@ -78,7 +72,7 @@ export default function ChronologyPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two chronology tracks.
+            Two gazette tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -104,7 +98,7 @@ export default function ChronologyPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
             <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need worksheet instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Chronology covers week-by-session plans. Classroom covers teacher packs.</p>
+            <p className="mt-2 max-w-xl text-bone/70">Gazette covers week-by-session plans. Classroom covers teacher packs.</p>
           </div>
           <Link href="/workbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook
           </Link>

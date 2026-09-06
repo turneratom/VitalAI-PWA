@@ -192,6 +192,9 @@ export default function HomePage() {
             <a href="/attribution" className="transition hover:text-signal">
               Attribution
             </a>
+            <a href="/cohort" className="transition hover:text-signal">
+              Cohort
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

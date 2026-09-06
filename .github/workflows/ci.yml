@@ -261,4 +261,7 @@ jobs:
           test -f projects/everything-films/bumper.html
           test -f projects/project-ais/screentime.html
           test -f trailer-parks/src/app/playground/page.tsx
+          test -f projects/turner-capital/lambda.html
+          test -f projects/turner-biographies/src/app/gazette/page.tsx
+          test -f projects/tread-affiliates/app/cohort/page.tsx
           echo "Offer page presence checks passed."

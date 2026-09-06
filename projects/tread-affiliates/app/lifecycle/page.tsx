@@ -88,6 +88,7 @@ export default function LifecyclePage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/lifecycle" className="transition hover:text-signal">Lifecycle kit</Link>
             <Link href="/attribution" className="transition hover:text-signal">Attribution</Link>
+            <Link href="/cohort" className="transition hover:text-signal">Cohort</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Lifecycle kit</a>
           </nav>
         </div>
