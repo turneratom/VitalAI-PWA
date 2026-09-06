@@ -258,6 +258,9 @@ export default function HomePage() {
             <a href="/offset" className="transition hover:text-signal">
               Offset
             </a>
+            <a href="/remittance" className="transition hover:text-signal">
+              Remittance
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

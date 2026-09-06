@@ -391,6 +391,9 @@ jobs:
           test -f projects/turner-capital/ulcer.html
           test -f projects/turner-biographies/src/app/circular/page.tsx
           test -f projects/tread-affiliates/app/offset/page.tsx
+          test -f projects/turner-capital/sterling.html
+          test -f projects/turner-biographies/src/app/flyer/page.tsx
+          test -f projects/tread-affiliates/app/remittance/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html

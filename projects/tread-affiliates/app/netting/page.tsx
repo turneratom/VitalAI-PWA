@@ -95,6 +95,7 @@ export default function NettingPage() {
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/netting" className="transition hover:text-signal">Netting kit</Link>
             <Link href="/offset" className="transition hover:text-signal">Offset</Link>
+            <Link href="/remittance" className="transition hover:text-signal">Remittance</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Netting kit</a>
           </nav>
         </div>
