@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deal Memo — Turner Capital</title>
-  <meta name="description" content="Commission a Turner Capital deal memo — $5,000 flat. One opportunity, underwritten for your desk. Invoice by email." />
+  <title>Risk Overlay Desk — Turner Capital</title>
+  <meta name="description" content="Risk Overlay Desk with Turner Capital — $3,500/mo or $35,000/yr prepaid. Ongoing risk overlay for a crypto+equity book: drawdown guards, correlation flags, weekly risk note. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -21,10 +21,6 @@
       --font-ui: "Syne", system-ui, sans-serif;
       --font-mono: "JetBrains Mono", ui-monospace, monospace;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    /* aliases used by form / footer rules */
-    :root {
-      --gold-bright: #e0b84a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -102,7 +98,7 @@
       letter-spacing: 0.02em; margin-top: 0.4em; font-style: italic; opacity: 0.92;
     }
     .price-chip {
-      display: inline-flex; align-items: baseline; gap: 0.45rem;
+      display: inline-flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap;
       font-family: var(--font-mono); color: var(--gold-bright);
       font-size: 1.45rem; font-weight: 700; margin-bottom: 1.1rem;
     }
@@ -198,10 +194,10 @@
       outline: none; border-color: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
-    .form-actions, .form-actions {
+    .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
-    .form-hint, .form-hint {
+    .form-hint {
       font-size: 0.78rem; color: var(--muted); font-weight: 500; max-width: 28rem;
     }
     .disclaimer {
@@ -227,24 +223,24 @@
       <a class="nav-text" href="pricing.html">Pricing</a>
       <a class="nav-text" href="brief.html">Weekly brief</a>
       <a class="nav-text" href="office-hours.html">Office hours</a>
-      <a class="nav-text" href="risk-desk.html">Risk desk</a>
+      <a class="nav-text" href="memo.html">Deal memo</a>
       <a class="nav-text" href="pilot.html">Desk pilot</a>
-      <a class="nav-cta" href="#enroll">Request memo invoice</a>
+      <a class="nav-cta" href="#enroll">Request risk overlay invoice</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Deal memo</span></h1>
-      <p class="price-chip">$5,000<span>flat · one opportunity</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Risk overlay desk</span></h1>
+      <p class="price-chip">$3,500<span>/mo · or $35,000/yr prepaid</span></p>
       <p class="hero-lede">
-        One thesis. One packet. Agents underwrite a single crypto or equity opportunity for your desk —
-        <strong>no ongoing seat required.</strong>
+        Ongoing risk overlay for a crypto+equity book —
+        <strong>drawdown guards, correlation flags, weekly risk note.</strong>
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Commission a memo</a>
-        <a class="btn btn-ghost" href="pilot.html">Prefer monthly desk · $2,500</a>
+        <a class="btn btn-primary" href="#enroll">Start risk overlay</a>
+        <a class="btn btn-ghost" href="office-hours.html">Prefer office hours · $1,500</a>
       </div>
     </div>
   </header>
@@ -252,29 +248,29 @@
   <main class="wrap">
     <div class="section-hd">
       <h2>What you receive</h2>
-      <p>A written deal memo you can circulate — not a chat thread, not a newsletter clip.</p>
+      <p>Continuous overlay on your book — not a one-off memo, not full discretionary management.</p>
     </div>
 
     <div class="includes">
       <article class="include">
-        <p class="include-num">01 · Scope</p>
+        <p class="include-num">01 · Guards</p>
         <div>
-          <h3>Single-opportunity brief</h3>
-          <p>Thesis, catalysts, risks, position sizing notes, and kill criteria — scoped to one ticker, protocol, or round.</p>
+          <h3>Drawdown guards</h3>
+          <p>Thresholds and triggers sized to your crypto+equity mix — when levels breach, you get a clear note, not a silent chart.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">02 · Turn</p>
+        <p class="include-num">02 · Flags</p>
         <div>
-          <h3>Five business days</h3>
-          <p>Clock starts when invoice clears and source materials land. Rush (+$1,500) available on request.</p>
+          <h3>Correlation flags</h3>
+          <p>Cross-asset correlation shifts called out when the book stops diversifying and starts moving as one risk.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">03 · Format</p>
+        <p class="include-num">03 · Weekly</p>
         <div>
-          <h3>PDF + editable sheet</h3>
-          <p>Board-ready PDF plus a numbers tab you can drop into your model.</p>
+          <h3>Weekly risk note</h3>
+          <p>A short written risk note each week — exposure snapshot, open flags, and what changed since last week.</p>
         </div>
       </article>
       <article class="include">
@@ -287,9 +283,9 @@
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request memo invoice — $5,000</h2>
-      <p class="enroll-lead">Fill the brief. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
-      <form id="memo-form" novalidate>
+      <h2 id="enroll-title">Request risk overlay invoice — $3,500/mo or $35,000/yr</h2>
+      <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
+      <form id="risk-desk-form" novalidate>
         <div class="fields">
           <label>
             Full name
@@ -304,65 +300,64 @@
             <input type="text" id="firm" name="firm" autocomplete="organization" />
           </label>
           <label>
-            Asset class
-            <select id="asset" name="asset">
-              <option value="Crypto">Crypto</option>
-              <option value="Equities">Equities</option>
-              <option value="Crypto + equities">Crypto + equities</option>
+            Billing plan
+            <select id="plan" name="plan">
+              <option value="Monthly $3,500/mo">Monthly — $3,500/mo</option>
+              <option value="Annual prepaid $35,000/yr">Annual prepaid — $35,000/yr</option>
             </select>
           </label>
           <label class="full">
-            Opportunity (ticker / protocol / round)
-            <input type="text" id="opportunity" name="opportunity" required placeholder="e.g. SOL thesis / Series B name" />
+            Book mix (crypto / equities / both)
+            <input type="text" id="focus" name="focus" placeholder="e.g. crypto + large-cap equities" />
           </label>
           <label class="full">
-            Notes / constraints
-            <textarea id="notes" name="notes" placeholder="Time horizon, risk band, materials you will send"></textarea>
+            Notes
+            <textarea id="notes" name="notes" placeholder="AUM band, drawdown sensitivity, reporting cadence prefs"></textarea>
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Email memo invoice — $5,000</button>
+          <button class="btn btn-primary" type="submit">Email risk overlay invoice</button>
           <p class="form-hint">Opens mailto with subject and body filled. Stripe when secrets exist.</p>
         </div>
       </form>
     </section>
 
     <p class="disclaimer">
-      Deal memos are research and simulation products. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
+      Risk Overlay Desk is a research and simulation product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Deal memo</span>
-      <a href="mailto:brad@treadcompanies.com?subject=Deal%20Memo">brad@treadcompanies.com</a>
+      <span>Turner Capital · Risk Overlay Desk</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Risk%20Overlay%20Desk">brad@treadcompanies.com</a>
     </footer>
   </main>
 
   <script>
     (function () {
-      var form = document.getElementById("memo-form");
+      var form = document.getElementById("risk-desk-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var firm = (document.getElementById("firm").value || "").trim();
-        var asset = document.getElementById("asset").value;
-        var opportunity = (document.getElementById("opportunity").value || "").trim();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
-        if (!name || !email || !opportunity) {
-          document.getElementById(!name ? "name" : !email ? "email" : "opportunity").focus();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Deal Memo — $5,000 — " + opportunity;
+        var subject = "Turner Capital Risk Overlay Desk — " + plan;
         var body =
-          "Deal memo invoice request ($5,000 flat)\n\n" +
+          "Risk Overlay Desk invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Firm: " + (firm || "—") + "\n" +
-          "Asset class: " + asset + "\n" +
-          "Opportunity: " + opportunity + "\n" +
+          "Plan: " + plan + "\n" +
+          "Book mix: " + (focus || "—") + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send invoice for one deal memo.";
+          "Please send invoice for Risk Overlay Desk.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

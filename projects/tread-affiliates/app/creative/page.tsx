@@ -72,6 +72,9 @@ export default function CreativePage() {
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>
+            <Link href="/launch" className="transition hover:text-signal">
+              Launch
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

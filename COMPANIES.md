@@ -9,14 +9,14 @@ Chats forget. **This file remembers.**
 
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + **`/underwriting` ($799 · $2,499)** |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + **`weekend.html` ($8,500)** |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + **`teaser.html` ($1,800)** |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + **`enterprise.html` ($2,499/mo · $24,990/yr)** |
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + underwriting |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + weekend $8.5k |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + teaser $1.8k |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + **`risk-desk.html` ($3,500/mo · $35,000/yr)** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + **`/foreign-rights` ($20k/$75k)** |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + enterprise |
 
-Also: Tread Affiliates — rails + advertise + sponsor + audit + creative.
+Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + **`/launch` ($4,500 · $7,500)**.
 
 ## Hands-off contract
 
@@ -26,11 +26,10 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative.
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `weekend.html` — Weekend Escape $8,500 (2 travelers, 3–4 days); nav from home + siblings.
-- Everything Films: `teaser.html` — Social Teaser Cut $1,800 add-on; nav from index + deposit/rush/legacy/corporate.
-- Project AIS: `enterprise.html` — Enterprise Clinic $2,499/mo · $24,990/yr; linked from pricing/teams/whitelabel/api/home/subscribe.
-- Mobile Home Parks: `/underwriting` — single pack $799 · portfolio $2,499; Header nav.
-- Prior: Capital office-hours; Biographies audiobook; Affiliates creative; Meridian expedition; Films rush; AIS API; MHP lender-intro.
+- Turner Capital: `risk-desk.html` — Risk Overlay Desk $3,500/mo · $35,000/yr; wired from floor/pricing and sibling offer pages.
+- Turner Biographies: `/foreign-rights` — single territory $20k · world English $75k; layout + shop CTAs.
+- Tread Affiliates: `/launch` — 30-Day Launch Sprint $4,500 · $7,500 with creative+media; advertise/sponsor/audit/creative/comparisons nav.
+- Prior: Meridian weekend; Films teaser; AIS enterprise; MHP underwriting; Capital office-hours; Biographies audiobook; Affiliates creative.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes

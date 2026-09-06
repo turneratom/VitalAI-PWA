@@ -64,6 +64,9 @@ export default function ComparisonsHubPage() {
             <Link href="/creative" className="transition hover:text-signal">
               Creative
             </Link>
+            <Link href="/launch" className="transition hover:text-signal">
+              Launch
+            </Link>
             <a
               href="#rails"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
