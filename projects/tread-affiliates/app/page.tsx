@@ -312,6 +312,9 @@ export default function HomePage() {
             <a href="/zelle" className="transition hover:text-signal">
               Zelle
             </a>
+            <a href="/venmo" className="transition hover:text-signal">
+              Venmo
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

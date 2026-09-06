@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Same-Day ACH Kit — Tread Affiliates",
+  title: "Affiliate Venmo Kit — Tread Affiliates",
   description:
-    "Affiliate Same-Day ACH Kit — one-time sprint $1 or monthly Same-Day ACH kit $1/mo. Same-Day ACH plan, Same-Day ACH mix, Same-Day ACH pairing. Invoice by email.",
+    "Affiliate Venmo Kit — one-time sprint $1 or monthly Venmo kit $1/mo. Venmo plan, Venmo mix, Venmo pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Same-Day ACH Kit — Tread Affiliates",
-    description: "Sprint $1 · Monthly desk $1/mo. Same-Day ACH plan, Same-Day ACH mix, Same-Day ACH pairing.",
+    title: "Affiliate Venmo Kit — Tread Affiliates",
+    description: "Sprint $1 · Monthly desk $1/mo. Venmo plan, Venmo mix, Venmo pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Same-Day ACH kit",
+    title: "Venmo kit",
     price: "$1",
     period: " one-time",
     points: [
-      "Same-Day ACH plan across your primary rails",
+      "Venmo plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Same-Day ACH kit execution checklist",
+      "30-day Venmo kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Same-Day ACH kit — $1",
-      "I want an Affiliate Same-Day ACH kit ($1).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Venmo kit — $1",
+      "I want an Affiliate Venmo kit ($1).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
     cta: "Request sprint — $1",
   },
   {
     tag: "Desk",
-    title: "Monthly Same-Day ACH kit",
+    title: "Monthly Venmo kit",
     price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Same-Day ACH kit and ROAS review",
+      "Monthly Venmo kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Same-Day ACH kit — $1/mo",
-      "I want a Monthly Same-Day ACH kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Venmo kit — $1/mo",
+      "I want a Monthly Venmo kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
     cta: "Request desk — $1/mo",
   },
 ];
 
-export default function SameDayAchPage() {
+export default function VenmoPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -96,7 +96,6 @@ export default function SameDayAchPage() {
             <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
             <Link href="/rtp" className="transition hover:text-signal">RTP kit</Link>
-            <Link href="/fednow" className="transition hover:text-signal">FedNow kit</Link>
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
@@ -104,7 +103,7 @@ export default function SameDayAchPage() {
             <Link href="/express-pay" className="transition hover:text-signal">Express-Pay kit</Link>
             <Link href="/zelle" className="transition hover:text-signal">Zelle kit</Link>
             <Link href="/venmo" className="transition hover:text-signal">Venmo kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Same-Day ACH kit</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Venmo kit</a>
           </nav>
         </div>
       </header>
@@ -112,17 +111,17 @@ export default function SameDayAchPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Same-Day ACH kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Venmo kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Same-Day ACH kit packages that convert comparison-rail traffic — not vanity posts.
+            Venmo kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Same-Day ACH plan, Same-Day ACH mix, and Same-Day ACH pairing.
+            One-time sprint or monthly desk: Venmo plan, Venmo mix, and Venmo pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Same-Day ACH kit packages
+              See Venmo kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -134,7 +133,7 @@ export default function SameDayAchPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Same-Day ACH kit.
+          Sprint once, or keep a monthly Venmo kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
