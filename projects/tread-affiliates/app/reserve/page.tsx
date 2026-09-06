@@ -104,6 +104,7 @@ export default function ReservePage() {
 <Link href="/allocation" className="transition hover:text-signal">Allocation</Link>
 <Link href="/apportionment" className="transition hover:text-signal">Apportionment</Link>
 <Link href="/distribution" className="transition hover:text-signal">Distribution</Link>
+<Link href="/disbursement" className="transition hover:text-signal">Disbursement</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reserve kit</a>
           </nav>
         </div>

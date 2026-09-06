@@ -94,6 +94,7 @@ export default function DistributionPage() {
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/distribution" className="transition hover:text-signal">Distribution kit</Link>
+<Link href="/disbursement" className="transition hover:text-signal">Disbursement kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Distribution kit</a>
           </nav>
         </div>
