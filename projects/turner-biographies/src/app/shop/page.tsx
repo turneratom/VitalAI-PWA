@@ -137,6 +137,12 @@ export default function ShopPage() {
               Commission · from $45,000
             </Link>
             <Link
+              href="/serialization"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Serialization · from $25,000
+            </Link>
+            <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

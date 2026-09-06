@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deal Memo — Turner Capital</title>
-  <meta name="description" content="Commission a Turner Capital deal memo — $5,000 flat. One opportunity, underwritten for your desk. Invoice by email." />
+  <title>Weekly Desk Brief — Turner Capital</title>
+  <meta name="description" content="Subscribe to the Turner Capital Weekly Desk Brief — $750/month or $7,500/year prepaid. Crypto + equity catalysts, risk flags, position hygiene. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -21,10 +21,6 @@
       --font-ui: "Syne", system-ui, sans-serif;
       --font-mono: "JetBrains Mono", ui-monospace, monospace;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    /* aliases used by form / footer rules */
-    :root {
-      --gold-bright: #e0b84a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -198,10 +194,10 @@
       outline: none; border-color: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
-    .form-actions, .form-actions {
+    .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
-    .form-hint, .form-hint {
+    .form-hint {
       font-size: 0.78rem; color: var(--muted); font-weight: 500; max-width: 28rem;
     }
     .disclaimer {
@@ -225,24 +221,24 @@
     <a class="nav-mark" href="index.html">Turner Capital</a>
     <div class="nav-links">
       <a class="nav-text" href="pricing.html">Pricing</a>
-      <a class="nav-text" href="brief.html">Weekly brief</a>
+      <a class="nav-text" href="memo.html">Deal memo</a>
       <a class="nav-text" href="pilot.html">Desk pilot</a>
-      <a class="nav-cta" href="#enroll">Request memo invoice</a>
+      <a class="nav-cta" href="#enroll">Request brief invoice</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Deal memo</span></h1>
-      <p class="price-chip">$5,000<span>flat · one opportunity</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Weekly desk brief</span></h1>
+      <p class="price-chip">$750<span>/mo · or $7,500/yr prepaid</span></p>
       <p class="hero-lede">
-        One thesis. One packet. Agents underwrite a single crypto or equity opportunity for your desk —
-        <strong>no ongoing seat required.</strong>
+        A weekly crypto + equity desk brief PDF — catalysts, risk flags, and position hygiene notes.
+        <strong>Lighter than full Desk Pilot.</strong>
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Commission a memo</a>
-        <a class="btn btn-ghost" href="pilot.html">Prefer monthly desk · $2,500</a>
+        <a class="btn btn-primary" href="#enroll">Subscribe to the brief</a>
+        <a class="btn btn-ghost" href="pilot.html">Need full Desk Pilot · $2,500/mo</a>
       </div>
     </div>
   </header>
@@ -250,29 +246,29 @@
   <main class="wrap">
     <div class="section-hd">
       <h2>What you receive</h2>
-      <p>A written deal memo you can circulate — not a chat thread, not a newsletter clip.</p>
+      <p>One PDF each week you can skim before the open — not a chat seat, not a full pilot retainer.</p>
     </div>
 
     <div class="includes">
       <article class="include">
-        <p class="include-num">01 · Scope</p>
+        <p class="include-num">01 · Cadence</p>
         <div>
-          <h3>Single-opportunity brief</h3>
-          <p>Thesis, catalysts, risks, position sizing notes, and kill criteria — scoped to one ticker, protocol, or round.</p>
+          <h3>Weekly PDF brief</h3>
+          <p>Crypto and equity catalysts for the week ahead, distilled for desks that already have a book.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">02 · Turn</p>
+        <p class="include-num">02 · Risk</p>
         <div>
-          <h3>Five business days</h3>
-          <p>Clock starts when invoice clears and source materials land. Rush (+$1,500) available on request.</p>
+          <h3>Risk flags</h3>
+          <p>Concentrated exposures, event risk, and liquidity notes called out before they become desk noise.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">03 · Format</p>
+        <p class="include-num">03 · Hygiene</p>
         <div>
-          <h3>PDF + editable sheet</h3>
-          <p>Board-ready PDF plus a numbers tab you can drop into your model.</p>
+          <h3>Position hygiene notes</h3>
+          <p>Sizing drift, stale thesis checks, and kill-criteria reminders — without a full underwriting packet.</p>
         </div>
       </article>
       <article class="include">
@@ -285,9 +281,9 @@
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request memo invoice — $5,000</h2>
-      <p class="enroll-lead">Fill the brief. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
-      <form id="memo-form" novalidate>
+      <h2 id="enroll-title">Request brief invoice — $750/mo or $7,500/yr</h2>
+      <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
+      <form id="brief-form" novalidate>
         <div class="fields">
           <label>
             Full name
@@ -302,65 +298,64 @@
             <input type="text" id="firm" name="firm" autocomplete="organization" />
           </label>
           <label>
-            Asset class
-            <select id="asset" name="asset">
-              <option value="Crypto">Crypto</option>
-              <option value="Equities">Equities</option>
-              <option value="Crypto + equities">Crypto + equities</option>
+            Billing plan
+            <select id="plan" name="plan">
+              <option value="$750/month">$750 / month</option>
+              <option value="$7,500/year prepaid">$7,500 / year prepaid</option>
             </select>
           </label>
           <label class="full">
-            Opportunity (ticker / protocol / round)
-            <input type="text" id="opportunity" name="opportunity" required placeholder="e.g. SOL thesis / Series B name" />
+            Focus (crypto / equities / both)
+            <input type="text" id="focus" name="focus" placeholder="e.g. crypto + large-cap equities" />
           </label>
           <label class="full">
-            Notes / constraints
-            <textarea id="notes" name="notes" placeholder="Time horizon, risk band, materials you will send"></textarea>
+            Notes
+            <textarea id="notes" name="notes" placeholder="Delivery email, start week, desk constraints"></textarea>
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Email memo invoice — $5,000</button>
+          <button class="btn btn-primary" type="submit">Email brief invoice</button>
           <p class="form-hint">Opens mailto with subject and body filled. Stripe when secrets exist.</p>
         </div>
       </form>
     </section>
 
     <p class="disclaimer">
-      Deal memos are research and simulation products. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
+      Weekly Desk Brief is a research and simulation product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Deal memo</span>
-      <a href="mailto:brad@treadcompanies.com?subject=Deal%20Memo">brad@treadcompanies.com</a>
+      <span>Turner Capital · Weekly Desk Brief</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Weekly%20Desk%20Brief">brad@treadcompanies.com</a>
     </footer>
   </main>
 
   <script>
     (function () {
-      var form = document.getElementById("memo-form");
+      var form = document.getElementById("brief-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var firm = (document.getElementById("firm").value || "").trim();
-        var asset = document.getElementById("asset").value;
-        var opportunity = (document.getElementById("opportunity").value || "").trim();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
-        if (!name || !email || !opportunity) {
-          document.getElementById(!name ? "name" : !email ? "email" : "opportunity").focus();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Deal Memo — $5,000 — " + opportunity;
+        var subject = "Turner Capital Weekly Desk Brief — " + plan;
         var body =
-          "Deal memo invoice request ($5,000 flat)\n\n" +
+          "Weekly Desk Brief invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Firm: " + (firm || "—") + "\n" +
-          "Asset class: " + asset + "\n" +
-          "Opportunity: " + opportunity + "\n" +
+          "Plan: " + plan + "\n" +
+          "Focus: " + (focus || "—") + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send invoice for one deal memo.";
+          "Please send invoice for Weekly Desk Brief subscription.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

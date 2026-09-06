@@ -2,52 +2,52 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commission a Biography",
+  title: "Serialization Rights",
   description:
-    "Commission Brad Turner for a private biography — Family chronicle $45,000 or Founder / public life $95,000. Direct booking by email.",
+    "License Turner Biographies / The Greatest Humans for serialization — Magazine / newsletter excerpt $25,000 or Multi-part series $60,000. Direct inquiry by email.",
   openGraph: {
-    title: "Commission a Biography — Turner Biographies",
+    title: "Serialization Rights — Turner Biographies",
     description:
-      "Family chronicle $45,000 · Founder / public life $95,000. Written as story, ready for print or screen development.",
+      "Magazine / newsletter excerpt $25,000 · Multi-part series serialization $60,000.",
     type: "website",
   },
 };
 
 const packages = [
   {
-    tag: "Family",
-    title: "Family chronicle",
-    price: "$45,000",
+    tag: "Excerpt",
+    title: "Magazine / newsletter excerpt license",
+    price: "$25,000",
     detail:
-      "One life or multi-generation family narrative — research interviews, manuscript (~40–60k words), and editorial polish for private or limited print.",
-    href: "mailto:brad@treadcompanies.com?subject=Commission%20Family%20chronicle%20%2445%2C000&body=I%20want%20to%20commission%20a%20Family%20chronicle%20(%2445%2C000).%0A%0ASubject%20name%3A%0ARelationship%3A%0ATimeline%20preference%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "Commission family — $45,000",
+      "One-time print or digital excerpt rights for a magazine, newsletter, or similar editorial channel — scoped territory and window by agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Serialization%20excerpt%20license%20%2425%2C000&body=I%20want%20a%20Magazine%20%2F%20newsletter%20excerpt%20license%20(%2425%2C000).%0A%0APublication%3A%0ATitle%20%2F%20excerpt%20interest%3A%0ATerritory%20%2F%20window%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License excerpt — $25,000",
   },
   {
-    tag: "Founder",
-    title: "Founder / public life",
-    price: "$95,000",
+    tag: "Series",
+    title: "Multi-part series serialization",
+    price: "$60,000",
     detail:
-      "Company founder, civic leader, or public figure — deeper archive work, dual narrative arcs, and a treatment appendix for film/series development.",
-    href: "mailto:brad@treadcompanies.com?subject=Commission%20Founder%20biography%20%2495%2C000&body=I%20want%20to%20commission%20a%20Founder%20%2F%20public%20life%20biography%20(%2495%2C000).%0A%0ASubject%20%2F%20company%3A%0AGoals%20(print%20%2F%20film)%3A%0ATimeline%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "Commission founder — $95,000",
+      "Multi-installment serialization across a run of issues or episodes — adapted excerpts with scheduling and credit terms negotiated up front.",
+    href: "mailto:brad@treadcompanies.com?subject=Serialization%20multi-part%20series%20%2460%2C000&body=I%20want%20multi-part%20series%20serialization%20rights%20(%2460%2C000).%0A%0APublication%20%2F%20platform%3A%0AInstallment%20count%3A%0ATitle%20interest%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License series — $60,000",
   },
 ];
 
-export default function CommissionPage() {
+export default function SerializationPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.3em] text-brass">
-            Turner Biographies · Commission
+            Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            A life, written as fire.
+            Serialization Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Private commissions from Brad Turner — the same craft as The Greatest
-            Humans series, scoped to the life you need told.
+            Excerpt and multi-part licensing for magazines, newsletters, and
+            editorial series — from The Greatest Humans catalog and related work.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a
@@ -57,10 +57,16 @@ export default function CommissionPage() {
               See packages
             </a>
             <Link
-              href="/speaking"
+              href="/commission"
               className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
             >
-              Speaking instead
+              Commission a life
+            </Link>
+            <Link
+              href="/shop"
+              className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+            >
+              Shop Firebrand
             </Link>
           </div>
         </div>
@@ -72,11 +78,11 @@ export default function CommissionPage() {
             Packages
           </p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two commission tracks.
+            Two serialization tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
-            Fifty percent to start, remainder on manuscript delivery. Travel for
-            interviews billed separately when required.
+            Email brad@treadcompanies.com for invoice and rights memo. Territory,
+            exclusivity, and credit terms confirmed in writing before payment.
           </p>
 
           <div className="mt-12 grid gap-0 border-t border-white/15 md:grid-cols-2">
@@ -112,23 +118,26 @@ export default function CommissionPage() {
       <section className="bg-ink-soft">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8">
           <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">
-            Prefer the published series?
+            Need a private commission instead?
           </h2>
           <p className="mt-3 max-w-xl text-bone/70">
-            Firebrand and film rights live on the shop — commissions are private work.
+            Serialization licenses published work. New lives are commissioned
+            separately — or browse Firebrand on the shop.
           </p>
-          <Link
-            href="/shop"
-            className="mt-6 inline-block border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
-          >
-            Shop Firebrand
-          </Link>
-          <Link
-            href="/serialization"
-            className="mt-6 ml-3 inline-block border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
-          >
-            Serialization rights
-          </Link>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href="/commission"
+              className="inline-block border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+            >
+              Commission
+            </Link>
+            <Link
+              href="/shop"
+              className="inline-block border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+            >
+              Shop
+            </Link>
+          </div>
         </div>
       </section>
     </div>
