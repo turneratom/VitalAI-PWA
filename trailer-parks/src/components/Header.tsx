@@ -86,6 +86,7 @@ const navLinks = [
   { href: "/glasshouse", label: "Glasshouse Diligence $1" },
   { href: "/hothouse", label: "Hothouse Diligence $1" },
   { href: "/coldframe", label: "Coldframe Diligence $1" },
+  { href: "/cloche", label: "Cloche Diligence $1" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

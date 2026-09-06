@@ -504,4 +504,9 @@ jobs:
           test -f projects/project-ais/thumb-tip.html
           test -f trailer-parks/src/app/coldframe/page.tsx
           test -f projects/mobile-home-parks/src/app/coldframe/page.tsx
+          test -f projects/meridian-travel/scow.html
+          test -f projects/everything-films/mxf.html
+          test -f projects/project-ais/nail-bed.html
+          test -f trailer-parks/src/app/cloche/page.tsx
+          test -f projects/mobile-home-parks/src/app/cloche/page.tsx
  

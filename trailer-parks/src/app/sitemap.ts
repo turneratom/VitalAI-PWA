@@ -91,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/glasshouse",
     "/hothouse",
     "/coldframe",
+    "/cloche",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
