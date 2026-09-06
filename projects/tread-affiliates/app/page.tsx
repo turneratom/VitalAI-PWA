@@ -132,6 +132,9 @@ export default function HomePage() {
             <a href="/newsletter" className="transition hover:text-signal">
               Newsletter
             </a>
+            <a href="/podcast-ads" className="transition hover:text-signal">
+              Podcast ads
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

@@ -190,6 +190,12 @@ export default function ShopPage() {
             >
               Graphic · from $12,000
             </Link>
+<Link
+              href="/young-readers"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Young readers · from $11,000
+            </Link>
             <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"

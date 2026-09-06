@@ -107,6 +107,9 @@ export default function PlacementPage() {
             <Link href="/newsletter" className="transition hover:text-signal">
               Newsletter
             </Link>
+            <Link href="/podcast-ads" className="transition hover:text-signal">
+              Podcast ads
+            </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>

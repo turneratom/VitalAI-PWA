@@ -110,6 +110,9 @@ export default function LaunchPage() {
             <Link href="/newsletter" className="transition hover:text-signal">
               Newsletter
             </Link>
+            <Link href="/podcast-ads" className="transition hover:text-signal">
+              Podcast ads
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>

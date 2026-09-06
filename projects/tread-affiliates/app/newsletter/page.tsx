@@ -75,6 +75,7 @@ export default function NewsletterPage() {
             <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/newsletter" className="transition hover:text-signal">Newsletter</Link>
+            <Link href="/podcast-ads" className="transition hover:text-signal">Podcast ads</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Newsletter</a>
           </nav>
         </div>

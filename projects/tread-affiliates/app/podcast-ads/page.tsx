@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Media Desk — Tread Affiliates",
+  title: "Affiliate Podcast Desk — Tread Affiliates",
   description:
-    "Affiliate Media Desk — one-time sprint $4,500 or monthly Media desk $1,800/mo. Media plan, channel mix, creative pairing. Invoice by email.",
+    "Affiliate Podcast Desk — one-time sprint $2,800 or monthly Podcast desk $1,050/mo. Podcast plan, show mix, creative pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Media Desk — Tread Affiliates",
-    description: "Sprint $4,500 · Monthly desk $1,800/mo. Media plan, channel mix, creative pairing.",
+    title: "Affiliate Podcast Desk — Tread Affiliates",
+    description: "Sprint $2,800 · Monthly desk $1,050/mo. Podcast plan, show mix, creative pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Media desk",
-    price: "$4,500",
+    title: "Podcast desk",
+    price: "$2,800",
     cadence: " one-time",
     points: [
-      "Media plan across your primary rails",
-      "Channel mix and budget bands for primary funnels",
-      "Creative-to-channel pairing notes",
-      "30-day media execution checklist",
+      "Podcast plan across your primary rails",
+      "Show mix and read bands for primary funnels",
+      "Creative-to-read pairing notes",
+      "30-day podcast execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Media desk — $4,500",
-      "I want an Affiliate Media desk ($4,500).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Podcast desk — $2,800",
+      "I want an Affiliate Podcast desk ($2,800).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $4,500",
+    cta: "Request sprint — $2,800",
   },
   {
     tag: "Desk",
-    title: "Monthly Media desk",
-    price: "$1,800",
+    title: "Monthly Podcast desk",
+    price: "$1,050",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly media and ROAS review",
-      "Two new flight or creative swaps per month",
+      "Monthly podcast and ROAS review",
+      "Two new show or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Media desk — $1,800/mo",
-      "I want a Monthly Media desk ($1,800/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Podcast desk — $1,050/mo",
+      "I want a Monthly Podcast desk ($1,050/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $1,800/mo",
+    cta: "Request desk — $1,050/mo",
   },
 ];
 
-export default function MediaPage() {
+export default function PodcastAdsPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -69,14 +69,14 @@ export default function MediaPage() {
             <Link href="/email" className="transition hover:text-signal">Email</Link>
             <Link href="/creative-kit" className="transition hover:text-signal">Creative</Link>
             <Link href="/tracking" className="transition hover:text-signal">Tracking</Link>
-            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/media" className="transition hover:text-signal">Media</Link>
             <Link href="/retail" className="transition hover:text-signal">Retail</Link>
             <Link href="/catalog" className="transition hover:text-signal">Catalog</Link>
             <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
             <Link href="/newsletter" className="transition hover:text-signal">Newsletter</Link>
+            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/podcast-ads" className="transition hover:text-signal">Podcast ads</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Media</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Podcast ads</a>
           </nav>
         </div>
       </header>
@@ -84,17 +84,17 @@ export default function MediaPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Media</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Podcast</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Media that buys comparison-rail conversions — not vanity reach.
+            Podcast placements that convert comparison-rail traffic — not vanity reads.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: media plan, channel mix, and creative pairing.
+            One-time sprint or monthly desk: podcast plan, show mix, and creative pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See media packages
+              See podcast packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -106,7 +106,7 @@ export default function MediaPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Media desk.
+          Sprint once, or keep a monthly Podcast desk.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
