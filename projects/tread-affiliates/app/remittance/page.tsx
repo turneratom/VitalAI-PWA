@@ -112,6 +112,7 @@ export default function RemittancePage() {
             <Link href="/express-pay" className="transition hover:text-signal">Express-Pay</Link>
             <Link href="/zelle" className="transition hover:text-signal">Zelle</Link>
             <Link href="/venmo" className="transition hover:text-signal">Venmo</Link>
+            <Link href="/paypal" className="transition hover:text-signal">PayPal</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Remittance kit</a>
           </nav>
         </div>

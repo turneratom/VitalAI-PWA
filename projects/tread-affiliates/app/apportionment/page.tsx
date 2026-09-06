@@ -109,6 +109,7 @@ export default function ApportionmentPage() {
             <Link href="/express-pay" className="transition hover:text-signal">Express-Pay kit</Link>
             <Link href="/zelle" className="transition hover:text-signal">Zelle kit</Link>
             <Link href="/venmo" className="transition hover:text-signal">Venmo kit</Link>
+            <Link href="/paypal" className="transition hover:text-signal">PayPal kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Apportionment kit</a>
           </nav>
         </div>

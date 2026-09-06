@@ -315,6 +315,9 @@ export default function HomePage() {
             <a href="/venmo" className="transition hover:text-signal">
               Venmo
             </a>
+            <a href="/paypal" className="transition hover:text-signal">
+              PayPal
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
