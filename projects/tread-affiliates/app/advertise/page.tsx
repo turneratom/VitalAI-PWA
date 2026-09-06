@@ -75,6 +75,9 @@ export default function AdvertisePage() {
             <Link href="/launch" className="transition hover:text-signal">
               Launch
             </Link>
+            <Link href="/partners" className="transition hover:text-signal">
+              Partners
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

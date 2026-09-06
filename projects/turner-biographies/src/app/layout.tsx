@@ -72,6 +72,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link className="transition hover:text-bone" href="/foreign-rights">
                 Foreign rights
               </Link>
+              <Link className="transition hover:text-bone" href="/stage">
+                Stage
+              </Link>
               <Link
                 className="rounded-sm bg-seal px-3 py-1.5 text-bone transition hover:bg-seal-deep"
                 href="/shop"

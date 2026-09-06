@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Funnel Audit — Tread Affiliates",
+  title: "Partner Desk — Tread Affiliates",
   description:
-    "Affiliate Funnel Audit — $2,500 flat or $6,000 for audit + 30-day rebuild sprint. Teardown of offer, landing page, and rail creative with written scorecard. Invoice by email.",
+    "Partner Desk — managed partner desk $2,000/mo or setup sprint $3,500 one-time. Partner recruitment, offer packaging, weekly partner pipeline report for brands/networks. Invoice by email.",
   openGraph: {
-    title: "Affiliate Funnel Audit — Tread Affiliates",
+    title: "Partner Desk — Tread Affiliates",
     description:
-      "Audit $2,500 · Audit + 30-day rebuild sprint $6,000. Scorecard and prioritized fixes.",
+      "Managed partner desk $2,000/mo · Setup sprint $3,500 (one-time). Partner recruitment and pipeline reporting.",
     type: "website",
   },
 };
@@ -18,40 +18,42 @@ const MAIL = (subject: string, body: string) =>
 
 const packages = [
   {
-    tag: "Audit",
-    title: "Funnel audit",
-    price: "$2,500",
-    cadence: " flat",
+    tag: "Managed",
+    title: "Managed partner desk",
+    price: "$2,000",
+    cadence: "/mo",
     points: [
-      "Teardown of offer, landing page, and rail creative",
-      "Written scorecard across conversion levers",
-      "Prioritized fix list you can hand to your team",
+      "Partner recruitment for brands and networks",
+      "Offer packaging for affiliate rails",
+      "Weekly partner pipeline report",
+      "Ongoing desk cadence and follow-ups",
     ],
     href: MAIL(
-      "Tread Affiliates Funnel Audit — $2,500",
-      "I want an Affiliate Funnel Audit ($2,500 flat).\n\nOffer / brand:\nLanding URL:\nRail / creative links:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Partner Desk — $2,000/mo",
+      "I want a Managed partner desk ($2,000/mo).\n\nBrand / network:\nOffer / category:\nCurrent partner list (if any):\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request audit — $2,500",
+    cta: "Request managed desk — $2,000/mo",
   },
   {
-    tag: "Sprint",
-    title: "Audit + 30-day rebuild",
-    price: "$6,000",
-    cadence: " package",
+    tag: "Setup",
+    title: "Setup sprint",
+    price: "$3,500",
+    cadence: " one-time",
     points: [
-      "Everything in the flat audit",
-      "30-day rebuild sprint on copy, LP, and rail creative",
-      "Async reviews and a final before/after checklist",
+      "Partner recruitment kickoff",
+      "Offer packaging for primary rails",
+      "First weekly partner pipeline report template",
+      "Handoff notes for your team or managed desk",
     ],
     href: MAIL(
-      "Tread Affiliates Funnel Audit + rebuild — $6,000",
-      "I want the Affiliate Funnel Audit + 30-day rebuild sprint ($6,000).\n\nOffer / brand:\nLanding URL:\nRail / creative links:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Partner Desk setup sprint — $3,500",
+      "I want a Partner Desk setup sprint ($3,500 one-time).\n\nBrand / network:\nOffer / category:\nPreferred kickoff window:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $6,000",
+    cta: "Request setup sprint — $3,500",
   },
 ];
 
-export default function AuditPage() {
+export default function PartnersPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -66,23 +68,23 @@ export default function AuditPage() {
             <Link href="/advertise" className="transition hover:text-signal">
               Advertise
             </Link>
-            <Link href="/sponsor" className="transition hover:text-signal">
-              Newsletter
+            <Link href="/launch" className="transition hover:text-signal">
+              Launch
             </Link>
             <Link href="/creative" className="transition hover:text-signal">
               Creative
             </Link>
-            <Link href="/launch" className="transition hover:text-signal">
-              Launch
+            <Link href="/audit" className="transition hover:text-signal">
+              Audit
             </Link>
-            <Link href="/partners" className="transition hover:text-signal">
-              Partners
+            <Link href="/sponsor" className="transition hover:text-signal">
+              Newsletter
             </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
-              Audit
+              Partners
             </a>
           </nav>
         </div>
@@ -93,14 +95,14 @@ export default function AuditPage() {
         <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-cone/20 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">
-            Tread Affiliates · Audit
+            Tread Affiliates · Partners
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Affiliate Funnel Audit
+            Partner Desk
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/80">
-            Teardown of offer, landing page, and rail creative — with a written
-            scorecard and prioritized fixes.
+            Partner recruitment, offer packaging, and a weekly partner pipeline
+            report for brands and networks — invoiced by email.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
@@ -110,10 +112,10 @@ export default function AuditPage() {
               See packages
             </a>
             <Link
-              href="/advertise"
+              href="/launch"
               className="rounded-sm border border-white/30 px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white"
             >
-              Prefer rail ads
+              Prefer launch sprint
             </Link>
           </div>
         </div>
@@ -121,13 +123,14 @@ export default function AuditPage() {
 
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cone">
-          Audit packages
+          Partner packages
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Scorecard or rebuild sprint.
+          Managed desk or one-time setup sprint.
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Email for invoice. We confirm scope and kickoff within one business day.
+          Email brad@treadcompanies.com for invoice. We confirm scope and kickoff
+          window within one business day.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

@@ -155,6 +155,12 @@ export default function ShopPage() {
               Foreign rights · from $20,000
             </Link>
             <Link
+              href="/stage"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Stage · from $35,000
+            </Link>
+            <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
