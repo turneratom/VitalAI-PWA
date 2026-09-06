@@ -85,6 +85,7 @@ export default function ShortsPage() {
             <Link href="/landing-kit" className="transition hover:text-signal">Landing kit</Link>
             <Link href="/funnel-kit" className="transition hover:text-signal">Funnel kit</Link>
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
+            <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Shorts</a>
           </nav>
         </div>

@@ -162,6 +162,9 @@ export default function HomePage() {
             <a href="/retarget" className="transition hover:text-signal">
               Retarget
             </a>
+            <a href="/upsell" className="transition hover:text-signal">
+              Upsell
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
