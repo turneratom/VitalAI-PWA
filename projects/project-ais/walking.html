@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Standing Protocol</title>
-  <meta name="description" content="VitalAI Standing Protocol — Protocol setup $45 or Standing desk $14/mo. Standing targets, sit-stand rhythm, weekly standing map. Invoice via email until Stripe is live." />
+  <title>VitalAI Walking Protocol</title>
+  <meta name="description" content="VitalAI Walking Protocol — Protocol setup $39 or Walking desk $12/mo. Walking targets, daily walk rhythm, weekly walking map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -38,7 +38,7 @@
       padding: 0.65rem 0; border-bottom: 1px solid #e2ebef;
     }
     .plan-row strong { color: #1a6b7a; }
-    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.45rem; color: #444; }
+    .perk-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.39rem; color: #444; }
     .perk-list li::before { content: "— "; color: #1a6b7a; }
   </style>
 </head>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Standing Protocol</p>
+        <p>Walking Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,8 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="standing.html">Standing</a>
-        <a href="screentime.html">Screentime</a>
         <a href="walking.html">Walking</a>
         <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
@@ -84,36 +82,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Standing Protocol</h2>
+    <h2>VitalAI Walking Protocol</h2>
     <p class="lede">
-      Standing markers, standing targets, and a weekly checklist — one setup, or a monthly standing desk. Stripe when live — until then this form emails an invoice request.
+      Walking markers, walking targets, and a weekly checklist — one setup, or a monthly walking desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Standing pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly standing desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Walking pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly walking desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$45</strong></div>
-        <div class="plan-row"><span>Standing desk</span><strong>$14 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$39</strong></div>
+        <div class="plan-row"><span>Walking desk</span><strong>$12 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Standing markers and schedule for your goals</li>
-        <li>Load / sit-stand rhythm for your week</li>
-        <li>Standing checklist for the first two weeks</li>
-        <li>Optional monthly standing desk</li>
+        <li>Walking markers and schedule for your goals</li>
+        <li>Load / daily walk rhythm for your week</li>
+        <li>Walking checklist for the first two weeks</li>
+        <li>Optional monthly walking desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request standing invoice</h3>
+      <h3 id="form-title">Request walking invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="standing-form" novalidate>
+      <form id="walking-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $45" selected>Protocol setup — $45</option>
-              <option value="Standing desk — $14/mo">Standing desk — $14/mo</option>
+              <option value="Protocol setup — $39" selected>Protocol setup — $39</option>
+              <option value="Walking desk — $12/mo">Walking desk — $12/mo</option>
             </select>
           </label>
           <label>
@@ -138,7 +136,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email standing invoice request</button>
+          <button class="btn" type="submit">Email walking invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -146,13 +144,13 @@
   </main>
 
   <footer class="site-footer">
-    Standing Protocol · setup / desk ·
+    Walking Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("standing-form");
+      var form = document.getElementById("walking-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -166,17 +164,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Standing Protocol — " + plan;
+        var subject = "VitalAI Walking Protocol — " + plan;
         var body =
-          "VitalAI Standing Protocol invoice request\n\n" +
+          "VitalAI Walking Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Standing Protocol checkout or invoice.\n" +
-          "Includes: standing map, standing blocks, weekly checklist.";
+          "Please send Walking Protocol checkout or invoice.\n" +
+          "Includes: walking map, walking blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

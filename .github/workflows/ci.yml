@@ -264,4 +264,8 @@ jobs:
           test -f projects/turner-capital/lambda.html
           test -f projects/turner-biographies/src/app/gazette/page.tsx
           test -f projects/tread-affiliates/app/cohort/page.tsx
+          test -f projects/meridian-travel/shuffleboard.html
+          test -f projects/everything-films/sting.html
+          test -f projects/project-ais/walking.html
+          test -f trailer-parks/src/app/clubhouse/page.tsx
           echo "Offer page presence checks passed."
