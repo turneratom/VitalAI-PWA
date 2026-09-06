@@ -461,6 +461,12 @@ export default function ShopPage() {
               Playbill · from $20
             </Link>
             <Link
+              href="/program"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Program · from $15
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

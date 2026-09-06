@@ -95,6 +95,7 @@ export default function WithholdPage() {
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/withhold" className="transition hover:text-signal">Withhold kit</Link>
             <Link href="/allocation" className="transition hover:text-signal">Allocation kit</Link>
+<Link href="/apportionment" className="transition hover:text-signal">Apportionment kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Withhold kit</a>
           </nav>
         </div>
