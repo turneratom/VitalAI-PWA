@@ -3,53 +3,53 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Title Diligence Pack — $699 | Trailer Parks",
+  title: "Flood Diligence Pack — $599 | Trailer Parks",
   description:
-    "Title Diligence Pack: single park $699, or three-park pack $1,799. Title flag notes, variance gap list, lender-ready summary. Invoice by email.",
+    "Flood Diligence Pack: single park $599, or three-park pack $1,599. Flood flag notes, variance gap list, lender-ready summary. Invoice by email.",
   openGraph: {
-    title: "Title Diligence Pack — $699",
+    title: "Flood Diligence Pack — $599",
     description:
-      "Single park $699 · Three-park pack $1,799. Title flag notes, variance gap list, lender-ready summary.",
+      "Single park $599 · Three-park pack $1,599. Flood flag notes, variance gap list, lender-ready summary.",
     type: "website",
     siteName: siteConfig.name,
-    url: "/title",
+    url: "/flood",
   },
 };
 
 const email = siteConfig.team.bradley.email;
 
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
-  "Title Diligence Pack — $699 single park"
+  "Flood Diligence Pack — $599 single park"
 )}&body=${encodeURIComponent(
-  `I want a Title Diligence Pack ($699 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a Flood Diligence Pack ($599 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
-  "Title Diligence Pack Three-Park Pack — $1,799"
+  "Flood Diligence Pack Three-Park Pack — $1,599"
 )}&body=${encodeURIComponent(
-  `I want a Title Diligence Pack Three-Park Pack ($1,799).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a Flood Diligence Pack Three-Park Pack ($1,599).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
   {
-    title: "Title flag notes",
-    body: "Chain, lien, and exception flags after reviewing the park’s title file and recent recordings.",
+    title: "Flood flag notes",
+    body: "Flood zone, elevation, and insurance flags after reviewing the park’s flood file and recent maps.",
   },
   {
-    title: "Exception gap list",
-    body: "Clear flags on open exceptions, missing releases, and what a lender or buyer counsel may push back on.",
+    title: "Elevation gap list",
+    body: "Clear flags on zone mismatches, missing elevation certs, and what a lender or insurer may push back on.",
   },
   {
-    title: "Title hygiene",
-    body: "Line-item notes where title docs look soft, padded, or missing for IC review.",
+    title: "Flood hygiene",
+    body: "Line-item notes where flood docs look soft, padded, or missing for IC review.",
   },
   {
     title: "PDF delivery",
-    body: "One memo PDF per park — single park at $699, or three parks in a pack at $1,799.",
+    body: "One memo PDF per park — single park at $599, or three parks in a pack at $1,599.",
   },
 ];
 
-export default function TitlePage() {
+export default function FloodPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
@@ -66,11 +66,11 @@ export default function TitlePage() {
             Trailer Parks · Capital
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Title Diligence Pack.
-            <span className="mt-2 block text-accent">$699 · or $1,799.</span>
+            Flood Diligence Pack.
+            <span className="mt-2 block text-accent">$599 · or $1,599.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $699, or three-park pack at $1,799 — title flag notes,
+            Single park at $599, or three-park pack at $1,599 — flood flag notes,
             variance gap list, lender-ready summary.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
@@ -78,19 +78,18 @@ export default function TitlePage() {
               href={SINGLE}
               className="inline-flex items-center justify-center bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-accent-light"
             >
-              Invoice memo — $699
+              Invoice memo — $599
             </a>
             <a
               href={PACK}
               className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
             >
-              Three-park — $1,799
+              Three-park — $1,599
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
             <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">EPA</Link>
-            <Link href="/flood" className="underline-offset-4 hover:text-white hover:underline">Flood</Link>
-            <Link href="/zoning" className="underline-offset-4 hover:text-white hover:underline">
+            <Link href="/title" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
@@ -117,7 +116,7 @@ export default function TitlePage() {
           What’s included
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-navy md:text-4xl">
-          Built for buyers and lenders who need a clean title picture before they argue price.
+          Built for buyers and lenders who need a clean flood picture before they argue price.
         </h2>
         <ul className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-2">
           {perks.map((item) => (
@@ -138,7 +137,7 @@ export default function TitlePage() {
             Two ways into the memo.
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            Single park $699 · Three-park pack $1,799. Pair with{" "}
+            Single park $599 · Three-park pack $1,599. Pair with{" "}
             <Link href="/cap-rate" className="font-medium text-primary hover:underline">
               Cap Rate
             </Link>
@@ -158,20 +157,20 @@ export default function TitlePage() {
             <Link href="/valuation" className="font-medium text-primary hover:underline">
               Valuation
             </Link>{" "}
-            once title is clear.
+            once flood risk is clear.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-primary-light"
             >
-              Request $699 invoice
+              Request $599 invoice
             </a>
             <a
               href={PACK}
               className="inline-flex border border-border px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-background"
             >
-              Three-park $1,799
+              Three-park $1,599
             </a>
           </div>
         </div>
