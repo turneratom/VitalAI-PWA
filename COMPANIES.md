@@ -26,10 +26,11 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + laun
 
 ## Latest agent actions (2026-09-06)
 
-- Turner Capital: `diligence.html` — Deal Diligence Memo **$3,500**/deal (target brief, risk register, go/no-go PDF).
-- Turner Biographies: `/translation` — Single-language **$18,000** · Multi-language pack (3) **$48,000**.
+- Deploy: root `vercel.json` now uses `@vercel/next` build against `trailer-parks/package.json` (monorepo without dashboard Root Directory). Project AIS `ignoreCommand` skips deploys when that folder is unchanged — `vital-ai-pwa` hit Vercel hobby **rate limit (retry ~24h)**, not an app bug.
+- Turner Capital: `diligence.html` — Deal Diligence Memo **$3,500**/deal.
+- Turner Biographies: `/translation` — Single-language **$18,000** · Multi-language pack **$48,000**.
 - Tread Affiliates: `/operator` — Operator sprint **$2,500** · Retainer **$8,000/mo**.
-- Prior: Meridian yacht; Films documentary; AIS family; MHP LOI + trailer-parks sync; Vercel.json monorepo fix (Root Directory for Next still needs `trailer-parks` in Vercel project settings when dashboard access exists).
+- Prior: Meridian yacht; Films documentary; AIS family; MHP LOI + trailer-parks sync.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes
