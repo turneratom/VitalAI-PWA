@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Index-Finger Protocol</title>
-  <meta name="description" content="VitalAI Index-Finger Protocol — Protocol setup $1 or Index-Finger desk $1/mo. Index-Finger targets, daily index-finger rhythm, weekly index-finger map. Invoice via email until Stripe is live." />
+  <title>VitalAI Lunula Protocol</title>
+  <meta name="description" content="VitalAI Lunula Protocol — Protocol setup $1 or Lunula desk $1/mo. Lunula targets, daily lunula rhythm, weekly lunula map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Index-Finger Protocol</p>
+        <p>Lunula Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -92,36 +92,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Index-Finger Protocol</h2>
+    <h2>VitalAI Lunula Protocol</h2>
     <p class="lede">
-      Index-Finger markers, index-finger targets, and a weekly checklist — one setup, or a monthly index-finger desk. Stripe when live — until then this form emails an invoice request.
+      Lunula markers, lunula targets, and a weekly checklist — one setup, or a monthly lunula desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Index-Finger pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly index-finger desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Lunula pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly lunula desk for ongoing adjustments.</p>
       <div class="plan-grid">
         <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
-        <div class="plan-row"><span>Index-Finger desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Lunula desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Index-Finger markers and schedule for your goals</li>
-        <li>Load / daily index-finger rhythm for your week</li>
-        <li>Index-Finger checklist for the first two weeks</li>
-        <li>Optional monthly index-finger desk</li>
+        <li>Lunula markers and schedule for your goals</li>
+        <li>Load / daily lunula rhythm for your week</li>
+        <li>Lunula checklist for the first two weeks</li>
+        <li>Optional monthly lunula desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request index-finger invoice</h3>
+      <h3 id="form-title">Request lunula invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="index-finger-form" novalidate>
+      <form id="lunula-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
               <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
-              <option value="Index-Finger desk — $1/mo">Index-Finger desk — $1/mo</option>
+              <option value="Lunula desk — $1/mo">Lunula desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -146,7 +146,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email index-finger invoice request</button>
+          <button class="btn" type="submit">Email lunula invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -154,13 +154,13 @@
   </main>
 
   <footer class="site-footer">
-    Index-Finger Protocol · setup / desk ·
+    Lunula Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("index-finger-form");
+      var form = document.getElementById("lunula-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -174,17 +174,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Index-Finger Protocol — " + plan;
+        var subject = "VitalAI Lunula Protocol — " + plan;
         var body =
-          "VitalAI Index-Finger Protocol invoice request\n\n" +
+          "VitalAI Lunula Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Index-Finger Protocol checkout or invoice.\n" +
-          "Includes: index-finger map, index-finger blocks, weekly checklist.";
+          "Please send Lunula Protocol checkout or invoice.\n" +
+          "Includes: lunula map, lunula blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

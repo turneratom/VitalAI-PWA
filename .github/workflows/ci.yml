@@ -520,4 +520,9 @@ jobs:
           test -f projects/project-ais/cuticle.html
           test -f trailer-parks/src/app/hoop-house/page.tsx
           test -f projects/mobile-home-parks/src/app/hoop-house/page.tsx
+          test -f projects/meridian-travel/dinghy-tour.html
+          test -f projects/everything-films/dnxhr.html
+          test -f projects/project-ais/lunula.html
+          test -f trailer-parks/src/app/row-cover/page.tsx
+          test -f projects/mobile-home-parks/src/app/row-cover/page.tsx
  
