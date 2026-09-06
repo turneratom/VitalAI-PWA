@@ -114,6 +114,7 @@ export default function ReconciliationPage() {
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay</Link>
             <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay</Link>
+            <Link href="/express-pay" className="transition hover:text-signal">Express-Pay</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reconciliation kit</a>
           </nav>
         </div>

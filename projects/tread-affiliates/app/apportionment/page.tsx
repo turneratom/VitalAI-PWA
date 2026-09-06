@@ -106,6 +106,7 @@ export default function ApportionmentPage() {
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
             <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay kit</Link>
+            <Link href="/express-pay" className="transition hover:text-signal">Express-Pay kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Apportionment kit</a>
           </nav>
         </div>
