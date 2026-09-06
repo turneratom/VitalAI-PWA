@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Nutrition Protocol</title>
-  <meta name="description" content="VitalAI Nutrition Protocol — Protocol setup $249 or Nutrition desk $79/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
+  <title>VitalAI Mobility Protocol</title>
+  <meta name="description" content="VitalAI Mobility Protocol — Protocol setup $189 or Mobility desk $55/mo. Joint targets, movement rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Nutrition Protocol</p>
+        <p>Mobility Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -58,8 +58,6 @@
         <a href="coach.html">Coach</a>
         <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
-        <a href="sleep.html">Sleep</a>
-        <a href="recovery.html">Recovery</a>
         <a href="focus.html">Focus</a>
         <a href="stress.html">Stress</a>
         <a href="longevity.html">Longevity</a>
@@ -70,41 +68,41 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Nutrition Protocol</h2>
+    <h2>VitalAI Mobility Protocol</h2>
     <p class="lede">
-      Macro targets, meal rhythm, and a grocery map — one setup, or a monthly nutrition desk. Stripe when live — until then this form emails an invoice request.
+      Mobility markers, movement rhythm, and a weekly checklist — one setup, or a monthly mobility desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Nutrition pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly nutrition desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Mobility pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly mobility desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$249</strong></div>
-        <div class="plan-row"><span>Nutrition desk</span><strong>$79 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$189</strong></div>
+        <div class="plan-row"><span>Mobility desk</span><strong>$55 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Macro and calorie targets for your goals</li>
-        <li>Meal rhythm for weekdays and weekends</li>
-        <li>Grocery map for the first two weeks</li>
-        <li>Optional monthly nutrition desk</li>
+        <li>Mobility markers and schedule for your goals</li>
+        <li>Movement / load rhythm for your week</li>
+        <li>Mobility checklist for the first two weeks</li>
+        <li>Optional monthly mobility desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request nutrition invoice</h3>
+      <h3 id="form-title">Request mobility invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="nutrition-form" novalidate>
+      <form id="mobility-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $249" selected>Protocol setup — $249</option>
-              <option value="Nutrition desk — $79/mo">Nutrition desk — $79/mo</option>
+              <option value="Protocol setup — $189" selected>Protocol setup — $189</option>
+              <option value="Mobility desk — $55/mo">Mobility desk — $55/mo</option>
             </select>
           </label>
           <label>
             Goal focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. fat loss / performance" />
+            <input type="text" id="focus" name="focus" placeholder="e.g. desk stiffness / travel / training block" />
           </label>
           <label>
             Preferred kickoff
@@ -120,25 +118,25 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Allergies, training days, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Joints, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email nutrition invoice request</button>
-          <a class="btn btn-secondary" href="concierge.html">Concierge onboarding</a>
+          <button class="btn" type="submit">Email mobility invoice request</button>
+          <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Nutrition Protocol · setup / desk ·
+    Mobility Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("nutrition-form");
+      var form = document.getElementById("mobility-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -152,17 +150,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Nutrition Protocol — " + plan;
+        var subject = "VitalAI Mobility Protocol — " + plan;
         var body =
-          "VitalAI Nutrition Protocol invoice request\n\n" +
+          "VitalAI Mobility Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Nutrition Protocol checkout or invoice.\n" +
-          "Includes: macro targets, meal rhythm, grocery map.";
+          "Please send Mobility Protocol checkout or invoice.\n" +
+          "Includes: joint map, movement blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

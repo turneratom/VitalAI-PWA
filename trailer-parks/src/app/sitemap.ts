@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/survey",
     "/epa",
     "/zoning",
+    "/title",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

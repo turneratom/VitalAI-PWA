@@ -88,6 +88,7 @@ export default function ZoningPage() {
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
+            <Link href="/title" className="underline-offset-4 hover:text-white hover:underline">Title</Link>
             <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>

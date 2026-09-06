@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Annual Journey Retainer — Meridian</title>
-  <meta name="description" content="Meridian Annual Journey Retainer — $12,000/year. Year-round planning, two Escapes or one Crossing sketched, priority host holds, quarterly route reviews. Fees apply toward journey invoices." />
+  <title>Private Spa Day — Meridian</title>
+  <meta name="description" content="Meridian Private Spa Day — $5,400 flat for up to 4 guests. Host-led itinerary, estate brief, transfer plan. Estate fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -78,67 +78,62 @@
       font-family: "Fraunces", Georgia, serif;
       font-size: 1.55rem; font-weight: 500; margin-bottom: 0.4rem;
     }
-    .panel-lead {
-      font-weight: 300; color: var(--ink-soft); margin-bottom: 1.35rem; font-size: 0.95rem;
-    }
+    .panel-lead { color: var(--ink-soft); font-weight: 300; margin-bottom: 1.25rem; }
     .fields { display: grid; gap: 0.85rem; }
-    @media (min-width: 640px) {
+    @media (min-width: 560px) {
       .fields { grid-template-columns: 1fr 1fr; }
       .fields .full { grid-column: 1 / -1; }
     }
     label {
-      display: grid; gap: 0.35rem;
-      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
-      font-weight: 500; color: var(--ink-soft);
+      display: grid; gap: 0.3rem; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: var(--ink-soft);
     }
-    input, select, textarea {
-      width: 100%; border: 1px solid var(--line); background: #fff;
-      padding: 0.75rem 0.9rem; font: inherit; font-size: 0.95rem;
-      font-weight: 300; color: var(--ink); letter-spacing: normal; text-transform: none;
+    input, textarea {
+      width: 100%; border: 1px solid var(--line); padding: 0.75rem 0.85rem;
+      font: inherit; font-size: 0.95rem; background: #fff;
+      text-transform: none; letter-spacing: normal; font-weight: 400;
     }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sea); }
-    textarea { min-height: 4.5rem; resize: vertical; }
+    textarea { min-height: 5rem; resize: vertical; }
+    .actions { margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
-      text-transform: uppercase; font-weight: 500; border: none; cursor: pointer;
-      font-family: inherit; transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+      padding: 0.85rem 1.25rem; font-size: 0.78rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 600; border: none; cursor: pointer;
+      transition: transform 0.2s var(--ease), background 0.2s var(--ease);
     }
     .btn-sea { background: var(--sea); color: #fff; }
     .btn-sea:hover { background: var(--sea-deep); transform: translateY(-1px); }
-    .actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
-    .hint { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); max-width: 28rem; }
+    .hint { font-size: 0.8rem; color: var(--ink-soft); font-weight: 300; }
     .rules {
-      margin-top: 1.75rem; display: grid; gap: 0.85rem;
+      margin-top: 2rem; display: grid; gap: 1rem;
       animation: rise 0.9s var(--ease) 0.28s both;
     }
+    @media (min-width: 640px) { .rules { grid-template-columns: 1fr 1fr; } }
     .rule {
-      padding: 0.85rem 0; border-bottom: 1px solid var(--line);
-      font-weight: 300; color: var(--ink-soft); font-size: 0.95rem;
+      border-top: 1px solid var(--line); padding-top: 0.85rem;
     }
     .rule strong {
       display: block; font-family: "Fraunces", Georgia, serif;
-      font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 1.05rem;
+      font-weight: 500; margin-bottom: 0.25rem;
     }
+    .rule { color: var(--ink-soft); font-weight: 300; font-size: 0.92rem; }
     footer {
-      padding: 1.25rem 6vw; font-size: 0.85rem; font-weight: 300; color: var(--ink-soft);
-      display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; justify-content: space-between;
+      padding: 1.5rem 6vw 2.5rem; display: flex; flex-wrap: wrap;
+      justify-content: space-between; gap: 0.75rem; color: var(--ink-soft); font-size: 0.85rem;
     }
-    footer strong {
-      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: var(--ink);
-    }
+    footer strong { font-family: "Fraunces", Georgia, serif; color: var(--ink); font-weight: 500; }
   </style>
 </head>
 <body>
-  <header class="nav">
+    <header class="nav">
     <a class="nav-brand" href="index.html">Meridian</a>
     <div class="nav-links">
       <a class="nav-link" href="index.html">Journeys</a>
       <a class="nav-link" href="hold.html">Hold</a>
       <a class="nav-link" href="weekend.html">Weekend</a>
       <a class="nav-link" href="dinner.html">Dinner</a>
-      <a class="nav-link" href="yacht.html">Yacht</a>
       <a class="nav-link" href="villa.html">Villa</a>
+      <a class="nav-link" href="yacht.html">Yacht</a>
       <a class="nav-link" href="jet.html">Jet</a>
       <a class="nav-link" href="safari.html">Safari</a>
       <a class="nav-link" href="ski.html">Ski</a>
@@ -147,6 +142,7 @@
       <a class="nav-link" href="helicopter.html">Helicopter</a>
       <a class="nav-link" href="vineyard.html">Vineyard</a>
       <a class="nav-link" href="spa.html">Spa</a>
+      <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
       <a class="nav-link" href="invoice.html">Invoice</a>
@@ -155,22 +151,18 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Annual Journey Retainer.</p>
-    <p class="price">$12,000 / year</p>
-    <p class="hero-sub">Year-round planning: two Escapes (or one Crossing) sketched, priority host holds, and quarterly route reviews. Retainer fees apply toward journey invoices for the year.</p>
+    <p class="hero-line">Private Spa Day.</p>
+    <p class="price">$5,400 flat · one day · up to 4 guests</p>
+    <p class="hero-sub">Host-led spa day: lodge brief, treatment rhythm, and transfer plan. Spa fees and private transport billed separately when the route requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request retainer invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $12,000 for the annual retainer, then open the planning year with your first route brief.</p>
-      <form id="retainer-form" novalidate>
+      <h2 id="form-title">Request spa day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $5,400 for Private Spa Day, then lock spa, season, and guest count with your first brief.</p>
+      <form id="spa-form" novalidate>
         <div class="fields">
           <label class="full">
-            Year sketch preference
-            <select id="sketch" name="sketch">
-              <option value="Two Escapes (5–8 days each)">Two Escapes (5–8 days each)</option>
-              <option value="One Crossing (10–14 days)">One Crossing (10–14 days)</option>
-              <option value="Open — decide after first review">Open — decide after first review</option>
-            </select>
+            Preferred city / spa
+            <input type="text" id="city" name="region" placeholder="e.g. Aspen / Miami / Kyoto / open" />
           </label>
           <label>
             Your name
@@ -181,83 +173,83 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Household / travelers
-            <input type="text" id="travelers" name="travelers" placeholder="e.g. 2 adults" />
+            Guests
+            <input type="text" id="guests" name="guests" value="Up to 4" />
           </label>
           <label>
-            Start month
-            <input type="text" id="start" name="start" placeholder="e.g. January 2027" />
+            Target day
+            <input type="text" id="window" name="window" placeholder="e.g. next Saturday / open" />
           </label>
           <label class="full">
-            Regions of interest
-            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / Andes" />
+            Occasion
+            <input type="text" id="tone" name="tone" placeholder="Recovery / couple / celebration" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Pace, hosts, constraints, gift timing"></textarea>
+            <textarea id="notes" name="notes" placeholder="Treatments, mobility, dietary, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $12,000 retainer invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with retainer details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $5,400 spa invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Spa Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Applied to journeys</strong>
-        The $12,000 retainer credits Escape / Crossing / Expedition invoices for the retainer year.
+        <strong>Host-led spa day</strong>
+        A Meridian host for treatment pacing, spa decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Two Escapes or one Crossing</strong>
-        We sketch two Escapes (or one Crossing) as part of the year — routes, hosts, and pacing drafts included.
+        <strong>Treatment brief</strong>
+        Treatments sequenced for the spa and day you choose.
       </div>
       <div class="rule">
-        <strong>Priority host holds</strong>
-        Retainer clients get first look at preferred hosts and stays before open inventory.
+        <strong>Day plan</strong>
+        Treatment timing, suite access, and transfer notes for the day.
       </div>
       <div class="rule">
-        <strong>Quarterly route reviews</strong>
-        Four planning check-ins across the year to recalibrate dates, regions, and pace.
+        <strong>Spa & transport separate</strong>
+        The $5,400 flat covers Meridian host and design. Spa fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Annual Journey Retainer</p>
+    <p><strong>Meridian</strong> · Private Spa Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("retainer-form");
+      var form = document.getElementById("spa-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var sketch = document.getElementById("sketch").value;
+        var region = (document.getElementById("city").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var travelers = (document.getElementById("travelers").value || "").trim();
-        var start = (document.getElementById("start").value || "").trim();
-        var region = (document.getElementById("region").value || "").trim();
+        var guests = (document.getElementById("guests").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
+        var tone = (document.getElementById("tone").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Annual Retainer — $12,000";
+        var subject = "Meridian Private Spa Day — $5,400";
         var body =
-          "Meridian Annual Journey Retainer request ($12,000/year)\n\n" +
-          "Sketch preference: " + sketch + "\n" +
+          "Meridian Private Spa Day request ($5,400 flat, one day, up to 4 guests)\n\n" +
+          "Spa: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Travelers: " + (travelers || "—") + "\n" +
-          "Start month: " + (start || "—") + "\n" +
-          "Regions: " + (region || "—") + "\n" +
+          "Guests: " + (guests || "Up to 4") + "\n" +
+          "Target day: " + (windowVal || "—") + "\n" +
+          "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $12,000 annual retainer invoice.\n" +
-          "Reminder: retainer fees apply toward journey invoices for the year.";
+          "Please send the $5,400 Private Spa Day invoice.\n" +
+          "Includes: host-led day, tasting brief, transfer plan. Estate fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
