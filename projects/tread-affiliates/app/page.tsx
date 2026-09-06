@@ -246,6 +246,9 @@ export default function HomePage() {
             <a href="/reconciliation" className="transition hover:text-signal">
               Reconciliation
             </a>
+            <a href="/true-up" className="transition hover:text-signal">
+              True-up
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
