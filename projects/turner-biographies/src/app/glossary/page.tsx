@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Worksheet Rights",
+  title: "Glossary Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for worksheet — Single-title worksheet $2,000 or Catalog worksheet slate $6,500. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for glossary — Single-title glossary $1,600 or Catalog glossary slate $4,800. Direct inquiry by email.",
   openGraph: {
-    title: "Worksheet Rights — Turner Biographies",
-    description: "Single-title worksheet $2,000 · Catalog worksheet slate $6,500.",
+    title: "Glossary Rights — Turner Biographies",
+    description: "Single-title glossary $1,600 · Catalog glossary slate $4,800.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title worksheet",
-    price: "$2,000",
+    title: "Single-title glossary",
+    price: "$1,600",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a worksheet — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Worksheet%20rights%20single-title%20%242%2C000&body=I%20want%20Single-title%20worksheet%20rights%20(%242%2C000).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $2,000",
+      "Rights to license one Firebrand / Greatest Humans title as a glossary — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Glossary%20rights%20single-title%20%241%2C600&body=I%20want%20Single-title%20glossary%20rights%20(%241%2C600).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $1,600",
   },
   {
     tag: "Slate",
-    title: "Catalog worksheet slate",
-    price: "$6,500",
+    title: "Catalog glossary slate",
+    price: "$4,800",
     detail:
-      "Multi-title or multi-issue worksheet slate across Firebrand / Greatest Humans — one agreement for a broader worksheet slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Worksheet%20rights%20catalog%20slate%20%246%2C500&body=I%20want%20Catalog%20worksheet%20slate%20rights%20(%246%2C500).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $6,500",
+      "Multi-title or multi-issue glossary slate across Firebrand / Greatest Humans — one agreement for a broader glossary slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Glossary%20rights%20catalog%20slate%20%244%2C800&body=I%20want%20Catalog%20glossary%20slate%20rights%20(%244%2C800).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $4,800",
   },
 ];
 
-export default function WorksheetPage() {
+export default function GlossaryPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,24 +42,18 @@ export default function WorksheetPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Worksheet Rights
+            Glossary Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate worksheet licensing for Firebrand and The Greatest Humans —
+            Run and slate glossary licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/rubric" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Serialization
-            </Link>
-            <Link href="/flashcards" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Flashcards
-            </Link>
-            <Link href="/glossary" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Glossary
+            <Link href="/worksheet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+              Worksheet
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
@@ -78,7 +72,7 @@ export default function WorksheetPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two worksheet tracks.
+            Two glossary tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -103,8 +97,8 @@ export default function WorksheetPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need rubric instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Worksheet covers week-by-session plans. Classroom covers teacher packs.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need worksheet instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Glossary covers week-by-session plans. Classroom covers teacher packs.</p>
           </div>
           <Link href="/workbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook
           </Link>
