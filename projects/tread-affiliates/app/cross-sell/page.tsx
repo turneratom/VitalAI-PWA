@@ -89,6 +89,7 @@ export default function CrossSellPage() {
             <Link href="/cross-sell" className="transition hover:text-signal">Cross-sell kit</Link>
             <Link href="/downsell" className="transition hover:text-signal">Downsell</Link>
             <Link href="/loyalty" className="transition hover:text-signal">Loyalty</Link>
+            <Link href="/referral" className="transition hover:text-signal">Referral</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Cross-sell kit</a>
           </nav>
         </div>

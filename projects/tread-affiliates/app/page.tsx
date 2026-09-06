@@ -174,6 +174,9 @@ export default function HomePage() {
             <a href="/loyalty" className="transition hover:text-signal">
               Loyalty
             </a>
+            <a href="/referral" className="transition hover:text-signal">
+              Referral
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

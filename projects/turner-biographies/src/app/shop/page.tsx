@@ -275,6 +275,12 @@ export default function ShopPage() {
               Handout · from $1,400
             </Link>
             <Link
+              href="/poster"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Poster · from $1,200
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

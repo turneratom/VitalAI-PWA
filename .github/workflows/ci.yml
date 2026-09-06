@@ -219,4 +219,7 @@ jobs:
           test -f projects/everything-films/aerial.html
           test -f projects/project-ais/sleep-debt.html
           test -f trailer-parks/src/app/meters/page.tsx
+          test -f projects/turner-capital/rho.html
+          test -f projects/turner-biographies/src/app/poster/page.tsx
+          test -f projects/tread-affiliates/app/referral/page.tsx
           echo "Offer page presence checks passed."
