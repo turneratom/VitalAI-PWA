@@ -171,6 +171,9 @@ export default function HomePage() {
             <a href="/downsell" className="transition hover:text-signal">
               Downsell
             </a>
+            <a href="/loyalty" className="transition hover:text-signal">
+              Loyalty
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
