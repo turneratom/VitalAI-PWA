@@ -152,4 +152,8 @@ jobs:
           test -f projects/turner-capital/carry.html
           test -f projects/turner-biographies/src/app/classroom/page.tsx
           test -f projects/tread-affiliates/app/seeding/page.tsx
+          test -f projects/meridian-travel/rail.html
+          test -f projects/everything-films/epk.html
+          test -f projects/project-ais/endurance.html
+          test -f trailer-parks/src/app/soils/page.tsx
           echo "Offer page presence checks passed."

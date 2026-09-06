@@ -92,6 +92,7 @@ export default function SepticPage() {
             <Link href="/wells" className="underline-offset-4 hover:text-white hover:underline">Wells</Link>
             <Link href="/wetlands" className="underline-offset-4 hover:text-white hover:underline">Wetlands</Link>
             <Link href="/access" className="underline-offset-4 hover:text-white hover:underline">Access</Link>
+            <Link href="/soils" className="underline-offset-4 hover:text-white hover:underline">Soils</Link>
             <Link href="/traffic" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>

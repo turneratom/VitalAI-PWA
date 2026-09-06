@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Strength Protocol</title>
-  <meta name="description" content="VitalAI Strength Protocol — Protocol setup $199 or Strength desk $58/mo. Strength targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Endurance Protocol</title>
+  <meta name="description" content="VitalAI Endurance Protocol — Protocol setup $179 or Endurance desk $52/mo. Endurance targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Strength Protocol</p>
+        <p>Endurance Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -76,36 +76,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Strength Protocol</h2>
+    <h2>VitalAI Endurance Protocol</h2>
     <p class="lede">
-      Strength markers, lift targets, and a weekly checklist — one setup, or a monthly strength desk. Stripe when live — until then this form emails an invoice request.
+      Endurance markers, pace targets, and a weekly checklist — one setup, or a monthly endurance desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Strength pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly strength desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Endurance pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly endurance desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$199</strong></div>
-        <div class="plan-row"><span>Strength desk</span><strong>$58 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$179</strong></div>
+        <div class="plan-row"><span>Endurance desk</span><strong>$52 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Strength markers and schedule for your goals</li>
+        <li>Endurance markers and schedule for your goals</li>
         <li>Load / recovery rhythm for your week</li>
-        <li>Strength checklist for the first two weeks</li>
-        <li>Optional monthly strength desk</li>
+        <li>Endurance checklist for the first two weeks</li>
+        <li>Optional monthly endurance desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request strength invoice</h3>
+      <h3 id="form-title">Request endurance invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="strength-form" novalidate>
+      <form id="endurance-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $199" selected>Protocol setup — $199</option>
-              <option value="Strength desk — $58/mo">Strength desk — $58/mo</option>
+              <option value="Protocol setup — $179" selected>Protocol setup — $179</option>
+              <option value="Endurance desk — $52/mo">Endurance desk — $52/mo</option>
             </select>
           </label>
           <label>
@@ -130,7 +130,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email strength invoice request</button>
+          <button class="btn" type="submit">Email endurance invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -138,13 +138,13 @@
   </main>
 
   <footer class="site-footer">
-    Strength Protocol · setup / desk ·
+    Endurance Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("strength-form");
+      var form = document.getElementById("endurance-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -158,17 +158,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Strength Protocol — " + plan;
+        var subject = "VitalAI Endurance Protocol — " + plan;
         var body =
-          "VitalAI Strength Protocol invoice request\n\n" +
+          "VitalAI Endurance Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Strength Protocol checkout or invoice.\n" +
-          "Includes: strength map, lift blocks, weekly checklist.";
+          "Please send Endurance Protocol checkout or invoice.\n" +
+          "Includes: endurance map, pace blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
