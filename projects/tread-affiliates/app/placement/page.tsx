@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Operator Coaching — Tread Affiliates",
+  title: "Featured Comparison Placement — Tread Affiliates",
   description:
-    "Operator Coaching — sprint $2,500 or monthly retainer $8,000/mo. Offer architecture, funnel teardown, weekly operator office hours. Invoice by email.",
+    "Featured Comparison Placement — single placement $1,800 or quarterly flight $5,400. Top slot on a comparison rail, creative QA, performance snapshot. Invoice by email.",
   openGraph: {
-    title: "Operator Coaching — Tread Affiliates",
+    title: "Featured Comparison Placement — Tread Affiliates",
     description:
-      "Sprint $2,500 · Monthly retainer $8,000/mo. Offer architecture, funnel teardown, weekly office hours.",
+      "Single placement $1,800 · Quarterly flight $5,400. Top slot on a comparison rail.",
     type: "website",
   },
 };
@@ -18,42 +18,42 @@ const MAIL = (subject: string, body: string) =>
 
 const packages = [
   {
-    tag: "Sprint",
-    title: "Operator sprint",
-    price: "$2,500",
+    tag: "Single",
+    title: "Featured placement",
+    price: "$1,800",
     cadence: " one-time",
     points: [
-      "Offer architecture for your primary rails",
-      "Funnel teardown with ranked fixes",
-      "90-minute operator working session",
-      "Written sprint notes and next actions",
+      "Top featured slot on one comparison rail",
+      "Creative QA against rail template",
+      "Tracking links and UTM setup",
+      "Issue performance snapshot",
     ],
     href: MAIL(
-      "Tread Affiliates Operator sprint — $2,500",
-      "I want an Operator sprint ($2,500).\n\nBrand / offer:\nPrimary rails:\nBiggest bottleneck:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Featured placement — $1,800",
+      "I want a Featured comparison placement ($1,800).\n\nBrand / offer:\nPreferred rail / category:\nURL:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $2,500",
+    cta: "Request placement — $1,800",
   },
   {
-    tag: "Retainer",
-    title: "Operator retainer",
-    price: "$8,000",
-    cadence: "/mo",
+    tag: "Quarterly",
+    title: "Quarterly flight",
+    price: "$5,400",
+    cadence: "/quarter",
     points: [
-      "Everything in the sprint, monthly",
-      "Weekly operator office hours",
-      "Ongoing funnel and offer iteration",
-      "Priority Slack/email desk access",
+      "Three featured placements across the quarter",
+      "Save vs three singles",
+      "Priority creative review each cycle",
+      "Quarterly performance rollup",
     ],
     href: MAIL(
-      "Tread Affiliates Operator retainer — $8,000/mo",
-      "I want an Operator retainer ($8,000/mo).\n\nBrand / offer:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Featured quarterly flight — $5,400",
+      "I want a Featured quarterly flight ($5,400).\n\nBrand / offer:\nPreferred rails:\nStart month:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request retainer — $8,000/mo",
+    cta: "Request quarterly — $5,400",
   },
 ];
 
-export default function OperatorPage() {
+export default function PlacementPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -61,27 +61,15 @@ export default function OperatorPage() {
           <Link href="/" className="font-display text-lg font-extrabold tracking-tight md:text-xl">
             TREAD <span className="text-signal">Affiliates</span>
           </Link>
-          <nav className="flex items-center gap-4 text-sm text-white/70">
+          <nav className="flex flex-wrap items-center gap-4 text-sm text-white/70">
             <Link href="/comparisons" className="transition hover:text-signal">
               Rails
             </Link>
             <Link href="/advertise" className="transition hover:text-signal">
               Advertise
             </Link>
-            <Link href="/launch" className="transition hover:text-signal">
-              Launch
-            </Link>
-            <Link href="/creative" className="transition hover:text-signal">
-              Creative
-            </Link>
-            <Link href="/audit" className="transition hover:text-signal">
-              Audit
-            </Link>
             <Link href="/sponsor" className="transition hover:text-signal">
               Sponsor
-            </Link>
-            <Link href="/partners" className="transition hover:text-signal">
-              Partners
             </Link>
             <Link href="/operator" className="transition hover:text-signal">
               Operator
@@ -89,11 +77,14 @@ export default function OperatorPage() {
             <Link href="/placement" className="transition hover:text-signal">
               Placement
             </Link>
+            <Link href="/partners" className="transition hover:text-signal">
+              Partners
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
-              Operator
+              Placement
             </a>
           </nav>
         </div>
@@ -104,27 +95,27 @@ export default function OperatorPage() {
         <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-cone/20 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">
-            Tread Affiliates · Operator Coaching
+            Tread Affiliates · Featured Placement
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Operator coaching for affiliate brands that need clarity.
+            Own the top slot on a comparison rail that already converts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            Sprint or retainer — offer architecture, funnel teardown, and weekly office hours.
-            Invoice by email until Stripe is live.
+            Single featured placement or a quarterly flight — creative QA, tracking,
+            and a performance snapshot. Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#packages"
               className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white"
             >
-              See coaching packages
+              See placement packages
             </a>
             <Link
-              href="/partners"
+              href="/comparisons"
               className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal"
             >
-              Partner desk
+              View rails
             </Link>
           </div>
         </div>
@@ -135,7 +126,7 @@ export default function OperatorPage() {
           Packages
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly operator desk.
+          One featured slot, or a quarter of them.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -173,10 +164,10 @@ export default function OperatorPage() {
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
           <p className="max-w-xl text-white/70">
-            Questions before you invoice? Same inbox as Partner Desk and Launch.
+            Prefer a managed partner desk or operator coaching? Same inbox.
           </p>
           <a
-            href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Operator%20Coaching"
+            href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Featured%20Placement"
             className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white"
           >
             Email Tread Affiliates

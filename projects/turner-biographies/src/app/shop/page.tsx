@@ -155,6 +155,12 @@ export default function ShopPage() {
               Translation · from $18,000
             </Link>
             <Link
+              href="/estate"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Estate oral history · from $12,000
+            </Link>
+            <Link
               href="/foreign-rights"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

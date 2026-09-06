@@ -73,6 +73,9 @@ export default function ComparisonsHubPage() {
             <Link href="/operator" className="transition hover:text-signal">
               Operator
             </Link>
+            <Link href="/placement" className="transition hover:text-signal">
+              Placement
+            </Link>
             <a
               href="#rails"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
