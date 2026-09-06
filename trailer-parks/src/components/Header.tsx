@@ -46,6 +46,7 @@ const navLinks = [
   { href: "/skirts", label: "Skirts Diligence $349" },
   { href: "/tie-downs", label: "Tie-Downs Diligence $339" },
   { href: "/foundations", label: "Foundations Diligence $329" },
+  { href: "/fencing", label: "Fencing Diligence $319" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
