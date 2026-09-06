@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Sailing Day — Meridian</title>
-  <meta name="description" content="Meridian Private Sailing Day — $4,200 flat for up to 6 guests. Skipper-led itinerary, harbor brief, yacht-club plan. Slip fees and transport billed separately when required." />
+  <title>Private Cricket Day — Meridian</title>
+  <meta name="description" content="Meridian Private Cricket Day — $4,800 flat for up to 8 players. Coach-led itinerary, pitch brief, club plan. Ground fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,200;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,800;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -146,9 +146,7 @@
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
       <a class="nav-link" href="equestrian.html">Equestrian</a>
-      <a class="nav-link" href="sailing.html">Sailing</a>
-      <a class="nav-text" href="squash.html">Squash</a>
-      <a class="nav-text" href="cricket.html">Cricket</a>
+      <a class="nav-link" href="cricket.html">Cricket</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
@@ -158,14 +156,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Sailing Day.</p>
-    <p class="price">$4,200 flat · one day · up to 6 guests</p>
-    <p class="hero-sub">Pro-led sailing day: harbor brief, set rhythm, and club plan. Slip fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Cricket Day.</p>
+    <p class="price">$4,800 flat · one day · up to 8 players</p>
+    <p class="hero-sub">Pro-led cricket day: pitch brief, set rhythm, and club plan. Ground fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request sailing day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $4,200 for Private Sailing Day, then lock club, harbor, and guest count with your first brief.</p>
-      <form id="sailing-form" novalidate>
+      <h2 id="form-title">Request cricket day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $4,800 for Private Cricket Day, then lock club, pitch, and player count with your first brief.</p>
+      <form id="cricket-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -181,7 +179,7 @@
           </label>
           <label>
             Guests
-            <input type="text" id="guests" name="guests" value="Up to 4" />
+            <input type="text" id="players" name="players" value="Up to 4" />
           </label>
           <label>
             Target day
@@ -197,19 +195,19 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $4,200 sailing invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Sailing Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $4,800 cricket invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Cricket Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led sailing day</strong>
-        A Meridian host for harbor pacing, set decisions, and day briefings.
+        <strong>Pro-led cricket day</strong>
+        A Meridian host for pitch pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Harbor brief</strong>
+        <strong>Pitch brief</strong>
         Sets and lunch sequenced for the club and day you choose.
       </div>
       <div class="rule">
@@ -218,26 +216,26 @@
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $4,200 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $4,800 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Sailing Day</p>
+    <p><strong>Meridian</strong> · Private Cricket Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("sailing-form");
+      var form = document.getElementById("cricket-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var region = (document.getElementById("city").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var guests = (document.getElementById("guests").value || "").trim();
+        var players = (document.getElementById("players").value || "").trim();
         var windowVal = (document.getElementById("window").value || "").trim();
         var tone = (document.getElementById("tone").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -245,18 +243,18 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Sailing Day — $4,200";
+        var subject = "Meridian Private Cricket Day — $4,800";
         var body =
-          "Meridian Private Sailing Day request ($4,200 flat, one day, up to 6 guests)\n\n" +
+          "Meridian Private Cricket Day request ($4,800 flat, one day, up to 8 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Guests: " + (guests || "Up to 4") + "\n" +
+          "Guests: " + (players || "Up to 4") + "\n" +
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $4,200 Private Sailing Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Slip fees and transport billed separately when required.";
+          "Please send the $4,800 Private Cricket Day invoice.\n" +
+          "Includes: instructor-led day, stand brief, range plan. Ground fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
