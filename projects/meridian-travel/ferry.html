@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Wakeboarding Day — Meridian</title>
-  <meta name="description" content="Meridian Private Wakeboarding Day — $60 flat for up to 6 players. Host-led itinerary, field brief, club plan. Field fees and transport billed separately when required." />
+  <title>Private Ferry Day — Meridian</title>
+  <meta name="description" content="Meridian Private Ferry Day — $5 flat for up to 6 players. Host-led itinerary, field brief, club plan. Field fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..142,100;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -152,13 +152,6 @@
       <a class="nav-link" href="snorkeling.html">Snorkeling</a>
       <a class="nav-link" href="windsurfing.html">Windsurfing</a>
       <a class="nav-link" href="kiteboarding.html">Kiteboarding</a>
-      <a class="nav-link" href="wakeboarding.html">Wakeboarding</a>
-      <a class="nav-link" href="rafting.html">Rafting</a>
-      <a class="nav-link" href="canoeing.html">Canoeing</a>
-      <a class="nav-link" href="tubing.html">Tubing</a>
-      <a class="nav-link" href="dinghy.html">Dinghy</a>
-      <a class="nav-link" href="catamaran.html">Catamaran</a>
-      <a class="nav-link" href="trimaran.html">Trimaran</a>
       <a class="nav-link" href="pontoon.html">Pontoon</a>
       <a class="nav-link" href="ferry.html">Ferry</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -170,14 +163,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Wakeboarding Day.</p>
-    <p class="price">$60 flat · one day · up to 6 players</p>
-    <p class="hero-sub">Pro-led wakeboarding day: field brief, set rhythm, and club plan. Field fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Ferry Day.</p>
+    <p class="price">$5 flat · one day · up to 6 players</p>
+    <p class="hero-sub">Pro-led ferry day: field brief, set rhythm, and club plan. Field fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request wakeboarding day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $60 for Private Wakeboarding Day, then lock club, field, and player count with your first brief.</p>
-      <form id="wakeboarding-form" novalidate>
+      <h2 id="form-title">Request ferry day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $5 for Private Ferry Day, then lock club, field, and player count with your first brief.</p>
+      <form id="ferry-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -209,15 +202,15 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $60 wakeboarding invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Wakeboarding Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $5 ferry invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Ferry Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led wakeboarding day</strong>
+        <strong>Pro-led ferry day</strong>
         A Meridian host for green pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
@@ -230,19 +223,19 @@
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $60 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $5 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Wakeboarding Day</p>
+    <p><strong>Meridian</strong> · Private Ferry Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("wakeboarding-form");
+      var form = document.getElementById("ferry-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -257,9 +250,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Wakeboarding Day — $60";
+        var subject = "Meridian Private Ferry Day — $5";
         var body =
-          "Meridian Private Wakeboarding Day request ($60 flat, one day, up to 6 players)\n\n" +
+          "Meridian Private Ferry Day request ($5 flat, one day, up to 6 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -267,7 +260,7 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $60 Private Wakeboarding Day invoice.\n" +
+          "Please send the $5 Private Ferry Day invoice.\n" +
           "Includes: instructor-led day, field brief, range plan. Field fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +

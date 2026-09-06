@@ -488,4 +488,9 @@ jobs:
           test -f projects/project-ais/middle-finger.html
           test -f trailer-parks/src/app/glasshouse/page.tsx
           test -f projects/mobile-home-parks/src/app/glasshouse/page.tsx
+          test -f projects/meridian-travel/ferry.html
+          test -f projects/everything-films/dcp.html
+          test -f projects/project-ais/index-finger.html
+          test -f trailer-parks/src/app/hothouse/page.tsx
+          test -f projects/mobile-home-parks/src/app/hothouse/page.tsx
  
