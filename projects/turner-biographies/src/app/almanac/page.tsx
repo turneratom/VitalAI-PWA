@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Digest Rights",
+  title: "Almanac Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for digest — Single-title digest $550 or Catalog digest slate $1,650. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for almanac — Single-title almanac $500 or Catalog almanac slate $1,500. Direct inquiry by email.",
   openGraph: {
-    title: "Digest Rights — Turner Biographies",
-    description: "Single-title digest $550 · Catalog digest slate $1,650.",
+    title: "Almanac Rights — Turner Biographies",
+    description: "Single-title almanac $500 · Catalog almanac slate $1,500.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title digest",
-    price: "$550",
+    title: "Single-title almanac",
+    price: "$500",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a digest — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Digest%20rights%20single-title%20%24550&body=I%20want%20Single-title%20digest%20rights%20(%24550).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $550",
+      "Rights to license one Firebrand / Greatest Humans title as a almanac — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Almanac%20rights%20single-title%20%24500&body=I%20want%20Single-title%20almanac%20rights%20(%24500).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $500",
   },
   {
     tag: "Slate",
-    title: "Catalog digest slate",
-    price: "$1,650",
+    title: "Catalog almanac slate",
+    price: "$1,500",
     detail:
-      "Multi-title or multi-issue digest slate across Firebrand / Greatest Humans — one agreement for a broader digest slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Digest%20rights%20catalog%20slate%20%241%2C650&body=I%20want%20Catalog%20digest%20slate%20rights%20(%241%2C650).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $1,650",
+      "Multi-title or multi-issue almanac slate across Firebrand / Greatest Humans — one agreement for a broader almanac slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Almanac%20rights%20catalog%20slate%20%241%2C500&body=I%20want%20Catalog%20almanac%20slate%20rights%20(%241%2C500).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $1,500",
   },
 ];
 
-export default function DigestPage() {
+export default function AlmanacPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,20 +42,17 @@ export default function DigestPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Digest Rights
+            Almanac Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate digest licensing for Firebrand and The Greatest Humans —
+            Run and slate almanac licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/almanac" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Almanac
-            </Link>
-            <Link href="/gazette" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/digest" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Gazette
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -75,7 +72,7 @@ export default function DigestPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two digest tracks.
+            Two almanac tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -100,10 +97,10 @@ export default function DigestPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need gazette instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Digest covers curated issue packs. Gazette covers weekly issue rights.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need digest instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Almanac covers annual reference packs. Digest covers curated issue packs.</p>
           </div>
-          <Link href="/gazette" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Gazette
+          <Link href="/digest" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Digest
           </Link>
         </div>
       </section>

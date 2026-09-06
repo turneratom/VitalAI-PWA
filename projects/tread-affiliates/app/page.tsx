@@ -198,6 +198,9 @@ export default function HomePage() {
             <a href="/retention" className="transition hover:text-signal">
               Retention
             </a>
+            <a href="/reactivation" className="transition hover:text-signal">
+              Reactivation
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

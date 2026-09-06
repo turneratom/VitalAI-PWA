@@ -323,6 +323,12 @@ export default function ShopPage() {
               Digest · from $550
             </Link>
             <Link
+              href="/almanac"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Almanac · from $500
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

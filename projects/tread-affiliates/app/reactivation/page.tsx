@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Cohort Kit — Tread Affiliates",
+  title: "Affiliate Reactivation Kit — Tread Affiliates",
   description:
-    "Affiliate Cohort Kit — one-time sprint $350 or monthly Cohort kit $175/mo. Cohort plan, cohort mix, cohort pairing. Invoice by email.",
+    "Affiliate Reactivation Kit — one-time sprint $300 or monthly Reactivation kit $150/mo. Reactivation plan, reactivation mix, reactivation pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Cohort Kit — Tread Affiliates",
-    description: "Sprint $350 · Monthly desk $175/mo. Cohort plan, cohort mix, cohort pairing.",
+    title: "Affiliate Reactivation Kit — Tread Affiliates",
+    description: "Sprint $300 · Monthly desk $150/mo. Reactivation plan, reactivation mix, reactivation pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Cohort kit",
-    price: "$350",
+    title: "Reactivation kit",
+    price: "$300",
     cadence: " one-time",
     points: [
-      "Cohort plan across your primary rails",
+      "Reactivation plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Cohort kit execution checklist",
+      "30-day Reactivation kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Cohort kit — $350",
-      "I want an Affiliate Cohort kit ($350).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Reactivation kit — $300",
+      "I want an Affiliate Reactivation kit ($300).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $350",
+    cta: "Request sprint — $300",
   },
   {
     tag: "Desk",
-    title: "Monthly Cohort kit",
-    price: "$175",
+    title: "Monthly Reactivation kit",
+    price: "$150",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Cohort kit and ROAS review",
+      "Monthly Reactivation kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Cohort kit — $175/mo",
-      "I want a Monthly Cohort kit ($175/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Reactivation kit — $150/mo",
+      "I want a Monthly Reactivation kit ($150/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $175/mo",
+    cta: "Request desk — $150/mo",
   },
 ];
 
-export default function CohortPage() {
+export default function ReactivationPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,10 +86,8 @@ export default function CohortPage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/cohort" className="transition hover:text-signal">Cohort kit</Link>
-            <Link href="/retention" className="transition hover:text-signal">Retention</Link>
-            <Link href="/reactivation" className="transition hover:text-signal">Reactivation</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Cohort kit</a>
+            <Link href="/reactivation" className="transition hover:text-signal">Reactivation kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reactivation kit</a>
           </nav>
         </div>
       </header>
@@ -97,17 +95,17 @@ export default function CohortPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Cohort kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Reactivation kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Cohort kit packages that convert comparison-rail traffic — not vanity posts.
+            Reactivation kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: cohort plan, cohort mix, and cohort pairing.
+            One-time sprint or monthly desk: reactivation plan, reactivation mix, and reactivation pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Cohort kit packages
+              See Reactivation kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -119,7 +117,7 @@ export default function CohortPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Cohort kit.
+          Sprint once, or keep a monthly Reactivation kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
