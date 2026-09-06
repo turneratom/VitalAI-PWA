@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rates Overlay Memo — Turner Capital</title>
-  <meta name="description" content="Rates Overlay Memo from Turner Capital — $1,850 one-shot or $925/mo. Rates map, Duration stress flags, roll ladder notes. PDF delivery. Invoice by email." />
+  <title>Carry Trade Memo — Turner Capital</title>
+  <meta name="description" content="Carry Trade Memo from Turner Capital — $1,650 one-shot or $825/mo. Carry map, Funding stress flags, roll ladder notes. PDF delivery. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -243,21 +243,21 @@
       <a class="nav-text" href="carry.html">Carry</a>
       <a class="nav-text" href="memo.html">Deal memo</a>
       <a class="nav-text" href="pilot.html">Desk pilot</a>
-      <a class="nav-cta" href="#enroll">Request rates invoice</a>
+      <a class="nav-cta" href="#enroll">Request carry invoice</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Rates overlay memo</span></h1>
-      <p class="price-chip">$1,850<span>one-shot · $925/mo</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Carry trade memo</span></h1>
+      <p class="price-chip">$1,650<span>one-shot · $825/mo</span></p>
       <p class="hero-lede">
         Your book, one FX pass —
-        <strong>curve map, duration stress flags, roll ladder notes.</strong> PDF delivery.
+        <strong>carry map, funding stress flags, roll ladder notes.</strong> PDF delivery.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Order rates memo</a>
+        <a class="btn btn-primary" href="#enroll">Order carry memo</a>
         <a class="btn btn-ghost" href="alts.html">Prefer alts memo · $4,500</a>
       </div>
     </div>
@@ -273,21 +273,21 @@
       <article class="include">
         <p class="include-num">01 · Catalyst</p>
         <div>
-          <h3>Rates map</h3>
-          <p>Seven-day curve map ranked for govvies + swap desks — what moves, when, why it matters.</p>
+          <h3>Carry map</h3>
+          <p>Seven-day carry map ranked for cross-currency + basis desks — what moves, when, why it matters.</p>
         </div>
       </article>
       <article class="include">
         <p class="include-num">02 · Regime</p>
         <div>
-          <h3>Duration stress flags</h3>
-          <p>Risk-on / risk-off Duration stress flags with what would flip the bias mid-week.</p>
+          <h3>Funding stress flags</h3>
+          <p>Risk-on / risk-off Funding stress flags with what would flip the bias mid-week.</p>
         </div>
       </article>
       <article class="include">
         <p class="include-num">03 · Positioning</p>
         <div>
-          <h3>Rates ladder notes</h3>
+          <h3>Carry ladder notes</h3>
           <p>Hedge ladder sizes and instruments ranked by impact — not a blank “buy forwards” slide.</p>
         </div>
       </article>
@@ -295,13 +295,13 @@
         <p class="include-num">04 · Delivery</p>
         <div>
           <h3>PDF delivery</h3>
-          <p>One-shot PDF at $1,850, or monthly refresh at $925/mo. Pair with Hedge Memo for full overlay context.</p>
+          <p>One-shot PDF at $1,650, or monthly refresh at $825/mo. Pair with Hedge Memo for full overlay context.</p>
         </div>
       </article>
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request treasury memo invoice — $1,850 · $925/mo</h2>
+      <h2 id="enroll-title">Request treasury memo invoice — $1,650 · $825/mo</h2>
       <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
       <form id="rates-form" novalidate>
         <div class="fields">
@@ -320,8 +320,8 @@
           <label>
             Memo type
             <select id="plan" name="plan">
-              <option value="Rates Overlay Memo one-shot — $1,850" selected>Rates Overlay Memo one-shot — $1,850</option>
-              <option value="Rates Overlay Memo monthly — $925/mo">Rates Overlay Memo monthly — $925/mo</option>
+              <option value="Carry Trade Memo one-shot — $1,650" selected>Carry Trade Memo one-shot — $1,650</option>
+              <option value="Carry Trade Memo monthly — $825/mo">Carry Trade Memo monthly — $825/mo</option>
             </select>
           </label>
           <label class="full">
@@ -341,11 +341,11 @@
     </section>
 
     <p class="disclaimer">
-      Rates Overlay Memo is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
+      Carry Trade Memo is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Rates Overlay Memo</span>
+      <span>Turner Capital · Carry Trade Memo</span>
       <a href="mailto:brad@treadcompanies.com?subject=Treasury%20Overlay%20Memo">brad@treadcompanies.com</a>
     </footer>
   </main>
@@ -366,16 +366,16 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Rates Overlay Memo — " + plan;
+        var subject = "Turner Capital Carry Trade Memo — " + plan;
         var body =
-          "Rates Overlay Memo invoice request (" + plan + ")\n\n" +
+          "Carry Trade Memo invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Firm: " + (firm || "—") + "\n" +
           "Plan: " + plan + "\n" +
           "Target: " + (focus || "—") + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send invoice for Rates Overlay Memo ($1,850 one-shot or $925/mo).";
+          "Please send invoice for Carry Trade Memo ($1,650 one-shot or $825/mo).";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

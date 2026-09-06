@@ -144,6 +144,9 @@ export default function HomePage() {
             <a href="/influencer" className="transition hover:text-signal">
               Influencer
             </a>
+            <a href="/seeding" className="transition hover:text-signal">
+              Seeding
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

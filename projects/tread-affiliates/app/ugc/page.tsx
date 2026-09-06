@@ -79,6 +79,7 @@ export default function UgcPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/ugc" className="transition hover:text-signal">UGC</Link>
             <Link href="/influencer" className="transition hover:text-signal">Influencer</Link>
+            <Link href="/seeding" className="transition hover:text-signal">Seeding</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">UGC</a>
           </nav>
         </div>
