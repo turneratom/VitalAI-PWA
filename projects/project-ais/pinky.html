@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Toe Protocol</title>
-  <meta name="description" content="VitalAI Toe Protocol — Protocol setup $1 or Toe desk $1/mo. Toe targets, daily toe rhythm, weekly toe map. Invoice via email until Stripe is live." />
+  <title>VitalAI Pinky Protocol</title>
+  <meta name="description" content="VitalAI Pinky Protocol — Protocol setup $1 or Pinky desk $1/mo. Pinky targets, daily pinky rhythm, weekly pinky map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Toe Protocol</p>
+        <p>Pinky Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -80,11 +80,6 @@
         <a href="toe.html">Toe</a>
         <a href="nail.html">Nail</a>
         <a href="thumb.html">Thumb</a>
-        <a href="finger.html">Finger</a>
-        <a href="knuckle.html">Knuckle</a>
-        <a href="palm.html">Palm</a>
-        <a href="fist.html">Fist</a>
-        <a href="hand.html">Hand</a>
         <a href="pinky.html">Pinky</a>
         <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
@@ -93,36 +88,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Toe Protocol</h2>
+    <h2>VitalAI Pinky Protocol</h2>
     <p class="lede">
-      Toe markers, toe targets, and a weekly checklist — one setup, or a monthly toe desk. Stripe when live — until then this form emails an invoice request.
+      Pinky markers, pinky targets, and a weekly checklist — one setup, or a monthly pinky desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Toe pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly toe desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Pinky pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly pinky desk for ongoing adjustments.</p>
       <div class="plan-grid">
         <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
-        <div class="plan-row"><span>Toe desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Pinky desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Toe markers and schedule for your goals</li>
-        <li>Load / daily toe rhythm for your week</li>
-        <li>Toe checklist for the first two weeks</li>
-        <li>Optional monthly toe desk</li>
+        <li>Pinky markers and schedule for your goals</li>
+        <li>Load / daily pinky rhythm for your week</li>
+        <li>Pinky checklist for the first two weeks</li>
+        <li>Optional monthly pinky desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request toe invoice</h3>
+      <h3 id="form-title">Request pinky invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="toe-form" novalidate>
+      <form id="pinky-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
               <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
-              <option value="Toe desk — $1/mo">Toe desk — $1/mo</option>
+              <option value="Pinky desk — $1/mo">Pinky desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -147,7 +142,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email toe invoice request</button>
+          <button class="btn" type="submit">Email pinky invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -155,13 +150,13 @@
   </main>
 
   <footer class="site-footer">
-    Toe Protocol · setup / desk ·
+    Pinky Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("toe-form");
+      var form = document.getElementById("pinky-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -175,17 +170,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Toe Protocol — " + plan;
+        var subject = "VitalAI Pinky Protocol — " + plan;
         var body =
-          "VitalAI Toe Protocol invoice request\n\n" +
+          "VitalAI Pinky Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Toe Protocol checkout or invoice.\n" +
-          "Includes: toe map, toe blocks, weekly checklist.";
+          "Please send Pinky Protocol checkout or invoice.\n" +
+          "Includes: pinky map, pinky blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

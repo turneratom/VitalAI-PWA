@@ -464,4 +464,9 @@ jobs:
           test -f projects/project-ais/hand.html
           test -f trailer-parks/src/app/conservatory/page.tsx
           test -f projects/mobile-home-parks/src/app/conservatory/page.tsx
+          test -f projects/meridian-travel/catamaran.html
+          test -f projects/everything-films/online-lock.html
+          test -f projects/project-ais/pinky.html
+          test -f trailer-parks/src/app/orangery/page.tsx
+          test -f projects/mobile-home-parks/src/app/orangery/page.tsx
  
