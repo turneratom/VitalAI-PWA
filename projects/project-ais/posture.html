@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Breath Protocol</title>
-  <meta name="description" content="VitalAI Breath Protocol — Protocol setup $159 or Breath desk $45/mo. Breath targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Posture Protocol</title>
+  <meta name="description" content="VitalAI Posture Protocol — Protocol setup $149 or Posture desk $42/mo. Posture targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Breath Protocol</p>
+        <p>Posture Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -79,36 +79,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Breath Protocol</h2>
+    <h2>VitalAI Posture Protocol</h2>
     <p class="lede">
-      Breath markers, breath targets, and a weekly checklist — one setup, or a monthly breath desk. Stripe when live — until then this form emails an invoice request.
+      Posture markers, posture targets, and a weekly checklist — one setup, or a monthly posture desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Breath pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly breath desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Posture pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly posture desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$159</strong></div>
-        <div class="plan-row"><span>Breath desk</span><strong>$45 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$149</strong></div>
+        <div class="plan-row"><span>Posture desk</span><strong>$42 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Breath markers and schedule for your goals</li>
+        <li>Posture markers and schedule for your goals</li>
         <li>Load / recovery rhythm for your week</li>
-        <li>Breath checklist for the first two weeks</li>
-        <li>Optional monthly breath desk</li>
+        <li>Posture checklist for the first two weeks</li>
+        <li>Optional monthly posture desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request breath invoice</h3>
+      <h3 id="form-title">Request posture invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="breath-form" novalidate>
+      <form id="posture-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $159" selected>Protocol setup — $159</option>
-              <option value="Breath desk — $45/mo">Breath desk — $45/mo</option>
+              <option value="Protocol setup — $149" selected>Protocol setup — $149</option>
+              <option value="Posture desk — $42/mo">Posture desk — $42/mo</option>
             </select>
           </label>
           <label>
@@ -133,7 +133,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email breath invoice request</button>
+          <button class="btn" type="submit">Email posture invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -141,13 +141,13 @@
   </main>
 
   <footer class="site-footer">
-    Breath Protocol · setup / desk ·
+    Posture Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("breath-form");
+      var form = document.getElementById("posture-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -161,17 +161,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Breath Protocol — " + plan;
+        var subject = "VitalAI Posture Protocol — " + plan;
         var body =
-          "VitalAI Breath Protocol invoice request\n\n" +
+          "VitalAI Posture Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Breath Protocol checkout or invoice.\n" +
-          "Includes: breath map, breath blocks, weekly checklist.";
+          "Please send Posture Protocol checkout or invoice.\n" +
+          "Includes: posture map, posture blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
