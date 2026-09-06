@@ -82,6 +82,7 @@ const navLinks = [
   { href: "/solarium", label: "Solarium Diligence $5" },
   { href: "/conservatory", label: "Conservatory Diligence $3" },
   { href: "/orangery", label: "Orangery Diligence $2" },
+  { href: "/wintergarden", label: "Wintergarden Diligence $1" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

@@ -472,4 +472,9 @@ jobs:
           test -f projects/project-ais/pinky.html
           test -f trailer-parks/src/app/orangery/page.tsx
           test -f projects/mobile-home-parks/src/app/orangery/page.tsx
+          test -f projects/meridian-travel/trimaran.html
+          test -f projects/everything-films/deliverable.html
+          test -f projects/project-ais/ring-finger.html
+          test -f trailer-parks/src/app/wintergarden/page.tsx
+          test -f projects/mobile-home-parks/src/app/wintergarden/page.tsx
  
