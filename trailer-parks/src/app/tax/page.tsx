@@ -91,6 +91,9 @@ export default function TaxPage() {
             <Link href="/noi" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>
+            <Link href="/insurance" className="underline-offset-4 hover:text-white hover:underline">
+              Insurance
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>

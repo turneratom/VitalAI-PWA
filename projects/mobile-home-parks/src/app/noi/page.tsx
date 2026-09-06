@@ -94,6 +94,9 @@ export default function NoiPage() {
             <Link href="/tax" className="underline-offset-4 hover:text-white hover:underline">
               Tax Basis
             </Link>
+            <Link href="/insurance" className="underline-offset-4 hover:text-white hover:underline">
+              Insurance
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>

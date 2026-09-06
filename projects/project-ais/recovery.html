@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Coach Certification</title>
-  <meta name="description" content="VitalAI Coach Certification — Cohort seat $1,200 or Alumni toolkit $299/mo. 4-week cohort, practice clients in sandbox, certificate, and coach directory listing." />
+  <title>VitalAI Recovery Protocol</title>
+  <meta name="description" content="VitalAI Recovery Protocol — Protocol setup $229 or Recovery desk $69/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Coach Certification</p>
+        <p>Recovery Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -55,58 +55,55 @@
         <a href="whitelabel.html">White-label</a>
         <a href="api.html">API</a>
         <a href="enterprise.html">Enterprise</a>
-        <a href="family.html">Family</a>
-        <a href="clinic.html">Clinic</a>
+        <a href="coach.html">Coach</a>
         <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
-        <a href="sleep.html">Sleep</a>
         <a href="recovery.html">Recovery</a>
-        <a href="subscribe.html">Subscribe</a>
+        <a href="clinic.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Coach Certification</h2>
+    <h2>VitalAI Recovery Protocol</h2>
     <p class="lede">
-      A 4-week cohort to certify on VitalAI coaching workflows, plus an optional alumni toolkit. Practice clients in the sandbox, earn a certificate, and list in the coach directory. Stripe when live — until then this form emails an invoice request.
+      Recovery window, wind-down rhythm, and a recovery checklist — one setup, or a monthly sleep desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Certification pricing</h3>
-      <p class="hint">Start with a cohort seat; keep the alumni toolkit if you want ongoing tools and directory placement.</p>
+      <h3 id="plans-title">Recovery pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly recovery desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Cohort seat</span><strong>$1,200</strong></div>
-        <div class="plan-row"><span>Alumni toolkit</span><strong>$299 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$229</strong></div>
+        <div class="plan-row"><span>Recovery desk</span><strong>$69 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>4-week cohort</li>
-        <li>Practice clients in sandbox</li>
-        <li>Certificate on completion</li>
-        <li>Listing in coach directory</li>
+        <li>Recovery window and schedule for your goals</li>
+        <li>Hard / easy day rhythm for training weeks</li>
+        <li>Readiness checklist for the first two weeks</li>
+        <li>Optional monthly recovery desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request certification invoice</h3>
-      <p class="hint">Tell us seat vs toolkit. We reply with checkout or invoice within one business day.</p>
-      <form id="coach-form" novalidate>
+      <h3 id="form-title">Request nutrition invoice</h3>
+      <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="recovery-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Cohort seat — $1,200" selected>Cohort seat — $1,200</option>
-              <option value="Alumni toolkit — $299/mo">Alumni toolkit — $299/mo</option>
-              <option value="Cohort + Alumni toolkit — $1,200 + $299/mo">Cohort + Alumni toolkit — $1,200 + $299/mo</option>
+              <option value="Protocol setup — $229" selected>Protocol setup — $229</option>
+              <option value="Recovery desk — $69/mo">Recovery desk — $69/mo</option>
             </select>
           </label>
           <label>
-            Practice focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. nutrition / strength / habits" />
+            Goal focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. training load / travel weeks" />
           </label>
           <label>
-            Preferred cohort window
-            <input type="text" id="window" name="window" placeholder="e.g. next open cohort" />
+            Preferred kickoff
+            <input type="text" id="kickoff" name="kickoff" placeholder="e.g. this week / next open" />
           </label>
           <label>
             Your name
@@ -118,31 +115,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Credentials, client load, directory bio" />
+            <input type="text" id="notes" name="notes" placeholder="Training days, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email certification invoice request</button>
-          <a class="btn btn-secondary" href="teams.html">Teams for clinics</a>
+          <button class="btn" type="submit">Email nutrition invoice request</button>
+          <a class="btn btn-secondary" href="sleep.html">Sleep protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Coach Certification · cohort + alumni toolkit ·
+    Recovery Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("coach-form");
+      var form = document.getElementById("recovery-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
         var focus = (document.getElementById("focus").value || "").trim();
-        var windowVal = (document.getElementById("window").value || "").trim();
+        var kickoff = (document.getElementById("kickoff").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -150,17 +147,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Coach Certification — " + plan;
+        var subject = "VitalAI Recovery Protocol — " + plan;
         var body =
-          "VitalAI Coach Certification invoice request\n\n" +
+          "VitalAI Recovery Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Practice focus: " + (focus || "—") + "\n" +
-          "Preferred cohort window: " + (windowVal || "—") + "\n" +
+          "Goal focus: " + (focus || "—") + "\n" +
+          "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Coach Certification checkout or invoice.\n" +
-          "Includes: 4-week cohort, practice clients in sandbox, certificate, listing in coach directory.";
+          "Please send Recovery Protocol checkout or invoice.\n" +
+          "Includes: load map, recovery blocks, readiness checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
