@@ -32,8 +32,22 @@ export default function BuyersPage() {
           </div>
           <p className="text-white/70 max-w-xl">
             Access verified financials on every listing. Full T-12 statements, expense breakdowns,
-            and underwriting metrics — no buyer fees.
+            and underwriting metrics — no buyer fees on the free portal.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href="/buyer-pro"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-navy font-bold text-sm uppercase tracking-wider transition-colors"
+            >
+              Buyer Pro — $99/mo
+            </Link>
+            <Link
+              href="/marketplace"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/35 text-white font-bold text-sm uppercase tracking-wider transition-colors hover:border-white"
+            >
+              Browse marketplace
+            </Link>
+          </div>
         </div>
       </div>
 

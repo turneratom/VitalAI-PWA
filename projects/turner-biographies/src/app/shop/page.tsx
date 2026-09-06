@@ -125,6 +125,12 @@ export default function ShopPage() {
 
           <div className="mt-14 flex flex-wrap gap-4 border-t border-ink/15 pt-10 font-[family-name:var(--font-ui)] text-sm">
             <Link
+              href="/speaking"
+              className="bg-seal px-4 py-2.5 text-bone transition hover:bg-seal-deep"
+            >
+              Speaking · from $15,000
+            </Link>
+            <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
               className="bg-ink px-4 py-2.5 text-bone transition hover:bg-seal"
             >

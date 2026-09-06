@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/list-your-park",
     "/featured",
+    "/buyer-pro",
     "/marketplace",
     "/owners",
     "/buyers",
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority:
-      path === "/list-your-park" || path === "/featured"
+      path === "/list-your-park" || path === "/featured" || path === "/buyer-pro"
         ? 1
         : path === ""
           ? 0.9

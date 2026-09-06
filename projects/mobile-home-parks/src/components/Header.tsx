@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/upload-list", label: "Upload List" },
   { href: "/owners", label: "Owners" },
   { href: "/buyers", label: "Buyers" },
+  { href: "/buyer-pro", label: "Buyer Pro $99" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
