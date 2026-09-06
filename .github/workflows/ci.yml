@@ -512,4 +512,9 @@ jobs:
           test -f projects/project-ais/nail-bed.html
           test -f trailer-parks/src/app/cloche/page.tsx
           test -f projects/mobile-home-parks/src/app/cloche/page.tsx
+          test -f projects/meridian-travel/skiff.html
+          test -f projects/everything-films/prores.html
+          test -f projects/project-ais/cuticle.html
+          test -f trailer-parks/src/app/hoop-house/page.tsx
+          test -f projects/mobile-home-parks/src/app/hoop-house/page.tsx
  
