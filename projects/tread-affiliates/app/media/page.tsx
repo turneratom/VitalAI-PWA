@@ -71,6 +71,7 @@ export default function MediaPage() {
             <Link href="/tracking" className="transition hover:text-signal">Tracking</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/media" className="transition hover:text-signal">Media</Link>
+            <Link href="/retail" className="transition hover:text-signal">Retail</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Media</a>
           </nav>
         </div>
