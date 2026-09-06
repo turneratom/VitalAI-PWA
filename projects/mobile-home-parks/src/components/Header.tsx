@@ -93,6 +93,7 @@ const navLinks = [
   { href: "/low-tunnel", label: "Low-Tunnel Diligence $1" },
   { href: "/mulch", label: "Mulch Diligence $1" },
   { href: "/landscape-fabric", label: "Landscape-Fabric Diligence $1" },
+  { href: "/frost-blanket", label: "Frost-Blanket Diligence $1" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

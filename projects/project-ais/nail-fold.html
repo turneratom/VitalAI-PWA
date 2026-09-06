@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Thumb Protocol</title>
-  <meta name="description" content="VitalAI Thumb Protocol — Protocol setup $1 or Thumb desk $1/mo. Thumb targets, daily thumb rhythm, weekly thumb map. Invoice via email until Stripe is live." />
+  <title>VitalAI Nail-Fold Protocol</title>
+  <meta name="description" content="VitalAI Nail-Fold Protocol — Protocol setup $1 or Nail-Fold desk $1/mo. Nail-Fold targets, daily nail-fold rhythm, weekly nail-fold map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Thumb Protocol</p>
+        <p>Nail-Fold Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -80,14 +80,6 @@
         <a href="toe.html">Toe</a>
         <a href="nail.html">Nail</a>
         <a href="thumb.html">Thumb</a>
-        <a href="finger.html">Finger</a>
-        <a href="knuckle.html">Knuckle</a>
-        <a href="palm.html">Palm</a>
-        <a href="fist.html">Fist</a>
-        <a href="hand.html">Hand</a>
-        <a href="pinky.html">Pinky</a>
-        <a href="ring-finger.html">Ring-Finger</a>
-        <a href="middle-finger.html">Middle-Finger</a>
         <a href="index-finger.html">Index-Finger</a>
         <a href="thumb-tip.html">Thumb-Tip</a>
         <a href="nail-bed.html">Nail-Bed</a>
@@ -105,36 +97,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Thumb Protocol</h2>
+    <h2>VitalAI Nail-Fold Protocol</h2>
     <p class="lede">
-      Thumb markers, thumb targets, and a weekly checklist — one setup, or a monthly thumb desk. Stripe when live — until then this form emails an invoice request.
+      Nail-Fold markers, nail-fold targets, and a weekly checklist — one setup, or a monthly nail-fold desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Thumb pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly thumb desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Nail-Fold pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly nail-fold desk for ongoing adjustments.</p>
       <div class="plan-grid">
         <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
-        <div class="plan-row"><span>Thumb desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Nail-Fold desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Thumb markers and schedule for your goals</li>
-        <li>Load / daily thumb rhythm for your week</li>
-        <li>Thumb checklist for the first two weeks</li>
-        <li>Optional monthly thumb desk</li>
+        <li>Nail-Fold markers and schedule for your goals</li>
+        <li>Load / daily nail-fold rhythm for your week</li>
+        <li>Nail-Fold checklist for the first two weeks</li>
+        <li>Optional monthly nail-fold desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request thumb invoice</h3>
+      <h3 id="form-title">Request nail-fold invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="thumb-form" novalidate>
+      <form id="nail-fold-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
               <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
-              <option value="Thumb desk — $1/mo">Thumb desk — $1/mo</option>
+              <option value="Nail-Fold desk — $1/mo">Nail-Fold desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -159,7 +151,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email thumb invoice request</button>
+          <button class="btn" type="submit">Email nail-fold invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -167,13 +159,13 @@
   </main>
 
   <footer class="site-footer">
-    Thumb Protocol · setup / desk ·
+    Nail-Fold Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("thumb-form");
+      var form = document.getElementById("nail-fold-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -187,17 +179,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Thumb Protocol — " + plan;
+        var subject = "VitalAI Nail-Fold Protocol — " + plan;
         var body =
-          "VitalAI Thumb Protocol invoice request\n\n" +
+          "VitalAI Nail-Fold Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Thumb Protocol checkout or invoice.\n" +
-          "Includes: thumb map, thumb blocks, weekly checklist.";
+          "Please send Nail-Fold Protocol checkout or invoice.\n" +
+          "Includes: nail-fold map, nail-fold blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
