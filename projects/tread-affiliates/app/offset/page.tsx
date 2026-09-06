@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Clearing Kit — Tread Affiliates",
+  title: "Affiliate Offset Kit — Tread Affiliates",
   description:
-    "Affiliate Clearing Kit — one-time sprint $65 or monthly Clearing kit $35/mo. Clearing plan, Clearing mix, Clearing pairing. Invoice by email.",
+    "Affiliate Offset Kit — one-time sprint $45 or monthly Offset kit $25/mo. Offset plan, Offset mix, Offset pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Clearing Kit — Tread Affiliates",
-    description: "Sprint $65 · Monthly desk $35/mo. Clearing plan, Clearing mix, Clearing pairing.",
+    title: "Affiliate Offset Kit — Tread Affiliates",
+    description: "Sprint $45 · Monthly desk $25/mo. Offset plan, Offset mix, Offset pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Clearing kit",
-    price: "$65",
+    title: "Offset kit",
+    price: "$45",
     period: " one-time",
     points: [
-      "Clearing plan across your primary rails",
+      "Offset plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Clearing kit execution checklist",
+      "30-day Offset kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Clearing kit — $65",
-      "I want an Affiliate Clearing kit ($65).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Offset kit — $45",
+      "I want an Affiliate Offset kit ($45).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $65",
+    cta: "Request sprint — $45",
   },
   {
     tag: "Desk",
-    title: "Monthly Clearing kit",
-    price: "$35",
+    title: "Monthly Offset kit",
+    price: "$25",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Clearing kit and ROAS review",
+      "Monthly Offset kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Clearing kit — $35/mo",
-      "I want a Monthly Clearing kit ($35/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Offset kit — $25/mo",
+      "I want a Monthly Offset kit ($25/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $35/mo",
+    cta: "Request desk — $25/mo",
   },
 ];
 
-export default function ClearingPage() {
+export default function OffsetPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -93,10 +93,8 @@ export default function ClearingPage() {
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
-            <Link href="/clearing" className="transition hover:text-signal">Clearing kit</Link>
-            <Link href="/netting" className="transition hover:text-signal">Netting</Link>
-            <Link href="/offset" className="transition hover:text-signal">Offset</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clearing kit</a>
+            <Link href="/offset" className="transition hover:text-signal">Offset kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Offset kit</a>
           </nav>
         </div>
       </header>
@@ -104,17 +102,17 @@ export default function ClearingPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Clearing kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Offset kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Clearing kit packages that convert comparison-rail traffic — not vanity posts.
+            Offset kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Clearing plan, Clearing mix, and Clearing pairing.
+            One-time sprint or monthly desk: Offset plan, Offset mix, and Offset pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Clearing kit packages
+              See Offset kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -126,7 +124,7 @@ export default function ClearingPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Clearing kit.
+          Sprint once, or keep a monthly Offset kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
