@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Primer Rights",
+  title: "Lexicon Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for primer — Single-title primer $300 or Catalog primer slate $1,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for lexicon — Single-title lexicon $275 or Catalog lexicon slate $900. Direct inquiry by email.",
   openGraph: {
-    title: "Primer Rights — Turner Biographies",
-    description: "Single-title primer $300 · Catalog primer slate $1,000.",
+    title: "Lexicon Rights — Turner Biographies",
+    description: "Single-title lexicon $275 · Catalog lexicon slate $900.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title primer",
-    price: "$300",
+    title: "Single-title lexicon",
+    price: "$275",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a primer — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Primer%20rights%20single-title%20%24300&body=I%20want%20Single-title%20primer%20rights%20(%24300).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $300",
+      "Rights to license one Firebrand / Greatest Humans title as a lexicon — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Lexicon%20rights%20single-title%20%24275&body=I%20want%20Single-title%20lexicon%20rights%20(%24275).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $275",
   },
   {
     tag: "Slate",
-    title: "Catalog primer slate",
-    price: "$1,000",
+    title: "Catalog lexicon slate",
+    price: "$900",
     detail:
-      "Multi-title or multi-issue primer slate across Firebrand / Greatest Humans — one agreement for a broader primer slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Primer%20rights%20catalog%20slate%20%241%2C000&body=I%20want%20Catalog%20primer%20slate%20rights%20(%241%2C000).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $1,000",
+      "Multi-title or multi-issue lexicon slate across Firebrand / Greatest Humans — one agreement for a broader lexicon slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Lexicon%20rights%20catalog%20slate%20%24900&body=I%20want%20Catalog%20lexicon%20slate%20rights%20(%24900).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $900",
   },
 ];
 
-export default function PrimerPage() {
+export default function LexiconPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,20 +42,17 @@ export default function PrimerPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Primer Rights
+            Lexicon Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate primer licensing for Firebrand and The Greatest Humans —
+            Run and slate lexicon licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/lexicon" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Lexicon
-            </Link>
-            <Link href="/reader" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/primer" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Gazette
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -75,7 +72,7 @@ export default function PrimerPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two primer tracks.
+            Two lexicon tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -100,10 +97,10 @@ export default function PrimerPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need reader instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Primer covers classroom primer packs. Anthology covers multi-title collections.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need primer instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Lexicon covers classroom lexicon packs. Anthology covers multi-title collections.</p>
           </div>
-          <Link href="/reader" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Reader
+          <Link href="/primer" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Primer
           </Link>
         </div>
       </section>

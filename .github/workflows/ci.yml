@@ -310,4 +310,7 @@ jobs:
           test -f projects/everything-films/credit-roll.html
           test -f projects/project-ais/eyerest.html
           test -f trailer-parks/src/app/storage/page.tsx
+          test -f projects/turner-capital/phi.html
+          test -f projects/turner-biographies/src/app/lexicon/page.tsx
+          test -f projects/tread-affiliates/app/yield/page.tsx
           echo "Offer page presence checks passed."

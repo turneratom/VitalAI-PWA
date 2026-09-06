@@ -213,6 +213,9 @@ export default function HomePage() {
             <a href="/margin" className="transition hover:text-signal">
               Margin
             </a>
+            <a href="/yield" className="transition hover:text-signal">
+              Yield
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

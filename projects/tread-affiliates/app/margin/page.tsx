@@ -87,6 +87,7 @@ export default function MarginPage() {
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/margin" className="transition hover:text-signal">Margin kit</Link>
+            <Link href="/yield" className="transition hover:text-signal">Yield</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Margin kit</a>
           </nav>
         </div>
