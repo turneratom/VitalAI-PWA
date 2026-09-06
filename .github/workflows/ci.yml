@@ -303,4 +303,7 @@ jobs:
           test -f projects/everything-films/end-title.html
           test -f projects/project-ais/deskbreak.html
           test -f trailer-parks/src/app/mailroom/page.tsx
+          test -f projects/turner-capital/delta.html
+          test -f projects/turner-biographies/src/app/primer/page.tsx
+          test -f projects/tread-affiliates/app/margin/page.tsx
           echo "Offer page presence checks passed."

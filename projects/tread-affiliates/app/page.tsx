@@ -210,6 +210,9 @@ export default function HomePage() {
             <a href="/expansion" className="transition hover:text-signal">
               Expansion
             </a>
+            <a href="/margin" className="transition hover:text-signal">
+              Margin
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

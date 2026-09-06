@@ -347,6 +347,12 @@ export default function ShopPage() {
               Reader · from $350
             </Link>
             <Link
+              href="/primer"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Primer · from $300
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

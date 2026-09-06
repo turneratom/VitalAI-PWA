@@ -88,6 +88,7 @@ export default function CadencePage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/cadence" className="transition hover:text-signal">Cadence kit</Link>
             <Link href="/expansion" className="transition hover:text-signal">Expansion</Link>
+            <Link href="/margin" className="transition hover:text-signal">Margin</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Cadence kit</a>
           </nav>
         </div>
