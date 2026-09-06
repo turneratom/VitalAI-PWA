@@ -24,6 +24,7 @@ Suggested Pages URL after split: `https://turneratom.github.io/meridian-travel/`
 |------|------|
 | Site | `/` (`index.html`) |
 | Gift & corporate | `/gift.html` |
+| Printable gift certificate | `/gift-certificate.html` |
 | Sample journeys | `/journeys/` |
 
 ## Contact

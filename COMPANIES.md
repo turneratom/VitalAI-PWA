@@ -26,8 +26,8 @@ Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, *
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `gift.html` — Gift Escape certificate from $5,800; corporate retreat from $28,000; linked from home nav + journeys.
-- Everything Films: paid add-ons after packages — rush +$2,500, extra revision +$750, dual cut +$4,000, custom score +$1,200, +15 min +$2,500.
+- Meridian: `gift.html` — Gift Escape certificate from $5,800; corporate retreat from $28,000; linked from home nav + journeys. Printable fulfillment: `gift-certificate.html`.
+- Everything Films: paid add-ons after packages — rush +$2,500, extra revision +$750, dual cut +$4,000, custom score +$1,200, +15 min +$2,500. Partners page attaches add-on upsell.
 - Prior: Meridian product ladder + inquiry; Films partners; Turner Capital pricing; AIS annual; Biographies rights; Affiliates rails; MHP List Your Park Free.
 - Memory: in-thread yes; cross-thread via this file.
 
@@ -37,4 +37,4 @@ Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, *
 2. Project AIS: real Stripe price IDs (monthly + annual) when secrets exist.
 3. Biographies: Amazon URLs when KDP live.
 4. Deploy packages when hosting allows — without blocking Bradley.
-5. Keep shipping offer pages every CoS cycle (next candidates: Meridian gift fulfillment PDF template; Films partner one-pager with add-on attach).
+5. Keep shipping offer pages every CoS cycle (next candidates: Turner Capital paid pilot checkout path; Meridian gift Stripe/invoice when payment rails exist).

@@ -352,6 +352,43 @@
       color: rgba(255,255,255,0.65);
     }
 
+    .attach {
+      margin-top: 2.75rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      position: relative;
+      z-index: 1;
+    }
+    .attach h3 {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-weight: 500;
+      margin-bottom: 0.65rem;
+    }
+    .attach p {
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 40rem;
+      margin-bottom: 1rem;
+    }
+    .attach-list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      margin-bottom: 1.35rem;
+      max-width: 36rem;
+    }
+    .attach-list li {
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+    .attach-list li::before {
+      content: "—";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
     /* —— Audience —— */
     .audience {
       background:
@@ -575,6 +612,16 @@
           <p class="earn-note">Same referral process — higher package, higher thank-you.</p>
         </article>
       </div>
+      <div class="attach" id="attach">
+        <h3>Attach add-ons when you refer</h3>
+        <p>Mention upgrades after the base package. Larger tickets close the same way — and clients get a sharper film.</p>
+        <ul class="attach-list">
+          <li>Rush delivery (+$2,500) when the date is soon</li>
+          <li>Dual cut (+$4,000) for wedding + life from one dump</li>
+          <li>Custom score (+$1,200) or +15 minutes (+$2,500)</li>
+        </ul>
+        <a class="btn btn-teal" href="../index.html#addons">See client add-ons</a>
+      </div>
     </section>
 
     <section class="audience" id="who" aria-labelledby="who-title">
@@ -642,6 +689,7 @@
             href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20partner%20signup"
           >Email to sign up</a>
           <a class="btn btn-outline" href="../index.html#packages">View packages</a>
+          <a class="btn btn-outline" href="../index.html#addons">View add-ons</a>
         </div>
         <p class="join-hint">
           Prefer tools first?
