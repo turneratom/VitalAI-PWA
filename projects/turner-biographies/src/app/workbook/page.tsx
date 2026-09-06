@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 const packages = [
   {
-    tag: "Run",
+    tag: "Title",
     title: "Single-title workbook",
     price: "$5,500",
     detail:
       "Rights to license one Firebrand / Greatest Humans title as a workbook — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20single-run%20%249%2C000&body=I%20want%20Single-run%20serial%20print%20rights%20(%249%2C000).%0A%0ATitle%3A%0AIssues%20%2F%20format%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License run — $5,500",
+    href: "mailto:brad@treadcompanies.com?subject=Workbook%20rights%20single-title%20%245%2C500&body=I%20want%20Single-title%20workbook%20rights%20(%245%2C500).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $5,500",
   },
   {
     tag: "Slate",
@@ -28,7 +28,7 @@ const packages = [
     price: "$14,000",
     detail:
       "Multi-title or multi-issue workbook slate across Firebrand / Greatest Humans — one agreement for a broader workbook slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20slate%20%2424%2C000&body=I%20want%20Multi-issue%20serial%20print%20slate%20rights%20(%2424%2C000).%0A%0ATitles%20%2F%20slate%3A%0AIssues%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    href: "mailto:brad@treadcompanies.com?subject=Workbook%20rights%20catalog%20slate%20%2414%2C000&body=I%20want%20Catalog%20workbook%20slate%20rights%20(%2414%2C000).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
     cta: "License slate — $14,000",
   },
 ];
@@ -97,8 +97,8 @@ export default function WorkbookPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need study guide instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Workbook covers workbooks with extras. Serialization covers digital chapter drops.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need a study guide instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Workbook covers interactive exercises. Study guide covers classroom and reader aids.</p>
           </div>
           <Link href="/study-guide" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
             Study guide

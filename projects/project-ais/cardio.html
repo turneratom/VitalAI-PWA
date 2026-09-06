@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Hormone Protocol</title>
-  <meta name="description" content="VitalAI Hormone Protocol — Protocol setup $229 or Hormone desk $69/mo. Hormone targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Cardio Protocol</title>
+  <meta name="description" content="VitalAI Cardio Protocol — Protocol setup $189 or Cardio desk $54/mo. Cardio targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Hormone Protocol</p>
+        <p>Cardio Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -66,49 +66,49 @@
         <a href="hydration.html">Hydration</a>
         <a href="gut.html">Gut</a>
         <a href="hormone.html">Hormone</a>
-        <a href="immune.html">Immune</a>
         <a href="cardio.html">Cardio</a>
+        <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Hormone Protocol</h2>
+    <h2>VitalAI Cardio Protocol</h2>
     <p class="lede">
-      Hormone markers, recovery rhythm, and a weekly checklist — one setup, or a monthly hormone desk. Stripe when live — until then this form emails an invoice request.
+      Cardio markers, zone targets, and a weekly checklist — one setup, or a monthly cardio desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Hormone pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly hormone desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Cardio pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly cardio desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$229</strong></div>
-        <div class="plan-row"><span>Hormone desk</span><strong>$69 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$189</strong></div>
+        <div class="plan-row"><span>Cardio desk</span><strong>$54 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Hormone markers and schedule for your goals</li>
-        <li>Sleep / recovery rhythm for your week</li>
-        <li>Hormone checklist for the first two weeks</li>
-        <li>Optional monthly hormone desk</li>
+        <li>Cardio markers and schedule for your goals</li>
+        <li>Load / recovery rhythm for your week</li>
+        <li>Cardio checklist for the first two weeks</li>
+        <li>Optional monthly cardio desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request hormone invoice</h3>
+      <h3 id="form-title">Request cardio invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="hormone-form" novalidate>
+      <form id="cardio-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $229" selected>Protocol setup — $229</option>
-              <option value="Hormone desk — $69/mo">Hormone desk — $69/mo</option>
+              <option value="Protocol setup — $189" selected>Protocol setup — $189</option>
+              <option value="Cardio desk — $54/mo">Cardio desk — $54/mo</option>
             </select>
           </label>
           <label>
             Goal focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. travel / cycle / rebuild" />
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / cold season / rebuild" />
           </label>
           <label>
             Preferred kickoff
@@ -124,11 +124,11 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Labs, travel, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Exposure, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email hormone invoice request</button>
+          <button class="btn" type="submit">Email cardio invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -136,13 +136,13 @@
   </main>
 
   <footer class="site-footer">
-    Hormone Protocol · setup / desk ·
+    Cardio Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("hormone-form");
+      var form = document.getElementById("cardio-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -156,17 +156,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Hormone Protocol — " + plan;
+        var subject = "VitalAI Cardio Protocol — " + plan;
         var body =
-          "VitalAI Hormone Protocol invoice request\n\n" +
+          "VitalAI Cardio Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Hormone Protocol checkout or invoice.\n" +
-          "Includes: hormone map, recovery blocks, weekly checklist.";
+          "Please send Cardio Protocol checkout or invoice.\n" +
+          "Includes: cardio map, zone blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

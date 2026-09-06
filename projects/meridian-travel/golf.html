@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Tasting Day — Meridian</title>
-  <meta name="description" content="Meridian Private Tasting Day — $3,900 flat for up to 4 guests. Host-led itinerary, estate brief, transfer plan. Estate fees and transport billed separately when required." />
+  <title>Private Golf Day — Meridian</title>
+  <meta name="description" content="Meridian Private Golf Day — $4,500 flat for up to 4 players. Pro-led itinerary, course brief, transfer plan. Green fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -145,7 +145,6 @@
       <a class="nav-link" href="dive.html">Dive</a>
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
-      <a class="nav-link" href="regatta.html">Regatta</a>
       <a class="nav-link" href="tasting.html">Tasting</a>
       <a class="nav-link" href="golf.html">Golf</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -157,17 +156,17 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Tasting Day.</p>
-    <p class="price">$3,900 flat · one day · up to 4 guests</p>
-    <p class="hero-sub">Host-led tasting day: cellar brief, flight rhythm, and transfer plan. Cellar fees and private transport billed separately when the cellar requires them.</p>
+    <p class="hero-line">Private Golf Day.</p>
+    <p class="price">$4,500 flat · one day · up to 4 players</p>
+    <p class="hero-sub">Pro-led golf day: course brief, tee rhythm, and transfer plan. Green fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request tasting day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $3,900 for Private Tasting Day, then lock cellar, season, and guest count with your first brief.</p>
-      <form id="tasting-form" novalidate>
+      <h2 id="form-title">Request golf day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $4,500 for Private Golf Day, then lock tee time, course, and guest count with your first brief.</p>
+      <form id="golf-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred cellar / region
+            Preferred course / region
             <input type="text" id="city" name="region" placeholder="e.g. Bordeaux / Tuscany / Sonoma / open" />
           </label>
           <label>
@@ -196,40 +195,40 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $3,900 tasting invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Tasting Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $4,500 golf invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Golf Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Host-led tasting day</strong>
-        A Meridian host for cellar pacing, flight decisions, and day briefings.
+        <strong>Pro-led golf day</strong>
+        A Meridian host for tee pacing, pairing decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Tasting brief</strong>
-        Flights and lunch sequenced for the cellar and day you choose.
+        <strong>Course brief</strong>
+        Tee times and lunch sequenced for the course and day you choose.
       </div>
       <div class="rule">
         <strong>Day plan</strong>
-        Flight timing, cellar access, and transfer notes for the day.
+        Tee timing, clubhouse access, and transfer notes for the day.
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $3,900 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $4,500 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Tasting Day</p>
+    <p><strong>Meridian</strong> · Private Golf Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("tasting-form");
+      var form = document.getElementById("golf-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Tasting Day — $3,900";
+        var subject = "Meridian Private Golf Day — $4,500";
         var body =
-          "Meridian Private Tasting Day request ($3,900 flat, one day, up to 4 guests)\n\n" +
+          "Meridian Private Golf Day request ($4,500 flat, one day, up to 4 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $3,900 Private Tasting Day invoice.\n" +
-          "Includes: host-led day, tasting brief, transfer plan. Estate fees and transport billed separately when required.";
+          "Please send the $4,500 Private Golf Day invoice.\n" +
+          "Includes: pro-led day, course brief, transfer plan. Green fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
