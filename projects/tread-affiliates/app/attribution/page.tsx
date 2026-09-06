@@ -88,6 +88,7 @@ export default function AttributionPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/attribution" className="transition hover:text-signal">Attribution kit</Link>
             <Link href="/cohort" className="transition hover:text-signal">Cohort</Link>
+            <Link href="/retention" className="transition hover:text-signal">Retention</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Attribution kit</a>
           </nav>
         </div>

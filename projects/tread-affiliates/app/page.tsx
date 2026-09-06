@@ -195,6 +195,9 @@ export default function HomePage() {
             <a href="/cohort" className="transition hover:text-signal">
               Cohort
             </a>
+            <a href="/retention" className="transition hover:text-signal">
+              Retention
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

@@ -268,4 +268,7 @@ jobs:
           test -f projects/everything-films/sting.html
           test -f projects/project-ais/walking.html
           test -f trailer-parks/src/app/clubhouse/page.tsx
+          test -f projects/turner-capital/kappa.html
+          test -f projects/turner-biographies/src/app/digest/page.tsx
+          test -f projects/tread-affiliates/app/retention/page.tsx
           echo "Offer page presence checks passed."

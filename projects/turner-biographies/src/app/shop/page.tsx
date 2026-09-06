@@ -317,6 +317,12 @@ export default function ShopPage() {
               Gazette · from $600
             </Link>
             <Link
+              href="/digest"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Digest · from $550
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Concordance Rights",
+  title: "Digest Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for concordance — Single-title concordance $650 or Catalog concordance slate $1,950. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for digest — Single-title digest $550 or Catalog digest slate $1,650. Direct inquiry by email.",
   openGraph: {
-    title: "Concordance Rights — Turner Biographies",
-    description: "Single-title concordance $650 · Catalog concordance slate $1,950.",
+    title: "Digest Rights — Turner Biographies",
+    description: "Single-title digest $550 · Catalog digest slate $1,650.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title concordance",
-    price: "$650",
+    title: "Single-title digest",
+    price: "$550",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a concordance — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Concordance%20rights%20single-title%20%24650&body=I%20want%20Single-title%20concordance%20rights%20(%24650).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $650",
+      "Rights to license one Firebrand / Greatest Humans title as a digest — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Digest%20rights%20single-title%20%24550&body=I%20want%20Single-title%20digest%20rights%20(%24550).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $550",
   },
   {
     tag: "Slate",
-    title: "Catalog concordance slate",
-    price: "$1,950",
+    title: "Catalog digest slate",
+    price: "$1,650",
     detail:
-      "Multi-title or multi-issue concordance slate across Firebrand / Greatest Humans — one agreement for a broader concordance slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Concordance%20rights%20catalog%20slate%20%241%2C950&body=I%20want%20Catalog%20concordance%20slate%20rights%20(%241%2C950).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $1,950",
+      "Multi-title or multi-issue digest slate across Firebrand / Greatest Humans — one agreement for a broader digest slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Digest%20rights%20catalog%20slate%20%241%2C650&body=I%20want%20Catalog%20digest%20slate%20rights%20(%241%2C650).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $1,650",
   },
 ];
 
-export default function ConcordancePage() {
+export default function DigestPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,23 +42,17 @@ export default function ConcordancePage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Concordance Rights
+            Digest Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate concordance licensing for Firebrand and The Greatest Humans —
+            Run and slate digest licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/worksheet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Worksheet
-            </Link>
-            <Link href="/digest" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Digest
-            </Link>
-            <Link href="/gazette" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/gazette" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Gazette
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -78,7 +72,7 @@ export default function ConcordancePage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two concordance tracks.
+            Two digest tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -103,10 +97,10 @@ export default function ConcordancePage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need worksheet instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Concordance covers week-by-session plans. Classroom covers teacher packs.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need gazette instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Digest covers curated issue packs. Gazette covers weekly issue rights.</p>
           </div>
-          <Link href="/workbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook
+          <Link href="/gazette" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Gazette
           </Link>
         </div>
       </section>
