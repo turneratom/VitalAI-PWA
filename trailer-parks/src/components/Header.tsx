@@ -90,6 +90,7 @@ const navLinks = [
   { href: "/hoop-house", label: "Hoop-House Diligence $1" },
   { href: "/row-cover", label: "Row-Cover Diligence $1" },
   { href: "/frost-cloth", label: "Frost-Cloth Diligence $1" },
+  { href: "/low-tunnel", label: "Low-Tunnel Diligence $1" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
