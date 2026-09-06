@@ -89,6 +89,9 @@ export default function PlacementPage() {
             <Link href="/creative-kit" className="transition hover:text-signal">
               Creative
             </Link>
+            <Link href="/tracking" className="transition hover:text-signal">
+              Tracking
+            </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>

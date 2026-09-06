@@ -155,6 +155,12 @@ export default function ShopPage() {
               Translation · from $18,000
             </Link>
             <Link
+              href="/reprint"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Reprint rights · from $6,000
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
