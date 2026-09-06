@@ -233,6 +233,12 @@ export default function ShopPage() {
               Lesson plan · from $5,500
             </Link>
             <Link
+              href="/quiz-bank"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Quiz bank · from $4,500
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

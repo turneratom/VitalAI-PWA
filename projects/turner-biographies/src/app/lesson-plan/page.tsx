@@ -55,6 +55,9 @@ export default function LessonPlanPage() {
             <Link href="/syllabus" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Serialization
             </Link>
+          <Link href="/quiz-bank" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Quiz bank
+          </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
             </Link>

@@ -153,6 +153,9 @@ export default function HomePage() {
             <a href="/brand-kit" className="transition hover:text-signal">
               Brand kit
             </a>
+            <a href="/landing-kit" className="transition hover:text-signal">
+              Landing kit
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

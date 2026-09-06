@@ -82,6 +82,7 @@ export default function InfluencerPage() {
             <Link href="/seeding" className="transition hover:text-signal">Seeding</Link>
             <Link href="/creator-kit" className="transition hover:text-signal">Creator kit</Link>
             <Link href="/brand-kit" className="transition hover:text-signal">Brand kit</Link>
+            <Link href="/landing-kit" className="transition hover:text-signal">Landing kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Influencer</a>
           </nav>
         </div>
