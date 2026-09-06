@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/underwriting",
     "/comps",
     "/loi",
+    "/rent-roll",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Teams — Clinic &amp; Coach Plans</title>
-  <meta name="description" content="VitalAI for clinics and coaching teams. Team plan from $49/seat/mo or $499/seat/yr. Shared coaching seats, admin, and priority support." />
+  <title>VitalAI Clinic Seat Pack</title>
+  <meta name="description" content="VitalAI Clinic Seat Pack — 10 seats $199/mo or 25 seats $449/mo. Shared clinic dashboard, seat invites, monthly usage rollup. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,115 +47,114 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Teams</p>
+        <p>Clinic Seat Pack</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
-        <a href="subscribe.html">Subscribe</a>
+        <a href="teams.html">Teams</a>
         <a href="whitelabel.html">White-label</a>
         <a href="api.html">API</a>
         <a href="enterprise.html">Enterprise</a>
         <a href="coach.html">Coach</a>
-        <a href="family.html">Family</a>
-        <a href="clinic.html">Clinic</a>
-        <a href="tools/index.html">Free Tools</a>
+        <a href="family.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI for clinics &amp; coaching teams</h2>
+    <h2>VitalAI Clinic Seat Pack</h2>
     <p class="lede">
-      Shared seats for coaches, clinicians, and staff. Stripe when live — until then this form emails a team invoice request so the deal still closes.
+      Seat packs for clinics and practices: shared dashboard, invites, and a monthly usage rollup. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Team pricing</h3>
-      <p class="hint">Minimum 3 seats. Admin dashboard + shared coaching workspace included.</p>
+      <h3 id="plans-title">Clinic pricing</h3>
+      <p class="hint">Ten or twenty-five seats under one clinic account. Same VitalAI tools either way.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Team monthly</span><strong>$49 / seat / mo</strong></div>
-        <div class="plan-row"><span>Team annual</span><strong>$499 / seat / yr</strong></div>
+        <div class="plan-row"><span>10 seats</span><strong>$199 / mo</strong></div>
+        <div class="plan-row"><span>25 seats</span><strong>$449 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Shared client notes &amp; photo analysis seats</li>
-        <li>Admin invite / revoke</li>
-        <li>Priority email support</li>
-        <li>Annual saves ~2 months per seat</li>
+        <li>10 or 25 clinic seats under one account</li>
+        <li>Shared clinic dashboard</li>
+        <li>Seat invites for practitioners</li>
+        <li>Monthly usage rollup</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request team invoice</h3>
-      <p class="hint">Tell us seats and cadence. We reply with checkout or invoice within one business day.</p>
-      <form id="team-form" novalidate>
+      <h3 id="form-title">Request clinic invoice</h3>
+      <p class="hint">Tell us 10 vs 25 seats. We reply with checkout or invoice within one business day.</p>
+      <form id="clinic-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Team monthly — $49/seat/mo" selected>Team monthly — $49/seat/mo</option>
-              <option value="Team annual — $499/seat/yr">Team annual — $499/seat/yr</option>
+              <option value="Clinic 10 seats — $199/mo" selected>Clinic 10 seats — $199/mo</option>
+              <option value="Clinic 25 seats — $449/mo">Clinic 25 seats — $449/mo</option>
             </select>
           </label>
           <label>
-            Seats (min 3)
-            <input type="number" id="seats" name="seats" min="3" value="5" required />
+            Clinic name
+            <input type="text" id="clinicName" name="clinicName" placeholder="e.g. Northside Wellness" />
           </label>
           <label>
-            Organization
-            <input type="text" id="org" name="org" autocomplete="organization" />
+            Seat count needed
+            <input type="text" id="seats" name="seats" placeholder="e.g. 10 or 25" />
           </label>
           <label>
             Your name
             <input type="text" id="name" name="name" required autocomplete="name" />
           </label>
           <label>
-            Work email
+            Email
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Clinic type, rollout date, etc." />
+            <input type="text" id="notes" name="notes" placeholder="Specialty, EMR notes, kickoff window" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email team invoice request</button>
-          <a class="btn btn-secondary" href="pricing.html">Individual pricing</a>
+          <button class="btn" type="submit">Email clinic invoice request</button>
+          <a class="btn btn-secondary" href="family.html">Family plan</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Teams · cancel seats anytime ·
+    Clinic Seat Pack · 10 / 25 seats ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("team-form");
+      var form = document.getElementById("clinic-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
-        var seats = (document.getElementById("seats").value || "").trim();
-        var org = (document.getElementById("org").value || "").trim();
+        var profiles = (document.getElementById("clinicName").value || "").trim();
+        var household = (document.getElementById("seats").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
-        if (!name || !email || !seats || Number(seats) < 3) {
-          document.getElementById(!name ? "name" : !email ? "email" : "seats").focus();
+        if (!name || !email) {
+          document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Teams — " + plan + " × " + seats + " seats";
+        var subject = "VitalAI Clinic Seat Pack — " + plan;
         var body =
-          "VitalAI Teams invoice request\n\n" +
+          "VitalAI Clinic Seat Pack invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Seats: " + seats + "\n" +
-          "Organization: " + (org || "—") + "\n" +
+          "Clinic name: " + (profiles || "—") + "\n" +
+          "Seat count needed: " + (household || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send team checkout or invoice.";
+          "Please send Clinic Seat Pack checkout or invoice.\n" +
+          "Includes: shared clinic dashboard, seat invites, monthly usage rollup.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

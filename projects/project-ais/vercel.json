@@ -4,7 +4,7 @@
   "installCommand": "npm install",
   "cleanUrls": false,
   "trailingSlash": false,
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- .",
+  "ignoreCommand": "exit 0",
   "headers": [
     {
       "source": "/(.*)",

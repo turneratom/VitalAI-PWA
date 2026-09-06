@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, "cursor/**"]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  trailer-parks:
+    name: Build trailer-parks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: trailer-parks/package-lock.json
+      - name: Install
+        working-directory: trailer-parks
+        run: npm ci
+      - name: Build
+        working-directory: trailer-parks
+        run: npm run build
+
+  offer-pages:
+    name: Offer page presence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check money surfaces exist
+        run: |
+          set -e
+          test -f projects/meridian-travel/villa.html
+          test -f projects/meridian-travel/yacht.html
+          test -f projects/everything-films/reel.html
+          test -f projects/everything-films/documentary.html
+          test -f projects/project-ais/clinic.html
+          test -f projects/project-ais/family.html
+          test -f projects/turner-capital/diligence.html
+          test -f trailer-parks/src/app/loi/page.tsx
+          test -f trailer-parks/src/app/rent-roll/page.tsx
+          echo "Offer page presence checks passed."
