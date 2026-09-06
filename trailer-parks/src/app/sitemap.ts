@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/list-your-park",
+    "/featured",
+    "/buyer-pro",
     "/marketplace",
     "/owners",
     "/buyers",
@@ -19,11 +21,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/partner",
     "/links",
     "/outreach",
+    "/valuation",
+    "/deal-room",
+    "/lender-intro",
+    "/underwriting",
+    "/comps",
+    "/loi",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
-    priority: path === "/list-your-park" ? 1 : path === "" ? 0.9 : 0.7,
+    priority:
+      path === "/list-your-park" || path === "/featured" || path === "/buyer-pro"
+        ? 1
+        : path === ""
+          ? 0.9
+          : 0.7,
   }));
 
   const parkPages = parks.map((park) => ({
