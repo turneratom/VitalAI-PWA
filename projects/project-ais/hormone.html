@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Clinic Seat Pack</title>
-  <meta name="description" content="VitalAI Clinic Seat Pack — 10 seats $199/mo or 25 seats $449/mo. Shared clinic dashboard, seat invites, monthly usage rollup. Invoice via email until Stripe is live." />
+  <title>VitalAI Hormone Protocol</title>
+  <meta name="description" content="VitalAI Hormone Protocol — Protocol setup $229 or Hormone desk $69/mo. Hormone targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Clinic Seat Pack</p>
+        <p>Hormone Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -56,11 +56,8 @@
         <a href="api.html">API</a>
         <a href="enterprise.html">Enterprise</a>
         <a href="coach.html">Coach</a>
-        <a href="family.html">Subscribe</a>
-              <a href="concierge.html">Concierge</a>
+        <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
-        <a href="sleep.html">Sleep</a>
-        <a href="recovery.html">Recovery</a>
         <a href="focus.html">Focus</a>
         <a href="stress.html">Stress</a>
         <a href="longevity.html">Longevity</a>
@@ -69,50 +66,51 @@
         <a href="hydration.html">Hydration</a>
         <a href="gut.html">Gut</a>
         <a href="hormone.html">Hormone</a>
+        <a href="clinic.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Clinic Seat Pack</h2>
+    <h2>VitalAI Hormone Protocol</h2>
     <p class="lede">
-      Seat packs for clinics and practices: shared dashboard, invites, and a monthly usage rollup. Stripe when live — until then this form emails an invoice request.
+      Hormone markers, recovery rhythm, and a weekly checklist — one setup, or a monthly hormone desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Clinic pricing</h3>
-      <p class="hint">Ten or twenty-five seats under one clinic account. Same VitalAI tools either way.</p>
+      <h3 id="plans-title">Hormone pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly hormone desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>10 seats</span><strong>$199 / mo</strong></div>
-        <div class="plan-row"><span>25 seats</span><strong>$449 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$229</strong></div>
+        <div class="plan-row"><span>Hormone desk</span><strong>$69 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>10 or 25 clinic seats under one account</li>
-        <li>Shared clinic dashboard</li>
-        <li>Seat invites for practitioners</li>
-        <li>Monthly usage rollup</li>
+        <li>Hormone markers and schedule for your goals</li>
+        <li>Sleep / recovery rhythm for your week</li>
+        <li>Hormone checklist for the first two weeks</li>
+        <li>Optional monthly hormone desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request clinic invoice</h3>
-      <p class="hint">Tell us 10 vs 25 seats. We reply with checkout or invoice within one business day.</p>
-      <form id="clinic-form" novalidate>
+      <h3 id="form-title">Request hormone invoice</h3>
+      <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="hormone-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Clinic 10 seats — $199/mo" selected>Clinic 10 seats — $199/mo</option>
-              <option value="Clinic 25 seats — $449/mo">Clinic 25 seats — $449/mo</option>
+              <option value="Protocol setup — $229" selected>Protocol setup — $229</option>
+              <option value="Hormone desk — $69/mo">Hormone desk — $69/mo</option>
             </select>
           </label>
           <label>
-            Clinic name
-            <input type="text" id="clinicName" name="clinicName" placeholder="e.g. Northside Wellness" />
+            Goal focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / cycle / rebuild" />
           </label>
           <label>
-            Seat count needed
-            <input type="text" id="seats" name="seats" placeholder="e.g. 10 or 25" />
+            Preferred kickoff
+            <input type="text" id="kickoff" name="kickoff" placeholder="e.g. this week / next open" />
           </label>
           <label>
             Your name
@@ -124,31 +122,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Specialty, EMR notes, kickoff window" />
+            <input type="text" id="notes" name="notes" placeholder="Labs, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email clinic invoice request</button>
-          <a class="btn btn-secondary" href="family.html">Family plan</a>
+          <button class="btn" type="submit">Email hormone invoice request</button>
+          <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Clinic Seat Pack · 10 / 25 seats ·
+    Hormone Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("clinic-form");
+      var form = document.getElementById("hormone-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
-        var profiles = (document.getElementById("clinicName").value || "").trim();
-        var household = (document.getElementById("seats").value || "").trim();
+        var focus = (document.getElementById("focus").value || "").trim();
+        var kickoff = (document.getElementById("kickoff").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -156,17 +154,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Clinic Seat Pack — " + plan;
+        var subject = "VitalAI Hormone Protocol — " + plan;
         var body =
-          "VitalAI Clinic Seat Pack invoice request\n\n" +
+          "VitalAI Hormone Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Clinic name: " + (profiles || "—") + "\n" +
-          "Seat count needed: " + (household || "—") + "\n" +
+          "Goal focus: " + (focus || "—") + "\n" +
+          "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Clinic Seat Pack checkout or invoice.\n" +
-          "Includes: shared clinic dashboard, seat invites, monthly usage rollup.";
+          "Please send Hormone Protocol checkout or invoice.\n" +
+          "Includes: hormone map, recovery blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

@@ -3,53 +3,53 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Traffic Diligence Pack — $429 | Trailer Parks",
+  title: "Septic Diligence Pack — $389 | Trailer Parks",
   description:
-    "Traffic Diligence Pack: single park $429, or three-park pack $1,099. Traffic flag notes, variance gap list, lender-ready summary. Invoice by email.",
+    "Septic Diligence Pack: single park $389, or three-park pack $999. Septic flag notes, variance gap list, lender-ready summary. Invoice by email.",
   openGraph: {
-    title: "Traffic Diligence Pack — $429",
+    title: "Septic Diligence Pack — $389",
     description:
-      "Single park $429 · Three-park pack $1,099. Traffic flag notes, variance gap list, lender-ready summary.",
+      "Single park $389 · Three-park pack $999. Septic flag notes, variance gap list, lender-ready summary.",
     type: "website",
     siteName: siteConfig.name,
-    url: "/traffic",
+    url: "/septic",
   },
 };
 
 const email = siteConfig.team.bradley.email;
 
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
-  "Traffic Diligence Pack — $429 single park"
+  "Septic Diligence Pack — $389 single park"
 )}&body=${encodeURIComponent(
-  `I want a Traffic Diligence Pack ($429 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a Septic Diligence Pack ($389 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
-  "Traffic Diligence Pack Three-Park Pack — $1,099"
+  "Septic Diligence Pack Three-Park Pack — $999"
 )}&body=${encodeURIComponent(
-  `I want a Traffic Diligence Pack Three-Park Pack ($1,099).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a Septic Diligence Pack Three-Park Pack ($999).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
   {
-    title: "Traffic flag notes",
-    body: "Access, count, and peak-hour flags after reviewing the park’s traffic file and recent counts.",
+    title: "Septic flag notes",
+    body: "System, capacity, and compliance flags after reviewing the park’s septic file and recent inspections.",
   },
   {
-    title: "Access gap list",
-    body: "Clear flags on access mismatches, missing permits, and what a lender or buyer counsel may push back on.",
+    title: "Capacity gap list",
+    body: "Clear flags on capacity mismatches, missing permits, and what a lender or buyer counsel may push back on.",
   },
   {
-    title: "Traffic hygiene",
-    body: "Line-item notes where traffic docs look soft, padded, or missing for IC review.",
+    title: "Septic hygiene",
+    body: "Line-item notes where septic docs look soft, padded, or missing for IC review.",
   },
   {
     title: "PDF delivery",
-    body: "One memo PDF per park — single park at $429, or three parks in a pack at $1,099.",
+    body: "One memo PDF per park — single park at $389, or three parks in a pack at $999.",
   },
 ];
 
-export default function TrafficPage() {
+export default function SepticPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
@@ -66,11 +66,11 @@ export default function TrafficPage() {
             Trailer Parks · Capital
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Traffic Diligence Pack.
-            <span className="mt-2 block text-accent">$429 · or $1,099.</span>
+            Septic Diligence Pack.
+            <span className="mt-2 block text-accent">$389 · or $999.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $429, or three-park pack at $1,099 — traffic flag notes,
+            Single park at $389, or three-park pack at $999 — septic flag notes,
             variance gap list, lender-ready summary.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
@@ -78,19 +78,18 @@ export default function TrafficPage() {
               href={SINGLE}
               className="inline-flex items-center justify-center bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-accent-light"
             >
-              Invoice memo — $429
+              Invoice memo — $389
             </a>
             <a
               href={PACK}
               className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
             >
-              Three-park — $1,099
+              Three-park — $999
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
             <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">EPA</Link>
-            <Link href="/septic" className="underline-offset-4 hover:text-white hover:underline">Septic</Link>
-            <Link href="/utility" className="underline-offset-4 hover:text-white hover:underline">
+            <Link href="/traffic" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
@@ -117,7 +116,7 @@ export default function TrafficPage() {
           What’s included
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-navy md:text-4xl">
-          Built for buyers and lenders who need a clean traffic picture before they argue price.
+          Built for buyers and lenders who need a clean septic picture before they argue price.
         </h2>
         <ul className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-2">
           {perks.map((item) => (
@@ -138,7 +137,7 @@ export default function TrafficPage() {
             Two ways into the memo.
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            Single park $429 · Three-park pack $1,099. Pair with{" "}
+            Single park $389 · Three-park pack $999. Pair with{" "}
             <Link href="/cap-rate" className="font-medium text-primary hover:underline">
               Cap Rate
             </Link>
@@ -158,20 +157,20 @@ export default function TrafficPage() {
             <Link href="/valuation" className="font-medium text-primary hover:underline">
               Valuation
             </Link>{" "}
-            once traffic access is clear.
+            once septic capacity is clear.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-primary-light"
             >
-              Request $429 invoice
+              Request $389 invoice
             </a>
             <a
               href={PACK}
               className="inline-flex border border-border px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-background"
             >
-              Three-park $1,099
+              Three-park $999
             </a>
           </div>
         </div>
