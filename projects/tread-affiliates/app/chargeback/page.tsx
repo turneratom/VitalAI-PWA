@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Clawback Kit — Tread Affiliates",
+  title: "Affiliate Chargeback Kit — Tread Affiliates",
   description:
-    "Affiliate Clawback Kit — one-time sprint $145 or monthly Clawback kit $75/mo. Clawback plan, Clawback mix, Clawback pairing. Invoice by email.",
+    "Affiliate Chargeback Kit — one-time sprint $125 or monthly Chargeback kit $65/mo. Chargeback plan, Chargeback mix, Chargeback pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Clawback Kit — Tread Affiliates",
-    description: "Sprint $145 · Monthly desk $75/mo. Clawback plan, Clawback mix, Clawback pairing.",
+    title: "Affiliate Chargeback Kit — Tread Affiliates",
+    description: "Sprint $125 · Monthly desk $65/mo. Chargeback plan, Chargeback mix, Chargeback pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Clawback kit",
-    price: "$145",
+    title: "Chargeback kit",
+    price: "$125",
     period: " one-time",
     points: [
-      "Clawback plan across your primary rails",
+      "Chargeback plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Clawback kit execution checklist",
+      "30-day Chargeback kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Clawback kit — $145",
-      "I want an Affiliate Clawback kit ($145).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Chargeback kit — $125",
+      "I want an Affiliate Chargeback kit ($125).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $145",
+    cta: "Request sprint — $125",
   },
   {
     tag: "Desk",
-    title: "Monthly Clawback kit",
-    price: "$75",
+    title: "Monthly Chargeback kit",
+    price: "$65",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Clawback kit and ROAS review",
+      "Monthly Chargeback kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Clawback kit — $75/mo",
-      "I want a Monthly Clawback kit ($75/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Chargeback kit — $65/mo",
+      "I want a Monthly Chargeback kit ($65/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $75/mo",
+    cta: "Request desk — $65/mo",
   },
 ];
 
-export default function ClawbackPage() {
+export default function ChargebackPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -88,10 +88,10 @@ export default function ClawbackPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
             <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
-            <Link href="/clawback" className="transition hover:text-signal">Clawback kit</Link>
+            <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
             <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
-            <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Clawback kit</a>
+            <Link href="/chargeback" className="transition hover:text-signal">Chargeback kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Chargeback kit</a>
           </nav>
         </div>
       </header>
@@ -99,17 +99,17 @@ export default function ClawbackPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Clawback kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Chargeback kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Clawback kit packages that convert comparison-rail traffic — not vanity posts.
+            Chargeback kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Clawback plan, Clawback mix, and Clawback pairing.
+            One-time sprint or monthly desk: Chargeback plan, Chargeback mix, and Chargeback pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Clawback kit packages
+              See Chargeback kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -121,7 +121,7 @@ export default function ClawbackPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Clawback kit.
+          Sprint once, or keep a monthly Chargeback kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (

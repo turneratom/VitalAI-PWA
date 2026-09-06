@@ -231,6 +231,9 @@ export default function HomePage() {
             <a href="/reserve" className="transition hover:text-signal">
               Reserve
             </a>
+            <a href="/chargeback" className="transition hover:text-signal">
+              Chargeback
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

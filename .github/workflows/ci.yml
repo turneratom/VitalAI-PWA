@@ -352,4 +352,7 @@ jobs:
           test -f projects/everything-films/still-frame.html
           test -f projects/project-ais/elbow.html
           test -f trailer-parks/src/app/pergola/page.tsx
+          test -f projects/turner-capital/alpha.html
+          test -f projects/turner-biographies/src/app/volume/page.tsx
+          test -f projects/tread-affiliates/app/chargeback/page.tsx
           echo "Offer page presence checks passed."

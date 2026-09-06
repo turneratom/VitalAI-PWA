@@ -90,6 +90,7 @@ export default function ReservePage() {
             <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
             <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
             <Link href="/reserve" className="transition hover:text-signal">Reserve kit</Link>
+            <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reserve kit</a>
           </nav>
         </div>

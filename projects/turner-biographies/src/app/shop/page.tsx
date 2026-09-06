@@ -389,6 +389,12 @@ export default function ShopPage() {
               Catalogue · from $150
             </Link>
             <Link
+              href="/volume"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Volume · from $125
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
