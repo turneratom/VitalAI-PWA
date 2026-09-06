@@ -6,9 +6,10 @@ Agent trading floor for crypto & equities — twelve specialists, two markets, o
 
 - Brand-first landing (`index.html`)
 - Live floor simulation (Open Floor)
-- Desk pricing (`pricing.html`) — waitlist, Desk Pilot $2,500/mo, capital partnership
-- **Desk Pilot enrollment** (`pilot.html`) — intake form → invoice mailto
-- Paid path CTAs point at `pilot.html` (not a vague access request)
+- Desk pricing (`pricing.html`) — waitlist, Desk Pilot $2,500/mo, **Annual Desk $25,000/yr**, capital partnership
+- Desk Pilot enrollment (`pilot.html`) — intake form → invoice mailto
+- **Annual Desk enrollment (`annual.html`)** — prepaid year, save $5,000
+- Paid path CTAs point at `pilot.html` / `annual.html`
 
 ## Run locally
 
