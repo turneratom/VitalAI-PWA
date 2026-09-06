@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Fly-Fish Day — Meridian</title>
-  <meta name="description" content="Meridian Private Fly-Fish Day — $4,800 flat for up to 2 anglers. Guide-led itinerary, beat brief, river plan. Beat fees and transport billed separately when required." />
+  <title>Private Falconry Day — Meridian</title>
+  <meta name="description" content="Meridian Private Falconry Day — $5,500 flat for up to 4 guests. Falconer-led itinerary, field brief, mews plan. Field fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,800;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..145,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -145,7 +145,6 @@
       <a class="nav-link" href="dive.html">Dive</a>
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
-      <a class="nav-link" href="rail.html">Rail</a>
       <a class="nav-link" href="flyfish.html">Fly-fish</a>
       <a class="nav-link" href="falconry.html">Falconry</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -157,17 +156,17 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Fly-Fish Day.</p>
-    <p class="price">$4,800 flat · one day · up to 2 anglers</p>
-    <p class="hero-sub">Guide-led fly-fish day: beat brief, cast rhythm, and river plan. Beat fees and private transport billed separately when the lodge requires them.</p>
+    <p class="hero-line">Private Falconry Day.</p>
+    <p class="price">$5,500 flat · one day · up to 4 guests</p>
+    <p class="hero-sub">Falconer-led falconry day: field brief, flight rhythm, and mews plan. Field fees and private transport billed separately when the estate requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request fly-fish day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $4,800 for Private Fly-Fish Day, then lock beat, river, and angler count with your first brief.</p>
-      <form id="flyfish-form" novalidate>
+      <h2 id="form-title">Request falconry day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $5,500 for Private Falconry Day, then lock field, bird, and guest count with your first brief.</p>
+      <form id="falconry-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred river / region
+            Preferred field / region
             <input type="text" id="city" name="region" placeholder="e.g. Bordeaux / Tuscany / Sonoma / open" />
           </label>
           <label>
@@ -196,40 +195,40 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $4,800 fly-fish invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Fly-Fish Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $5,500 falconry invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Falconry Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Guide-led fly-fish day</strong>
-        A Meridian host for beat pacing, cast decisions, and day briefings.
+        <strong>Falconer-led falconry day</strong>
+        A Meridian host for field pacing, flight decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Beat brief</strong>
-        Sessions and lunch sequenced for the river and day you choose.
+        <strong>Field brief</strong>
+        Flights and lunch sequenced for the field and day you choose.
       </div>
       <div class="rule">
         <strong>Day plan</strong>
-        Session timing, lodge access, and transfer notes for the day.
+        Flight timing, mews access, and transfer notes for the day.
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $4,800 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $5,500 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Fly-Fish Day</p>
+    <p><strong>Meridian</strong> · Private Falconry Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("flyfish-form");
+      var form = document.getElementById("falconry-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Fly-Fish Day — $4,800";
+        var subject = "Meridian Private Falconry Day — $5,500";
         var body =
-          "Meridian Private Fly-Fish Day request ($4,800 flat, one day, up to 2 anglers)\n\n" +
+          "Meridian Private Falconry Day request ($5,500 flat, one day, up to 4 guests)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $4,800 Private Fly-Fish Day invoice.\n" +
-          "Includes: guide-led day, beat brief, river plan. Beat fees and transport billed separately when required.";
+          "Please send the $5,500 Private Falconry Day invoice.\n" +
+          "Includes: falconer-led day, field brief, mews plan. Field fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
