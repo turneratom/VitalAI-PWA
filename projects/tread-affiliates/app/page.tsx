@@ -240,6 +240,9 @@ export default function HomePage() {
             <a href="/recoup" className="transition hover:text-signal">
               Recoup
             </a>
+            <a href="/settlement" className="transition hover:text-signal">
+              Settlement
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
