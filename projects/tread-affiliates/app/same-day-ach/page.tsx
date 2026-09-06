@@ -99,6 +99,7 @@ export default function SameDayAchPage() {
             <Link href="/fednow" className="transition hover:text-signal">FedNow kit</Link>
             <Link href="/same-day-ach" className="transition hover:text-signal">Same-Day ACH kit</Link>
             <Link href="/instant-pay" className="transition hover:text-signal">Instant-Pay kit</Link>
+            <Link href="/push-pay" className="transition hover:text-signal">Push-Pay kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Same-Day ACH kit</a>
           </nav>
         </div>
@@ -158,7 +159,7 @@ export default function SameDayAchPage() {
 
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
-          <p className="max-w-xl text-white/70">Prefer featured placement or operator cosame-day-aching? Same inbox.</p>
+          <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
           <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Media" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>

@@ -300,6 +300,9 @@ export default function HomePage() {
             <a href="/instant-pay" className="transition hover:text-signal">
               Instant-Pay
             </a>
+            <a href="/push-pay" className="transition hover:text-signal">
+              Push-Pay
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
