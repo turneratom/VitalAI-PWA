@@ -142,4 +142,7 @@ jobs:
           test -f projects/everything-films/sizzle.html
           test -f projects/project-ais/cardio.html
           test -f trailer-parks/src/app/wetlands/page.tsx
+          test -f projects/turner-capital/curve.html
+          test -f projects/turner-biographies/src/app/curriculum/page.tsx
+          test -f projects/tread-affiliates/app/influencer/page.tsx
           echo "Offer page presence checks passed."

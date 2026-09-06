@@ -141,6 +141,9 @@ export default function HomePage() {
             <a href="/ugc" className="transition hover:text-signal">
               UGC
             </a>
+            <a href="/influencer" className="transition hover:text-signal">
+              Influencer
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
