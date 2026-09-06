@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Wrist Protocol</title>
-  <meta name="description" content="VitalAI Wrist Protocol — Protocol setup $17 or Wrist desk $3/mo. Wrist targets, daily wrist rhythm, weekly wrist map. Invoice via email until Stripe is live." />
+  <title>VitalAI Forearm Protocol</title>
+  <meta name="description" content="VitalAI Forearm Protocol — Protocol setup $13 or Forearm desk $1/mo. Forearm targets, daily forearm rhythm, weekly forearm map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Wrist Protocol</p>
+        <p>Forearm Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,8 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="wrist.html">Wrist</a>
-        <a href="grip.html">Grip</a>
         <a href="forearm.html">Forearm</a>
         <a href="immune.html">Immune</a>
         <a href="clinic.html">Subscribe</a>
@@ -84,36 +82,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Wrist Protocol</h2>
+    <h2>VitalAI Forearm Protocol</h2>
     <p class="lede">
-      Wrist markers, wrist targets, and a weekly checklist — one setup, or a monthly wrist desk. Stripe when live — until then this form emails an invoice request.
+      Forearm markers, forearm targets, and a weekly checklist — one setup, or a monthly forearm desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Wrist pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly wrist desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Forearm pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly forearm desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$17</strong></div>
-        <div class="plan-row"><span>Wrist desk</span><strong>$3 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$13</strong></div>
+        <div class="plan-row"><span>Forearm desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Wrist markers and schedule for your goals</li>
-        <li>Load / daily wrist rhythm for your week</li>
-        <li>Wrist checklist for the first two weeks</li>
-        <li>Optional monthly wrist desk</li>
+        <li>Forearm markers and schedule for your goals</li>
+        <li>Load / daily forearm rhythm for your week</li>
+        <li>Forearm checklist for the first two weeks</li>
+        <li>Optional monthly forearm desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request wrist invoice</h3>
+      <h3 id="form-title">Request forearm invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="wrist-form" novalidate>
+      <form id="forearm-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $17" selected>Protocol setup — $17</option>
-              <option value="Wrist desk — $3/mo">Wrist desk — $3/mo</option>
+              <option value="Protocol setup — $13" selected>Protocol setup — $13</option>
+              <option value="Forearm desk — $1/mo">Forearm desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -138,7 +136,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email wrist invoice request</button>
+          <button class="btn" type="submit">Email forearm invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -146,13 +144,13 @@
   </main>
 
   <footer class="site-footer">
-    Wrist Protocol · setup / desk ·
+    Forearm Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("wrist-form");
+      var form = document.getElementById("forearm-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -166,17 +164,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Wrist Protocol — " + plan;
+        var subject = "VitalAI Forearm Protocol — " + plan;
         var body =
-          "VitalAI Wrist Protocol invoice request\n\n" +
+          "VitalAI Forearm Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Wrist Protocol checkout or invoice.\n" +
-          "Includes: wrist map, wrist blocks, weekly checklist.";
+          "Please send Forearm Protocol checkout or invoice.\n" +
+          "Includes: forearm map, forearm blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

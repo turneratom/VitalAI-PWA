@@ -65,6 +65,7 @@ const navLinks = [
   { href: "/dog-park", label: "Dog-Park Diligence $159" },
   { href: "/firepit", label: "Firepit Diligence $149" },
   { href: "/bbq", label: "BBQ Diligence $139" },
+  { href: "/gazebo", label: "Gazebo Diligence $129" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
