@@ -78,6 +78,7 @@ const navLinks = [
   { href: "/carport", label: "Carport Diligence $29" },
   { href: "/shed", label: "Shed Diligence $19" },
   { href: "/lanai", label: "Lanai Diligence $15" },
+  { href: "/cabana", label: "Cabana Diligence $10" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
