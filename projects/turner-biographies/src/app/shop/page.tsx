@@ -299,6 +299,12 @@ export default function ShopPage() {
               Atlas · from $800
             </Link>
             <Link
+              href="/chronology"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Chronology · from $700
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Churn Kit — Tread Affiliates",
+  title: "Affiliate Lifecycle Kit — Tread Affiliates",
   description:
-    "Affiliate Churn Kit — one-time sprint $450 or monthly Churn kit $215/mo. Churn plan, save mix, save pairing. Invoice by email.",
+    "Affiliate Lifecycle Kit — one-time sprint $400 or monthly Lifecycle kit $195/mo. Lifecycle plan, lifecycle mix, lifecycle pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Churn Kit — Tread Affiliates",
-    description: "Sprint $450 · Monthly desk $215/mo. Churn plan, save mix, save pairing.",
+    title: "Affiliate Lifecycle Kit — Tread Affiliates",
+    description: "Sprint $400 · Monthly desk $195/mo. Lifecycle plan, lifecycle mix, lifecycle pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Churn kit",
-    price: "$450",
+    title: "Lifecycle kit",
+    price: "$400",
     cadence: " one-time",
     points: [
-      "Churn plan across your primary rails",
+      "Lifecycle plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Churn kit execution checklist",
+      "30-day Lifecycle kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Churn kit — $450",
-      "I want an Affiliate Churn kit ($450).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Lifecycle kit — $400",
+      "I want an Affiliate Lifecycle kit ($400).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $450",
+    cta: "Request sprint — $400",
   },
   {
     tag: "Desk",
-    title: "Monthly Churn kit",
-    price: "$215",
+    title: "Monthly Lifecycle kit",
+    price: "$195",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Churn kit and ROAS review",
+      "Monthly Lifecycle kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Churn kit — $215/mo",
-      "I want a Monthly Churn kit ($215/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Lifecycle kit — $195/mo",
+      "I want a Monthly Lifecycle kit ($195/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $215/mo",
+    cta: "Request desk — $195/mo",
   },
 ];
 
-export default function ChurnPage() {
+export default function LifecyclePage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,9 +86,8 @@ export default function ChurnPage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/churn" className="transition hover:text-signal">Churn kit</Link>
-            <Link href="/lifecycle" className="transition hover:text-signal">Lifecycle</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Churn kit</a>
+            <Link href="/lifecycle" className="transition hover:text-signal">Lifecycle kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Lifecycle kit</a>
           </nav>
         </div>
       </header>
@@ -96,17 +95,17 @@ export default function ChurnPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Churn kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Lifecycle kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Churn kit packages that convert comparison-rail traffic — not vanity posts.
+            Lifecycle kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: churn plan, save mix, and save pairing.
+            One-time sprint or monthly desk: lifecycle plan, lifecycle mix, and lifecycle pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Churn kit packages
+              See Lifecycle kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -118,7 +117,7 @@ export default function ChurnPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Churn kit.
+          Sprint once, or keep a monthly Lifecycle kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
