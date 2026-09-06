@@ -90,6 +90,7 @@ export default function PayoutPage() {
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
             <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
             <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
+            <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Payout kit</a>
           </nav>
         </div>

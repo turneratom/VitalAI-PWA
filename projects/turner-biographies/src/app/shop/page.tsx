@@ -383,6 +383,12 @@ export default function ShopPage() {
               Compendium · from $175
             </Link>
             <Link
+              href="/catalogue"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Catalogue · from $150
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
