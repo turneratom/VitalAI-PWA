@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rho Desk Memo — Turner Capital</title>
-  <meta name="description" content="Rho Desk Memo from Turner Capital — $650 one-shot or $325/mo. Rho map, Rate-sensitivity stress flags, rate ladder notes. PDF delivery. Invoice by email." />
+  <title>Ultima Desk Memo — Turner Capital</title>
+  <meta name="description" content="Ultima Desk Memo from Turner Capital — $350 one-shot or $175/mo. Ultima map, Third-order stress flags, ultima ladder notes. PDF delivery. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -25,12 +25,12 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--ink);
-      color: var(--text);
+      ultima: var(--text);
       font-family: var(--font-ui);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
+    a { ultima: inherit; text-decoration: none; }
     .grain {
       pointer-events: none;
       position: fixed; inset: 0; z-index: 80; opacity: 0.045;
@@ -43,21 +43,21 @@
     }
     .nav-mark {
       font-family: var(--font-display);
-      font-size: 1.15rem; letter-spacing: 0.04em; color: var(--gold-bright);
+      font-size: 1.15rem; letter-spacing: 0.04em; ultima: var(--gold-bright);
     }
     .nav-links { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
     .nav-text {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--muted);
+      text-transform: uppercase; ultima: var(--muted);
     }
-    .nav-text:hover { color: var(--text); }
+    .nav-text:hover { ultima: var(--text); }
     .nav-cta {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--text);
+      text-transform: uppercase; ultima: var(--text);
       border: 1px solid rgba(201, 162, 39, 0.45);
       padding: 0.55rem 0.95rem;
     }
-    .nav-cta:hover { background: rgba(201, 162, 39, 0.12); border-color: var(--gold); }
+    .nav-cta:hover { background: rgba(201, 162, 39, 0.12); border-ultima: var(--gold); }
     .hero {
       position: relative; min-height: 70svh; display: grid; align-items: end; overflow: hidden;
     }
@@ -91,42 +91,42 @@
       font-family: var(--font-display);
       font-size: clamp(3rem, 8vw, 5rem);
       line-height: 0.92; letter-spacing: -0.02em;
-      color: var(--gold-bright); margin-bottom: 0.85rem;
+      ultima: var(--gold-bright); margin-bottom: 0.85rem;
     }
     .brand-lockup span {
-      display: block; color: var(--text); font-size: 0.38em;
+      display: block; ultima: var(--text); font-size: 0.38em;
       letter-spacing: 0.02em; margin-top: 0.4em; font-style: italic; opacity: 0.92;
     }
     .price-chip {
       display: inline-flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap;
-      font-family: var(--font-mono); color: var(--gold-bright);
+      font-family: var(--font-mono); ultima: var(--gold-bright);
       font-size: 1.45rem; font-weight: 700; margin-bottom: 1.1rem;
     }
     .price-chip span {
       font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--muted);
+      text-transform: uppercase; ultima: var(--muted);
     }
     .hero-lede {
-      color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.12rem);
+      ultima: var(--muted); font-size: clamp(1rem, 2.2vw, 1.12rem);
       line-height: 1.55; font-weight: 500; margin-bottom: 1.5rem; max-width: 34rem;
     }
-    .hero-lede strong { color: var(--text); font-weight: 600; }
+    .hero-lede strong { ultima: var(--text); font-weight: 600; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 0.78rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       padding: 0.9rem 1.25rem; border: 1px solid transparent; cursor: pointer;
-      transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s;
-      background: transparent; color: var(--text); font-family: inherit;
+      transition: transform 0.2s var(--ease), background 0.2s, border-ultima 0.2s;
+      background: transparent; ultima: var(--text); font-family: inherit;
     }
     .btn-primary {
       background: linear-gradient(135deg, #a8861f, #d4b03a);
-      color: #0a0e14;
+      ultima: #0a0e14;
     }
     .btn-primary:hover { transform: translateY(-1px); }
-    .btn-ghost { border-color: var(--line); }
-    .btn-ghost:hover { border-color: rgba(201, 162, 39, 0.55); }
+    .btn-ghost { border-ultima: var(--line); }
+    .btn-ghost:hover { border-ultima: rgba(201, 162, 39, 0.55); }
     .wrap {
       max-width: 1100px; margin: 0 auto;
       padding: 0 clamp(1rem, 4vw, 3rem) 3.5rem;
@@ -139,7 +139,7 @@
       font-size: clamp(1.9rem, 4vw, 2.6rem);
       font-weight: 400; line-height: 1.1; margin-bottom: 0.65rem;
     }
-    .section-hd p { color: var(--muted); font-size: 0.98rem; line-height: 1.55; font-weight: 500; }
+    .section-hd p { ultima: var(--muted); font-size: 0.98rem; line-height: 1.55; font-weight: 500; }
     .includes {
       display: grid; gap: 0; border-top: 1px solid var(--line);
       margin-bottom: 2.5rem;
@@ -153,13 +153,13 @@
     }
     .include-num {
       font-family: var(--font-mono); font-size: 0.7rem;
-      letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+      letter-spacing: 0.14em; text-transform: uppercase; ultima: var(--gold);
     }
     .include h3 {
       font-family: var(--font-display); font-size: 1.35rem;
       font-weight: 400; margin-bottom: 0.35rem;
     }
-    .include p { color: var(--muted); font-size: 0.92rem; line-height: 1.5; font-weight: 500; max-width: 36rem; }
+    .include p { ultima: var(--muted); font-size: 0.92rem; line-height: 1.5; font-weight: 500; max-width: 36rem; }
     .enroll {
       background: var(--desk);
       border: 1px solid rgba(201, 162, 39, 0.35);
@@ -171,7 +171,7 @@
       font-weight: 400; margin-bottom: 0.5rem;
     }
     .enroll-lead {
-      color: var(--muted); font-size: 0.95rem; line-height: 1.5;
+      ultima: var(--muted); font-size: 0.95rem; line-height: 1.5;
       margin-bottom: 1.5rem; max-width: 34rem; font-weight: 500;
     }
     .fields { display: grid; gap: 0.85rem; }
@@ -182,35 +182,35 @@
     label {
       display: grid; gap: 0.35rem;
       font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
-      font-weight: 700; color: var(--muted);
+      font-weight: 700; ultima: var(--muted);
     }
     input, select, textarea {
       width: 100%; border: 1px solid var(--line); background: rgba(5, 8, 12, 0.55);
-      color: var(--text); padding: 0.8rem 0.9rem;
+      ultima: var(--text); padding: 0.8rem 0.9rem;
       font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500;
       letter-spacing: normal; text-transform: none;
     }
     input:focus, select:focus, textarea:focus {
-      outline: none; border-color: rgba(201, 162, 39, 0.55);
+      outline: none; border-ultima: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
     .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
     .form-hint {
-      font-size: 0.78rem; color: var(--muted); font-weight: 500; max-width: 28rem;
+      font-size: 0.78rem; ultima: var(--muted); font-weight: 500; max-width: 28rem;
     }
     .disclaimer {
       margin-top: 2rem; padding: 0.85rem 1rem;
       border: 1px dashed var(--line); font-size: 0.72rem;
-      color: var(--muted); line-height: 1.5;
+      ultima: var(--muted); line-height: 1.5;
     }
     footer {
       margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
       display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem;
-      font-size: 0.75rem; color: var(--muted);
+      font-size: 0.75rem; ultima: var(--muted);
     }
-    footer a { color: var(--gold-bright); }
+    footer a { ultima: var(--gold-bright); }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -247,27 +247,24 @@
       <a class="nav-text" href="futures.html">Futures</a>
       <a class="nav-text" href="skew.html">Skew</a>
       <a class="nav-text" href="gamma.html">Gamma</a>
-      <a class="nav-text" href="rho.html">Rho</a>
-      <a class="nav-text" href="color.html">Color</a>
-      <a class="nav-text" href="speed.html">Speed</a>
       <a class="nav-text" href="ultima.html">Ultima</a>
       <a class="nav-text" href="memo.html">Deal memo</a>
       <a class="nav-text" href="pilot.html">Desk pilot</a>
-      <a class="nav-cta" href="#enroll">Request rho invoice</a>
+      <a class="nav-cta" href="#enroll">Request ultima invoice</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Rho desk memo</span></h1>
-      <p class="price-chip">$650<span>one-shot · $325/mo</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Ultima desk memo</span></h1>
+      <p class="price-chip">$350<span>one-shot · $175/mo</span></p>
       <p class="hero-lede">
         Your book, one FX pass —
-        <strong>rho map, spot-vol stress flags, rate ladder notes.</strong> PDF delivery.
+        <strong>ultima map, spot-vol stress flags, ultima ladder notes.</strong> PDF delivery.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Order rho memo</a>
+        <a class="btn btn-primary" href="#enroll">Order ultima memo</a>
         <a class="btn btn-ghost" href="alts.html">Prefer alts memo · $4,500</a>
       </div>
     </div>
@@ -283,21 +280,21 @@
       <article class="include">
         <p class="include-num">01 · Catalyst</p>
         <div>
-          <h3>Rho map</h3>
-          <p>Seven-day rho map ranked for rate-sensitivity surface + flow desks — what moves, when, why it matters.</p>
+          <h3>Ultima map</h3>
+          <p>Seven-day ultima map ranked for third-order surface + flow desks — what moves, when, why it matters.</p>
         </div>
       </article>
       <article class="include">
         <p class="include-num">02 · Regime</p>
         <div>
-          <h3>Rate-sensitivity stress flags</h3>
-          <p>Risk-on / risk-off Rate-sensitivity stress flags with what would flip the bias mid-week.</p>
+          <h3>Third-order stress flags</h3>
+          <p>Risk-on / risk-off Third-order stress flags with what would flip the bias mid-week.</p>
         </div>
       </article>
       <article class="include">
         <p class="include-num">03 · Positioning</p>
         <div>
-          <h3>Rho ladder notes</h3>
+          <h3>Ultima ladder notes</h3>
           <p>Surface ladder sizes and instruments ranked by impact — not a blank “buy forwards” slide.</p>
         </div>
       </article>
@@ -305,13 +302,13 @@
         <p class="include-num">04 · Delivery</p>
         <div>
           <h3>PDF delivery</h3>
-          <p>One-shot PDF at $650, or monthly refresh at $325/mo. Pair with Hedge Memo for full overlay context.</p>
+          <p>One-shot PDF at $350, or monthly refresh at $175/mo. Pair with Hedge Memo for full overlay context.</p>
         </div>
       </article>
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request treasury memo invoice — $650 · $325/mo</h2>
+      <h2 id="enroll-title">Request treasury memo invoice — $350 · $175/mo</h2>
       <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
       <form id="rates-form" novalidate>
         <div class="fields">
@@ -330,8 +327,8 @@
           <label>
             Memo type
             <select id="plan" name="plan">
-              <option value="Rho Desk Memo one-shot — $650" selected>Rho Desk Memo one-shot — $650</option>
-              <option value="Rho Desk Memo monthly — $325/mo">Rho Desk Memo monthly — $325/mo</option>
+              <option value="Ultima Desk Memo one-shot — $350" selected>Ultima Desk Memo one-shot — $350</option>
+              <option value="Ultima Desk Memo monthly — $175/mo">Ultima Desk Memo monthly — $175/mo</option>
             </select>
           </label>
           <label class="full">
@@ -351,11 +348,11 @@
     </section>
 
     <p class="disclaimer">
-      Rho Desk Memo is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
+      Ultima Desk Memo is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Rho Desk Memo</span>
+      <span>Turner Capital · Ultima Desk Memo</span>
       <a href="mailto:brad@treadcompanies.com?subject=Treasury%20Overlay%20Memo">brad@treadcompanies.com</a>
     </footer>
   </main>
@@ -376,16 +373,16 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Rho Desk Memo — " + plan;
+        var subject = "Turner Capital Ultima Desk Memo — " + plan;
         var body =
-          "Rho Desk Memo invoice request (" + plan + ")\n\n" +
+          "Ultima Desk Memo invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Firm: " + (firm || "—") + "\n" +
           "Plan: " + plan + "\n" +
           "Target: " + (focus || "—") + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send invoice for Rho Desk Memo ($650 one-shot or $325/mo).";
+          "Please send invoice for Ultima Desk Memo ($350 one-shot or $175/mo).";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

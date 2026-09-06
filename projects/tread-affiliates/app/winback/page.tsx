@@ -88,6 +88,7 @@ export default function WinbackPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/winback" className="transition hover:text-signal">Winback kit</Link>
             <Link href="/nurture" className="transition hover:text-signal">Nurture</Link>
+            <Link href="/churn" className="transition hover:text-signal">Churn</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Winback kit</a>
           </nav>
         </div>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Referral Kit — Tread Affiliates",
+  title: "Affiliate Churn Kit — Tread Affiliates",
   description:
-    "Affiliate Referral Kit — one-time sprint $700 or monthly Referral kit $305/mo. Referral plan, advocate mix, advocate pairing. Invoice by email.",
+    "Affiliate Churn Kit — one-time sprint $450 or monthly Churn kit $215/mo. Churn plan, save mix, save pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Referral Kit — Tread Affiliates",
-    description: "Sprint $700 · Monthly desk $305/mo. Referral plan, advocate mix, advocate pairing.",
+    title: "Affiliate Churn Kit — Tread Affiliates",
+    description: "Sprint $450 · Monthly desk $215/mo. Churn plan, save mix, save pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Referral kit",
-    price: "$700",
+    title: "Churn kit",
+    price: "$450",
     cadence: " one-time",
     points: [
-      "Referral plan across your primary rails",
+      "Churn plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Referral kit execution checklist",
+      "30-day Churn kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Referral kit — $700",
-      "I want an Affiliate Referral kit ($700).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Churn kit — $450",
+      "I want an Affiliate Churn kit ($450).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $700",
+    cta: "Request sprint — $450",
   },
   {
     tag: "Desk",
-    title: "Monthly Referral kit",
-    price: "$305",
+    title: "Monthly Churn kit",
+    price: "$215",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Referral kit and ROAS review",
+      "Monthly Churn kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Referral kit — $305/mo",
-      "I want a Monthly Referral kit ($305/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Churn kit — $215/mo",
+      "I want a Monthly Churn kit ($215/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $305/mo",
+    cta: "Request desk — $215/mo",
   },
 ];
 
-export default function ReferralPage() {
+export default function ChurnPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,11 +86,8 @@ export default function ReferralPage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/referral" className="transition hover:text-signal">Referral kit</Link>
-            <Link href="/winback" className="transition hover:text-signal">Winback</Link>
-            <Link href="/nurture" className="transition hover:text-signal">Nurture</Link>
-            <Link href="/churn" className="transition hover:text-signal">Churn</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Referral kit</a>
+            <Link href="/churn" className="transition hover:text-signal">Churn kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Churn kit</a>
           </nav>
         </div>
       </header>
@@ -98,17 +95,17 @@ export default function ReferralPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Referral kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Churn kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Referral kit packages that convert comparison-rail traffic — not vanity posts.
+            Churn kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: referral plan, advocate mix, and advocate pairing.
+            One-time sprint or monthly desk: churn plan, save mix, and save pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Referral kit packages
+              See Churn kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -120,7 +117,7 @@ export default function ReferralPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Referral kit.
+          Sprint once, or keep a monthly Churn kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (

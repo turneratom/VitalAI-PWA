@@ -183,6 +183,9 @@ export default function HomePage() {
             <a href="/nurture" className="transition hover:text-signal">
               Nurture
             </a>
+            <a href="/churn" className="transition hover:text-signal">
+              Churn
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
