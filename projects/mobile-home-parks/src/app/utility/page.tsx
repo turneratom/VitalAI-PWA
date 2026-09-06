@@ -89,6 +89,7 @@ export default function UtilityPage() {
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
             <Link href="/epa" className="underline-offset-4 hover:text-white hover:underline">EPA</Link>
+            <Link href="/traffic" className="underline-offset-4 hover:text-white hover:underline">Traffic</Link>
             <Link href="/flood" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>

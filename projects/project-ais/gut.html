@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Stress Protocol</title>
-  <meta name="description" content="VitalAI Stress Protocol — Protocol setup $159 or Stress desk $39/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
+  <title>VitalAI Gut Protocol</title>
+  <meta name="description" content="VitalAI Gut Protocol — Protocol setup $199 or Gut desk $59/mo. Gut targets, meal rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Stress Protocol</p>
+        <p>Gut Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -58,6 +58,7 @@
         <a href="coach.html">Coach</a>
         <a href="concierge.html">Concierge</a>
         <a href="nutrition.html">Nutrition</a>
+        <a href="focus.html">Focus</a>
         <a href="stress.html">Stress</a>
         <a href="longevity.html">Longevity</a>
         <a href="mobility.html">Mobility</a>
@@ -70,41 +71,41 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Stress Protocol</h2>
+    <h2>VitalAI Gut Protocol</h2>
     <p class="lede">
-      Stress window, wind-down rhythm, and a recovery checklist — one setup, or a monthly sleep desk. Stripe when live — until then this form emails an invoice request.
+      Gut markers, meal rhythm, and a weekly checklist — one setup, or a monthly gut desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Stress pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly stress desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Gut pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly gut desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$159</strong></div>
-        <div class="plan-row"><span>Stress desk</span><strong>$39 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$199</strong></div>
+        <div class="plan-row"><span>Gut desk</span><strong>$59 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Stress window and schedule for your goals</li>
-        <li>High / low stress rhythm for your week</li>
-        <li>Stress checklist for the first two weeks</li>
-        <li>Optional monthly stress desk</li>
+        <li>Gut markers and schedule for your goals</li>
+        <li>Meal / fiber rhythm for your week</li>
+        <li>Gut checklist for the first two weeks</li>
+        <li>Optional monthly gut desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request nutrition invoice</h3>
+      <h3 id="form-title">Request gut invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="stress-form" novalidate>
+      <form id="gut-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $159" selected>Protocol setup — $159</option>
-              <option value="Stress desk — $39/mo">Stress desk — $39/mo</option>
+              <option value="Protocol setup — $199" selected>Protocol setup — $199</option>
+              <option value="Gut desk — $59/mo">Gut desk — $59/mo</option>
             </select>
           </label>
           <label>
             Goal focus
-            <input type="text" id="focus" name="focus" placeholder="e.g. travel weeks / high-stakes deadlines" />
+            <input type="text" id="focus" name="focus" placeholder="e.g. travel / bloating / rebuild" />
           </label>
           <label>
             Preferred kickoff
@@ -120,25 +121,25 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Triggers, travel, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Symptoms, travel, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email nutrition invoice request</button>
-          <a class="btn btn-secondary" href="focus.html">Focus protocol</a>
+          <button class="btn" type="submit">Email gut invoice request</button>
+          <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Stress Protocol · setup / desk ·
+    Gut Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("stress-form");
+      var form = document.getElementById("gut-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -152,17 +153,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Stress Protocol — " + plan;
+        var subject = "VitalAI Gut Protocol — " + plan;
         var body =
-          "VitalAI Stress Protocol invoice request\n\n" +
+          "VitalAI Gut Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Stress Protocol checkout or invoice.\n" +
-          "Includes: trigger map, downshift drills, weekly checklist.";
+          "Please send Gut Protocol checkout or invoice.\n" +
+          "Includes: gut map, meal blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
