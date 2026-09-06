@@ -80,6 +80,7 @@ export default function ShortsPage() {
             <Link href="/ugc" className="transition hover:text-signal">UGC</Link>
             <Link href="/influencer" className="transition hover:text-signal">Influencer</Link>
             <Link href="/seeding" className="transition hover:text-signal">Seeding</Link>
+            <Link href="/creator-kit" className="transition hover:text-signal">Creator kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Shorts</a>
           </nav>
         </div>

@@ -147,6 +147,9 @@ export default function HomePage() {
             <a href="/seeding" className="transition hover:text-signal">
               Seeding
             </a>
+            <a href="/creator-kit" className="transition hover:text-signal">
+              Creator kit
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
