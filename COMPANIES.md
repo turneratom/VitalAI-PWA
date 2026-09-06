@@ -9,14 +9,14 @@ Chats forget. **This file remembers.**
 
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured $299/mo + Buyer Pro + valuation + deal-room + **`/lender-intro` ($499 · $99/mo)** |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + **`expedition.html` ($45,000 group)** |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + **`rush.html` (+$3,500)** |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo $5k + brief $750/mo |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + **`api.html` ($99/$999/mo)** |
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition $45k |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush +$3.5k |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + **`office-hours.html` ($1,500 · $5,000/mo)** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + **`/audiobook` ($15k/$40k)** |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api |
 
-Also: Tread Affiliates — rails + `/advertise` + `/sponsor` + `/audit`.
+Also: Tread Affiliates — rails + `/advertise` + `/sponsor` + `/audit` + **`/creative` ($1,200 · $3,500/mo)**.
 
 ## Hands-off contract
 
@@ -26,11 +26,10 @@ Also: Tread Affiliates — rails + `/advertise` + `/sponsor` + `/audit`.
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `expedition.html` — Group Expedition $45,000 (≤8 travelers, 10–14 days); nav from home/hold/gift/invoice/retainer.
-- Everything Films: `rush.html` — Rush Delivery +$3,500 (10-business-day first cut); nav from index/deposit/legacy/corporate.
-- Project AIS: `api.html` — Developer $99/mo · Production $999/mo (annual $990/$9,990); linked from pricing/teams/whitelabel/home.
-- Mobile Home Parks: `/lender-intro` — single intro $499 · Preferred desk $99/mo; Header nav.
-- Prior: Capital brief; Biographies serialization; Affiliates audit; Meridian retainer; Films deposit; AIS white-label; MHP Deal Room.
+- Turner Capital: `office-hours.html` — Desk Office Hours $1,500/session · $5,000/mo block; wired from floor/pricing/brief/memo/pilot/annual.
+- Turner Biographies: `/audiobook` — narration license $15k · full production $40k; layout + shop CTAs.
+- Tread Affiliates: `/creative` — Starter pack $1,200 · monthly retainer $3,500; advertise/sponsor/audit/comparisons nav.
+- Prior: Meridian expedition; Films rush; AIS API; MHP lender-intro; Capital brief; Biographies serialization; Affiliates audit.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes
