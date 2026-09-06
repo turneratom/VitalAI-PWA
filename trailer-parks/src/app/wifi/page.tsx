@@ -49,7 +49,7 @@ const perks = [
   },
 ];
 
-export default function Wi-FiPage() {
+export default function WifiPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
