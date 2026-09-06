@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI White-Label — Clinics</title>
-  <meta name="description" content="VitalAI white-label coaching portal for clinics. Custom brand, 10 seats starter pack, priority support. $499/mo or $4,999/yr." />
+  <title>VitalAI Enterprise</title>
+  <meta name="description" content="VitalAI Enterprise Clinic — $2,499/mo or $24,990/yr. SSO, admin roles, BAAs on request, dedicated success, 50 seats base." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,58 +47,59 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>White-Label</p>
+        <p>Enterprise Clinic</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
         <a href="teams.html">Teams</a>
+        <a href="whitelabel.html">White-label</a>
         <a href="api.html">API</a>
-        <a href="enterprise.html">Enterprise</a>
         <a href="subscribe.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI White-Label for clinics</h2>
+    <h2>VitalAI Enterprise</h2>
     <p class="lede">
-      Your brand on the coaching portal. Starter pack includes 10 seats, custom clinic branding, and priority support. Stripe when live — until then this form emails a white-label invoice request.
+      Clinic-scale VitalAI with SSO, admin roles, BAAs on request, and dedicated success. Fifty seats base. Stripe when live — until then this form emails an Enterprise invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">White-label pricing</h3>
-      <p class="hint">Clinic portal under your brand. 10 seats included in the starter pack.</p>
+      <h3 id="plans-title">Enterprise pricing</h3>
+      <p class="hint">One clinic plan; annual saves vs twelve monthly invoices.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>White-label monthly</span><strong>$499 / mo</strong></div>
-        <div class="plan-row"><span>White-label annual</span><strong>$4,999 / yr</strong></div>
+        <div class="plan-row"><span>Enterprise monthly</span><strong>$2,499 / mo</strong></div>
+        <div class="plan-row"><span>Enterprise annual</span><strong>$24,990 / yr</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Custom brand (logo, colors, clinic name)</li>
-        <li>10 coaching seats starter pack</li>
-        <li>Priority support</li>
-        <li>Annual saves vs twelve monthly invoices</li>
+        <li>SSO for your clinic domain</li>
+        <li>Admin roles and seat controls</li>
+        <li>BAAs on request</li>
+        <li>Dedicated success contact</li>
+        <li>50 seats base</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request white-label invoice</h3>
-      <p class="hint">Tell us cadence and clinic details. We reply with checkout or invoice within one business day.</p>
-      <form id="whitelabel-form" novalidate>
+      <h3 id="form-title">Request Enterprise invoice</h3>
+      <p class="hint">Tell us cadence and clinic size. We reply with checkout or invoice within one business day.</p>
+      <form id="enterprise-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="White-label monthly — $499/mo" selected>White-label monthly — $499/mo</option>
-              <option value="White-label annual — $4,999/yr">White-label annual — $4,999/yr</option>
+              <option value="Enterprise monthly — $2,499/mo" selected>Enterprise monthly — $2,499/mo</option>
+              <option value="Enterprise annual — $24,990/yr">Enterprise annual — $24,990/yr</option>
             </select>
           </label>
           <label>
-            Clinic / brand name
+            Clinic / organization
             <input type="text" id="org" name="org" required autocomplete="organization" />
           </label>
           <label>
-            Extra seats (beyond 10)
-            <input type="number" id="seats" name="seats" min="0" value="0" />
+            Seats needed
+            <input type="text" id="seats" name="seats" placeholder="e.g. 50 base + extras" />
           </label>
           <label>
             Your name
@@ -110,31 +111,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Brand assets, rollout date, domain, etc." />
+            <input type="text" id="notes" name="notes" placeholder="SSO IdP, BAA needed, launch date" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email white-label invoice request</button>
-          <a class="btn btn-secondary" href="teams.html">Team seats</a>
+          <button class="btn" type="submit">Email Enterprise invoice request</button>
+          <a class="btn btn-secondary" href="pricing.html">Consumer pricing</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    White-label clinics · 10 seats included ·
+    Enterprise Clinic · SSO + admin + 50 seats ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("whitelabel-form");
+      var form = document.getElementById("enterprise-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
         var org = (document.getElementById("org").value || "").trim();
-        var seats = (document.getElementById("seats").value || "0").trim();
+        var seats = (document.getElementById("seats").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -142,16 +143,17 @@
           document.getElementById(!org ? "org" : !name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI White-Label — " + plan;
+        var subject = "VitalAI Enterprise — " + plan;
         var body =
-          "VitalAI White-Label clinic invoice request\n\n" +
+          "VitalAI Enterprise Clinic invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Clinic / brand: " + org + "\n" +
-          "Extra seats beyond starter 10: " + seats + "\n" +
+          "Clinic / organization: " + org + "\n" +
+          "Seats needed: " + (seats || "50 base") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send white-label checkout or invoice.";
+          "Please send Enterprise checkout or invoice.\n" +
+          "Includes: SSO, admin roles, BAAs on request, dedicated success, 50 seats base.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

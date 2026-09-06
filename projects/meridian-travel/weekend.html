@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Invoice — Meridian Gift &amp; Corporate</title>
-  <meta name="description" content="Request a Meridian invoice for a Gift Escape certificate (from $5,800) or corporate retreat (from $28,000)." />
+  <title>Weekend Escape — Meridian</title>
+  <meta name="description" content="Meridian Weekend Escape — $8,500 flat for 2 travelers, 3–4 days. Host booking, route sketch, and ground ops. Flights separate." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -24,8 +24,7 @@
     body {
       font-family: "Sora", sans-serif;
       color: var(--ink);
-      background:
-        linear-gradient(160deg, #dfecef 0%, #f5f8fa 48%, #ebe4d8 100%);
+      background: linear-gradient(155deg, #dfecef 0%, #f6f9fb 50%, #ebe5da 100%);
       min-height: 100vh;
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
@@ -53,8 +52,13 @@
     }
     .hero-line {
       font-family: "Fraunces", Georgia, serif;
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem); margin-bottom: 0.75rem;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem); margin-bottom: 0.5rem;
       animation: rise 0.9s var(--ease) 0.08s both;
+    }
+    .price {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.6rem; color: var(--sea); margin-bottom: 0.85rem;
+      animation: rise 0.9s var(--ease) 0.1s both;
     }
     .hero-sub {
       font-weight: 300; color: var(--ink-soft); max-width: 34rem; margin-bottom: 2rem;
@@ -92,10 +96,8 @@
       padding: 0.75rem 0.9rem; font: inherit; font-size: 0.95rem;
       font-weight: 300; color: var(--ink); letter-spacing: normal; text-transform: none;
     }
-    input:focus, select:focus, textarea:focus {
-      outline: none; border-color: var(--sea);
-    }
-    textarea { min-height: 5rem; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sea); }
+    textarea { min-height: 4.5rem; resize: vertical; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
@@ -106,17 +108,17 @@
     .btn-sea:hover { background: var(--sea-deep); transform: translateY(-1px); }
     .actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .hint { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); max-width: 28rem; }
-    .prices {
-      margin-top: 1.75rem; display: grid; gap: 0.75rem;
+    .rules {
+      margin-top: 1.75rem; display: grid; gap: 0.85rem;
       animation: rise 0.9s var(--ease) 0.28s both;
     }
-    .price-row {
-      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    .rule {
       padding: 0.85rem 0; border-bottom: 1px solid var(--line);
-      font-size: 0.95rem;
+      font-weight: 300; color: var(--ink-soft); font-size: 0.95rem;
     }
-    .price-row strong {
-      font-family: "Fraunces", Georgia, serif; font-weight: 500; color: var(--sea);
+    .rule strong {
+      display: block; font-family: "Fraunces", Georgia, serif;
+      font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 1.05rem;
     }
     footer {
       padding: 1.25rem 6vw; font-size: 0.85rem; font-weight: 300; color: var(--ink-soft);
@@ -131,30 +133,31 @@
   <header class="nav">
     <a class="nav-brand" href="index.html">Meridian</a>
     <div class="nav-links">
-      <a class="nav-link" href="gift.html">Offers</a>
+      <a class="nav-link" href="index.html">Journeys</a>
       <a class="nav-link" href="hold.html">Hold</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
-      <a class="nav-link" href="weekend.html">Weekend</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
-      <a class="nav-link" href="gift-certificate.html">Certificate</a>
+      <a class="nav-link" href="gift.html">Gift</a>
+      <a class="nav-link" href="invoice.html">Invoice</a>
     </div>
   </header>
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Request an invoice. Travel when ready.</p>
-    <p class="hero-sub">Gift Escape from $5,800 or corporate retreat from $28,000. Fill the brief — your mail client opens with a prefilled invoice request.</p>
+    <p class="hero-line">Weekend Escape.</p>
+    <p class="price">$8,500 flat · 2 travelers · 3–4 days</p>
+    <p class="hero-sub">A short Meridian escape for two: host booking, route sketch, and ground ops. Flights are booked separately.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Invoice request</h2>
-      <p class="panel-lead">No card form yet. We invoice, then lock dates and hosts.</p>
-      <form id="invoice-form" novalidate>
+      <h2 id="form-title">Request weekend invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $8,500 for the Weekend Escape, then open host booking and the route sketch with your first brief.</p>
+      <form id="weekend-form" novalidate>
         <div class="fields">
           <label class="full">
-            Offer
-            <select id="offer" name="offer">
-              <option value="Gift Escape certificate — from $5,800">Gift Escape certificate — from $5,800</option>
-              <option value="Corporate retreat — from $28,000">Corporate retreat — from $28,000</option>
+            Trip length
+            <select id="length" name="length">
+              <option value="3 days" selected>3 days</option>
+              <option value="4 days">4 days</option>
             </select>
           </label>
           <label>
@@ -166,74 +169,83 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Recipient / company
-            <input type="text" id="forWhom" name="forWhom" placeholder="Who it’s for" />
+            Travelers
+            <input type="text" id="travelers" name="travelers" value="2 travelers" />
           </label>
           <label>
-            Season / month
-            <input type="text" id="when" name="when" placeholder="e.g. Spring 2027" />
+            Target window
+            <input type="text" id="window" name="window" placeholder="e.g. next long weekend" />
           </label>
           <label class="full">
-            Region preference
-            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / other" />
+            Region / route idea
+            <input type="text" id="region" name="region" placeholder="Coast / mountains / city / open" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Occasion, headcount, constraints"></textarea>
+            <textarea id="notes" name="notes" placeholder="Pace, hosts, dietary, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email invoice request</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with offer and details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $8,500 weekend invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with weekend escape details filled.</p>
         </div>
       </form>
     </section>
 
-    <div class="prices">
-      <div class="price-row">
-        <span>Gift Escape certificate</span>
-        <strong>From $5,800</strong>
+    <div class="rules">
+      <div class="rule">
+        <strong>Host booking</strong>
+        Meridian books preferred hosts and stays for two travelers on a 3–4 day window.
       </div>
-      <div class="price-row">
-        <span>Corporate retreat · 8–14 people</span>
-        <strong>From $28,000</strong>
+      <div class="rule">
+        <strong>Route sketch</strong>
+        A focused itinerary sketched around your region, pace, and weekend constraints.
+      </div>
+      <div class="rule">
+        <strong>Ground ops</strong>
+        Transfers, timing, and on-ground contacts briefed before you go.
+      </div>
+      <div class="rule">
+        <strong>Flights separate</strong>
+        The $8,500 flat covers host booking, route sketch, and ground ops — flights are booked on your own.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Invoice</p>
+    <p><strong>Meridian</strong> · Weekend Escape</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("invoice-form");
+      var form = document.getElementById("weekend-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var offer = document.getElementById("offer").value;
+        var length = document.getElementById("length").value;
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var forWhom = (document.getElementById("forWhom").value || "").trim();
-        var when = (document.getElementById("when").value || "").trim();
+        var travelers = (document.getElementById("travelers").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
         var region = (document.getElementById("region").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian invoice — " + offer;
+        var subject = "Meridian Weekend Escape — $8,500";
         var body =
-          "Meridian invoice request\n\n" +
-          "Offer: " + offer + "\n" +
+          "Meridian Weekend Escape request ($8,500 flat, 2 travelers, 3–4 days)\n\n" +
+          "Trip length: " + length + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Recipient / company: " + (forWhom || "—") + "\n" +
-          "Season / month: " + (when || "—") + "\n" +
-          "Region: " + (region || "—") + "\n" +
+          "Travelers: " + (travelers || "2 travelers") + "\n" +
+          "Target window: " + (windowVal || "—") + "\n" +
+          "Region / route: " + (region || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send invoice and next steps.";
+          "Please send the $8,500 Weekend Escape invoice.\n" +
+          "Includes: host booking, route sketch, ground ops. Flights separate.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
