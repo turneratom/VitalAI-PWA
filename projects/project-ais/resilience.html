@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Balance Protocol</title>
-  <meta name="description" content="VitalAI Balance Protocol — Protocol setup $139 or Balance desk $39/mo. Balance targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
+  <title>VitalAI Resilience Protocol</title>
+  <meta name="description" content="VitalAI Resilience Protocol — Protocol setup $129 or Resilience desk $35/mo. Resilience targets, recovery rhythm, weekly map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Balance Protocol</p>
+        <p>Resilience Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -81,36 +81,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Balance Protocol</h2>
+    <h2>VitalAI Resilience Protocol</h2>
     <p class="lede">
-      Balance markers, balance targets, and a weekly checklist — one setup, or a monthly balance desk. Stripe when live — until then this form emails an invoice request.
+      Resilience markers, resilience targets, and a weekly checklist — one setup, or a monthly resilience desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Balance pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly balance desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Resilience pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly resilience desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$139</strong></div>
-        <div class="plan-row"><span>Balance desk</span><strong>$39 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$129</strong></div>
+        <div class="plan-row"><span>Resilience desk</span><strong>$35 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Balance markers and schedule for your goals</li>
+        <li>Resilience markers and schedule for your goals</li>
         <li>Load / recovery rhythm for your week</li>
-        <li>Balance checklist for the first two weeks</li>
-        <li>Optional monthly balance desk</li>
+        <li>Resilience checklist for the first two weeks</li>
+        <li>Optional monthly resilience desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request balance invoice</h3>
+      <h3 id="form-title">Request resilience invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="balance-form" novalidate>
+      <form id="resilience-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $139" selected>Protocol setup — $139</option>
-              <option value="Balance desk — $39/mo">Balance desk — $39/mo</option>
+              <option value="Protocol setup — $129" selected>Protocol setup — $129</option>
+              <option value="Resilience desk — $35/mo">Resilience desk — $35/mo</option>
             </select>
           </label>
           <label>
@@ -135,7 +135,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email balance invoice request</button>
+          <button class="btn" type="submit">Email resilience invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -143,13 +143,13 @@
   </main>
 
   <footer class="site-footer">
-    Balance Protocol · setup / desk ·
+    Resilience Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("balance-form");
+      var form = document.getElementById("resilience-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -163,17 +163,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Balance Protocol — " + plan;
+        var subject = "VitalAI Resilience Protocol — " + plan;
         var body =
-          "VitalAI Balance Protocol invoice request\n\n" +
+          "VitalAI Resilience Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Balance Protocol checkout or invoice.\n" +
-          "Includes: balance map, balance blocks, weekly checklist.";
+          "Please send Resilience Protocol checkout or invoice.\n" +
+          "Includes: resilience map, resilience blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

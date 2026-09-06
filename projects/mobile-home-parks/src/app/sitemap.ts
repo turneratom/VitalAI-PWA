@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/easement",
     "/setbacks",
     "/pads",
+    "/skirts",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
