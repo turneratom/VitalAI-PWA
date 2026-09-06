@@ -94,6 +94,7 @@ export default function ChargebackPage() {
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/settlement" className="transition hover:text-signal">Settlement</Link>
+            <Link href="/reconciliation" className="transition hover:text-signal">Reconciliation</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Chargeback kit</a>
           </nav>
         </div>

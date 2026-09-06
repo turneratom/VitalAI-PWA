@@ -376,6 +376,9 @@ jobs:
           test -f projects/turner-capital/sortino.html
           test -f projects/turner-biographies/src/app/sampler/page.tsx
           test -f projects/tread-affiliates/app/settlement/page.tsx
+          test -f projects/turner-capital/calmar.html
+          test -f projects/turner-biographies/src/app/excerpt/page.tsx
+          test -f projects/tread-affiliates/app/reconciliation/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html

@@ -413,6 +413,12 @@ export default function ShopPage() {
               Sampler · from $80
             </Link>
             <Link
+              href="/excerpt"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Excerpt · from $70
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
