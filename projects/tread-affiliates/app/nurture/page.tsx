@@ -89,6 +89,7 @@ export default function NurturePage() {
             <Link href="/nurture" className="transition hover:text-signal">Nurture kit</Link>
             <Link href="/churn" className="transition hover:text-signal">Churn</Link>
             <Link href="/lifecycle" className="transition hover:text-signal">Lifecycle</Link>
+            <Link href="/attribution" className="transition hover:text-signal">Attribution</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Nurture kit</a>
           </nav>
         </div>

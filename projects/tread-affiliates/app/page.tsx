@@ -189,6 +189,9 @@ export default function HomePage() {
             <a href="/lifecycle" className="transition hover:text-signal">
               Lifecycle
             </a>
+            <a href="/attribution" className="transition hover:text-signal">
+              Attribution
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

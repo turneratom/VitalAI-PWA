@@ -150,6 +150,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link className="transition hover:text-bone" href="/chronology">
                 Chronology
               </Link>
+              <Link className="transition hover:text-bone" href="/concordance">
+                Concordance
+              </Link>
               <Link className="transition hover:text-bone" href="/translation">
                 Translation
               </Link>

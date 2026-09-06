@@ -254,4 +254,7 @@ jobs:
           test -f projects/everything-films/end-card.html
           test -f projects/project-ais/standing.html
           test -f trailer-parks/src/app/laundry/page.tsx
+          test -f projects/turner-capital/vera.html
+          test -f projects/turner-biographies/src/app/concordance/page.tsx
+          test -f projects/tread-affiliates/app/attribution/page.tsx
           echo "Offer page presence checks passed."

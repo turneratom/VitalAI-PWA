@@ -88,6 +88,7 @@ export default function ChurnPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/churn" className="transition hover:text-signal">Churn kit</Link>
             <Link href="/lifecycle" className="transition hover:text-signal">Lifecycle</Link>
+            <Link href="/attribution" className="transition hover:text-signal">Attribution</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Churn kit</a>
           </nav>
         </div>
