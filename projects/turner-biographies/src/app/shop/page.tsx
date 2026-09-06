@@ -503,6 +503,12 @@ export default function ShopPage() {
               Scroll · from $2
             </Link>
             <Link
+              href="/folio-slip"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Folio-Slip · from $1
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

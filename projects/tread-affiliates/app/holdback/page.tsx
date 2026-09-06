@@ -109,6 +109,7 @@ export default function HoldbackPage() {
 <Link href="/transfer" className="transition hover:text-signal">Transfer</Link>
 <Link href="/wire" className="transition hover:text-signal">Wire</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH</Link>
+            <Link href="/rtp" className="transition hover:text-signal">RTP</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Holdback kit</a>
           </nav>
         </div>

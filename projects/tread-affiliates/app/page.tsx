@@ -288,6 +288,9 @@ export default function HomePage() {
             <a href="/ach" className="transition hover:text-signal">
               ACH
             </a>
+            <a href="/rtp" className="transition hover:text-signal">
+              RTP
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

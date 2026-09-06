@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Reserve Kit — Tread Affiliates",
+  title: "Affiliate RTP Kit — Tread Affiliates",
   description:
-    "Affiliate Reserve Kit — one-time sprint $135 or monthly Reserve kit $70/mo. Reserve plan, Reserve mix, Reserve pairing. Invoice by email.",
+    "Affiliate RTP Kit — one-time sprint $3 or monthly RTP kit $1/mo. RTP plan, RTP mix, RTP pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Reserve Kit — Tread Affiliates",
-    description: "Sprint $135 · Monthly desk $70/mo. Reserve plan, Reserve mix, Reserve pairing.",
+    title: "Affiliate RTP Kit — Tread Affiliates",
+    description: "Sprint $3 · Monthly desk $1/mo. RTP plan, RTP mix, RTP pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Reserve kit",
-    price: "$135",
+    title: "RTP kit",
+    price: "$3",
     period: " one-time",
     points: [
-      "Reserve plan across your primary rails",
+      "RTP plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Reserve kit execution checklist",
+      "30-day RTP kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Reserve kit — $135",
-      "I want an Affiliate Reserve kit ($135).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates RTP kit — $3",
+      "I want an Affiliate RTP kit ($3).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $135",
+    cta: "Request sprint — $3",
   },
   {
     tag: "Desk",
-    title: "Monthly Reserve kit",
-    price: "$70",
+    title: "Monthly RTP kit",
+    price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Reserve kit and ROAS review",
+      "Monthly RTP kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Reserve kit — $70/mo",
-      "I want a Monthly Reserve kit ($70/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates RTP kit — $1/mo",
+      "I want a Monthly RTP kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $70/mo",
+    cta: "Request desk — $1/mo",
   },
 ];
 
-export default function ReservePage() {
+export default function RtpPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -89,28 +89,14 @@ export default function ReservePage() {
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
             <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
             <Link href="/clawback" className="transition hover:text-signal">Clawback</Link>
-            <Link href="/reserve" className="transition hover:text-signal">Reserve kit</Link>
+            <Link href="/reserve" className="transition hover:text-signal">Reserve</Link>
             <Link href="/chargeback" className="transition hover:text-signal">Chargeback</Link>
             <Link href="/escrow" className="transition hover:text-signal">Escrow</Link>
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
-            <Link href="/settlement" className="transition hover:text-signal">Settlement</Link>
-            <Link href="/reconciliation" className="transition hover:text-signal">Reconciliation</Link>
-            <Link href="/true-up" className="transition hover:text-signal">True-up</Link>
-            <Link href="/clearing" className="transition hover:text-signal">Clearing</Link>
-            <Link href="/netting" className="transition hover:text-signal">Netting</Link>
-            <Link href="/offset" className="transition hover:text-signal">Offset</Link>
-            <Link href="/remittance" className="transition hover:text-signal">Remittance</Link>
-            <Link href="/withhold" className="transition hover:text-signal">Withhold</Link>
-<Link href="/allocation" className="transition hover:text-signal">Allocation</Link>
-<Link href="/apportionment" className="transition hover:text-signal">Apportionment</Link>
-<Link href="/distribution" className="transition hover:text-signal">Distribution</Link>
-<Link href="/disbursement" className="transition hover:text-signal">Disbursement</Link>
-<Link href="/remittal" className="transition hover:text-signal">Remittal</Link>
-<Link href="/transfer" className="transition hover:text-signal">Transfer</Link>
-<Link href="/wire" className="transition hover:text-signal">Wire</Link>
-            <Link href="/ach" className="transition hover:text-signal">ACH</Link>
-            <Link href="/rtp" className="transition hover:text-signal">RTP</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reserve kit</a>
+            <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
+            <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
+            <Link href="/rtp" className="transition hover:text-signal">RTP kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">RTP kit</a>
           </nav>
         </div>
       </header>
@@ -118,17 +104,17 @@ export default function ReservePage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Reserve kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · RTP kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Reserve kit packages that convert comparison-rail traffic — not vanity posts.
+            RTP kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Reserve plan, Reserve mix, and Reserve pairing.
+            One-time sprint or monthly desk: RTP plan, RTP mix, and RTP pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Reserve kit packages
+              See RTP kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -140,7 +126,7 @@ export default function ReservePage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Reserve kit.
+          Sprint once, or keep a monthly RTP kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -169,7 +155,7 @@ export default function ReservePage() {
 
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
-          <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
+          <p className="max-w-xl text-white/70">Prefer featured placement or operator cortping? Same inbox.</p>
           <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Media" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>
