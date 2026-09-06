@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Quiz Bank Rights",
+  title: "Flashcards Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for quiz-bank — Single-title quiz-bank $4,500 or Catalog quiz-bank slate $12,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for flashcards — Single-title flashcards $1,800 or Catalog flashcards slate $5,500. Direct inquiry by email.",
   openGraph: {
-    title: "Quiz Bank Rights — Turner Biographies",
-    description: "Single-title quiz-bank $4,500 · Catalog quiz-bank slate $12,000.",
+    title: "Flashcards Rights — Turner Biographies",
+    description: "Single-title flashcards $1,800 · Catalog flashcards slate $5,500.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title quiz-bank",
-    price: "$4,500",
+    title: "Single-title flashcards",
+    price: "$1,800",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a quiz-bank — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Quiz bank%20rights%20single-title%20%244%2C500&body=I%20want%20Single-title%20quiz-bank%20rights%20(%244%2C500).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $4,500",
+      "Rights to license one Firebrand / Greatest Humans title as a flashcards — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Flashcards%20rights%20single-title%20%241%2C800&body=I%20want%20Single-title%20flashcards%20rights%20(%241%2C800).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $1,800",
   },
   {
     tag: "Slate",
-    title: "Catalog quiz-bank slate",
-    price: "$12,000",
+    title: "Catalog flashcards slate",
+    price: "$5,500",
     detail:
-      "Multi-title or multi-issue quiz-bank slate across Firebrand / Greatest Humans — one agreement for a broader quiz-bank slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Quiz bank%20rights%20catalog%20slate%20%2412%2C000&body=I%20want%20Catalog%20quiz-bank%20slate%20rights%20(%2412%2C000).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $12,000",
+      "Multi-title or multi-issue flashcards slate across Firebrand / Greatest Humans — one agreement for a broader flashcards slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Flashcards%20rights%20catalog%20slate%20%245%2C500&body=I%20want%20Catalog%20flashcards%20slate%20rights%20(%245%2C500).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $5,500",
   },
 ];
 
-export default function QuizBankPage() {
+export default function FlashcardsPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,30 +42,18 @@ export default function QuizBankPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Quiz Bank Rights
+            Flashcards Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate quiz-bank licensing for Firebrand and The Greatest Humans —
+            Run and slate flashcards licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/lesson-plan" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Serialization
-            </Link>
-          <Link href="/answer-key" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-            Answer key
-          </Link>
-            <Link href="/rubric" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Rubric
-            </Link>
-            <Link href="/worksheet" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/worksheet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Worksheet
-            </Link>
-            <Link href="/flashcards" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Flashcards
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
@@ -84,7 +72,7 @@ export default function QuizBankPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two quiz-bank tracks.
+            Two flashcards tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -109,8 +97,8 @@ export default function QuizBankPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need lesson plan instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Quiz bank covers week-by-session plans. Classroom covers teacher packs.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need worksheet instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Flashcards covers week-by-session plans. Classroom covers teacher packs.</p>
           </div>
           <Link href="/workbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook
           </Link>

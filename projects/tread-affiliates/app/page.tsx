@@ -165,6 +165,9 @@ export default function HomePage() {
             <a href="/upsell" className="transition hover:text-signal">
               Upsell
             </a>
+            <a href="/cross-sell" className="transition hover:text-signal">
+              Cross-sell
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

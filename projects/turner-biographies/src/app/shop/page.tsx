@@ -257,6 +257,12 @@ export default function ShopPage() {
               Worksheet · from $2,000
             </Link>
             <Link
+              href="/flashcards"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Flashcards · from $1,800
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
