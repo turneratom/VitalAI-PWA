@@ -52,6 +52,9 @@ export default function ComparisonsHubPage() {
             <Link href="/" className="transition hover:text-signal">
               Guide
             </Link>
+            <Link href="/advertise" className="transition hover:text-signal">
+              Advertise
+            </Link>
             <a
               href="#rails"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
@@ -142,8 +145,14 @@ export default function ComparisonsHubPage() {
             traffic guide, then come back and open a rail.
           </p>
           <Link
-            href="/"
+            href="/advertise"
             className="mt-6 inline-flex bg-signal px-4 py-2.5 text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:bg-white"
+          >
+            Advertise on these rails
+          </Link>
+          <Link
+            href="/"
+            className="mt-4 ml-0 inline-flex border border-white/30 px-4 py-2.5 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-white md:ml-3"
           >
             Read the guide
           </Link>
