@@ -106,6 +106,9 @@ export default function WorkbookPage() {
           <Link href="/curriculum" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
             Curriculum
           </Link>
+          <Link href="/classroom" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Classroom
+          </Link>
         </div>
       </section>
     </div>
