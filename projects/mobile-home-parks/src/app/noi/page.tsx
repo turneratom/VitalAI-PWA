@@ -91,6 +91,9 @@ export default function NoiPage() {
             <Link href="/cap-rate" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
             </Link>
+            <Link href="/tax" className="underline-offset-4 hover:text-white hover:underline">
+              Tax Basis
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>

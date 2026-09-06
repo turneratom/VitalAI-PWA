@@ -91,6 +91,9 @@ export default function CapRatePage() {
             <Link href="/noi" className="underline-offset-4 hover:text-white hover:underline">
               NOI Memo
             </Link>
+            <Link href="/tax" className="underline-offset-4 hover:text-white hover:underline">
+              Tax Basis
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>

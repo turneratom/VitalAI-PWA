@@ -3,53 +3,53 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "NOI Memo — $349 | Trailer Parks",
+  title: "Tax Basis Memo — $399 | Trailer Parks",
   description:
-    "NOI Memo: single park $349, or three-park pack $949. Stabilized NOI, add-back flags, lender-ready summary. Invoice by email.",
+    "Tax Basis Memo: single park $399, or three-park pack $1,099. Tax basis notes, depreciation flags, CPA-ready summary. Invoice by email.",
   openGraph: {
-    title: "NOI Memo — $349",
+    title: "Tax Basis Memo — $399",
     description:
-      "Single park $349 · Three-park pack $949. Stabilized NOI, add-back flags, lender-ready summary.",
+      "Single park $399 · Three-park pack $1,099. Tax basis notes, depreciation flags, CPA-ready summary.",
     type: "website",
     siteName: siteConfig.name,
-    url: "/noi",
+    url: "/tax",
   },
 };
 
 const email = siteConfig.team.bradley.email;
 
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
-  "NOI Memo — $349 single park"
+  "Tax Basis Memo — $399 single park"
 )}&body=${encodeURIComponent(
-  `I want a NOI Memo ($349 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a Tax Basis Memo ($399 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
-  "NOI Memo Three-Park Pack — $949"
+  "Tax Basis Memo Three-Park Pack — $1,099"
 )}&body=${encodeURIComponent(
-  `I want a NOI Memo Three-Park Pack ($949).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a Tax Basis Memo Three-Park Pack ($1,099).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
   {
-    title: "Stabilized NOI",
-    body: "A stated stabilized NOI after cleaning one-time noise and owner-specific add-backs.",
+    title: "Tax basis notes",
+    body: "A stated tax basis notes after cleaning one-time noise and owner-specific add-backs.",
   },
   {
-    title: "Add-back flags",
+    title: "Depreciation flags",
     body: "Clear flags on what was added back — and what a lender may push back on.",
   },
   {
-    title: "Expense hygiene",
+    title: "Basis hygiene",
     body: "Line-item notes where expenses look soft, padded, or missing for IC review.",
   },
   {
     title: "PDF delivery",
-    body: "One memo PDF per park — single park at $349, or three parks in a pack at $949.",
+    body: "One memo PDF per park — single park at $399, or three parks in a pack at $1,099.",
   },
 ];
 
-export default function NoiPage() {
+export default function TaxPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
@@ -66,33 +66,30 @@ export default function NoiPage() {
             Trailer Parks · Capital
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            NOI Memo.
-            <span className="mt-2 block text-accent">$349 · or $949.</span>
+            Tax Basis Memo.
+            <span className="mt-2 block text-accent">$399 · or $1,099.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $349, or three-park pack at $949 — stabilized NOI,
-            add-back flags, lender-ready summary.
+            Single park at $399, or three-park pack at $1,099 — tax basis notes,
+            depreciation flags, CPA-ready summary.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex items-center justify-center bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-accent-light"
             >
-              Invoice memo — $349
+              Invoice memo — $399
             </a>
             <a
               href={PACK}
               className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
             >
-              Three-park — $949
+              Three-park — $1,099
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
-            <Link href="/cap-rate" className="underline-offset-4 hover:text-white hover:underline">
+            <Link href="/noi" className="underline-offset-4 hover:text-white hover:underline">
               Cap Rate
-            </Link>
-            <Link href="/tax" className="underline-offset-4 hover:text-white hover:underline">
-              Tax Basis
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
@@ -139,7 +136,7 @@ export default function NoiPage() {
             Two ways into the memo.
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            Single park $349 · Three-park pack $949. Pair with{" "}
+            Single park $399 · Three-park pack $1,099. Pair with{" "}
             <Link href="/cap-rate" className="font-medium text-primary hover:underline">
               Cap Rate
             </Link>
@@ -166,13 +163,13 @@ export default function NoiPage() {
               href={SINGLE}
               className="inline-flex bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-primary-light"
             >
-              Request $349 invoice
+              Request $399 invoice
             </a>
             <a
               href={PACK}
               className="inline-flex border border-border px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-background"
             >
-              Three-park $949
+              Three-park $1,099
             </a>
           </div>
         </div>

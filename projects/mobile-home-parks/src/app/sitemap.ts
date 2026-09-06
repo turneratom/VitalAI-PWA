@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/rent-roll",
     "/cap-rate",
     "/noi",
+    "/tax",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

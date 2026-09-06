@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legacy Films — Everything Films</title>
-  <meta name="description" content="Legacy life tribute films from Everything Films. 20-minute tribute $8,000. Full life film $12,000. Send photos and videos — we deliver the finished film." />
+  <title>Same-Day Edit — Everything Films</title>
+  <meta name="description" content="Everything Films Same-Day Edit — $1,800 add-on: same-day cut pass, look LUT, web + delivery masters. Invoice via email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -53,7 +53,7 @@
     }
     .hero-media { position: absolute; inset: 0; }
     .hero-media img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
+      width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
       transform: scale(1.04); animation: drift 22s var(--ease) infinite alternate;
     }
     @keyframes drift {
@@ -81,17 +81,18 @@
     }
     .hero-line {
       font-family: "Bodoni Moda", Georgia, serif;
-      font-size: clamp(1.25rem, 3vw, 1.7rem); margin-bottom: 0.75rem;
+      font-size: clamp(1.35rem, 3vw, 1.85rem); margin-bottom: 0.5rem;
     }
-    .hero-sub {
-      font-weight: 300; color: rgba(255,255,255,0.78); max-width: 30rem; margin-bottom: 1.75rem;
+    .hero-price {
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-size: 1.45rem; color: var(--gold); margin-bottom: 0.85rem;
     }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .hero-sub { font-weight: 300; color: rgba(255,255,255,0.78); max-width: 32rem; margin-bottom: 1.75rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.95rem 1.45rem; font-size: 0.78rem; letter-spacing: 0.12em;
-      text-transform: uppercase; font-weight: 500; border: none;
-      transition: transform 0.35s var(--ease), background 0.35s var(--ease);
+      padding: 0.9rem 1.35rem; font-size: 0.78rem; letter-spacing: 0.1em;
+      text-transform: uppercase; font-weight: 600; transition: transform 0.2s var(--ease), background 0.2s var(--ease);
     }
     .btn-primary { background: #fff; color: var(--ink); }
     .btn-primary:hover { transform: translateY(-2px); background: var(--mist); }
@@ -111,44 +112,23 @@
     .section-title {
       font-family: "Bodoni Moda", Georgia, serif;
       font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; font-weight: 500;
-      letter-spacing: -0.02em; max-width: 18ch; margin-bottom: 1rem;
+      letter-spacing: -0.02em; max-width: 22ch; margin-bottom: 1rem;
     }
     .section-lead { font-weight: 300; color: var(--ink-soft); max-width: 36rem; }
-    .packages { background: var(--ink); color: #fff; }
-    .packages .section-kicker { color: var(--gold); }
-    .packages .section-lead { color: rgba(255,255,255,0.7); }
-    .price-grid { display: grid; gap: 1.5rem; margin-top: 3rem; }
-    @media (min-width: 720px) { .price-grid { grid-template-columns: 1fr 1fr; } }
-    .price {
+    .doc { background: var(--ink); color: #fff; }
+    .doc .section-kicker { color: var(--gold); }
+    .doc .section-lead { color: rgba(255,255,255,0.7); }
+    .doc-panel {
+      margin-top: 2.5rem; max-width: 36rem;
       border: 1px solid rgba(255,255,255,0.14);
       padding: 2.2rem 2rem 2rem;
       background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 60%);
-      display: flex; flex-direction: column;
-      transition: border-color 0.35s var(--ease), transform 0.45s var(--ease);
     }
-    .price:hover {
-      border-color: rgba(176, 141, 87, 0.55);
-      transform: translateY(-4px);
-    }
-    .price-label {
-      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.75rem;
-    }
-    .price h3 {
+    .doc-panel .amount {
       font-family: "Bodoni Moda", Georgia, serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 500; margin-bottom: 0.35rem;
+      font-size: clamp(2.4rem, 5vw, 3.2rem); margin-bottom: 0.75rem;
     }
-    .price-amount {
-      font-family: "Bodoni Moda", Georgia, serif;
-      font-size: clamp(2.4rem, 5vw, 3.2rem); color: #fff; margin-bottom: 1rem;
-    }
-    .price ul {
-      list-style: none; display: grid; gap: 0.55rem;
-      font-size: 0.92rem; font-weight: 300; color: rgba(255,255,255,0.72);
-      margin-bottom: 1.75rem;
-    }
-    .price ul li::before { content: "—"; margin-right: 0.55rem; color: var(--gold); }
-    .price .btn { width: 100%; margin-top: auto; }
+    .doc-panel p { font-weight: 300; color: rgba(255,255,255,0.72); margin-bottom: 1.5rem; }
     .how { background: var(--mist); }
     .steps { margin-top: 2.75rem; display: grid; gap: 2rem; }
     @media (min-width: 760px) {
@@ -179,26 +159,24 @@
     <a class="nav-brand" href="index.html">Everything Films</a>
     <div class="nav-links">
       <a href="index.html#packages">Wedding &amp; life</a>
-      <a href="corporate.html">Corporate</a>
       <a href="deposit.html">Deposit</a>
       <a href="rush.html">Rush</a>
       <a href="teaser.html">Teaser</a>
-      <a href="stills.html">Stills</a>
-      <a href="documentary.html">Documentary</a>
-      <a href="reel.html">Reel</a>
-      <a href="drone.html">Drone</a>
-      <a href="color.html">Color</a>
+      <a href="color.html">Stills</a>
+      <a href="color.html">Drone</a>
       <a href="same-day.html">Same-day</a>
-      <a class="nav-cta" href="#packages">Legacy packages</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="legacy.html">Legacy</a>
+      <a class="nav-cta" href="#same-day">Same-day</a>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-label="Legacy films hero">
+    <section class="hero" aria-label="Same-Day Edit hero">
       <div class="hero-media">
         <img
-          src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=2400&q=80"
-          alt="Family photographs spread on a table"
+          src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=2400&q=80"
+          alt="Same-day grading suite with film monitors"
           width="2400"
           height="1600"
         />
@@ -206,89 +184,69 @@
       <div class="hero-veil" aria-hidden="true"></div>
       <div class="hero-copy">
         <h1 class="hero-brand">Everything Films</h1>
-        <p class="hero-line">Legacy &amp; tribute films.</p>
-        <p class="hero-sub">Send the photos and videos of a life. We cut a finished tribute for the service, the family, and the years after — paced with care.</p>
+        <p class="hero-line">Same-Day Edit.</p>
+        <p class="hero-price">$1,800 add-on · same-day cut</p>
+        <p class="hero-sub">A same-day cut pass, a reusable look LUT, and web + delivery masters — an add-on for any package.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#packages">See packages</a>
-          <a class="btn btn-ghost" href="index.html">Wedding &amp; life films</a>
+          <a
+            class="btn btn-primary"
+            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Same-day%20Finish%20Pack%20%E2%80%94%20%242%2C400&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20Same-day%20Finish%20Pack%20(%242%2C400).%0A%0AProject%20%2F%20package%3A%0APreferred%20look%20direction%3A%0ADelivery%20deadline%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20color%20invoice.%0A%0AThanks."
+          >Request color invoice</a>
+          <a class="btn btn-ghost" href="color.html">Color finish</a>
         </div>
       </div>
     </section>
 
-    <section class="packages" id="packages" aria-labelledby="packages-title">
-      <p class="section-kicker">Legacy packages</p>
-      <h2 class="section-title" id="packages-title">$8,000 or $12,000. Honor the life.</h2>
-      <p class="section-lead">Finished HD film, licensed music, private review link, two revision rounds. Soft-tone process — package is in the subject line.</p>
-      <div class="price-grid">
-        <article class="price">
-          <p class="price-label">Tribute</p>
-          <h3>20 minutes</h3>
-          <p class="price-amount">$8,000</p>
-          <ul>
-            <li>Service-ready tribute cut</li>
-            <li>Photo + clip curation</li>
-            <li>Titles, dates, soft score</li>
-            <li>Private stream + download masters</li>
-          </ul>
-          <a
-            class="btn btn-gold"
-            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Legacy%20%E2%80%94%20Tribute%20(%248%2C000)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20book%20the%20Legacy%20Tribute%20(%248%2C000).%0A%0AHonoree%20name%3A%0AService%20date%20(if%20any)%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0AThanks."
-          >Book tribute — $8,000</a>
-        </article>
-        <article class="price">
-          <p class="price-label">Life film</p>
-          <h3>40–50 minutes</h3>
-          <p class="price-amount">$12,000</p>
-          <ul>
-            <li>Full life narrative from family media</li>
-            <li>Chaptered story + voices</li>
-            <li>Custom titles &amp; score</li>
-            <li>Private stream + download masters</li>
-          </ul>
-          <a
-            class="btn btn-gold"
-            href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Legacy%20%E2%80%94%20Life%20film%20(%2412%2C000)&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20to%20book%20the%20Legacy%20Life%20film%20(%2412%2C000).%0A%0AHonoree%20name%3A%0AService%20date%20(if%20any)%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0AThanks."
-          >Book life film — $12,000</a>
-        </article>
+    <section class="doc" id="color" aria-labelledby="doc-title">
+      <p class="section-kicker">Same-day package</p>
+      <h2 class="section-title" id="doc-title">$1,800. One cut. Delivered the same night.</h2>
+      <p class="section-lead">Built for films that need a finished grade — not a quick auto-lut dump. Same brad@treadcompanies.com inbox as packages and deposits.</p>
+      <div class="doc-panel">
+        <p class="amount">$1,800</p>
+        <p>Same-day highlight cut, music bed, and web master delivered before midnight.</p>
+        <a
+          class="btn btn-gold"
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Same-day%20Finish%20Pack%20%E2%80%94%20%242%2C400&amp;body=Hi%20Bradley%2C%0A%0AI%20want%20Same-day%20Finish%20Pack%20(%242%2C400).%0A%0AProject%20%2F%20package%3A%0APreferred%20look%20direction%3A%0ADelivery%20deadline%3A%0AMy%20name%3A%0ABest%20email%3A%0A%0APlease%20send%20the%20color%20invoice.%0A%0AThanks."
+        >Email color invoice — $1,800</a>
       </div>
     </section>
 
     <section class="how" aria-labelledby="how-title">
       <p class="section-kicker">How it works</p>
-      <h2 class="section-title" id="how-title">Send everything. We handle the rest.</h2>
-      <p class="section-lead">Same send-everything process as wedding and life films — with a quieter tone and clearer pacing for families.</p>
+      <h2 class="section-title" id="how-title">Lock the look. Invoice the finish.</h2>
+      <p class="section-lead">Subject line carries Same-Day Edit so we can invoice and schedule correctly.</p>
       <div class="steps">
         <article class="step">
-          <h3>Book quietly</h3>
-          <p>Email to reserve Tribute or Life film. We confirm timeline and a private upload link.</p>
+          <h3>Selects pass</h3>
+          <p>We pull stills and references so the look is agreed before the same-day cut.</p>
         </article>
         <article class="step">
-          <h3>Gather the life</h3>
-          <p>Photos, home movies, voicemails, letters — dump it all. We curate with care.</p>
+          <h3>Cut and polish</h3>
+          <p>Highlight cut assembled and polished for same-night delivery.</p>
         </article>
         <article class="step">
-          <h3>Review &amp; keep</h3>
-          <p>Two soft revision rounds, then masters for the service, the living room, and the archive.</p>
+          <h3>Master lands</h3>
+          <p>Web master ready for the couple, brand, or venue the same night.</p>
         </article>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <p class="section-kicker">Begin</p>
-      <h2 class="section-title" id="cta-title">Tell us who they were.</h2>
-      <p class="section-lead">Same inbox as wedding and corporate. Subject line carries the legacy package.</p>
+      <h2 class="section-title" id="cta-title">Need the cut tonight, not next week.</h2>
+      <p class="section-lead">Same-Day Edit at $1,800. Same brad@treadcompanies.com inbox.</p>
       <div class="cta-row">
         <a
           class="btn btn-teal"
-          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20legacy%20inquiry"
+          href="mailto:brad@treadcompanies.com?subject=Everything%20Films%20Same-day%20Finish%20Pack%20%E2%80%94%20%242%2C400"
         >Email Everything Films</a>
-        <a class="btn btn-ghost" href="partners/">Funeral home partners</a>
+        <a class="btn btn-ghost" href="color.html">Color finish</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>Everything Films</strong> · Legacy</p>
+    <p><strong>Everything Films</strong> · Same-Day Edit</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 </body>
