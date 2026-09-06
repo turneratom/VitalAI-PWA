@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Concierge Onboarding</title>
-  <meta name="description" content="VitalAI Concierge Onboarding — Setup sprint $499 or Concierge desk $99/mo. Account setup, goal import, 1:1 walkthrough. Invoice via email until Stripe is live." />
+  <title>VitalAI Nutrition Protocol</title>
+  <meta name="description" content="VitalAI Nutrition Protocol — Protocol setup $249 or Nutrition desk $79/mo. Macro targets, meal rhythm, grocery map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Concierge Onboarding</p>
+        <p>Nutrition Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -64,45 +64,45 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Concierge Onboarding</h2>
+    <h2>VitalAI Nutrition Protocol</h2>
     <p class="lede">
-      White-glove onboarding for households and clinics: setup sprint or ongoing concierge desk. Stripe when live — until then this form emails an invoice request.
+      Macro targets, meal rhythm, and a grocery map — one setup, or a monthly nutrition desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Concierge pricing</h3>
-      <p class="hint">One-time setup sprint, or keep a monthly concierge desk for ongoing help.</p>
+      <h3 id="plans-title">Nutrition pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly nutrition desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Setup sprint</span><strong>$499</strong></div>
-        <div class="plan-row"><span>Concierge desk</span><strong>$99 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$249</strong></div>
+        <div class="plan-row"><span>Nutrition desk</span><strong>$79 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Account setup and profile configuration</li>
-        <li>Goal and history import assistance</li>
-        <li>1:1 walkthrough session</li>
-        <li>Optional monthly concierge desk</li>
+        <li>Macro and calorie targets for your goals</li>
+        <li>Meal rhythm for weekdays and weekends</li>
+        <li>Grocery map for the first two weeks</li>
+        <li>Optional monthly nutrition desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request concierge invoice</h3>
-      <p class="hint">Tell us sprint vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="concierge-form" novalidate>
+      <h3 id="form-title">Request nutrition invoice</h3>
+      <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
+      <form id="nutrition-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Setup sprint — $499" selected>Setup sprint — $499</option>
-              <option value="Concierge desk — $99/mo">Concierge desk — $99/mo</option>
+              <option value="Protocol setup — $249" selected>Protocol setup — $249</option>
+              <option value="Nutrition desk — $79/mo">Nutrition desk — $79/mo</option>
             </select>
           </label>
           <label>
-            Account type
-            <input type="text" id="clinicName" name="clinicName" placeholder="e.g. household / clinic" />
+            Goal focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. fat loss / performance" />
           </label>
           <label>
             Preferred kickoff
-            <input type="text" id="seats" name="seats" placeholder="e.g. this week / next open" />
+            <input type="text" id="kickoff" name="kickoff" placeholder="e.g. this week / next open" />
           </label>
           <label>
             Your name
@@ -114,31 +114,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Tools to import, questions, constraints" />
+            <input type="text" id="notes" name="notes" placeholder="Allergies, training days, constraints" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email concierge invoice request</button>
-          <a class="btn btn-secondary" href="clinic.html">Clinic seats</a>
+          <button class="btn" type="submit">Email nutrition invoice request</button>
+          <a class="btn btn-secondary" href="concierge.html">Concierge onboarding</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    Concierge Onboarding · sprint / desk ·
+    Nutrition Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("concierge-form");
+      var form = document.getElementById("nutrition-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
-        var profiles = (document.getElementById("clinicName").value || "").trim();
-        var household = (document.getElementById("seats").value || "").trim();
+        var focus = (document.getElementById("focus").value || "").trim();
+        var kickoff = (document.getElementById("kickoff").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -146,17 +146,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Concierge Onboarding — " + plan;
+        var subject = "VitalAI Nutrition Protocol — " + plan;
         var body =
-          "VitalAI Concierge Onboarding invoice request\n\n" +
+          "VitalAI Nutrition Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Account type: " + (profiles || "—") + "\n" +
-          "Preferred kickoff: " + (household || "—") + "\n" +
+          "Goal focus: " + (focus || "—") + "\n" +
+          "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Concierge Onboarding checkout or invoice.\n" +
-          "Includes: account setup, goal import help, 1:1 walkthrough.";
+          "Please send Nutrition Protocol checkout or invoice.\n" +
+          "Includes: macro targets, meal rhythm, grocery map.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

@@ -54,4 +54,8 @@ jobs:
           test -f projects/project-ais/concierge.html
           test -f projects/everything-films/drone.html
           test -f projects/meridian-travel/jet.html
+          test -f projects/meridian-travel/safari.html
+          test -f projects/everything-films/color.html
+          test -f projects/project-ais/nutrition.html
+          test -f trailer-parks/src/app/noi/page.tsx
           echo "Offer page presence checks passed."

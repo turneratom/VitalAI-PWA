@@ -21,13 +21,13 @@ const email = siteConfig.team.bradley.email;
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
   "Cap Rate Brief — $299 single park"
 )}&body=${encodeURIComponent(
-  `I want a Rent Roll Audit ($449 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a Cap Rate Brief ($299 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
   "Cap Rate Brief Three-Park Pack — $799"
 )}&body=${encodeURIComponent(
-  `I want a Rent Roll Audit Three-Park Pack ($1,199).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a Cap Rate Brief Three-Park Pack ($799).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
@@ -70,8 +70,8 @@ export default function CapRatePage() {
             <span className="mt-2 block text-accent">$299 · or $799.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $449, or three-park pack at $1,199 — occupancy check,
-            concession flags, Sensitivity notes.
+            Single park at $299, or three-park pack at $799 — indicated cap,
+            peer band, sensitivity notes.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
@@ -88,6 +88,9 @@ export default function CapRatePage() {
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
+            <Link href="/noi" className="underline-offset-4 hover:text-white hover:underline">
+              NOI Memo
+            </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
             </Link>

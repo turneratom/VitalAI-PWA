@@ -3,53 +3,53 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Cap Rate Brief — $299 | Trailer Parks",
+  title: "NOI Memo — $349 | Trailer Parks",
   description:
-    "Cap Rate Brief: single park $299, or three-park pack $799. Indicated cap, peer band, sensitivity notes. Invoice by email.",
+    "NOI Memo: single park $349, or three-park pack $949. Stabilized NOI, add-back flags, lender-ready summary. Invoice by email.",
   openGraph: {
-    title: "Cap Rate Brief — $299",
+    title: "NOI Memo — $349",
     description:
-      "Single park $299 · Three-park pack $799. Indicated cap, peer band, sensitivity notes.",
+      "Single park $349 · Three-park pack $949. Stabilized NOI, add-back flags, lender-ready summary.",
     type: "website",
     siteName: siteConfig.name,
-    url: "/cap-rate",
+    url: "/noi",
   },
 };
 
 const email = siteConfig.team.bradley.email;
 
 const SINGLE = `mailto:${email}?subject=${encodeURIComponent(
-  "Cap Rate Brief — $299 single park"
+  "NOI Memo — $349 single park"
 )}&body=${encodeURIComponent(
-  `I want a Cap Rate Brief ($299 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
+  `I want a NOI Memo ($349 single park).\n\nPark / market:\nSpaces / occupancy (if known):\nYour name:\nEmail:\nPhone (optional):\n\nPlease send invoice.`
 )}`;
 
 const PACK = `mailto:${email}?subject=${encodeURIComponent(
-  "Cap Rate Brief Three-Park Pack — $799"
+  "NOI Memo Three-Park Pack — $949"
 )}&body=${encodeURIComponent(
-  `I want a Cap Rate Brief Three-Park Pack ($799).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
+  `I want a NOI Memo Three-Park Pack ($949).\n\nParks (up to 3):\nYour name:\nEmail:\nFirm (optional):\n\nPlease send invoice.`
 )}`;
 
 const perks = [
   {
-    title: "Indicated cap",
-    body: "A stated indicated cap rate grounded in the NOI and price inputs you provide.",
+    title: "Stabilized NOI",
+    body: "A stated stabilized NOI after cleaning one-time noise and owner-specific add-backs.",
   },
   {
-    title: "Peer band",
-    body: "A short peer band so you see whether the indicated cap sits hot, fair, or soft.",
+    title: "Add-back flags",
+    body: "Clear flags on what was added back — and what a lender may push back on.",
   },
   {
-    title: "Sensitivity notes",
-    body: "What happens to the indicated cap if NOI or price moves — written for quick IC reads.",
+    title: "Expense hygiene",
+    body: "Line-item notes where expenses look soft, padded, or missing for IC review.",
   },
   {
     title: "PDF delivery",
-    body: "One brief PDF per park — single park at $299, or three parks in a pack at $799.",
+    body: "One memo PDF per park — single park at $349, or three parks in a pack at $949.",
   },
 ];
 
-export default function CapRatePage() {
+export default function NoiPage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden bg-navy text-white">
@@ -66,30 +66,30 @@ export default function CapRatePage() {
             Trailer Parks · Capital
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Cap Rate Brief.
-            <span className="mt-2 block text-accent">$299 · or $799.</span>
+            NOI Memo.
+            <span className="mt-2 block text-accent">$349 · or $949.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light text-white/75">
-            Single park at $299, or three-park pack at $799 — indicated cap,
-            peer band, sensitivity notes.
+            Single park at $349, or three-park pack at $949 — stabilized NOI,
+            add-back flags, lender-ready summary.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex items-center justify-center bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-accent-light"
             >
-              Invoice brief — $299
+              Invoice memo — $349
             </a>
             <a
               href={PACK}
               className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
             >
-              Three-park — $799
+              Three-park — $949
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/55">
-            <Link href="/noi" className="underline-offset-4 hover:text-white hover:underline">
-              NOI Memo
+            <Link href="/cap-rate" className="underline-offset-4 hover:text-white hover:underline">
+              Cap Rate
             </Link>
             <Link href="/rent-roll" className="underline-offset-4 hover:text-white hover:underline">
               Rent Roll
@@ -115,7 +115,7 @@ export default function CapRatePage() {
           What’s included
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-navy md:text-4xl">
-          Built for buyers and owners who need a clean cap-rate read before they argue price.
+          Built for buyers and lenders who need a clean NOI before they argue price.
         </h2>
         <ul className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-2">
           {perks.map((item) => (
@@ -133,10 +133,14 @@ export default function CapRatePage() {
             Pricing
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold text-navy">
-            Two ways into the brief.
+            Two ways into the memo.
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            Single park $299 · Three-park pack $799. Pair with{" "}
+            Single park $349 · Three-park pack $949. Pair with{" "}
+            <Link href="/cap-rate" className="font-medium text-primary hover:underline">
+              Cap Rate
+            </Link>
+            ,{" "}
             <Link href="/rent-roll" className="font-medium text-primary hover:underline">
               Rent Roll
             </Link>
@@ -152,20 +156,20 @@ export default function CapRatePage() {
             <Link href="/valuation" className="font-medium text-primary hover:underline">
               Valuation
             </Link>{" "}
-            once the roll is clean.
+            once NOI is clean.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={SINGLE}
               className="inline-flex bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-primary-light"
             >
-              Request $299 invoice
+              Request $349 invoice
             </a>
             <a
               href={PACK}
               className="inline-flex border border-border px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-navy transition hover:bg-background"
             >
-              Three-park $799
+              Three-park $949
             </a>
           </div>
         </div>
