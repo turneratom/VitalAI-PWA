@@ -26,12 +26,11 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + laun
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `vineyard.html` — Private Vineyard Day **$4,200**.
-- Everything Films: `product.html` — Product Film Day **$7,200**.
-- Project AIS: `longevity.html` — Longevity Protocol **$299** · **$89/mo**.
-- Mobile Home Parks: `/zoning` — Zoning Diligence Pack **$549** · **$1,399**.
+- Turner Capital: `treasury.html` — Treasury Overlay Memo **$1,900** · **$950/mo**.
+- Turner Biographies: `/large-print` — Large Print Rights **$7,500** · **$19,000**.
+- Tread Affiliates: `/retail` — Affiliate Retail Desk **$3,900** · **$1,500/mo**.
 - Deploy: keep Vercel `ignoreCommand: exit 0` while hobby rate-limited; GHA remains the green gate.
-- Prior: fx/serial-print/media; helicopter/event/stress/epa.
+- Prior: vineyard/product/longevity/zoning; fx/serial-print/media.
 - Memory: in-thread yes; cross-thread via this file.
 
 

@@ -4,10 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Large Print Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for large print — Single-title large print $7,500 or Catalog large print slate $17,500. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for large print — Single-title large print $7,500 or Catalog large print slate $19,000. Direct inquiry by email.",
   openGraph: {
     title: "Large Print Rights — Turner Biographies",
-    description: "Single-title large print $7,500 · Catalog large print slate $17,500.",
+    description: "Single-title large print $7,500 · Catalog large print slate $19,000.",
     type: "website",
   },
 };
@@ -25,11 +25,11 @@ const packages = [
   {
     tag: "Slate",
     title: "Catalog large print slate",
-    price: "$17,500",
+    price: "$19,000",
     detail:
       "Multi-title or multi-issue large print slate across Firebrand / Greatest Humans — one agreement for a broader catalog run.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20slate%20%2424%2C000&body=I%20want%20Multi-issue%20serial%20print%20slate%20rights%20(%2424%2C000).%0A%0ATitles%20%2F%20slate%3A%0AIssues%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $17,500",
+    cta: "License slate — $19,000",
   },
 ];
 
