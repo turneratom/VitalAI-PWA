@@ -281,6 +281,12 @@ export default function ShopPage() {
               Poster · from $1,200
             </Link>
             <Link
+              href="/bookmark"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Bookmark · from $1,000
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

@@ -87,6 +87,7 @@ export default function ReferralPage() {
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/referral" className="transition hover:text-signal">Referral kit</Link>
+            <Link href="/winback" className="transition hover:text-signal">Winback</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Referral kit</a>
           </nav>
         </div>

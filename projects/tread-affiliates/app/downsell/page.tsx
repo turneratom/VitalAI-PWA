@@ -89,6 +89,7 @@ export default function DownsellPage() {
             <Link href="/downsell" className="transition hover:text-signal">Downsell kit</Link>
             <Link href="/loyalty" className="transition hover:text-signal">Loyalty</Link>
             <Link href="/referral" className="transition hover:text-signal">Referral</Link>
+            <Link href="/winback" className="transition hover:text-signal">Winback</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Downsell kit</a>
           </nav>
         </div>

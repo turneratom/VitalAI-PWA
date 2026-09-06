@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Loyalty Kit — Tread Affiliates",
+  title: "Affiliate Winback Kit — Tread Affiliates",
   description:
-    "Affiliate Loyalty Kit — one-time sprint $800 or monthly Loyalty kit $335/mo. Loyalty plan, retention mix, retention pairing. Invoice by email.",
+    "Affiliate Winback Kit — one-time sprint $600 or monthly Winback kit $275/mo. Winback plan, reactivation mix, reactivation pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Loyalty Kit — Tread Affiliates",
-    description: "Sprint $800 · Monthly desk $335/mo. Loyalty plan, retention mix, retention pairing.",
+    title: "Affiliate Winback Kit — Tread Affiliates",
+    description: "Sprint $600 · Monthly desk $275/mo. Winback plan, reactivation mix, reactivation pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Loyalty kit",
-    price: "$800",
+    title: "Winback kit",
+    price: "$600",
     cadence: " one-time",
     points: [
-      "Loyalty plan across your primary rails",
+      "Winback plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Loyalty kit execution checklist",
+      "30-day Winback kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Loyalty kit — $800",
-      "I want an Affiliate Loyalty kit ($800).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Winback kit — $600",
+      "I want an Affiliate Winback kit ($600).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $800",
+    cta: "Request sprint — $600",
   },
   {
     tag: "Desk",
-    title: "Monthly Loyalty kit",
-    price: "$335",
+    title: "Monthly Winback kit",
+    price: "$275",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Loyalty kit and ROAS review",
+      "Monthly Winback kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Loyalty kit — $335/mo",
-      "I want a Monthly Loyalty kit ($335/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Winback kit — $275/mo",
+      "I want a Monthly Winback kit ($275/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $335/mo",
+    cta: "Request desk — $275/mo",
   },
 ];
 
-export default function LoyaltyPage() {
+export default function WinbackPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,10 +86,8 @@ export default function LoyaltyPage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/loyalty" className="transition hover:text-signal">Loyalty kit</Link>
-            <Link href="/referral" className="transition hover:text-signal">Referral</Link>
-            <Link href="/winback" className="transition hover:text-signal">Winback</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Loyalty kit</a>
+            <Link href="/winback" className="transition hover:text-signal">Winback kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Winback kit</a>
           </nav>
         </div>
       </header>
@@ -97,17 +95,17 @@ export default function LoyaltyPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Loyalty kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Winback kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Loyalty kit packages that convert comparison-rail traffic — not vanity posts.
+            Winback kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: loyalty plan, retention mix, and retention pairing.
+            One-time sprint or monthly desk: winback plan, reactivation mix, and reactivation pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Loyalty kit packages
+              See Winback kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -119,7 +117,7 @@ export default function LoyaltyPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Loyalty kit.
+          Sprint once, or keep a monthly Winback kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
