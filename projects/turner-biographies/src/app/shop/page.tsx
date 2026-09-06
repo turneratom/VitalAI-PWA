@@ -184,6 +184,12 @@ export default function ShopPage() {
             >
               Annotated · from $10,000
             </Link>
+<Link
+              href="/graphic"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Graphic · from $12,000
+            </Link>
             <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"

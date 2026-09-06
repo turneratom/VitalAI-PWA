@@ -104,6 +104,9 @@ export default function PlacementPage() {
             <Link href="/bundling" className="transition hover:text-signal">
               Bundling
             </Link>
+            <Link href="/newsletter" className="transition hover:text-signal">
+              Newsletter
+            </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>

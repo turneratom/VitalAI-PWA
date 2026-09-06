@@ -90,6 +90,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link className="transition hover:text-bone" href="/annotated">
                 Annotated
               </Link>
+              <Link className="transition hover:text-bone" href="/graphic">
+                Graphic
+              </Link>
               <Link className="transition hover:text-bone" href="/translation">
                 Translation
               </Link>

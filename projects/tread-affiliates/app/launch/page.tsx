@@ -107,6 +107,9 @@ export default function LaunchPage() {
             <Link href="/bundling" className="transition hover:text-signal">
               Bundling
             </Link>
+            <Link href="/newsletter" className="transition hover:text-signal">
+              Newsletter
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>

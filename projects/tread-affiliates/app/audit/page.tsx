@@ -111,6 +111,9 @@ export default function AuditPage() {
             <Link href="/bundling" className="transition hover:text-signal">
               Bundling
             </Link>
+            <Link href="/newsletter" className="transition hover:text-signal">
+              Newsletter
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

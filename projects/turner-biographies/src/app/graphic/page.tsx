@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Annotated Edition Rights",
+  title: "Graphic Adaptation Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for annotated edition — Single-title annotated edition $10,000 or Catalog annotated edition slate $28,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for graphic adaptation — Single-title graphic adaptation $12,000 or Catalog graphic adaptation slate $32,000. Direct inquiry by email.",
   openGraph: {
-    title: "Annotated Edition Rights — Turner Biographies",
-    description: "Single-title annotated edition $10,000 · Catalog annotated edition slate $28,000.",
+    title: "Graphic Adaptation Rights — Turner Biographies",
+    description: "Single-title graphic adaptation $12,000 · Catalog graphic adaptation slate $32,000.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Run",
-    title: "Single-title annotated edition",
-    price: "$10,000",
+    title: "Single-title graphic adaptation",
+    price: "$12,000",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a annotated edition — territory, term, and exclusivity set in the agreement.",
+      "Rights to license one Firebrand / Greatest Humans title as a graphic adaptation — territory, term, and exclusivity set in the agreement.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20single-run%20%249%2C000&body=I%20want%20Single-run%20serial%20print%20rights%20(%249%2C000).%0A%0ATitle%3A%0AIssues%20%2F%20format%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License run — $10,000",
+    cta: "License run — $12,000",
   },
   {
     tag: "Slate",
-    title: "Catalog annotated edition slate",
-    price: "$28,000",
+    title: "Catalog graphic adaptation slate",
+    price: "$32,000",
     detail:
-      "Multi-title or multi-issue annotated edition slate across Firebrand / Greatest Humans — one agreement for a broader annotated slate.",
+      "Multi-title or multi-issue graphic adaptation slate across Firebrand / Greatest Humans — one agreement for a broader graphic slate.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20slate%20%2424%2C000&body=I%20want%20Multi-issue%20serial%20print%20slate%20rights%20(%2424%2C000).%0A%0ATitles%20%2F%20slate%3A%0AIssues%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $28,000",
+    cta: "License slate — $32,000",
   },
 ];
 
-export default function AnnotatedPage() {
+export default function GraphicPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,18 +42,17 @@ export default function AnnotatedPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Annotated Edition Rights
+            Graphic Adaptation Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate annotated edition licensing for Firebrand and The Greatest Humans —
+            Run and slate graphic adaptation licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/graphic" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Graphic</Link>
-            <Link href="/companion" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/annotated" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Serialization
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -73,7 +72,7 @@ export default function AnnotatedPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two annotated tracks.
+            Two graphic tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -98,11 +97,11 @@ export default function AnnotatedPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need companion instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Annotated edition covers annotated editions with extras. Serialization covers digital chapter drops.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need annotated instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Graphic adaptation covers graphic adaptations with extras. Serialization covers digital chapter drops.</p>
           </div>
-          <Link href="/companion" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-            Companion
+          <Link href="/annotated" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Annotated
           </Link>
         </div>
       </section>
