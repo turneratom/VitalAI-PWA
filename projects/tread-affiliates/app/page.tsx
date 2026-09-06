@@ -201,6 +201,9 @@ export default function HomePage() {
             <a href="/reactivation" className="transition hover:text-signal">
               Reactivation
             </a>
+            <a href="/ltv" className="transition hover:text-signal">
+              LTV
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
