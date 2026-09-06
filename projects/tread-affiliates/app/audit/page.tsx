@@ -120,6 +120,9 @@ export default function AuditPage() {
             <Link href="/shorts" className="transition hover:text-signal">
               Shorts
             </Link>
+            <Link href="/ugc" className="transition hover:text-signal">
+              UGC
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

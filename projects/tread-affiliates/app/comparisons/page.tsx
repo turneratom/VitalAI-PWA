@@ -112,6 +112,9 @@ export default function ComparisonsHubPage() {
             <Link href="/shorts" className="transition hover:text-signal">
               Shorts
             </Link>
+            <Link href="/ugc" className="transition hover:text-signal">
+              UGC
+            </Link>
             <a
               href="#rails"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

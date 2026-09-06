@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Study Guide Rights",
+  title: "Workbook Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for study guide — Single-title study guide $6,500 or Catalog study guide slate $17,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for workbook — Single-title workbook $5,500 or Catalog workbook slate $14,000. Direct inquiry by email.",
   openGraph: {
-    title: "Study Guide Rights — Turner Biographies",
-    description: "Single-title study guide $6,500 · Catalog study guide slate $17,000.",
+    title: "Workbook Rights — Turner Biographies",
+    description: "Single-title workbook $5,500 · Catalog workbook slate $14,000.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Run",
-    title: "Single-title study guide",
-    price: "$6,500",
+    title: "Single-title workbook",
+    price: "$5,500",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a study guide — territory, term, and exclusivity set in the agreement.",
+      "Rights to license one Firebrand / Greatest Humans title as a workbook — territory, term, and exclusivity set in the agreement.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20single-run%20%249%2C000&body=I%20want%20Single-run%20serial%20print%20rights%20(%249%2C000).%0A%0ATitle%3A%0AIssues%20%2F%20format%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License run — $6,500",
+    cta: "License run — $5,500",
   },
   {
     tag: "Slate",
-    title: "Catalog study guide slate",
-    price: "$17,000",
+    title: "Catalog workbook slate",
+    price: "$14,000",
     detail:
-      "Multi-title or multi-issue study guide slate across Firebrand / Greatest Humans — one agreement for a broader study guide slate.",
+      "Multi-title or multi-issue workbook slate across Firebrand / Greatest Humans — one agreement for a broader workbook slate.",
     href: "mailto:brad@treadcompanies.com?subject=Serial%20print%20rights%20slate%20%2424%2C000&body=I%20want%20Multi-issue%20serial%20print%20slate%20rights%20(%2424%2C000).%0A%0ATitles%20%2F%20slate%3A%0AIssues%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $17,000",
+    cta: "License slate — $14,000",
   },
 ];
 
-export default function StudyGuidePage() {
+export default function WorkbookPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,18 +42,17 @@ export default function StudyGuidePage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Study Guide Rights
+            Workbook Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate study guide licensing for Firebrand and The Greatest Humans —
+            Run and slate workbook licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/workbook" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook</Link>
-            <Link href="/young-readers" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            <Link href="/study-guide" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Serialization
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
@@ -73,7 +72,7 @@ export default function StudyGuidePage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two study guide tracks.
+            Two workbook tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -98,11 +97,11 @@ export default function StudyGuidePage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need young readers instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Study guide covers study guides with extras. Serialization covers digital chapter drops.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need study guide instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Workbook covers workbooks with extras. Serialization covers digital chapter drops.</p>
           </div>
-          <Link href="/young-readers" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-            Young readers
+          <Link href="/study-guide" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Study guide
           </Link>
         </div>
       </section>

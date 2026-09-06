@@ -138,6 +138,9 @@ export default function HomePage() {
             <a href="/shorts" className="transition hover:text-signal">
               Shorts
             </a>
+            <a href="/ugc" className="transition hover:text-signal">
+              UGC
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

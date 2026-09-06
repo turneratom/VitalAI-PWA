@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Podcast Desk — Tread Affiliates",
+  title: "Affiliate UGC Desk — Tread Affiliates",
   description:
-    "Affiliate Podcast Desk — one-time sprint $2,800 or monthly Podcast desk $1,050/mo. Podcast plan, show mix, creative pairing. Invoice by email.",
+    "Affiliate UGC Desk — one-time sprint $2,300 or monthly UGC desk $875/mo. UGC plan, creator mix, creative pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Podcast Desk — Tread Affiliates",
-    description: "Sprint $2,800 · Monthly desk $1,050/mo. Podcast plan, show mix, creative pairing.",
+    title: "Affiliate UGC Desk — Tread Affiliates",
+    description: "Sprint $2,300 · Monthly desk $875/mo. UGC plan, creator mix, creative pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Podcast desk",
-    price: "$2,800",
+    title: "UGC desk",
+    price: "$2,300",
     cadence: " one-time",
     points: [
-      "Podcast plan across your primary rails",
-      "Show mix and read bands for primary funnels",
-      "Creative-to-read pairing notes",
-      "30-day podcast execution checklist",
+      "UGC plan across your primary rails",
+      "Creator mix and post bands for primary funnels",
+      "Creative-to-creator pairing notes",
+      "30-day UGC execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Podcast desk — $2,800",
-      "I want an Affiliate Podcast desk ($2,800).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates UGC desk — $2,300",
+      "I want an Affiliate UGC desk ($2,300).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $2,800",
+    cta: "Request sprint — $2,300",
   },
   {
     tag: "Desk",
-    title: "Monthly Podcast desk",
-    price: "$1,050",
+    title: "Monthly UGC desk",
+    price: "$875",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly podcast and ROAS review",
-      "Two new show or creative swaps per month",
+      "Monthly UGC and ROAS review",
+      "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Podcast desk — $1,050/mo",
-      "I want a Monthly Podcast desk ($1,050/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates UGC desk — $875/mo",
+      "I want a Monthly UGC desk ($875/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $1,050/mo",
+    cta: "Request desk — $875/mo",
   },
 ];
 
-export default function PodcastAdsPage() {
+export default function UgcPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -74,11 +74,11 @@ export default function PodcastAdsPage() {
             <Link href="/catalog" className="transition hover:text-signal">Catalog</Link>
             <Link href="/bundling" className="transition hover:text-signal">Bundling</Link>
             <Link href="/newsletter" className="transition hover:text-signal">Newsletter</Link>
-            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/podcast-ads" className="transition hover:text-signal">Podcast ads</Link>
             <Link href="/shorts" className="transition hover:text-signal">Shorts</Link>
+            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/ugc" className="transition hover:text-signal">UGC</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Podcast ads</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">UGC</a>
           </nav>
         </div>
       </header>
@@ -86,17 +86,17 @@ export default function PodcastAdsPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Podcast</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · UGC</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Podcast placements that convert comparison-rail traffic — not vanity reads.
+            UGC packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: podcast plan, show mix, and creative pairing.
+            One-time sprint or monthly desk: ugc plan, creator mix, and creative pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See podcast packages
+              See UGC packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -108,7 +108,7 @@ export default function PodcastAdsPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Podcast desk.
+          Sprint once, or keep a monthly UGC desk.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (

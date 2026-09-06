@@ -116,6 +116,9 @@ export default function LaunchPage() {
             <Link href="/shorts" className="transition hover:text-signal">
               Shorts
             </Link>
+            <Link href="/ugc" className="transition hover:text-signal">
+              UGC
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>
