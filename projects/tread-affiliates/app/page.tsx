@@ -270,6 +270,9 @@ export default function HomePage() {
             <a href="/apportionment" className="transition hover:text-signal">
               Apportionment
             </a>
+            <a href="/distribution" className="transition hover:text-signal">
+              Distribution
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
