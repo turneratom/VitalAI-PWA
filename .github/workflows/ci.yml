@@ -431,4 +431,9 @@ jobs:
           test -f projects/project-ais/finger.html
           test -f trailer-parks/src/app/shed/page.tsx
           test -f projects/mobile-home-parks/src/app/shed/page.tsx
+          test -f projects/meridian-travel/rafting.html
+          test -f projects/everything-films/conform.html
+          test -f projects/project-ais/knuckle.html
+          test -f trailer-parks/src/app/lanai/page.tsx
+          test -f projects/mobile-home-parks/src/app/lanai/page.tsx
           echo "Offer page presence checks passed."
