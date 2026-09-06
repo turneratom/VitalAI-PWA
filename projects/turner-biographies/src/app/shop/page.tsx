@@ -149,6 +149,12 @@ export default function ShopPage() {
               Audiobook · from $15,000
             </Link>
             <Link
+              href="/translation"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Translation · from $18,000
+            </Link>
+            <Link
               href="/foreign-rights"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

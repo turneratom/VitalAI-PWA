@@ -75,7 +75,7 @@ export default function StagePage() {
               Commission a life
             </Link>
             <Link
-              href="/foreign-rights"
+              href="/translation"
               className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
             >
               Foreign rights

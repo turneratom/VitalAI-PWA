@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Partner Desk — Tread Affiliates",
+  title: "Operator Coaching — Tread Affiliates",
   description:
-    "Partner Desk — managed partner desk $2,000/mo or setup sprint $3,500 one-time. Partner recruitment, offer packaging, weekly partner pipeline report for brands/networks. Invoice by email.",
+    "Operator Coaching — sprint $2,500 or monthly retainer $8,000/mo. Offer architecture, funnel teardown, weekly operator office hours. Invoice by email.",
   openGraph: {
-    title: "Partner Desk — Tread Affiliates",
+    title: "Operator Coaching — Tread Affiliates",
     description:
-      "Managed partner desk $2,000/mo · Setup sprint $3,500 (one-time). Partner recruitment and pipeline reporting.",
+      "Sprint $2,500 · Monthly retainer $8,000/mo. Offer architecture, funnel teardown, weekly office hours.",
     type: "website",
   },
 };
@@ -18,42 +18,42 @@ const MAIL = (subject: string, body: string) =>
 
 const packages = [
   {
-    tag: "Managed",
-    title: "Managed partner desk",
-    price: "$2,000",
-    cadence: "/mo",
-    points: [
-      "Partner recruitment for brands and networks",
-      "Offer packaging for affiliate rails",
-      "Weekly partner pipeline report",
-      "Ongoing desk cadence and follow-ups",
-    ],
-    href: MAIL(
-      "Tread Affiliates Partner Desk — $2,000/mo",
-      "I want a Managed partner desk ($2,000/mo).\n\nBrand / network:\nOffer / category:\nCurrent partner list (if any):\nName:\nEmail:\n\nPlease send invoice."
-    ),
-    cta: "Request managed desk — $2,000/mo",
-  },
-  {
-    tag: "Setup",
-    title: "Setup sprint",
-    price: "$3,500",
+    tag: "Sprint",
+    title: "Operator sprint",
+    price: "$2,500",
     cadence: " one-time",
     points: [
-      "Partner recruitment kickoff",
-      "Offer packaging for primary rails",
-      "First weekly partner pipeline report template",
-      "Handoff notes for your team or managed desk",
+      "Offer architecture for your primary rails",
+      "Funnel teardown with ranked fixes",
+      "90-minute operator working session",
+      "Written sprint notes and next actions",
     ],
     href: MAIL(
-      "Tread Affiliates Partner Desk setup sprint — $3,500",
-      "I want a Partner Desk setup sprint ($3,500 one-time).\n\nBrand / network:\nOffer / category:\nPreferred kickoff window:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Operator sprint — $2,500",
+      "I want an Operator sprint ($2,500).\n\nBrand / offer:\nPrimary rails:\nBiggest bottleneck:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request setup sprint — $3,500",
+    cta: "Request sprint — $2,500",
+  },
+  {
+    tag: "Retainer",
+    title: "Operator retainer",
+    price: "$8,000",
+    cadence: "/mo",
+    points: [
+      "Everything in the sprint, monthly",
+      "Weekly operator office hours",
+      "Ongoing funnel and offer iteration",
+      "Priority Slack/email desk access",
+    ],
+    href: MAIL(
+      "Tread Affiliates Operator retainer — $8,000/mo",
+      "I want an Operator retainer ($8,000/mo).\n\nBrand / offer:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+    ),
+    cta: "Request retainer — $8,000/mo",
   },
 ];
 
-export default function PartnersPage() {
+export default function OperatorPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -78,7 +78,7 @@ export default function PartnersPage() {
               Audit
             </Link>
             <Link href="/sponsor" className="transition hover:text-signal">
-              Newsletter
+              Sponsor
             </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
@@ -90,7 +90,7 @@ export default function PartnersPage() {
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
             >
-              Partners
+              Operator
             </a>
           </nav>
         </div>
@@ -101,57 +101,54 @@ export default function PartnersPage() {
         <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-cone/20 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">
-            Tread Affiliates · Partners
+            Tread Affiliates · Operator Coaching
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Partner Desk
+            Operator coaching for affiliate brands that need clarity.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/80">
-            Partner recruitment, offer packaging, and a weekly partner pipeline
-            report for brands and networks — invoiced by email.
+          <p className="mt-6 max-w-2xl text-lg text-white/75">
+            Sprint or retainer — offer architecture, funnel teardown, and weekly office hours.
+            Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#packages"
-              className="rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white"
+              className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white"
             >
-              See packages
+              See coaching packages
             </a>
             <Link
-              href="/launch"
-              className="rounded-sm border border-white/30 px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white"
+              href="/partners"
+              className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal"
             >
-              Prefer launch sprint
+              Partner desk
             </Link>
           </div>
         </div>
       </section>
 
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cone">
-          Partner packages
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">
+          Packages
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Managed desk or one-time setup sprint.
+          Sprint once, or keep a monthly operator desk.
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
-          Email brad@treadcompanies.com for invoice. We confirm scope and kickoff
-          window within one business day.
-        </p>
-
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
             <article
               key={pkg.title}
-              className="flex flex-col border border-line bg-white p-7 shadow-[0_18px_50px_rgba(16,20,26,0.06)]"
+              className="flex flex-col border border-line bg-white p-8 shadow-[0_12px_40px_rgba(15,23,42,0.06)]"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cone">{pkg.tag}</p>
-              <h3 className="mt-3 font-display text-2xl font-extrabold">{pkg.title}</h3>
-              <p className="mt-2 font-display text-4xl font-extrabold text-ink">
-                {pkg.price}
-                <span className="text-lg font-semibold text-muted">{pkg.cadence}</span>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-signal">
+                {pkg.tag}
               </p>
-              <ul className="mt-6 flex-1 space-y-2 text-muted">
+              <h3 className="mt-3 font-display text-2xl font-extrabold">{pkg.title}</h3>
+              <p className="mt-2 text-3xl font-extrabold text-ink">
+                {pkg.price}
+                <span className="text-base font-semibold text-ink/50">{pkg.cadence}</span>
+              </p>
+              <ul className="mt-6 flex-1 space-y-2 text-ink/75">
                 {pkg.points.map((point) => (
                   <li key={point} className="flex gap-2">
                     <span className="text-signal">—</span>
@@ -161,12 +158,26 @@ export default function PartnersPage() {
               </ul>
               <a
                 href={pkg.href}
-                className="mt-8 inline-flex justify-center bg-ink px-4 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-ink-soft"
+                className="mt-8 inline-flex justify-center rounded-sm bg-ink px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-signal hover:text-ink"
               >
                 {pkg.cta}
               </a>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-ink text-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
+          <p className="max-w-xl text-white/70">
+            Questions before you invoice? Same inbox as Partner Desk and Launch.
+          </p>
+          <a
+            href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20Operator%20Coaching"
+            className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white"
+          >
+            Email Tread Affiliates
+          </a>
         </div>
       </section>
     </div>

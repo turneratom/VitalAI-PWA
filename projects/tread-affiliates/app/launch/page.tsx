@@ -74,6 +74,9 @@ export default function LaunchPage() {
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>
+            <Link href="/operator" className="transition hover:text-signal">
+              Operator
+            </Link>
             <Link href="/audit" className="transition hover:text-signal">
               Audit
             </Link>

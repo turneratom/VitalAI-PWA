@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Annual Desk — Turner Capital</title>
-  <meta name="description" content="Prepay Turner Capital Desk Pilot annually — $25,000/yr (save $5,000 vs monthly). Invoice enrollment for a full year on the agent floor." />
+  <title>Deal Diligence Memo — Turner Capital</title>
+  <meta name="description" content="Deal Diligence Memo from Turner Capital — $3,500 per deal memo. Target company / protocol brief, risk register, go/no-go note. PDF delivery. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -65,7 +65,7 @@
       position: absolute; inset: 0; z-index: 0;
       background:
         radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201, 162, 39, 0.18), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 15% 75%, rgba(47, 191, 122, 0.08), transparent 50%),
+        radial-gradient(ellipse 50% 40% at 15% 75%, rgba(47, 143, 176, 0.1), transparent 50%),
         linear-gradient(180deg, #070b10 0%, #0a121c 50%, #05080c 100%);
     }
     .hero-stage::before {
@@ -76,7 +76,6 @@
         linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
       background-size: 48px 48px;
       mask-image: linear-gradient(180deg, rgba(0,0,0,0.5), transparent 75%);
-      opacity: 0.65;
     }
     .hero-copy {
       position: relative; z-index: 2;
@@ -90,27 +89,22 @@
     }
     .brand-lockup {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 8vw, 5.2rem);
+      font-size: clamp(3rem, 8vw, 5rem);
       line-height: 0.92; letter-spacing: -0.02em;
       color: var(--gold-bright); margin-bottom: 0.85rem;
-      text-shadow: 0 0 60px rgba(201, 162, 39, 0.25);
     }
     .brand-lockup span {
       display: block; color: var(--text); font-size: 0.38em;
       letter-spacing: 0.02em; margin-top: 0.4em; font-style: italic; opacity: 0.92;
     }
     .price-chip {
-      display: inline-flex; align-items: baseline; gap: 0.45rem;
+      display: inline-flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap;
       font-family: var(--font-mono); color: var(--gold-bright);
-      font-size: 1.45rem; font-weight: 700; margin-bottom: 0.65rem;
+      font-size: 1.45rem; font-weight: 700; margin-bottom: 1.1rem;
     }
     .price-chip span {
       font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--muted);
-    }
-    .save-note {
-      font-size: 0.85rem; color: #2fbf7a; font-weight: 600;
-      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.1rem;
     }
     .hero-lede {
       color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.12rem);
@@ -120,11 +114,11 @@
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      font-family: var(--font-ui); font-weight: 700; font-size: 0.78rem;
+      font-weight: 700; font-size: 0.78rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       padding: 0.9rem 1.25rem; border: 1px solid transparent; cursor: pointer;
       transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s;
-      background: transparent; color: var(--text);
+      background: transparent; color: var(--text); font-family: inherit;
     }
     .btn-primary {
       background: linear-gradient(135deg, #a8861f, #d4b03a);
@@ -139,7 +133,6 @@
     }
     .section-hd {
       padding: 2.75rem 0 1.5rem; max-width: 36rem;
-      animation: fadeRise 1s var(--ease) 0.12s both;
     }
     .section-hd h2 {
       font-family: var(--font-display);
@@ -150,7 +143,6 @@
     .includes {
       display: grid; gap: 0; border-top: 1px solid var(--line);
       margin-bottom: 2.5rem;
-      animation: fadeRise 1s var(--ease) 0.2s both;
     }
     .include {
       display: grid; gap: 0.35rem; padding: 1.35rem 0;
@@ -172,17 +164,7 @@
       background: var(--desk);
       border: 1px solid rgba(201, 162, 39, 0.35);
       padding: clamp(1.5rem, 4vw, 2.25rem);
-      position: relative; overflow: hidden;
-      animation: fadeRise 1s var(--ease) 0.28s both;
     }
-    .enroll::before {
-      content: "";
-      position: absolute; width: 40vmax; height: 40vmax;
-      right: -18vmax; top: -20vmax; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 162, 39, 0.12), transparent 65%);
-      pointer-events: none;
-    }
-    .enroll > * { position: relative; z-index: 1; }
     .enroll h2 {
       font-family: var(--font-display);
       font-size: clamp(1.7rem, 3.5vw, 2.2rem);
@@ -212,22 +194,12 @@
       outline: none; border-color: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
-    select option { color: #0a0e14; }
     .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
     .form-hint {
       font-size: 0.78rem; color: var(--muted); font-weight: 500; max-width: 28rem;
     }
-    .compare {
-      margin-top: 2rem; display: grid; gap: 0.75rem;
-      font-size: 0.92rem; color: var(--muted);
-    }
-    .compare-row {
-      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-      padding: 0.75rem 0; border-bottom: 1px solid var(--line);
-    }
-    .compare-row strong { color: var(--gold-bright); font-family: var(--font-mono); }
     .disclaimer {
       margin-top: 2rem; padding: 0.85rem 1rem;
       border: 1px dashed var(--line); font-size: 0.72rem;
@@ -250,74 +222,73 @@
     <div class="nav-links">
       <a class="nav-text" href="pricing.html">Pricing</a>
       <a class="nav-text" href="brief.html">Weekly brief</a>
-      <a class="nav-text" href="office-hours.html">Office hours</a>
-      <a class="nav-text" href="risk-desk.html">Risk desk</a>
+      <a class="nav-text" href="memo.html">Office hours</a>
       <a class="nav-text" href="signals.html">Signals</a>
       <a class="nav-text" href="diligence.html">Diligence</a>
+      <a class="nav-text" href="risk-desk.html">Risk desk</a>
       <a class="nav-text" href="memo.html">Deal memo</a>
-      <a class="nav-text" href="pilot.html">Monthly pilot</a>
-      <a class="nav-cta" href="#enroll">Request annual invoice</a>
+      <a class="nav-text" href="pilot.html">Desk pilot</a>
+      <a class="nav-cta" href="#enroll">Request diligence invoice</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Annual desk prepaid</span></h1>
-      <p class="price-chip">$25,000<span>/yr · invoiced once</span></p>
-      <p class="save-note">Save $5,000 vs twelve monthly pilots</p>
+      <h1 class="brand-lockup">Turner Capital<span>Deal diligence memo</span></h1>
+      <p class="price-chip">$3,500<span>per deal memo</span></p>
       <p class="hero-lede">
-        Lock a full year on the agent floor — same Desk Pilot scope, prepaid.
-        <strong>No card form here.</strong> Submit details; we invoice and reserve the seat.
+        One deal, one memo —
+        <strong>target brief, risk register, go/no-go note.</strong> PDF delivery.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Start annual enrollment</a>
-        <a class="btn btn-ghost" href="pilot.html">Prefer monthly · $2,500</a>
+        <a class="btn btn-primary" href="#enroll">Order diligence memo</a>
+        <a class="btn btn-ghost" href="office-hours.html">Prefer deal memo · $5,000</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="section-hd">
-      <h2>What annual includes</h2>
-      <p>Everything in Desk Pilot for twelve months, prepaid. Priority seat hold and a mid-year strategy review.</p>
+      <h2>What you receive</h2>
+      <p>A single-deal diligence pack for crypto or equity targets — research product, not advice.</p>
     </div>
 
     <div class="includes">
       <article class="include">
-        <p class="include-num">01 · Floor</p>
+        <p class="include-num">01 · Brief</p>
         <div>
-          <h3>Twelve months of desk access</h3>
-          <p>Crypto and equity specialist seats under your mandate — continuous for the prepaid year.</p>
+          <h3>Target brief</h3>
+          <p>Company or protocol overview: business model, token/equity structure, and what actually matters for the decision.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">02 · Rhythm</p>
+        <p class="include-num">02 · Register</p>
         <div>
-          <h3>Weekly briefs + mid-year review</h3>
-          <p>Same weekly floor brief as monthly, plus one scheduled strategy review at month six.</p>
+          <h3>Risk register</h3>
+          <p>Keyed risks with severity and what would change the view — written for IC packets, not slide theater.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">03 · Economics</p>
+        <p class="include-num">03 · Call</p>
         <div>
-          <h3>$5,000 prepaid savings</h3>
-          <p>Monthly is $2,500 × 12 = $30,000. Annual is $25,000 invoiced once.</p>
+          <h3>Go / no-go note</h3>
+          <p>A clear recommendation frame: proceed, proceed with conditions, or pass — with the why in one page.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">04 · Term</p>
+        <p class="include-num">04 · Delivery</p>
         <div>
-          <h3>One-year seat hold</h3>
-          <p>Starts on the invoice paid date (or agreed start month). Renew by re-invoice 30 days before end.</p>
+          <h3>PDF delivery</h3>
+          <p>One PDF memo per deal at $3,500. Pair with Deal Diligence Memo if you want ongoing book coverage.</p>
         </div>
       </article>
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request annual invoice — $25,000</h2>
-      <p class="enroll-lead">Fill the seat brief. Your mail client opens with a prefilled annual invoice request to brad@treadcompanies.com.</p>
-      <form id="annual-form" novalidate>
+      <h2 id="enroll-title">Request diligence memo invoice — $3,500</h2>
+      <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
+      <form id="diligence-form" novalidate>
         <div class="fields">
           <label>
             Full name
@@ -332,78 +303,64 @@
             <input type="text" id="firm" name="firm" autocomplete="organization" />
           </label>
           <label>
-            Preferred start month
-            <input type="text" id="start" name="start" placeholder="e.g. October 2026" />
-          </label>
-          <label>
-            Primary market
-            <select id="market" name="market">
-              <option value="Crypto + equities">Crypto + equities</option>
-              <option value="Crypto focus">Crypto focus</option>
-              <option value="Equities focus">Equities focus</option>
+            Memo type
+            <select id="plan" name="plan">
+              <option value="Deal Diligence Memo — $3,500" selected>Deal Diligence Memo — $3,500</option>
+              <option value="Deal Diligence Memo + Risk Desk intro — $3,500">Memo + Risk Desk intro call — $3,500</option>
             </select>
           </label>
-          <label>
-            Capital band (optional)
-            <input type="text" id="capital" name="capital" placeholder="e.g. $250k–$1M simulation" />
+          <label class="full">
+            Target (company / protocol / ticker)
+            <input type="text" id="focus" name="focus" placeholder="e.g. PROTOCOL / TICKER / private co" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Mandate, constraints, or questions"></textarea>
+            <textarea id="notes" name="notes" placeholder="Deal stage, deadline, materials already in hand"></textarea>
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Email annual invoice — $25,000</button>
-          <p class="form-hint">Opens mailto with subject and body filled. Stripe wires in when payment secrets exist.</p>
+          <button class="btn btn-primary" type="submit">Email diligence invoice — $3,500</button>
+          <p class="form-hint">Opens mailto with subject and body filled. Stripe when secrets exist.</p>
         </div>
       </form>
     </section>
 
-    <div class="compare" aria-label="Price comparison">
-      <div class="compare-row"><span>Desk Pilot monthly × 12</span><strong>$30,000</strong></div>
-      <div class="compare-row"><span>Annual prepaid</span><strong>$25,000</strong></div>
-      <div class="compare-row"><span>You save</span><strong>$5,000</strong></div>
-    </div>
-
     <p class="disclaimer">
-      Simulation only unless separately contracted. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
-      Annual pricing is for desk access and services — not a solicitation to invest.
+      Deal Diligence Memo is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Annual desk</span>
-      <a href="mailto:brad@treadcompanies.com?subject=Annual%20Desk">brad@treadcompanies.com</a>
+      <span>Turner Capital · Deal Diligence Memo</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Deal%20Diligence%20Memo">brad@treadcompanies.com</a>
     </footer>
   </main>
 
   <script>
     (function () {
-      var form = document.getElementById("annual-form");
+      var form = document.getElementById("diligence-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var firm = (document.getElementById("firm").value || "").trim();
-        var start = (document.getElementById("start").value || "").trim();
-        var market = document.getElementById("market").value;
-        var capital = (document.getElementById("capital").value || "").trim();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Annual Desk invoice — $25,000/yr";
+        var subject = "Turner Capital Deal Diligence Memo — " + plan;
         var body =
-          "Annual Desk enrollment / invoice request ($25,000/yr)\n\n" +
+          "Deal Diligence Memo invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Firm / desk: " + (firm || "—") + "\n" +
-          "Start month: " + (start || "—") + "\n" +
-          "Primary market: " + market + "\n" +
-          "Capital band: " + (capital || "—") + "\n" +
-          "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send annual invoice and seat confirmation.";
+          "Firm: " + (firm || "—") + "\n" +
+          "Plan: " + plan + "\n" +
+          "Target: " + (focus || "—") + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send invoice for Deal Diligence Memo ($3,500).";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
