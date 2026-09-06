@@ -359,6 +359,12 @@ export default function ShopPage() {
               Lexicon · from $275
             </Link>
             <Link
+              href="/chapbook"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Chapbook · from $250
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

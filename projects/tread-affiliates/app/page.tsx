@@ -216,6 +216,9 @@ export default function HomePage() {
             <a href="/yield" className="transition hover:text-signal">
               Yield
             </a>
+            <a href="/payout" className="transition hover:text-signal">
+              Payout
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
