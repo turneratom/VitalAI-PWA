@@ -56,6 +56,7 @@ const navLinks = [
   { href: "/playground", label: "Playground Diligence $249" },
   { href: "/clubhouse", label: "Clubhouse Diligence $239" },
   { href: "/pool", label: "Pool Diligence $229" },
+  { href: "/gym", label: "Gym Diligence $219" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

@@ -278,4 +278,8 @@ jobs:
           test -f projects/turner-capital/theta.html
           test -f projects/turner-biographies/src/app/almanac/page.tsx
           test -f projects/tread-affiliates/app/reactivation/page.tsx
+          test -f projects/meridian-travel/badminton.html
+          test -f projects/everything-films/lower-third.html
+          test -f projects/project-ais/stretch.html
+          test -f trailer-parks/src/app/gym/page.tsx
           echo "Offer page presence checks passed."
