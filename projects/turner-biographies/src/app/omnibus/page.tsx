@@ -109,6 +109,9 @@ export default function OmnibusPage() {
             <Link href="/zine" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Zine
             </Link>
+            <Link href="/chaplet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+              Chaplet
+            </Link>
             <Link href="/chapbook" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Gazette
             </Link>

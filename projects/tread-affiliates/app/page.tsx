@@ -279,6 +279,9 @@ export default function HomePage() {
             <a href="/remittal" className="transition hover:text-signal">
               Remittal
             </a>
+            <a href="/transfer" className="transition hover:text-signal">
+              Transfer
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

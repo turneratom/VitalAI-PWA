@@ -412,6 +412,9 @@ jobs:
           test -f projects/turner-capital/dashboard.html
           test -f projects/turner-biographies/src/app/zine/page.tsx
           test -f projects/tread-affiliates/app/remittal/page.tsx
+          test -f projects/turner-capital/benchmark.html
+          test -f projects/turner-biographies/src/app/chaplet/page.tsx
+          test -f projects/tread-affiliates/app/transfer/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html
