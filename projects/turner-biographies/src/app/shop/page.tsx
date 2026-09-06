@@ -161,6 +161,12 @@ export default function ShopPage() {
               Estate oral history · from $12,000
             </Link>
             <Link
+              href="/lecture"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Keynote lecture · from $7,500
+            </Link>
+            <Link
               href="/podcast"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

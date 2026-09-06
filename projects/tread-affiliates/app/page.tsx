@@ -111,6 +111,9 @@ export default function HomePage() {
             <a href="/email" className="transition hover:text-signal">
               Email
             </a>
+            <a href="/creative-kit" className="transition hover:text-signal">
+              Creative
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
