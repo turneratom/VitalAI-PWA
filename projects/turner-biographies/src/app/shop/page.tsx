@@ -167,6 +167,12 @@ export default function ShopPage() {
               Podcast rights · from $8,000
             </Link>
             <Link
+              href="/screenplay"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Screenplay · from $15,000
+            </Link>
+            <Link
               href="/foreign-rights"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

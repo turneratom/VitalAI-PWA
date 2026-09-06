@@ -105,6 +105,9 @@ export default function HomePage() {
             <a href="/seo" className="transition hover:text-signal">
               SEO
             </a>
+            <a href="/cro" className="transition hover:text-signal">
+              CRO
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

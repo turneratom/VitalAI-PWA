@@ -92,6 +92,9 @@ export default function PartnersPage() {
             <Link href="/seo" className="transition hover:text-signal">
               SEO
             </Link>
+            <Link href="/cro" className="transition hover:text-signal">
+              CRO
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"

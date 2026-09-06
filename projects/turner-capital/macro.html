@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desk Pilot Enrollment — Turner Capital</title>
-  <meta name="description" content="Enroll in the Turner Capital Desk Pilot — $2,500/mo. Invoice request with seat details, markets, and start month." />
+  <title>Macro Week Brief — Turner Capital</title>
+  <meta name="description" content="Macro Week Brief from Turner Capital — $1,800 one-shot or $900/mo. Macro map, regime notes, desk positioning flags. PDF delivery. Invoice by email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -58,16 +58,14 @@
       padding: 0.55rem 0.95rem;
     }
     .nav-cta:hover { background: rgba(201, 162, 39, 0.12); border-color: var(--gold); }
-
     .hero {
-      position: relative; min-height: 70svh; display: grid; align-items: end;
-      overflow: hidden;
+      position: relative; min-height: 70svh; display: grid; align-items: end; overflow: hidden;
     }
     .hero-stage {
       position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201, 162, 39, 0.16), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 70%, rgba(47, 143, 176, 0.1), transparent 50%),
+        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201, 162, 39, 0.18), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 15% 75%, rgba(47, 143, 176, 0.1), transparent 50%),
         linear-gradient(180deg, #070b10 0%, #0a121c 50%, #05080c 100%);
     }
     .hero-stage::before {
@@ -78,21 +76,11 @@
         linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
       background-size: 48px 48px;
       mask-image: linear-gradient(180deg, rgba(0,0,0,0.5), transparent 75%);
-      opacity: 0.65;
-    }
-    .hero-scan {
-      position: absolute; inset: 0;
-      background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.08) 3px, rgba(0,0,0,0.08) 4px);
-      animation: scanDrift 12s linear infinite; opacity: 0.35; pointer-events: none;
-    }
-    @keyframes scanDrift {
-      from { transform: translateY(0); }
-      to { transform: translateY(4px); }
     }
     .hero-copy {
       position: relative; z-index: 2;
       padding: clamp(5.5rem, 12vh, 8rem) clamp(1rem, 4vw, 3rem) clamp(2.25rem, 5vh, 3.5rem);
-      max-width: 40rem;
+      max-width: 42rem;
       animation: fadeRise 1s var(--ease) both;
     }
     @keyframes fadeRise {
@@ -101,17 +89,16 @@
     }
     .brand-lockup {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 8vw, 5.4rem);
+      font-size: clamp(3rem, 8vw, 5rem);
       line-height: 0.92; letter-spacing: -0.02em;
       color: var(--gold-bright); margin-bottom: 0.85rem;
-      text-shadow: 0 0 60px rgba(201, 162, 39, 0.25);
     }
     .brand-lockup span {
       display: block; color: var(--text); font-size: 0.38em;
       letter-spacing: 0.02em; margin-top: 0.4em; font-style: italic; opacity: 0.92;
     }
     .price-chip {
-      display: inline-flex; align-items: baseline; gap: 0.45rem;
+      display: inline-flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap;
       font-family: var(--font-mono); color: var(--gold-bright);
       font-size: 1.45rem; font-weight: 700; margin-bottom: 1.1rem;
     }
@@ -121,17 +108,17 @@
     }
     .hero-lede {
       color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.12rem);
-      line-height: 1.55; font-weight: 500; margin-bottom: 1.5rem; max-width: 32rem;
+      line-height: 1.55; font-weight: 500; margin-bottom: 1.5rem; max-width: 34rem;
     }
     .hero-lede strong { color: var(--text); font-weight: 600; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      font-family: var(--font-ui); font-weight: 700; font-size: 0.78rem;
+      font-weight: 700; font-size: 0.78rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       padding: 0.9rem 1.25rem; border: 1px solid transparent; cursor: pointer;
       transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s;
-      background: transparent; color: var(--text);
+      background: transparent; color: var(--text); font-family: inherit;
     }
     .btn-primary {
       background: linear-gradient(135deg, #a8861f, #d4b03a);
@@ -140,14 +127,12 @@
     .btn-primary:hover { transform: translateY(-1px); }
     .btn-ghost { border-color: var(--line); }
     .btn-ghost:hover { border-color: rgba(201, 162, 39, 0.55); }
-
     .wrap {
       max-width: 1100px; margin: 0 auto;
       padding: 0 clamp(1rem, 4vw, 3rem) 3.5rem;
     }
     .section-hd {
       padding: 2.75rem 0 1.5rem; max-width: 36rem;
-      animation: fadeRise 1s var(--ease) 0.12s both;
     }
     .section-hd h2 {
       font-family: var(--font-display);
@@ -155,11 +140,9 @@
       font-weight: 400; line-height: 1.1; margin-bottom: 0.65rem;
     }
     .section-hd p { color: var(--muted); font-size: 0.98rem; line-height: 1.55; font-weight: 500; }
-
     .includes {
       display: grid; gap: 0; border-top: 1px solid var(--line);
       margin-bottom: 2.5rem;
-      animation: fadeRise 1s var(--ease) 0.2s both;
     }
     .include {
       display: grid; gap: 0.35rem; padding: 1.35rem 0;
@@ -177,22 +160,11 @@
       font-weight: 400; margin-bottom: 0.35rem;
     }
     .include p { color: var(--muted); font-size: 0.92rem; line-height: 1.5; font-weight: 500; max-width: 36rem; }
-
     .enroll {
       background: var(--desk);
       border: 1px solid rgba(201, 162, 39, 0.35);
       padding: clamp(1.5rem, 4vw, 2.25rem);
-      position: relative; overflow: hidden;
-      animation: fadeRise 1s var(--ease) 0.28s both;
     }
-    .enroll::before {
-      content: "";
-      position: absolute; width: 40vmax; height: 40vmax;
-      right: -18vmax; top: -20vmax; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 162, 39, 0.12), transparent 65%);
-      pointer-events: none;
-    }
-    .enroll > * { position: relative; z-index: 1; }
     .enroll h2 {
       font-family: var(--font-display);
       font-size: clamp(1.7rem, 3.5vw, 2.2rem);
@@ -222,7 +194,6 @@
       outline: none; border-color: rgba(201, 162, 39, 0.55);
     }
     textarea { min-height: 5rem; resize: vertical; }
-    select option { color: #0a0e14; }
     .form-actions {
       margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
     }
@@ -246,83 +217,81 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
 
-  <nav class="nav">
+    <nav class="nav">
     <a class="nav-mark" href="index.html">Turner Capital</a>
     <div class="nav-links">
       <a class="nav-text" href="pricing.html">Pricing</a>
       <a class="nav-text" href="brief.html">Weekly brief</a>
       <a class="nav-text" href="office-hours.html">Office hours</a>
       <a class="nav-text" href="risk-desk.html">Risk desk</a>
-      <a class="nav-text" href="signals.html">Signals</a>
       <a class="nav-text" href="diligence.html">Diligence</a>
       <a class="nav-text" href="portfolio.html">Portfolio</a>
+      <a class="nav-text" href="signals.html">Signals</a>
       <a class="nav-text" href="hedge.html">Hedge</a>
       <a class="nav-text" href="macro.html">Macro</a>
       <a class="nav-text" href="memo.html">Deal memo</a>
-      <a class="nav-cta" href="#enroll">Request invoice</a>
+      <a class="nav-text" href="pilot.html">Desk pilot</a>
+      <a class="nav-cta" href="#enroll">Request macro invoice</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-stage" aria-hidden="true">
-      <div class="hero-scan"></div>
-    </div>
+    <div class="hero-stage" aria-hidden="true"></div>
     <div class="hero-copy">
-      <h1 class="brand-lockup">Turner Capital<span>Desk Pilot enrollment</span></h1>
-      <p class="price-chip">$2,500<span>/mo · invoiced</span></p>
+      <h1 class="brand-lockup">Turner Capital<span>Macro week brief</span></h1>
+      <p class="price-chip">$1,800<span>one-shot · $900/mo</span></p>
       <p class="hero-lede">
-        Paid seat on the agent floor — crypto and equity desks under your capital and rules.
-        <strong>No card form here.</strong> Submit details; we invoice and open the seat.
+        Your week, one macro pass —
+        <strong>catalyst calendar, regime notes, desk positioning flags.</strong> PDF delivery.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enroll">Start enrollment</a>
-        <a class="btn btn-ghost" href="pricing.html">All offers</a>
+        <a class="btn btn-primary" href="#enroll">Order macro brief</a>
+        <a class="btn btn-ghost" href="portfolio.html">Prefer portfolio review · $2,500</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="section-hd">
-      <h2>What the pilot includes</h2>
-      <p>One monthly invoice. Clear scope. Built for operators who want desk discipline without building an internal team first.</p>
+      <h2>What you receive</h2>
+      <p>A weekly macro pass for crypto+equity desks — research product, not advice.</p>
     </div>
 
     <div class="includes">
       <article class="include">
-        <p class="include-num">01 · Floor</p>
+        <p class="include-num">01 · Catalyst</p>
         <div>
-          <h3>Twelve-agent desk access</h3>
-          <p>Specialist seats across crypto and equities, running under your mandate and risk envelope.</p>
+          <h3>Catalyst calendar</h3>
+          <p>Seven-day catalyst calendar ranked for crypto + equity desks — what moves, when, why it matters.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">02 · Rhythm</p>
+        <p class="include-num">02 · Regime</p>
         <div>
-          <h3>Weekly floor brief</h3>
-          <p>Written desk summary, open risk notes, and next-week focus — sent to your inbox.</p>
+          <h3>Regime notes</h3>
+          <p>Risk-on / risk-off regime notes with what would flip the bias mid-week.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">03 · Ops</p>
+        <p class="include-num">03 · Positioning</p>
         <div>
-          <h3>Rules + kill switches</h3>
-          <p>You set capital bands and stop conditions. We operate inside them. Simulation-first until you say otherwise.</p>
+          <h3>Desk positioning flags</h3>
+          <p>Positioning flags for the book — what to lean into, what to fade, what to ignore.</p>
         </div>
       </article>
       <article class="include">
-        <p class="include-num">04 · Term</p>
+        <p class="include-num">04 · Delivery</p>
         <div>
-          <h3>Month-to-month after 30 days</h3>
-          <p>First invoice covers the pilot month. Cancel before renewal with five business days’ notice.</p>
+          <h3>PDF delivery</h3>
+          <p>One-shot PDF at $1,800, or weekly desk at $900/mo. Pair with Signals for ongoing catalyst flow.</p>
         </div>
       </article>
     </div>
 
     <section class="enroll" id="enroll" aria-labelledby="enroll-title">
-      <h2 id="enroll-title">Request Desk Pilot invoice</h2>
-      <p class="enroll-lead">Fill the seat brief. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
-
-      <form id="pilot-form" novalidate>
+      <h2 id="enroll-title">Request macro brief invoice — $1,800 · $900/mo</h2>
+      <p class="enroll-lead">Fill the form. Your mail client opens with a prefilled invoice request to brad@treadcompanies.com.</p>
+      <form id="macro-form" novalidate>
         <div class="fields">
           <label>
             Full name
@@ -337,72 +306,64 @@
             <input type="text" id="firm" name="firm" autocomplete="organization" />
           </label>
           <label>
-            Start month
-            <input type="text" id="start" name="start" placeholder="e.g. October 2026" />
-          </label>
-          <label>
-            Primary market
-            <select id="market" name="market">
-              <option value="Crypto + equities">Crypto + equities</option>
-              <option value="Crypto focus">Crypto focus</option>
-              <option value="Equities focus">Equities focus</option>
+            Memo type
+            <select id="plan" name="plan">
+              <option value="Macro Week Brief one-shot — $1,800" selected>Macro Week Brief one-shot — $1,800</option>
+              <option value="Macro Week Brief monthly — $900/mo">Macro Week Brief monthly — $900/mo</option>
             </select>
           </label>
-          <label>
-            Capital band (optional)
-            <input type="text" id="capital" name="capital" placeholder="e.g. $250k–$1M simulation" />
+          <label class="full">
+            Desk + macro focus
+            <input type="text" id="focus" name="focus" placeholder="e.g. crypto + US equity week ahead" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Mandate, constraints, or questions"></textarea>
+            <textarea id="notes" name="notes" placeholder="AUM band, regions, constraints"></textarea>
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Email invoice request — $2,500/mo</button>
-          <p class="form-hint">Opens mailto with subject and body filled. Stripe wires in when payment secrets exist.</p>
+          <button class="btn btn-primary" type="submit">Email macro brief invoice</button>
+          <p class="form-hint">Opens mailto with subject and body filled. Stripe when secrets exist.</p>
         </div>
       </form>
     </section>
 
     <p class="disclaimer">
-      Simulation only unless separately contracted. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
-      Desk Pilot pricing is for desk access and services — not a solicitation to invest. Past simulated performance is not indicative of future results.
+      Macro Week Brief is a research product. Turner Capital on this site does not place live orders, custody funds, or offer investment advice.
     </p>
 
     <footer>
-      <span>Turner Capital · Desk Pilot</span>
-      <a href="mailto:brad@treadcompanies.com?subject=Desk%20Pilot">brad@treadcompanies.com</a>
+      <span>Turner Capital · Macro Week Brief</span>
+      <a href="mailto:brad@treadcompanies.com?subject=Macro%20Overlay%20Memo">brad@treadcompanies.com</a>
     </footer>
   </main>
 
   <script>
     (function () {
-      var form = document.getElementById("pilot-form");
+      var form = document.getElementById("macro-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var firm = (document.getElementById("firm").value || "").trim();
-        var start = (document.getElementById("start").value || "").trim();
-        var market = document.getElementById("market").value;
-        var capital = (document.getElementById("capital").value || "").trim();
+        var plan = document.getElementById("plan").value;
+        var focus = (document.getElementById("focus").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Turner Capital Desk Pilot invoice — $2,500/mo";
+        var subject = "Turner Capital Macro Week Brief — " + plan;
         var body =
-          "Desk Pilot enrollment / invoice request ($2,500/mo)\n\n" +
+          "Macro Week Brief invoice request (" + plan + ")\n\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Firm / desk: " + (firm || "—") + "\n" +
-          "Start month: " + (start || "—") + "\n" +
-          "Primary market: " + market + "\n" +
-          "Capital band: " + (capital || "—") + "\n" +
-          "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send invoice and seat confirmation.";
+          "Firm: " + (firm || "—") + "\n" +
+          "Plan: " + plan + "\n" +
+          "Target: " + (focus || "—") + "\n" +
+          "Notes: " + (notes || "—") + "\n\n" +
+          "Please send invoice for Macro Week Brief ($1,800 one-shot or $900/mo).";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

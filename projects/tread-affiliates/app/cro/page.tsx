@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate SEO Sprint — Tread Affiliates",
+  title: "Affiliate CRO Sprint — Tread Affiliates",
   description:
-    "Affiliate SEO Sprint — one-time sprint $3,500 or monthly SEO desk $1,200/mo. Keyword map, page briefs, internal link plan. Invoice by email.",
+    "Affiliate CRO Sprint — one-time sprint $2,800 or monthly CRO desk $1,100/mo. Funnel audit, page tests, CTA rewrite plan. Invoice by email.",
   openGraph: {
-    title: "Affiliate SEO Sprint — Tread Affiliates",
-    description: "Sprint $3,500 · Monthly desk $1,200/mo. Keyword map, page briefs, internal link plan.",
+    title: "Affiliate CRO Sprint — Tread Affiliates",
+    description: "Sprint $2,800 · Monthly desk $1,100/mo. Funnel audit, page tests, CTA rewrite plan.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "SEO sprint",
-    price: "$3,500",
+    title: "CRO sprint",
+    price: "$2,800",
     cadence: " one-time",
     points: [
-      "Keyword map for your primary rails",
-      "Page briefs for top comparison URLs",
-      "Internal link plan",
-      "30-day execution checklist",
+      "Funnel audit across your primary rails",
+      "Hypothesis list and test plan for top URLs",
+      "CTA and offer rewrite notes",
+      "30-day CRO execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates SEO sprint — $3,500",
-      "I want an Affiliate SEO sprint ($3,500).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates CRO sprint — $2,800",
+      "I want an Affiliate CRO sprint ($2,800).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $3,500",
+    cta: "Request sprint — $2,800",
   },
   {
     tag: "Desk",
-    title: "Monthly SEO desk",
-    price: "$1,200",
+    title: "Monthly CRO desk",
+    price: "$1,100",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly keyword and ranking review",
-      "Two new page briefs per month",
+      "Monthly conversion review",
+      "Two new tests or page rewrites per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates SEO desk — $1,200/mo",
-      "I want a Monthly SEO desk ($1,200/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates CRO desk — $1,100/mo",
+      "I want a Monthly CRO desk ($1,100/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $1,200/mo",
+    cta: "Request desk — $1,100/mo",
   },
 ];
 
-export default function SeoPage() {
+export default function CroPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -65,8 +65,9 @@ export default function SeoPage() {
             <Link href="/placement" className="transition hover:text-signal">Placement</Link>
             <Link href="/operator" className="transition hover:text-signal">Operator</Link>
             <Link href="/partners" className="transition hover:text-signal">Partners</Link>
+            <Link href="/seo" className="transition hover:text-signal">SEO</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">SEO</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">CRO</a>
           </nav>
         </div>
       </header>
@@ -74,17 +75,17 @@ export default function SeoPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · SEO</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · CRO</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            SEO that feeds your comparison rails — not vanity traffic.
+            CRO that lifts comparison-rail conversions — not vanity clicks.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: keyword map, page briefs, and an internal link plan.
+            One-time sprint or monthly desk: funnel audit, test plan, and CTA rewrite notes.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See SEO packages
+              See CRO packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -96,7 +97,7 @@ export default function SeoPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly SEO desk.
+          Sprint once, or keep a monthly CRO desk.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -126,7 +127,7 @@ export default function SeoPage() {
       <section className="border-t border-line bg-ink text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
           <p className="max-w-xl text-white/70">Prefer featured placement or operator coaching? Same inbox.</p>
-          <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20SEO" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
+          <a href="mailto:brad@treadcompanies.com?subject=Tread%20Affiliates%20CRO" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
             Email Tread Affiliates
           </a>
         </div>
