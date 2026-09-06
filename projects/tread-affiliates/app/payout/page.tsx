@@ -88,6 +88,7 @@ export default function PayoutPage() {
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/payout" className="transition hover:text-signal">Payout kit</Link>
             <Link href="/rebate" className="transition hover:text-signal">Rebate</Link>
+            <Link href="/holdback" className="transition hover:text-signal">Holdback</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Payout kit</a>
           </nav>
         </div>

@@ -371,6 +371,12 @@ export default function ShopPage() {
               Omnibus · from $225
             </Link>
             <Link
+              href="/codex"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Codex · from $200
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >
