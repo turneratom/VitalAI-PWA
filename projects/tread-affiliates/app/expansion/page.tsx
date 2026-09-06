@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Cadence Kit — Tread Affiliates",
+  title: "Affiliate Expansion Kit — Tread Affiliates",
   description:
-    "Affiliate Cadence Kit — one-time sprint $250 or monthly Cadence kit $125/mo. Cadence plan, Cadence mix, Cadence pairing. Invoice by email.",
+    "Affiliate Expansion Kit — one-time sprint $225 or monthly Expansion kit $115/mo. Expansion plan, Expansion mix, Expansion pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Cadence Kit — Tread Affiliates",
-    description: "Sprint $250 · Monthly desk $125/mo. Cadence plan, Cadence mix, Cadence pairing.",
+    title: "Affiliate Expansion Kit — Tread Affiliates",
+    description: "Sprint $225 · Monthly desk $115/mo. Expansion plan, Expansion mix, Expansion pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Cadence kit",
-    price: "$250",
-    cadence: " one-time",
+    title: "Expansion kit",
+    price: "$225",
+    expansion: " one-time",
     points: [
-      "Cadence plan across your primary rails",
+      "Expansion plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Cadence kit execution checklist",
+      "30-day Expansion kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Cadence kit — $250",
-      "I want an Affiliate Cadence kit ($250).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Expansion kit — $225",
+      "I want an Affiliate Expansion kit ($225).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $250",
+    cta: "Request sprint — $225",
   },
   {
     tag: "Desk",
-    title: "Monthly Cadence kit",
-    price: "$125",
-    cadence: "/mo",
+    title: "Monthly Expansion kit",
+    price: "$115",
+    expansion: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Cadence kit and ROAS review",
+      "Monthly Expansion kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Cadence kit — $125/mo",
-      "I want a Monthly Cadence kit ($125/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Expansion kit — $115/mo",
+      "I want a Monthly Expansion kit ($115/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $125/mo",
+    cta: "Request desk — $115/mo",
   },
 ];
 
-export default function CadencePage() {
+export default function ExpansionPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -86,9 +86,8 @@ export default function CadencePage() {
             <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
             <Link href="/upsell" className="transition hover:text-signal">Upsell</Link>
             <Link href="/cro" className="transition hover:text-signal">CRO</Link>
-            <Link href="/cadence" className="transition hover:text-signal">Cadence kit</Link>
-            <Link href="/expansion" className="transition hover:text-signal">Expansion</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Cadence kit</a>
+            <Link href="/expansion" className="transition hover:text-signal">Expansion kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Expansion kit</a>
           </nav>
         </div>
       </header>
@@ -96,17 +95,17 @@ export default function CadencePage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Cadence kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Expansion kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Cadence kit packages that convert comparison-rail traffic — not vanity posts.
+            Expansion kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Cadence plan, Cadence mix, and Cadence pairing.
+            One-time sprint or monthly desk: Expansion plan, Expansion mix, and Expansion pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Cadence kit packages
+              See Expansion kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -118,7 +117,7 @@ export default function CadencePage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Cadence kit.
+          Sprint once, or keep a monthly Expansion kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
@@ -127,7 +126,7 @@ export default function CadencePage() {
               <h3 className="mt-3 font-display text-2xl font-extrabold">{pkg.title}</h3>
               <p className="mt-2 text-3xl font-extrabold text-ink">
                 {pkg.price}
-                <span className="text-base font-semibold text-ink/50">{pkg.cadence}</span>
+                <span className="text-base font-semibold text-ink/50">{pkg.expansion}</span>
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-ink/75">
                 {pkg.points.map((point) => (

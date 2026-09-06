@@ -207,6 +207,9 @@ export default function HomePage() {
             <a href="/cadence" className="transition hover:text-signal">
               Cadence
             </a>
+            <a href="/expansion" className="transition hover:text-signal">
+              Expansion
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
