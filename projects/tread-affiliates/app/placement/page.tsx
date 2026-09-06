@@ -83,6 +83,9 @@ export default function PlacementPage() {
             <Link href="/cro" className="transition hover:text-signal">
               CRO
             </Link>
+            <Link href="/email" className="transition hover:text-signal">
+              Email
+            </Link>
             <Link href="/partners" className="transition hover:text-signal">
               Partners
             </Link>

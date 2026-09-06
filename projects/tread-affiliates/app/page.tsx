@@ -108,6 +108,9 @@ export default function HomePage() {
             <a href="/cro" className="transition hover:text-signal">
               CRO
             </a>
+            <a href="/email" className="transition hover:text-signal">
+              Email
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

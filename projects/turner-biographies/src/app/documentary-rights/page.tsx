@@ -2,38 +2,38 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Podcast Rights",
+  title: "Documentary Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for podcast — Single-season rights $8,000 or Multi-season slate $22,000. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for documentary — Single-film rights $12,000 or Series rights $35,000. Direct inquiry by email.",
   openGraph: {
-    title: "Podcast Rights — Turner Biographies",
-    description: "Single-season rights $8,000 · Multi-season slate $22,000.",
+    title: "Documentary Rights — Turner Biographies",
+    description: "Single-film rights $12,000 · Series rights $35,000.",
     type: "website",
   },
 };
 
 const packages = [
   {
-    tag: "Season",
-    title: "Single-season rights",
-    price: "$8,000",
+    tag: "Film",
+    title: "Single-film rights",
+    price: "$12,000",
     detail:
-      "Rights to adapt one Firebrand / Greatest Humans title into a single podcast season — format, window, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Podcast%20rights%20single-season%20%248%2C000&body=I%20want%20Single-season%20podcast%20rights%20(%248%2C000).%0A%0ATitle%20interest%3A%0AFormat%20%2F%20episode%20count%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License season — $8,000",
+      "Rights to adapt one Firebrand / Greatest Humans title into a single documentary film — window and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Documentary%20rights%20single-film%20%2412%2C000&body=I%20want%20Single-film%20documentary%20rights%20(%2412%2C000).%0A%0ATitle%20interest%3A%0ARuntime%20%2F%20format%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License film — $12,000",
   },
   {
-    tag: "Slate",
-    title: "Multi-season slate",
-    price: "$22,000",
+    tag: "Series",
+    title: "Series rights",
+    price: "$35,000",
     detail:
-      "Multi-title or multi-season podcast slate rights across Firebrand / Greatest Humans — one agreement for a longer run.",
-    href: "mailto:brad@treadcompanies.com?subject=Podcast%20rights%20multi-season%20%2422%2C000&body=I%20want%20Multi-season%20podcast%20slate%20rights%20(%2422%2C000).%0A%0ATitles%20%2F%20slate%3A%0ASeasons%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $22,000",
+      "Multi-episode or series documentary rights across Firebrand / Greatest Humans — one agreement for a longer run.",
+    href: "mailto:brad@treadcompanies.com?subject=Documentary%20rights%20series%20%2435%2C000&body=I%20want%20Series%20documentary%20rights%20(%2435%2C000).%0A%0ATitles%20%2F%20slate%3A%0AEpisodes%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License series — $35,000",
   },
 ];
 
-export default function PodcastPage() {
+export default function DocumentaryRightsPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,27 +42,21 @@ export default function PodcastPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Podcast Rights
+            Documentary Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Season and slate licensing for Firebrand and The Greatest Humans —
-            from rights memo to recorded seasons.
+            Film and series licensing for Firebrand and The Greatest Humans —
+            from rights memo to locked picture.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
             <a href="#packages" className="bg-seal px-5 py-3 uppercase tracking-[0.16em] hover:bg-seal-deep">
               See packages
             </a>
-            <Link href="/audiobook" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Audiobook
-            </Link>
-            <Link href="/serialization" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Serialization
-            </Link>
             <Link href="/screenplay" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Screenplay
             </Link>
-            <Link href="/documentary-rights" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Documentary
+            <Link href="/podcast" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+              Podcast
             </Link>
             <Link href="/stage" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Stage
@@ -78,7 +72,7 @@ export default function PodcastPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two podcast tracks.
+            Two documentary tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, format,
@@ -103,11 +97,11 @@ export default function PodcastPage() {
       <section className="bg-[#0e1116]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need audiobook rights instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Podcast covers serialized audio storytelling. Audiobook covers full narration rights.</p>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need a feature screenplay instead?</h2>
+            <p className="mt-2 max-w-xl text-bone/70">Documentary covers nonfiction film and series rights. Screenplay covers feature adaptation.</p>
           </div>
-          <Link href="/audiobook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-            Audiobook rights
+          <Link href="/screenplay" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+            Screenplay adaptation
           </Link>
         </div>
       </section>

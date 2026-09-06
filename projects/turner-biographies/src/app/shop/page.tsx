@@ -173,6 +173,12 @@ export default function ShopPage() {
               Screenplay · from $15,000
             </Link>
             <Link
+              href="/documentary-rights"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Documentary rights · from $12,000
+            </Link>
+            <Link
               href="/foreign-rights"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

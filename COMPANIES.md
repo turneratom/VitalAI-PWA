@@ -12,11 +12,11 @@ Chats forget. **This file remembers.**
 | 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` + deployable `trailer-parks/` | Owner listings → deals | List Free + Featured + Buyer Pro + valuation + deal-room + lender-intro + underwriting + comps + `/loi` + `/rent-roll` + `/cap-rate` ($299 · $799) + `/noi` ($349 · $949) + **`/tax` ($399 · $1,099)** |
 | 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + gift + invoice + hold + retainer + expedition + weekend + dinner + yacht + villa + `jet.html` ($12k) + `safari.html` ($18k) + **`ski.html` ($14k)** |
 | 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + referrals | Packages + corporate + legacy + deposit + rush + teaser + stills + documentary + reel + `drone.html` ($3.2k) + `color.html` ($2.4k) + **`same-day.html` ($1.8k)** |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + signals + diligence + portfolio + `hedge.html` ($4,500 · $2,200/mo) + **`macro.html` ($1,800 · $900/mo)** |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + `/stage` + translation + estate + `/podcast` ($8k · $22k) + **`/screenplay` ($15k · $45k)** |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid research | Floor + pilot + annual + memo + brief + office-hours + risk-desk + signals + diligence + portfolio + `hedge.html` ($4,500 · $2,200/mo) + `macro.html` ($1,800 · $900/mo) + **`liquidity.html` ($3,200 · $1,600/mo)** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + speaking + commission + serialization + audiobook + foreign-rights + `/stage` + translation + estate + `/podcast` ($8k · $22k) + `/screenplay` ($15k · $45k) + **`/documentary-rights` ($12k · $35k)** |
 | 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite + teams + whitelabel + api + enterprise + coach + family + clinic + `concierge.html` ($499 · $99/mo) + `nutrition.html` ($249 · $79/mo) + **`sleep.html` ($199 · $59/mo)** |
 
-Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + `/partners` + `/operator` + `/placement` + `/seo` ($3,500 · $1,200/mo) + **`/cro` ($2,800 · $1,100/mo)**.
+Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + launch + `/partners` + `/operator` + `/placement` + `/seo` ($3,500 · $1,200/mo) + `/cro` ($2,800 · $1,100/mo) + **`/email` ($2,400 · $950/mo)**.
 
 ## Hands-off contract
 
@@ -26,11 +26,10 @@ Also: Tread Affiliates — rails + advertise + sponsor + audit + creative + laun
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `ski.html` — Private Ski Week **$14,000**.
-- Everything Films: `same-day.html` — Same-Day Edit **$1,800**.
-- Project AIS: `sleep.html` — Sleep Protocol **$199** · **$59/mo**.
-- Mobile Home Parks: `/tax` — Tax Basis Memo **$399** · **$1,099**.
-- Prior: macro/screenplay/cro; safari/color/nutrition/noi; hedge/podcast/seo.
+- Turner Capital: `liquidity.html` — Liquidity Stress Memo **$3,200** · **$1,600/mo**.
+- Turner Biographies: `/documentary-rights` — Single-film **$12,000** · Series **$35,000**.
+- Tread Affiliates: `/email` — Email Sprint **$2,400** · desk **$950/mo**.
+- Prior: ski/same-day/sleep/tax; macro/screenplay/cro; safari/color/nutrition/noi.
 - Deploy: GHA CI green gate; Vercel hobby still rate-limited.
 - Memory: in-thread yes; cross-thread via this file.
 

@@ -55,6 +55,9 @@ export default function ScreenplayPage() {
             <Link href="/podcast" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Podcast
             </Link>
+            <Link href="/documentary-rights" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
+              Documentary
+            </Link>
             <Link href="/stage" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Stage
             </Link>

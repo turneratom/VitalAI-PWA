@@ -90,6 +90,9 @@ export default function AuditPage() {
             <Link href="/cro" className="transition hover:text-signal">
               CRO
             </Link>
+            <Link href="/email" className="transition hover:text-signal">
+              Email
+            </Link>
             <a
               href="#packages"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
