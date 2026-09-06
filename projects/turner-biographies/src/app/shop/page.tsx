@@ -143,6 +143,12 @@ export default function ShopPage() {
               Serialization · from $25,000
             </Link>
             <Link
+              href="/audiobook"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Audiobook · from $15,000
+            </Link>
+            <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

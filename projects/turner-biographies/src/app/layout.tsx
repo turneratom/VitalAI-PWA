@@ -66,6 +66,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link className="transition hover:text-bone" href="/serialization">
                 Serialization
               </Link>
+              <Link className="transition hover:text-bone" href="/audiobook">
+                Audiobook
+              </Link>
               <Link
                 className="rounded-sm bg-seal px-3 py-1.5 text-bone transition hover:bg-seal-deep"
                 href="/shop"
