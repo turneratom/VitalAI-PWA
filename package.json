@@ -1,0 +1,10 @@
+{
+  "name": "vitalai-workspace",
+  "private": true,
+  "description": "Monorepo root — Vercel builds trailer-parks via install/build commands in vercel.json",
+  "scripts": {
+    "build": "npm run build --prefix trailer-parks",
+    "dev": "npm run dev --prefix trailer-parks",
+    "lint": "npm run lint --prefix trailer-parks"
+  }
+}
