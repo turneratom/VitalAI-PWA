@@ -335,6 +335,12 @@ export default function ShopPage() {
               Folio · from $450
             </Link>
             <Link
+              href="/anthology"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Anthology · from $400
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

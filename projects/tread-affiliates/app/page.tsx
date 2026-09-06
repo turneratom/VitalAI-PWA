@@ -204,6 +204,9 @@ export default function HomePage() {
             <a href="/ltv" className="transition hover:text-signal">
               LTV
             </a>
+            <a href="/cadence" className="transition hover:text-signal">
+              Cadence
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
