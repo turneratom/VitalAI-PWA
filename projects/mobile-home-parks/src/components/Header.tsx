@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/links", label: "Links" },
   { href: "/marketplace", label: "Marketplace" },
   { href: "/list-your-park", label: "List Free" },
+  { href: "/featured", label: "Featured $299" },
   { href: "/outreach", label: "Outreach" },
   { href: "/upload-list", label: "Upload List" },
   { href: "/owners", label: "Owners" },

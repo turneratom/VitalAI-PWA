@@ -9,14 +9,14 @@ Chats forget. **This file remembers.**
 
 | # | Company | Slug | Path | Money motion | Status |
 |---|---------|------|------|--------------|--------|
-| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | Live + package; List Your Park Free + outreach kit |
-| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + Crossing + Expedition + **gift/corporate** (`gift.html`) |
-| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + partner referrals | Packages + **paid add-ons** + partners/ ($500/$750) |
-| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid pilot | Floor + **pricing.html** ($2,500/mo) |
-| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` ($4.99/$15.99) + **film rights inquiry** |
-| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite monthly + **annual $99 / $299** + tool upsells |
+| 1 | Mobile Home Parks | `mobile-home-parks` | live Pages + `projects/mobile-home-parks/` | Owner listings → deals | Live + package; List Free + **Featured $299/mo** (`/featured`) |
+| 2 | Meridian | `meridian-travel` | `projects/meridian-travel/` | Private journey bookings | Escapes + Crossing + Expedition + **gift/corporate** + printable certificate |
+| 3 | Everything Films | `everything-films` | `projects/everything-films/` | $10k/$15k films + partner referrals | Packages + **paid add-ons** + partners attach |
+| 4 | Turner Capital | `turner-capital` | `projects/turner-capital/` | Desk access / paid pilot | Floor + pricing + **`pilot.html` enrollment/invoice ($2,500/mo)** |
+| 5 | Turner Biographies | `turner-biographies` | `projects/turner-biographies/` | Book sales + screen rights | `/shop` + film page **Option $15k / Shopping $35k / Purchase from $150k** |
+| 6 | Project AIS | `project-ais` | `projects/project-ais/` | VitalAI subscriptions | Pro/Elite monthly + annual + tool upsells |
 
-Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, **sleep trackers** rails.
+Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, sleep trackers rails.
 
 ## Hands-off contract
 
@@ -26,9 +26,10 @@ Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, *
 
 ## Latest agent actions (2026-09-06)
 
-- Meridian: `gift.html` — Gift Escape certificate from $5,800; corporate retreat from $28,000; linked from home nav + journeys. Printable fulfillment: `gift-certificate.html`.
-- Everything Films: paid add-ons after packages — rush +$2,500, extra revision +$750, dual cut +$4,000, custom score +$1,200, +15 min +$2,500. Partners page attaches add-on upsell.
-- Prior: Meridian product ladder + inquiry; Films partners; Turner Capital pricing; AIS annual; Biographies rights; Affiliates rails; MHP List Your Park Free.
+- Turner Capital: `pilot.html` — Desk Pilot enrollment form → invoice mailto ($2,500/mo); linked from floor + pricing.
+- Mobile Home Parks: `/featured` — Featured listing $299/mo invoice path; nav + list-your-park link.
+- Turner Biographies: film rights packages on book film page (option / shopping / purchase).
+- Prior: Meridian gift/corporate + certificate; Films paid add-ons + partner attach; AIS annual; Affiliates rails.
 - Memory: in-thread yes; cross-thread via this file.
 
 ## Next money pushes
@@ -36,5 +37,6 @@ Also: Tread Affiliates — `/comparisons` hub + AI health, calorie, wearables, *
 1. Affiliates: live network URLs when credentials exist.
 2. Project AIS: real Stripe price IDs (monthly + annual) when secrets exist.
 3. Biographies: Amazon URLs when KDP live.
-4. Deploy packages when hosting allows — without blocking Bradley.
-5. Keep shipping offer pages every CoS cycle (next candidates: Turner Capital paid pilot checkout path; Meridian gift Stripe/invoice when payment rails exist).
+4. Capital / Meridian / MHP Featured: Stripe/invoice automation when payment rails exist.
+5. Deploy packages when hosting allows — without blocking Bradley.
+6. Keep shipping offer pages every CoS cycle.

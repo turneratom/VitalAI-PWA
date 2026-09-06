@@ -67,12 +67,86 @@ export default async function FilmPage({
             >
               Screenplay
             </a>
+            <a
+              href="#rights"
+              className="border border-bone/30 px-4 py-2.5 uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+            >
+              Rights packages
+            </a>
             <Link
               href={`/books/${book.slug}/read/${book.chapters[0].slug}`}
               className="px-4 py-2.5 text-fog hover:text-bone"
             >
               ← Back to the book
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="rights" className="border-b border-white/10 bg-ink">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.3em] text-brass">
+            Film &amp; adaptation rights
+          </p>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-bone md:text-5xl">
+            Clear packages. Direct inquiry.
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-bone/75">
+            Option, shopping, or purchase — priced for producers who want a path
+            without a twelve-month agent chase. Email opens with the package in the subject.
+          </p>
+          <div className="mt-12 grid gap-0 border-t border-white/15 md:grid-cols-3">
+            <article className="border-b border-white/15 py-8 md:border-b-0 md:border-r md:pr-8 md:py-10">
+              <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.22em] text-brass">
+                Option
+              </p>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-4xl text-bone">
+                $15,000
+              </p>
+              <p className="mt-3 text-bone/70">
+                12-month exclusive option against purchase. Treatment + access to author notes.
+              </p>
+              <a
+                href={`mailto:brad@treadcompanies.com?subject=${encodeURIComponent(`Film option — ${book.filmTitle} ($15,000)`)}&body=${encodeURIComponent(`I want the 12-month film option on ${book.filmTitle} ($15,000).\n\nCompany:\nName:\nEmail:\nTerritory:\nNotes:\n`)}`}
+                className="mt-6 inline-block bg-seal px-4 py-2.5 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:bg-seal-deep"
+              >
+                Inquire · Option
+              </a>
+            </article>
+            <article className="border-b border-white/15 py-8 md:border-b-0 md:border-r md:px-8 md:py-10">
+              <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.22em] text-brass">
+                Shopping agreement
+              </p>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-4xl text-bone">
+                $35,000
+              </p>
+              <p className="mt-3 text-bone/70">
+                18-month shopping window with first-look on purchase. Includes treatment + screenplay access.
+              </p>
+              <a
+                href={`mailto:brad@treadcompanies.com?subject=${encodeURIComponent(`Film shopping — ${book.filmTitle} ($35,000)`)}&body=${encodeURIComponent(`I want the shopping agreement on ${book.filmTitle} ($35,000).\n\nCompany:\nName:\nEmail:\nTerritory:\nNotes:\n`)}`}
+                className="mt-6 inline-block bg-seal px-4 py-2.5 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:bg-seal-deep"
+              >
+                Inquire · Shopping
+              </a>
+            </article>
+            <article className="py-8 md:pl-8 md:py-10">
+              <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.22em] text-brass">
+                Rights purchase
+              </p>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-4xl text-bone">
+                From $150k
+              </p>
+              <p className="mt-3 text-bone/70">
+                Feature film rights purchase — territory and backend terms negotiated from a written offer.
+              </p>
+              <a
+                href={`mailto:brad@treadcompanies.com?subject=${encodeURIComponent(`Film rights purchase — ${book.filmTitle}`)}&body=${encodeURIComponent(`I want to discuss purchasing film rights for ${book.filmTitle} (from $150,000).\n\nCompany:\nName:\nEmail:\nProposed territory:\nNotes:\n`)}`}
+                className="mt-6 inline-block border border-bone/30 px-4 py-2.5 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass"
+              >
+                Inquire · Purchase
+              </a>
+            </article>
           </div>
         </div>
       </section>

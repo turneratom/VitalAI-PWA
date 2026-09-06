@@ -220,6 +220,13 @@ export default function ListYourParkPage() {
             >
               Email {siteConfig.intakeEmail}
             </a>
+            {" · "}
+            <Link
+              href="/featured"
+              className="text-accent hover:text-accent-light font-medium underline underline-offset-2"
+            >
+              Featured listing $299/mo
+            </Link>
           </p>
         </div>
       </section>

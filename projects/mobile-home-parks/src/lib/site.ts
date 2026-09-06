@@ -38,6 +38,7 @@ export const siteConfig = {
     uploadList: "/upload-list",
     partner: "/partner",
     links: "/links",
+    featured: "/featured",
     tread: "https://www.treadcompanies.com",
   },
   intakeEmail: "brad@treadcompanies.com",
