@@ -69,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/pavilion",
     "/dog-park",
     "/firepit",
+    "/bbq",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
