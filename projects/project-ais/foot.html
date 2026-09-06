@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Shoulder Protocol</title>
-  <meta name="description" content="VitalAI Shoulder Protocol — Protocol setup $9 or Shoulder desk $1/mo. Shoulder targets, daily shoulder rhythm, weekly shoulder map. Invoice via email until Stripe is live." />
+  <title>VitalAI Foot Protocol</title>
+  <meta name="description" content="VitalAI Foot Protocol — Protocol setup $2 or Foot desk $1/mo. Foot targets, daily foot rhythm, weekly foot map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Shoulder Protocol</p>
+        <p>Foot Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,9 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="shoulder.html">Shoulder</a>
-        <a href="ankle.html">Ankle</a>
-        <a href="hip.html">Hip</a>
         <a href="knee.html">Knee</a>
         <a href="calf.html">Calf</a>
         <a href="foot.html">Foot</a>
@@ -87,36 +84,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Shoulder Protocol</h2>
+    <h2>VitalAI Foot Protocol</h2>
     <p class="lede">
-      Shoulder markers, shoulder targets, and a weekly checklist — one setup, or a monthly shoulder desk. Stripe when live — until then this form emails an invoice request.
+      Foot markers, foot targets, and a weekly checklist — one setup, or a monthly foot desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Shoulder pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly shoulder desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Foot pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly foot desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$9</strong></div>
-        <div class="plan-row"><span>Shoulder desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$2</strong></div>
+        <div class="plan-row"><span>Foot desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Shoulder markers and schedule for your goals</li>
-        <li>Load / daily shoulder rhythm for your week</li>
-        <li>Shoulder checklist for the first two weeks</li>
-        <li>Optional monthly shoulder desk</li>
+        <li>Foot markers and schedule for your goals</li>
+        <li>Load / daily foot rhythm for your week</li>
+        <li>Foot checklist for the first two weeks</li>
+        <li>Optional monthly foot desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request shoulder invoice</h3>
+      <h3 id="form-title">Request foot invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="shoulder-form" novalidate>
+      <form id="foot-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $9" selected>Protocol setup — $9</option>
-              <option value="Shoulder desk — $1/mo">Shoulder desk — $1/mo</option>
+              <option value="Protocol setup — $2" selected>Protocol setup — $2</option>
+              <option value="Foot desk — $1/mo">Foot desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -141,7 +138,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email shoulder invoice request</button>
+          <button class="btn" type="submit">Email foot invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -149,13 +146,13 @@
   </main>
 
   <footer class="site-footer">
-    Shoulder Protocol · setup / desk ·
+    Foot Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("shoulder-form");
+      var form = document.getElementById("foot-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -169,17 +166,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Shoulder Protocol — " + plan;
+        var subject = "VitalAI Foot Protocol — " + plan;
         var body =
-          "VitalAI Shoulder Protocol invoice request\n\n" +
+          "VitalAI Foot Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Shoulder Protocol checkout or invoice.\n" +
-          "Includes: shoulder map, shoulder blocks, weekly checklist.";
+          "Please send Foot Protocol checkout or invoice.\n" +
+          "Includes: foot map, foot blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
