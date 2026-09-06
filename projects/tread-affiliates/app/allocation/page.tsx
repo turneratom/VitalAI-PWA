@@ -97,6 +97,7 @@ export default function AllocationPage() {
 <Link href="/apportionment" className="transition hover:text-signal">Apportionment kit</Link>
 <Link href="/distribution" className="transition hover:text-signal">Distribution kit</Link>
 <Link href="/disbursement" className="transition hover:text-signal">Disbursement kit</Link>
+<Link href="/remittal" className="transition hover:text-signal">Remittal kit</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Allocation kit</a>
           </nav>
         </div>
