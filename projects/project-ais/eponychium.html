@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Knee Protocol</title>
-  <meta name="description" content="VitalAI Knee Protocol — Protocol setup $4 or Knee desk $1/mo. Knee targets, daily knee rhythm, weekly knee map. Invoice via email until Stripe is live." />
+  <title>VitalAI Eponychium Protocol</title>
+  <meta name="description" content="VitalAI Eponychium Protocol — Protocol setup $1 or Eponychium desk $1/mo. Eponychium targets, daily eponychium rhythm, weekly eponychium map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Knee Protocol</p>
+        <p>Eponychium Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -80,14 +80,6 @@
         <a href="toe.html">Toe</a>
         <a href="nail.html">Nail</a>
         <a href="thumb.html">Thumb</a>
-        <a href="finger.html">Finger</a>
-        <a href="knuckle.html">Knuckle</a>
-        <a href="palm.html">Palm</a>
-        <a href="fist.html">Fist</a>
-        <a href="hand.html">Hand</a>
-        <a href="pinky.html">Pinky</a>
-        <a href="ring-finger.html">Ring-Finger</a>
-        <a href="middle-finger.html">Middle-Finger</a>
         <a href="index-finger.html">Index-Finger</a>
         <a href="thumb-tip.html">Thumb-Tip</a>
         <a href="nail-bed.html">Nail-Bed</a>
@@ -103,36 +95,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Knee Protocol</h2>
+    <h2>VitalAI Eponychium Protocol</h2>
     <p class="lede">
-      Knee markers, knee targets, and a weekly checklist — one setup, or a monthly knee desk. Stripe when live — until then this form emails an invoice request.
+      Eponychium markers, eponychium targets, and a weekly checklist — one setup, or a monthly eponychium desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Knee pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly knee desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Eponychium pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly eponychium desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$4</strong></div>
-        <div class="plan-row"><span>Knee desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
+        <div class="plan-row"><span>Eponychium desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Knee markers and schedule for your goals</li>
-        <li>Load / daily knee rhythm for your week</li>
-        <li>Knee checklist for the first two weeks</li>
-        <li>Optional monthly knee desk</li>
+        <li>Eponychium markers and schedule for your goals</li>
+        <li>Load / daily eponychium rhythm for your week</li>
+        <li>Eponychium checklist for the first two weeks</li>
+        <li>Optional monthly eponychium desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request knee invoice</h3>
+      <h3 id="form-title">Request eponychium invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="knee-form" novalidate>
+      <form id="eponychium-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $4" selected>Protocol setup — $4</option>
-              <option value="Knee desk — $1/mo">Knee desk — $1/mo</option>
+              <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
+              <option value="Eponychium desk — $1/mo">Eponychium desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -157,7 +149,7 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email knee invoice request</button>
+          <button class="btn" type="submit">Email eponychium invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
@@ -165,13 +157,13 @@
   </main>
 
   <footer class="site-footer">
-    Knee Protocol · setup / desk ·
+    Eponychium Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("knee-form");
+      var form = document.getElementById("eponychium-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -185,17 +177,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Knee Protocol — " + plan;
+        var subject = "VitalAI Eponychium Protocol — " + plan;
         var body =
-          "VitalAI Knee Protocol invoice request\n\n" +
+          "VitalAI Eponychium Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Knee Protocol checkout or invoice.\n" +
-          "Includes: knee map, knee blocks, weekly checklist.";
+          "Please send Eponychium Protocol checkout or invoice.\n" +
+          "Includes: eponychium map, eponychium blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

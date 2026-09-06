@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Cutter Day — Meridian</title>
-  <meta name="description" content="Meridian Private Cutter Day — $1 flat for up to 6 players. Host-led itinerary, field brief, club plan. Field fees and transport billed separately when required." />
+  <title>Private Yawl Day — Meridian</title>
+  <meta name="description" content="Meridian Private Yawl Day — $1 flat for up to 6 players. Host-led itinerary, field brief, club plan. Field fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..142,100;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -170,14 +170,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Cutter Day.</p>
+    <p class="hero-line">Private Yawl Day.</p>
     <p class="price">$1 flat · one day · up to 6 players</p>
-    <p class="hero-sub">Pro-led cutter day: field brief, set rhythm, and club plan. Field fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-sub">Pro-led yawl day: field brief, set rhythm, and club plan. Field fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request cutter day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $1 for Private Cutter Day, then lock club, field, and player count with your first brief.</p>
-      <form id="cutter-form" novalidate>
+      <h2 id="form-title">Request yawl day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $1 for Private Yawl Day, then lock club, field, and player count with your first brief.</p>
+      <form id="yawl-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -209,15 +209,15 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $1 cutter invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Cutter Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $1 yawl invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Yawl Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led cutter day</strong>
+        <strong>Pro-led yawl day</strong>
         A Meridian host for green pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
@@ -236,13 +236,13 @@
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Cutter Day</p>
+    <p><strong>Meridian</strong> · Private Yawl Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("cutter-form");
+      var form = document.getElementById("yawl-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -257,9 +257,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Cutter Day — $1";
+        var subject = "Meridian Private Yawl Day — $1";
         var body =
-          "Meridian Private Cutter Day request ($1 flat, one day, up to 6 players)\n\n" +
+          "Meridian Private Yawl Day request ($1 flat, one day, up to 6 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -267,7 +267,7 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $1 Private Cutter Day invoice.\n" +
+          "Please send the $1 Private Yawl Day invoice.\n" +
           "Includes: instructor-led day, field brief, range plan. Field fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
