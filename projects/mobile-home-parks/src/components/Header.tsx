@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/buyers", label: "Buyers" },
   { href: "/buyer-pro", label: "Buyer Pro $99" },
   { href: "/deal-room", label: "Deal Room $199" },
+  { href: "/lender-intro", label: "Lender Intro $499" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];

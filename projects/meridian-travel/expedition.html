@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journey Hold Deposit — Meridian</title>
-  <meta name="description" content="Lock Meridian journey dates with a $2,500 refundable hold deposit. Applied to your Escape, Crossing, or Expedition." />
+  <title>Group Expedition — Meridian</title>
+  <meta name="description" content="Meridian Group Expedition — $45,000 flat for a private group of up to 8 travelers, 10–14 days. Host network, route design, and ground ops briefing. Flights usually separate." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -133,31 +133,31 @@
   <header class="nav">
     <a class="nav-brand" href="index.html">Meridian</a>
     <div class="nav-links">
-      <a class="nav-link" href="index.html#journeys">Journeys</a>
-      <a class="nav-link" href="gift.html">Gift</a>
+      <a class="nav-link" href="index.html">Journeys</a>
+      <a class="nav-link" href="hold.html">Hold</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
-      <a class="nav-link" href="expedition.html">Expedition</a>
+      <a class="nav-link" href="gift.html">Gift</a>
       <a class="nav-link" href="invoice.html">Invoice</a>
     </div>
   </header>
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Hold the dates. Draw the map later.</p>
-    <p class="price">$2,500 refundable hold</p>
-    <p class="hero-sub">A deposit that locks your window while we sketch the Escape, Crossing, or Expedition. Applied in full to the journey invoice — refundable if you cancel before planning begins.</p>
+    <p class="hero-line">Group Expedition.</p>
+    <p class="price">$45,000 flat · up to 8 travelers · 10–14 days</p>
+    <p class="hero-sub">A private group expedition designed end to end: host network, route design, and ground ops briefing. Flights are usually booked separately.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request hold invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $2,500, then hold hosts and dates for 14 days while the brief is written.</p>
-      <form id="hold-form" novalidate>
+      <h2 id="form-title">Request expedition invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $45,000 for the private group expedition, then open route design with your first brief.</p>
+      <form id="expedition-form" novalidate>
         <div class="fields">
           <label class="full">
-            Journey shape
-            <select id="shape" name="shape">
-              <option value="Escape (5–8 days)">Escape (5–8 days)</option>
-              <option value="Crossing (10–14 days)">Crossing (10–14 days)</option>
-              <option value="Expedition (16+ days)">Expedition (16+ days)</option>
+            Trip length
+            <select id="length" name="length">
+              <option value="10 days">10 days</option>
+              <option value="12 days" selected>12 days</option>
+              <option value="14 days">14 days</option>
             </select>
           </label>
           <label>
@@ -169,78 +169,83 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Preferred month
-            <input type="text" id="month" name="month" placeholder="e.g. May 2027" />
+            Group size (max 8)
+            <input type="text" id="travelers" name="travelers" placeholder="e.g. 6 adults" />
           </label>
           <label>
-            Travelers
-            <input type="text" id="travelers" name="travelers" placeholder="e.g. 2 adults" />
+            Target window
+            <input type="text" id="window" name="window" placeholder="e.g. Spring 2027" />
           </label>
           <label class="full">
-            Region preference
-            <input type="text" id="region" name="region" placeholder="Open / Amalfi / Japan / Andes" />
+            Region / route idea
+            <input type="text" id="region" name="region" placeholder="Andes / Japan / open" />
           </label>
           <label class="full">
             Notes
-            <textarea id="notes" name="notes" placeholder="Pace, hosts, constraints"></textarea>
+            <textarea id="notes" name="notes" placeholder="Pace, hosts, dietary, constraints"></textarea>
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $2,500 hold invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with hold details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $45,000 expedition invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with expedition details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Applied to the journey</strong>
-        The $2,500 hold credits your Escape / Crossing / Expedition invoice in full.
+        <strong>Host network</strong>
+        Access to Meridian’s preferred hosts and stays for a private group of up to eight.
       </div>
       <div class="rule">
-        <strong>Refundable before planning</strong>
-        Cancel before we send the first route draft and the hold is refunded.
+        <strong>Route design</strong>
+        Full 10–14 day itinerary sketched around your region, pace, and group constraints.
       </div>
       <div class="rule">
-        <strong>14-day date lock</strong>
-        After payment we hold preferred hosts and stays for two weeks while the brief locks.
+        <strong>Ground ops briefing</strong>
+        Pre-departure ops brief covering transfers, timing, and on-ground contacts.
+      </div>
+      <div class="rule">
+        <strong>Flights usually separate</strong>
+        The $45,000 flat covers planning and ground design — international flights are typically booked on your own.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Journey hold</p>
+    <p><strong>Meridian</strong> · Group Expedition</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("hold-form");
+      var form = document.getElementById("expedition-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var shape = document.getElementById("shape").value;
+        var length = document.getElementById("length").value;
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
-        var month = (document.getElementById("month").value || "").trim();
         var travelers = (document.getElementById("travelers").value || "").trim();
+        var windowVal = (document.getElementById("window").value || "").trim();
         var region = (document.getElementById("region").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
         if (!name || !email) {
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian journey hold — $2,500";
+        var subject = "Meridian Group Expedition — $45,000";
         var body =
-          "Meridian journey hold deposit request ($2,500)\n\n" +
-          "Shape: " + shape + "\n" +
+          "Meridian Group Expedition request ($45,000 flat, private group up to 8, 10–14 days)\n\n" +
+          "Trip length: " + length + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
-          "Preferred month: " + (month || "—") + "\n" +
-          "Travelers: " + (travelers || "—") + "\n" +
-          "Region: " + (region || "—") + "\n" +
+          "Group size: " + (travelers || "—") + "\n" +
+          "Target window: " + (windowVal || "—") + "\n" +
+          "Region / route: " + (region || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $2,500 hold invoice.";
+          "Please send the $45,000 Group Expedition invoice.\n" +
+          "Includes: host network, route design, ground ops briefing. Flights usually separate.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

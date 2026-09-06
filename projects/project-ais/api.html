@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI White-Label — Clinics</title>
-  <meta name="description" content="VitalAI white-label coaching portal for clinics. Custom brand, 10 seats starter pack, priority support. $499/mo or $4,999/yr." />
+  <title>VitalAI API Access</title>
+  <meta name="description" content="VitalAI API Access — Developer $99/mo or Production $999/mo. Photo analysis and coaching endpoints with rate limits by tier. Annual $990 / $9,990." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,57 +47,61 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>White-Label</p>
+        <p>API Access</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
         <a href="teams.html">Teams</a>
-        <a href="api.html">API</a>
+        <a href="whitelabel.html">White-label</a>
         <a href="subscribe.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI White-Label for clinics</h2>
+    <h2>VitalAI API Access</h2>
     <p class="lede">
-      Your brand on the coaching portal. Starter pack includes 10 seats, custom clinic branding, and priority support. Stripe when live — until then this form emails a white-label invoice request.
+      Photo analysis and coaching endpoints for your product. Developer and Production tiers with rate limits by plan. Stripe when live — until then this form emails an API invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">White-label pricing</h3>
-      <p class="hint">Clinic portal under your brand. 10 seats included in the starter pack.</p>
+      <h3 id="plans-title">API pricing</h3>
+      <p class="hint">Same endpoints; Production unlocks higher rate limits and priority support.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>White-label monthly</span><strong>$499 / mo</strong></div>
-        <div class="plan-row"><span>White-label annual</span><strong>$4,999 / yr</strong></div>
+        <div class="plan-row"><span>Developer monthly</span><strong>$99 / mo</strong></div>
+        <div class="plan-row"><span>Developer annual</span><strong>$990 / yr</strong></div>
+        <div class="plan-row"><span>Production monthly</span><strong>$999 / mo</strong></div>
+        <div class="plan-row"><span>Production annual</span><strong>$9,990 / yr</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Custom brand (logo, colors, clinic name)</li>
-        <li>10 coaching seats starter pack</li>
-        <li>Priority support</li>
+        <li>Photo analysis endpoints</li>
+        <li>Coaching / feedback endpoints</li>
+        <li>Rate limits by tier (Developer vs Production)</li>
         <li>Annual saves vs twelve monthly invoices</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request white-label invoice</h3>
-      <p class="hint">Tell us cadence and clinic details. We reply with checkout or invoice within one business day.</p>
-      <form id="whitelabel-form" novalidate>
+      <h3 id="form-title">Request API invoice</h3>
+      <p class="hint">Tell us tier and cadence. We reply with checkout or invoice within one business day.</p>
+      <form id="api-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="White-label monthly — $499/mo" selected>White-label monthly — $499/mo</option>
-              <option value="White-label annual — $4,999/yr">White-label annual — $4,999/yr</option>
+              <option value="Developer monthly — $99/mo" selected>Developer monthly — $99/mo</option>
+              <option value="Developer annual — $990/yr">Developer annual — $990/yr</option>
+              <option value="Production monthly — $999/mo">Production monthly — $999/mo</option>
+              <option value="Production annual — $9,990/yr">Production annual — $9,990/yr</option>
             </select>
           </label>
           <label>
-            Clinic / brand name
+            Product / company
             <input type="text" id="org" name="org" required autocomplete="organization" />
           </label>
           <label>
-            Extra seats (beyond 10)
-            <input type="number" id="seats" name="seats" min="0" value="0" />
+            Expected volume
+            <input type="text" id="volume" name="volume" placeholder="e.g. ~5k calls/mo" />
           </label>
           <label>
             Your name
@@ -109,31 +113,31 @@
           </label>
           <label class="full">
             Notes (optional)
-            <input type="text" id="notes" name="notes" placeholder="Brand assets, rollout date, domain, etc." />
+            <input type="text" id="notes" name="notes" placeholder="Use case, webhook URL, launch date" />
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email white-label invoice request</button>
-          <a class="btn btn-secondary" href="teams.html">Team seats</a>
+          <button class="btn" type="submit">Email API invoice request</button>
+          <a class="btn btn-secondary" href="pricing.html">Consumer pricing</a>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    White-label clinics · 10 seats included ·
+    API Access · photo analysis + coaching ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("whitelabel-form");
+      var form = document.getElementById("api-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var plan = document.getElementById("plan").value;
         var org = (document.getElementById("org").value || "").trim();
-        var seats = (document.getElementById("seats").value || "0").trim();
+        var volume = (document.getElementById("volume").value || "").trim();
         var name = (document.getElementById("name").value || "").trim();
         var email = (document.getElementById("email").value || "").trim();
         var notes = (document.getElementById("notes").value || "").trim();
@@ -141,16 +145,17 @@
           document.getElementById(!org ? "org" : !name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI White-Label — " + plan;
+        var subject = "VitalAI API Access — " + plan;
         var body =
-          "VitalAI White-Label clinic invoice request\n\n" +
+          "VitalAI API Access invoice request\n\n" +
           "Plan: " + plan + "\n" +
-          "Clinic / brand: " + org + "\n" +
-          "Extra seats beyond starter 10: " + seats + "\n" +
+          "Product / company: " + org + "\n" +
+          "Expected volume: " + (volume || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send white-label checkout or invoice.";
+          "Please send API Access checkout or invoice.\n" +
+          "Includes: photo analysis + coaching endpoints; rate limits by tier.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
