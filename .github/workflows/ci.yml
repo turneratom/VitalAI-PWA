@@ -427,6 +427,9 @@ jobs:
           test -f projects/turner-capital/percentile.html
           test -f projects/turner-biographies/src/app/leaf/page.tsx
           test -f projects/tread-affiliates/app/fednow/page.tsx
+          test -f projects/turner-capital/centile.html
+          test -f projects/turner-biographies/src/app/billet/page.tsx
+          test -f projects/tread-affiliates/app/same-day-ach/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html
