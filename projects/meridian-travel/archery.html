@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Clay Day — Meridian</title>
-  <meta name="description" content="Meridian Private Clay Day — $4,900 flat for up to 4 shooters. Instructor-led itinerary, stand brief, range plan. Range fees and transport billed separately when required." />
+  <title>Private Archery Day — Meridian</title>
+  <meta name="description" content="Meridian Private Archery Day — $4,200 flat for up to 4 archers. Coach-led itinerary, lane brief, course plan. Course fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,900;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,200;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -145,7 +145,6 @@
       <a class="nav-link" href="dive.html">Dive</a>
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
-      <a class="nav-link" href="falconry.html">Falconry</a>
       <a class="nav-link" href="clay.html">Clay</a>
       <a class="nav-link" href="archery.html">Archery</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -157,17 +156,17 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Clay Day.</p>
-    <p class="price">$4,900 flat · one day · up to 4 shooters</p>
-    <p class="hero-sub">Instructor-led clay day: stand brief, station rhythm, and range plan. Range fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Archery Day.</p>
+    <p class="price">$4,200 flat · one day · up to 4 archers</p>
+    <p class="hero-sub">Coach-led archery day: lane brief, end rhythm, and course plan. Course fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request clay day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $4,900 for Private Clay Day, then lock club, stand, and shooter count with your first brief.</p>
-      <form id="clay-form" novalidate>
+      <h2 id="form-title">Request archery day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $4,200 for Private Archery Day, then lock course, lane, and archer count with your first brief.</p>
+      <form id="archery-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred club / region
+            Preferred course / region
             <input type="text" id="city" name="region" placeholder="e.g. Bordeaux / Tuscany / Sonoma / open" />
           </label>
           <label>
@@ -196,40 +195,40 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $4,900 clay invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Clay Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $4,200 archery invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Archery Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Instructor-led clay day</strong>
-        A Meridian host for stand pacing, station decisions, and day briefings.
+        <strong>Coach-led archery day</strong>
+        A Meridian host for lane pacing, end decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Stand brief</strong>
-        Stations and lunch sequenced for the club and day you choose.
+        <strong>Lane brief</strong>
+        Ends and lunch sequenced for the course and day you choose.
       </div>
       <div class="rule">
         <strong>Day plan</strong>
-        Station timing, clubhouse access, and transfer notes for the day.
+        End timing, clubhouse access, and transfer notes for the day.
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $4,900 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $4,200 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Clay Day</p>
+    <p><strong>Meridian</strong> · Private Archery Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("clay-form");
+      var form = document.getElementById("archery-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Clay Day — $4,900";
+        var subject = "Meridian Private Archery Day — $4,200";
         var body =
-          "Meridian Private Clay Day request ($4,900 flat, one day, up to 4 shooters)\n\n" +
+          "Meridian Private Archery Day request ($4,200 flat, one day, up to 4 archers)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $4,900 Private Clay Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Range fees and transport billed separately when required.";
+          "Please send the $4,200 Private Archery Day invoice.\n" +
+          "Includes: instructor-led day, stand brief, range plan. Course fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +

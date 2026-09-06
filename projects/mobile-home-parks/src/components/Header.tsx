@@ -42,6 +42,7 @@ const navLinks = [
   { href: "/drainage", label: "Drainage Diligence $389" },
   { href: "/easement", label: "Easement Diligence $379" },
   { href: "/setbacks", label: "Setbacks Diligence $369" },
+  { href: "/pads", label: "Pads Diligence $359" },
   { href: "/analysts", label: "Analysts" },
   { href: "/banks", label: "Lenders" },
 ];
