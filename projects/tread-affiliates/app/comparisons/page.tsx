@@ -109,6 +109,9 @@ export default function ComparisonsHubPage() {
             <Link href="/podcast-ads" className="transition hover:text-signal">
               Podcast ads
             </Link>
+            <Link href="/shorts" className="transition hover:text-signal">
+              Shorts
+            </Link>
             <a
               href="#rails"
               className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white"
