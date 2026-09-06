@@ -101,6 +101,7 @@ export default function PayoutPage() {
             <Link href="/netting" className="transition hover:text-signal">Netting</Link>
             <Link href="/offset" className="transition hover:text-signal">Offset</Link>
             <Link href="/remittance" className="transition hover:text-signal">Remittance</Link>
+            <Link href="/withhold" className="transition hover:text-signal">Withhold</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Payout kit</a>
           </nav>
         </div>

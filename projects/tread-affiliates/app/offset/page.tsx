@@ -95,6 +95,7 @@ export default function OffsetPage() {
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/offset" className="transition hover:text-signal">Offset kit</Link>
             <Link href="/remittance" className="transition hover:text-signal">Remittance</Link>
+            <Link href="/withhold" className="transition hover:text-signal">Withhold</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Offset kit</a>
           </nav>
         </div>
