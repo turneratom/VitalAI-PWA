@@ -407,4 +407,9 @@ jobs:
           test -f projects/project-ais/toe.html
           test -f trailer-parks/src/app/veranda/page.tsx
           test -f projects/mobile-home-parks/src/app/veranda/page.tsx
+          test -f projects/meridian-travel/windsurfing.html
+          test -f projects/everything-films/lut-grade.html
+          test -f projects/project-ais/nail.html
+          test -f trailer-parks/src/app/breezeway/page.tsx
+          test -f projects/mobile-home-parks/src/app/breezeway/page.tsx
           echo "Offer page presence checks passed."

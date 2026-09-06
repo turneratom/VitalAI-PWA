@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitalAI Ankle Protocol</title>
-  <meta name="description" content="VitalAI Ankle Protocol — Protocol setup $7 or Ankle desk $1/mo. Ankle targets, daily ankle rhythm, weekly ankle map. Invoice via email until Stripe is live." />
+  <title>VitalAI Nail Protocol</title>
+  <meta name="description" content="VitalAI Nail Protocol — Protocol setup $1 or Nail desk $1/mo. Nail targets, daily nail rhythm, weekly nail map. Invoice via email until Stripe is live." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tools/tools.css" />
   <style>
@@ -47,7 +47,7 @@
     <div class="site-header-inner">
       <div>
         <h1><a href="index.html" style="color:white;text-decoration:none;">VitalAI</a></h1>
-        <p>Ankle Protocol</p>
+        <p>Nail Protocol</p>
       </div>
       <nav class="nav-links">
         <a href="pricing.html">Pricing</a>
@@ -74,8 +74,6 @@
         <a href="posture.html">Posture</a>
         <a href="balance.html">Balance</a>
         <a href="resilience.html">Resilience</a>
-        <a href="ankle.html">Ankle</a>
-        <a href="hip.html">Hip</a>
         <a href="knee.html">Knee</a>
         <a href="calf.html">Calf</a>
         <a href="foot.html">Foot</a>
@@ -88,36 +86,36 @@
   </header>
 
   <main class="team-wrap">
-    <h2>VitalAI Ankle Protocol</h2>
+    <h2>VitalAI Nail Protocol</h2>
     <p class="lede">
-      Ankle markers, ankle targets, and a weekly checklist — one setup, or a monthly ankle desk. Stripe when live — until then this form emails an invoice request.
+      Nail markers, nail targets, and a weekly checklist — one setup, or a monthly nail desk. Stripe when live — until then this form emails an invoice request.
     </p>
 
     <section class="team-card" aria-labelledby="plans-title">
-      <h3 id="plans-title">Ankle pricing</h3>
-      <p class="hint">One-time protocol setup, or keep a monthly ankle desk for ongoing adjustments.</p>
+      <h3 id="plans-title">Nail pricing</h3>
+      <p class="hint">One-time protocol setup, or keep a monthly nail desk for ongoing adjustments.</p>
       <div class="plan-grid">
-        <div class="plan-row"><span>Protocol setup</span><strong>$7</strong></div>
-        <div class="plan-row"><span>Ankle desk</span><strong>$1 / mo</strong></div>
+        <div class="plan-row"><span>Protocol setup</span><strong>$1</strong></div>
+        <div class="plan-row"><span>Nail desk</span><strong>$1 / mo</strong></div>
       </div>
       <ul class="perk-list">
-        <li>Ankle markers and schedule for your goals</li>
-        <li>Load / daily ankle rhythm for your week</li>
-        <li>Ankle checklist for the first two weeks</li>
-        <li>Optional monthly ankle desk</li>
+        <li>Nail markers and schedule for your goals</li>
+        <li>Load / daily nail rhythm for your week</li>
+        <li>Nail checklist for the first two weeks</li>
+        <li>Optional monthly nail desk</li>
       </ul>
     </section>
 
     <section class="team-card" aria-labelledby="form-title">
-      <h3 id="form-title">Request ankle invoice</h3>
+      <h3 id="form-title">Request nail invoice</h3>
       <p class="hint">Tell us setup vs monthly desk. We reply with checkout or invoice within one business day.</p>
-      <form id="ankle-form" novalidate>
+      <form id="nail-form" novalidate>
         <div class="fields">
           <label class="full">
             Plan
             <select id="plan" name="plan">
-              <option value="Protocol setup — $7" selected>Protocol setup — $7</option>
-              <option value="Ankle desk — $1/mo">Ankle desk — $1/mo</option>
+              <option value="Protocol setup — $1" selected>Protocol setup — $1</option>
+              <option value="Nail desk — $1/mo">Nail desk — $1/mo</option>
             </select>
           </label>
           <label>
@@ -142,21 +140,21 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn" type="submit">Email ankle invoice request</button>
+          <button class="btn" type="submit">Email nail invoice request</button>
           <a class="btn btn-secondary" href="stress.html">Stress protocol</a>
         </div>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    Ankle Protocol · setup / desk ·
+  <nailer class="site-nailer">
+    Nail Protocol · setup / desk ·
     <a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a>
-  </footer>
+  </nailer>
 
   <script>
     (function () {
-      var form = document.getElementById("ankle-form");
+      var form = document.getElementById("nail-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -170,17 +168,17 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "VitalAI Ankle Protocol — " + plan;
+        var subject = "VitalAI Nail Protocol — " + plan;
         var body =
-          "VitalAI Ankle Protocol invoice request\n\n" +
+          "VitalAI Nail Protocol invoice request\n\n" +
           "Plan: " + plan + "\n" +
           "Goal focus: " + (focus || "—") + "\n" +
           "Preferred kickoff: " + (kickoff || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
           "Notes: " + (notes || "—") + "\n\n" +
-          "Please send Ankle Protocol checkout or invoice.\n" +
-          "Includes: ankle map, ankle blocks, weekly checklist.";
+          "Please send Nail Protocol checkout or invoice.\n" +
+          "Includes: nail map, nail blocks, weekly checklist.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
