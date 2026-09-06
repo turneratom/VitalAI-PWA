@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Shuffleboard Day — Meridian</title>
-  <meta name="description" content="Meridian Private Shuffleboard Day — $2,100 flat for up to 6 players. Host-led itinerary, court brief, club plan. Court fees and transport billed separately when required." />
+  <title>Private Bowls Day — Meridian</title>
+  <meta name="description" content="Meridian Private Bowls Day — $1,950 flat for up to 6 players. Host-led itinerary, green brief, club plan. Green fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..142,100;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -146,7 +146,7 @@
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
       <a class="nav-link" href="equestrian.html">Equestrian</a>
-      <a class="nav-link" href="shuffleboard.html">Shuffleboard</a>
+      <a class="nav-link" href="bowls.html">Bowls</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
@@ -156,14 +156,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Shuffleboard Day.</p>
-    <p class="price">$2,100 flat · one day · up to 6 players</p>
-    <p class="hero-sub">Pro-led shuffleboard day: court brief, set rhythm, and club plan. Court fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Bowls Day.</p>
+    <p class="price">$1,950 flat · one day · up to 6 players</p>
+    <p class="hero-sub">Pro-led bowls day: green brief, set rhythm, and club plan. Green fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request shuffleboard day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $2,100 for Private Shuffleboard Day, then lock club, court, and player count with your first brief.</p>
-      <form id="shuffleboard-form" novalidate>
+      <h2 id="form-title">Request bowls day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $1,950 for Private Bowls Day, then lock club, green, and player count with your first brief.</p>
+      <form id="bowls-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -195,19 +195,19 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $2,100 shuffleboard invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Shuffleboard Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $1,950 bowls invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Bowls Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led shuffleboard day</strong>
-        A Meridian host for court pacing, set decisions, and day briefings.
+        <strong>Pro-led bowls day</strong>
+        A Meridian host for green pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Court brief</strong>
+        <strong>Green brief</strong>
         Sets and lunch sequenced for the club and day you choose.
       </div>
       <div class="rule">
@@ -216,19 +216,19 @@
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $2,100 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $1,950 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Shuffleboard Day</p>
+    <p><strong>Meridian</strong> · Private Bowls Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("shuffleboard-form");
+      var form = document.getElementById("bowls-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -243,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Shuffleboard Day — $2,100";
+        var subject = "Meridian Private Bowls Day — $1,950";
         var body =
-          "Meridian Private Shuffleboard Day request ($2,100 flat, one day, up to 6 players)\n\n" +
+          "Meridian Private Bowls Day request ($1,950 flat, one day, up to 6 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -253,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $2,100 Private Shuffleboard Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Court fees and transport billed separately when required.";
+          "Please send the $1,950 Private Bowls Day invoice.\n" +
+          "Includes: instructor-led day, green brief, range plan. Green fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
