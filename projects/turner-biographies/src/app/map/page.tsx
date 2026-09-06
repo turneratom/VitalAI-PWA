@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Handout Rights",
+  title: "Map Rights",
   description:
-    "License Turner Biographies / The Greatest Humans for handout — Single-title handout $1,400 or Catalog handout slate $4,200. Direct inquiry by email.",
+    "License Turner Biographies / The Greatest Humans for map — Single-title map $900 or Catalog map slate $2,700. Direct inquiry by email.",
   openGraph: {
-    title: "Handout Rights — Turner Biographies",
-    description: "Single-title handout $1,400 · Catalog handout slate $4,200.",
+    title: "Map Rights — Turner Biographies",
+    description: "Single-title map $900 · Catalog map slate $2,700.",
     type: "website",
   },
 };
@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const packages = [
   {
     tag: "Title",
-    title: "Single-title handout",
-    price: "$1,400",
+    title: "Single-title map",
+    price: "$900",
     detail:
-      "Rights to license one Firebrand / Greatest Humans title as a handout — territory, term, and exclusivity set in the agreement.",
-    href: "mailto:brad@treadcompanies.com?subject=Handout%20rights%20single-title%20%241%2C400&body=I%20want%20Single-title%20handout%20rights%20(%241%2C400).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License title — $1,400",
+      "Rights to license one Firebrand / Greatest Humans title as a map — territory, term, and exclusivity set in the agreement.",
+    href: "mailto:brad@treadcompanies.com?subject=Map%20rights%20single-title%20%24900&body=I%20want%20Single-title%20map%20rights%20(%24900).%0A%0ATitle%3A%0AFormat%20%2F%20modules%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License title — $900",
   },
   {
     tag: "Slate",
-    title: "Catalog handout slate",
-    price: "$4,200",
+    title: "Catalog map slate",
+    price: "$2,700",
     detail:
-      "Multi-title or multi-issue handout slate across Firebrand / Greatest Humans — one agreement for a broader handout slate.",
-    href: "mailto:brad@treadcompanies.com?subject=Handout%20rights%20catalog%20slate%20%244%2C200&body=I%20want%20Catalog%20handout%20slate%20rights%20(%244%2C200).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
-    cta: "License slate — $4,200",
+      "Multi-title or multi-issue map slate across Firebrand / Greatest Humans — one agreement for a broader map slate.",
+    href: "mailto:brad@treadcompanies.com?subject=Map%20rights%20catalog%20slate%20%242%2C700&body=I%20want%20Catalog%20map%20slate%20rights%20(%242%2C700).%0A%0ATitles%20%2F%20slate%3A%0AModules%20planned%3A%0AWindow%3A%0AName%3A%0AEmail%3A%0A",
+    cta: "License slate — $2,700",
   },
 ];
 
-export default function HandoutPage() {
+export default function MapPage() {
   return (
     <div className="bg-ink text-bone">
       <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_82%_10%,rgba(154,52,44,0.28),transparent_45%),linear-gradient(180deg,#1c222b,#12151a)]">
@@ -42,10 +42,10 @@ export default function HandoutPage() {
             Turner Biographies · The Greatest Humans
           </p>
           <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] md:text-7xl">
-            Handout Rights
+            Map Rights
           </h1>
           <p className="mt-5 max-w-xl text-lg text-bone/80">
-            Run and slate handout licensing for Firebrand and The Greatest Humans —
+            Run and slate map licensing for Firebrand and The Greatest Humans —
             from rights memo to issue schedule.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 font-[family-name:var(--font-ui)] text-sm">
@@ -54,15 +54,6 @@ export default function HandoutPage() {
             </a>
             <Link href="/worksheet" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Worksheet
-            </Link>
-            <Link href="/poster" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Poster
-            </Link>
-            <Link href="/bookmark" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Bookmark
-            </Link>
-            <Link href="/map" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
-              Map
             </Link>
             <Link href="/reprint" className="border border-bone/30 px-5 py-3 uppercase tracking-[0.16em] hover:border-brass hover:text-brass">
               Reprint
@@ -81,7 +72,7 @@ export default function HandoutPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <p className="font-[family-name:var(--font-ui)] text-xs uppercase tracking-[0.28em] text-brass">Packages</p>
           <h2 className="mt-4 max-w-xl font-[family-name:var(--font-display)] text-3xl md:text-5xl">
-            Two handout tracks.
+            Two map tracks.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bone/75">
             Email brad@treadcompanies.com for invoice and rights memo. Title, issues,
@@ -107,7 +98,7 @@ export default function HandoutPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
             <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl">Need worksheet instead?</h2>
-            <p className="mt-2 max-w-xl text-bone/70">Handout covers week-by-session plans. Classroom covers teacher packs.</p>
+            <p className="mt-2 max-w-xl text-bone/70">Map covers week-by-session plans. Classroom covers teacher packs.</p>
           </div>
           <Link href="/workbook" className="inline-flex border border-bone/30 px-5 py-3 font-[family-name:var(--font-ui)] text-sm uppercase tracking-[0.16em] hover:border-brass hover:text-brass">Workbook
           </Link>

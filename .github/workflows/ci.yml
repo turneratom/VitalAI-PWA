@@ -233,4 +233,7 @@ jobs:
           test -f projects/everything-films/broll.html
           test -f projects/project-ais/caffeine.html
           test -f trailer-parks/src/app/signage/page.tsx
+          test -f projects/turner-capital/speed.html
+          test -f projects/turner-biographies/src/app/map/page.tsx
+          test -f projects/tread-affiliates/app/nurture/page.tsx
           echo "Offer page presence checks passed."

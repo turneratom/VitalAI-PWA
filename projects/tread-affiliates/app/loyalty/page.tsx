@@ -89,6 +89,7 @@ export default function LoyaltyPage() {
             <Link href="/loyalty" className="transition hover:text-signal">Loyalty kit</Link>
             <Link href="/referral" className="transition hover:text-signal">Referral</Link>
             <Link href="/winback" className="transition hover:text-signal">Winback</Link>
+            <Link href="/nurture" className="transition hover:text-signal">Nurture</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Loyalty kit</a>
           </nav>
         </div>

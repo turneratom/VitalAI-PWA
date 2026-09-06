@@ -180,6 +180,9 @@ export default function HomePage() {
             <a href="/winback" className="transition hover:text-signal">
               Winback
             </a>
+            <a href="/nurture" className="transition hover:text-signal">
+              Nurture
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>
