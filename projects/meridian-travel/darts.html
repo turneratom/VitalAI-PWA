@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Billiards Day — Meridian</title>
-  <meta name="description" content="Meridian Private Billiards Day — $2,400 flat for up to 6 players. Host-led itinerary, table brief, club plan. Table fees and transport billed separately when required." />
+  <title>Private Darts Day — Meridian</title>
+  <meta name="description" content="Meridian Private Darts Day — $1,800 flat for up to 6 players. Host-led itinerary, board brief, club plan. Board fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..142,400;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="styletable" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..141,800;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="styleboard" />
   <style>
     :root {
       --ink: #0c2430;
@@ -146,8 +146,7 @@
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
       <a class="nav-link" href="equestrian.html">Equestrian</a>
-      <a class="nav-link" href="billiards.html">Billiards</a>
-      <a class="nav-text" href="darts.html">Darts</a>
+      <a class="nav-link" href="darts.html">Darts</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
       <a class="nav-link" href="expedition.html">Expedition</a>
       <a class="nav-link" href="gift.html">Gift</a>
@@ -157,14 +156,14 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Billiards Day.</p>
-    <p class="price">$2,400 flat · one day · up to 6 players</p>
-    <p class="hero-sub">Pro-led billiards day: table brief, set rhythm, and club plan. Table fees and private transport billed separately when the club requires them.</p>
+    <p class="hero-line">Private Darts Day.</p>
+    <p class="price">$1,800 flat · one day · up to 6 players</p>
+    <p class="hero-sub">Pro-led darts day: board brief, set rhythm, and club plan. Board fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request billiards day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $2,400 for Private Billiards Day, then lock club, table, and player count with your first brief.</p>
-      <form id="billiards-form" novalidate>
+      <h2 id="form-title">Request darts day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $1,800 for Private Darts Day, then lock club, board, and player count with your first brief.</p>
+      <form id="darts-form" novalidate>
         <div class="fields">
           <label class="full">
             Preferred club / region
@@ -196,19 +195,19 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $2,400 billiards invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Billiards Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $1,800 darts invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Darts Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Pro-led billiards day</strong>
-        A Meridian host for table pacing, set decisions, and day briefings.
+        <strong>Pro-led darts day</strong>
+        A Meridian host for board pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>Table brief</strong>
+        <strong>Board brief</strong>
         Sets and lunch sequenced for the club and day you choose.
       </div>
       <div class="rule">
@@ -217,19 +216,19 @@
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $2,400 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $1,800 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Billiards Day</p>
+    <p><strong>Meridian</strong> · Private Darts Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("billiards-form");
+      var form = document.getElementById("darts-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Billiards Day — $2,400";
+        var subject = "Meridian Private Darts Day — $1,800";
         var body =
-          "Meridian Private Billiards Day request ($2,400 flat, one day, up to 6 players)\n\n" +
+          "Meridian Private Darts Day request ($1,800 flat, one day, up to 6 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $2,400 Private Billiards Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Table fees and transport billed separately when required.";
+          "Please send the $1,800 Private Darts Day invoice.\n" +
+          "Includes: instructor-led day, stand brief, range plan. Board fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
