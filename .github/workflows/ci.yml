@@ -434,14 +434,17 @@ jobs:
           test -f projects/turner-capital/grade.html
           test -f projects/turner-capital/tier.html
           test -f projects/turner-capital/band.html
+          test -f projects/turner-capital/stratum.html
           test -f projects/turner-biographies/src/app/card/page.tsx
           test -f projects/turner-biographies/src/app/slip/page.tsx
           test -f projects/turner-biographies/src/app/ticket/page.tsx
           test -f projects/turner-biographies/src/app/stub/page.tsx
+          test -f projects/turner-biographies/src/app/chit/page.tsx
           test -f projects/tread-affiliates/app/instant-pay/page.tsx
           test -f projects/tread-affiliates/app/push-pay/page.tsx
           test -f projects/tread-affiliates/app/fast-pay/page.tsx
           test -f projects/tread-affiliates/app/express-pay/page.tsx
+          test -f projects/tread-affiliates/app/zelle/page.tsx
           test -f projects/meridian-travel/kayaking.html
           test -f projects/everything-films/mood-board.html
           test -f projects/project-ais/knee.html

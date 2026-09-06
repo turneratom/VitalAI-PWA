@@ -309,6 +309,9 @@ export default function HomePage() {
             <a href="/express-pay" className="transition hover:text-signal">
               Express-Pay
             </a>
+            <a href="/zelle" className="transition hover:text-signal">
+              Zelle
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

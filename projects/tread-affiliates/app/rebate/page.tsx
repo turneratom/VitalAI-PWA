@@ -116,6 +116,7 @@ export default function RebatePage() {
             <Link href="/push-pay" className="transition hover:text-signal">Push-Pay</Link>
             <Link href="/fast-pay" className="transition hover:text-signal">Fast-Pay</Link>
             <Link href="/express-pay" className="transition hover:text-signal">Express-Pay</Link>
+            <Link href="/zelle" className="transition hover:text-signal">Zelle</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Rebate kit</a>
           </nav>
         </div>
