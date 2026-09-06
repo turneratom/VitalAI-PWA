@@ -159,6 +159,9 @@ export default function HomePage() {
             <a href="/funnel-kit" className="transition hover:text-signal">
               Funnel kit
             </a>
+            <a href="/retarget" className="transition hover:text-signal">
+              Retarget
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

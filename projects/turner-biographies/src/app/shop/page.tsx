@@ -245,6 +245,12 @@ export default function ShopPage() {
               Answer key · from $3,500
             </Link>
             <Link
+              href="/rubric"
+              className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
+            >
+              Rubric · from $2,500
+            </Link>
+            <Link
               href="/estate"
               className="border border-ink/25 px-4 py-2.5 text-ink transition hover:border-seal hover:text-seal"
             >

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Influencer Desk — Tread Affiliates",
+  title: "Affiliate Retarget Kit — Tread Affiliates",
   description:
-    "Affiliate Influencer Desk — one-time sprint $2,500 or monthly Influencer desk $950/mo. Influencer plan, talent mix, brief pairing. Invoice by email.",
+    "Affiliate Retarget Kit — one-time sprint $1,200 or monthly Retarget kit $475/mo. Retarget plan, audience mix, audience pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Influencer Desk — Tread Affiliates",
-    description: "Sprint $2,500 · Monthly desk $950/mo. Influencer plan, talent mix, brief pairing.",
+    title: "Affiliate Retarget Kit — Tread Affiliates",
+    description: "Sprint $1,200 · Monthly desk $475/mo. Retarget plan, audience mix, audience pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Influencer desk",
-    price: "$2,500",
+    title: "Retarget kit",
+    price: "$1,200",
     cadence: " one-time",
     points: [
-      "Influencer plan across your primary rails",
+      "Retarget plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Influencer execution checklist",
+      "30-day Retarget kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Influencer desk — $2,500",
-      "I want an Affiliate Influencer desk ($2,500).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Retarget kit — $1,200",
+      "I want an Affiliate Retarget kit ($1,200).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $2,500",
+    cta: "Request sprint — $1,200",
   },
   {
     tag: "Desk",
-    title: "Monthly Influencer desk",
-    price: "$950",
+    title: "Monthly Retarget kit",
+    price: "$475",
     cadence: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Influencer and ROAS review",
+      "Monthly Retarget kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Influencer desk — $950/mo",
-      "I want a Monthly Influencer desk ($950/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates Retarget kit — $475/mo",
+      "I want a Monthly Retarget kit ($475/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request desk — $950/mo",
+    cta: "Request desk — $475/mo",
   },
 ];
 
-export default function InfluencerPage() {
+export default function RetargetPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -77,15 +77,15 @@ export default function InfluencerPage() {
             <Link href="/podcast-ads" className="transition hover:text-signal">Podcast ads</Link>
             <Link href="/shorts" className="transition hover:text-signal">Shorts</Link>
             <Link href="/ugc" className="transition hover:text-signal">UGC</Link>
-            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
             <Link href="/influencer" className="transition hover:text-signal">Influencer</Link>
             <Link href="/seeding" className="transition hover:text-signal">Seeding</Link>
             <Link href="/creator-kit" className="transition hover:text-signal">Creator kit</Link>
             <Link href="/brand-kit" className="transition hover:text-signal">Brand kit</Link>
             <Link href="/landing-kit" className="transition hover:text-signal">Landing kit</Link>
             <Link href="/funnel-kit" className="transition hover:text-signal">Funnel kit</Link>
-            <Link href="/retarget" className="transition hover:text-signal">Retarget</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Influencer</a>
+            <Link href="/cro" className="transition hover:text-signal">CRO</Link>
+            <Link href="/retarget" className="transition hover:text-signal">Retarget kit</Link>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Retarget kit</a>
           </nav>
         </div>
       </header>
@@ -93,17 +93,17 @@ export default function InfluencerPage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Influencer</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Retarget kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Influencer packages that convert comparison-rail traffic — not vanity posts.
+            Retarget kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: influencer plan, talent mix, and brief pairing.
+            One-time sprint or monthly desk: retarget plan, audience mix, and audience pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Influencer packages
+              See Retarget kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -115,7 +115,7 @@ export default function InfluencerPage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Influencer desk.
+          Sprint once, or keep a monthly Retarget kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (
