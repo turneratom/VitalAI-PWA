@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Wire Kit — Tread Affiliates",
+  title: "Affiliate ACH Kit — Tread Affiliates",
   description:
-    "Affiliate Wire Kit — one-time sprint $5 or monthly Wire kit $1/mo. Wire plan, Wire mix, Wire pairing. Invoice by email.",
+    "Affiliate ACH Kit — one-time sprint $4 or monthly ACH kit $1/mo. ACH plan, ACH mix, ACH pairing. Invoice by email.",
   openGraph: {
-    title: "Affiliate Wire Kit — Tread Affiliates",
-    description: "Sprint $5 · Monthly desk $1/mo. Wire plan, Wire mix, Wire pairing.",
+    title: "Affiliate ACH Kit — Tread Affiliates",
+    description: "Sprint $4 · Monthly desk $1/mo. ACH plan, ACH mix, ACH pairing.",
     type: "website",
   },
 };
@@ -18,41 +18,41 @@ const MAIL = (subject: string, body: string) =>
 const packages = [
   {
     tag: "Sprint",
-    title: "Wire kit",
-    price: "$5",
+    title: "ACH kit",
+    price: "$4",
     period: " one-time",
     points: [
-      "Wire plan across your primary rails",
+      "ACH plan across your primary rails",
       "Creator mix and post bands for primary funnels",
       "Creative-to-creator pairing notes",
-      "30-day Wire kit execution checklist",
+      "30-day ACH kit execution checklist",
     ],
     href: MAIL(
-      "Tread Affiliates Wire kit — $5",
-      "I want an Affiliate Wire kit ($5).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates ACH kit — $4",
+      "I want an Affiliate ACH kit ($4).\n\nBrand / site:\nPrimary rails:\nName:\nEmail:\n\nPlease send invoice."
     ),
-    cta: "Request sprint — $5",
+    cta: "Request sprint — $4",
   },
   {
     tag: "Desk",
-    title: "Monthly Wire kit",
+    title: "Monthly ACH kit",
     price: "$1",
     period: "/mo",
     points: [
       "Everything in the sprint, ongoing",
-      "Monthly Wire kit and ROAS review",
+      "Monthly ACH kit and ROAS review",
       "Two new creator or creative swaps per month",
       "Priority Slack/email desk",
     ],
     href: MAIL(
-      "Tread Affiliates Wire kit — $1/mo",
-      "I want a Monthly Wire kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
+      "Tread Affiliates ACH kit — $1/mo",
+      "I want a Monthly ACH kit ($1/mo).\n\nBrand / site:\nPrimary rails:\nPreferred start:\nName:\nEmail:\n\nPlease send invoice."
     ),
     cta: "Request desk — $1/mo",
   },
 ];
 
-export default function WirePage() {
+export default function AchPage() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="border-b border-line bg-ink text-white">
@@ -95,7 +95,7 @@ export default function WirePage() {
             <Link href="/recoup" className="transition hover:text-signal">Recoup</Link>
             <Link href="/wire" className="transition hover:text-signal">Wire kit</Link>
             <Link href="/ach" className="transition hover:text-signal">ACH kit</Link>
-            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Wire kit</a>
+            <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">ACH kit</a>
           </nav>
         </div>
       </header>
@@ -103,17 +103,17 @@ export default function WirePage() {
       <section className="relative overflow-hidden bg-ink text-white">
         <div className="pointer-events-none absolute -right-16 top-8 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · Wire kit</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Tread Affiliates · ACH kit</p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Wire kit packages that convert comparison-rail traffic — not vanity posts.
+            ACH kit packages that convert comparison-rail traffic — not vanity posts.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            One-time sprint or monthly desk: Wire plan, Wire mix, and Wire pairing.
+            One-time sprint or monthly desk: ACH plan, ACH mix, and ACH pairing.
             Invoice by email until Stripe is live.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#packages" className="inline-flex rounded-sm bg-signal px-5 py-3 text-sm font-bold uppercase tracking-wider text-ink transition hover:bg-white">
-              See Wire kit packages
+              See ACH kit packages
             </a>
             <Link href="/comparisons" className="inline-flex border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-signal hover:text-signal">
               View rails
@@ -125,7 +125,7 @@ export default function WirePage() {
       <section id="packages" className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-signal">Packages</p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-          Sprint once, or keep a monthly Wire kit.
+          Sprint once, or keep a monthly ACH kit.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {packages.map((pkg) => (

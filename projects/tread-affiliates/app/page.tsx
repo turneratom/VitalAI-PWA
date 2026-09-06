@@ -285,6 +285,9 @@ export default function HomePage() {
             <a href="/wire" className="transition hover:text-signal">
               Wire
             </a>
+            <a href="/ach" className="transition hover:text-signal">
+              ACH
+            </a>
             <a href="/placement" className="transition hover:text-signal">
               Placement
             </a>

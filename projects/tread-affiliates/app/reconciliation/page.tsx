@@ -107,6 +107,7 @@ export default function ReconciliationPage() {
 <Link href="/remittal" className="transition hover:text-signal">Remittal</Link>
 <Link href="/transfer" className="transition hover:text-signal">Transfer</Link>
 <Link href="/wire" className="transition hover:text-signal">Wire</Link>
+            <Link href="/ach" className="transition hover:text-signal">ACH</Link>
             <a href="#packages" className="rounded-sm bg-signal px-3 py-1.5 font-semibold text-ink transition hover:bg-white">Reconciliation kit</a>
           </nav>
         </div>
