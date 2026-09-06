@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Equestrian Day — Meridian</title>
-  <meta name="description" content="Meridian Private Equestrian Day — $5,800 flat for up to 2 riders. Instructor-led itinerary, school brief, yard plan. Yard fees and transport billed separately when required." />
+  <title>Private Tennis Day — Meridian</title>
+  <meta name="description" content="Meridian Private Tennis Day — $3,900 flat for up to 4 players. Pro-led itinerary, court brief, club plan. Court fees and transport billed separately when required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..145,800;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..143,900;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c2430;
@@ -145,7 +145,6 @@
       <a class="nav-link" href="dive.html">Dive</a>
       <a class="nav-link" href="opera.html">Opera</a>
       <a class="nav-link" href="polo.html">Polo</a>
-      <a class="nav-link" href="archery.html">Archery</a>
       <a class="nav-link" href="equestrian.html">Equestrian</a>
       <a class="nav-link" href="tennis.html">Tennis</a>
       <a class="nav-link" href="retainer.html">Retainer</a>
@@ -157,17 +156,17 @@
 
   <main class="wrap">
     <h1 class="hero-brand">Meridian</h1>
-    <p class="hero-line">Private Equestrian Day.</p>
-    <p class="price">$5,800 flat · one day · up to 2 riders</p>
-    <p class="hero-sub">Instructor-led equestrian day: school brief, ride rhythm, and yard plan. Yard fees and private transport billed separately when the stable requires them.</p>
+    <p class="hero-line">Private Tennis Day.</p>
+    <p class="price">$3,900 flat · one day · up to 4 players</p>
+    <p class="hero-sub">Pro-led tennis day: court brief, set rhythm, and club plan. Court fees and private transport billed separately when the club requires them.</p>
 
     <section class="panel" aria-labelledby="form-title">
-      <h2 id="form-title">Request equestrian day invoice</h2>
-      <p class="panel-lead">No card form yet. We invoice $5,800 for Private Equestrian Day, then lock stable, mount, and rider count with your first brief.</p>
-      <form id="equestrian-form" novalidate>
+      <h2 id="form-title">Request tennis day invoice</h2>
+      <p class="panel-lead">No card form yet. We invoice $3,900 for Private Tennis Day, then lock club, court, and player count with your first brief.</p>
+      <form id="tennis-form" novalidate>
         <div class="fields">
           <label class="full">
-            Preferred stable / region
+            Preferred club / region
             <input type="text" id="city" name="region" placeholder="e.g. Bordeaux / Tuscany / Sonoma / open" />
           </label>
           <label>
@@ -196,40 +195,40 @@
           </label>
         </div>
         <div class="actions">
-          <button class="btn btn-sea" type="submit">Email $5,800 equestrian invoice</button>
-          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Equestrian Day details filled.</p>
+          <button class="btn btn-sea" type="submit">Email $3,900 tennis invoice</button>
+          <p class="hint">Opens mailto to brad@treadcompanies.com with Private Tennis Day details filled.</p>
         </div>
       </form>
     </section>
 
     <div class="rules">
       <div class="rule">
-        <strong>Instructor-led equestrian day</strong>
-        A Meridian host for school pacing, ride decisions, and day briefings.
+        <strong>Pro-led tennis day</strong>
+        A Meridian host for court pacing, set decisions, and day briefings.
       </div>
       <div class="rule">
-        <strong>School brief</strong>
-        Rides and lunch sequenced for the yard and day you choose.
+        <strong>Court brief</strong>
+        Sets and lunch sequenced for the club and day you choose.
       </div>
       <div class="rule">
         <strong>Day plan</strong>
-        Ride timing, tack-room access, and transfer notes for the day.
+        Set timing, clubhouse access, and transfer notes for the day.
       </div>
       <div class="rule">
         <strong>Cellar fees & transport separate</strong>
-        The $5,800 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
+        The $3,900 flat covers Meridian host and design. Cellar fees and private transport are invoiced separately when required.
       </div>
     </div>
   </main>
 
   <footer>
-    <p><strong>Meridian</strong> · Private Equestrian Day</p>
+    <p><strong>Meridian</strong> · Private Tennis Day</p>
     <p><a href="mailto:brad@treadcompanies.com">brad@treadcompanies.com</a></p>
   </footer>
 
   <script>
     (function () {
-      var form = document.getElementById("equestrian-form");
+      var form = document.getElementById("tennis-form");
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -244,9 +243,9 @@
           document.getElementById(!name ? "name" : "email").focus();
           return;
         }
-        var subject = "Meridian Private Equestrian Day — $5,800";
+        var subject = "Meridian Private Tennis Day — $3,900";
         var body =
-          "Meridian Private Equestrian Day request ($5,800 flat, one day, up to 2 riders)\n\n" +
+          "Meridian Private Tennis Day request ($3,900 flat, one day, up to 4 players)\n\n" +
           "Cellar: " + (region || "—") + "\n" +
           "Name: " + name + "\n" +
           "Email: " + email + "\n" +
@@ -254,8 +253,8 @@
           "Target day: " + (windowVal || "—") + "\n" +
           "Occasion: " + (tone || "—") + "\n" +
           "Notes:\n" + (notes || "—") + "\n\n" +
-          "Please send the $5,800 Private Equestrian Day invoice.\n" +
-          "Includes: instructor-led day, stand brief, range plan. Yard fees and transport billed separately when required.";
+          "Please send the $3,900 Private Tennis Day invoice.\n" +
+          "Includes: instructor-led day, stand brief, range plan. Court fees and transport billed separately when required.";
         window.location.href =
           "mailto:brad@treadcompanies.com?subject=" +
           encodeURIComponent(subject) +
