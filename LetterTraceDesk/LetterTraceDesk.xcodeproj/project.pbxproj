@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9D054B91AFBA29C86338FA0 /* LetterTraceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD715AC0B8ED14C37DE83F7 /* LetterTraceDeskApp.swift */; };
+		B925F019179779232992CA16 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B78A3A65F19CF35AD8EEFC /* AppTheme.swift */; };
+		3E66964BA5050F6E6272A0A1 /* LetterCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E675F2F363BBC0DFDA7AF1FB /* LetterCatalog.swift */; };
+		FE2D6591366F0FE72CED61D3 /* SessionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47CC48BE8B3E60FC8077D6 /* SessionPlan.swift */; };
+		488D0756B072656C6FAC2079 /* ParentGateChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F691347F53AB2E0914A5D02 /* ParentGateChallenge.swift */; };
+		D22B9F96439479837280A42D /* TraceCoverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9A7469DB7BF3F5556AE27 /* TraceCoverage.swift */; };
+		3EC5D75E1B7B96805DD6BE90 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA96A134CB31E908F0BB114 /* AppSettings.swift */; };
+		DADB3466373DB23CE311CB4F /* DeskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83727EFE554346EC9F38DE0D /* DeskModel.swift */; };
+		0D16597DDDE3A8B94D9BA654 /* UnlockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771CEBC95BE04517F9277E /* UnlockStore.swift */; };
+		C3309EFD64C1A60A69E68803 /* LetterSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE78F34A98465228524FD9 /* LetterSpeaker.swift */; };
+		3FC96DCB164552AA1DDFC9DA /* LetterGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F807CDA911AB92868B98051 /* LetterGlyph.swift */; };
+		BC9A369D8C0F2D98A64F1FA7 /* TraceCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8431963C17A4E7AA0D75C2 /* TraceCanvas.swift */; };
+		AEB96EEFEB483E1D5867731F /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0D89AC29ABB85C8EDB4983 /* Components.swift */; };
+		322B4CB09585414F12413DC8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898B89F61E1F6D219CB0685C /* WelcomeView.swift */; };
+		00B68B286414E51F0158913E /* PickLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E0D0C15B50CD740D8BCA4 /* PickLettersView.swift */; };
+		1C805637784CF6ED3B75252A /* TraceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C9139206635515CC7943C /* TraceView.swift */; };
+		21A50FD2BA1067CD86504CDD /* DoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697AAD47D5325F7EA9D25E2 /* DoneView.swift */; };
+		8375944F16CC266362ACFC70 /* ParentGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A490E0AC1D94082F53D1C /* ParentGateView.swift */; };
+		EAA02B42C1B54272B470881B /* ParentSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0D430FDF130EFFC8633C3 /* ParentSettingsView.swift */; };
+		E422A53749A7F817F6E0E801 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443CC607FFB8D79FAF95EFA /* UnlockView.swift */; };
+		E9C05FD96CC917806B052068 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB1CBEBE3E0A2FE79E2707 /* RootView.swift */; };
+		97125C7839AE068CEAF335BB /* LetterCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE091EFD72AA9786F54FF33 /* LetterCatalogTests.swift */; };
+		23B5357E2C182A0571D91F01 /* SessionPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB399A03CF08ACE56F089E /* SessionPlanTests.swift */; };
+		FF6B2DB5F0860668B41BE9EF /* ParentGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414E477E541A87F844D19F8 /* ParentGateTests.swift */; };
+		1082BE09FC0E57111D18DD5C /* TraceCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B28162C704FCD68AB2EB7B /* TraceCoverageTests.swift */; };
+		FB17D9EC0CDE596C786677E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF1E2377F202F09544F371A /* Assets.xcassets */; };
+		DFEC229E1BCF6C90DBBE7FD0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 21F9E52D3AE86A4D74F1E313 /* PrivacyInfo.xcprivacy */; };
+		267B9B9A93374EBFB8C0EF59 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A35896EAE3C84F505C871F3 /* StoreKit.framework */; };
+		0A18F27F7A0C291D2E3D732A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7140BC0377C1A46D787B5D5 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA2F7AAB31FF389214CBB455 /* LetterTraceDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterTraceDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC14B7E372497FDF03C2E58D /* LetterTraceDeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetterTraceDeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD715AC0B8ED14C37DE83F7 /* LetterTraceDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTraceDeskApp.swift; sourceTree = "<group>"; };
+		30B78A3A65F19CF35AD8EEFC /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E675F2F363BBC0DFDA7AF1FB /* LetterCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCatalog.swift; sourceTree = "<group>"; };
+		AD47CC48BE8B3E60FC8077D6 /* SessionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlan.swift; sourceTree = "<group>"; };
+		5F691347F53AB2E0914A5D02 /* ParentGateChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateChallenge.swift; sourceTree = "<group>"; };
+		3FE9A7469DB7BF3F5556AE27 /* TraceCoverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceCoverage.swift; sourceTree = "<group>"; };
+		2EA96A134CB31E908F0BB114 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		83727EFE554346EC9F38DE0D /* DeskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskModel.swift; sourceTree = "<group>"; };
+		2A771CEBC95BE04517F9277E /* UnlockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockStore.swift; sourceTree = "<group>"; };
+		E8BE78F34A98465228524FD9 /* LetterSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterSpeaker.swift; sourceTree = "<group>"; };
+		9F807CDA911AB92868B98051 /* LetterGlyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterGlyph.swift; sourceTree = "<group>"; };
+		9B8431963C17A4E7AA0D75C2 /* TraceCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceCanvas.swift; sourceTree = "<group>"; };
+		EA0D89AC29ABB85C8EDB4983 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		898B89F61E1F6D219CB0685C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F34E0D0C15B50CD740D8BCA4 /* PickLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLettersView.swift; sourceTree = "<group>"; };
+		DC3C9139206635515CC7943C /* TraceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceView.swift; sourceTree = "<group>"; };
+		9697AAD47D5325F7EA9D25E2 /* DoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneView.swift; sourceTree = "<group>"; };
+		173A490E0AC1D94082F53D1C /* ParentGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateView.swift; sourceTree = "<group>"; };
+		4BB0D430FDF130EFFC8633C3 /* ParentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSettingsView.swift; sourceTree = "<group>"; };
+		3443CC607FFB8D79FAF95EFA /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		F9FB1CBEBE3E0A2FE79E2707 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4FF1E2377F202F09544F371A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21F9E52D3AE86A4D74F1E313 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		64738FF931FCFA22A4A71442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B446B11E3B2B57F6752079 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		2EE091EFD72AA9786F54FF33 /* LetterCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCatalogTests.swift; sourceTree = "<group>"; };
+		84DB399A03CF08ACE56F089E /* SessionPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlanTests.swift; sourceTree = "<group>"; };
+		D414E477E541A87F844D19F8 /* ParentGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateTests.swift; sourceTree = "<group>"; };
+		14B28162C704FCD68AB2EB7B /* TraceCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceCoverageTests.swift; sourceTree = "<group>"; };
+		1A35896EAE3C84F505C871F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A7140BC0377C1A46D787B5D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		F533B9384566AEE47E3F7CAF /* LetterTraceDesk */ = {
+			isa = PBXGroup;
+			children = (
+				63FA6C4BFABDAD75DFEC49E8 /* LetterTraceDesk */,
+				9C47EA28DEC99BF0FAECFCB1 /* LetterTraceDeskTests */,
+				89B446B11E3B2B57F6752079 /* Configuration.storekit */,
+				AFC371B902A6F8F5CE8AEB18 /* Frameworks */,
+				D450CADF4291D3EA386E7FDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D450CADF4291D3EA386E7FDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA2F7AAB31FF389214CBB455 /* LetterTraceDesk.app */,
+				BC14B7E372497FDF03C2E58D /* LetterTraceDeskTests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		AFC371B902A6F8F5CE8AEB18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A35896EAE3C84F505C871F3 /* StoreKit.framework */,
+				A7140BC0377C1A46D787B5D5 /* AVFoundation.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		63FA6C4BFABDAD75DFEC49E8 /* LetterTraceDesk */ = {
+			isa = PBXGroup;
+			children = (
+				5AD715AC0B8ED14C37DE83F7 /* LetterTraceDeskApp.swift */,
+				AD4256DB8D2255F612EEE50F /* Theme */,
+				7CED3A4B7B769E0B9808F0F6 /* Models */,
+				952F0B78A89634D0AA5338C4 /* Store */,
+				4C5F17CB9DCF5F608E3359D4 /* Speech */,
+				A87B81CAB40AF727C1D940BE /* Tracing */,
+				C6710147EB8B52E8E3E9EBDA /* Views */,
+				4FF1E2377F202F09544F371A /* Assets.xcassets */,
+				21F9E52D3AE86A4D74F1E313 /* PrivacyInfo.xcprivacy */,
+				64738FF931FCFA22A4A71442 /* Info.plist */,
+			);
+			path = LetterTraceDesk;
+			sourceTree = "<group>";
+		};
+		AD4256DB8D2255F612EEE50F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				30B78A3A65F19CF35AD8EEFC /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		7CED3A4B7B769E0B9808F0F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E675F2F363BBC0DFDA7AF1FB /* LetterCatalog.swift */,
+				AD47CC48BE8B3E60FC8077D6 /* SessionPlan.swift */,
+				5F691347F53AB2E0914A5D02 /* ParentGateChallenge.swift */,
+				3FE9A7469DB7BF3F5556AE27 /* TraceCoverage.swift */,
+				2EA96A134CB31E908F0BB114 /* AppSettings.swift */,
+				83727EFE554346EC9F38DE0D /* DeskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		952F0B78A89634D0AA5338C4 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2A771CEBC95BE04517F9277E /* UnlockStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		4C5F17CB9DCF5F608E3359D4 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				E8BE78F34A98465228524FD9 /* LetterSpeaker.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		A87B81CAB40AF727C1D940BE /* Tracing */ = {
+			isa = PBXGroup;
+			children = (
+				9F807CDA911AB92868B98051 /* LetterGlyph.swift */,
+				9B8431963C17A4E7AA0D75C2 /* TraceCanvas.swift */,
+			);
+			path = Tracing;
+			sourceTree = "<group>";
+		};
+		C6710147EB8B52E8E3E9EBDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA0D89AC29ABB85C8EDB4983 /* Components.swift */,
+				898B89F61E1F6D219CB0685C /* WelcomeView.swift */,
+				F34E0D0C15B50CD740D8BCA4 /* PickLettersView.swift */,
+				DC3C9139206635515CC7943C /* TraceView.swift */,
+				9697AAD47D5325F7EA9D25E2 /* DoneView.swift */,
+				173A490E0AC1D94082F53D1C /* ParentGateView.swift */,
+				4BB0D430FDF130EFFC8633C3 /* ParentSettingsView.swift */,
+				3443CC607FFB8D79FAF95EFA /* UnlockView.swift */,
+				F9FB1CBEBE3E0A2FE79E2707 /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C47EA28DEC99BF0FAECFCB1 /* LetterTraceDeskTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EE091EFD72AA9786F54FF33 /* LetterCatalogTests.swift */,
+				84DB399A03CF08ACE56F089E /* SessionPlanTests.swift */,
+				D414E477E541A87F844D19F8 /* ParentGateTests.swift */,
+				14B28162C704FCD68AB2EB7B /* TraceCoverageTests.swift */,
+			);
+			path = LetterTraceDeskTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5FC5EBDB43467A1C2A4C022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B9B9A93374EBFB8C0EF59 /* StoreKit.framework in Frameworks */,
+				0A18F27F7A0C291D2E3D732A /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70E2725DF01EAF72FC736E32 /* LetterTraceDesk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7759DCD7663728225707D3 /* Build configuration list for PBXNativeTarget "LetterTraceDesk" */;
+			buildPhases = (
+				79E183FA426B02A46951C82D /* Sources */,
+				A5FC5EBDB43467A1C2A4C022 /* Frameworks */,
+				72EB4D8EEEE8B9EAB66FF1CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LetterTraceDesk;
+			productName = LetterTraceDesk;
+			productReference = BA2F7AAB31FF389214CBB455 /* LetterTraceDesk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E46C9728783F3F135E48E1C9 /* LetterTraceDeskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEDC860053B9BB8943C38216 /* Build configuration list for PBXNativeTarget "LetterTraceDeskTests" */;
+			buildPhases = (
+				D68DB1B4AD873CC8A083D539 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LetterTraceDeskTests;
+			productName = LetterTraceDeskTests;
+			productReference = BC14B7E372497FDF03C2E58D /* LetterTraceDeskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C4FAD706E11B7C27C3EC312 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					70E2725DF01EAF72FC736E32 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E46C9728783F3F135E48E1C9 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 70E2725DF01EAF72FC736E32;
+					};
+				};
+			};
+			buildConfigurationList = B8D3718091A1DEF3570B737A /* Build configuration list for PBXProject "LetterTraceDesk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F533B9384566AEE47E3F7CAF;
+			productRefGroup = D450CADF4291D3EA386E7FDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70E2725DF01EAF72FC736E32 /* LetterTraceDesk */,
+				E46C9728783F3F135E48E1C9 /* LetterTraceDeskTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72EB4D8EEEE8B9EAB66FF1CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17D9EC0CDE596C786677E5 /* Assets.xcassets in Resources */,
+				DFEC229E1BCF6C90DBBE7FD0 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79E183FA426B02A46951C82D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D054B91AFBA29C86338FA0 /* LetterTraceDeskApp.swift in Sources */,
+				B925F019179779232992CA16 /* AppTheme.swift in Sources */,
+				3E66964BA5050F6E6272A0A1 /* LetterCatalog.swift in Sources */,
+				FE2D6591366F0FE72CED61D3 /* SessionPlan.swift in Sources */,
+				488D0756B072656C6FAC2079 /* ParentGateChallenge.swift in Sources */,
+				D22B9F96439479837280A42D /* TraceCoverage.swift in Sources */,
+				3EC5D75E1B7B96805DD6BE90 /* AppSettings.swift in Sources */,
+				DADB3466373DB23CE311CB4F /* DeskModel.swift in Sources */,
+				0D16597DDDE3A8B94D9BA654 /* UnlockStore.swift in Sources */,
+				C3309EFD64C1A60A69E68803 /* LetterSpeaker.swift in Sources */,
+				3FC96DCB164552AA1DDFC9DA /* LetterGlyph.swift in Sources */,
+				BC9A369D8C0F2D98A64F1FA7 /* TraceCanvas.swift in Sources */,
+				AEB96EEFEB483E1D5867731F /* Components.swift in Sources */,
+				322B4CB09585414F12413DC8 /* WelcomeView.swift in Sources */,
+				00B68B286414E51F0158913E /* PickLettersView.swift in Sources */,
+				1C805637784CF6ED3B75252A /* TraceView.swift in Sources */,
+				21A50FD2BA1067CD86504CDD /* DoneView.swift in Sources */,
+				8375944F16CC266362ACFC70 /* ParentGateView.swift in Sources */,
+				EAA02B42C1B54272B470881B /* ParentSettingsView.swift in Sources */,
+				E422A53749A7F817F6E0E801 /* UnlockView.swift in Sources */,
+				E9C05FD96CC917806B052068 /* RootView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68DB1B4AD873CC8A083D539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97125C7839AE068CEAF335BB /* LetterCatalogTests.swift in Sources */,
+				23B5357E2C182A0571D91F01 /* SessionPlanTests.swift in Sources */,
+				FF6B2DB5F0860668B41BE9EF /* ParentGateTests.swift in Sources */,
+				1082BE09FC0E57111D18DD5C /* TraceCoverageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9D87553DF20184E3403179CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3029C7F11F0E000A63C93334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4B6096974D456371116AF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetterTraceDesk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Letter Trace Desk";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lettertracedesk.app;
+				PRODUCT_NAME = LetterTraceDesk;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C126C9AEE1099604697FDFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetterTraceDesk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Letter Trace Desk";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lettertracedesk.app;
+				PRODUCT_NAME = LetterTraceDesk;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F02C50D7D0058CB238BD10B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lettertracedesk.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetterTraceDesk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetterTraceDesk";
+			};
+			name = Debug;
+		};
+		E3614CD97FEFF23AC836B396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lettertracedesk.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetterTraceDesk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetterTraceDesk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8D3718091A1DEF3570B737A /* Build configuration list for PBXProject "LetterTraceDesk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D87553DF20184E3403179CE /* Debug */,
+				3029C7F11F0E000A63C93334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7759DCD7663728225707D3 /* Build configuration list for PBXNativeTarget "LetterTraceDesk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B6096974D456371116AF3B /* Debug */,
+				C126C9AEE1099604697FDFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEDC860053B9BB8943C38216 /* Build configuration list for PBXNativeTarget "LetterTraceDeskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F02C50D7D0058CB238BD10B9 /* Debug */,
+				E3614CD97FEFF23AC836B396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C4FAD706E11B7C27C3EC312 /* Project object */;
+}
