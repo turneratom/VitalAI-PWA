@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eee4;
+  --paper-deep: #e8e0d2;
+  --ink: #1c1915;
+  --ink-soft: #4a453d;
+  --muted: #7a7368;
+  --line: #d8d0c2;
+  --card: #fbf8f1;
+  --brass: #9a7048;
+  --brass-dark: #7c5936;
+  --olive: #3d4a3c;
+  --focus: #9a7048;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-brass: var(--brass);
+  --color-brass-dark: var(--brass-dark);
+  --color-olive: var(--olive);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-newsreader);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.72), transparent 60%),
+    linear-gradient(180deg, #f7f3ea 0%, var(--paper) 42%, var(--paper-deep) 100%);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brass) 28%, white);
+  color: var(--ink);
+}
+
+.hairline {
+  background: var(--line);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.55s ease-out both;
+}
+
+@keyframes pulse-bar {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.pulse-bar {
+  animation: pulse-bar 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise,
+  .pulse-bar {
+    animation: none;
+  }
+}
