@@ -1,0 +1,32 @@
+{
+  "identifier" : "84C2E1B90A6F4D13B7E2C5A1",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : true,
+      "internalID" : "1928374650",
+      "localizations" : [
+        {
+          "description" : "Unlock uppercase letters G through Z for short tracing sittings. One-time purchase. Not a subscription. Practice helper only.",
+          "displayName" : "Full Alphabet Unlock",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.lettertracedesk.fullalphabet",
+      "referenceName" : "Full Alphabet Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

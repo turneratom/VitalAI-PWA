@@ -1,0 +1,14 @@
+xcuserdata/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.DS_Store
+timeline.xctimeline
+playground.xcworkspace
+.swiftpm/xcode/package.xcdebugger
+.swiftpm/xcode/xcuserdata/
