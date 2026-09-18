@@ -10,6 +10,8 @@ FREE = list("ABCDEF")
 PAID = list("GHIJKLMNOPQRSTUVWXYZ")
 MIN_SESSION = 3
 MAX_SESSION = 8
+PARENT_GATE_FIRST_RANGE = range(20, 50)
+PARENT_GATE_SECOND_RANGE = range(11, 40)
 
 
 def normalize(ch: str) -> str | None:
@@ -93,11 +95,15 @@ class SessionPlanTests(unittest.TestCase):
 
 class ParentGateTests(unittest.TestCase):
     def test_matches(self):
-        answer = 3 + 4
-        self.assertEqual(answer, 7)
-        self.assertTrue(int("7") == answer)
-        self.assertTrue(int(" 7 ".strip()) == answer)
-        self.assertFalse(int("8") == answer)
+        answer = 27 + 46
+        self.assertEqual(answer, 73)
+        self.assertTrue(int("73") == answer)
+        self.assertTrue(int(" 73 ".strip()) == answer)
+        self.assertFalse(int("74") == answer)
+
+    def test_adult_level_ranges(self):
+        self.assertEqual(min(PARENT_GATE_FIRST_RANGE) + min(PARENT_GATE_SECOND_RANGE), 31)
+        self.assertEqual(max(PARENT_GATE_FIRST_RANGE) + max(PARENT_GATE_SECOND_RANGE), 88)
 
 
 class TraceCoverageTests(unittest.TestCase):

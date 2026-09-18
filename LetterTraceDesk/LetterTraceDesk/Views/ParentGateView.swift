@@ -36,7 +36,7 @@ struct ParentGateView: View {
     @EnvironmentObject private var desk: DeskModel
     @State private var challenge = ParentGateChallenge.random()
     @State private var answer = ""
-    @State private var hint = "Simple adult check so little fingers don’t change the letter set or buy unlocks."
+    @State private var hint = "Grown-up math check so little fingers don’t change the letter set or buy unlocks."
     @State private var attempts = 0
     @FocusState private var focused: Bool
 

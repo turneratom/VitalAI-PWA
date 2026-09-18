@@ -10,13 +10,15 @@ Letter Trace Desk
 ## Subtitle (30 characters)
 
 Finger letter practice 3–5  
-(28 characters)
+(26 characters)
 
-Alternate if the character count is tight: `Calm letter tracing`
+Alternate: `Calm letter tracing` (19 characters)
 
 ## Promotional text (optional, 170)
 
-Short finger tracing sittings for ages 3–5. Practice helper only — not a curriculum. Ad-free, works offline for A–F. Parent gate for settings. Full A–Z is a one-time unlock, not a subscription.
+Calm finger tracing for ages 3–5. Practice helper only—not a curriculum. A–F works offline. Full A–Z is a one-time parent-gated unlock. No ads or subscriptions.
+
+(160 characters; App Store Connect limit: 170)
 
 ## Description
 
@@ -36,7 +38,7 @@ FREE AND UNLOCK
 • Free: letters A–F, including offline use
 • Optional one-time purchase: Full Alphabet Unlock (G–Z)
 • Not a subscription
-• Family Sharing can apply when you enable it for the purchase on your Apple ID / family
+• Family Sharing supported; availability depends on the family's Purchase Sharing settings
 
 PARENT CONTROLS
 • Sitting length (3–8 letters)
@@ -57,6 +59,8 @@ Suggested (count before paste):
 
 `letter,tracing,alphabet,preschool,handwriting,toddler,writing,abc,trace,kids`
 
+(76 characters)
+
 Do not stuff unverified brand names. Do not use “#1” or competitor names.
 
 ## What’s New (1.0.0)
@@ -74,7 +78,7 @@ Price: show Apple’s price. Internally you may set **$3.99 or $4.99 USD** in Ap
 
 - Made for Kids: **5 and under**
 - Category: Education
-- Age rating questionnaire: no unrestricted web, no user-generated content, no gambling, no mature themes
+- Age rating questionnaire: answer the current ASC questions truthfully—no unrestricted web, user-generated content, gambling, ads, or mature content. Record the result ASC calculates rather than predicting it.
 
 ## URLs
 
@@ -82,16 +86,18 @@ Price: show Apple’s price. Internally you may set **$3.99 or $4.99 USD** in Ap
 - Support: same page or a short support page you control
 - Marketing: optional; do not link out from inside the kid UI
 
-## Screenshot shot list (no device frames required in draft)
+## Screenshot shot list
 
-1. Welcome fences + Continue  
-2. Letters for this sitting (A–F)  
-3. Dotted-path tracing of a large letter  
-4. Soft “nice path” cheer  
-5. Sitting complete  
-6. (Optional, parent) Settings after math gate — no card numbers
+Create the same honest set for a 6.9-inch iPhone and 13-inch iPad:
 
-Use real simulator/device captures from the SwiftUI app, not the old HTML MVP.
+1. Welcome fences + Continue
+2. Letters for this sitting (A–F)
+3. Dotted-path tracing of a large letter
+4. Soft “nice path” cheer
+5. Sitting complete
+6. (Optional, parent) Settings or unlock screen after the math gate—no card numbers or fake price
+
+Use real simulator/device captures from the SwiftUI app, not the old HTML MVP. Current portrait source sizes accepted by Apple include 1320×2868 / 1290×2796 / 1260×2736 for 6.9-inch iPhone and 2064×2752 / 2048×2732 for 13-inch iPad. Recheck the live ASC specification at upload.
 
 ## Reviewer notes
 

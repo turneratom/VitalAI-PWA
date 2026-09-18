@@ -3,21 +3,23 @@ import XCTest
 
 final class ParentGateTests: XCTestCase {
     func testPromptAndAnswer() {
-        let challenge = ParentGateChallenge(a: 3, b: 4)
-        XCTAssertEqual(challenge.prompt, "What is 3 + 4?")
-        XCTAssertEqual(challenge.answer, 7)
-        XCTAssertTrue(challenge.matches("7"))
-        XCTAssertTrue(challenge.matches(" 7\n"))
-        XCTAssertFalse(challenge.matches("8"))
-        XCTAssertFalse(challenge.matches("seven"))
+        let challenge = ParentGateChallenge(a: 27, b: 46)
+        XCTAssertEqual(challenge.prompt, "What is 27 + 46?")
+        XCTAssertEqual(challenge.answer, 73)
+        XCTAssertTrue(challenge.matches("73"))
+        XCTAssertTrue(challenge.matches(" 73\n"))
+        XCTAssertFalse(challenge.matches("74"))
+        XCTAssertFalse(challenge.matches("seventy-three"))
         XCTAssertFalse(challenge.matches(""))
     }
 
     func testRandomUsesInclusiveRange() {
         var rng = SeededGenerator(seed: 42)
         let challenge = ParentGateChallenge.random(using: &rng)
-        XCTAssertTrue((2...9).contains(challenge.a))
-        XCTAssertTrue((2...9).contains(challenge.b))
+        XCTAssertTrue(ParentGateChallenge.firstNumberRange.contains(challenge.a))
+        XCTAssertTrue(ParentGateChallenge.secondNumberRange.contains(challenge.b))
+        XCTAssertGreaterThanOrEqual(challenge.answer, 31)
+        XCTAssertLessThanOrEqual(challenge.answer, 88)
     }
 }
 

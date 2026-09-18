@@ -35,6 +35,7 @@ def main() -> int:
         ROOT / "LetterTraceDesk" / "Assets.xcassets" / "AppIcon.appiconset" / "AppIcon.png",
         ROOT / "docs" / "ASC-CHECKLIST.md",
         ROOT / "docs" / "APP-STORE-LISTING.md",
+        ROOT / "docs" / "BRAD-MAC-TESTFLIGHT.md",
         ROOT / "docs" / "PRIVACY.md",
         ROOT / "docs" / "privacy.html",
         ROOT / "docs" / "FENCES.md",
@@ -88,6 +89,9 @@ def main() -> int:
 
     if "AppStorage" not in blob:
         err("AppStorage not used for preferences")
+    gate = read(ROOT / "LetterTraceDesk" / "Models" / "ParentGateChallenge.swift")
+    if "20...49" not in gate or "11...39" not in gate:
+        err("parent gate must use the documented two-digit adult-level ranges")
 
     storekit = json.loads(read(ROOT / "Configuration.storekit"))
     if storekit.get("subscriptionGroups"):
@@ -133,6 +137,7 @@ def main() -> int:
             ROOT / "README.md",
             ROOT / "docs" / "ASC-CHECKLIST.md",
             ROOT / "docs" / "APP-STORE-LISTING.md",
+            ROOT / "docs" / "BRAD-MAC-TESTFLIGHT.md",
             ROOT / "docs" / "PRIVACY.md",
             ROOT / "docs" / "FENCES.md",
         ]
@@ -146,6 +151,32 @@ def main() -> int:
     # no street-style addresses
     if re.search(r"\b\d{1,5} [A-Z][a-z]+ (Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd)\b", docs):
         err("personal/street address found in docs")
+
+    listing = read(ROOT / "docs" / "APP-STORE-LISTING.md")
+
+    def first_line_after(heading: str) -> str:
+        match = re.search(rf"^## {re.escape(heading)}[^\n]*\n\n([^\n]+)", listing, re.MULTILINE)
+        return match.group(1).rstrip() if match else ""
+
+    metadata_limits = {
+        "Name": (first_line_after("Name"), 30),
+        "Subtitle": (first_line_after("Subtitle"), 30),
+        "Promotional text": (first_line_after("Promotional text"), 170),
+    }
+    keyword_match = re.search(r"^## Keywords[^\n]*\n.*?^`([^`]+)`", listing, re.MULTILINE | re.DOTALL)
+    metadata_limits["Keywords"] = (keyword_match.group(1) if keyword_match else "", 100)
+    for field, (value, limit) in metadata_limits.items():
+        if not value:
+            err(f"could not parse {field} from listing draft")
+        elif len(value) > limit:
+            err(f"{field} is {len(value)} characters; ASC limit is {limit}")
+
+    privacy_files = [
+        read(ROOT / "docs" / "PRIVACY.md"),
+        read(ROOT / "docs" / "privacy.html"),
+    ]
+    if any("SUPPORT_EMAIL_OR_HTTPS_FORM" in content for content in privacy_files):
+        warn("replace SUPPORT_EMAIL_OR_HTTPS_FORM before hosting the privacy policy")
 
     icon = ROOT / "LetterTraceDesk" / "Assets.xcassets" / "AppIcon.appiconset" / "AppIcon.png"
     if icon.exists() and icon.stat().st_size < 10_000:

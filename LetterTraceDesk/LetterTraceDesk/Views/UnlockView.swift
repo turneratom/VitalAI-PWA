@@ -23,7 +23,7 @@ struct UnlockView: View {
                         .font(.system(size: 18, weight: .bold))
                         .foregroundStyle(AppTheme.primary)
                 }
-                Text("Non-consumable In-App Purchase. Family Sharing is supported when enabled for this product in App Store Connect. Ask to Buy may require a parent to approve.")
+                Text(familySharingStatus)
                     .font(.system(size: 14))
                     .foregroundStyle(AppTheme.muted)
             }
@@ -37,7 +37,7 @@ struct UnlockView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
 
             FenceBox(title: "What you are buying", items: [
-                "One-time unlock of tracing letters **G–Z** on this Apple ID (and Family Sharing members, if you enable it).",
+                familySharingDetail,
                 "**Not** a subscription. **Not** a curriculum. No extra content packs in version 1.",
                 "Purchases use StoreKit 2. We do not see your card number."
             ])
@@ -105,5 +105,22 @@ struct UnlockView: View {
             return price
         }
         return "Price from App Store"
+    }
+
+    private var familySharingStatus: String {
+        guard unlock.product != nil else {
+            return "Non-consumable In-App Purchase. Family Sharing status appears after the App Store loads the product. Ask to Buy may require parent approval."
+        }
+        if unlock.isFamilyShareable {
+            return "Non-consumable In-App Purchase. Family Sharing is available for this product. Ask to Buy may require parent approval."
+        }
+        return "Non-consumable In-App Purchase. Family Sharing is not currently enabled for this App Store product."
+    }
+
+    private var familySharingDetail: String {
+        if unlock.isFamilyShareable {
+            return "One-time unlock of tracing letters **G–Z**. Apple reports this purchase as **Family Shareable**."
+        }
+        return "One-time unlock of tracing letters **G–Z**. Family Sharing must be enabled for this product in App Store Connect."
     }
 }

@@ -2,9 +2,9 @@
 
 **App Store privacy nutrition label: Data Not Collected.**
 
-This is a hostable privacy policy stub for App Store Connect. It contains **no personal names, emails, or mailing addresses**. Replace `PRIVACY_POLICY_URL` with the HTTPS URL where you publish this page before submitting. Kids Category apps must provide a privacy policy URL.
+This is a privacy-policy release draft. Before publishing, replace `SUPPORT_EMAIL_OR_HTTPS_FORM` below with a monitored business support channel. Then host `privacy.html` at a public HTTPS URL and add that URL in App Store Connect. A privacy policy URL is required for every iOS app; Kids Category rules add stricter data protections.
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## Who this is for
 
@@ -43,8 +43,23 @@ No third-party analytics or ads. StoreKit / App Store commerce is provided by Ap
 
 ## Contact
 
-Use the **support URL / App Store Connect support email** you configure for this app. Do not put a home address in this policy.
+Questions about this policy: **SUPPORT_EMAIL_OR_HTTPS_FORM**
+
+Use a monitored business email address or HTTPS support form. Do not publish a personal home address.
 
 ## Changes
 
 If data practices change, update this policy, the privacy manifest, and the App Store privacy nutrition answers **before** shipping that version.
+
+## Release privacy / COPPA / Kids Category checklist
+
+- [ ] No child name, birth date, email, account, photo, audio recording, precise location, drawing/trace upload, chat, or user-generated content
+- [ ] No backend, third-party analytics/crash SDK, advertising SDK, IDFA access, fingerprinting, or ATT prompt
+- [ ] `PrivacyInfo.xcprivacy` says no tracking and no collected data; UserDefaults reason `CA92.1` remains accurate
+- [ ] Tracing strokes and sitting results remain memory-only; preferences remain on-device
+- [ ] StoreKit is the only commerce path; purchase, restore, and any outbound support/privacy destination remain in the parent area
+- [ ] Parent gate is an adult-level task and is not described as COPPA consent
+- [ ] Hosted policy has a real contact, public HTTPS URL, no login, and matches the binary
+- [ ] App Store App Privacy answer is **Data Not Collected**
+- [ ] Made for Kids age band is **5 and under**; listing/screenshots are age-appropriate
+- [ ] Any future data collection or third-party SDK change triggers a fresh legal/privacy review before release

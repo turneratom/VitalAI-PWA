@@ -3,6 +3,9 @@ import Foundation
 /// Adult-level addition check (Kids Category parental gate).
 /// Not verifiable parental consent under COPPA — we collect no child data.
 struct ParentGateChallenge: Equatable {
+    static let firstNumberRange = 20...49
+    static let secondNumberRange = 11...39
+
     let a: Int
     let b: Int
 
@@ -10,7 +13,10 @@ struct ParentGateChallenge: Equatable {
     var answer: Int { a + b }
 
     static func random<T: RandomNumberGenerator>(using rng: inout T) -> ParentGateChallenge {
-        ParentGateChallenge(a: Int.random(in: 2...9, using: &rng), b: Int.random(in: 2...9, using: &rng))
+        ParentGateChallenge(
+            a: Int.random(in: firstNumberRange, using: &rng),
+            b: Int.random(in: secondNumberRange, using: &rng)
+        )
     }
 
     static func random() -> ParentGateChallenge {

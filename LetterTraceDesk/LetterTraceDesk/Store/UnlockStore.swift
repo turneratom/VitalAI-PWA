@@ -27,7 +27,7 @@ final class UnlockStore: ObservableObject {
     }
 
     var isFamilyShareable: Bool {
-        product?.isFamilyShareable ?? true
+        product?.isFamilyShareable ?? false
     }
 
     func refresh() async {

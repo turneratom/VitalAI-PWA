@@ -1,6 +1,6 @@
 # App Store Connect checklist — Letter Trace Desk
 
-Use this as a submit-time list. Items marked **you** need a paid Apple Developer account. This repo does not log into App Store Connect for you.
+Use this as a submit-time list. Apple-account work is intentionally unchecked; this repo cannot verify it. Follow `BRAD-MAC-TESTFLIGHT.md` in order.
 
 ## 1. Identifiers
 
@@ -13,7 +13,7 @@ Use this as a submit-time list. Items marked **you** need a paid Apple Developer
 | Build | `1` (CURRENT_PROJECT_VERSION) |
 | Primary category | Education |
 | Kids Category | **Made for Kids · 5 and under** |
-| Age rating | Complete the questionnaire. Expected **4+** / no unrestricted web, no mature content. |
+| Age rating | Complete the current questionnaire truthfully and record the rating ASC calculates; do not pre-claim a result. |
 | User interface | Light, iPhone + iPad (universal) |
 | Minimum OS | iOS 17.0 |
 
@@ -21,6 +21,8 @@ Use this as a submit-time list. Items marked **you** need a paid Apple Developer
 
 ## 2. Signing
 
+- [ ] Apple Developer Program membership active
+- [ ] App Store Connect → Business → Agreements: **Paid Apps** active; required tax and banking complete
 - [ ] Xcode team selected on the app target
 - [ ] New App ID with **In-App Purchase** enabled (default for explicit App IDs)
 - [ ] Distribution certificate + App Store provisioning profile (Xcode automatic signing is fine)
@@ -41,14 +43,15 @@ Create **one** product. Do **not** create subscriptions.
 | Review screenshot | Parent unlock screen (math gate passed), not a kid tracing screenshot with a fake price |
 | Review notes | “Non-consumable. Free A–F. Parent math gate required before purchase. No subscriptions.” |
 
-Clear the IAP for sale only after metadata is complete. Submit the IAP **with** the app binary.
+Before clicking Create, verify the exact case-sensitive ID and **Non-Consumable** type. Apple does not let you edit either afterward. Turning on Family Sharing is also irreversible. Clear the IAP for sale only after metadata is complete. Submit the first IAP **with** the app binary.
 
-Local testing: scheme StoreKit config `Configuration.storekit` (Family Sharing flag on, type NonConsumable, **empty subscription groups**).
+`Configuration.storekit` is local Xcode test data only; it does not create the live ASC product. Local testing uses that file (Family Sharing flag on, type NonConsumable, **empty subscription groups**). Archive/TestFlight testing uses the ASC sandbox product with the scheme StoreKit Configuration set to **None**.
 
 ## 4. Privacy
 
 - [ ] App Privacy: **Data Not Collected**
-- [ ] Privacy policy URL: host `docs/privacy.html` or `docs/PRIVACY.md` on HTTPS. Kids Category requires a policy URL even when you collect nothing.
+- [ ] Replace the privacy stub's Contact placeholder with a monitored support email or HTTPS form
+- [ ] Privacy policy URL: host `docs/privacy.html` on public HTTPS with no login, then verify it in a private browser. A URL is required for every iOS app, including Data Not Collected apps.
 - [ ] Privacy Nutrition answers match `PrivacyInfo.xcprivacy` (`NSPrivacyTracking` = false, no collected types)
 - [ ] Export compliance: **ITSAppUsesNonExemptEncryption = false** (standard HTTPS only)
 - [ ] Do **not** add an ATT tracking prompt
@@ -58,7 +61,7 @@ Local testing: scheme StoreKit config `Configuration.storekit` (Family Sharing f
 
 Paste copy from `docs/APP-STORE-LISTING.md`.
 
-- [ ] Screenshots: 6.7" iPhone and 12.9" iPad (plus other sizes ASC currently requires)
+- [ ] Screenshots: 6.9" iPhone (1320×2868, 1290×2796, or 1260×2736 portrait) and 13" iPad (2064×2752 or 2048×2732 portrait); recheck ASC's live specifications at upload
 - [ ] Screenshots show Welcome fences, Pick, Trace, Done — calm, no orange, no ads
 - [ ] IAP / settings only in a screenshot that is clearly parent-gated if you show them at all
 - [ ] No “For Kids” language issues — this app **is** in Kids Category, so age 3–5 in the name/subtitle is allowed
@@ -72,7 +75,7 @@ Letter Trace Desk is a Kids Category practice helper (ages 3–5), not a curricu
 
 No account / no login. No backend. Free letters A–F work offline.
 
-Parental gate: addition of two numbers between 2 and 9. Required before Parent settings and before the IAP.
+Parental gate: two-digit addition. Required before Parent settings and before the IAP.
 
 IAP: com.lettertracedesk.fullalphabet — non-consumable, one-time Full Alphabet Unlock (G–Z). No subscriptions. Family Sharing intended. Ask to Buy may show pending.
 
@@ -95,9 +98,22 @@ Spoken letter uses on-device AVSpeechSynthesizer (optional, parent toggle).
 
 - [ ] `python3 scripts/verify_ship_ready.py` is clean
 - [ ] Product → Test passes on a Mac
+- [ ] Local StoreKit flow passes with `Configuration.storekit`
+- [ ] Scheme StoreKit Configuration changed to **None** before Archive
 - [ ] Archive (Any iOS Device) → Distribute App → App Store Connect
+- [ ] Internal TestFlight flow passes with ASC sandbox product (A–F, gate, buy, G–Z, relaunch, restore, offline)
+- [ ] Privacy policy and support URLs are public
 - [ ] Select the IAP on the version
 - [ ] Submit for review
+
+Official references:
+
+- [Kids Category and parental gates](https://developer.apple.com/kids/)
+- [App Review Guidelines 1.3 and 5.1.4](https://developer.apple.com/app-store/review/guidelines/)
+- [Create a non-consumable IAP](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-consumable-or-non-consumable-in-app-purchases/)
+- [Family Sharing for In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases)
+- [TestFlight overview](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview/)
+- [Screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/)
 
 ## Not in this checklist
 
