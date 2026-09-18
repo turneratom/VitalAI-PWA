@@ -58,9 +58,9 @@ export function PaywallView() {
 
         <p className="mt-8 text-sm leading-relaxed text-muted">
           Checkout uses <code className="text-ink-soft">NEXT_PUBLIC_CHECKOUT_MONTHLY</code> and{" "}
-          <code className="text-ink-soft">NEXT_PUBLIC_CHECKOUT_YEARLY</code>. If those aren’t set,
-          both plans continue into the app so you can demo locally. This MVP does not process cards
-          itself.
+          <code className="text-ink-soft">NEXT_PUBLIC_CHECKOUT_YEARLY</code> (Whop payment links by
+          default). This app does not process cards itself. After checkout, return to{" "}
+          <code className="text-ink-soft">/thanks</code>.
         </p>
 
         <p className="mt-6 text-sm text-muted">

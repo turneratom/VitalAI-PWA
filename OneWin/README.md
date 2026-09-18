@@ -24,15 +24,13 @@ npm start
 
 ## Env vars
 
-| Variable | Purpose |
-| --- | --- |
-| `NEXT_PUBLIC_CHECKOUT_MONTHLY` | Checkout URL for **$6.99/mo**. Stripe Payment Link (or any checkout) is fine. |
-| `NEXT_PUBLIC_CHECKOUT_YEARLY` | Checkout URL for **$49/year**. |
-| `NEXT_PUBLIC_APP_URL` | Absolute site URL for metadata / Open Graph. |
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `NEXT_PUBLIC_CHECKOUT_MONTHLY` | Checkout URL for **$6.99/mo** | `https://whop.com/checkout/plan_8e6gE2sW5tuNn` |
+| `NEXT_PUBLIC_CHECKOUT_YEARLY` | Checkout URL for **$49/year** | `https://whop.com/checkout/plan_FN7cAjfaoPHUb` |
+| `NEXT_PUBLIC_APP_URL` | Absolute site URL for metadata / Open Graph | `http://localhost:3000` |
 
-If the checkout vars are empty, both plans go to `/thanks` so the quiz → paywall → app demo works without a billing provider. This MVP does **not** process cards itself.
-
-Point Stripe (or similar) success URLs at `/thanks`.
+Checkout buttons open those Whop links. Point Whop (or any provider) success URLs at `/thanks`. This app does **not** process cards itself. To demo the close without paying, use **Already through checkout? Open the app** on `/paywall`.
 
 This README does not include revenue, conversion, or spend numbers. There aren’t any to publish yet.
 
