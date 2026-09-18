@@ -1,6 +1,6 @@
 # Honest fences — Letter Trace Desk
 
-Age band: **3–5** (Kids Category: 5 and under)  
+Age band: **3–5** (Kids Category: 5 and under)
 Role: **practice helper**, not a curriculum
 
 ## Product fences

@@ -4,12 +4,12 @@ Use in App Store Connect. Honest copy only. **No invented revenue, rankings, or 
 
 ## Name
 
-Letter Trace Desk  
+Letter Trace Desk
 (30-character limit; this is 17)
 
 ## Subtitle (30 characters)
 
-Finger letter practice 3–5  
+Finger letter practice 3–5
 (26 characters)
 
 Alternate: `Calm letter tracing` (19 characters)
@@ -69,7 +69,7 @@ First release. Short A–F tracing sittings. Optional one-time Full Alphabet Unl
 
 ## In-App Purchases (listing)
 
-**Full Alphabet Unlock**  
+**Full Alphabet Unlock**
 Unlock uppercase G–Z for Letter Trace Desk sittings. One-time purchase. Not a subscription. Practice helper only.
 
 Price: show Apple’s price. Internally you may set **$3.99 or $4.99 USD** in App Store Connect; do not type a fake price into screenshots.
