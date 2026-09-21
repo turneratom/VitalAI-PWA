@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "ChestWatch Twin",
     template: "%s · ChestWatch",
   },
-  description: "Your digital twin on your phone — pairs with the choker.",
+  description: "Easy iPhone plugin. One tap. Your digital twin — pairs with the choker.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,

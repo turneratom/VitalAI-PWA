@@ -2,7 +2,7 @@
 
 Apple Watch on a choker — camera + AI voice companion. This repo folder is the **iPhone digital twin**: a mobile-first installable PWA (App Store later). Standalone product. Not Family Legacy.
 
-Pitch: **Your digital twin on your phone — pairs with the choker.**
+Pitch: **Easy iPhone plugin. One tap. Your digital twin.**
 
 One tap: capture (camera) + ask (voice). Then answer. Settings is connect + permissions only. **$9.99/mo**.
 
@@ -38,15 +38,13 @@ Android: Chrome menu → **Install app** / **Add to Home Screen**.
 
 ## Checkout ($9.99/mo)
 
-CTA links to `NEXT_PUBLIC_CHECKOUT_URL`.
-
-Default placeholder:
+Primary CTA **Get your digital twin · $9.99/mo** links to:
 
 ```
-NEXT_PUBLIC_CHECKOUT_URL=https://whop.com/checkout/PLAN_ID
+NEXT_PUBLIC_CHECKOUT_URL=https://whop.com/checkout/plan_AfktzTAx5Hd1c
 ```
 
-Paste the real Whop plan URL in `.env.local` (and in Vercel env) — no code change required.
+Override in `.env.local` or Vercel env if the plan URL changes.
 
 ## Screens
 
@@ -60,6 +58,6 @@ See → ask → answer runs locally. The companion is a stub with a clear **mode
 
 ## Notes
 
-- Easy plugin to iPhone: Add to Home Screen. One tap after that.
+- Easy iPhone plugin: Add to Home Screen. One tap after that. Your digital twin.
 - No onboarding wizard. No Family Legacy.
 - Camera/mic need a user gesture (the lens tap). If the camera is blocked, use a photo + type, then tap again.

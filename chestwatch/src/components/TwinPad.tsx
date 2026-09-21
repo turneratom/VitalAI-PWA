@@ -184,8 +184,8 @@ export function TwinPad() {
       </header>
 
       {phase === "idle" || phase === "answer" ? (
-        <p className="mt-4 max-w-[18rem] text-sm leading-relaxed text-mute">
-          Your digital twin on your phone — pairs with the choker.
+        <p className="mt-4 max-w-[19rem] text-sm leading-relaxed text-mute">
+          Easy iPhone plugin. One tap. Your digital twin.
         </p>
       ) : null}
 
@@ -301,10 +301,10 @@ export function TwinPad() {
         </article>
       ) : null}
 
-      {phase === "idle" ? (
+      {phase === "idle" || phase === "answer" ? (
         <div className="space-y-4 pb-2">
-          <CheckoutCta variant="bar" />
-          <InstallHint />
+          <CheckoutCta />
+          {phase === "idle" ? <InstallHint /> : null}
         </div>
       ) : null}
     </div>

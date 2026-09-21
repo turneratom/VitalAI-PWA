@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ChestWatch Twin",
     short_name: "ChestWatch",
-    description: "Your digital twin on your phone — pairs with the choker.",
+    description: "Easy iPhone plugin. One tap. Your digital twin — pairs with the choker.",
     start_url: "/",
     scope: "/",
     display: "standalone",

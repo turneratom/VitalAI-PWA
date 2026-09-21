@@ -21,13 +21,13 @@ export function InstallHint() {
     <p className="text-center text-xs leading-relaxed text-mute">
       {ios ? (
         <>
-          Install: tap <span className="text-ivory">Share</span> then{" "}
-          <span className="text-ivory">Add to Home Screen</span>. One tap after that.
+          Easy plugin: tap <span className="text-ivory">Share</span> then{" "}
+          <span className="text-ivory">Add to Home Screen</span>. Then one tap.
         </>
       ) : (
         <>
-          Install: use your browser menu → <span className="text-ivory">Add to Home Screen</span>{" "}
-          / <span className="text-ivory">Install app</span>.
+          Easy plugin: browser menu → <span className="text-ivory">Add to Home Screen</span>{" "}
+          / <span className="text-ivory">Install app</span>. Then one tap.
         </>
       )}
     </p>

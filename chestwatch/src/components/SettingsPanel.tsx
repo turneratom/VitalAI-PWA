@@ -53,7 +53,9 @@ export function SettingsPanel() {
         <p className="text-[11px] uppercase tracking-[0.28em] text-gold">ChestWatch</p>
         <h1 className="font-display text-3xl leading-none text-ivory">Settings</h1>
       </header>
-      <p className="mt-4 text-sm text-mute">Connect the choker. Allow camera and mic. That&apos;s it.</p>
+      <p className="mt-4 text-sm text-mute">
+        Easy iPhone plugin. Connect the choker, allow camera and mic. One tap after that.
+      </p>
 
       <section className="mt-8 space-y-3">
         <Row
@@ -115,10 +117,10 @@ export function SettingsPanel() {
       </section>
 
       <section className="mt-10 space-y-3">
-        <p className="text-[11px] uppercase tracking-[0.2em] text-gold">Twin plan</p>
-        <CheckoutCta variant="bar" />
+        <p className="text-[11px] uppercase tracking-[0.2em] text-gold">Digital Twin</p>
+        <CheckoutCta />
         <p className="text-xs text-mute">
-          Monthly subscription {PRICE_LABEL}. Hardware is the choker; this PWA is the iPhone twin.
+          {PRICE_LABEL}. Easy iPhone plugin — one tap, your digital twin. Pairs with the choker.
           App Store later.
         </p>
       </section>

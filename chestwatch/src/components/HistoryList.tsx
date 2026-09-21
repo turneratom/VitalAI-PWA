@@ -35,14 +35,16 @@ export function HistoryList() {
           </button>
         ) : null}
       </header>
-      <p className="mt-4 text-sm text-mute">See → ask → answer, kept on this phone.</p>
+      <p className="mt-4 text-sm text-mute">
+        One tap. Your digital twin. Answers stay on this phone.
+      </p>
+      <div className="mt-4">
+        <CheckoutCta />
+      </div>
 
       {sessions.length === 0 ? (
         <div className="mt-16 text-center">
           <p className="text-sm text-mute">No answers yet. One tap on Twin starts the loop.</p>
-          <div className="mt-8">
-            <CheckoutCta />
-          </div>
         </div>
       ) : (
         <ol className="mt-6 space-y-3">

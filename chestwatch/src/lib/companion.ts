@@ -16,7 +16,7 @@ function pick(question: string, hasImage: boolean): string {
   }
 
   if (q.includes("price") || q.includes("cost") || q.includes("subscribe")) {
-    return "ChestWatch Twin is $9.99 a month. Hardware stays on the choker; this app is the easy plugin on your iPhone.";
+    return "ChestWatch Twin is $9.99 a month. Easy iPhone plugin — one tap, your digital twin. Hardware stays on the choker.";
   }
 
   if (
