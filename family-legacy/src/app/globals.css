@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f3ead8;
+  --paper: #faf6ec;
+  --ink: #1c1610;
+  --ink-soft: #5c5348;
+  --rule: #c4a574;
+  --walnut: #3d2a1c;
+  --seal: #6b3e2a;
+  --reserved: #9a8b78;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-walnut: var(--walnut);
+  --color-seal: var(--seal);
+  --color-reserved: var(--reserved);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(ellipse at 50% -10%, rgba(196, 165, 116, 0.18), transparent 52%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-body), "Palatino Linotype", Palatino, serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Palatino Linotype", Palatino, serif;
+}
+
+.kicker {
+  font-family: var(--font-display), serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display), serif;
+  font-size: 3.15rem;
+  line-height: 0.8;
+  padding: 0.12rem 0.45rem 0 0;
+  color: var(--seal);
+}
+
+.ornament {
+  display: block;
+  width: 6rem;
+  height: 0.55rem;
+  margin-inline: auto;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--rule) 18%,
+    var(--rule) 82%,
+    transparent
+  );
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.photo-mat {
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--rule) 70%, transparent);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 18px 40px rgba(28, 22, 16, 0.08);
+  padding: 0.85rem;
+}
+
+.prose-vault p + p {
+  margin-top: 1.1rem;
+}
+
+.prose-vault h2 {
+  font-family: var(--font-display), serif;
+  font-size: 1.75rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+}
