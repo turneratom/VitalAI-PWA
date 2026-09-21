@@ -134,7 +134,11 @@ export default async function PersonPage({ params }: PersonPageProps) {
             </div>
             <div>
               <dt className="kicker text-[0.6rem] text-seal">Relation to root</dt>
-              <dd className="mt-1 text-ink">{person.relationToRoot}</dd>
+              <dd className="mt-1 text-ink">
+                {person.relationToRoot === "self"
+                  ? "Root of the house"
+                  : person.relationToRoot}
+              </dd>
             </div>
             {formatBorn(person.born) ? (
               <div>

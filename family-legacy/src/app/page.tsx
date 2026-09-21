@@ -12,26 +12,31 @@ export const metadata: Metadata = {
 const rooms = [
   {
     href: "/tree",
+    kicker: "I",
     label: "Family tree",
     dek: "Lineage from reserved forebears through Brad to the five unnamed children.",
   },
   {
     href: "/people",
+    kicker: "II",
     label: "People",
     dek: "Encyclopedia plates. Only Brad is legally named from seed.",
   },
   {
     href: "/photos",
+    kicker: "III",
     label: "Photos",
     dek: "A gallery of elegant empty frames. No fake portraits.",
   },
   {
     href: "/script",
+    kicker: "IV",
     label: "Movie script",
     dek: "Four-act treatment: Origins, Building, Fatherhood, The Vault.",
   },
   {
     href: "/chapters",
+    kicker: "V",
     label: "Chapters",
     dek: "Narratives in good light, written to grow as Brad supplies the rest.",
   },
@@ -61,14 +66,14 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-px border-b border-rule/40 bg-rule/40 sm:grid-cols-2 lg:grid-cols-5">
+      <section className="mx-auto grid max-w-6xl gap-px border-b border-rule/40 bg-rule/40 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {rooms.map((room) => (
           <Link
             key={room.href}
             href={room.href}
             className="bg-cream px-5 py-8 transition-colors hover:bg-paper"
           >
-            <p className="kicker text-[0.65rem] text-seal">{room.label}</p>
+            <p className="kicker text-[0.65rem] text-seal">Room {room.kicker}</p>
             <p className="mt-3 font-display text-2xl text-ink">{room.label}</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">{room.dek}</p>
           </Link>
