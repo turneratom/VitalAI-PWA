@@ -254,7 +254,9 @@ export function TwinPad() {
             {transcript || typed}
           </p>
         ) : null}
-        {error ? <p className="mt-3 max-w-xs text-center text-xs text-gold/80">{error}</p> : null}
+        {error && phase !== "answer" && phase !== "thinking" ? (
+          <p className="mt-3 max-w-xs text-center text-xs text-gold/80">{error}</p>
+        ) : null}
       </div>
 
       {phase === "fallback" || (phase === "live" && !canSpeak) ? (
