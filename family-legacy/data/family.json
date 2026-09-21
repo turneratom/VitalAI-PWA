@@ -1,0 +1,31 @@
+{
+  "family_name": "Turner",
+  "tone": "good_light_only",
+  "owner": "Jarvis",
+  "root": {
+    "id": "brad-turner",
+    "display_name": "Bradley (Brad) Turner",
+    "born": "1981-10-07",
+    "role": "patriarch_anchor",
+    "summary_seed": "Builder and father. Built and sold mobile home parks at scale. Five children. Building a legacy vault so the line is remembered for its light.",
+    "tags": ["builder", "father", "entrepreneur"]
+  },
+  "people": [
+    {
+      "id": "brad-turner",
+      "display_name": "Bradley (Brad) Turner",
+      "relation_to_root": "self"
+    }
+  ],
+  "placeholders": [
+    "Add spouse / partner only if Brad approves good-light entry",
+    "Add five children with first names Brad provides",
+    "Add parents / grandparents as Brad supplies"
+  ],
+  "chapters_planned": [
+    "Origins",
+    "Building",
+    "Fatherhood",
+    "The vault"
+  ]
+}
